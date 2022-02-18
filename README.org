@@ -6,32 +6,7 @@
 This code base is an attempt to create a functional, modern, complete,
 flexible, readable, self documenting, and well documented library for
 CERN's ROOT Data Analysis Framework for application to low-energy
-Nuclear Physics conducted at the Australian National University.
-
-* The holy grail
-
-If we're doing our jobs correctly, we're only going to be acquiring
-more, and more data. Ideally, the libraries of this code base can be
-used to create programs to automate analysis. Automation, in my
-opinion, is the holy grail.
-
-For the skeptics, I take the following statements to be self evident:
-
-Max Automation  -> More time to think.
-More time think -> Better science / papers.
-
-Also, from the more mercenary perspective:
-
-Max Automation  -> Less time to publishable results.
-
-** The other holy grail
-
-There is another reason why I'm doing this. All of the easy to analyse
-stuff has either already been done, or will be done (hopefully in next
-to no time with this code!). The nuclear chart is a fascinating and
-complicated landscape. I want to use this code base to create programs
-to search solutions, systematic behaviour, and sign posts across the
-nuclear chart. 
+Nuclear Physics.
 
 * Quick start
 
@@ -65,5 +40,12 @@ developers for a primer, we really could use your help!
 
 * Current Developers
 
-+ Aqeel Akber <aqeel.akber@anu.edu.au>
-+ Timothy Gray <timothy.gray@anu.edu.au>
++ Timothy Gray <graytj@ornl.gov>
+
+** Previous contributors
+
++ Aqeel Akber
++ Ben Coombes
++ Jackson Dowie
++ Brendan McCormick
+
