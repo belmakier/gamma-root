@@ -1,0 +1,12 @@
+[submodule "extern/doctest"]
+	path = extern/doctest
+	url = https://github.com/onqtam/doctest
+	branch = master
+[submodule "extern/args"]
+	path = extern/args
+	url = https://github.com/Taywee/args
+	branch = master
+[submodule "extern/inih"]
+	path = extern/inih
+	url = https://github.com/jtilly/inih
+	branch = master

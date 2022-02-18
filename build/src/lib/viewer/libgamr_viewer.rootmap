@@ -1,4 +1,0 @@
-[ libgamr_viewer.dylib ]
-# List of selected namespaces
-namespace GamR
-namespace GamR::Viewer

@@ -1,6 +1,0 @@
-<map id="ca" name="ca">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,44,61"/>
-<area shape="rect" id="node2" href="$dc/d89/namespace_gam_r_1_1_spect.html#a2c1c99bf79bde9fc90d7bd8294ade75e" title=" " alt="" coords="92,35,309,61"/>
-<area shape="rect" id="node3" href="$d0/db7/namespace_gam_r_1_1_utils.html#a31f74a9ca644d560dc14e19c4dbd773b" title=" " alt="" coords="367,5,530,32"/>
-<area shape="rect" id="node4" href="$dc/d89/namespace_gam_r_1_1_spect.html#a0c1c0458051261537a2abe8245fdd877" title="Scales the labels of a histogram. Preferable over GamR::Spect::Scale and GamR::Spect::ScalePoly as it..." alt="" coords="357,57,540,98"/>
-</map>
