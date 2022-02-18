@@ -3,7 +3,7 @@
 
 #include <TFile.h>
 
-#include <lib/ornl/OakRidge.hh>
+#include <ornl/OakRidge.hh>
 
 /**
    Converts a *.ban file containing 2-D ORNL format "Banana" gates to a ROOT
