@@ -1,0 +1,21 @@
+{ decls }
+namespace GamR { namespace Nucleus {  } }
+namespace GamR { namespace Nucleus { namespace LevelScheme {  } } }
+
+[ libgamr_nucleus.dylib ]
+# List of selected classes
+class GamR::Nucleus::LevelScheme::Scheme
+class GamR::Nucleus::LevelScheme::State
+class GamR::Nucleus::LevelScheme::Transition
+class GamR::Nucleus::Photon
+class GamR::Nucleus::State
+class GamR::Nucleus::Transition
+class GamR::Nucleus::TransitionMap
+header LevelScheme.hh
+header Photon.hh
+header State.hh
+header Transition.hh
+# List of selected namespaces
+namespace GamR
+namespace GamR::Nucleus
+namespace GamR::Nucleus::LevelScheme

@@ -1,0 +1,147 @@
+#include <doctest/doctest.h>
+/* STD */
+#include <string>
+
+/* GAMR */
+#include <coulex/CoulexCalculation.hh>
+#include <coulex/Coulex.hh>
+#include <angdist/StatTensor.hh>
+
+SCENARIO("WDB Coulex calculation for 35 MeV O16 on Ge74") {
+
+  std::string workdir("/Users/99j/git/gamma-root/src/tests/coulex/");
+
+  GamR::Coulex::CoulexCalculation calc;
+
+  //this would read info from Wtheta.ans
+  //calc.ReadFromFile("Wtheta.ans");
+
+  //set beam species and energy
+  calc.SetBeam("O16", 35);
+  //set target species and thickness
+  calc.SetTarget("Ge74", 0, 0.52);
+  //set to projectile detection
+  calc.SetDetected(GamR::Coulex::Species::kProjectile);
+  //set to target excitation
+  calc.SetExcited(GamR::Coulex::Species::kTarget);
+  //set the particle detector parameters
+  calc.SetParticleDet(9, 9, -16, 3.5);
+
+  //set up the level scheme
+  calc.fLevelScheme.AddLevel("l0", 0.0, 0.0, true);
+  calc.fLevelScheme.AddLevel("l1", 0.596, 2.0, true);
+  calc.fLevelScheme.AddTransition("l1", "l0", 0, 2);
+  calc.fLevelScheme.fTransitions[0]->SetBUp(0.3);
+  calc.fLevelScheme.SetIndices();
+
+  //we want the tensor for state 1, and the transition is 0
+  calc.SetInterests(1, 0);
+
+  //print the parameters
+  calc.Print();
+
+  //save to file
+  calc.SaveToFile("test.ans");
+
+  //calculate the tensor
+  GamR::AngDist::StatTensor *ret = calc.CalcTensor();
+
+  //print the tensor
+  ret->Print();
+  	  
+	REQUIRE(std::to_string(ret->Get(0, 0).real())==std::to_string(1.0));
+  REQUIRE(std::fabs(ret->Get(0, 0).imag())<1e-16);
+
+  for (int q = -1; q<=1; ++q) {
+    REQUIRE(std::to_string(ret->Get(1, q).real())==std::to_string(0.0));
+    REQUIRE(std::fabs(ret->Get(1, q).imag())<1e-16);
+  }
+
+  REQUIRE(std::to_string(ret->Get(2,-2).real())==std::to_string(-0.01028552604282));
+  REQUIRE(std::fabs(ret->Get(2,-2).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(2,-1).real())==std::to_string(0.107246316138600));
+  REQUIRE(std::fabs(ret->Get(2,-1).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(2, 0).real())==std::to_string(-0.504544867336840));
+  REQUIRE(std::fabs(ret->Get(2, 0).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(2, 1).real())==std::to_string(-0.107246316138600));
+  REQUIRE(std::fabs(ret->Get(2, 1).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(2, 2).real())==std::to_string(-0.010285526042820));
+  REQUIRE(std::fabs(ret->Get(2, 2).imag())<1e-16);
+  
+  for (int q = -3; q<=3; ++q) {
+    REQUIRE(std::to_string(ret->Get(3, q).real())==std::to_string(0.0));
+    REQUIRE(std::fabs(ret->Get(3, q).imag())<1e-16);
+  }
+
+  REQUIRE(std::to_string(ret->Get(4,-4).real())==std::to_string(0.000296296861981));
+  REQUIRE(std::fabs(ret->Get(4,-4).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(4,-3).real())==std::to_string(-0.004267158461352));
+  REQUIRE(std::fabs(ret->Get(4,-3).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(4,-2).real())==std::to_string(0.035224764626961));
+  REQUIRE(std::fabs(ret->Get(4,-2).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(4,-1).real())==std::to_string(-0.178986693455993));
+  REQUIRE(std::fabs(ret->Get(4,-1).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(4, 0).real())==std::to_string(0.439853086027279));
+  REQUIRE(std::fabs(ret->Get(4, 0).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(4, 1).real())==std::to_string(0.178986693455993));
+  REQUIRE(std::fabs(ret->Get(4, 1).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(4, 2).real())==std::to_string(0.035224764626961));
+  REQUIRE(std::fabs(ret->Get(4, 2).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(4, 3).real())==std::to_string(0.004267158461352));
+  REQUIRE(std::fabs(ret->Get(4, 3).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(4, 4).real())==std::to_string(0.000296296861981));
+  REQUIRE(std::fabs(ret->Get(4, 4).imag())<1e-16);
+
+  GamR::Coulex::CoulexCalculation calc2;
+
+  calc2.ReadFromFile("test.ans");
+
+  calc2.Print();
+  ret = calc2.CalcTensor();
+  ret->Print();
+
+  REQUIRE(std::to_string(ret->Get(0, 0).real())==std::to_string(1.0));
+  REQUIRE(std::fabs(ret->Get(0, 0).imag())<1e-16);
+
+  for (int q = -1; q<=1; ++q) {
+    REQUIRE(std::to_string(ret->Get(1, q).real())==std::to_string(0.0));
+    REQUIRE(std::fabs(ret->Get(1, q).imag())<1e-16);
+  }
+
+  REQUIRE(std::to_string(ret->Get(2,-2).real())==std::to_string(-0.01028552604282));
+  REQUIRE(std::fabs(ret->Get(2,-2).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(2,-1).real())==std::to_string(0.107246316138600));
+  REQUIRE(std::fabs(ret->Get(2,-1).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(2, 0).real())==std::to_string(-0.504544867336840));
+  REQUIRE(std::fabs(ret->Get(2, 0).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(2, 1).real())==std::to_string(-0.107246316138600));
+  REQUIRE(std::fabs(ret->Get(2, 1).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(2, 2).real())==std::to_string(-0.010285526042820));
+  REQUIRE(std::fabs(ret->Get(2, 2).imag())<1e-16);
+  
+  for (int q = -3; q<=3; ++q) {
+    REQUIRE(std::to_string(ret->Get(3, q).real())==std::to_string(0.0));
+    REQUIRE(std::fabs(ret->Get(3, q).imag())<1e-16);
+  }
+
+  REQUIRE(std::to_string(ret->Get(4,-4).real())==std::to_string(0.000296296861981));
+  REQUIRE(std::fabs(ret->Get(4,-4).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(4,-3).real())==std::to_string(-0.004267158461352));
+  REQUIRE(std::fabs(ret->Get(4,-3).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(4,-2).real())==std::to_string(0.035224764626961));
+  REQUIRE(std::fabs(ret->Get(4,-2).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(4,-1).real())==std::to_string(-0.178986693455993));
+  REQUIRE(std::fabs(ret->Get(4,-1).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(4, 0).real())==std::to_string(0.439853086027279));
+  REQUIRE(std::fabs(ret->Get(4, 0).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(4, 1).real())==std::to_string(0.178986693455993));
+  REQUIRE(std::fabs(ret->Get(4, 1).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(4, 2).real())==std::to_string(0.035224764626961));
+  REQUIRE(std::fabs(ret->Get(4, 2).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(4, 3).real())==std::to_string(0.004267158461352));
+  REQUIRE(std::fabs(ret->Get(4, 3).imag())<1e-16);
+  REQUIRE(std::to_string(ret->Get(4, 4).real())==std::to_string(0.000296296861981));
+  REQUIRE(std::fabs(ret->Get(4, 4).imag())<1e-16);
+  
+
+}

@@ -1,0 +1,19 @@
+{ decls }
+namespace GamR { namespace Spect {  } }
+
+[ libgamr_spect.dylib ]
+# List of selected classes
+class GamR::Spect::BackSub2D
+class GamR::Spect::Parameter
+class GamR::Spect::PeakFit
+class GamR::Spect::PeakFit::Parameters
+class GamR::Spect::PeakFit::PeakParams
+class GamR::Spect::PeakFitGuesses
+header BackSub.hh
+header FitGuesses.hh
+header Fit.hh
+# List of selected namespaces
+namespace GamR
+namespace GamR::Spect
+# List of selected vars
+var GamR::Spect::gFitGuesses

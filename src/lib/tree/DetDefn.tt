@@ -1,0 +1,286 @@
+/* STD */
+#include <cmath>
+#include <cstdlib>
+#include <iostream>
+#include <numeric>
+#include <sstream>
+#include <stdexcept>
+
+namespace GamR {
+namespace Tree {
+
+template <class... Ts>
+struct TDetDefn<Ts...>::UpdateGoodness {
+   TDetDefn *parent;
+   UpdateGoodness(TDetDefn *p) : parent(p){};
+   template <typename R, typename T>
+   void operator()(R raw, T &dat)
+   {
+      parent->fMeasCount += ((dat.second) > 0) && (*raw > 0);
+   }
+};
+
+template <class... Ts>
+struct TDetDefn<Ts...>::InterpretPointers {
+   TDetDefn *p;
+   std::map<std::string, void *> PointerMap;
+   std::vector<std::string> Keys;
+   int idxKey;
+   InterpretPointers(TDetDefn *p, std::map<std::string, void *> &m, std::vector<std::string> &k)
+      : p(p), PointerMap(m), Keys(k), idxKey(0){};
+   template <typename T>
+   void operator()(T &dat)
+   {
+      dat = static_cast<T>(PointerMap[Keys[idxKey]]);
+      // dat.reset(static_cast<decltype(dat.get())>(PointerMap[Keys[idxKey]]));
+      ++idxKey;
+   }
+};
+
+template <class... Ts>
+struct TDetDefn<Ts...>::DereferencePointers {
+   template <typename Raw, typename Datum>
+   void operator()(Raw r, Datum &d)
+   {
+      d.first = *r;
+   }
+};
+
+// template <class ...Ts>
+// struct TDetDefn<Ts...>::FillHistogram
+// {
+//   TDetDefn* p;
+//   size_t n; size_t max;
+//   FillHistogram(TDetDefn* p) : p(p), n(0), max(50000) {};
+//   template <typename T>
+//   void operator()(T d)
+//   {
+//     if (p->fPollGate.Eval(d.first, d.second))
+//       {
+//         p -> fRawHists[n] -> Fill(d.first);
+//         if (p->fRawHists[n]->GetEntries() >= max) {
+//           if (p->fMean[n].first && p->fStdDev[n].first) {
+//             p->fMean[n].second = p->fRawHists[n]->GetMean();
+//             p->fStdDev[n].second = p->fRawHists[n]->GetStdDev();
+//           } else {
+//             p->fMean[n].first = p->fRawHists[n]->GetMean();
+//             p->fStdDev[n].first = p->fRawHists[n]->GetStdDev();
+//           }
+//           p->fRawHists[n] -> Reset();
+//         }
+//       }
+//     ++n;
+//   }
+// };
+
+template <class... Ts>
+struct TDetDefn<Ts...>::CalFunctor {
+   TDetDefn *p;
+   int CalFuncN;
+   int CalParN;
+   Double_t dRand1;
+   Double_t dRand2;
+   Double_t dStdDev;
+   Double_t dMean;
+
+   struct CalFunctorInner;
+   CalFunctor(TDetDefn *p) : p(p), CalFuncN(0), CalParN(0){};
+  template <typename T, typename R, typename N>
+   void operator()(T &datum, R &running, N n)
+   {
+      CalParN = 0;
+      CalFunctorInner inner(p, this);
+      GamR::Utils::for_each_in_tuple(p->fDatum, inner);
+      dRand1 = (int)(1000 * p->fRnd.Rndm()) / 1000.0;
+      dRand2 = (int)(1000 * p->fRnd.Gaus()) / 1000.0;
+
+      if (p->fPollGate[CalFuncN]->Eval(0)) {
+         p->fMean[CalFuncN].second +=
+            (static_cast<double>(datum.first) - static_cast<double>(running[(p->fRunningIndex)[CalFuncN]])) /
+            running.size();
+         p->fRunningSquared[CalFuncN] += (static_cast<double>(datum.first) * static_cast<double>(datum.first) -
+                                          (static_cast<double>(running[(p->fRunningIndex)[CalFuncN]])) *
+                                             (static_cast<double>(running[(p->fRunningIndex)[CalFuncN]]))) /
+                                         running.size();
+
+         p->fStdDev[CalFuncN].second =
+            std::sqrt(p->fRunningSquared[CalFuncN] - (p->fMean[CalFuncN].second) * (p->fMean[CalFuncN].second));
+
+         running[(p->fRunningIndex)[CalFuncN]] = static_cast<double>(datum.first);
+
+         (p->fRunningIndex)[CalFuncN] = ((p->fRunningIndex)[CalFuncN] + 1) % (p->fPollFreq);
+
+         if ((p->fRunningIndex)[CalFuncN] == 0 && p->fMean[CalFuncN].first == 0) {
+            // p->fMean[CalFuncN].second = static_cast<double>
+            //   (std::accumulate((running).begin(), (running).end(), 0))/
+            //   (running).size();
+
+            p->fMean[CalFuncN].first = p->fMean[CalFuncN].second;
+            p->fStdDev[CalFuncN].first = p->fStdDev[CalFuncN].second;
+         }
+         // if (p->fID == 1)
+         //   std::cout << (p->fRunningIndex)[CalFuncN] << "  " <<
+         //   p->fMean[CalFuncN].first << "   " << p->fMean[CalFuncN].second << "
+         //   "<< p->fStdDev[CalFuncN].first << "  " <<
+         //   p->fStdDev[CalFuncN].second<< std::endl;
+      }
+
+      if ((p->fMean[CalFuncN].first) && (p->fMean[CalFuncN].second)) {
+         dMean = p->fMean[CalFuncN].first - p->fMean[CalFuncN].second;
+      } else {
+         dMean = 0;
+      }
+
+      if ((p->fStdDev[CalFuncN].first) && (p->fStdDev[CalFuncN].second)) {
+         dStdDev = p->fStdDev[CalFuncN].first / p->fStdDev[CalFuncN].second;
+      } else {
+         dStdDev = 1;
+      }
+
+      int CalFuncNLast = std::tuple_size<decltype(p->fDatum)>::value;      
+      p->fCalFunc[CalFuncN]->SetParameter(CalFuncNLast, n); //event number as final "branch"
+      datum.second = p->fCalFunc[CalFuncN]->Eval(dRand1, dRand2, dStdDev, dMean);
+      p->fEffFunc.SetParameter(CalFuncN, datum.second);
+      ++CalFuncN;
+   }
+};
+
+template <class... Ts>
+struct TDetDefn<Ts...>::CalFunctor::CalFunctorInner {
+   TDetDefn *p;
+   CalFunctor *o;
+   CalFunctorInner(TDetDefn *p, CalFunctor *outer) : p(p), o(outer){};
+   template <typename T>
+   void operator()(T par)
+   {
+      if (o->CalParN < o->CalFuncN) { // if possible to use calibrated datum
+         p->fCalFunc[o->CalFuncN]->SetParameter(
+            o->CalParN, p->fCalFunc[o->CalParN]->Eval(o->dRand1, o->dRand2, o->dStdDev, o->dMean));
+         p->fPollGate[o->CalFuncN]->SetParameter(o->CalParN, p->fCalFunc[o->CalParN]->Eval(o->dRand1, o->dRand2));
+
+      } else {
+         p->fCalFunc[o->CalFuncN]->SetParameter(o->CalParN, par.first);
+         p->fPollGate[o->CalFuncN]->SetParameter(o->CalParN, par.first);
+      }
+      ++(o->CalParN);
+   }
+};
+
+// ------------------------------------------------------------
+template <class... Ts>
+Bool_t TDetDefn<Ts...>::IsGood()
+{
+   fMeasCount = 0;
+   GamR::Utils::for_both_in_tuple(fRawDatum, fDatum, UpdateGoodness(this));
+   return (fMeasCount >= fAtleast) ? kTRUE : kFALSE;
+}
+
+// ------------------------------------------------------------
+template <class... Ts>
+void TDetDefn<Ts...>::SetPtrs(std::map<std::string, void *> &branchmap, std::string branches)
+{
+   std::vector<std::string> branchvec;
+   std::stringstream ss(branches);
+   std::string branch;
+
+   while (ss >> branch) {
+      if (branchmap.find(branch) == branchmap.end()) {
+         throw std::runtime_error("Branch " + branch + " defined in " + fName + " not in raw tree");
+      }
+      branchvec.push_back(branch);
+      // auto hist = std::make_shared<TH1D>(branch.c_str(),
+      //                                    branch.c_str(),
+      //                                    20000, 0, 10);
+      // hist -> SetCanExtend(TH1::kAllAxes);
+      // fRawHists.push_back(hist);
+   }
+
+   if (branchvec.size() != sizeof...(Ts)) {
+      throw std::length_error("Number branches found (" + std::to_string(branchvec.size()) + ") in: [" + branches +
+                              "] does not equal detector declaration size" + "in detector ID " + std::to_string(fID));
+   }
+
+   std::cout << fType << "::" << fID << "::" << fName << " [" << branches << "]" << std::endl;
+
+   GamR::Utils::for_each_in_tuple(fRawDatum, InterpretPointers(this, branchmap, branchvec));
+}
+
+// ------------------------------------------------------------
+template <class... Ts>
+void TDetDefn<Ts...>::SetCalFuncs(std::string funcstrs)
+{
+   // Sets the expression of measurement calibration functions
+   std::stringstream ss(funcstrs);
+   std::string func;
+   std::vector<std::string> functions;
+   while (ss >> func) {
+      functions.push_back(func);
+      // if (ss.peek() == delim) { ss.ignore(); };
+   }
+
+   if (functions.size() != sizeof...(Ts)) {
+      throw std::length_error("Number calibration functions (" + std::to_string(functions.size()) +
+                              ") does not equal detector declaration size.");
+   }
+
+   int num = 0;
+   for (const auto &itFuncStr : functions) {
+      ss.str("");
+      ss << fType << fID << "_" << fName << "_" << num;
+      fCalFunc.push_back(std::make_shared<TFormula>(ss.str().c_str(), itFuncStr.c_str()));
+      ++num;
+   }
+}
+
+// ------------------------------------------------------------
+template <class... Ts>
+void TDetDefn<Ts...>::SetPollGates(std::string pollstrs)
+{
+   // Sets the expression of the poll gate for means etc.
+   std::stringstream ss(pollstrs);
+   std::string func;
+   std::vector<std::string> functions;
+   while (ss >> func) {
+      functions.push_back(func);
+      // if (ss.peek() == delim) { ss.ignore(); };
+   }
+   if (functions.empty()) {
+      for (UInt_t i = 0; i < sizeof...(Ts); ++i) {
+         functions.push_back("0");
+      }
+   }
+   if (functions.size() != sizeof...(Ts)) {
+      throw std::length_error("Number poll gates (" + std::to_string(functions.size()) +
+                              ") does not equal detector declaration size.");
+   }
+
+   int num = 0;
+   for (const auto &itFuncStr : functions) {
+      ss.str("");
+      ss << fType << fID << "_" << fName << "_" << num;
+      fPollGate.push_back(std::make_shared<TFormula>(ss.str().c_str(), itFuncStr.c_str()));
+      ++num;
+   }
+}
+
+// ------------------------------------------------------------
+template <class... Ts>
+void TDetDefn<Ts...>::SetEffFunc(std::string function)
+{
+   std::stringstream ss;
+   ss << fType << fID << "_" << fName << "_eff";
+   fEffFunc = TFormula(ss.str().c_str(), function.c_str());
+}
+
+// ------------------------------------------------------------
+template <class... Ts>
+void TDetDefn<Ts...>::Calibrate(ULong64_t eventNum)
+{
+   GamR::Utils::for_both_in_tuple(fRawDatum, fDatum, DereferencePointers());
+   // GamR::Utils::for_each_in_tuple(fDatum, FillHistogram(this));
+   GamR::Utils::for_both_in_tuple(fDatum, fRunning, CalFunctor(this), eventNum);
+
+}
+
+} // namespace Tree
+} // namespace GamR

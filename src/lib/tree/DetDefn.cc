@@ -1,0 +1,2 @@
+/* GAMR */
+#include "DetDefn.hh"

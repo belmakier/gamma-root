@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Opening installed documentation in default browser"
+xdg-open @CMAKE_INSTALL_PREFIX@/@EZ_INSTALL_DOCDIR@/html/index.html &

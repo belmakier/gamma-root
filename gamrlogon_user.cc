@@ -1,0 +1,3 @@
+{
+  GamR::Spect::Init();
+}

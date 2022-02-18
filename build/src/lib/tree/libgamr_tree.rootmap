@@ -1,0 +1,251 @@
+{ decls }
+namespace std { inline namespace __1 {  } }
+namespace GamR { namespace Tree {  } }
+namespace GamR { namespace Tree { template <typename ... ADefns> class TExpDefn; } }
+namespace GamR { namespace Tree { template <typename ... ADets> class TEvent; } }
+namespace GamR { namespace Tree { template <typename ... Ts> class TDetDefn; } }
+namespace GamR { namespace Tree { template <typename ... Ts> class TDetector; } }
+
+[ libgamr_tree.dylib ]
+# List of selected classes
+class GamR::Tree::TDetDefn<Double_t,Double_t,Int_t,Int_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t>
+class GamR::Tree::TDetDefn<Double_t,Double_t,Int_t,Int_t,Int_t,Int_t,Int_t,Int_t,Int_t,Int_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Bool_t,Bool_t>
+class GamR::Tree::TDetDefn<UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t>
+class GamR::Tree::TDetDefn<UInt_t,UInt_t,UInt_t,UInt_t>
+class GamR::Tree::TDetDefn<UInt_t,UInt_t,UInt_t>
+class GamR::Tree::TDetDefn<UInt_t,UInt_t>
+class GamR::Tree::TDetDefn<UInt_t>
+class GamR::Tree::TDetDefn<ULong64_t,Double_t,UInt_t>
+class GamR::Tree::TDetDefn<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t>
+class GamR::Tree::TDetDefn<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t>
+class GamR::Tree::TDetDefn<ULong64_t,UInt_t,UInt_t,UInt_t>
+class GamR::Tree::TDetDefn<ULong64_t,UInt_t,UInt_t>
+class GamR::Tree::TDetDefn<ULong64_t,double,unsigned int>
+class GamR::Tree::TDetDefn<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int>
+class GamR::Tree::TDetDefn<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int>
+class GamR::Tree::TDetDefn<ULong64_t,unsigned int,unsigned int,unsigned int>
+class GamR::Tree::TDetDefn<ULong64_t,unsigned int,unsigned int>
+class GamR::Tree::TDetDefn<UShort_t,UShort_t,UShort_t>
+class GamR::Tree::TDetDefn<UShort_t,UShort_t>
+class GamR::Tree::TDetDefn<UShort_t>
+class GamR::Tree::TDetDefn<double,double,int,int,float,float,float,float,float,float,float,float>
+class GamR::Tree::TDetDefn<double,double,int,int,int,int,int,int,int,int,float,float,float,float,float,float,float,bool,bool>
+class GamR::Tree::TDetDefn<unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int>
+class GamR::Tree::TDetDefn<unsigned int,unsigned int,unsigned int,unsigned int>
+class GamR::Tree::TDetDefn<unsigned int,unsigned int,unsigned int>
+class GamR::Tree::TDetDefn<unsigned int,unsigned int>
+class GamR::Tree::TDetDefn<unsigned int>
+class GamR::Tree::TDetDefn<unsigned short,unsigned short,unsigned short>
+class GamR::Tree::TDetDefn<unsigned short,unsigned short>
+class GamR::Tree::TDetDefn<unsigned short>
+class GamR::Tree::TDetector<Double_t,Double_t,Int_t,Int_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t>
+class GamR::Tree::TDetector<Double_t,Double_t,Int_t,Int_t,Int_t,Int_t,Int_t,Int_t,Int_t,Int_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Bool_t,Bool_t>
+class GamR::Tree::TDetector<UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t>
+class GamR::Tree::TDetector<UInt_t,UInt_t,UInt_t,UInt_t>
+class GamR::Tree::TDetector<UInt_t,UInt_t,UInt_t>
+class GamR::Tree::TDetector<UInt_t,UInt_t>
+class GamR::Tree::TDetector<UInt_t>
+class GamR::Tree::TDetector<ULong64_t,Double_t,UInt_t>
+class GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t>
+class GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t>
+class GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t>
+class GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t>
+class GamR::Tree::TDetector<ULong64_t,double,unsigned int>
+class GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int>
+class GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int>
+class GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int>
+class GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int>
+class GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t>
+class GamR::Tree::TDetector<UShort_t,UShort_t>
+class GamR::Tree::TDetector<UShort_t>
+class GamR::Tree::TDetector<double,double,int,int,float,float,float,float,float,float,float,float>
+class GamR::Tree::TDetector<double,double,int,int,int,int,int,int,int,int,float,float,float,float,float,float,float,bool,bool>
+class GamR::Tree::TDetector<unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int>
+class GamR::Tree::TDetector<unsigned int,unsigned int,unsigned int,unsigned int>
+class GamR::Tree::TDetector<unsigned int,unsigned int,unsigned int>
+class GamR::Tree::TDetector<unsigned int,unsigned int>
+class GamR::Tree::TDetector<unsigned int>
+class GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short>
+class GamR::Tree::TDetector<unsigned short,unsigned short>
+class GamR::Tree::TDetector<unsigned short>
+class GamR::Tree::TEvent<GamR::Tree::TDetector<Double_t,Double_t,Int_t,Int_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t>,GamR::Tree::TDetector<Double_t,Double_t,Int_t,Int_t,Int_t,Int_t,Int_t,Int_t,Int_t,Int_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Bool_t,Bool_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetector<UInt_t,UInt_t>,GamR::Tree::TDetector<UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetector<UInt_t>,GamR::Tree::TDetector<UInt_t,UInt_t>,GamR::Tree::TDetector<UInt_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<UInt_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetector<UInt_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetector<UInt_t,UInt_t,UInt_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<ULong64_t,Double_t,UInt_t>,GamR::Tree::TDetector<ULong64_t,Double_t,UInt_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<ULong64_t,double,unsigned int>,GamR::Tree::TDetector<ULong64_t,double,unsigned int> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t>,GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t>,GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t>,GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t>,GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t>,GamR::Tree::TDetector<UShort_t,UShort_t>,GamR::Tree::TDetector<UShort_t,UShort_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t>,GamR::Tree::TDetector<UShort_t,UShort_t>,GamR::Tree::TDetector<UShort_t,UShort_t>,GamR::Tree::TDetector<UShort_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t>,GamR::Tree::TDetector<UShort_t,UShort_t>,GamR::Tree::TDetector<UShort_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<UShort_t,UShort_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<UShort_t,UShort_t>,GamR::Tree::TDetector<UShort_t,UShort_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<UShort_t,UShort_t>,GamR::Tree::TDetector<UShort_t,UShort_t>,GamR::Tree::TDetector<UShort_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<UShort_t,UShort_t>,GamR::Tree::TDetector<UShort_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<UShort_t,UShort_t>,GamR::Tree::TDetector<UShort_t>,GamR::Tree::TDetector<UShort_t>,GamR::Tree::TDetector<UShort_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<UShort_t> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<double,double,int,int,float,float,float,float,float,float,float,float>,GamR::Tree::TDetector<double,double,int,int,int,int,int,int,int,int,float,float,float,float,float,float,float,bool,bool> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetector<unsigned int,unsigned int>,GamR::Tree::TDetector<unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetector<unsigned int>,GamR::Tree::TDetector<unsigned int,unsigned int>,GamR::Tree::TDetector<unsigned int> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<unsigned int,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetector<unsigned int,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetector<unsigned int,unsigned int,unsigned int> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short>,GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short>,GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short>,GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short>,GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short>,GamR::Tree::TDetector<unsigned short,unsigned short>,GamR::Tree::TDetector<unsigned short,unsigned short> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short>,GamR::Tree::TDetector<unsigned short,unsigned short>,GamR::Tree::TDetector<unsigned short,unsigned short>,GamR::Tree::TDetector<unsigned short> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short>,GamR::Tree::TDetector<unsigned short,unsigned short>,GamR::Tree::TDetector<unsigned short> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<unsigned short,unsigned short> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<unsigned short,unsigned short>,GamR::Tree::TDetector<unsigned short,unsigned short> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<unsigned short,unsigned short>,GamR::Tree::TDetector<unsigned short,unsigned short>,GamR::Tree::TDetector<unsigned short> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<unsigned short,unsigned short>,GamR::Tree::TDetector<unsigned short> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<unsigned short,unsigned short>,GamR::Tree::TDetector<unsigned short>,GamR::Tree::TDetector<unsigned short>,GamR::Tree::TDetector<unsigned short> >
+class GamR::Tree::TEvent<GamR::Tree::TDetector<unsigned short> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<Double_t,Double_t,Int_t,Int_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t>,GamR::Tree::TDetDefn<Double_t,Double_t,Int_t,Int_t,Int_t,Int_t,Int_t,Int_t,Int_t,Int_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Bool_t,Bool_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetDefn<UInt_t,UInt_t>,GamR::Tree::TDetDefn<UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetDefn<UInt_t>,GamR::Tree::TDetDefn<UInt_t,UInt_t>,GamR::Tree::TDetDefn<UInt_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<UInt_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetDefn<UInt_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetDefn<UInt_t,UInt_t,UInt_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<ULong64_t,Double_t,UInt_t>,GamR::Tree::TDetDefn<ULong64_t,Double_t,UInt_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetDefn<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetDefn<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<ULong64_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetDefn<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetDefn<ULong64_t,UInt_t,UInt_t,UInt_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<ULong64_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetDefn<ULong64_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetDefn<ULong64_t,UInt_t,UInt_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<ULong64_t,UInt_t,UInt_t,UInt_t>,GamR::Tree::TDetDefn<ULong64_t,UInt_t,UInt_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<ULong64_t,double,unsigned int>,GamR::Tree::TDetDefn<ULong64_t,double,unsigned int> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetDefn<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetDefn<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<ULong64_t,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetDefn<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetDefn<ULong64_t,unsigned int,unsigned int,unsigned int> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<ULong64_t,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetDefn<ULong64_t,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetDefn<ULong64_t,unsigned int,unsigned int> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<ULong64_t,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetDefn<ULong64_t,unsigned int,unsigned int> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<UShort_t,UShort_t,UShort_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<UShort_t,UShort_t,UShort_t>,GamR::Tree::TDetDefn<UShort_t,UShort_t,UShort_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<UShort_t,UShort_t,UShort_t>,GamR::Tree::TDetDefn<UShort_t,UShort_t,UShort_t>,GamR::Tree::TDetDefn<UShort_t,UShort_t,UShort_t>,GamR::Tree::TDetDefn<UShort_t,UShort_t,UShort_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<UShort_t,UShort_t,UShort_t>,GamR::Tree::TDetDefn<UShort_t,UShort_t>,GamR::Tree::TDetDefn<UShort_t,UShort_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<UShort_t,UShort_t,UShort_t>,GamR::Tree::TDetDefn<UShort_t,UShort_t>,GamR::Tree::TDetDefn<UShort_t,UShort_t>,GamR::Tree::TDetDefn<UShort_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<UShort_t,UShort_t,UShort_t>,GamR::Tree::TDetDefn<UShort_t,UShort_t>,GamR::Tree::TDetDefn<UShort_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<UShort_t,UShort_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<UShort_t,UShort_t>,GamR::Tree::TDetDefn<UShort_t,UShort_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<UShort_t,UShort_t>,GamR::Tree::TDetDefn<UShort_t,UShort_t>,GamR::Tree::TDetDefn<UShort_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<UShort_t,UShort_t>,GamR::Tree::TDetDefn<UShort_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<UShort_t,UShort_t>,GamR::Tree::TDetDefn<UShort_t>,GamR::Tree::TDetDefn<UShort_t>,GamR::Tree::TDetDefn<UShort_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<UShort_t> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<double,double,int,int,float,float,float,float,float,float,float,float>,GamR::Tree::TDetDefn<double,double,int,int,int,int,int,int,int,int,float,float,float,float,float,float,float,bool,bool> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetDefn<unsigned int,unsigned int>,GamR::Tree::TDetDefn<unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetDefn<unsigned int>,GamR::Tree::TDetDefn<unsigned int,unsigned int>,GamR::Tree::TDetDefn<unsigned int> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<unsigned int,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetDefn<unsigned int,unsigned int,unsigned int,unsigned int>,GamR::Tree::TDetDefn<unsigned int,unsigned int,unsigned int> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<unsigned short,unsigned short,unsigned short> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<unsigned short,unsigned short,unsigned short>,GamR::Tree::TDetDefn<unsigned short,unsigned short,unsigned short> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<unsigned short,unsigned short,unsigned short>,GamR::Tree::TDetDefn<unsigned short,unsigned short,unsigned short>,GamR::Tree::TDetDefn<unsigned short,unsigned short,unsigned short>,GamR::Tree::TDetDefn<unsigned short,unsigned short,unsigned short> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<unsigned short,unsigned short,unsigned short>,GamR::Tree::TDetDefn<unsigned short,unsigned short>,GamR::Tree::TDetDefn<unsigned short,unsigned short> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<unsigned short,unsigned short,unsigned short>,GamR::Tree::TDetDefn<unsigned short,unsigned short>,GamR::Tree::TDetDefn<unsigned short,unsigned short>,GamR::Tree::TDetDefn<unsigned short> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<unsigned short,unsigned short,unsigned short>,GamR::Tree::TDetDefn<unsigned short,unsigned short>,GamR::Tree::TDetDefn<unsigned short> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<unsigned short,unsigned short> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<unsigned short,unsigned short>,GamR::Tree::TDetDefn<unsigned short,unsigned short> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<unsigned short,unsigned short>,GamR::Tree::TDetDefn<unsigned short,unsigned short>,GamR::Tree::TDetDefn<unsigned short> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<unsigned short,unsigned short>,GamR::Tree::TDetDefn<unsigned short> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<unsigned short,unsigned short>,GamR::Tree::TDetDefn<unsigned short>,GamR::Tree::TDetDefn<unsigned short>,GamR::Tree::TDetDefn<unsigned short> >
+class GamR::Tree::TExpDefn<GamR::Tree::TDetDefn<unsigned short> >
+class pair<Bool_t,Double_t>
+class pair<Char_t,Double_t>
+class pair<Double_t,Double_t>
+class pair<Float_t,Double_t>
+class pair<Int_t,Double_t>
+class pair<Long64_t,Double_t>
+class pair<Long64_t,double>
+class pair<Short_t,Double_t>
+class pair<UChar_t,Double_t>
+class pair<UInt_t,Double_t>
+class pair<ULong64_t,Double_t>
+class pair<ULong64_t,double>
+class pair<UShort_t,Double_t>
+class pair<bool,double>
+class pair<char,double>
+class pair<double,double>
+class pair<float,double>
+class pair<int,double>
+class pair<short,double>
+class pair<unsigned char,double>
+class pair<unsigned int,double>
+class pair<unsigned short,double>
+class tuple<pair<ULong64_t,double>,pair<double,double>,pair<unsigned int,double> >
+class tuple<pair<ULong64_t,double>,pair<unsigned int,double>,pair<unsigned int,double> >
+class tuple<pair<ULong64_t,double>,pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double> >
+class tuple<pair<ULong64_t,double>,pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double> >
+class tuple<pair<ULong64_t,double>,pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double> >
+class tuple<pair<double,double>,pair<double,double>,pair<int,double>,pair<int,double>,pair<float,double>,pair<float,double>,pair<float,double>,pair<float,double>,pair<float,double>,pair<float,double>,pair<float,double>,pair<float,double> >
+class tuple<pair<double,double>,pair<double,double>,pair<int,double>,pair<int,double>,pair<int,double>,pair<int,double>,pair<int,double>,pair<int,double>,pair<int,double>,pair<int,double>,pair<float,double>,pair<float,double>,pair<float,double>,pair<float,double>,pair<float,double>,pair<float,double>,pair<float,double>,pair<bool,double>,pair<bool,double> >
+class tuple<pair<unsigned int,double> >
+class tuple<pair<unsigned int,double>,pair<unsigned int,double> >
+class tuple<pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double> >
+class tuple<pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double> >
+class tuple<pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double>,pair<unsigned int,double> >
+class tuple<pair<unsigned short,double> >
+class tuple<pair<unsigned short,double>,pair<unsigned short,double> >
+class tuple<pair<unsigned short,double>,pair<unsigned short,double>,pair<unsigned short,double> >
+class tuple<std::pair<Double_t,Double_t>,std::pair<Double_t,Double_t>,std::pair<Int_t,Double_t>,std::pair<Int_t,Double_t>,std::pair<Float_t,Double_t>,std::pair<Float_t,Double_t>,std::pair<Float_t,Double_t>,std::pair<Float_t,Double_t>,std::pair<Float_t,Double_t>,std::pair<Float_t,Double_t>,std::pair<Float_t,Double_t>,std::pair<Float_t,Double_t> >
+class tuple<std::pair<Double_t,Double_t>,std::pair<Double_t,Double_t>,std::pair<Int_t,Double_t>,std::pair<Int_t,Double_t>,std::pair<Int_t,Double_t>,std::pair<Int_t,Double_t>,std::pair<Int_t,Double_t>,std::pair<Int_t,Double_t>,std::pair<Int_t,Double_t>,std::pair<Int_t,Double_t>,std::pair<Float_t,Double_t>,std::pair<Float_t,Double_t>,std::pair<Float_t,Double_t>,std::pair<Float_t,Double_t>,std::pair<Float_t,Double_t>,std::pair<Float_t,Double_t>,std::pair<Float_t,Double_t>,std::pair<Bool_t,Double_t>,std::pair<Bool_t,Double_t> >
+class tuple<std::pair<UInt_t,Double_t> >
+class tuple<std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t> >
+class tuple<std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t> >
+class tuple<std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t> >
+class tuple<std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t> >
+class tuple<std::pair<ULong64_t,Double_t>,std::pair<Double_t,Double_t>,std::pair<UInt_t,Double_t> >
+class tuple<std::pair<ULong64_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t> >
+class tuple<std::pair<ULong64_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t> >
+class tuple<std::pair<ULong64_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t> >
+class tuple<std::pair<ULong64_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t>,std::pair<UInt_t,Double_t> >
+class tuple<std::pair<UShort_t,Double_t> >
+class tuple<std::pair<UShort_t,Double_t>,std::pair<UShort_t,Double_t> >
+class tuple<std::pair<UShort_t,Double_t>,std::pair<UShort_t,Double_t>,std::pair<UShort_t,Double_t> >
+class tuple<std::vector<GamR::Tree::TDetector<Double_t,Double_t,Int_t,Int_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t> >,std::vector<GamR::Tree::TDetector<Double_t,Double_t,Int_t,Int_t,Int_t,Int_t,Int_t,Int_t,Int_t,Int_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Float_t,Bool_t,Bool_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t> >,std::vector<GamR::Tree::TDetector<UInt_t,UInt_t> >,std::vector<GamR::Tree::TDetector<UInt_t,UInt_t,UInt_t> >,std::vector<GamR::Tree::TDetector<UInt_t> >,std::vector<GamR::Tree::TDetector<UInt_t,UInt_t> >,std::vector<GamR::Tree::TDetector<UInt_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<UInt_t,UInt_t,UInt_t,UInt_t> >,std::vector<GamR::Tree::TDetector<UInt_t,UInt_t,UInt_t,UInt_t> >,std::vector<GamR::Tree::TDetector<UInt_t,UInt_t,UInt_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<ULong64_t,Double_t,UInt_t> >,std::vector<GamR::Tree::TDetector<ULong64_t,Double_t,UInt_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t,UInt_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t> >,std::vector<GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t> >,std::vector<GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t> >,std::vector<GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t,UInt_t> >,std::vector<GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t> >,std::vector<GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t> >,std::vector<GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t,UInt_t> >,std::vector<GamR::Tree::TDetector<ULong64_t,UInt_t,UInt_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t,UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t,UShort_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t,UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t,UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<UShort_t,UShort_t,UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t,UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<UShort_t,UShort_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<UShort_t,UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t,UShort_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<UShort_t,UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t,UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<UShort_t,UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<UShort_t,UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t> >,std::vector<GamR::Tree::TDetector<UShort_t> > >
+class tuple<std::vector<GamR::Tree::TDetector<UShort_t> > >
+class tuple<vector<GamR::Tree::TDetector<ULong64_t,double,unsigned int> >,vector<GamR::Tree::TDetector<ULong64_t,double,unsigned int> > >
+class tuple<vector<GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int> > >
+class tuple<vector<GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int> >,vector<GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int> >,vector<GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int> > >
+class tuple<vector<GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int> >,vector<GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int,unsigned int> >,vector<GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int> > >
+class tuple<vector<GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int> >,vector<GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int> >,vector<GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int> > >
+class tuple<vector<GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int,unsigned int> >,vector<GamR::Tree::TDetector<ULong64_t,unsigned int,unsigned int> > >
+class tuple<vector<GamR::Tree::TDetector<double,double,int,int,float,float,float,float,float,float,float,float> >,vector<GamR::Tree::TDetector<double,double,int,int,int,int,int,int,int,int,float,float,float,float,float,float,float,bool,bool> > >
+class tuple<vector<GamR::Tree::TDetector<unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int> >,vector<GamR::Tree::TDetector<unsigned int,unsigned int> >,vector<GamR::Tree::TDetector<unsigned int,unsigned int,unsigned int> >,vector<GamR::Tree::TDetector<unsigned int> >,vector<GamR::Tree::TDetector<unsigned int,unsigned int> >,vector<GamR::Tree::TDetector<unsigned int> > >
+class tuple<vector<GamR::Tree::TDetector<unsigned int,unsigned int,unsigned int,unsigned int> >,vector<GamR::Tree::TDetector<unsigned int,unsigned int,unsigned int,unsigned int> >,vector<GamR::Tree::TDetector<unsigned int,unsigned int,unsigned int> > >
+class tuple<vector<GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short> > >
+class tuple<vector<GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short> >,vector<GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short> > >
+class tuple<vector<GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short> >,vector<GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short> >,vector<GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short> >,vector<GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short> > >
+class tuple<vector<GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short> >,vector<GamR::Tree::TDetector<unsigned short,unsigned short> >,vector<GamR::Tree::TDetector<unsigned short,unsigned short> > >
+class tuple<vector<GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short> >,vector<GamR::Tree::TDetector<unsigned short,unsigned short> >,vector<GamR::Tree::TDetector<unsigned short,unsigned short> >,vector<GamR::Tree::TDetector<unsigned short> > >
+class tuple<vector<GamR::Tree::TDetector<unsigned short,unsigned short,unsigned short> >,vector<GamR::Tree::TDetector<unsigned short,unsigned short> >,vector<GamR::Tree::TDetector<unsigned short> > >
+class tuple<vector<GamR::Tree::TDetector<unsigned short,unsigned short> > >
+class tuple<vector<GamR::Tree::TDetector<unsigned short,unsigned short> >,vector<GamR::Tree::TDetector<unsigned short,unsigned short> > >
+class tuple<vector<GamR::Tree::TDetector<unsigned short,unsigned short> >,vector<GamR::Tree::TDetector<unsigned short,unsigned short> >,vector<GamR::Tree::TDetector<unsigned short> > >
+class tuple<vector<GamR::Tree::TDetector<unsigned short,unsigned short> >,vector<GamR::Tree::TDetector<unsigned short> > >
+class tuple<vector<GamR::Tree::TDetector<unsigned short,unsigned short> >,vector<GamR::Tree::TDetector<unsigned short> >,vector<GamR::Tree::TDetector<unsigned short> >,vector<GamR::Tree::TDetector<unsigned short> > >
+class tuple<vector<GamR::Tree::TDetector<unsigned short> > >
+# List of selected namespaces
+namespace GamR
+namespace GamR::Tree

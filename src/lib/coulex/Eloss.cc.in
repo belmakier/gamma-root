@@ -1,0 +1,407 @@
+/**
+   @file
+   @author Brendan McCormick <brendan.mccormick@anu.edu.au>
+   @section DESCRIPTION
+
+ * The stopping-power routines below were derived from SRModule.exe of the SRIM-2013 software package (www.srim.org), copyright to J. L. Zeigler.
+ * The data upon which they are based (SCOEF03.dat and SNUC03.dat) are also copied from the SRIM2013 software, copyright to J. L. Zeigler.
+ * These routines and data have been replicated as per article 3 of the SRIM.com user agreement. The relevant legal notices are reproduced below and must be abided by when using this code: 
+  
+ *  Program name: SRIM  (PC version only)
+ *    Copyright: SRIM.com, 1984 , 1986, 1989, 1991, 1992, 1994, 1995, 1998, 2000, 2003, 2008, 2011. All Rights Reserved
+ *
+ *  SRIM.com Research Software Disclaimer
+ *    As experimental, research software, this program is provided free of charge on an "as is" basis without warranty of any kind, either expressed or implied, including but not limited to implied warranties of merchantability and fitness for a particular purpose. SRIM.com does not warrant that the functions contained in this program will meet the user's requirements or that the operation of this program will be uninterrupted or error-free. Acceptance and use of this program constitutes the user's understanding that he will have no recourse to SRIM.com for any actual or consequential damages, including, but not limited to, lost profits or savings, arising out of the use or inability to use this program. Even if the user informs SRIM.com of the possibility of such damages, SRIM.com expects the user of this program to accept the risk of any harm arising out of the use of this program, or the user shall not attempt to use this program for any purpose.
+ *
+ *  User agreement:
+ *    By acceptance and use of this experimental program the user agrees to the following:
+ *      This program is provided for the user's personal, non-commercial, experimental use and the user is granted permission to copy this program to the extent reasonably required for such use.
+ *      All title, ownership and rights to this program and its associated files and any copies remain with SRIM.com, irrespective of the ownership of the media on which the program resides.
+ *      The user is permitted to create non-commercial derivative works to this program. However, all copies of the program and its derivative works must contain the SRIM.com copyright notice, the Experimental Software Disclaimer and this User Agreement.
+ *      By furnishing this program to the user, SRIM.com does NOT grant either directly or by implication, estoppel, or otherwise any license under any patents, patent applications, trademarks, copyrights or other rights belonging to SRIM.com or to any third party, except as expressly provided herein.
+ *      The user understands and agrees that this program and its associated files, and any derivative works, are to be used solely for experimental uses and are not to be sold, distributed to a commercial organization, or be commercially exploited in any manner.
+
+*/
+
+/*
+ * The stopping-power routines below were derived from SRModule.exe of the SRIM-2013 software package (www.srim.org), copyright to J. L. Zeigler.
+ * The data upon which they are based (SCOEF03.dat and SNUC03.dat) are also copied from the SRIM2013 software, copyright to J. L. Zeigler.
+ * These routines and data have been replicated as per article 3 of the SRIM.com user agreement. The relevant legal notices are reproduced below and must be abided by when using this code: 
+  
+ *  Program name: SRIM  (PC version only)
+ *    Copyright: SRIM.com, 1984 , 1986, 1989, 1991, 1992, 1994, 1995, 1998, 2000, 2003, 2008, 2011. All Rights Reserved
+ *
+ *  SRIM.com Research Software Disclaimer
+ *    As experimental, research software, this program is provided free of charge on an "as is" basis without warranty of any kind, either expressed or implied, including but not limited to implied warranties of merchantability and fitness for a particular purpose. SRIM.com does not warrant that the functions contained in this program will meet the user's requirements or that the operation of this program will be uninterrupted or error-free. Acceptance and use of this program constitutes the user's understanding that he will have no recourse to SRIM.com for any actual or consequential damages, including, but not limited to, lost profits or savings, arising out of the use or inability to use this program. Even if the user informs SRIM.com of the possibility of such damages, SRIM.com expects the user of this program to accept the risk of any harm arising out of the use of this program, or the user shall not attempt to use this program for any purpose.
+ *
+ *  User agreement:
+ *    By acceptance and use of this experimental program the user agrees to the following:
+ *      This program is provided for the user's personal, non-commercial, experimental use and the user is granted permission to copy this program to the extent reasonably required for such use.
+ *      All title, ownership and rights to this program and its associated files and any copies remain with SRIM.com, irrespective of the ownership of the media on which the program resides.
+ *      The user is permitted to create non-commercial derivative works to this program. However, all copies of the program and its derivative works must contain the SRIM.com copyright notice, the Experimental Software Disclaimer and this User Agreement.
+ *      By furnishing this program to the user, SRIM.com does NOT grant either directly or by implication, estoppel, or otherwise any license under any patents, patent applications, trademarks, copyrights or other rights belonging to SRIM.com or to any third party, except as expressly provided herein.
+ *      The user understands and agrees that this program and its associated files, and any derivative works, are to be used solely for experimental uses and are not to be sold, distributed to a commercial organization, or be commercially exploited in any manner.
+ */
+
+#include "Eloss.hh"
+
+namespace GamR {
+	namespace Coulex {
+
+		double Eldat[92][5];					// Element properties, where [0] = A (Most Abundant Isotope), [1] = mass (M.A.I), [2] = mass (atomic), [3] = density (g/cm^3), [4] = density (atoms/cm^3).
+		double Scoef[92][30];					// Empirical proton, helium and lithium stopping coefficients (10, 10, 10), calculated by the 1/Sp = 1/SL + 1/SH fit (Ziegler's new 10-parameter fit in the 2003 version).
+		double HIcoef[92][26];					// Heavy-ion stopping polynomial coefficients
+		double HEcoef[92][22];					// High-energy stopping coefficients (11, 8, 1)
+		double HE_HIcoef[92][5];				// High-energy heavy-ion stopping coefficients
+		double Ncoef[92][92][4];						// 2-D array of nuclear stopping power coefficients
+		bool SCOEFloaded=false;					// Switch to indicate SCOEF data status
+		const double alpha = 7.297353E-3;		// fine structure constant
+		const double E_amu = 931494.;			// 1 atomic mass unit in keV
+		const double Elow = 2.;					// Low-energy limit
+		const double Ehigh_p = 1000.;			// High-energy limit for protons
+		const double Ehigh_HeLi = 2000.;		// High-energy limit for helium and lithium
+		const double Ehigh_HI = 30000.;			// High-energy limit for heavy ions
+		const double e_c = 1.60218E-13;			// Elementary charge J/MeV
+		const double c_l = 2.9979E8;			// Speed of light
+		const double m_u = 1.66054E-27;         // Dalton in kg
+
+		// Combined SCOEF03.dat and SNUC03.dat from SRIM2013
+		void loadSCOEF()
+		{
+			std::string SCOEFdat = "${CMAKE_INSTALL_PREFIX}/${EZ_INSTALL_DATADIR}/${EZ_THIS_UNIT_NAME}/SCOEF.dat";
+			std::ifstream SCOEF(SCOEFdat.c_str());
+			if(SCOEF.fail()) {
+				std::cerr << "!!ERROR!! SCOEF.dat not found! Please ensure SCOEF.dat is located at \"" + SCOEFdat + "\". Routine will return dE/dx = 0." << std::endl;
+				SCOEF.close();
+				return;
+			}
+			for(int Z=0; Z<92; ++Z) {
+				if(SCOEF.eof()) {
+					std::cerr << "!!ERROR!! Early termination of SCOEF.dat. Please ensure correct version is being used (SRIM2013's SCOEF03.dat + SNUC03.dat data in one file, SCOEF.dat)" << std::endl;
+					SCOEF.close();
+					return;
+				}
+				std::string strin;
+				std::string dump;
+				std::getline(SCOEF, strin);
+				strin = strin.substr(22, strin.size()-23);
+				std::stringstream ss(strin);
+				for(int i=0; i<5; ++i) ss >> Eldat[Z][i];
+				ss >> dump;
+				ss >> dump;
+				ss >> dump;
+				ss >> dump;
+				for(int i=0; i<30; ++i) ss >> Scoef[Z][i];
+				for(int i=0; i<26; ++i) ss >> HIcoef[Z][i];
+				for(int i=0; i<3; ++i) ss >> HEcoef[Z][i+19];
+				for(int i=0; i<19; ++i) ss >> HEcoef[Z][i];
+				for(int i=0; i<5; ++i) ss >> HE_HIcoef[Z][i];
+			}
+			for(int Z1=0; Z1<92; ++Z1) {
+				for(int i=0; i<Z1; ++i) {
+					for(int n=0; n<4; ++n) Ncoef[Z1][i][n] = Ncoef[i][Z1][n];
+				}
+				for(int Z2=Z1; Z2<92; ++Z2) {
+					if(SCOEF.eof()) {
+						std::cerr << "!!ERROR!! Early termination of SCOEF.dat. Please ensure correct version is being used (SRIM2013's SCOEF03.dat + SNUC03.dat data in one file, SCOEF.dat)" << std::endl;
+						SCOEF.close();
+						return;
+					}
+					std::string strin, dump;
+					std::getline(SCOEF, strin);
+					std::stringstream ss(strin);
+					ss >> dump;
+					ss >> dump;
+					for(int n=0; n<4; ++n) ss >> Ncoef[Z1][Z2][n];
+				}
+			}
+			SCOEF.close();
+			SCOEFloaded = true;
+		}
+
+		// E is energy in keV/u, Eh is high-energy limit in keV/u, Z is nuclear charge of the (b)eam and (t)arget.
+		double S_HE(double E, int Zb, int Zt)
+		{
+			if(Zb<1 || Zb>92 || Zt<1 || Zt>92) {
+				std::cerr << "!!ERROR!! Supplied beam/target Z is outside acceptable range (1 <= Z <= 92). Returning dE/dx = 0." << std::endl;
+				return 0.;
+			}
+
+			if(Zb > 3) Zb = 2;				// Heavy-ion stopping scales against He
+
+			switch(Zb) {			// This switch works because Ehigh_p < Ehigh_HeLi
+			case 1:
+				if(E > Ehigh_p) break;
+			case 2:
+			case 3:
+				if(E > Ehigh_HeLi) break;
+				std::cerr << "!!ERROR!! High-energy routine has been called but energy is in medium/low range. Returning dE/dx = 0." << std::endl;
+				return 0.;
+			}
+
+			int Zi = Zt - 1;
+			double EMeV = E / 1000.;
+			double lnEMeV = std::log(EMeV);
+			double KE0 = E / E_amu;
+			double beta_2 = 1. - std::pow(1. + KE0, -2);
+			double betapar = std::log(1022000. * beta_2 / (1. - beta_2)) - beta_2;
+
+			double poly1 = 0.;
+			for(int i=0; i<11; ++i) poly1 += HEcoef[Zi][i] * std::pow(lnEMeV, i);
+			double poly2 = 0.;
+			for(int i=0; i<8; ++i) poly2 += HEcoef[Zi][i+11] * std::pow(lnEMeV, i);
+
+			double Zv0_2 = std::pow(Zb*alpha, 2) / beta_2;
+			double Zv0par = -1.20206 * Zv0_2 + 1.042 * std::pow(Zv0_2, 2) - 0.8549 * std::pow(Zv0_2, 3) + 0.343 * std::pow(Zv0_2, 4);
+
+			double edenspar = (45000. / (Zt * std::pow(E, 1.6))) + (1.5 / std::pow(E, 0.4));
+			double tgtpar = Zb * EMeV * edenspar / (EMeV + edenspar);
+
+			return (betapar - poly1 - poly2 - std::log(HEcoef[Zi][19]) + Zv0par + tgtpar) * Zt * std::pow(Zb, 2) / (beta_2 * 1961.16);
+		}
+
+		// Routine for calculating Ziegler's fitted proton, helium and lithium stopping powers. E is energy per mass in units of keV/u. Z is the nuclear charge of the (b)eam and (t)arget material. Returns stoping in units of eV / (10^15 atoms / cm^2).
+		double SL_SH(double E, int Zb, int Zt)
+		{
+			if(Zb<1 || Zb>92 || Zt<1 || Zt>92) {
+				std::cerr << "!!ERROR!! Supplied beam/target Z is outside acceptable range (1 <= Z <= 92). Returning dE/dx = 0." << std::endl;
+				return 0.;
+			}
+			if(Zb>3) Zb = 2;			// Heavy-ion stopping scales against helium stopping.
+			--Zt;						// For array-indexing purposes
+			--Zb;						// For array-indexing purposes
+			int i = Zb*10;				// Get index of where parameters start for proton, helium or lithium.
+			double SL = Scoef[Zt][i] * std::pow(E, Scoef[Zt][i+1]) + Scoef[Zt][i+2] * std::pow(E, Scoef[Zt][i+3]) + std::sqrt(E) * Scoef[Zt][i+8];
+			double SH = Scoef[Zt][i+4] / std::pow(E, Scoef[Zt][i+5]) * (std::log((Scoef[Zt][i+6] / E) + (Scoef[Zt][i+7] * E)) + (Scoef[Zt][i+9] / std::pow(E, 0.2)));
+			return SL * SH / (SL + SH);
+		}
+
+		// Interpolates between high-energy limit and 1.2 x high-energy limit
+		double HEinterpol(double E, double Eh, int Zb, int Zt)
+		{
+			if(E < Eh) {
+				std::cerr << "!!ERROR!! High-energy routine has been called but energy is in medium/low range. Returning dE/dx = 0." << std::endl;
+				return 0.;
+			}
+			double S_hl, S_he;					// Medium-energy upper limit and high-energy lower-limit (Ehigh and Ehigh*1.2, respectively)
+			S_hl = SL_SH(Eh, Zb, Zt);
+			S_he = S_HE(Eh*1.2, Zb, Zt);
+			double dE = 0.2*Eh;
+			double dS = S_he - S_hl;
+			return (E-Eh) * dS / dE + S_hl;
+		}
+
+		// Routine for calculating Ziegler's fitted heavy-ion scaled stopping powers. E is energy per mass in units of keV/u. Z is the nuclear charge of the (b)eam and (t)arget material. Returns stopping in units of eV / (10^15 atoms / cm^2).
+		double S_HI(double E, int Zb, int Zt)
+		{
+			if(Zb<=3) {
+				std::cerr << "!!ERROR!! Heavy-ion stopping called for H/He/Li. Returning dE/dx = 0." << std::endl;
+				return 0.;
+			}
+			double S;
+			if(E>Ehigh_HeLi*1.2) S = S_HE(E, 2, Zt);
+			else if(E>Ehigh_HeLi) S = HEinterpol(E, Ehigh_HeLi, 2, Zt);
+			else S = SL_SH(E, 2, Zt);
+			--Zb;								// For array-indexing purposes
+			--Zt;								// For array-indexing purposes
+			double polyb = 0;					// 12th-degree polynomial for beam
+			double polyt = 0;					// 12th-degree polynomial for target
+			double lnE = std::log(E);
+			for(int i=0; i<13; ++i) {			// Calculate polynomials
+				polyb += HIcoef[Zb][i] * std::pow(lnE, i);			// Ion is first 13 coeffs
+				polyt += HIcoef[Zt][i+13] * std::pow(lnE, i);		// Target is last 13 coeffs
+			}
+			++Zb;								// Get actual Zb back for calculation
+			return (S * polyb * polyt / 4.) * std::pow(Zb, 2);
+		}
+
+		// Velocity-proportional stopping for low-energy ions (< 2 keV/u) as per 3-20 in the SRIM v15 textbook
+		double S_LE(double E, int Zb, int Zt)
+		{
+			double Spow = 0.5;
+			if(Zb==1) {
+				Spow = 0.45;
+				if(Zt<=6) Spow = 0.25;								// Correction for low-energy proton stopping in light targets
+			}
+			else if(Zb<19) {
+				if(Zt==6 || Zt==14 || Zt==32) Spow = 0.375;			// Correction for semiconductor band-gap targets
+			}
+			double Escale = std::pow(E/Elow, Spow);
+			double S_l;
+			if(Zb<3) S_l = SL_SH(Elow, Zb, Zt);
+			else S_l = S_HI(Elow, Zb, Zt);
+			return S_l * Escale;
+		}
+
+		// High-energy heavy-ion stoppping. E is energy in keV/u, Z is the nuclear charge of the (b)eam and (t)arget.
+		double S_HE_HI(double E, int Zb, int Zt)
+		{
+			int Zi = Zb - 1;
+
+			double lnEhl = std::log10(Ehigh_HI);
+			double Ehl;
+			if(lnEhl >= HE_HIcoef[Zi][1]) Ehl = std::exp(-(lnEhl - HE_HIcoef[Zi][1])/HE_HIcoef[Zi][3]) + 1.;
+			else Ehl = std::exp(-(lnEhl - HE_HIcoef[Zi][1])/HE_HIcoef[Zi][2]) + 1.;
+			Ehl = HE_HIcoef[Zi][0] + ((1. - HE_HIcoef[Zi][0]) / Ehl);
+			Ehl += std::exp(-std::fabs(1.3 + HE_HIcoef[Zi][1] - lnEhl)) * HE_HIcoef[Zi][4];
+
+			double lnEe = std::log10(E);
+			double Ee;
+			if(lnEe >= HE_HIcoef[Zi][1]) Ee = std::exp(-(lnEe - HE_HIcoef[Zi][1])/HE_HIcoef[Zi][3]) + 1.;
+			else Ee = std::exp(-(lnEe - HE_HIcoef[Zi][1])/HE_HIcoef[Zi][2]) + 1.;
+			Ee = HE_HIcoef[Zi][0] + ((1. - HE_HIcoef[Zi][0]) / Ee);
+			Ee += std::exp(-std::fabs(1.3 + HE_HIcoef[Zi][1] - lnEe)) * HE_HIcoef[Zi][4];
+
+			return S_HE(E, 2, Zt) * Ee * S_HI(Ehigh_HI, Zb, Zt) / (S_HE(Ehigh_HI, 2, Zt) * Ehl);
+		}
+
+		// Electronic stopping power. E is ion energy in keV/u, Z is the nuclear charge of the (b)eam and (t)arget.
+		double S_e(double E, int Zb, int Zt)
+		{
+			if(E<=0) return 0.;
+			if(E<Elow) return S_LE(E, Zb, Zt);
+
+			switch(Zb) {
+			case 1:
+				if(E<=Ehigh_p) return SL_SH(E, Zb, Zt);
+				if(E>Ehigh_p*1.2) return S_HE(E, Zb, Zt);
+				return HEinterpol(E, Ehigh_p, Zb, Zt);
+			case 2:
+			case 3:
+				if(E<=Ehigh_HeLi) return SL_SH(E, Zb, Zt);
+				if(E>Ehigh_HeLi*1.2) return S_HE(E, Zb, Zt);
+				return HEinterpol(E, Ehigh_HeLi, Zb, Zt);
+				return 0.;
+			default:
+				if(E<=Ehigh_HI) return S_HI(E, Zb, Zt);
+				return S_HE_HI(E, Zb, Zt);
+			}
+
+			std::cerr << "!!ERROR!! Something went wrong, couldn't identify correct energy range." << std::endl;
+			return 0.;
+		}
+
+		// Nuclear stopping power. E is ion energy in keV, Z is the nuclear charge of the (b)eam and (t)arget.
+		double S_n(double E, int Zb, int Zt, double Mb, double Mt)
+		{
+			if(E<=0) return 0.;
+			int Z1, Z2;
+			Z1 = Zb - 1;
+			Z2 = Zt - 1;
+			if(Mt==0) Mt = Eldat[Z2][2];
+			if(Mb==0) {
+				Mb = Eldat[Z1][1];
+				std::cerr << "!!WARNING!! Beam isotope mass not specified. Set to most abundant isotope, " << Mb << " u." << std::endl;
+			}
+
+			double SF = (Mb + Mt) * (std::pow(Zb, 0.23) + std::pow(Zt, 0.23));
+			double EF = E * Mt * 32.53 / (Zb * Zt * SF);
+			double LF;
+			if(EF <= 30) {
+				LF = std::log(EF * Ncoef[Z1][Z2][0] + 1.) * 0.5;
+				LF =  LF / (EF + Ncoef[Z1][Z2][1]*std::pow(EF,Ncoef[Z1][Z2][3]) + std::sqrt(EF)*Ncoef[Z1][Z2][2]);
+			}
+			else LF = std::log(EF) * 0.5 / EF;
+
+			return LF * Zb * Zt * Mb * 8.462 / SF;
+		}
+
+		// Returns electronic and nuclear stopping in units of MeV/(mg cm^-2). E is the ion energy in MeV, Z is the nuclear charge of the (b)eam and (t)arget, M is the mass in u of the (b)eam and (t)arget (Mt is optional and will obtain value from SCOEF is set to 0).
+		double dEdx(double E, int Zb, int Zt, double Mb, double Mt)
+		{
+			if(!SCOEFloaded) loadSCOEF();				// If SCOEF data hasn't been loaded, load it.
+			if(!SCOEFloaded) return 0.;					// If SCOEF data couldn't be loaded, return 0.
+
+			if(Mt==0) Mt = Eldat[Zt-1][2];
+			if(Mb==0) {
+				Mb = Eldat[Zb-1][1];
+				std::cerr << "!!WARNING!! Beam isotope mass not specified. Set to most abundant isotope, " << Mb << " u." << std::endl;
+			}
+
+			if(E/Mb > 10000.) {
+				std::cerr << "!!ERROR!! Energy must be below 10 GeV/u. Returning 0." << std::endl;
+				return 0.;
+			}
+
+			E *= 1000.;		// Get energy in keV for stopping routines
+
+			//std::cout << "Se = " << S_e(E/Mb, Zb, Zt) << "\tSn = " << S_n(E, Zb, Zt, Mb, Mt) << std::endl;
+			double S = S_e(E/Mb, Zb, Zt) + S_n(E, Zb, Zt, Mb, Mt);		// This is in units of eV / (10^15 atoms / cm^2)
+
+			S *= 0.6022 / Mt;		// Converts eV / [10^15 atoms/cm2] to MeV / [mg/cm2]
+
+			return S;
+		}
+
+		// Converts energy (MeV, relativistic or not) to a velocity (m/s)
+		double Etov(double E, double m)
+		{
+			double KE0 = E / m;
+			if(KE0 < 0.01) return std::sqrt(E * 2. * e_c / (m * m_u));			// Non-relativistic case E = 1/2 m v^2
+			else {
+				KE0 /= (E_amu / 1000.);
+				return std::sqrt(1. - std::pow(1. + KE0, -2)) * c_l;				// Relativistic case E = KE + E0		E^2 = (pc)^2 + E0^2
+			}
+		}
+		
+		/**
+        Zeigler's empirical energy-loss calculation
+
+        @param E Beam isotope energy in MeV
+        @param Zb Nuclear charge of beam isotope
+        @param Zt Nuclear charge of mono-elemental target
+        @param Tt Target thickness in mg/cm2
+        @param Mb Mass of beam isotope in Daltons
+        @param ttime Pointer to a user-declared double in which the transit/stopping time will be assigned (can be left null)
+        @param range Pointer to a user-delcared double in which the ion range will be assigned, if the ion stops in the target (can be left null)
+        @param Mt Mass of target in Daltons (if set to 0, will get most abundant isotope mass from SCOEF.dat)
+        @param denst Density of target in g/cm3 (if set to 0, will get density from SCOEF.dat)
+        @param acc Number of steps in the Runge-Kutta integration (default is 1000, solution converges at 0.001 level)
+        @return Energy of beam isotope after transiting the specified thickness in MeV
+		*/
+		/* Energy in MeV, Z is (b)eam and (t)arget nuclear charge, Tt is target thickness in mg/cm2, M is the mass in u of the (b)eam and (t)arget (can be set to zero, in which case beam will be most abundant isotope and target will be average atomic mass). acc determines the steps in the Runge-Kutta integration.
+		 * Returns the exit energy from the foil, if provided the transit/stopping time into ttime, and if the ion stops and the pointer provided, puts the ion range into the pointer passed to range.*/
+		double ELoss(double E, int Zb, int Zt, double Tt, double Mb, double* ttime, double* range, double Mt, double denst, long acc)
+		{
+			if(!SCOEFloaded) loadSCOEF();				// If SCOEF data hasn't been loaded, load it.
+			if(!SCOEFloaded) return 0.;					// If SCOEF data couldn't be loaded, return 0.
+
+			if(Mt==0) Mt = Eldat[Zt-1][2];
+			if(Mb==0) {
+				Mb = Eldat[Zb-1][1];
+				std::cerr << "!!WARNING!! Beam isotope mass not specified. Set to most abundant isotope, " << Mb << " u." << std::endl;
+			}
+			if(E<=0) {
+				std::cerr << "!!ERROR!! Energy is <= 0. Returning 0." << std::endl;
+				return 0.;
+			}
+			if(denst==0) denst = Eldat[Zt-1][3];
+
+			double El = E;
+			double h = Tt / acc;
+			double d = h / (denst * 100000.);		// step size in metres
+			double dE, k1, k2, k3, k4;
+			double t = 0;
+			for(long i=0; i<acc; ++i) {
+				k1 = h * dEdx(El, Zb, Zt, Mb, Mt);
+				k2 = h * dEdx(El-k1/2., Zb, Zt, Mb, Mt);
+				k3 = h * dEdx(El-k2/2., Zb, Zt, Mb, Mt);
+				k4 = h * dEdx(El-k3, Zb, Zt, Mb, Mt);
+				dE = (k1 + 2.*k2 + 2.*k3 + k4) / 6.;
+				if(dE > El) {
+					if(range!=nullptr) *range = h * (double(i) + El/dE);
+					t += (El / dE) * d / Etov(El/2., Mb);
+					El = 0;
+					break;
+				}
+				t += d / Etov(El-dE/2., Mb);
+				El -= dE;
+			}
+
+			if(ttime!=nullptr) *ttime = t * 1.E12;		// Convert time from s to ps.
+
+			return El;
+		}
+
+	}
+}

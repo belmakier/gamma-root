@@ -1,0 +1,263 @@
+#include "FitGuesses.hh"
+
+namespace GamR {
+  namespace Spect {    
+    PeakFitGuesses *gFitGuesses;
+    
+    int LoadGuesses(std::string path) { int retval = gFitGuesses->Load(path); return retval;}
+    
+    void Init() {
+      gFitGuesses = new PeakFitGuesses();
+      std::string global_dir = "/Users/99j/.local//FitGuesses.dat";
+
+      if (LoadGuesses("FitGuesses.dat")) {
+        LoadGuesses(global_dir);
+      }
+    }
+
+    int PeakFitGuesses::Load(std::string filename) {
+      std::ifstream infile(filename);
+      if (!infile.is_open()) {
+        return 1;
+      }
+      int index;
+      double val, low, high;
+      while (infile >> index >> val >> low >> high) {
+        if (index == 0) { fWidth = {val, low, high}; }
+        else if (index == 1) { fStepAmp = {val, low, high}; }
+        else if (index == 2) { fSkewAmp = {val, low, high}; }
+        else if (index == 3) { fSkewWidth = {val, low, high}; }
+        else if (index == 4) { fSkewAmp2 = {val, low, high}; }
+        else if (index == 5) { fSkewWidth2 = {val, low, high}; }
+      }
+      return 0;
+    }
+
+    void PeakFitGuesses::Print() {
+      printf("Parameter:       value      low       high\n");
+      printf("Gaussian Width:  %6.2f    %6.2f    %6.2f\n", fWidth.val, fWidth.low, fWidth.high);
+      printf("Step Amp:        %6.2f    %6.2f    %6.2f\n", fStepAmp.val, fStepAmp.low, fStepAmp.high);
+      printf("Skew Amp:        %6.2f    %6.2f    %6.2f\n", fSkewAmp.val, fSkewAmp.low, fSkewAmp.high);
+      printf("Skew Width:      %6.2f    %6.2f    %6.2f\n", fSkewWidth.val, fSkewWidth.low, fSkewWidth.high);
+      printf("Skew Amp 2:      %6.2f    %6.2f    %6.2f\n", fSkewAmp2.val, fSkewAmp2.low, fSkewAmp2.high);
+      printf("Skew Width 2:    %6.2f    %6.2f    %6.2f\n", fSkewWidth2.val, fSkewWidth2.low, fSkewWidth2.high);
+    }
+
+    void PeakFitGuesses::Save(std::string filename) {
+      std::ofstream outfile(filename);
+
+      outfile << "0     " << fWidth.val << "    " << fWidth.low << "   " << fWidth.high << std::endl;
+      outfile << "1     " << fStepAmp.val << "    " << fStepAmp.low << "   " << fStepAmp.high << std::endl;
+      outfile << "2     " << fSkewAmp.val << "    " << fSkewAmp.low << "   " << fSkewAmp.high << std::endl;
+      outfile << "3     " << fSkewWidth.val << "    " << fSkewWidth.low << "   " << fSkewWidth.high << std::endl;
+      outfile << "4     " << fSkewAmp2.val << "    " << fSkewAmp2.low << "   " << fSkewAmp2.high << std::endl;
+      outfile << "5     " << fSkewWidth2.val << "    " << fSkewWidth2.low << "   " << fSkewWidth2.high << std::endl;
+
+      outfile.close();
+    }
+
+    void PeakFitGuesses::Set(int i, double val, double low, double high) {
+      switch (i) {
+      case 0:
+        fWidth = {val, low, high};
+        break;
+      case 1:
+        fStepAmp = {val, low, high};
+        break;
+      case 2:
+        fSkewAmp = {val, low, high};
+        break;
+      case 3:
+        fSkewWidth = {val, low, high};
+        break;
+      case 4:
+        fSkewAmp2 = {val, low, high};
+        break;
+      case 5:
+        fSkewWidth2 = {val, low, high};
+        break;
+      default:
+        break;
+      }
+    }
+
+    void PeakFitGuesses::Set() {
+      while (true) {
+        std::cout << "Parameter starting guesses [val, low, high]:" << std::endl;
+        std::cout << "0   Gaussian Width    [" << fWidth.val << ", " << fWidth.low << ", " << fWidth.high << " ]" << std::endl;
+        std::cout << "1   Step Amplitude    [" << fStepAmp.val << ", " << fStepAmp.low << ", " << fStepAmp.high << " ]" << std::endl;
+        std::cout << "2   Skew Amplitude    [" << fSkewAmp.val << ", " << fSkewAmp.low << ", " << fSkewAmp.high << " ]" << std::endl;
+        std::cout << "3   Skew Width        [" << fSkewWidth.val << ", " << fSkewWidth.low << ", " << fSkewWidth.high << " ]" << std::endl;
+        std::cout << "4   Skew Amplitude 2  [" << fSkewAmp2.val << ", " << fSkewAmp2.low << ", " << fSkewAmp2.high << " ]" << std::endl;
+        std::cout << "5   Skew Width 2      [" << fSkewWidth2.val << ", " << fSkewWidth2.low << ", " << fSkewWidth2.high << " ]" << std::endl;
+        int par = -1;
+        char answer; 
+        int valid = 0;
+        while (valid == 0) {
+          std::cout << "Select parameter to adjust [0-4/q]: ";
+          std::cin >> answer;
+          if (answer == 'q') { //q
+            return;
+          }
+          par = atoi(&answer);          
+          if (par == 0 || par == 1 || par == 2 || par == 3 || par == 4 || par == 5) { valid = 1; }
+        }
+        std::cout << "Current values are ";
+        switch (par) {
+        case 0:
+          std::cout << "[" << fWidth.val << ", " << fWidth.low << ", " << fWidth.high << " ]" << std::endl;
+          break;
+        case 1:
+          std::cout << "[" << fStepAmp.val << ", " << fStepAmp.low << ", " << fStepAmp.high << " ]" << std::endl;
+          break;
+        case 2:
+          std::cout << "[" << fSkewAmp.val << ", " << fSkewAmp.low << ", " << fSkewAmp.high << " ]" << std::endl;
+          break;
+        case 3:
+          std::cout << "[" << fSkewWidth.val << ", " << fSkewWidth.low << ", " << fSkewWidth.high << " ]" << std::endl;
+          break;
+        case 4:        
+          std::cout << "[" << fSkewAmp2.val << ", " << fSkewAmp2.low << ", " << fSkewAmp2.high << " ]" << std::endl;
+          break;
+        case 5:        
+          std::cout << "[" << fSkewWidth2.val << ", " << fSkewWidth2.low << ", " << fSkewWidth2.high << " ]" << std::endl;
+          break;
+        default:
+          break;      
+        }
+        std::cout << "Enter [value   low    high]: ";
+        double val,low,high;        
+        std::cin >> val >> low >> high;
+        Set(par, val, low, high);
+        std::cout << "Parameter starting guesses are [val, low, high]:" << std::endl;
+        std::cout << "0   Gaussian Width    [" << fWidth.val << ", " << fWidth.low << ", " << fWidth.high << " ]" << std::endl;
+        std::cout << "1   Step Amplitude    [" << fStepAmp.val << ", " << fStepAmp.low << ", " << fStepAmp.high << " ]" << std::endl;
+        std::cout << "2   Skew Amplitude    [" << fSkewAmp.val << ", " << fSkewAmp.low << ", " << fSkewAmp.high << " ]" << std::endl;
+        std::cout << "3   Skew Width        [" << fSkewWidth.val << ", " << fSkewWidth.low << ", " << fSkewWidth.high << " ]" << std::endl;
+        std::cout << "4   Skew Amplitude 2  [" << fSkewAmp2.val << ", " << fSkewAmp2.low << ", " << fSkewAmp2.high << " ]" << std::endl;
+        std::cout << "5   Skew Width 2      [" << fSkewWidth2.val << ", " << fSkewWidth2.low << ", " << fSkewWidth2.high << " ]" << std::endl;
+        std::cout << "Would you like to adjust another parameter? [y/n]: ";
+        valid = 0;
+        int br = 0;
+        while (valid == 0) {
+          br = 0;
+          std::cin >> answer;
+          switch (answer) {
+          case 'y':
+            br = 0;
+            valid = 1;
+            break;
+          case 'n':
+            br = 1;
+            valid = 1;            
+            break;
+          default:
+            valid = 0;
+            std::cout << "Please answer y/n, would you like to adjust another parameter? [y/n]: ";
+            break;
+          }
+        }
+        if (br == 1) {
+          break;
+        }        
+      }
+      std::cout << "g    Global location" << std::endl;
+      std::cout << "l    Local file" << std::endl;
+      std::cout << "f    Filename specified" << std::endl;
+      std::cout << "n    No" << std::endl;
+      std::cout << "Would you like to save your new initial parameters? [g/l/f/n]: ";
+      int valid = 0;
+      char answer;
+      while (valid == 0) {
+        std::cin >> answer;
+        switch (answer) {
+        case 'g': {
+          valid = 1;
+          std::string global_dir = "/Users/99j/.local//FitGuesses.dat";
+          Save(global_dir);
+          std::cout << "Saved to /Users/99j/.local//FitGuesses.dat" << std::endl;
+          break;
+        }
+        case 'l': {
+          valid = 1;
+          Save("FitGuesses.dat");
+          std::cout << "Saved to ./FitGuesses.dat" << std::endl;
+          break;
+        }
+        case 'f': {
+          valid = 1;
+          std::cout << "Filename to save to: ";
+          std::string filename;
+          std::cin >> filename;
+          Save(filename);
+          std::cout << "Saved to ./" << filename << std::endl;
+          break;
+        }
+        case 'n': {
+          valid = 1;
+          break;
+        }
+        default: {
+          valid = 0;
+          std::cout << "g    Global location" << std::endl;
+          std::cout << "l    Local file" << std::endl;
+          std::cout << "f    Filename specified" << std::endl;
+          std::cout << "n    No" << std::endl;
+          std::cout << "Would you like to save your new initial parameters? [g/l/f/n]: ";
+          break;
+        }
+        }
+      }      
+    }
+
+    void PeakFitGuesses::Save() {
+      std::cout << "g    Global location" << std::endl;
+      std::cout << "l    Local file" << std::endl;
+      std::cout << "f    Filename specified" << std::endl;
+      std::cout << "q    Quit" << std::endl;
+      std::cout << "How would you like to save your new initial parameters? [g/l/f/q]: ";
+      int valid = 0;
+      char answer;
+      while (valid == 0) {
+        std::cin >> answer;
+        switch (answer) {
+        case 'g': {
+          valid = 1;
+          std::string global_dir = "/Users/99j/.local//FitGuesses.dat";
+          Save(global_dir);
+          std::cout << "Saved to /Users/99j/.local//FitGuesses.dat" << std::endl;
+          break;
+        }
+        case 'l': {
+          valid = 1;
+          Save("FitGuesses.dat");
+          std::cout << "Saved to ./FitGuesses.dat" << std::endl;
+          break;
+        }
+        case 'f': {
+          valid = 1;
+          std::cout << "Filename to save to: ";
+          std::string filename;
+          std::cin >> filename;
+          Save(filename);
+          std::cout << "Saved to ./" << filename << std::endl;
+          break;
+        }
+        case 'q': {
+          valid = 1;
+          break;
+        }
+        default: {
+          valid = 0;
+          std::cout << "g    Global location" << std::endl;
+          std::cout << "l    Local file" << std::endl;
+          std::cout << "f    Filename specified" << std::endl;
+          std::cout << "q    Quit" << std::endl;
+          std::cout << "How would you like to save your new initial parameters? [g/l/f/q]: ";
+          break;
+        }
+        }
+      }
+    }
+  }
+}

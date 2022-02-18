@@ -1,0 +1,38 @@
+namespace GamR {
+namespace Tree {
+
+template <class... ADets>
+struct TEvent<ADets...>::ClearVector {
+   template <typename T>
+   void operator()(std::vector<T> &vec)
+   {
+      vec.clear();
+   }
+};
+
+template <class... ADets>
+struct TEvent<ADets...>::EventTupleFiller {
+   template <typename DetDefn, typename Det>
+   void operator()(std::vector<DetDefn> &defns, std::vector<Det> &dets, ULong64_t eventNum)
+   {
+      for (auto &defn : defns) {
+         defn.Calibrate(eventNum);
+         if (defn.IsGood()) {
+           dets.emplace_back(defn, eventNum);
+         }
+      }
+   }
+};
+
+template <class... ADets>
+struct TEvent<ADets...>::IgnoreTObject {
+   template <typename T>
+   void operator()(T t)
+   {
+      (void)t;
+      T::Class()->IgnoreTObjectStreamer();
+   }
+};
+
+} // namespace Tree
+} // namespace GamR

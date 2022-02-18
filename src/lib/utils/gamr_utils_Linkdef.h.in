@@ -1,0 +1,14 @@
+#ifdef __ROOTCLING__
+
+#pragma link off all class;
+#pragma link off all functions;
+#pragma link off all global;
+#pragma link off all typedef;
+
+#pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/REPL.hh;
+#pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/Utilities.hh;
+#pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/Tuples.hh;
+#pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/RTTI.hh;
+
+#endif
+

@@ -1,0 +1,6 @@
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/linux)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/root2gamr)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/bin2root)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/gamrsort)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/gamrcal)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/his2root)

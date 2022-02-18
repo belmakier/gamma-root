@@ -1,0 +1,3 @@
+[ libgamr_processor.dylib ]
+# List of selected namespaces
+namespace GamR::Processor

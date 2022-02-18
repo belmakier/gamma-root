@@ -1,0 +1,597 @@
+c------------------------------------------------------------------------------
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+      SUBROUTINE ELOSS(EIN,ABEAM,iZBEAM,AFOIL,iZFOIL,NCOMP,FORMULA,
+     + Dfoil,FTHICK,INSTEP,accuR,accuE,EOUT,TOUT,RANGE)
+c
+c	This is an improved version of ELOSS      aes september 2004
+c
+
+c	The energy loss calculation in the case where the ion does not stop is
+c	based on the Runge-Kutta method.
+c
+c	If the ion stops, the range is calculated using Simpson's rule.
+c
+c	accuE is now the accuracy of the energy loss in MeV
+c
+c	accuR is the accuracy of the range calculation as a fraction of the range.
+c
+c
+c	the range result seems to depend somewhat on the size of the steps and doesn't
+c	converge very well. I haven't pursued this at this point, as we usually don't 
+c	care about the range to high precision
+c
+C
+C     THIS SUBROUTINE CALCULATES THE ENERGY LOSS OF AN ION TRAVERSING
+C     A THIN FOIL AND THE TIME IT TAKES TO DO SO. IF THE ION STOPS IN
+C     THE FOIL THE RANGE AND STOPPING TIME ARE AVAILABLE - CALLED
+C     RANGE AND TOUT, RESPECTIVELY.
+C
+C     EIN=ENTRANCE ENERGY OF BEAM IN MEV
+C     ABEAM=MASS OF BEAM (PROJECTILE) IN AMU
+C     iZBEAM=ATOMIC NUMBER OF BEAM
+C
+C     AFOIL=ATOMIC MASS OF FOIL(i.e. target) IN AMU   N.B. an array
+C     iZFOIL=ATOMIC NUMBER OF FOIL(i.e. target)       N.B. an array
+C     NCOMP=NUMBER OF SCATTERING SPECIES IN FOIL(TARGET)
+c     FORMULA=NUMBER OF EACH SCATTERING SPECIES PER MOLECULAR UNIT
+C     DFOIL=DENSITY OF FOIL IN G/CM**3
+C     FTHICK=FOIL(i.e. target) THICKNESS IN mg/cm**2
+C
+c
+c	A scaling factor for the stopping powers can be passed in common
+c
+C     INSTEP=INITIAL ESTIMATE OF NUMBER OF STRIPS INTO WHICH FOIL IS DIVIDED
+C     accuR=desired minimum accuracy of range integration (as a fraction of the range)
+C     accuE=desired minimum accuracy of energy loss integration (absolute)
+C     EOUT=EXIT ENERGY IN MEV
+C     TOUT=TRANSIT TIME (OR STOPPING TIME) IN PICOSECONDS
+C     RANGE= Range in mg/cm**2
+C
+C	OTHER PARAMETERS THE USER MIGHT SET:
+C	NpassMAX = max. no. of attempts to get range within accuR,accurE
+C
+C
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+c
+	implicit none
+
+	real*4   lfctr
+	real*4   EOUT,TOUT,RANGE,FTHICK,EIN,ABEAM,AFOIL(10),a,b,r,y
+	real*4   pcoef(8),x(8),delx,caes,vfermi(10),DFOIL
+	real*4   XN,TN,FT,SE,SN,SF,SR,ENO,ENU,ENR,EINKEV,ENRKEV
+	real*4   Urange,Orange,testR,testE,accuR,accuE
+	real*4   pcarray(8,10),Formula(10),sdedx
+	real*4   DE1,DE2,DE3,DE4,ENStep,Sstp,EN3keV,ENRstp
+	real*4   SFstp,SRstp,atest,testt,SR1stp,Esave
+	real*4   HE,fac,Range1,ERstp
+
+	integer  iZbeam,IZfoil(10),INSTEP,NSTEP,I,Npass,Npassmax,Nset,iter
+	integer  nc,ncomp,NRpass,NRstp
+
+	common /dedx/ sdedx
+
+c	data	 Npassmax/20/  ! reduced 6 mar 1996
+	data	 Npassmax/6/
+c	data     accuR/0.01/,accuE/.005/
+
+
+	if(sdedx.eq.0.)sdedx=1.    ! make unity if not defined
+
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+c	get data for stopping power calculation so don't have to read file
+c	for each evaluation of stopping power. this speeds up program a lot!
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+c
+c   get ion data  (if Abeam=0 use file: a,b = mass#,amu commonest isotope)
+c 
+      call SCOEF(izbeam,a,b,y,y,y,y,lfctr,x)
+       if(Abeam.eq.0) Abeam=b
+c
+c   get target data (if m2 = 0, m2 = amu natural isotopic mix)
+c
+	do nc=1,ncomp
+c	write(6,*)'izfoil(nc)',izfoil(nc)
+            call SCOEF(izfoil(nc),y,y,caes,r,y,vfermi(nc),y,pcoef)
+		do i=1,8
+		pcarray(i,nc)=pcoef(i)
+		enddo
+	    if(Afoil(nc).eq.0) Afoil(nc)=caes
+        if(Dfoil.eq.0) Dfoil=r
+	enddo
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+c
+	NSTEP=INSTEP
+	Npass=0
+	iter=0
+      FT=SQRT(ABEAM)/(DFOIL*1.388165)
+C      FS=DFOIL/(AFOIL*1.6603E-6)   !dont need using dE/dx in MeV/mg/cm2
+C
+1	continue
+	Npass=Npass+1
+      DELX=FTHICK/float(NSTEP)
+      XN=0.
+      TN=0.
+!	Urange=0.0
+!	Orange=0.0
+c      WRITE(*,601)
+
+C
+C	Set up for integration.
+C
+C	Stopping power at front of foil:
+	EINKEV=EIN*1000.
+c	ENStep=EIN
+	ENRStp=EIN
+C	SF stores stopping power at front of strip
+C	SR stores stopping power at rear of strip
+	atest=0.0
+      DO   I=1,NSTEP
+        IF((ENRStp.GT.0.0)) THEN
+c
+c	integration using the Runge-Kutta method
+c
+	    call stopcomp(izbeam,Abeam,lfctr,Ncomp,izfoil,Afoil,pcarray,
+	1                   vfermi,Formula,ENRStp*1.e3,SFstp)
+	    SFstp=SFstp*sdedx
+	    DE1=DELX*SFstp  ! first estimate of energy loss
+	    if((ENRStp-DE1/2.).gt.0.0)then
+	      call stopcomp(izbeam,Abeam,lfctr,Ncomp,izfoil,Afoil,pcarray,
+	1                   vfermi,Formula,(ENRStp-DE1/2.)*1.e3,SFstp)
+	      SFstp=SFstp*sdedx
+	      DE2=DELX*SFstp  ! second estimate of energy loss
+	    else
+	      DE2=0.0
+	    endif
+	    if((ENRStp-DE2/2.).gt.0.0)then
+	      call stopcomp(izbeam,Abeam,lfctr,Ncomp,izfoil,Afoil,pcarray,
+	1                   vfermi,Formula,(ENRStp-DE2/2.)*1.e3,SFstp)
+	      SFstp=SFstp*sdedx
+	      DE3=DELX*SFstp  ! third estimate of energy loss
+	    else
+	      DE3=0.0
+	    endif
+	    if((ENRStp-DE3).gt.0.0)then
+	      call stopcomp(izbeam,Abeam,lfctr,Ncomp,izfoil,Afoil,pcarray,
+	1                   vfermi,Formula,(ENRStp-DE3)*1.e3,SFstp)
+	      SFstp=SFstp*sdedx
+	      DE4=DELX*SFstp  ! fourth estimate of energy loss
+	    else
+	      DE4=0.0
+	    endif
+!          write(*,'(5(2x,g13.5))')DE1,DE2,DE3,DE4
+	      ENRStp=ENRstp-(DE1+2.*DE2+2.*DE3+DE4)/6.
+	      if(ENRStp.le.0.)ENRStp=0.0
+            XN=XN+DELX
+            if(ENRStp.ne.0.0)TN=TN+DELX*FT/SQRT(ENRStp)
+c	write(22,*)i,ENRstp
+c	write(22,*)i,ENStep,ENRstp
+c	write(22,*),i,Sstp,testt,((SFstp+SRstp)/2. - Sstp)
+c	write(22,*)i,ENStep,SFstp,SR1stp,Sstp
+	      if(ENRStp.gt.0.0)RANGE=XN
+	  ENDIF
+      ENDDO
+c	atest=atest*DELX
+c	write(22,*)' Atest =',atest
+
+	EOUT=ENRStp
+c	write(22,*)' Eout = ',eout
+      TOUT=TN
+	TestR=0.0
+c
+	IF(EOUT.EQ.0.0) THEN
+c
+c	The ion stops:
+c
+c	new code Oct 04 to do simpson's rule integration of range
+c
+        NRpass=0
+	  NRstp=2*(Nstep/2)
+!	  NRstp=20
+2	  continue
+	    HE=EIN/float(NRstp)
+	    NRpass=NRpass+1
+c	function at limits of integral:	
+	    call stopcomp(izbeam,Abeam,lfctr,Ncomp,izfoil,Afoil,pcarray,
+	1                   vfermi,Formula,EINKEV,SFstp)
+	    SFstp=SFstp*sdedx
+	    Range=1./SFstp
+	    TOUT=FT/(sqrt(EIN)*SFstp)
+	    TOUT=TOUT+FT/(sqrt(0.001*Abeam)*SFstp) ! assumes stopped when energy is below 1 keV/A
+c	write(6,*)Range
+c
+c	do the integral
+c
+	  fac=2.
+	  do i=1,NRstp-1
+	    if(fac.eq.2)then
+	      fac=4.
+	    else
+	      fac=2.
+	    endif
+	    ERstp=EINKEV-1.e3*HE*float(i)
+c	write(6,*)NRstp,ERstp
+	    call stopcomp(izbeam,Abeam,lfctr,Ncomp,izfoil,Afoil,pcarray,
+	1                  vfermi,Formula,ERstp,SFstp)
+	    SFstp=SFstp*sdedx
+!	write(6,*)range,sfstp
+!	if(sfstp.eq.0.)stop
+	    Range=Range + fac/SFstp
+	    TOUT=TOUT+fac*FT/(sqrt(ERstp/1.e3)*SFstp)
+	  enddo
+	  Range=Range*HE/3.
+	  TOUT=TOUT*HE/3.
+c
+c	convergence test
+c	
+	  if(NRpass.eq.1)then
+	    Range1=Range
+	    NRstp=NRstp*2
+	    goto 2
+	  else
+c	write(6,*)NRpass,Range,Range1
+	    testR=abs(Range-Range1)/Range
+	    if(testR.le.accuR)goto 999
+c
+c
+c		If not accurate enough increase no of steps by 2 and try again
+c
+		NRstp=NRstp*2	
+	       Range1=Range
+		goto 2
+	   endif
+
+	ELSE
+c
+c	The ion is transmitted:
+c
+
+	   if(npass.eq.1)then
+	     Esave=Eout
+	     Nstep=Nstep*2
+	     goto 1
+	   endif
+	   Atest=Esave-Eout
+
+	   TestE=abs(Atest)
+	   If(testE.lt.accuE)goto 999
+c
+c	Eloss not accurate enough, so increase no of steps by 2 and try again
+c	after checking the number of attempts cf. NpassMax
+c
+      Nstep=Nstep*2	
+      goto 1
+c
+	ENDIF
+999	continue
+c	write(6,*)iter
+	RETURN
+      END
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+c-----------------------------------------------------------------------
+c  STOPSUBS.FOR           based on ZIEGLER et al Vol 1 (1985)
+c----------------------------------------------------------------------2
+      subroutine STOPpc(z1,m1,z2,m2,ee,se,sn,units,
+	1 pcoef,rho,atrho,vfermi,lfctr)
+c
+c     subroutine STOPpc(z1,m1,z2,ee,se,sn,units)
+c
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+c
+c	This routine is from Ziegler et al Vol 1  p.216, with some 
+c	modifications to update the fortran and handling of out-of-range
+c	data etc.
+c
+c	Modifications by AES to allow enriched isotope targets Sept 1992
+c	i.e. it reads in the target atomic weight rather than reading it
+c	from the data file where it is assumed to have the value corresponding
+c	to a natural isotopic mixture. As far as I can see, this is the only
+c	change that needs be made here, because the following routines always
+c	use the atomic number density (atrho), rather than the density (rho), 
+c	and atrho does not change from isotope to isotope while rho does.
+c	Just for the record:
+c	Densities for separated isotopes scale from the natural chemical density
+c	by the ratio (isotope atomic weight)/(chemical atomic weight).
+c
+c	Output is electronic and nuclear stopping:
+c	UNITS: 1 = eV-cm**2/1.e15
+c	       2 = MeV/mg/cm**2
+c	       3 = eV/Angstrom
+c	       4 = L.S.S. reduced units
+c
+c	INPUTS, OUTPUTS and other variables are:
+c	z1 = ion atomic number
+c	m1 = ion atomic weight (amu)
+c	z2 = target atomic number
+c	m2 = target atomic weight (amu)
+c	ee = ion energy in keV
+c	se = electronic stopping power
+c	sn = nuclear stopping power
+c	units = units for stopping power as returned (see above)
+c
+c	mm1 = ion atomic mass
+c	rho = target density (g/cm**3)
+c	atrho = target density (atoms/cm**3)
+c	vfermi = (Fermi velocity of solid)/v_0
+c	lfctr = lambda screening factor for ions
+c	pcoef = stopping coefficients for protons
+c
+c	The file SCOEF.DAT must be avaliable
+c	The data in this file are:
+c	scoef(*,1) = atomic number of element
+c	scoef(*,2) = atomic mass of most abundant isotope (M.A.I.)
+c	scoef(*,3) = atomic weight of M.A.I.
+c	scoef(*,4) = target mass (amu) (normal abundance?)
+c	scoef(*,5) = g/cm**3 (normal abundance)
+c	scoef(*,6) = atoms/cm**3 *1.e22 (normal abundance)
+c	scoef(*,7) = (Fermi velocity of solid)/v_0
+c	scoef(*,8) = lambda screening factor for ions
+c	scoef(92,*) to scoef(184,*) = proton stopping coefficient
+c
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+c
+      implicit  real*4(a-z)
+      integer   z1,z2,units
+      dimension pcoef(8),x(8)
+c
+c   return -ve stopping powers for z1,z2 out of range, or ee gt 100MeV/amu
+c
+	se=-1.
+	sn=-1.
+      if(z1.lt.1.or.z1.gt.92) goto 999
+      if(z2.lt.1.or.z2.gt.92) goto 999
+c
+c   return zero stopping powers if ee is smaller than 1e-10
+c
+	if(ee.lt.1e-10) then
+		se=.0
+		sn=.0
+		goto 999
+	endif
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+c       this code moved to calling subroutine to save reading coefficients
+c	every time
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+c
+c   get ion data  (if m1=0 use file: a,b = mass#,amu commonest isotope)
+c 
+c      call SCOEF(z1,a,b,y,y,y,y,lfctr,x)
+c       if(m1.eq.0) m1=b
+       e=ee/m1
+       if((e.gt.1e5) .and. (z1 > 2)) goto 999
+c
+c   get target data (if m2 = 0, m2 = amu natural isotopic mix)
+c
+c      call SCOEF(z2,y,y,caes,rho,atrho,vfermi,y,pcoef)
+c	if(m2.eq.0) m2=caes
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+c 
+c   electronic stopping
+c
+      if(z1.eq.1) then
+          call PSTOP(z1,m1,z2,m2,e,pcoef,se)
+      elseif(z1.eq.2) then
+          call HeSTOP(z1,m1,z2,m2,e,pcoef,se)
+      else
+          call HISTOP(z1,m1,z2,m2,e,vfermi,lfctr,pcoef,se)
+      endif
+c
+c   universal nuclear stopping
+c
+      epsil=32.53*m2*ee/(z1*z2*(m1+m2)*(z1**.23+z2**.23))
+      if(epsil.lt.30.) then
+          a=.01321*epsil**.21226 + .19593*epsil**.5
+          sn=.5*alog(1.+1.1383*epsil)/(epsil+a)
+      else
+          sn=alog(epsil)/(2.*epsil)
+      endif
+c
+c   convert reduced units to ev-cm2/1e15
+c
+      sn=sn*z1*z2*m1*8.462/((m1+m2)*(z1**.23+z2**.23))
+      if(units.eq.2) then
+c
+c       MeV-cm2/mg
+c
+          se=se*.60222/m2
+          sn=sn*.60222/m2
+      elseif(units.eq.3) then
+c
+c       eV/angstrom
+c
+          se=se*atrho*1e-23
+          sn=sn*atrho*1e-23
+      elseif(units.eq.4) then
+c
+c       LSS reduced(delta epsilon/delta rho)
+c
+          a=((m1+m2)*(z1**.6667+z2**.6667)**.5)/(z1*z2*m1*8.462)
+          se=se*a
+          sn=sn*a
+      endif
+999   return
+      end
+c-----------------------------------------------------------------------
+      subroutine PSTOP(z1,m1,z2,m2,e,pcoef,se)
+      implicit  real*4(a-z)
+      integer   z1,z2
+      dimension pcoef(8)
+c   velocity**velpwr proportional stopping below velocity "pe0"
+      pe0=25.
+      pe=amax1(pe0,e)
+      SL=pcoef(1)*pe**pcoef(2) + pcoef(3)*pe**pcoef(4)
+      SH=pcoef(5)/pe**pcoef(6)*alog((pcoef(7)/pe)+(pcoef(8)*pe))
+      se=SL*SH/(SL+SH)
+      if(e.le.pe0) then
+          velpwr=0.45
+          if(z2.le.6) velpwr=0.25
+          se=se*(e/pe0)**velpwr
+      endif
+      return
+      end
+c-----------------------------------------------------------------------
+      subroutine HeSTOP(z1,m1,z2,m2,e,pcoef,se)
+      implicit  real*4(a-z)
+      integer   z1,z2
+      dimension pcoef(8)
+c   velocity proportional stopping below keV/amu = "he0"
+      he0=1.
+      he=amax1(he0,e)
+      b=alog(he)
+c   ratio of He to proton stopping powers
+      a=.2865+.1266*b-.001429*b*b+.02402*b**3-.01135*b**4+.001475*b**5
+      heh=1.-exp(-amin1(30.,a))
+c   add z1**3 effect to He/H stopping power ratio
+      a=1.+(7e-3+5e-5*z2)*exp(-(7.6-amax1(0.,alog(he)))**2) 
+      heh=heh*a*a
+      call PSTOP(z1,m1,z2,m2,he,pcoef,sp)
+      se=sp*heh*z1*z1
+      if(e.le.he0) se=se*sqrt(e/he0)
+      return
+      end
+c-----------------------------------------------------------------------
+      subroutine HISTOP(z1,m1,z2,m2,e,vfermi,lfctr,pcoef,se)
+      implicit  real*4(a-z)
+      integer   z1,z2
+      dimension pcoef(8)
+c   use velocity stopping for (yrmin=vr/z1**.67) LE 0.13 or for vr LE 1
+      yrmin=0.13
+      vrmin=1.
+      v=sqrt(e/25)/vfermi
+      if(v.lt.1.) then
+          vr=0.75*vfermi*(1.+v**2/1.5-v**4/15.)
+      else
+          vr=v*vfermi*(1.+0.2/v**2)
+      endif
+c   set yr = max of yrmin, (vr/z1**.67), (vrmin/z1**.67)
+      yr=amax1(yrmin,vr/z1**.6667)
+      yr=amax1(yr,vrmin/z1**.6667)
+c   q is ionisation level of the ion at velocity "yr"
+      a=-.803*yr**.3+1.3167*yr**.6+.38157*yr+.008983*yr*yr
+      q=amin1(1.,amax1(0.,1.-exp(-amin1(a,50.))))
+c   convert ionisation level to effective charge
+      b=(amin1(.43,amax1(.32,.12+.025*z1)))/z1**.3333
+      L0=(.8-q*(amin1(1.2,.6+z1/30.)))/z1**.3333
+      if(q.lt.0.2) then
+          L1=.0
+      elseif(q.lt.(amax1(0.,.9-.025*z1))) then
+          L1=b*(q-.2)/abs(amax1(0.,.9-.025*z1)-.2000001)
+      elseif(q.lt.(amax1(0.,1.-.025*amin1(16.,1.*z1)))) then
+          L1=b
+      else
+          L1=b*(1.-q)/(.025*amin1(16.,1.*z1))
+      endif
+      L=amax1(L1,L0*Lfctr)
+      gama=q+(.5/vfermi**2)*(1.-q)*alog(1.+(4.*L*vfermi/1.919)**2)
+c   add z1**3 effect as shown in ref 779
+      a=-(7.6-amax1(0.,alog(e)))**2
+      gama=gama*(1.+(1./z1**2)*(.18+.0015*z2)*exp(a))
+      if(yr.le.amax1(yrmin,vrmin/z1**.6667)) then
+c         calculate velocity stopping for yr LT yrmin
+          vrmin=amax1(vrmin,yrmin*z1**.6667)
+          vmin=.5*(vrmin+sqrt(amax1(0.,vrmin**2-.8*vfermi**2)))
+          eee=25.*vmin**2
+          call PSTOP(z1,m1,z2,m2,eee,pcoef,sp)
+          power=.5
+          if((z2.eq.6).or.( ((z2.eq.14).or.(z2.eq.32)).and.(z1.le.19) ))
+     a          power=.375
+          se=(sp*(gama*z1)**2)*(e/eee)**power
+      else
+          call PSTOP(z1,m1,z2,m2,e,pcoef,sp)
+          se=sp*(gama*z1)**2
+      endif
+      return
+      end
+c-----------------------------------------------------------------------
+c-----------------------------------------------------------------------
+      subroutine SCOEF(z1,mm1,m1,m2,rho,atrho,vfermi,lfctr,pcoef)
+      implicit  real*4(a-z)
+      integer   z,z1,ia,imm1,i
+      Character*80 Line
+      Character*100 scoefpath
+      dimension pcoef(8)
+      scoefpath = '${CMAKE_INSTALL_PREFIX}/'//
+     &     '${EZ_INSTALL_DATADIR}/'//
+     &     '${EZ_THIS_UNIT_NAME}/'//
+     &     'SCOEF.dat'
+      open(20,file=scoefpath,status='old',err=1000)
+      do z=1,92
+	  if(z.eq.z1)then
+	    read(20,*)ia,mm1,m1,m2,rho,atrho,vfermi,lfctr,dum
+	    if(ia.ne.z1)write(6,*)'  Error reading SCOEF.dat'
+	  else
+	    read(20,*)ia,d1,d2,d3,d4,d5,d6,d7,d8
+	  endif
+	enddo
+!
+	do z=1,z1
+	  if(z.eq.z1)then
+	    read(20,*)ia,(pcoef(i),i=1,8)
+	    if(ia.ne.z1)write(6,*)'  Error reading SCOEF.dat'
+	  else
+	    read(20,*)ia,d1,d2,d3,d4,d5,d6,d7,d8
+	  endif
+	enddo
+      atrho=atrho*1e22
+	close(20)
+      return
+1000	write(6,*)' Error opening SCOEF.dat'
+	return
+      end
+c----------------------------------------------------------------------
+c----------------------------------------------------------------------2
+	subroutine stopcomp(izp,Ap,lfctr,Ncomp,izt,At,pcarray,
+	1                   vfermi,Formula,EkeV,Scomp)
+c
+c	This subroutine calculates the dE/dx for a compound in units
+c	of MeV/mg/cm**2.
+c
+c
+c	Parameters:
+c
+c	izp = projectile atomic number
+c	Ap = projectile mass number
+c	lfctr = lfctr parameter for projectile
+c	Ncomp = number of elemental components in the target
+c	izt(nc) = atomic numbers for components in target
+c	At(nc) = atomic weights of components in target
+c	        (note this must not be zero for natural abundances 
+c		 as in some of Zeigler's routines)
+c	pcarray(8,nc) = array of coeficients for p stopping powers in elements
+c	vfermi = stopping power parameter
+c	Formula(nc) = number of atoms of element nc per "molecular" unit
+c	EkeV = projectile energy in keV
+c	Scomp = dE/dx of compound in MeV/mg/cm**2
+c
+c	Note rho and atrho are returned by Zeigler routines, if they are wanted.
+c	rho(nc) = density of element in g/cm**3 
+c	atrho(nc) = atomic density of element   
+c	Here we do not need them because we work in mg/cm**2.
+c
+	implicit none
+	real*4     Ap,lfctr,At(10),pcoef(8)
+	real*4     vfermi(10),EkeV,S,SE,SN,pcarray(8,10),Formula(10)
+	real*4     FW,Scomp,x
+	integer    izp,izt(10),Ncomp,i,j
+
+	Scomp=0.0
+	FW=0.0
+	do i=1,Ncomp
+		do j=1,8
+			pcoef(j)=pcarray(j,i)
+		enddo
+                CALL STOPPC(izp,Ap,izt(i),At(i),EKEV,SE,SN,1,
+	1	            PCOEF,x,x,VFERMI(i),LFCTR)
+		S=SE+SN
+		Scomp=Scomp+S*Formula(i)
+		FW=FW+Formula(i)*At(i)
+	enddo
+c
+c	change units from eV/10e15atoms/cm2 to MeV/mg/cm2
+c
+	Scomp=Scomp*0.60222/FW
+	return
+	end
+c------------------------------------------------------------------------------

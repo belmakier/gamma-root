@@ -1,0 +1,10 @@
+{ decls }
+namespace GamR { namespace Utils {  } }
+
+[ libgamr_utils.dylib ]
+# List of selected classes
+class GamR::Utils::REPL
+header REPL.hh
+# List of selected namespaces
+namespace GamR
+namespace GamR::Utils

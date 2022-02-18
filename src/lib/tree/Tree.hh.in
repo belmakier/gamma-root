@@ -1,0 +1,6 @@
+#include <tree/DetDefn.hh>
+#include <tree/ExpDefn.hh>
+#include <tree/Detector.hh>
+#include <tree/Event.hh>
+
+@GAMR_TREE_TYPEDEF@

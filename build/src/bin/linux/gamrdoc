@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Opening installed documentation in default browser"
+xdg-open /Users/99j/.local//html/index.html &

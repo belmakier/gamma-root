@@ -1,0 +1,18 @@
+#ifdef __ROOTCLING__
+
+/* Turn off all */
+#pragma link off all class;
+#pragma link off all functions;
+#pragma link off all global;
+#pragma link off all typedef;
+
+#pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/PopulationParameter.hh;
+#pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/WignerD.hh;
+#pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/AngDist.hh;
+#pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/AngCorr.hh;
+#pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/TDPAD.hh;
+#pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/GaussianDistr.hh;
+#pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/StatTensor.hh;
+#pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/SolidAttenuation.hh;
+
+#endif

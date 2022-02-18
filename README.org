@@ -1,0 +1,69 @@
+#+TITLE: GamROOT -- CERN ROOT Libraries for Gamma
+#+DATE: Tue Sep 26 19:56:19 AEST 2017
+
+* About this repository
+
+This code base is an attempt to create a functional, modern, complete,
+flexible, readable, self documenting, and well documented library for
+CERN's ROOT Data Analysis Framework for application to low-energy
+Nuclear Physics conducted at the Australian National University.
+
+* The holy grail
+
+If we're doing our jobs correctly, we're only going to be acquiring
+more, and more data. Ideally, the libraries of this code base can be
+used to create programs to automate analysis. Automation, in my
+opinion, is the holy grail.
+
+For the skeptics, I take the following statements to be self evident:
+
+Max Automation  -> More time to think.
+More time think -> Better science / papers.
+
+Also, from the more mercenary perspective:
+
+Max Automation  -> Less time to publishable results.
+
+** The other holy grail
+
+There is another reason why I'm doing this. All of the easy to analyse
+stuff has either already been done, or will be done (hopefully in next
+to no time with this code!). The nuclear chart is a fascinating and
+complicated landscape. I want to use this code base to create programs
+to search solutions, systematic behaviour, and sign posts across the
+nuclear chart. 
+
+* Quick start
+
+Ensure you have =ROOT6= compiled with =C++14= extensions enabled!
+
+We are now using =CMake= so that standalone applications / tools can be
+made. This should make libraries that can be loaded in =ROOT=.
+
+#+BEGIN_SRC shell
+git clone <wherever this is>/gamma-root
+cd gamma-root
+mkdir build
+cmake -DCMAKE_BUILD_TYPE=RELEASE ../src
+make
+#+END_SRC
+
+If you want to keep using the =ACLiC= method of using =.L file.cc+=,
+add =gamma-root/src/gamroot= to your =ROOT= include path.
+
+It is recommended to use =CMake= and the compiled libraries as it has
+more defined / structured behaviour.
+
+* Contributing
+
+Excited to contribute yourself? I don't blame you!
+
+This project is going through a lean development process, so we don't
+have style and design guidelines/rules set in stone -- yet, but we're
+getting there! Your best bet is to talk to one of the current
+developers for a primer, we really could use your help!
+
+* Current Developers
+
++ Aqeel Akber <aqeel.akber@anu.edu.au>
++ Timothy Gray <timothy.gray@anu.edu.au>

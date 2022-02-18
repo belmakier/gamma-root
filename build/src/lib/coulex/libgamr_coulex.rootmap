@@ -1,0 +1,24 @@
+{ decls }
+namespace GamR { namespace Coulex {  } }
+
+[ libgamr_coulex.dylib ]
+# List of selected classes
+class GamR::Coulex::CoulexCalculation
+class GamR::Coulex::Level
+class GamR::Coulex::LevelScheme
+class GamR::Coulex::Nucleus
+class GamR::Coulex::ParticleDetector
+class GamR::Coulex::Target
+class GamR::Coulex::Transition
+class GamR::Coulex::WDB_nuclvl
+class GamR::Coulex::WDB_nuctrans
+header CoulexCalculation.hh
+header Coulex.hh
+# List of selected namespaces
+namespace GamR
+namespace GamR::Coulex
+namespace GamR::Coulex::WDB
+# List of selected vars
+var GamR::Coulex::SCOEFloaded
+var GamR::Coulex::Eldat
+var GamR::Coulex::rad2deg

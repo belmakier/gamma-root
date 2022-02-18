@@ -1,0 +1,7 @@
+{
+@GAMR_ROOTLOGON_INCLUDES@
+@GAMR_ROOTLOGON_LIBS@
+
+  gROOT->ProcessLine(".x $HOME/.local/share/gamr-0.0.0/gamrlogon_user.cc");
+}
+

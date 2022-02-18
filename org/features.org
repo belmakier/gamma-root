@@ -1,0 +1,59 @@
+#+TITLE: GamROOT: Feature requests and improvements
+#+TODO: [REQUEST] [DEVELOPMENT] [TESTING] | [REVIEW] [READY] [CANCELED]
+
+* [CANCELED] ANUTree::BatchConvertTree
+  File: [[file:/data/expt/PO209/GIT/gamma-root/lib/anutree/ANUTree.cxx][ANUTree.cxx]]
+
+  Often we have many trees for the same data set. Each may have their
+  own calibration. 
+
+  Having a batch conversion not only saves times, it allows creating
+  chains that can be used for parallel processing.
+
+  Another desirable feature of a batch process is being able to have a
+  global event counter for the experiment.
+
+** Tim - Friday 8 September  13:42:52 AEST 2017
+
+   Working version of BatchConvertTree, see comments for syntax of associated
+   batch file.
+   
+** Aqeel - Sat Feb  3 21:03:05 AEDT 2018
+
+   Cancelled in favour of moving towards the new tree library
+
+* [DEVELOPMENT] Have a framework to represent the structure of the nucleus
+  Folder: [[file:/data/expt/PO209/GIT/gamma-root/lib/nucleus][libnucleus]]
+
+  Not only could this be used as an elegant way to generate inputs
+  into analysis functions, it can be used to create nice
+  visualisations while doing so. After all, it's what we're paid to
+  work out.
+** Aqeel - Mon Aug 28 13:33:46 AEST 2017
+   
+
+   I have taken on this task. Future analysis code should be written
+   to take the structures from this library as inputs.
+
+** Aqeel - Wed Aug 30 03:22:32 AEST 2017
+
+   Current Issues to deal with:
+   + Objects hash undefined, can't use unordered set or map
+   + State::AddFeedingPhoton not working when trying to add twice
+
+* [DEVELOPMENT] Automate time difference calibration and measurements
+  Files: [[file:/data/expt/PO209/GIT/gamma-root/lib/analysis/TimeDiff.cxx][TimeDiff.cxx]] [[file:/data/expt/PO209/GIT/gamma-root/lib/analysis/TimeDiff.cxx][TimeDiff.h]]
+
+  Aqeel's Ph.D work. Going to use libnucleus as inputs and follow
+  this projects philosophy and style.
+
+* [READY] ANUTree::ConvertTree, offer overwrite option
+
+  Function fails the output file already exists is really annoying.
+  At least offer the option of overwriting?
+
+** Tim - Tuesday 5 September  17:28:17 AEST 2017
+   Implemented in ANUTree.cxx, reasonably robust
+
+
+

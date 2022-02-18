@@ -1,0 +1,70 @@
+/* STD */
+#include <iostream>
+#include <stdexcept>
+#include <string>
+#include <vector>
+
+/* GAMR */
+#include <tree/Tree.hh>
+#include <utils/RTTI.hh>
+
+/* EXTERN */
+#include <args/args.hxx>
+
+template <typename ExpDefn, typename Event>
+unsigned long long process(std::vector<std::string> infile, std::string conf, std::string outfile, unsigned long long offset=0, unsigned long long nevents = 0, Bool_t quiet = kFALSE, Int_t compression = 201, ULong64_t splitmb = 2000, Bool_t overwrite = kFALSE)
+{
+  auto expdefn = ExpDefn();
+  int err = expdefn.Load(infile, conf, quiet);
+  if (err) {
+    throw std::runtime_error("Failed to define experiment for with config "+conf);
+  }
+  auto n = expdefn.template Convert<Event>(outfile, offset, nevents, quiet, compression, splitmb, overwrite);
+  return n;
+}
+
+int main(int argc, char* argv[]) {
+  args::ArgumentParser parser("GammaROOT Tree Convertor",
+			      "Aqeel Akber <aqeel.akber@anu.edu.au>\n"
+			      "Contribute! <i.believe.in.you@yourdesk.io>");
+  
+  args::HelpFlag help(parser, "help", "Display this help menu", {'h', "help"});
+
+  args::Group files(parser, "File names", args::Group::Validators::All);
+  args::ValueFlagList<std::string, std::vector> infiles(files, "raw.root", "Input ROOT file.", {'i', "input"});
+  //ONLY ONE INI FILE TJG
+  args::ValueFlag<std::string> inifile(files, "conf.ini", "Tree Definition.", {'c', "conf"});
+  args::ValueFlag<std::string> outfilename(files, "out.root", "Output ROOT file.", {'o', "output"});
+
+  args::Group tuning_parser(parser, "Tuning parameters");
+  args::ValueFlag<ULong64_t> nevents(tuning_parser, "0", "Number of events to process, zero = all", {'n', "nevents"}, 0);
+  args::ValueFlag<ULong64_t> offset(tuning_parser, "0", "Offset for event number", {'f', "offset"}, 0);
+  args::ValueFlag<ULong64_t> splitmb(tuning_parser, "50000", "Split output file at MB", {'s', "split"}, 50000);
+  args::ValueFlag<Int_t> compression(tuning_parser, "101", "Output file compression settings", {'z', "compression"}, 101);
+  args::Flag quiet(tuning_parser, "quiet", "Suppress print statements", {'q', "quiet"});
+  args::Flag overwrite(tuning_parser, "overwrite", "Overwrite without asking", {'y', "overwrite"});  
+
+  args::Group treetype(parser, "Convert type", args::Group::Validators::Xor);
+  @GAMR_TREE_ROOT2GAMR_ARGS@
+  
+  try { parser.ParseCLI(argc, argv); }
+  catch (args::Help) {
+    std::cout << parser;
+    return 0;
+  }
+  catch (args::ParseError e) {
+    std::cerr << e.what() << std::endl;
+    std::cerr << parser;
+    return 1;
+  }
+  catch (args::ValidationError e) {
+    std::cerr << e.what() << std::endl;
+    std::cerr << parser;
+    return 1;
+  }
+
+  if (false) {}
+  @GAMR_TREE_ROOT2GAMR_PROCESS@
+  
+  return 0;
+}

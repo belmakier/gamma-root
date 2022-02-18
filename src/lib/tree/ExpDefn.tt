@@ -1,0 +1,354 @@
+/* STD */
+#include <cstring>
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <stdexcept>
+#include <streambuf>
+
+/* ROOT */
+#include <ROOT/TSeq.hxx>
+#include <TNamed.h>
+
+/* GAMR */
+#include <utils/RTTI.hh>
+#include <utils/Tuples.hh>
+
+namespace GamR {
+  namespace Tree {
+
+    // ------------------------------------------------------------
+    template <class... ADefns>
+    struct TExpDefn<ADefns...>::FillDetDefns {
+      TExpDefn *p;
+      int idxDetGroup;
+      FillDetDefns(TExpDefn *parent) : p(parent), idxDetGroup(0){};
+      template <typename DetDefn>
+      void operator()(std::vector<DetDefn> &defnvec)
+      {
+        std::stringstream ss;
+        ss.str("");
+        ss.clear();
+        const auto &itGroup = p->fDetGroups.at(idxDetGroup);
+
+        ss << p->fINIReader.Get("array", itGroup, "");
+        if (ss.str().empty()) {
+          throw std::runtime_error("Couldn't find any active detectors for group: " + itGroup);
+        }
+
+        std::string detname;
+        while (ss >> detname) {
+          // Read deets about this detector
+          int id = p->fINIReader.GetInteger(detname, "id", 0);
+          int atleast = p->fINIReader.GetInteger(detname, "require", 1);
+          std::string eff = p->fINIReader.Get(detname, "efficiency", "1");
+          std::string cal = p->fINIReader.Get(detname, "calibration", "");
+          std::string poll = p->fINIReader.Get(detname, "pollgate", "");
+          std::string branches = p->fINIReader.Get(detname, "branches", "");
+          int pollfreq = p->fINIReader.GetInteger(detname, "pollfreq", 50000);
+
+          if (cal.empty()) {
+            throw std::runtime_error(detname + " needs a calibration.");
+          }
+          if (branches.empty()) {
+            throw std::runtime_error(detname + " needs rawtree branches for its datums.");
+          }
+          // Now lets emplace a detector definition into the tuples vector
+          defnvec.emplace_back(itGroup, id, detname, pollfreq);
+          // Take that last definition and fill it up.
+          auto &defn = defnvec.back();
+          defn.SetPtrs(p->fBranchMap, branches);
+          defn.SetCalFuncs(cal);
+          defn.SetPollGates(poll);
+          defn.SetEffFunc(eff);
+          defn.SetRequired(atleast);
+        }
+        ++idxDetGroup;
+        // All done, move on to the next group i.e. tuple element.
+      }
+    };
+
+    // ------------------------------------------------------------
+    template <class... ADefns>
+    Int_t TExpDefn<ADefns...>::Load(std::vector<std::string> rootfn, std::string inifn, Bool_t quiet)
+    {
+      // --- TExpDefn: Make pointers in fBranchMap to fRawChain
+      fRawChain = new TChain("RawTree");
+
+      for (auto filename : rootfn) {
+        if (!fRawChain->AddFile(filename.c_str())) {
+          throw std::runtime_error("file invalid: " + filename);
+        }
+        if (!quiet) {
+          std::cout << "Added file " + filename + " to chain" << std::endl;
+        }
+      }
+
+      // --- --- TExpDefn: Get the branches from fRawChain
+      TObjArray *branchlist = fRawChain->GetListOfBranches();
+      if (!quiet) {
+        std::cout << "Got list of branches, size: " << fRawChain->GetNbranches() << std::endl;
+      }
+
+      // --- --- TExpDefn: Start making pointers
+      for (const auto &branch : *branchlist) {
+        std::string brname = branch->GetName();
+        fBranchMap[brname] = std::malloc(8 * sizeof(Char_t));
+        // Abritary equivalent of new. We reinterpret this pointer
+        // into the correct type when we call SetPtrs in the
+        // DetDefn.
+
+        // We're allocating 64 bits (8 bytes), if a branch holds
+        // something larger than this, I have no idea what will
+        // happen.
+
+        // TODO: Using branch ->GetName() at CLING actually returns
+        // a string that has a code corresponding to the branch data
+        // type!
+        //
+        // We could use this to malloc the correct amount of space.
+        // Then again, why are we chasing bits on a desktop
+        // computer? Cache misses?
+
+        // Point the tree at the branch map, and continue loop.
+        fRawChain->SetBranchAddress(brname.c_str(), fBranchMap[brname]);
+        if (!quiet) {
+          std::cout << "[" << brname << "] ";
+        }
+      }
+      if (!quiet) {
+        std::cout << std::endl;
+      }
+
+      // --- INI: Load up the config file
+      std::ifstream t(inifn);
+      fINI.assign((std::istreambuf_iterator<char>(t)), std::istreambuf_iterator<char>());
+      // fINI.insert(0, "# Applied to  RawChain in: "+rootfn+"\n");  NOT SURE WHAT
+      // THIS IS MEANT TO BE DOING TJG
+
+      fINIReader = INIReader(inifn);
+      if (fINIReader.ParseError() < 0) {
+        throw std::runtime_error("Can't load " + inifn);
+      }
+
+      // --- INI: Under array, get groups
+      std::stringstream ss;
+      ss.str("");
+      ss.clear();
+      ss << fINIReader.Get("array", "groups", "");
+      if (ss.str().empty()) {
+        throw std::runtime_error("Couldn't find any detector groups");
+      } else if (!quiet) {
+        std::cout << "Active groups: " << ss.str() << std::endl;
+      }
+
+      // --- TExpDefn: Save the groups
+      std::string group;
+      while (ss >> group) {
+        fDetGroups.push_back(group);
+      }
+
+      // --- TExpDefn: Should have the same number of groups as there are types,
+      // technically okay with less.
+      if (fDetGroups.size() != sizeof...(ADefns)) {
+        throw std::runtime_error("Experiment Definition expects " + std::to_string(sizeof...(ADefns)) + " groups.");
+      }
+
+      // --- fill this objects tuple! (templates and io amazedawg!)
+      GamR::Utils::for_each_in_tuple(fDetDefns, FillDetDefns(this));
+      if (!quiet) {
+        std::cout << "Experiment defined successfully." << std::endl;
+      }
+      return 0;
+    } // Load
+
+    // ------------------------------------------------------------ TJG 03/2020 - attempt to update to raw arbitrary non-root tree file
+    template <class... ADefns>
+    Int_t TExpDefn<ADefns...>::LoadRaw(std::vector<std::string> branchlist, std::string inifn, Bool_t quiet)
+    {
+      // --- --- TExpDefn: Start making pointers
+      for (const auto &branch : branchlist) {
+        fBranchMap[branch] = std::malloc(8 * sizeof(Char_t));
+        if (!quiet) {
+          std::cout << "[" << branch << "] ";
+        }
+      }
+      if (!quiet) {
+        std::cout << std::endl;
+      }
+
+      // --- INI: Load up the config file
+      std::ifstream t(inifn);
+      fINI.assign((std::istreambuf_iterator<char>(t)), std::istreambuf_iterator<char>());
+      // fINI.insert(0, "# Applied to  RawChain in: "+rootfn+"\n");  NOT SURE WHAT
+      // THIS IS MEANT TO BE DOING TJG
+
+      fINIReader = INIReader(inifn);
+      if (fINIReader.ParseError() < 0) {
+        throw std::runtime_error("Can't load " + inifn);
+      }
+
+      // --- INI: Under array, get groups
+      std::stringstream ss;
+      ss.str("");
+      ss.clear();
+      ss << fINIReader.Get("array", "groups", "");
+      if (ss.str().empty()) {
+        throw std::runtime_error("Couldn't find any detector groups");
+      } else if (!quiet) {
+        std::cout << "Active groups: " << ss.str() << std::endl;
+      }
+
+      // --- TExpDefn: Save the groups
+      std::string group;
+      while (ss >> group) {
+        fDetGroups.push_back(group);
+      }
+
+      // --- TExpDefn: Should have the same number of groups as there are types,
+      // technically okay with less.
+      if (fDetGroups.size() != sizeof...(ADefns)) {
+        throw std::runtime_error("Experiment Definition expects " + std::to_string(sizeof...(ADefns)) + " groups.");
+      }
+
+      // --- fill this objects tuple! (templates and io amazedawg!)
+      GamR::Utils::for_each_in_tuple(fDetDefns, FillDetDefns(this));
+      if (!quiet) {
+        std::cout << "Experiment defined successfully." << std::endl;
+      }
+      return 0;
+    } // LoadRaw
+
+    template <class ...ADefns>
+    void TExpDefn<ADefns...>::ResetBranches(std::vector<std::string> branchnames) {
+      for (auto &name : branchnames) {
+        if (fBranchMap.find(name) != fBranchMap.end()) {
+          std::memset(fBranchMap[name], 0, 8*sizeof(Char_t));
+        }
+      }
+    }
+
+    // ------------------------------------------------------------
+    template <class... ADefns>
+    template <typename EventType>
+    ULong64_t TExpDefn<ADefns...>::Convert(std::string outfn, ULong64_t eventoffset, ULong64_t nevents, Bool_t quiet,
+                                           Int_t compression, ULong64_t splitmb, Bool_t overwrite)
+    {
+      /* Converts an xyz2root tree to EventType tree */
+
+      // --- TExpDefn: Open up the output file.
+      if (overwrite) {
+        fOutFile = new TFile(outfn.c_str(), "RECREATE");
+      } else {
+        fOutFile = new TFile(outfn.c_str(), "NEW");
+      }
+      if (fOutFile->IsZombie() || !fOutFile->IsOpen()) {
+        /* overwrite? */
+        while (true) {
+          std::cout << "Outfile already exists, overwrite y/n? ";
+          char overwrite[256]; // seriously C style - don't use this an example.
+          if (std::fgets(overwrite, sizeof overwrite, stdin) == NULL || overwrite[0] == '\n') {
+            continue;
+          } else if (overwrite[1] == '\n') { /* invalid if more than a single character entered */
+            if (overwrite[0] == 'y') {
+              fOutFile = new TFile(outfn.c_str(), "RECREATE");
+              break;
+            } else if (overwrite[0] == 'n') {
+              std::cout << "Outfile invalid, quitting" << std::endl;
+              return -1;
+            }
+          }
+        } /* end input loop */
+      }
+
+      // --- TExpDefn: Set output file settings
+      fOutFile->SetCompressionSettings(compression); // lzma01 (101 = gzip01)
+
+      // Write the INI File -- not allowed sub directories TTree::ChangeFile()
+      // documentation
+      // fOutFile -> mkdir("config");
+      // fOutFile -> cd("config");
+      TNamed defn("TreeDefn", fINI.c_str());
+      defn.Write();
+      // fOutFile -> cd("/");
+
+      // --- TExpDefn: Create the output tree
+      fOutTree = new TTree("EventTree", outfn.c_str());
+      fOutTree->SetMaxTreeSize(splitmb * 1000000LL); // 2GB max size
+      EventType::Class()->IgnoreTObjectStreamer();   // Saves space
+      EventType *ptrEvent = new EventType();
+
+      fOutTree->Branch("Events", DEMANGLE_TYPEID_NAME(*ptrEvent), &ptrEvent, 10000000, 99);
+
+      // Speed it up before going for it
+      // fOutTree -> SetImplicitMT(kTRUE);
+      // fOutTree -> SetCacheLearnEntries(10);
+      // fOutTree -> SetMaxVirtualSize(200000000);
+      // does nothing
+
+      // --- Convert: Loop over fRawChain, Populate ptrEvent, and fOutTree->Fill()
+      auto nRawEntries = static_cast<ULong64_t>(fRawChain->GetEntries());
+      if (nevents && nevents < nRawEntries) {
+        nRawEntries = nevents;
+      };
+
+      auto timestart = std::chrono::system_clock::now();
+      // See https://root.cern.ch/doc/master/imt001__parBranchProcessing_8C.html
+      for (ULong64_t ixEventNum : ROOT::TSeqUL(nRawEntries)) {
+        //------------------------
+        // Get local entry
+        ULong64_t ixLocalNum = fRawChain->LoadTree(ixEventNum);
+
+        // -----------------------
+        // Print back the progress
+        if (!quiet && ixEventNum % 10000 == 0) { // verbose = 1
+          auto now = std::chrono::system_clock::now();
+          std::chrono::duration<double> sec = now - timestart;
+          auto speed = ixEventNum / sec.count();
+          auto remain = static_cast<ULong64_t>((nRawEntries - ixEventNum) / speed);
+          auto hours = remain / 3600;
+          auto minutes = remain / 60 % 60;
+          auto seconds = remain % 60;
+          Float_t percent = 100.0f * ixEventNum / nRawEntries;
+          printf("\rConverted Events: %lld/%lld [%.1f%%] Time Remaining: "
+                 "%02llu:%02llu:%02llu [%.0f k/s]",
+                 ixEventNum, nRawEntries, percent, hours, minutes, seconds, speed / 1000);
+          fflush(stdout);
+        }
+
+        // ------------------------
+        // This populates fDetDefns
+        fRawChain->GetTree()->GetEntry(ixLocalNum);
+
+        // ---------------
+        // Setup the Event
+        ptrEvent->Reset();
+        ptrEvent->SetEventNum(ixEventNum + eventoffset);
+
+        // --------------
+        // Fill the Event
+        ptrEvent->FillEvent(fDetDefns);
+        fOutTree->Fill();
+
+      } /* end loop over fRawChain */
+
+      // --- Convert: Finishing
+      std::cout << std::endl;
+      fOutFile->Write("", TObject::kOverwrite);
+      // As per TTree::ChangeFile() documentatino
+      fOutTree->GetCurrentFile()->Write("", TObject::kOverwrite);
+
+      if (!quiet) {
+        fOutTree->Print();
+        fOutTree->Show(0);
+      }
+
+      fRawChain->ResetBranchAddresses();
+      fOutTree->ResetBranchAddresses();
+
+      delete ptrEvent;
+      return nRawEntries;
+    }
+
+  } // namespace Tree
+} // namespace GamR

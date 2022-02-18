@@ -1,0 +1,45 @@
+#ifdef __ROOTCLING__
+
+/* Turn off all */
+#pragma link off all class;
+#pragma link off all functions;
+#pragma link off all global;
+#pragma link off all typedef;
+
+/* Enable this namespace */
+#pragma link C++ namespace GamR;
+#pragma link C++ namespace GamR::Tree;
+#pragma link C++ nestedclass;
+#pragma link C++ nestedtypedef;
+
+/* Reader -- no default constructor of TTreeReaderArray objects causes issues */
+//#pragma link C++ defined_in "${CMAKE_CURRENT_SOURCE_DIR}/Reader.hh";
+
+
+/* GammaROOT Tree -- Base measurement types
+ * Double_t
+ * ULong64_t
+ * Long64_t
+ * Float_t
+ * UInt_t
+ * Int_t
+ * UShort_t
+ * Short_t
+ * UChar_t
+ * Char_t
+ */
+#pragma link C++ class std::pair<Double_t, Double_t>+;
+#pragma link C++ class std::pair<ULong64_t, Double_t>+;
+#pragma link C++ class std::pair<Long64_t, Double_t>+;
+#pragma link C++ class std::pair<Float_t, Double_t>+;
+#pragma link C++ class std::pair<UInt_t, Double_t>+;
+#pragma link C++ class std::pair<Int_t, Double_t>+;
+#pragma link C++ class std::pair<UShort_t, Double_t>+;
+#pragma link C++ class std::pair<Short_t, Double_t>+;
+#pragma link C++ class std::pair<UChar_t, Double_t>+;
+#pragma link C++ class std::pair<Char_t, Double_t>+;
+#pragma link C++ class std::pair<Bool_t, Double_t>+;
+
+@GAMR_TREE_LINKDEF@
+
+#endif

@@ -1,0 +1,10 @@
+{ decls }
+namespace GamR { namespace ORNL {  } }
+
+[ libgamr_ornl.dylib ]
+# List of selected classes
+class GamR::ORNL::BananaGate
+header OakRidge.hh
+# List of selected namespaces
+namespace GamR
+namespace GamR::ORNL

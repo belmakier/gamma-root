@@ -1,0 +1,169 @@
+#+TITLE: GamROOT: Issues with existing features
+#+TODO: [ISSUE] [KNOWNCAUSE] [ONTASK] [TESTING] | [REVIEW] [SOLVED] [CANCELED]
+
+* [CANCELED] ANUTree::ConvertTree, Can't fetch tree objects from files in general
+  File: [[file:/data/expt/PO209/GIT/gamma-root/lib/anutree/ANUTree.cxx][ANUTree.cxx]]
+  Line: 125
+  
+  ConvertTree takes a root file as an argument then attempts to fetch
+  a tree from this file, this requires knowledge of the file a priori.
+
+  This is currently hardcoded.
+
+** Aqeel - Mon Aug 28 11:34:22 AEST 2017 
+
+   Is this a design flaw?
+
+   A possible design flaw and/or limitation of ROOT. Even if we make
+   it so that we pass a tree to the function, effectively solving this
+   issue, the user needs to know the name of the tree.
+
+** Aqeel - Sat Feb  3 21:00:25 AEDT 2018
+   
+   Cancelling in favour of the the new tree library. 
+
+   
+*
+
+* [SOLVED] LABR detectors (scintillators?) require 2 times, can we have that be an option?
+CLOSED: [2017-09-01 Fri 14:55]
+Very often experiments using LaBr3 detectors will record only one
+time, it seems wasteful and counterintuitive to require that two times
+be specified always.
+** Aqeel - Fri Sep 1 15:01:28 AEST 2017
+
+This is a design idea and very easy fix, see
+[[file:../lib/anutree/ANUEvent.h][lib/anutree/ANUEvent.h(L233)]], just inherit from DetectorET instead and
+this will be fixed. The SCINT, LABR, NAI, BAF classes are all pretty
+dumb, is it better to just leave it as DetectorET and DetectorETFT?
+
+* [CANCELED] ANUTree::ReadDefinition, TAGGERs require latitude and longitude
+  Either remove the requirement or update example.
+** Aqeel - Fri Sep  1 14:55:38 AEST 2017
+   
+   The easiest fix is to just update the example of course. The cause is
+   really from the naive way of reading the experiment definition
+   file. Given that there are issues with the experiment definition input
+   method, it might be worthwhile fixing this properly.
+** Aqeel - Fri Jan 12 09:51:36 AEDT 2018
+   
+   This problem is essentially solved with the new INI file for config
+   parsing -- however I don't actually save longitude/latitude
+   information in the new tree -- only in the definition that isn't
+   yet currently written to file. 
+
+   Also, I am considering writing the INI file to the root file rather
+   than the definition (Defn) objects because it's just so much more
+   human readable.
+
+* [REVIEW] Tree conversion is not working correctly - events are being missed, duplicated, and changed
+** Tim - Fri Sep  1 06:30:50 AEST 2017
+
+Pretty major issue. Using my files at least, the data has
+significantly changed.  For example, compare files 
+
+nucl03:/data/expt/C12FE_0917/C12FE0917_r007.root
+
+and 
+
+nucl03:/data/expt/C12FE_0917/C12FE0917_g007-old.root
+
+on an event-by-event basis (using TTree->Show(eventNumber)).  The first 8
+events in the the GAMEvent format correspond to event 2 in the raw
+dcp2root tree. The next event in the GAMEvent file I think is from
+event 9, but the energy is wrong and only one HPGe detector has been
+recorded.
+
+** Tim - Monday 4 September  15:31:11 AEST 2017
+
+Fixed by changing the way the branch assignment works.  Now the
+RawTree assigns its branches to pointers to UShort_t objects in the
+main space, and the MeasDefn objects' "Datum" attribute is assigned to
+the relevant object by using a map. Seems to be working correctly,
+however to make this work I had to change the MeasDefn.Datum to be a
+*UShort_t instead of a UShort_t. This causes a warning when writing
+the definition Tree (I think): 
+
+Error in <TStreamerInfo::Build>: ANUEvent::MeasDefn, discarding:
+unsigned short* Datum, no [dimension]
+
+* [CANCELED] Failing if the output file already exists is really annoying.  At least offer the option of overwriting?
+CLOSED: [2017-09-01 Fri 14:59]
+
+Not really a bug / issue - cause is well known, easy fix. Moved to feature request. - Aqeel
+* [CANCELED] ANUTree:ConvertTree gives ddLABR = 1 even if no LaBr3 detectors fire (as an example)
+
+Was an issue with the definition of HFSEvent0917::AddDetection -
+creating the detector object after determining that the detector had
+fired solved the problem
+
+* [REVIEW] Not compiling with Ubuntu 16.04 ROOT binaries
+  
+  error message:
+  
+  /home/tjg103/git/gamma-root/src/gamroot/tree/DetDefn.hh:61:7: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+  auto& GetDatum() { Calibrate(); return std::get<N>(fDatum); };
+  ^
+  /home/tjg103/git/gamma-root/src/gamroot/tree/DetDefn.hh:62:7: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+  auto& GetAllDatums() { Calibrate(); return fDatum; };
+  ^
+  /home/tjg103/git/gamma-root/src/gamroot/tree/DetDefn.hh:72:45: error: 'auto' not allowed in lambda parameter
+  GamR::Utils::for_each_in_tuple(fDatum, [&](auto dat) {
+  ^~~~
+  /home/tjg103/git/gamma-root/src/gamroot/tree/DetDefn.hh:99:48: error: 'auto' not allowed in lambda parameter
+  GamR::Utils::for_each_in_tuple(fRawDatum, [&](auto& t){
+  ^~~~
+  /home/tjg103/git/gamma-root/src/gamroot/tree/DetDefn.hh:154:56: error: 'auto' not allowed in lambda parameter
+  GamR::Utils::for_both_in_tuple(fRawDatum, fDatum, [&](auto& raw, auto& dat) {
+  ^~~~
+  /home/tjg103/git/gamma-root/src/gamroot/tree/DetDefn.hh:154:67: error: 'auto' not allowed in lambda parameter
+  GamR::Utils::for_both_in_tuple(fRawDatum, fDatum, [&](auto& raw, auto& dat) {
+  ^~~~
+  /home/tjg103/git/gamma-root/src/gamroot/tree/DetDefn.hh:163:45: error: 'auto' not allowed in lambda parameter
+  GamR::Utils::for_each_in_tuple(fDatum, [&](auto& dat) {
+  ^~~~
+  /home/tjg103/git/gamma-root/src/gamroot/tree/DetDefn.hh:167:75: error: 'auto' not allowed in lambda parameter
+  GamR::Utils::for_each_in_tuple(fDatum, [this, &itFunc, &fnum, &pnum](auto par) {
+  ^~~~
+  In file included from input_line_11:6:
+  /home/tjg103/git/gamma-root/src/gamroot/tree/Detector.hh:44:7: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+  auto GetNumMeasurements() const { return sizeof...(Ts); };
+  ^
+  /home/tjg103/git/gamma-root/src/gamroot/tree/Detector.hh:45:7: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+  auto GetDeclType() const { return (*this).GetName(); };
+  ^
+  /home/tjg103/git/gamma-root/src/gamroot/tree/Detector.hh:48:7: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+  auto& Get() { return std::get<N>(fMeasurements); };
+  ^
+  /home/tjg103/git/gamma-root/src/gamroot/tree/Detector.hh:49:7: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+  auto& GetAll() { return fMeasurements; };
+  ^
+  In file included from input_line_11:8:
+  /home/tjg103/git/gamma-root/src/gamroot/tree/Event.hh:47:49: error: 'auto' not allowed in lambda parameter
+  GamR::Utils::for_each_in_tuple(fDetectors, [&](auto& vec) {
+
+** Aqeel - Fri Jan 12 09:43:37 AEDT 2018
+   Rewritten all lambda functors as operator() to a struct that is
+   encapsulated in the class. 
+
+   A lot of these functors aren't safe to run out of context of the
+   function that they were originally intended to be run in. Will look
+   into improving safety (no change to functionality) during on-going
+   review.
+
+
+* [ISSUE] TEvent->FillEvent(TExpDefn.fDetectors) has undefined/weird behaviour when called outside of TExpDefn
+  Works fine when calling TEvent->FillEvent(this->fDetectors)
+  i.e. when called in TExpDefn->Convert()
+
+  The issue seems to be in calling TDetDefn->IsGood() in the functor
+  of TEvent, when IsGood is called in this case the dereferenced
+  datums are rubbish. 
+
+  It seems like it might be a scope thing. In all honesty, you
+  shouldn't be calling it yourself so it might be worthwhile making it
+  private. That said, it would be good to understand why to make sure
+  it's not hint to a deeper issue. 
+
+  
+
