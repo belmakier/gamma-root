@@ -31,12 +31,7 @@ more defined / structured behaviour.
 
 * Contributing
 
-Excited to contribute yourself? I don't blame you!
-
-This project is going through a lean development process, so we don't
-have style and design guidelines/rules set in stone -- yet, but we're
-getting there! Your best bet is to talk to one of the current
-developers for a primer, we really could use your help!
+Contributors are welcome, feel free to contact me.
 
 * Current Developers
 
