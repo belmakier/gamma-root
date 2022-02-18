@@ -87,12 +87,6 @@ else()
   set(GIT_REVISION "unknown")
 endif()
 
-add_subdirectory(${PROJECT_SOURCE_DIR}/extern)
-add_definitions("-DINI_MAX_LINE=2000")
-add_subdirectory(${PROJECT_SOURCE_DIR}/src/lib)
-add_subdirectory(${PROJECT_SOURCE_DIR}/src/bin)
-add_subdirectory(${PROJECT_SOURCE_DIR}/src/tests)
-
 if (APPLE)
   set(LIB_SUFFIX "dylib")
   set(LIB_LOADALL_PRE "-Wl,-all_load")
@@ -102,6 +96,12 @@ else()
   set(LIB_LOADALL_PRE "-Wl,--no-as-needed")
   set(LIB_LOADALL_POST "-Wl,--as-needed")
 endif()
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/extern)
+add_definitions("-DINI_MAX_LINE=2000")
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/lib)
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/bin)
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/tests)
 
 get_property(libs GLOBAL PROPERTY GAMR_LIBS)
 #generate rootlogon
