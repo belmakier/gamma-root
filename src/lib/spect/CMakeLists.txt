@@ -28,7 +28,7 @@ add_library(gamr_spect SHARED IO.cc Cut.cc Integral.cc Transform.cc Fit.cc ${PRO
 target_link_libraries(gamr_spect PUBLIC ${LIB_LOADALL_PRE} gamr_spect_rdict ${LIB_LOADALL_POST} Spectrum)
 
 #install
-install(FILES IO.hh Cut.hh Integral.hh Transform.hh Fit.hh FitGuesses.hh Display.hh FFT.hh Backsub.hh Calibrate.hh DESTINATION ${GAMR_INSTALL_INCDIR}/spect)
+install(FILES IO.hh Cut.hh Integral.hh Transform.hh Fit.hh FitGuesses.hh Display.hh FFT.hh BackSub.hh Calibrate.hh DESTINATION ${GAMR_INSTALL_INCDIR}/spect)
 install(TARGETS gamr_spect DESTINATION ${GAMR_INSTALL_LIBDIR})
 install(FILES FitGuesses.dat DESTINATION ${GAMR_INSTALL_DATADIR})
 

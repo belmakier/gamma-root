@@ -8,7 +8,7 @@ root_generate_dictionary(G__gamr_toolkit MonteCarlo.hh Gate.hh Peak.hh Misc.hh L
 add_library(gamr_toolkit_rdict SHARED MonteCarlo.cc Gate.cc Peak.cc Misc.cc G__gamr_toolkit)
 target_include_directories(gamr_toolkit_rdict PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
-target_link_libraries(gamr_toolkit_rdict ${ROOT_LIBRARIES} gamr_utils m Mathmore)
+target_link_libraries(gamr_toolkit_rdict ${ROOT_LIBRARIES} gamr_utils m MathMore)
 set_target_properties(gamr_toolkit_rdict PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
 install(TARGETS gamr_toolkit_rdict
