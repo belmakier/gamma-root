@@ -6,7 +6,8 @@
 This code base is an attempt to create a functional, modern, complete,
 flexible, readable, self documenting, and well documented library for
 CERN's ROOT Data Analysis Framework for application to low-energy
-Nuclear Physics.
+Nuclear Physics. Originally developed by PhD candidates at the
+Australian National University. 
 
 * Quick start
 
