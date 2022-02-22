@@ -24,11 +24,10 @@ cmake -DCMAKE_BUILD_TYPE=RELEASE ../src
 make
 #+END_SRC
 
-If you want to keep using the =ACLiC= method of using =.L file.cc+=,
-add =gamma-root/src/gamroot= to your =ROOT= include path.
-
 It is recommended to use =CMake= and the compiled libraries as it has
 more defined / structured behaviour.
+
+Docs can be viewed at [[https://belmakier.github.io/gamma-root/][https://belmakier.github.io/gamma-root/]]
 
 * Contributing
 

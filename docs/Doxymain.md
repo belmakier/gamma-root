@@ -86,10 +86,11 @@ In `~/.rootlogon.cc` add the following to intialize GammaROOT
 ```
 
 # Original developers {#authors}
++ Timothy Gray <graytj@ornl.gov>
 + Aqeel Akber <aqeel.akber@anu.edu.au>
-+ Timothy Gray <timothy.gray@anu.edu.au>
 
 ## Contributors
 + Ben Coombes <ben.coombes@anu.edu.au>
 + Jackson Dowie <jackson.dowie@anu.edu.au>
++ Brendan McCormick
 
