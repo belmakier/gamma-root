@@ -1,0 +1,29 @@
+<map id="GamR::Spect::StackSpectra" name="GamR::Spect::StackSpectra">
+<area shape="rect" id="node1" title=" " alt="" coords="712,678,896,705"/>
+<area shape="rect" id="node2" href="$d0/d17/_abbreviations_8cc.html#a5d1794b612bdcca3f4f4baa3d2e38a0b" title=" " alt="" coords="625,678,664,705"/>
+<area shape="rect" id="node3" href="$d3/d6c/class_gam_r_1_1_sort_1_1_type_1_1_gated_time_difference.html#a044c4c6493ecba6989b7e92b36da6ddc" title=" " alt="" coords="365,5,573,47"/>
+<area shape="rect" id="node4" href="$d1/da3/class_gam_r_1_1_sort_1_1_type_1_1_matrix.html#a00e6aa66c1c3b6a8a75dba762085c610" title=" " alt="" coords="387,71,551,112"/>
+<area shape="rect" id="node5" href="$db/d1b/class_gam_r_1_1_sort_1_1_type_1_1_time_difference.html#a7cf59bfec4ee14f850901a3d1fbe7103" title=" " alt="" coords="361,136,577,177"/>
+<area shape="rect" id="node6" href="$d7/d5f/class_gam_r_1_1_sort_1_1_type_1_1_time_difference_pairs.html#af4ef18d212f6e817fc857b1b460b7e1a" title=" " alt="" coords="361,201,577,243"/>
+<area shape="rect" id="node7" href="$df/d01/class_gam_r_1_1_sort_1_1_type_1_1_time_walk_cal.html#a178824712e938d37a02d75e23ceae6c9" title=" " alt="" coords="376,267,563,308"/>
+<area shape="rect" id="node8" href="$dc/d89/namespace_gam_r_1_1_spect.html#ae54298fd5ef07073ff03ad06e3d4febe" title=" " alt="" coords="379,333,559,359"/>
+<area shape="rect" id="node9" href="$d3/d48/class_gam_r_1_1_processor_1_1_time_walk.html#a0b862c355e247c0e71d9e40e821c7cfe" title="Draws Time Walk graphs." alt="" coords="375,435,563,476"/>
+<area shape="rect" id="node10" href="$d3/d48/class_gam_r_1_1_processor_1_1_time_walk.html#aebfe1c01514fb6b756ca8362eed61dbb" title="Conducts a global &#160;fit to solve for an absolute time calibration for each detector." alt="" coords="104,398,313,425"/>
+<area shape="rect" id="node11" href="$d3/d48/class_gam_r_1_1_processor_1_1_time_walk.html#a10cdc74a1e9f4a14e1c449c9712ba085" title="Iterating through calibration peaks for each detector pair: calculate the time difference spectrum (w..." alt="" coords="115,479,303,520"/>
+<area shape="rect" id="node12" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab6376882b1b259ab8ae15200fa9ce7c3" title=" " alt="" coords="391,551,548,578"/>
+<area shape="rect" id="node13" href="$dc/d89/namespace_gam_r_1_1_spect.html#ad6a0035bfb10cc820b2212cca17819d6" title=" " alt="" coords="389,602,549,629"/>
+<area shape="rect" id="node14" href="$d2/d80/namespace_gam_r_1_1_t_k.html#a48505adddc15725fea02cfa4876b6783" title=" " alt="" coords="374,653,565,679"/>
+<area shape="rect" id="node15" href="$df/d34/gamrcal_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="183,678,234,705"/>
+<area shape="rect" id="node16" href="$d6/dc2/namespace_gam_r_1_1_o_r_n_l.html#aa025a5ef5e8093613423856223cdd3c0" title=" " alt="" coords="392,754,547,781"/>
+<area shape="rect" id="node17" href="$d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#a1fbfc310eec282ac4ff33b6117de967f" title=" " alt="" coords="393,805,546,847"/>
+<area shape="rect" id="node18" href="$d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#ad18875e3efcf669c9f8e90a8446da366" title=" " alt="" coords="393,871,546,912"/>
+<area shape="rect" id="node19" href="$dd/dff/struct_gam_r_1_1_tree_1_1_t_exp_defn_1_1_fill_det_defns.html#aea024937d7259d74710f12d60575cac4" title=" " alt="" coords="389,936,549,977"/>
+<area shape="rect" id="node20" href="$d1/d06/group___o_r_n_l.html#ga8dadacfbdfaeef91b856b23b906ac4e2" title=" " alt="" coords="109,1027,308,1054"/>
+<area shape="rect" id="node22" href="$d1/d06/group___o_r_n_l.html#gadf516cfb4c9ea542a49beb4a7c8b3abd" title=" " alt="" coords="381,1053,558,1079"/>
+<area shape="rect" id="node23" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#ac188013ec5e52bf16f2edc2305eac784" title=" " alt="" coords="393,1104,545,1145"/>
+<area shape="rect" id="node24" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a329c7691b25de23668b020a1ca8c37ad" title=" " alt="" coords="393,1169,545,1211"/>
+<area shape="rect" id="node25" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#ad064c76b8660012e93eb3aea55e4b1b8" title=" " alt="" coords="393,1235,545,1276"/>
+<area shape="rect" id="node26" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#ab3fe3b5f44d3eb6695d75c9cdc2211f3" title=" " alt="" coords="393,1300,545,1341"/>
+<area shape="rect" id="node27" href="$dc/d89/namespace_gam_r_1_1_spect.html#a0dd01005b3fe204d006858acf8d290f7" title=" " alt="" coords="397,1366,542,1393"/>
+<area shape="rect" id="node21" href="$dd/de2/ban2root_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,1027,56,1054"/>
+</map>

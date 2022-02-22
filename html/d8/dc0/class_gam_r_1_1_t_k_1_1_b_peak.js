@@ -1,0 +1,25 @@
+var class_gam_r_1_1_t_k_1_1_b_peak =
+[
+    [ "BPeak", "d0/d74/group___t_k.html#gaa6a806c7247eea1172b18768229b4500", null ],
+    [ "~BPeak", "d0/d74/group___t_k.html#gaeb3718e94a1dab2c7d5f42db159630bb", null ],
+    [ "ClassDef", "d0/d74/group___t_k.html#ga87e73615ce4ac0931cb3733818081df1", null ],
+    [ "Delete", "d0/d74/group___t_k.html#ga919a09333b5bf55d6af9ade3363cd3b9", null ],
+    [ "GetAmp", "d0/d74/group___t_k.html#ga0133d6b49ae4051d478518e61ae0c8a5", null ],
+    [ "GetAmpError", "d0/d74/group___t_k.html#gaa14fdc374518d186c18b0aabeb91898f", null ],
+    [ "GetArea", "d0/d74/group___t_k.html#gad927a2d29f50b92c440bc6ece786ef72", null ],
+    [ "GetAreaError", "d0/d74/group___t_k.html#ga4aaec131e418c8788ab191a4eb6a7fa9", null ],
+    [ "GetCent", "d0/d74/group___t_k.html#ga2bc60e269306be300511aa630417506d", null ],
+    [ "GetCentError", "d0/d74/group___t_k.html#ga32d918b4d80ea9e892c18f5936ae1c49", null ],
+    [ "GetCounts", "d0/d74/group___t_k.html#ga86fb9a62fe918832b4fb6f6ae42f1965", null ],
+    [ "GetCountsError", "d0/d74/group___t_k.html#gac083ac86c150085adae965936f41bb49", null ],
+    [ "GetWidth", "d0/d74/group___t_k.html#gaa2200a38a3956d5e129aeeca03b2952a", null ],
+    [ "GetWidthError", "d0/d74/group___t_k.html#ga7673c2803d0941563430bf8ef217da80", null ],
+    [ "Print", "d0/d74/group___t_k.html#gaa496d15cf9600fa5790ff50c9392b0fd", null ],
+    [ "Set", "d0/d74/group___t_k.html#gac92a202249ec4feed5924ecfb4892d65", null ],
+    [ "Set", "d0/d74/group___t_k.html#ga0f3e55344a12f07211228e61490b89a1", null ],
+    [ "Set", "d0/d74/group___t_k.html#gacea94387106c6b07d16c53a1614a86b9", null ],
+    [ "Set", "d0/d74/group___t_k.html#gae4004cebef30dfa7f80ef2e11d589ba2", null ],
+    [ "SetCont", "d0/d74/group___t_k.html#ga556295172c5041f83e4d5fc8b1345850", null ],
+    [ "SetPoint", "d0/d74/group___t_k.html#gad601087ac09d19e8549128df1f07c4c1", null ],
+    [ "SetStep", "d0/d74/group___t_k.html#ga705f798b5ced39a94fe9582dd39c55ed", null ]
+];
