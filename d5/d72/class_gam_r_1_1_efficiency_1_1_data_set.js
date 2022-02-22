@@ -1,0 +1,27 @@
+var class_gam_r_1_1_efficiency_1_1_data_set =
+[
+    [ "DataSet", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a3cb2fb64fd5aef518f5446fedf7af997", null ],
+    [ "DataSet", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a160a7abdbe646b3a1924226e1a16edb5", null ],
+    [ "DataSet", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a31d411565fb0b39645563a760f941893", null ],
+    [ "DataSet", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a0bddea5b2df9e498e25394dcd27794f3", null ],
+    [ "DataSet", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a5d5e495b98d73c0e072f27e869934816", null ],
+    [ "Clear", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#ad9c0651307b9b9c3beb31e912ef63e0a", null ],
+    [ "EraseData", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#accb907aebf1473a51d44c9d97f55f57c", null ],
+    [ "GetAbsolute", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a5b0415e663fb458ca1ed4d451fbb6535", null ],
+    [ "GetEfficiency", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a70378712fedeb882d55b4eb034b54d4c", null ],
+    [ "GetEnergy", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a416b0c2dbc75dee3d3724cd81d2013c2", null ],
+    [ "GetGraph", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a72a9a7ce5ce5f88fed7da8950da72ac0", null ],
+    [ "GetIndex", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#affef3c7fe039855532e51f5d1d6eb269", null ],
+    [ "GetIntensity", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a0658f76ed7425f87e2630ecaca428d61", null ],
+    [ "GetKey", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a413cab285363d020acb66533f85a958c", null ],
+    [ "GetNData", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#ae2d81604b034ed4716ac584c1ba00973", null ],
+    [ "GetNorm", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a6e005e1212561385fd3d317496692ff4", null ],
+    [ "GetPeak", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a3fb945939a9d8ce20c419507d799b9f7", null ],
+    [ "Print", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#aaa5bd0364a12c085bc20ebbf422d8fa3", null ],
+    [ "SetAbsolute", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a48f441bc8e747587c0e52e1726c188f1", null ],
+    [ "SetAbsScale", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a3e50116947bcb0cbe28590ba66b80bf3", null ],
+    [ "SetData", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a83f1325eba075f277b03e7250456dd18", null ],
+    [ "SetData", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#acfed57ca8d72bf980df5007ba3bb500b", null ],
+    [ "SetData", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a949ad48307b3ec103a33693ba519be1d", null ],
+    [ "SetNorm", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a1a664eee0fe6361ae7a2d0f1e8b440e6", null ]
+];

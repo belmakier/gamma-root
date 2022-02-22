@@ -1,0 +1,4 @@
+<map id="GamR::Spect::ScalePoly" name="GamR::Spect::ScalePoly">
+<area shape="rect" id="node1" title="Scales histogram by a polynomial." alt="" coords="5,5,168,32"/>
+<area shape="rect" id="node2" href="$dc/d89/namespace_gam_r_1_1_spect.html#a70ab295cc830d4c5a8827a4c3a9df3d5" title="Scales a histogram along the X axis and dithers to avoid quantization errors." alt="" coords="216,5,355,32"/>
+</map>
