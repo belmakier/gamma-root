@@ -44,9 +44,13 @@ void os(std::vector<TH1*> hists, TCanvas *canvas , Option_t *option ) { GamR::Sp
 void os(int iStart, int iStop, TCanvas *canvas , Option_t *option ) { GamR::Spect::OverlaySpectra(iStart, iStop, canvas, option); }
 void os(TH2 *hist, int iStart, int iStop) { GamR::Spect::OverlaySpectra(hist, iStart, iStop); }
 void os(int i2D, int iStart, int iStop) { GamR::Spect::OverlaySpectra(i2D, iStart, iStop); }
+void os(std::vector<std::string> files, std::string name, int iX, Option_t *option) { GamR::Spect::OverlaySpectra(files, name, iX, option); }
+void os(std::vector<std::string> files, std::string name, Option_t *option) { GamR::Spect::OverlaySpectra(files, name, option); }
 void ss(std::vector<int> indexes, TCanvas *canvas , Option_t *option ) { GamR::Spect::StackSpectra(indexes, canvas, option); }
 void ss(std::vector<TH1*> hists, TCanvas *canvas , Option_t *option ) { GamR::Spect::StackSpectra(hists, canvas, option); }
 void ss(int iStart, int iStop, TCanvas *canvas , Option_t *option ) { GamR::Spect::StackSpectra(iStart, iStop, canvas, option); }
+void ss(std::vector<std::string> files, std::string name, int iX, Option_t *option) { GamR::Spect::StackSpectra(files, name, iX, option); }
+void ss(std::vector<std::string> files, std::string name, Option_t *option) { GamR::Spect::StackSpectra(files, name, option); }
 void ss(TH2 *hist, int iStart, int iStop) { GamR::Spect::StackSpectra(hist, iStart, iStop); }
 void ss(int i2D, int iStart, int iStop) { GamR::Spect::StackSpectra(i2D, iStart, iStop); }
 void lin(TVirtualPad *canvas ) { GamR::Spect::LinAll(canvas); }

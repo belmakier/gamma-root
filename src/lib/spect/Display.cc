@@ -4,6 +4,7 @@
 #include <TColor.h>
 #include <TFile.h>
 #include <TKey.h>
+#include <TLegend.h>
 
 #include "Display.hh"
 
@@ -124,14 +125,17 @@ namespace GamR {
       for (int i=0; i<(int)colors_hex.size(); ++i) {
         colors.push_back(TColor::GetColor(colors_hex[i].c_str()));
       }
-      
+
+      TLegend *leg = new TLegend(0.1, 0.7, 0.3, 0.9);
       for (int i=0; i<(int)hists.size(); ++i) {
         TH1 *hist = hists[i];
         hist->SetLineColor(colors[i%colors.size()]);
+        leg->AddEntry(hist, hist->GetName(), "l");
         hist->GetXaxis()->UnZoom();
         if (i==0) { hist->Draw(option); }
         else { hist->Draw(((std::string)option+" same").c_str()); }
-      }      
+      }
+      leg->Draw();
     }
 
     void OverlaySpectra(TH2 *hist, int iStart, int iStop, Option_t *option) {
@@ -146,6 +150,28 @@ namespace GamR {
     void OverlaySpectra(int i2D, int iStart, int iStop, Option_t *option) {
       auto spectra = List2DSpectra(true);
       OverlaySpectra(spectra[i2D], iStart, iStop, option);
+    }
+
+    void OverlaySpectra(std::vector<std::string> files, std::string name, int iX, Option_t *option) {
+      std::vector<TH1*> hists;
+      for (int iFile = 0; iFile<files.size(); ++iFile) {
+        TFile *file = new TFile(files[iFile].c_str());
+        TH2D* hist2 = (TH2D*)file->Get<TH2>(name.c_str());
+        TH1* hist = (TH1*)hist2->ProjectionX(files[iFile].substr(0, files[iFile].size()-5).c_str(), iX, iX);
+        hists.push_back(hist);
+      }
+      OverlaySpectra(hists);
+    }
+
+    void OverlaySpectra(std::vector<std::string> files, std::string name, Option_t *option) {
+      std::vector<TH1*> hists;
+      for (int iFile = 0; iFile<files.size(); ++iFile) {
+        TFile *file = new TFile(files[iFile].c_str());
+        TH1* hist = (TH1*)file->Get<TH1>(name.c_str());
+        hist->SetName(files[iFile].substr(0, files[iFile].size()-5).c_str());
+        hists.push_back(hist);
+      }
+      OverlaySpectra(hists);
     }
     
     void StackSpectra(std::vector<int> display_indexes,  TCanvas *canvas, Option_t *option) {
@@ -203,6 +229,28 @@ namespace GamR {
     void StackSpectra(int i2D, int iStart, int iStop, Option_t *option) {
       auto spectra = List2DSpectra(true);
       StackSpectra(spectra[i2D], iStart, iStop, option);
+    }
+
+    void StackSpectra(std::vector<std::string> files, std::string name, int iX, Option_t *option) {
+      std::vector<TH1*> hists;
+      for (int iFile = 0; iFile<files.size(); ++iFile) {
+        TFile *file = new TFile(files[iFile].c_str());
+        TH2D* hist2 = (TH2D*)file->Get<TH2>(name.c_str());
+        TH1* hist = (TH1*)hist2->ProjectionX(files[iFile].substr(0, files[iFile].size()-5).c_str(), iX, iX);
+        hists.push_back(hist);
+      }
+      StackSpectra(hists);
+    }
+
+    void StackSpectra(std::vector<std::string> files, std::string name, Option_t *option) {
+      std::vector<TH1*> hists;
+      for (int iFile = 0; iFile<files.size(); ++iFile) {
+        TFile *file = new TFile(files[iFile].c_str());
+        TH1* hist = (TH1*)file->Get<TH1>(name.c_str());
+        hist->SetName(files[iFile].substr(0, files[iFile].size()-5).c_str());
+        hists.push_back(hist);
+      }
+      StackSpectra(hists);
     }
     
     void LinAll(TVirtualPad *canvas) {

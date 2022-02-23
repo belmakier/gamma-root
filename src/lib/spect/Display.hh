@@ -18,11 +18,15 @@ namespace GamR {
     void OverlaySpectra(std::vector<TH1*> hists, TCanvas *canvas = NULL, Option_t *option = "hist");
     void OverlaySpectra(TH2 *hist, int iStart, int iStop, Option_t *option = "hist");
     void OverlaySpectra(int i2D, int iStart, int iStop, Option_t *option = "hist");
+    void OverlaySpectra(std::vector<std::string> files, std::string name, int iX, Option_t *option = "hist");
+    void OverlaySpectra(std::vector<std::string> files, std::string name, Option_t *option = "hist");
     void StackSpectra(std::vector<int> display_indexes, TCanvas *canvas = NULL, Option_t *option = "hist");
     void StackSpectra(int iStart, int iStop, TCanvas *canvas = NULL, Option_t *option = "hist");
     void StackSpectra(std::vector<TH1*> hists, TCanvas *canvas = NULL, Option_t *option = "hist");
     void StackSpectra(TH2 *hist, int iStart, int iStop, Option_t *option = "hist");
     void StackSpectra(int i2D, int iStart, int iStop, Option_t *option = "hist");
+    void StackSpectra(std::vector<std::string> files, std::string name, int iX, Option_t *option = "hist");
+    void StackSpectra(std::vector<std::string> files, std::string name, Option_t *option = "hist");
     void LinAll(TVirtualPad *canvas = NULL);
     void LogAll(TVirtualPad *canvas = NULL);
     void ZoomAllX(double low, double high, TVirtualPad *canvas = NULL);

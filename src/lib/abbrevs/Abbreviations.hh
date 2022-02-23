@@ -58,11 +58,15 @@ void os(std::vector<TH1*> hists, TCanvas *canvas = NULL, Option_t *option = "his
 void os(int iStart, int iStop, TCanvas *canvas = NULL, Option_t *option = "hist");
 void os(TH2 *hist, int iStart, int iStop);
 void os(int i2D, int iStart, int iStop);
+void os(std::vector<std::string> files, std::string name, int iX, Option_t *option = "hist");
+void os(std::vector<std::string> files, std::string name, Option_t *option = "hist");
 void ss(std::vector<int> indexes, TCanvas *canvas = NULL, Option_t *option = "hist");
 void ss(std::vector<TH1*> hists, TCanvas *canvas = NULL, Option_t *option = "hist");
 void ss(int iStart, int iStop, TCanvas *canvas = NULL, Option_t *option = "hist");
 void ss(TH2 *hist, int iStart, int iStop);
 void ss(int i2D, int iStart, int iStop);
+void ss(std::vector<std::string> files, std::string name, int iX, Option_t *option = "hist");
+void ss(std::vector<std::string> files, std::string name, Option_t *option = "hist");
 void lin(TVirtualPad *canvas = NULL);
 void log(TVirtualPad *canvas = NULL);
 void zx(double low, double high, TVirtualPad *canvas = NULL);
