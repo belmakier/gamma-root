@@ -6,7 +6,7 @@ var _display_8cc =
     [ "List1DSpectra", "d4/def/_display_8cc.html#a56e80bce5bf691212c8b7dfb76c2d2b4", null ],
     [ "List2DSpectra", "d4/def/_display_8cc.html#a0aad1e3c1b928bb9c61bfa9c20df882e", null ],
     [ "LogAll", "d4/def/_display_8cc.html#aa3a93f8152a5a49fd88de42c1eb4f97f", null ],
-    [ "NormSpectra", "d4/def/_display_8cc.html#a66b410425e2ee8fd05e2d13c921b9988", null ],
+    [ "NormSpectra", "d4/def/_display_8cc.html#a65d31e04d30d9c24dc657bef81f251bb", null ],
     [ "NormSpectraBackSub", "d4/def/_display_8cc.html#aa4da6909a49d9510105c06b27cd4bffc", null ],
     [ "OverlaySpectra", "d4/def/_display_8cc.html#ac7a37d895614b7a5fa79ed8632698ed5", null ],
     [ "OverlaySpectra", "d4/def/_display_8cc.html#a8473e685bcada4de9429b0525313d014", null ],

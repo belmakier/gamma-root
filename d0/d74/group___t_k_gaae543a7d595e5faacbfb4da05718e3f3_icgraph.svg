@@ -187,7 +187,7 @@ var sectionId = 'dynsection-43';
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="../../dc/d89/namespace_gam_r_1_1_spect.html#a66b410425e2ee8fd05e2d13c921b9988" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="../../dc/d89/namespace_gam_r_1_1_spect.html#a65d31e04d30d9c24dc657bef81f251bb" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="189,-88 189,-107 326,-107 326,-88 189,-88"/>
 <text text-anchor="middle" x="257.5" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Spect::NormSpectra</text>
 </a>
@@ -202,7 +202,7 @@ var sectionId = 'dynsection-43';
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="../../d0/d17/_abbreviations_8cc.html#a74d4571aa2428d3454e408df520dbff6" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="../../d0/d17/_abbreviations_8cc.html#a8150489ebcfa245dd4ea5c051de4181d" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="60.5,-88 60.5,-107 89.5,-107 89.5,-88 60.5,-88"/>
 <text text-anchor="middle" x="75" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00">ns</text>
 </a>

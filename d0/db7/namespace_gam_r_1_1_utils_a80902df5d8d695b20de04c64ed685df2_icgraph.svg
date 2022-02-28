@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../dc/d89/namespace_gam_r_1_1_spect.html#a66b410425e2ee8fd05e2d13c921b9988" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../dc/d89/namespace_gam_r_1_1_spect.html#a65d31e04d30d9c24dc657bef81f251bb" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="74,-88.5 74,-107.5 211,-107.5 211,-88.5 74,-88.5"/>
 <text text-anchor="middle" x="142.5" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Spect::NormSpectra</text>
 </a>
@@ -67,7 +67,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d0/d17/_abbreviations_8cc.html#a74d4571aa2428d3454e408df520dbff6" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="../../d0/d17/_abbreviations_8cc.html#a8150489ebcfa245dd4ea5c051de4181d" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="4.5,-88.5 4.5,-107.5 33.5,-107.5 33.5,-88.5 4.5,-88.5"/>
 <text text-anchor="middle" x="19" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00">ns</text>
 </a>

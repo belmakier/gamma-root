@@ -25,7 +25,7 @@ var _abbreviations_8cc =
     [ "log", "d0/d17/_abbreviations_8cc.html#aac6b7f4e4bdca0828a1553bfe8a0bca5", null ],
     [ "ls", "d0/d17/_abbreviations_8cc.html#a0a4a3cef40cd8acefe8d3913380a814a", null ],
     [ "ls2", "d0/d17/_abbreviations_8cc.html#a76a51a400746f08dc36c70661108a0c2", null ],
-    [ "ns", "d0/d17/_abbreviations_8cc.html#a74d4571aa2428d3454e408df520dbff6", null ],
+    [ "ns", "d0/d17/_abbreviations_8cc.html#a8150489ebcfa245dd4ea5c051de4181d", null ],
     [ "nsbs", "d0/d17/_abbreviations_8cc.html#ae47533f48063bc9ba85ff0be37004a05", null ],
     [ "os", "d0/d17/_abbreviations_8cc.html#ab95a51a7dddfd114aa72e57bea341225", null ],
     [ "os", "d0/d17/_abbreviations_8cc.html#a88564d084aa091a609618b05f3178fa0", null ],

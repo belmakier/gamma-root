@@ -25,7 +25,7 @@ var _abbreviations_8hh =
     [ "log", "d0/d68/_abbreviations_8hh.html#af9265c9f3e7e5ae5fb0b62b82d4bbaa6", null ],
     [ "ls", "d0/d68/_abbreviations_8hh.html#a0a4a3cef40cd8acefe8d3913380a814a", null ],
     [ "ls2", "d0/d68/_abbreviations_8hh.html#a76a51a400746f08dc36c70661108a0c2", null ],
-    [ "ns", "d0/d68/_abbreviations_8hh.html#ad00d1ad2d00ce0907c5cf6effdc3f740", null ],
+    [ "ns", "d0/d68/_abbreviations_8hh.html#a03a5d2d9788b34f8418051b52a1ef6f9", null ],
     [ "nsbs", "d0/d68/_abbreviations_8hh.html#a64fe932c501d2438180c14091ef4eb7e", null ],
     [ "os", "d0/d68/_abbreviations_8hh.html#ab95a51a7dddfd114aa72e57bea341225", null ],
     [ "os", "d0/d68/_abbreviations_8hh.html#a64669769babc8a6aa4ad3aa81336eb74", null ],

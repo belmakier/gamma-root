@@ -116,14 +116,14 @@ var NAVTREEINDEX =
 "d0/d74/group___t_k.html#gga2f09f75494227f20e8894d80261fc089a6b7d6cc77177ec2fab82b6c35b9eeece",
 "d1/da3/class_gam_r_1_1_sort_1_1_type_1_1_matrix.html#ab250b8f221f82570e6f634ff924a180d",
 "d2/df3/_r_e_p_l_8cc.html",
-"d3/dac/_utilities_8cc.html",
-"d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#affef3c7fe039855532e51f5d1d6eb269",
-"d7/d7a/_gain_8hh_source.html",
-"da/d95/class_gam_r_1_1_tree_1_1_t_event.html#a31e52e525bfb0c2383fc0b02ed0329a7",
-"dc/d89/namespace_gam_r_1_1_spect.html#a37f156cb2ebdc0834ccff2620e0968c7",
-"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a33c99b9e125d81f6208101fa43b33be5",
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a35c3e32218f20481018e85a7f1d4dc6f",
-"dir_c183064df1291357db1d38c637c6e87c.html"
+"d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#af961ff5e82148da4e151386b7e959a94",
+"d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#ae2d81604b034ed4716ac584c1ba00973",
+"d7/d7a/_gain_8hh.html",
+"da/d95/class_gam_r_1_1_tree_1_1_t_event.html#a1a5c28d78c004a0ac4aff5a075a5c923",
+"dc/d89/namespace_gam_r_1_1_spect.html#a36cc6f0992bd2bb29fb31f0f600a740d",
+"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html",
+"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a3474b5ff44d9dd333da9161e9d2edc49",
+"dir_aba6f5845ff58f892acd7e475dc2a3b1.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
