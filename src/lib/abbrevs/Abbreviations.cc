@@ -67,7 +67,7 @@ TH1 *add(std::vector<int> hists, const char *name ) { return GamR::Spect::Add(hi
 TH1 *add(int iStart, int iStop, const char *name ) { return GamR::Spect::Add(iStart, iStop, name); }
 TH1 *rb(TH1 *hist, int rebin) { return GamR::Spect::Rebin(hist, rebin); }
 void rb(TVirtualPad *canvas , int rebin) { GamR::Spect::Rebin(canvas, rebin); }
-void ns(TVirtualPad *canvas) { GamR::Spect::NormSpectra(canvas); }
+void ns(TVirtualPad *canvas, Option_t *option) { GamR::Spect::NormSpectra(canvas, option); }
 void nsbs(TVirtualPad *canvas) { GamR::Spect::NormSpectraBackSub(canvas); }
 
 //2-D

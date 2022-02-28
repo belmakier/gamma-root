@@ -81,7 +81,7 @@ TH1 *add(std::vector<int> hists, const char *name = "sum");
 TH1 *add(int iStart, int iStop, const char *name = "sum");
 TH1 *rb(TH1 *hist, int rebin);
 void rb(TVirtualPad *canvas = NULL, int rebin = 2);
-void ns(TVirtualPad *canvas = NULL);
+void ns(TVirtualPad *canvas = NULL, Option_t *option = "");
 void nsbs(TVirtualPad *canvas = NULL);
 
 //2-D

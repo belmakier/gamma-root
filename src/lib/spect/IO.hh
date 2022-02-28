@@ -19,6 +19,7 @@ namespace GamR {
     std::string ToText(const TH2 *h, std::string outfile = "", std::string delimiter=",", int binx = -1, int biny = -1);
     std::string ToText(const TGraphErrors *g, std::string outfile = "", std::string delimiter=",");
     std::string ToText(const TGraph *g, std::string outfile = "", std::string delimiter=",");
+    std::string ToText(const TGraph *g, int ID, std::string outfile = "", std::string delimiter=",");
     std::string ToText(const TF1 *f, std::string outfile = "", std::string delimiter=",");
     void ToBin(const TH2 *h, std::string outfile = "");
     void ToBin(const TH1 *h, std::string outfile = "");

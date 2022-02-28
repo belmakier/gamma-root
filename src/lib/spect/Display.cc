@@ -384,8 +384,12 @@ namespace GamR {
       canvas->cd();
     }
 
-    void NormSpectra(TVirtualPad *canvas) {
+    void NormSpectra(TVirtualPad *canvas, Option_t *option) {
       if (!canvas) { if (gPad) { canvas = gPad->GetCanvas(); } else { std::cout << "No active canvas" << std::endl; return; } }
+
+      TString opts(option);
+      opts.ToLower();
+      
       std::vector<TH1D*> spectra = Utils::GetHists1D(canvas);
       for (int i=0; i<spectra.size(); ++i) {
         printf("%i     %s\n", i, spectra[i]->GetName());
@@ -394,11 +398,21 @@ namespace GamR {
       int ind;
       std::cin >> ind;
       TH1D* norm_hist = spectra[ind];
-      GamR::TK::Gate gate;
-      gate.SetGate(canvas);
-      for (int i=0; i<spectra.size(); ++i) {
-        if (i != ind) {
-          gate.Norm(spectra[i], norm_hist);
+      if (opts.Contains("m")) {
+        for (int i=0; i<spectra.size(); ++i) {
+          if (i != ind) {
+            double scale = (double)norm_hist->GetMaximum()/(double)spectra[i]->GetMaximum();
+            spectra[i]->Scale(scale);
+          }
+        }
+      }
+      else {
+        GamR::TK::Gate gate;
+        gate.SetGate(canvas);
+        for (int i=0; i<spectra.size(); ++i) {
+          if (i != ind) {
+            gate.Norm(spectra[i], norm_hist);
+          }
         }
       }
       canvas->Update();        

@@ -98,6 +98,28 @@ namespace GamR {
       return ss.str();
     }
 
+    std::string ToText(const TGraph *g, int ID, std::string outfile, std::string delimiter)
+    {
+      std::stringstream ss;
+      //ss << "#x" << delimiter << "y\n";
+      ss << ID << delimiter << g->GetN() << std::endl;
+      for (int i = 0; i < g->GetN(); ++i) {
+        double x;
+        double y;
+        g->GetPoint(i,x,y);
+        ss << x << delimiter;
+        ss << y << std::endl;
+      }
+
+      if (!outfile.empty()) {
+        std::ofstream file(outfile, std::ios_base::app);
+        file << ss.str();
+        file.close();
+      }
+
+      return ss.str();
+    }
+
     std::string ToText(const TF1* f, std::string outfile, std::string delimiter)
     {
       std::stringstream ss;
