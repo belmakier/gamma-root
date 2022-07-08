@@ -1,0 +1,62 @@
+#include <doctest/doctest.h>
+/* STD */
+#include <string>
+#include <iostream>
+#include <fstream>
+
+/* GAMR */
+#include <bateman/Nucleus.hh>
+#include <bateman/Scheme.hh>
+#include <bateman/Solver.hh>
+
+SCENARIO("Bateman equations for decay of 36Mg") {
+
+  std::string workdir("${CMAKE_CURRENT_SOURCE_DIR}/");
+
+  GamR::Bateman::Solver solver;
+  GamR::Bateman::Scheme scheme;
+  scheme.ReadScheme("${CMAKE_CURRENT_SOURCE_DIR}/mg36.scheme");
+
+  scheme.PrintSummary(std::cout);
+  
+  solver.solve(scheme);
+
+  std::ofstream popfile("populations.dat");
+  scheme.PrintPops(popfile, solver);
+  popfile.close();
+
+  std::ofstream decayfile("decays.dat");
+  scheme.PrintDecays(decayfile, solver);
+  decayfile.close();
+
+  std::ifstream test_pop("${CMAKE_CURRENT_SOURCE_DIR}/populations.dat");
+  std::ifstream this_pop("populations.dat");
+  double our_t, t;
+  double pop[11];
+  double our_pop[11];
+  while (test_pop >> t >> pop[0] >> pop[1] >> pop[2] >> pop[3] >> pop[4] >> pop[5] >> pop[6] >> pop[7] >> pop[8] >> pop[9] >> pop[10]) {
+    this_pop >> our_t >> our_pop[0] >> our_pop[1] >> our_pop[2] >> our_pop[3] >> our_pop[4] >> our_pop[5] >> our_pop[6] >> our_pop[7] >> our_pop[8] >> our_pop[9] >> our_pop[10];
+
+    REQUIRE(t==our_t);
+    for (int i=0; i<11; ++i) {
+      REQUIRE(pop[i]==our_pop[i]);
+    }
+  }
+  test_pop.close();
+  this_pop.close();
+
+  std::ifstream test_dec("${CMAKE_CURRENT_SOURCE_DIR}/decays.dat");
+  std::ifstream this_dec("decays.dat");
+  double dec[11];
+  double our_dec[11];
+  while (test_dec >> t >> dec[0] >> dec[1] >> dec[2] >> dec[3] >> dec[4] >> dec[5] >> dec[6] >> dec[7] >> dec[8] >> dec[9] >> dec[10]) {
+    this_dec >> our_t >> our_dec[0] >> our_dec[1] >> our_dec[2] >> our_dec[3] >> our_dec[4] >> our_dec[5] >> our_dec[6] >> our_dec[7] >> our_dec[8] >> our_dec[9] >> our_dec[10];
+
+    REQUIRE(t==our_t);
+    for (int i=0; i<11; ++i) {
+      REQUIRE(dec[i]==our_dec[i]);
+    }
+  }
+  test_dec.close();
+  this_dec.close();
+}

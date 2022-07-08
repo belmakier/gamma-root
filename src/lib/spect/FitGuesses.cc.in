@@ -8,7 +8,7 @@ namespace GamR {
     
     void Init() {
       gFitGuesses = new PeakFitGuesses();
-      std::string global_dir = "${CMAKE_INSTALL_PREFIX}/${EZ_INSTALL_DATADIR}/FitGuesses.dat";
+      std::string global_dir = "${CMAKE_INSTALL_PREFIX}/${GAMR_INSTALL_DATADIR}/FitGuesses.dat";
 
       if (LoadGuesses("FitGuesses.dat")) {
         LoadGuesses(global_dir);

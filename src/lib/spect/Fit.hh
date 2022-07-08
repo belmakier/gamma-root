@@ -34,8 +34,9 @@ namespace GamR {
         int iQuadBack;
         int iStep;
         int iTails1;
-        int iTails2;
-	int iFixEnergy;
+        int iTails2;        
+        int iFixEnergy;
+        int iNoFit;
       };
 
     private :

@@ -3,7 +3,7 @@
 cmake_minimum_required(VERSION 3.4.3 FATAL_ERROR)
 
 if (APPLE) 
-  set(CMAKE_OSX_DEPLOYMENT_TARGET 11.4)
+  set(CMAKE_OSX_DEPLOYMENT_TARGET 12.4)
 endif()
 
 project(gamr VERSION 0.0.0 LANGUAGES C CXX Fortran)
@@ -53,6 +53,9 @@ if (NOT ROOT_FOUND)
 endif()
 
 include(${ROOT_USE_FILE})
+
+#boost
+find_package(Boost)
 
 #doxygen
 find_package(Doxygen)

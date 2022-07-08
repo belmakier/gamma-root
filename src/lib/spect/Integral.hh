@@ -31,6 +31,7 @@ namespace GamR {
 
     std::pair<double, double> CountsBS(TH1 *hist, GamR::Nucleus::Transition transition);
     std::pair<double, double> CountsBS(TH1 *hist, GamR::TK::Gate peak, GamR::TK::Gate background);
+    std::pair<double, double> CountsBS(TH1 *hist, GamR::TK::Gate peak, std::vector<GamR::TK::Gate> backgrounds);
     std::pair<double, double> CountsBS(TH1 *hist, double peakLow, double peakHigh, double backLow, double backHigh);
     
 

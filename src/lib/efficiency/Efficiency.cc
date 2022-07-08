@@ -14,6 +14,7 @@
 
 #include <TH1.h>
 #include <TF1.h>
+#include <TGraph.h>
 #include <TGraphErrors.h>
 #include <TMultiGraph.h>
 #include <TFile.h>
@@ -457,11 +458,30 @@ namespace GamR {
             y_err = y_err * fAbsScale;
           }          
           graph->SetPoint(i, fEnergies[i], y);
-          graph->SetPointError(i, 0, y_err);
+          graph->SetPointError(i, 0, 0.00001);
         }
       return graph;
     }
 
+    TGraphErrors *DataSet::GetGraphErrors()
+    {
+      int nPoints = fEnergies.size();
+      TGraphErrors *graph = new TGraphErrors(nPoints);
+
+      for (int i=0; i<nPoints; ++i)
+        {
+          double y = fEfficiencies[i]/fNormalisation;
+          double y_err = fEfficiencyErrors[i]/fNormalisation;
+          if (!fAbsolute) {
+            y = y * fAbsScale;
+            y_err = y_err * fAbsScale;
+          }          
+          graph->SetPoint(i, fEnergies[i], y);
+          graph->SetPointError(i, 0, y_err);
+        }
+      return graph;
+    }
+    
     EffFit::EffFit()
     {
       EffFunc = new TF1("EffFunc", EffCFunc, 1, 4096, 8);
@@ -521,7 +541,13 @@ namespace GamR {
           p->fDataSets[i].SetAbsScale(par[7]);
           p->fDataSets[i].SetNorm(par[8+i]);
           if (p->fDataSets[i].GetNData() > 0) {
-            TGraphErrors *graph = p->fDataSets[i].GetGraph();
+            TGraphErrors *graph;
+            if (p->EqualWeights) {
+              graph = p->fDataSets[i].GetGraph();
+            }
+            else {
+              graph = p->fDataSets[i].GetGraphErrors();
+            }
             f += graph->Chisquare(p->EffFunc);
             delete graph;
           }
@@ -656,7 +682,7 @@ namespace GamR {
       std::vector<Color_t> colors = {kRed, kBlue, kGreen, kMagenta, kCyan, kBlack, kYellow};
       for (int i=0; i<nDataSets; ++i)
         {
-          TGraphErrors *dsetgraph = fDataSets[i].GetGraph();
+          TGraphErrors *dsetgraph = fDataSets[i].GetGraphErrors();
           std::cout << "    Data Set " << i << ", nPoints " << dsetgraph->GetN() << std::endl;
           dsetgraph->SetLineColor(colors[i]);
           dsetgraph->SetMarkerColor(colors[i]);
@@ -671,12 +697,87 @@ namespace GamR {
       return graph;
     }
 
+    void EffFit::WriteGraph(std::string outDir)
+    {      
+      int nDataSets = fDataSets.size();
+      
+      for (int i=0; i<nDataSets; ++i)
+        {
+          std::string fname = outDir+"/dset_"+std::to_string(i)+".dat";
+          std::ofstream dset_file(fname);            
+          TGraphErrors *dsetgraph = fDataSets[i].GetGraphErrors();
+          std::cout << "    Data Set " << i << ", nPoints " << dsetgraph->GetN() << std::endl;
+          for (int j=0; j<dsetgraph->GetN(); ++j) {
+            double x, y, yerr;
+            dsetgraph->GetPoint(j, x, y);
+            yerr = dsetgraph->GetErrorY(j);
+            dset_file << x << "    " << y << "    " << yerr << std::endl;            
+          }
+          dset_file.close();
+        }
+
+      std::string fname = outDir+"/efficiency.dat";
+      std::ofstream eff_file(fname);            
+      for (int i=1; i<=4096; ++i) {
+        eff_file << i << "   " << EffFunc->Eval((double)i) << std::endl;
+      }
+      eff_file.close();
+    }
+
+    TMultiGraph* EffFit::DrawRes(TCanvas *canvas, int detID/*=0*/, double xlow/*=-1*/, double xhigh/*=-1*/)
+    {
+      std::cout << "Drawing Detector " << detID << std::endl;
+      canvas->Clear();
+      canvas->cd();
+      int nDataSets = fDataSets.size();
+      TMultiGraph *graph = new TMultiGraph();
+      graph->SetTitle(("Efficiency "+std::to_string(detID)).c_str());
+      std::vector<Color_t> colors = {kRed, kBlue, kGreen, kMagenta, kCyan, kBlack, kYellow};
+      double std_dev = 0;
+      int nPoints = 0;
+      for (int i=0; i<nDataSets; ++i)
+        {
+          TGraphErrors *dsetgraph = fDataSets[i].GetGraphErrors();
+          std::cout << "    Data Set " << i << ", nPoints " << dsetgraph->GetN() << std::endl;
+          TGraphErrors *residuals = new TGraphErrors();
+          for (int j=0; j<dsetgraph->GetN(); ++j) {
+            ++nPoints;
+            double x,y;
+            dsetgraph->GetPoint(j, x, y);
+            y = (y - EffFunc->Eval(x))/EffFunc->Eval(x)*100.0;
+            std_dev += y*y;
+            residuals->SetPoint(j, x, y);
+            residuals->SetPointError(j, 0, dsetgraph->GetErrorY(j)/EffFunc->Eval(x)*100.0);
+          }
+          
+          residuals->SetLineColor(colors[i]);
+          residuals->SetMarkerColor(colors[i]);
+          graph->Add(residuals);          
+        }
+      std_dev = std::sqrt(std_dev/(double)nPoints);
+      std::cout << "Spread = " << std_dev << std::endl;
+      graph->Draw("A*");
+      if (xlow!=xhigh) {
+        graph->GetXaxis()->SetLimits(xlow, xhigh);
+      }
+      graph->Draw("A*");
+      TF1 *con = new TF1("con", "0", xlow, xhigh);
+      con->Draw("same");
+      return graph;
+    }
+
     void EffFit::Draw(const char* outFile, double xlow, double xhigh) {
       TCanvas *c1 = new TCanvas();
+      c1->Print(((std::string)outFile+"[").c_str());
       TMultiGraph *graph = Draw(c1, 0, xlow, xhigh);
       c1->Update();
       c1->Print(outFile);
+      TMultiGraph *res = DrawRes(c1, 0, xlow, xhigh);
+      c1->Update();
+      c1->Print(outFile);
+      c1->Print(((std::string)outFile+"]").c_str());
       delete graph;
+      delete res;
     }
 
     MultiDataSet::MultiDataSet(const char *histFile, const char *histName, const char *gateFile, const char *mapName, const char *intensityFile)
@@ -859,7 +960,7 @@ namespace GamR {
         fprintf(file, "  %8.7f   ", efffit.second.EffFunc->GetParameter(7));
         fprintf(file, "  %10.3f", fDetNorm[efffit.first]);
         for (int i=0; i<7; ++i) {
-          fprintf(file, "  %5.2f  %4.2f ", efffit.second.EffFunc->GetParameter(i), efffit.second.EffFunc->GetParError(i));
+          fprintf(file, "  %5.4f  %5.4f ", efffit.second.EffFunc->GetParameter(i), efffit.second.EffFunc->GetParError(i));
         }
         fprintf(file,"\n");
       }
@@ -872,7 +973,7 @@ namespace GamR {
       fprintf(file, "AbsScale     A     Aerr    B     Berr    C     Cerr    D     Derr    E     Eerr    F     Ferr    G     Gerr\n");
       fprintf(file, "  %8.7f   ", EffFunc->GetParameter(7));
       for (int i=0; i<7; ++i) {
-        fprintf(file, "  %5.2f  %4.2f ", EffFunc->GetParameter(i), EffFunc->GetParError(i));
+        fprintf(file, "  %5.4f  %5.4f ", EffFunc->GetParameter(i), EffFunc->GetParError(i));
       }
       fprintf(file,"\n");
       fclose(file);

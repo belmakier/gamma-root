@@ -8,3 +8,6 @@ target_link_libraries(gamrtest_main extern_doctest)
 # UNITS
 add_subdirectory(tree)
 add_subdirectory(coulex)
+if (${Boost_FOUND})
+  add_subdirectory(bateman)
+endif()

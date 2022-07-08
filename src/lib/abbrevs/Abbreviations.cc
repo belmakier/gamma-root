@@ -43,6 +43,7 @@ void os(std::vector<int> indexes, TCanvas *canvas , Option_t *option ) { GamR::S
 void os(std::vector<TH1*> hists, TCanvas *canvas , Option_t *option ) { GamR::Spect::OverlaySpectra(hists, canvas, option); }
 void os(int iStart, int iStop, TCanvas *canvas , Option_t *option ) { GamR::Spect::OverlaySpectra(iStart, iStop, canvas, option); }
 void os(TH2 *hist, int iStart, int iStop) { GamR::Spect::OverlaySpectra(hist, iStart, iStop); }
+void os(TH2 *hist, std::vector<int> indices) { GamR::Spect::OverlaySpectra(hist, indices); }
 void os(int i2D, int iStart, int iStop) { GamR::Spect::OverlaySpectra(i2D, iStart, iStop); }
 void os(std::vector<std::string> files, std::string name, int iX, Option_t *option) { GamR::Spect::OverlaySpectra(files, name, iX, option); }
 void os(std::vector<std::string> files, std::string name, Option_t *option) { GamR::Spect::OverlaySpectra(files, name, option); }

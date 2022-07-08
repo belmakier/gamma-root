@@ -76,11 +76,19 @@ namespace GamR {
       double Lowest;
       double Highest;
       
-      void Set(TH1 *hist, GamR::TK::Gate peak, TF1 *background); //actually calculates area
+      void Set(TH1 *hist, GamR::TK::Gate peak, TF1 *background); //actually calculates area     
       
       void Paint(Option_t *option = "same");
       Int_t DistancetoPrimitive(Int_t px, Int_t py);
       void ExecuteEvent(Int_t event, Int_t px, Int_t py);
+
+      //helper class
+      class LFit {
+        TH1D *back;
+      public: 
+        LFit(TH1D *background) { back = background; }        
+        double operator() (double *x, double *p) { return back->GetBinContent(back->FindBin(x[0])) + p[0] + x[0]*p[1]; }
+      };
       
     public :      
       BPeak();
@@ -105,6 +113,7 @@ namespace GamR {
       
       
       void Set(TH1 *hist, Option_t *foption="", Option_t *option="sl");
+      void Set(TH2 *hist, Option_t *foption="", Option_t *option="sl");
       void Print();
 
       void Delete(Option_t *option) { this->~BPeak(); } // *MENU*

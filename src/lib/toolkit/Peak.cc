@@ -1,6 +1,10 @@
 #include <TMatrixD.h>
 #include <TGraphErrors.h>
 #include <TMarker.h>
+#include <HFitInterface.h>
+#include <Math/WrappedMultiTF1.h>
+#include <Fit/BinData.h>
+#include <Fit/Fitter.h>
 
 #include <spect/Cut.hh>
 #include "Peak.hh"
@@ -560,6 +564,109 @@ namespace GamR {
         background.push_back(bg);
       }
       Set(hist, peak, background, foption, option);
+    }
+
+    void BPeak::Set(TH2 *hist, Option_t *foption, Option_t *option) {
+      GamR::TK::Gate prompt;
+      std::cout << "Select prompt region: " << std::endl;
+      TH1D *projx = hist->ProjectionX();
+      projx->Draw();
+      prompt.SetGate();
+      std::cout << "Select non-prompt regions: " << std::endl;
+      std::vector<GamR::TK::Gate > nonprompt;
+      while(true) {
+        GamR::TK::Gate np;
+        int retval = np.SetGate();
+        if (retval<0) { break; }
+        nonprompt.push_back(np);
+      }
+      if (nonprompt.size() == 0) { std::cout << "Must have at least one non-prompt region!" << std::endl; return; }
+      //make prompt and non-prompt histograms
+      TH1D *hPrompt = prompt.ApplyX(hist, "hPrompt");
+      double p_width = prompt.GetBinWidth(projx);
+      TH1D *hNonPrompt = nonprompt[0].ApplyX(hist, "hNonPrompt0");
+      double np_width = nonprompt[0].GetBinWidth(projx);
+      for (int i=1; i<nonprompt.size(); ++i) {
+        hNonPrompt->Add(nonprompt[i].ApplyX(hist, ("hNonPrompt"+std::to_string(i)).c_str()));
+        np_width += nonprompt[i].GetBinWidth(projx);
+      }
+      hNonPrompt->Scale(p_width/np_width);
+
+      //now plot them both (?)
+      hPrompt->Draw("hist");
+      hNonPrompt->SetLineColor(kRed);
+      hNonPrompt->Draw("hist same");
+      //make LFit
+      BPeak::LFit lfit(hNonPrompt);
+      
+      //select peak and background regions
+      GamR::TK::Gate peak;
+      std::cout << "Select peak region: " << std::endl;
+      peak.SetGate();
+      std::cout << "Select background regions:" << std::endl;
+      std::vector<GamR::TK::Gate > background;
+      double lowest = 1e9;
+      double highest = -1e9;
+      while(true) {
+        GamR::TK::Gate bg;
+        int retval = bg.SetGate();
+        if (retval<0) { break; }
+        background.push_back(bg);
+        if (bg.GetLow() < lowest) {
+          lowest = bg.GetLow();
+        }
+        if (bg.GetHigh() > highest) {
+          highest = bg.GetHigh();
+        }
+      }
+      if (background.size() == 0) { std::cout << "Must have at least one background region!" << std::endl; return; }
+
+      ROOT::Fit::DataRange range(background[0].GetLow(), background[0].GetHigh());
+      for (int i=1; i<background.size(); ++i) {
+        range.AddRange(0, background[i].GetLow(), background[i].GetHigh());
+      }
+
+      delete linear;
+      linear = new TF1("linear", lfit, lowest, highest, 2);
+      //set initial guesses in linear here
+
+      double x1 = hPrompt->GetBinCenter(hPrompt->FindBin(lowest));
+      double x2 = hPrompt->GetBinCenter(hPrompt->FindBin(highest));
+      double y1 = hPrompt->GetBinContent(hPrompt->FindBin(lowest)) - hNonPrompt->GetBinContent(hNonPrompt->FindBin(lowest));
+      double y2 = hPrompt->GetBinContent(hPrompt->FindBin(highest)) - hNonPrompt->GetBinContent(hNonPrompt->FindBin(highest));
+
+      double w = x2 - x1;
+      
+      double m = (y2-y1)/(x2-x1);
+      double c = y2 - m*x2;
+
+      linear->SetParameter(0, c);
+      linear->SetParameter(1, m);
+
+      ROOT::Fit::DataOptions opt;
+      opt.fUseEmpty = true;
+      ROOT::Fit::BinData data(opt, range);
+      ROOT::Fit::FillData(data, hPrompt);
+      ROOT::Math::WrappedMultiTF1 fitFunc(*linear, linear->GetNdim());
+      ROOT::Fit::Fitter fitter;
+      fitter.SetFunction(fitFunc, false);
+      fitter.LikelihoodFit(data);
+
+      fitter.Result().Print(std::cout);
+      //linear->Draw("same");
+
+      Set(hPrompt, peak, linear);
+
+      TH2D* hBackSub = (TH2D*)hPrompt->Clone("hBackSub");
+      hBackSub->Add(hNonPrompt, -1.0);
+      hBackSub->Draw("hist");
+
+      TF1 *lindraw = new TF1("lindraw", "[0] + [1]*x", lowest, highest);
+      lindraw->SetParameter(0, linear->GetParameter(0));
+      lindraw->SetParameter(1, linear->GetParameter(1));
+      lindraw->Draw("same");
+
+      
     }
 
     void BPeak::Print() {

@@ -147,6 +147,16 @@ namespace GamR {
       OverlaySpectra(hists);
     }
 
+    void OverlaySpectra(TH2 *hist, std::vector<int> indices, Option_t *option) {
+      std::vector<TH1*> hists;
+      for (int i=0; i<indices.size(); ++i) {
+        int indx = indices[i];
+        std::string name = (std::string)hist->GetName()+"_px_"+std::to_string(indx);
+        hists.push_back((TH1*)hist->ProjectionX(name.c_str(), indx,indx));
+      }
+      OverlaySpectra(hists);
+    }
+
     void OverlaySpectra(int i2D, int iStart, int iStop, Option_t *option) {
       auto spectra = List2DSpectra(true);
       OverlaySpectra(spectra[i2D], iStart, iStop, option);

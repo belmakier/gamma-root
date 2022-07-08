@@ -62,6 +62,9 @@ namespace GamR {
       if (opts.Contains("e")) {
         parameters.iFixEnergy = 1;
       }
+      if (opts.Contains("n")) {
+        parameters.iNoFit = 1;
+      }
 
       if (!(parameters.iStep || parameters.iTails1 || parameters.iTails2)) {
         fPeakType = GamR::TK::Gaussian;
@@ -279,7 +282,7 @@ namespace GamR {
 
     void GamR::Spect::PeakFit::SetGuesses(TH1 *hist, std::map<std::string, double> Peaks, std::vector<std::string> FixPeaks /*= {}*/) {
       for (auto &peakKey : FixPeaks) {
-	FixPeakEnergy(peakKey);
+        FixPeakEnergy(peakKey);
       }
 	
       /* set initial guesses */
@@ -294,6 +297,8 @@ namespace GamR {
       for (auto &peak : Peaks) {
         auto peakKey = peak.first;
         auto cent = peak.second;
+
+        std::cout << peakKey << "   " << cent << std::endl;
         //int nBin = hist->FindBin(peaks[i]);
         int nBin = hist->FindBin(cent);
         //auto pp = fPeakParamInds[i];
@@ -301,6 +306,7 @@ namespace GamR {
         fTotal->SetParameter(pp.iAmplitude, hist->GetBinContent(nBin));
         //fTotal->SetParameter(pp.iCentroid, Peaks[i]);
         fTotal->SetParameter(pp.iCentroid, cent);
+        std::cout << pp.iCentroid << "   " << cent << std::endl;
         if (fPeakEnFix.find(peakKey) != fPeakEnFix.end()) {
           if ( fPeakEnFix[peakKey] == 1 ) {
             fTotal->FixParameter(pp.iCentroid, cent);
@@ -341,12 +347,12 @@ namespace GamR {
             fTotal->SetParLimits(stepAmplitudeParameters[i], 0, 20);
           */
           fTotal->FixParameter(pp.iSkewWidth, 2.5);
-          fTotal->FixParameter(pp.iSkewAmplitude, 0.);
+          fTotal->FixParameter(pp.iSkewAmplitude, 0.0);
           if (fPeakType == GamR::TK::TwoTailGaussian ||
               fPeakType == GamR::TK::TwoTailStepGaussian) {
 
             fTotal->FixParameter(pp.iSkewWidth2, 5);
-            fTotal->FixParameter(pp.iSkewAmplitude2, 0.);
+            fTotal->FixParameter(pp.iSkewAmplitude2, 0.0);
           }
         }
       }
@@ -363,18 +369,19 @@ namespace GamR {
 
     void GamR::Spect::PeakFit::Fit(TH1 *hist, Option_t *foption) {
       if (!parameters.iQuiet) {
-	fFitGuesses->Print();
+        fFitGuesses->Print();
       }
       std::string fopts(foption);
       fopts = fopts + "R";
-      fopts = fopts + "B";
-      if (parameters.iTails1 || parameters.iTails2 || parameters.iStep) {
-        fopts = fopts + "B";
-      }
 
       // first fit, only gaussian
-      hist->Fit(fTotal, fopts.c_str());
-
+      // this seems to be broken (sometimes?) with tails when tail amplitude fixed at zero
+      if (fPeakType == GamR::TK::Gaussian) {
+        if (!parameters.iNoFit) {
+          hist->Fit(fTotal, fopts.c_str());
+        }
+      }
+      
       // with step now
       if (fPeakType == GamR::TK::StepGaussian ||
           fPeakType == GamR::TK::OneTailStepGaussian ||
@@ -394,7 +401,9 @@ namespace GamR {
           }
           */
         }
-        hist->Fit(fTotal, fopts.c_str());
+        if (!parameters.iNoFit) {
+          hist->Fit(fTotal, fopts.c_str());
+        }
       }
       
       // 2 more fits for tails, iterative
@@ -410,7 +419,9 @@ namespace GamR {
           fTotal->SetParameter(pp.iSkewAmplitude, fFitGuesses->fSkewAmp.val);
           fTotal->SetParLimits(pp.iSkewAmplitude, fFitGuesses->fSkewAmp.low, fFitGuesses->fSkewAmp.high);
         }
-        hist->Fit(fTotal, fopts.c_str());
+        if (!parameters.iNoFit) {
+          hist->Fit(fTotal, fopts.c_str());
+        }
       }
       
       if (fPeakType == GamR::TK::TwoTailGaussian ||
@@ -423,7 +434,9 @@ namespace GamR {
           fTotal->SetParameter(pp.iSkewAmplitude2, fFitGuesses->fSkewAmp2.val);
           fTotal->SetParLimits(pp.iSkewAmplitude2, fFitGuesses->fSkewAmp2.low, fFitGuesses->fSkewAmp2.high);
         }
-        hist->Fit(fTotal, fopts.c_str());        
+        if (!parameters.iNoFit) {
+          hist->Fit(fTotal, fopts.c_str());
+        }
       }
       
     }

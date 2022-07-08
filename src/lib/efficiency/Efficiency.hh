@@ -59,6 +59,7 @@ namespace GamR {
       void Print(const char *fileName);
       void Clear();
       TGraphErrors *GetGraph();
+      TGraphErrors *GetGraphErrors();
     };
 
     class FitParams {
@@ -79,6 +80,7 @@ namespace GamR {
     public:
       std::vector<DataSet> fDataSets;
       double fAbsScale;
+      bool EqualWeights = false;
       TF1 *EffFunc;      
       EffFit();
       void AddData(DataSet dataset) { fDataSets.push_back(dataset); }
@@ -87,6 +89,8 @@ namespace GamR {
       void PrintParams(const char *fileName);
       void Fit(int quiet = 0);
       TMultiGraph* Draw(TCanvas *canvas, int detID=0, double xlow=-1, double xhigh=-1);
+      void WriteGraph(std::string outDir);
+      TMultiGraph* DrawRes(TCanvas *canvas, int detID=0, double xlow=-1, double xhigh=-1);
       void Draw(const char *outFile, double xlow=-1, double xhigh=-1);
     };
 

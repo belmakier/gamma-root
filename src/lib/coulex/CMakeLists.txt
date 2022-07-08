@@ -2,11 +2,11 @@ set_property(GLOBAL APPEND PROPERTY GAMR_LIBS gamr_coulex)
 
 include_directories(${PROJECT_SOURCE_DIR}/src/lib)
 
+set(CMAKE_Fortran_IMPLICIT_LINK_LIBRARIES gfortran quadmath m )
+
 message("CMAKE FORTRAN FLAGS: " ${CMAKE_Fortran_FLAGS})
 message("CMAKE FORTRAN IMPLICIT LINK DIRS: " ${CMAKE_Fortran_IMPLICIT_LINK_DIRECTORIES})
 message("CMAKE FORTRAN IMPLICIT LINK LIBS: " ${CMAKE_Fortran_IMPLICIT_LINK_LIBRARIES})
-
-set(CMAKE_Fortran_IMPLICIT_LINK_LIBRARIES gfortran quadmath m )
 
 configure_file(Eloss.cc.in Eloss.cc)
 configure_file(Eloss.hh Eloss.hh COPYONLY)

@@ -513,8 +513,8 @@ c-----------------------------------------------------------------------
       Character*100 scoefpath
       dimension pcoef(8)
       scoefpath = '${CMAKE_INSTALL_PREFIX}/'//
-     &     '${EZ_INSTALL_DATADIR}/'//
-     &     '${EZ_THIS_UNIT_NAME}/'//
+     &     '${GAMR_INSTALL_DATADIR}/'//
+     &     'coulex/'//
      &     'SCOEF.dat'
       open(20,file=scoefpath,status='old',err=1000)
       do z=1,92

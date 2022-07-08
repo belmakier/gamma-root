@@ -101,6 +101,14 @@ namespace GamR{
       GamR::Nucleus::Transition transition(0, peak.GetLow(), peak.GetHigh(), background.GetLow(), background.GetHigh());
       return CountsBS(hist, transition);
     }
+
+    std::pair<double, double> CountsBS(TH1 *hist, GamR::TK::Gate peak, std::vector<GamR::TK::Gate> backgrounds) {
+      GamR::Nucleus::Transition transition(0, peak.GetLow(), peak.GetHigh(), backgrounds[0].GetLow(), backgrounds[0].GetHigh());
+      for (int i=1; i<backgrounds.size(); ++i) {
+        transition.AddBackground(backgrounds[i].GetLow(), backgrounds[i].GetHigh());
+      }
+      return CountsBS(hist, transition);
+    }
     
     std::pair<double, double> CountsBS(TH1 *hist, double peakLow, double peakHigh, double backLow, double backHigh) {
       GamR::Nucleus::Transition transition(0, peakLow, peakHigh, backLow, backHigh);

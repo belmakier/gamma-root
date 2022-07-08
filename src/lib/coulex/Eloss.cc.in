@@ -68,7 +68,7 @@ namespace GamR {
 		// Combined SCOEF03.dat and SNUC03.dat from SRIM2013
 		void loadSCOEF()
 		{
-			std::string SCOEFdat = "${CMAKE_INSTALL_PREFIX}/${EZ_INSTALL_DATADIR}/${EZ_THIS_UNIT_NAME}/SCOEF.dat";
+			std::string SCOEFdat = "${CMAKE_INSTALL_PREFIX}/${GAMR_INSTALL_DATADIR}/coulex/SCOEF.dat";
 			std::ifstream SCOEF(SCOEFdat.c_str());
 			if(SCOEF.fail()) {
 				std::cerr << "!!ERROR!! SCOEF.dat not found! Please ensure SCOEF.dat is located at \"" + SCOEFdat + "\". Routine will return dE/dx = 0." << std::endl;
