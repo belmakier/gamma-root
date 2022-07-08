@@ -1,9 +1,7 @@
 var dir_dde98f77fcca3096b398273c24659d1f =
 [
     [ "BackSub.cc", "dc/d28/_back_sub_8cc.html", null ],
-    [ "BackSub.hh", "d1/df2/_back_sub_8hh.html", [
-      [ "GamR::Spect::BackSub2D", "df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html", "df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d" ]
-    ] ],
+    [ "BackSub.hh", "d1/df2/_back_sub_8hh.html", "d1/df2/_back_sub_8hh" ],
     [ "Calibrate.cc", "d6/d44/_calibrate_8cc.html", "d6/d44/_calibrate_8cc" ],
     [ "Calibrate.hh", "db/d24/_calibrate_8hh.html", "db/d24/_calibrate_8hh" ],
     [ "Cut.cc", "d8/d1f/_cut_8cc.html", "d8/d1f/_cut_8cc" ],

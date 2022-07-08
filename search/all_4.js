@@ -34,6 +34,7 @@ var searchData=
   ['drawchigraph_31',['DrawChiGraph',['../d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#ae0d8c505c6272e84a35125c118d04237',1,'GamR::AngDist::AngCorrFit']]],
   ['drawhigh_32',['drawHigh',['../dc/def/class_gam_r_1_1_nucleus_1_1_level_scheme_1_1_scheme.html#a871ff447bddbc840ac0564b2b975b2e1',1,'GamR::Nucleus::LevelScheme::Scheme']]],
   ['drawlow_33',['drawLow',['../dc/def/class_gam_r_1_1_nucleus_1_1_level_scheme_1_1_scheme.html#a8e82fc974f468517002a1cf64b2947b4',1,'GamR::Nucleus::LevelScheme::Scheme']]],
-  ['drawsetup_34',['DrawSetup',['../dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#accc646bcdeb4eb0a57d24c474128b29f',1,'GamR::Coulex::ParticleDetector::DrawSetup()'],['../d6/d76/namespace_gam_r_1_1_coulex.html#a80c70c5c99095da3a8a10a05513f1d23',1,'GamR::Coulex::DrawSetup()']]],
-  ['dstddev_35',['dStdDev',['../d1/de2/struct_gam_r_1_1_tree_1_1_t_det_defn_1_1_cal_functor.html#af9b1f8bb82c78c5b8222c03f4db8b844',1,'GamR::Tree::TDetDefn::CalFunctor']]]
+  ['drawres_34',['DrawRes',['../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#aeac5d2e46d99f0cd15cabb2d7f55c5d0',1,'GamR::Efficiency::EffFit']]],
+  ['drawsetup_35',['DrawSetup',['../dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#accc646bcdeb4eb0a57d24c474128b29f',1,'GamR::Coulex::ParticleDetector::DrawSetup()'],['../d6/d76/namespace_gam_r_1_1_coulex.html#a80c70c5c99095da3a8a10a05513f1d23',1,'GamR::Coulex::DrawSetup()']]],
+  ['dstddev_36',['dStdDev',['../d1/de2/struct_gam_r_1_1_tree_1_1_t_det_defn_1_1_cal_functor.html#af9b1f8bb82c78c5b8222c03f4db8b844',1,'GamR::Tree::TDetDefn::CalFunctor']]]
 ];

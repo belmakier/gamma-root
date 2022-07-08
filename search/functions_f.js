@@ -10,10 +10,11 @@ var searchData=
   ['readfile_7',['ReadFile',['../d8/d5e/class_gam_r_1_1_nucleus_1_1_transition_map.html#a9fa38be01b709c90774d8bd712ce8eaa',1,'GamR::Nucleus::TransitionMap']]],
   ['readfromfile_8',['ReadFromFile',['../dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#a79a4ea8f06954b1cf8b8431010fedbf3',1,'GamR::Coulex::CoulexCalculation']]],
   ['readline_9',['ReadLine',['../d6/dee/class_gam_r_1_1_utils_1_1_r_e_p_l.html#a249756e42cc195e2107485582e62f525',1,'GamR::Utils::REPL']]],
-  ['rebin_10',['Rebin',['../dc/d89/namespace_gam_r_1_1_spect.html#ab6884a6323a0b4f61d4e3e5a47ce60ae',1,'GamR::Spect::Rebin(TVirtualPad *canvas, int rebin)'],['../dc/d89/namespace_gam_r_1_1_spect.html#a36cc6f0992bd2bb29fb31f0f600a740d',1,'GamR::Spect::Rebin(TH1 *hist, int rebin)']]],
-  ['repl_11',['REPL',['../d6/dee/class_gam_r_1_1_utils_1_1_r_e_p_l.html#a2d7c378818413eddfb40ee2283661bce',1,'GamR::Utils::REPL']]],
-  ['reset_12',['Reset',['../dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html#a4b1d3a76f9f736477857ca907644bb3e',1,'GamR::Tree::TDetector::Reset()'],['../da/d95/class_gam_r_1_1_tree_1_1_t_event.html#acc785c7176fa8db1b39703bebb7e4ae0',1,'GamR::Tree::TEvent::Reset()']]],
-  ['resetbranches_13',['ResetBranches',['../d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#a51776ec1e5d3c247e23d0b8dfca2574b',1,'GamR::Tree::TExpDefn']]],
-  ['reverse_14',['Reverse',['../dc/d89/namespace_gam_r_1_1_spect.html#a9bb12037f20a35882a118917a342b902',1,'GamR::Spect']]],
-  ['rotateth2_15',['RotateTH2',['../dc/d89/namespace_gam_r_1_1_spect.html#ac24889ff341907d82919d40ef521958a',1,'GamR::Spect']]]
+  ['readscheme_10',['ReadScheme',['../d9/d72/class_gam_r_1_1_bateman_1_1_scheme.html#a5211e5a32f089ea8ccec29ad033c4ca9',1,'GamR::Bateman::Scheme']]],
+  ['rebin_11',['Rebin',['../dc/d89/namespace_gam_r_1_1_spect.html#ab6884a6323a0b4f61d4e3e5a47ce60ae',1,'GamR::Spect::Rebin(TVirtualPad *canvas, int rebin)'],['../dc/d89/namespace_gam_r_1_1_spect.html#a36cc6f0992bd2bb29fb31f0f600a740d',1,'GamR::Spect::Rebin(TH1 *hist, int rebin)']]],
+  ['repl_12',['REPL',['../d6/dee/class_gam_r_1_1_utils_1_1_r_e_p_l.html#a2d7c378818413eddfb40ee2283661bce',1,'GamR::Utils::REPL']]],
+  ['reset_13',['Reset',['../da/d95/class_gam_r_1_1_tree_1_1_t_event.html#acc785c7176fa8db1b39703bebb7e4ae0',1,'GamR::Tree::TEvent::Reset()'],['../dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html#a4b1d3a76f9f736477857ca907644bb3e',1,'GamR::Tree::TDetector::Reset()']]],
+  ['resetbranches_14',['ResetBranches',['../d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#a51776ec1e5d3c247e23d0b8dfca2574b',1,'GamR::Tree::TExpDefn']]],
+  ['reverse_15',['Reverse',['../dc/d89/namespace_gam_r_1_1_spect.html#a9bb12037f20a35882a118917a342b902',1,'GamR::Spect']]],
+  ['rotateth2_16',['RotateTH2',['../dc/d89/namespace_gam_r_1_1_spect.html#ac24889ff341907d82919d40ef521958a',1,'GamR::Spect']]]
 ];

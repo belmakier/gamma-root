@@ -1,6 +1,7 @@
 var namespace_gam_r =
 [
     [ "AngDist", "d1/dab/namespace_gam_r_1_1_ang_dist.html", "d1/dab/namespace_gam_r_1_1_ang_dist" ],
+    [ "Bateman", "d1/d37/namespace_gam_r_1_1_bateman.html", "d1/d37/namespace_gam_r_1_1_bateman" ],
     [ "Coulex", "d6/d76/namespace_gam_r_1_1_coulex.html", "d6/d76/namespace_gam_r_1_1_coulex" ],
     [ "Efficiency", "d7/dd8/namespace_gam_r_1_1_efficiency.html", "d7/dd8/namespace_gam_r_1_1_efficiency" ],
     [ "Nucleus", "da/d26/namespace_gam_r_1_1_nucleus.html", "da/d26/namespace_gam_r_1_1_nucleus" ],

@@ -6,6 +6,7 @@ var searchData=
   ['writeban_3',['WriteBan',['../d1/d06/group___o_r_n_l.html#gac1ea23ee2af0dfefd274f99fb7a6034d',1,'GamR::ORNL::BananaGate']]],
   ['writebananas_4',['writeBananas',['../d1/d06/group___o_r_n_l.html#ga4ee0d728ac942f2f09de36139e3bc4ee',1,'GamR::ORNL']]],
   ['writefile_5',['WriteFile',['../d8/d5e/class_gam_r_1_1_nucleus_1_1_transition_map.html#a056bcc0fd1d13c9d69b821b540474ebf',1,'GamR::Nucleus::TransitionMap']]],
-  ['writeobject_6',['WriteObject',['../d3/d27/class_gam_r_1_1_sort_1_1_sorter.html#a51c1581fef56e2b16c8e9a3fc3a4ad4e',1,'GamR::Sort::Sorter']]],
-  ['wrresult_7',['wrresult',['../d0/db7/namespace_gam_r_1_1_utils.html#a80bc6c0c1ecd5d28cd4f9e3ae38f92ed',1,'GamR::Utils::wrresult(char *out, float value, float err, int minlen)'],['../d0/db7/namespace_gam_r_1_1_utils.html#ac40ffec6ca9461e9f22e68cad4e88a47',1,'GamR::Utils::wrresult(double value, double error)']]]
+  ['writegraph_6',['WriteGraph',['../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a755fc1719a3f4a1b34ed117c802f8933',1,'GamR::Efficiency::EffFit']]],
+  ['writeobject_7',['WriteObject',['../d3/d27/class_gam_r_1_1_sort_1_1_sorter.html#a51c1581fef56e2b16c8e9a3fc3a4ad4e',1,'GamR::Sort::Sorter']]],
+  ['wrresult_8',['wrresult',['../d0/db7/namespace_gam_r_1_1_utils.html#a80bc6c0c1ecd5d28cd4f9e3ae38f92ed',1,'GamR::Utils::wrresult(char *out, float value, float err, int minlen)'],['../d0/db7/namespace_gam_r_1_1_utils.html#ac40ffec6ca9461e9f22e68cad4e88a47',1,'GamR::Utils::wrresult(double value, double error)']]]
 ];

@@ -1,5 +1,5 @@
 <map id="ss" name="ss">
-<area shape="rect" id="node1" title=" " alt="" coords="625,678,664,705"/>
+<area shape="rect" id="node1" title=" " alt="" coords="625,703,664,730"/>
 <area shape="rect" id="node2" href="$d3/d6c/class_gam_r_1_1_sort_1_1_type_1_1_gated_time_difference.html#a044c4c6493ecba6989b7e92b36da6ddc" title=" " alt="" coords="365,5,573,47"/>
 <area shape="rect" id="node3" href="$d1/da3/class_gam_r_1_1_sort_1_1_type_1_1_matrix.html#a00e6aa66c1c3b6a8a75dba762085c610" title=" " alt="" coords="387,71,551,112"/>
 <area shape="rect" id="node4" href="$db/d1b/class_gam_r_1_1_sort_1_1_type_1_1_time_difference.html#a7cf59bfec4ee14f850901a3d1fbe7103" title=" " alt="" coords="361,136,577,177"/>
@@ -19,10 +19,11 @@
 <area shape="rect" id="node18" href="$dd/dff/struct_gam_r_1_1_tree_1_1_t_exp_defn_1_1_fill_det_defns.html#aea024937d7259d74710f12d60575cac4" title=" " alt="" coords="389,936,549,977"/>
 <area shape="rect" id="node19" href="$d1/d06/group___o_r_n_l.html#ga8dadacfbdfaeef91b856b23b906ac4e2" title=" " alt="" coords="109,1027,308,1054"/>
 <area shape="rect" id="node21" href="$d1/d06/group___o_r_n_l.html#gadf516cfb4c9ea542a49beb4a7c8b3abd" title=" " alt="" coords="381,1053,558,1079"/>
-<area shape="rect" id="node22" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#ac188013ec5e52bf16f2edc2305eac784" title=" " alt="" coords="393,1104,545,1145"/>
-<area shape="rect" id="node23" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a329c7691b25de23668b020a1ca8c37ad" title=" " alt="" coords="393,1169,545,1211"/>
-<area shape="rect" id="node24" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#ad064c76b8660012e93eb3aea55e4b1b8" title=" " alt="" coords="393,1235,545,1276"/>
-<area shape="rect" id="node25" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#ab3fe3b5f44d3eb6695d75c9cdc2211f3" title=" " alt="" coords="393,1300,545,1341"/>
-<area shape="rect" id="node26" href="$dc/d89/namespace_gam_r_1_1_spect.html#a0dd01005b3fe204d006858acf8d290f7" title=" " alt="" coords="397,1366,542,1393"/>
+<area shape="rect" id="node22" href="$d9/d72/class_gam_r_1_1_bateman_1_1_scheme.html#a5211e5a32f089ea8ccec29ad033c4ca9" title=" " alt="" coords="384,1104,555,1145"/>
+<area shape="rect" id="node23" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#ac188013ec5e52bf16f2edc2305eac784" title=" " alt="" coords="393,1169,545,1211"/>
+<area shape="rect" id="node24" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a329c7691b25de23668b020a1ca8c37ad" title=" " alt="" coords="393,1235,545,1276"/>
+<area shape="rect" id="node25" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#ad064c76b8660012e93eb3aea55e4b1b8" title=" " alt="" coords="393,1300,545,1341"/>
+<area shape="rect" id="node26" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#ab3fe3b5f44d3eb6695d75c9cdc2211f3" title=" " alt="" coords="393,1365,545,1407"/>
+<area shape="rect" id="node27" href="$dc/d89/namespace_gam_r_1_1_spect.html#a0dd01005b3fe204d006858acf8d290f7" title=" " alt="" coords="397,1431,542,1458"/>
 <area shape="rect" id="node20" href="$dd/de2/ban2root_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,1027,56,1054"/>
 </map>

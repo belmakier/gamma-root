@@ -2,6 +2,7 @@ var dir_c85d3e3c5052e9ad9ce18c6863244a25 =
 [
     [ "abbrevs", "dir_5f096cfe902f9bc2abe3952f5e9ff649.html", "dir_5f096cfe902f9bc2abe3952f5e9ff649" ],
     [ "angdist", "dir_fa2908bbf7c8777569ad45e685a16ed6.html", "dir_fa2908bbf7c8777569ad45e685a16ed6" ],
+    [ "bateman", "dir_08167a5262ffaf0c89ef11795911943f.html", "dir_08167a5262ffaf0c89ef11795911943f" ],
     [ "coulex", "dir_6a79cfc049500787c362cfe00e651ec0.html", "dir_6a79cfc049500787c362cfe00e651ec0" ],
     [ "efficiency", "dir_b2fab0ad9db13d6f662bc066abb6118d.html", "dir_b2fab0ad9db13d6f662bc066abb6118d" ],
     [ "nucleus", "dir_80e0224605357bcf8f0b9969ec4933a0.html", "dir_80e0224605357bcf8f0b9969ec4933a0" ],

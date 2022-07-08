@@ -34,6 +34,7 @@ var _abbreviations_8cc =
     [ "os", "d0/d17/_abbreviations_8cc.html#a6bc8d8d9e1d97ddd00d096975958baae", null ],
     [ "os", "d0/d17/_abbreviations_8cc.html#a7407396e99dc55898c2b52688f513613", null ],
     [ "os", "d0/d17/_abbreviations_8cc.html#ae79b981b2cbf819e5450642235125d97", null ],
+    [ "os", "d0/d17/_abbreviations_8cc.html#a509aec68f86cd4042dab6a8bd4ee9bf6", null ],
     [ "pf", "d0/d17/_abbreviations_8cc.html#a77d85f6a216cc43a75f58ff8ae7a07c8", null ],
     [ "pfconf", "d0/d17/_abbreviations_8cc.html#aa5387014ba6df16692c9131bdff35c4e", null ],
     [ "pfprint", "d0/d17/_abbreviations_8cc.html#a46bebe70d43563b68be14db10a23250a", null ],

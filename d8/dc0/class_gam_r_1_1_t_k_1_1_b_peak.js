@@ -19,6 +19,7 @@ var class_gam_r_1_1_t_k_1_1_b_peak =
     [ "Set", "d0/d74/group___t_k.html#ga0f3e55344a12f07211228e61490b89a1", null ],
     [ "Set", "d0/d74/group___t_k.html#gacea94387106c6b07d16c53a1614a86b9", null ],
     [ "Set", "d0/d74/group___t_k.html#gae4004cebef30dfa7f80ef2e11d589ba2", null ],
+    [ "Set", "d0/d74/group___t_k.html#ga4f526f6f266c468a27e072932764f83a", null ],
     [ "SetCont", "d0/d74/group___t_k.html#ga556295172c5041f83e4d5fc8b1345850", null ],
     [ "SetPoint", "d0/d74/group___t_k.html#gad601087ac09d19e8549128df1f07c4c1", null ],
     [ "SetStep", "d0/d74/group___t_k.html#ga705f798b5ced39a94fe9582dd39c55ed", null ]

@@ -11,6 +11,11 @@ var annotated_dup =
         [ "SpinPrec", "d2/d3e/class_gam_r_1_1_ang_dist_1_1_spin_prec.html", "d2/d3e/class_gam_r_1_1_ang_dist_1_1_spin_prec" ],
         [ "StatTensor", "da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html", "da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor" ]
       ] ],
+      [ "Bateman", "d1/d37/namespace_gam_r_1_1_bateman.html", [
+        [ "Nucleus", "d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html", "d2/d84/class_gam_r_1_1_bateman_1_1_nucleus" ],
+        [ "Scheme", "d9/d72/class_gam_r_1_1_bateman_1_1_scheme.html", "d9/d72/class_gam_r_1_1_bateman_1_1_scheme" ],
+        [ "Solver", "d1/d32/class_gam_r_1_1_bateman_1_1_solver.html", "d1/d32/class_gam_r_1_1_bateman_1_1_solver" ]
+      ] ],
       [ "Coulex", "d6/d76/namespace_gam_r_1_1_coulex.html", [
         [ "CoulexCalculation", "dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html", "dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation" ],
         [ "Level", "d1/d65/class_gam_r_1_1_coulex_1_1_level.html", "d1/d65/class_gam_r_1_1_coulex_1_1_level" ],

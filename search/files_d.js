@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['reader_2ecc_0',['Reader.cc',['../df/d9f/_reader_8cc.html',1,'']]],
-  ['reader_2ehh_1',['Reader.hh',['../d2/dd1/_reader_8hh.html',1,'']]],
-  ['repl_2ecc_2',['REPL.cc',['../d2/df3/_r_e_p_l_8cc.html',1,'']]],
-  ['repl_2ehh_3',['REPL.hh',['../d1/d9d/_r_e_p_l_8hh.html',1,'']]],
-  ['root2ban_2ecc_4',['root2ban.cc',['../d3/d14/root2ban_8cc.html',1,'']]],
-  ['root2gamr_2emd_5',['root2gamr.md',['../d2/dcb/root2gamr_8md.html',1,'']]],
-  ['rtti_2ehh_6',['RTTI.hh',['../d6/def/_r_t_t_i_8hh.html',1,'']]]
+  ['peak_2ecc_0',['Peak.cc',['../dd/d1a/_peak_8cc.html',1,'']]],
+  ['peak_2ehh_1',['Peak.hh',['../d9/db5/_peak_8hh.html',1,'']]],
+  ['photon_2ecc_2',['Photon.cc',['../d9/d68/_photon_8cc.html',1,'']]],
+  ['photon_2ehh_3',['Photon.hh',['../d9/d3f/_photon_8hh.html',1,'']]],
+  ['populationparameter_2ecc_4',['PopulationParameter.cc',['../d9/d6c/_population_parameter_8cc.html',1,'']]],
+  ['populationparameter_2ehh_5',['PopulationParameter.hh',['../d0/d3d/_population_parameter_8hh.html',1,'']]]
 ];

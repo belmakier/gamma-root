@@ -1,5 +1,5 @@
 <map id="GamR::TK::Gate::GetHigh" name="GamR::TK::Gate::GetHigh">
-<area shape="rect" id="node1" title=" " alt="" coords="669,279,840,306"/>
+<area shape="rect" id="node1" title=" " alt="" coords="669,305,840,331"/>
 <area shape="rect" id="node2" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#ab41f6103abf9bef99411b19c8145d66a" title=" " alt="" coords="441,5,615,47"/>
 <area shape="rect" id="node3" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#ad19c3edf9ea02ea2769157f735a799c1" title=" " alt="" coords="441,71,615,112"/>
 <area shape="rect" id="node4" href="$dc/d89/namespace_gam_r_1_1_spect.html#a02f79fc5532999bf21539d9a7cd9b415" title=" " alt="" coords="446,137,610,163"/>
@@ -7,11 +7,12 @@
 <area shape="rect" id="node6" href="$dc/d89/namespace_gam_r_1_1_spect.html#a65b45f6deafa9285890fe026d37bff2e" title=" " alt="" coords="445,254,611,281"/>
 <area shape="rect" id="node7" href="$d0/d74/group___t_k.html#ga5bf69c953a7d38ac9c165570859d4cb6" title=" " alt="" coords="462,305,594,331"/>
 <area shape="rect" id="node9" href="$d0/d74/group___t_k.html#gaeb0a298da3a5064e12a51874e877c098" title=" " alt="" coords="453,355,603,382"/>
-<area shape="rect" id="node10" href="$d0/d74/group___t_k.html#ga556295172c5041f83e4d5fc8b1345850" title=" " alt="" coords="207,381,387,407"/>
-<area shape="rect" id="node12" href="$d0/d74/group___t_k.html#gad601087ac09d19e8549128df1f07c4c1" title=" " alt="" coords="437,457,619,483"/>
-<area shape="rect" id="node14" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a9a5803edfc6d768c32ed659cabae8847" title=" " alt="" coords="441,508,615,549"/>
+<area shape="rect" id="node10" href="$d0/d74/group___t_k.html#ga4f526f6f266c468a27e072932764f83a" title=" " alt="" coords="451,406,605,433"/>
+<area shape="rect" id="node11" href="$d0/d74/group___t_k.html#ga556295172c5041f83e4d5fc8b1345850" title=" " alt="" coords="207,431,387,458"/>
+<area shape="rect" id="node13" href="$d0/d74/group___t_k.html#gad601087ac09d19e8549128df1f07c4c1" title=" " alt="" coords="437,507,619,534"/>
+<area shape="rect" id="node15" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a9a5803edfc6d768c32ed659cabae8847" title=" " alt="" coords="441,559,615,600"/>
 <area shape="rect" id="node8" href="$d0/d74/group___t_k.html#ga25db8df1c59ca26a93a371d97f8b3c08" title=" " alt="" coords="213,305,380,331"/>
-<area shape="rect" id="node11" href="$d0/d74/group___t_k.html#gacea94387106c6b07d16c53a1614a86b9" title=" " alt="" coords="5,431,159,458"/>
-<area shape="rect" id="node13" href="$d0/d74/group___t_k.html#ga705f798b5ced39a94fe9582dd39c55ed" title=" " alt="" coords="207,482,387,509"/>
-<area shape="rect" id="node15" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a664a3f650a48e86467a5ddcb2e8cadb8" title=" " alt="" coords="209,533,384,575"/>
+<area shape="rect" id="node12" href="$d0/d74/group___t_k.html#gacea94387106c6b07d16c53a1614a86b9" title=" " alt="" coords="5,482,159,509"/>
+<area shape="rect" id="node14" href="$d0/d74/group___t_k.html#ga705f798b5ced39a94fe9582dd39c55ed" title=" " alt="" coords="207,533,387,559"/>
+<area shape="rect" id="node16" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a664a3f650a48e86467a5ddcb2e8cadb8" title=" " alt="" coords="209,584,384,625"/>
 </map>

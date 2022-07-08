@@ -12,5 +12,6 @@ var searchData=
   ['spin3s_9',['spin3s',['../d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a05d4221bf504256e172ac24d84f80627',1,'GamR::AngDist::AngCorrFit']]],
   ['spn1d_10',['spn1d',['../d5/d23/bin2root_8cc.html#ac9d8dbfab8c63f477ce21f9d26985c5b',1,'bin2root.cc']]],
   ['spn2d_11',['spn2d',['../d5/d23/bin2root_8cc.html#a3f9b9303a1cfbbfd21a99d88e3af0cdc',1,'bin2root.cc']]],
-  ['subtracted_12',['subtracted',['../df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a4d5c69baf8e2a161ad0f781e1968c229',1,'GamR::Spect::BackSub2D']]]
+  ['stepsize_12',['stepsize',['../d1/d32/class_gam_r_1_1_bateman_1_1_solver.html#a2ccd97268ff344b2b7be3e16eaf98192',1,'GamR::Bateman::Solver']]],
+  ['subtracted_13',['subtracted',['../df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a4d5c69baf8e2a161ad0f781e1968c229',1,'GamR::Spect::BackSub2D']]]
 ];

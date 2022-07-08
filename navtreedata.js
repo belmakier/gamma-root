@@ -112,18 +112,18 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d0/d68/_abbreviations_8hh.html#ae79b981b2cbf819e5450642235125d97",
-"d0/d74/group___t_k.html#gga2f09f75494227f20e8894d80261fc089a6b7d6cc77177ec2fab82b6c35b9eeece",
-"d1/da3/class_gam_r_1_1_sort_1_1_type_1_1_matrix.html#ab250b8f221f82570e6f634ff924a180d",
-"d2/df3/_r_e_p_l_8cc.html",
-"d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#af961ff5e82148da4e151386b7e959a94",
-"d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#ae2d81604b034ed4716ac584c1ba00973",
-"d7/d7a/_gain_8hh.html",
-"da/d95/class_gam_r_1_1_tree_1_1_t_event.html#a1a5c28d78c004a0ac4aff5a075a5c923",
-"dc/d89/namespace_gam_r_1_1_spect.html#a36cc6f0992bd2bb29fb31f0f600a740d",
-"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html",
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a3474b5ff44d9dd333da9161e9d2edc49",
-"dir_aba6f5845ff58f892acd7e475dc2a3b1.html"
+"d0/d68/_abbreviations_8hh.html#ad4d31b91d8d504d5516a3dee9524d450",
+"d0/d74/group___t_k.html#gafd4aa571225c67e107f550b691faee72",
+"d1/da3/class_gam_r_1_1_sort_1_1_type_1_1_matrix.html#a80a76df8dd9e760076391cffc9ef390ca212896d589b77d7e52d6de2ceb51616d",
+"d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#ae0d8c505c6272e84a35125c118d04237",
+"d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#aa8c87af76f1effd71b25dbf649c8b521",
+"d5/d66/_t_d_p_a_d_8hh.html#ab1285067386ad9d3c80f6a7d9f6531fb",
+"d7/d30/class_gam_r_1_1_nucleus_1_1_state.html",
+"d9/db7/_display_8hh.html#ad6336c2a214e9d575dda1e7fb52d1cd1",
+"dc/d02/_gated_time_difference_8hh.html",
+"dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html#a4b1d3a76f9f736477857ca907644bb3e",
+"df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a1acd94c1670f649c8308288f9e1b4d82",
+"df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a8371c35b7871fc83888dbb2c38a06f3d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

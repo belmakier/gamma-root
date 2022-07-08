@@ -11,6 +11,7 @@ var class_gam_r_1_1_efficiency_1_1_data_set =
     [ "GetEfficiency", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a70378712fedeb882d55b4eb034b54d4c", null ],
     [ "GetEnergy", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a416b0c2dbc75dee3d3724cd81d2013c2", null ],
     [ "GetGraph", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a72a9a7ce5ce5f88fed7da8950da72ac0", null ],
+    [ "GetGraphErrors", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#afea3ac162e8be0236bf802dbcee5a6cc", null ],
     [ "GetIndex", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#affef3c7fe039855532e51f5d1d6eb269", null ],
     [ "GetIntensity", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a0658f76ed7425f87e2630ecaca428d61", null ],
     [ "GetKey", "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a413cab285363d020acb66533f85a958c", null ],

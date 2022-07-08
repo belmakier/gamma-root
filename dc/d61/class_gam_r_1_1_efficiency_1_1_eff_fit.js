@@ -5,11 +5,14 @@ var class_gam_r_1_1_efficiency_1_1_eff_fit =
     [ "AddData", "dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ad0c3d6f71a5126c6181d3258424a2068", null ],
     [ "Draw", "dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a93c2443872b4c644fe95120c27da51ea", null ],
     [ "Draw", "dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a976665472fd0985ab779dff93252bad8", null ],
+    [ "DrawRes", "dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#aeac5d2e46d99f0cd15cabb2d7f55c5d0", null ],
     [ "EraseData", "dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ad8b781ef00b42ff880d5443b5bd81fe0", null ],
     [ "Fit", "dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a5737e643d04001de514eb77ba7e010eb", null ],
     [ "PrintParams", "dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a35fc388823fe00763f92f622fe4af1d3", null ],
     [ "SetParams", "dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a37bd5eeb087e51fa9e76286b65ec7139", null ],
+    [ "WriteGraph", "dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a755fc1719a3f4a1b34ed117c802f8933", null ],
     [ "EffFunc", "dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa", null ],
+    [ "EqualWeights", "dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a60d3eb6cb2dc11fb64c063b1da1325a9", null ],
     [ "fAbsScale", "dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a000cd866c3274a21ffa0855e7ec260fd", null ],
     [ "fDataSets", "dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad", null ]
 ];

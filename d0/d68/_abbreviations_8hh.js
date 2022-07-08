@@ -34,6 +34,7 @@ var _abbreviations_8hh =
     [ "os", "d0/d68/_abbreviations_8hh.html#aef68b452a15c03bf3caa62af105f1b19", null ],
     [ "os", "d0/d68/_abbreviations_8hh.html#a1dbb7b7dc1373515f14844ba5bcde643", null ],
     [ "os", "d0/d68/_abbreviations_8hh.html#ae79b981b2cbf819e5450642235125d97", null ],
+    [ "os", "d0/d68/_abbreviations_8hh.html#a509aec68f86cd4042dab6a8bd4ee9bf6", null ],
     [ "pf", "d0/d68/_abbreviations_8hh.html#ae9d087b20ee503225a827c8d269b090e", null ],
     [ "pfconf", "d0/d68/_abbreviations_8hh.html#aa5387014ba6df16692c9131bdff35c4e", null ],
     [ "pfprint", "d0/d68/_abbreviations_8hh.html#a46bebe70d43563b68be14db10a23250a", null ],

@@ -7,6 +7,7 @@ var _integral_8cc =
     [ "CountsBS", "d5/da1/_integral_8cc.html#abc275778bbfd8efb4624ba0d6b5f87f2", null ],
     [ "CountsBS", "d5/da1/_integral_8cc.html#a4be92f8a1a93dce88a3536f732eb6080", null ],
     [ "CountsBS", "d5/da1/_integral_8cc.html#a02f79fc5532999bf21539d9a7cd9b415", null ],
+    [ "CountsBS", "d5/da1/_integral_8cc.html#ae4617cc4b723ae8ff59b0521c25ee484", null ],
     [ "Integral", "d5/da1/_integral_8cc.html#ab9f4f42a73451552ba75545e3d28e352", null ],
     [ "Integral", "d5/da1/_integral_8cc.html#aee9a643ab7a4a499bf1bb0c5e623406c", null ],
     [ "Integral", "d5/da1/_integral_8cc.html#afbcb55a2fec43bce818cc083d4ce1a67", null ],
