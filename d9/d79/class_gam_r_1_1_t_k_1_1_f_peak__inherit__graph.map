@@ -1,10 +1,10 @@
 <map id="GamR::TK::FPeak" name="GamR::TK::FPeak">
-<area shape="rect" id="node1" title=" " alt="" coords="626,321,755,560"/>
-<area shape="rect" id="node3" href="$dd/dfa/class_gam_r_1_1_t_k_1_1_gaussian_peak.html" title=" " alt="" coords="5,608,179,979"/>
-<area shape="rect" id="node4" href="$db/d4d/class_gam_r_1_1_t_k_1_1_one_tail_gaussian_peak.html" title=" " alt="" coords="203,608,421,979"/>
-<area shape="rect" id="node5" href="$d8/db1/class_gam_r_1_1_t_k_1_1_one_tail_step_gaussian_peak.html" title=" " alt="" coords="445,608,691,979"/>
-<area shape="rect" id="node6" href="$dd/d92/class_gam_r_1_1_t_k_1_1_step_gaussian_peak.html" title=" " alt="" coords="715,608,915,979"/>
-<area shape="rect" id="node7" href="$dd/d9e/class_gam_r_1_1_t_k_1_1_two_tail_gaussian_peak.html" title=" " alt="" coords="939,608,1157,979"/>
-<area shape="rect" id="node8" href="$d6/d1e/class_gam_r_1_1_t_k_1_1_two_tail_step_gaussian_peak.html" title=" " alt="" coords="1182,608,1429,979"/>
-<area shape="rect" id="node2" href="$d3/d75/class_gam_r_1_1_t_k_1_1_peak.html" title=" " alt="" coords="629,5,752,273"/>
+<area shape="rect" id="node1" title=" " alt="" coords="638,299,769,529"/>
+<area shape="rect" id="node3" href="$dd/dfa/class_gam_r_1_1_t_k_1_1_gaussian_peak.html" title=" " alt="" coords="5,577,183,925"/>
+<area shape="rect" id="node4" href="$db/d4d/class_gam_r_1_1_t_k_1_1_one_tail_gaussian_peak.html" title=" " alt="" coords="207,577,429,925"/>
+<area shape="rect" id="node5" href="$d8/db1/class_gam_r_1_1_t_k_1_1_one_tail_step_gaussian_peak.html" title=" " alt="" coords="453,577,703,925"/>
+<area shape="rect" id="node6" href="$dd/d92/class_gam_r_1_1_t_k_1_1_step_gaussian_peak.html" title=" " alt="" coords="727,577,931,925"/>
+<area shape="rect" id="node7" href="$dd/d9e/class_gam_r_1_1_t_k_1_1_two_tail_gaussian_peak.html" title=" " alt="" coords="955,577,1177,925"/>
+<area shape="rect" id="node8" href="$d6/d1e/class_gam_r_1_1_t_k_1_1_two_tail_step_gaussian_peak.html" title=" " alt="" coords="1202,577,1453,925"/>
+<area shape="rect" id="node2" href="$d3/d75/class_gam_r_1_1_t_k_1_1_peak.html" title=" " alt="" coords="642,5,765,251"/>
 </map>

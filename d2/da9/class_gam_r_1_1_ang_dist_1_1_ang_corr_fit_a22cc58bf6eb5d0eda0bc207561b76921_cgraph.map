@@ -1,9 +1,9 @@
 <map id="GamR::AngDist::AngCorrFit::AngCorrFit" name="GamR::AngDist::AngCorrFit::AngCorrFit">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,184,112"/>
-<area shape="rect" id="node2" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a7d0d1589078b53be7a8da0372924c349" title=" " alt="" coords="232,71,411,112"/>
-<area shape="rect" id="node3" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a3565d6396e4ff99984e83a27e2ab35ce" title=" " alt="" coords="487,5,663,47"/>
-<area shape="rect" id="node4" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a8054df5976ecd1f68768286918001af5" title=" " alt="" coords="487,71,663,112"/>
-<area shape="rect" id="node5" href="$dc/d89/namespace_gam_r_1_1_spect.html#a30e3d5141c8253d594aae4bf21b2ffe8" title=" " alt="" coords="459,137,691,163"/>
-<area shape="rect" id="node6" href="$d0/d74/group___t_k.html#ga32700ec383e9f60b1a48009bec316606" title=" " alt="" coords="755,111,917,138"/>
-<area shape="rect" id="node7" href="$d0/d74/group___t_k.html#ga19210db8af7134007ff4fc26878b5dc2" title=" " alt="" coords="739,162,933,189"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,69,184,109"/>
+<area shape="rect" id="node2" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a7d0d1589078b53be7a8da0372924c349" title=" " alt="" coords="232,69,411,109"/>
+<area shape="rect" id="node3" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a3565d6396e4ff99984e83a27e2ab35ce" title=" " alt="" coords="487,5,663,45"/>
+<area shape="rect" id="node4" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a8054df5976ecd1f68768286918001af5" title=" " alt="" coords="487,69,663,109"/>
+<area shape="rect" id="node5" href="$dc/d89/namespace_gam_r_1_1_spect.html#a30e3d5141c8253d594aae4bf21b2ffe8" title=" " alt="" coords="459,134,691,159"/>
+<area shape="rect" id="node6" href="$d0/d74/group___t_k.html#ga32700ec383e9f60b1a48009bec316606" title=" " alt="" coords="755,109,917,134"/>
+<area shape="rect" id="node7" href="$d0/d74/group___t_k.html#ga19210db8af7134007ff4fc26878b5dc2" title=" " alt="" coords="739,158,933,183"/>
 </map>

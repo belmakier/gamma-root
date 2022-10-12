@@ -35,10 +35,15 @@ var annotated_dup =
         [ "MultiEffFit", "df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html", "df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit" ]
       ] ],
       [ "Nucleus", "da/d26/namespace_gam_r_1_1_nucleus.html", [
-        [ "LevelScheme", "df/d02/namespace_gam_r_1_1_nucleus_1_1_level_scheme.html", [
-          [ "Scheme", "dc/def/class_gam_r_1_1_nucleus_1_1_level_scheme_1_1_scheme.html", "dc/def/class_gam_r_1_1_nucleus_1_1_level_scheme_1_1_scheme" ],
-          [ "State", "d6/dc7/class_gam_r_1_1_nucleus_1_1_level_scheme_1_1_state.html", "d6/dc7/class_gam_r_1_1_nucleus_1_1_level_scheme_1_1_state" ],
-          [ "Transition", "d5/d3a/class_gam_r_1_1_nucleus_1_1_level_scheme_1_1_transition.html", "d5/d3a/class_gam_r_1_1_nucleus_1_1_level_scheme_1_1_transition" ]
+        [ "LevelSchemeDraw", "d7/d9e/namespace_gam_r_1_1_nucleus_1_1_level_scheme_draw.html", [
+          [ "Scheme", "d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html", "d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme" ],
+          [ "State", "d0/d50/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_state.html", "d0/d50/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_state" ],
+          [ "Transition", "d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html", "d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition" ]
+        ] ],
+        [ "LevelSchemeFitter", "d7/d48/namespace_gam_r_1_1_nucleus_1_1_level_scheme_fitter.html", [
+          [ "Scheme", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme" ],
+          [ "State", "d3/d4b/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_state.html", "d3/d4b/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_state" ],
+          [ "Transition", "d7/df7/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_transition.html", "d7/df7/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_transition" ]
         ] ],
         [ "Photon", "d0/d20/class_gam_r_1_1_nucleus_1_1_photon.html", "d0/d20/class_gam_r_1_1_nucleus_1_1_photon" ],
         [ "State", "d7/d30/class_gam_r_1_1_nucleus_1_1_state.html", "d7/d30/class_gam_r_1_1_nucleus_1_1_state" ],

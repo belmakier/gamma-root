@@ -44,6 +44,7 @@ var _abbreviations_8cc =
     [ "py", "d0/d17/_abbreviations_8cc.html#ada52d00d8b5e1ca20ee1be4110ac3175", null ],
     [ "rb", "d0/d17/_abbreviations_8cc.html#a369e706be79fe586cf8c2de1ad10eb76", null ],
     [ "rb", "d0/d17/_abbreviations_8cc.html#a57b7abbe905d465f50c66983c8237f0f", null ],
+    [ "rn", "d0/d17/_abbreviations_8cc.html#abf87b4b011d6e9811628e5109928e22a", null ],
     [ "sp", "d0/d17/_abbreviations_8cc.html#a33328e0e85d36ff8f7f299bb791c5364", null ],
     [ "sp2", "d0/d17/_abbreviations_8cc.html#a6dec9035fd2def441d51201ce50c94aa", null ],
     [ "ss", "d0/d17/_abbreviations_8cc.html#ae6adf151873024649819f21ed8dfe4f3", null ],

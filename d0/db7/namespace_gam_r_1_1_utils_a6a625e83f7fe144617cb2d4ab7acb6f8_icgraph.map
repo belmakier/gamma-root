@@ -1,9 +1,9 @@
 <map id="GamR::Utils::for_both_in_tuple" name="GamR::Utils::for_both_in_tuple">
-<area shape="rect" id="node1" title="Applies function taking both elements of tuple as arguments." alt="" coords="608,103,753,144"/>
-<area shape="rect" id="node2" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#ab07152fb360c8aed5fa35ef70a253ba1" title=" " alt="" coords="408,37,560,79"/>
-<area shape="rect" id="node6" href="$da/d95/class_gam_r_1_1_tree_1_1_t_event.html#ab2423d2c884f5f8d79c970fbee53caa8" title=" " alt="" coords="415,103,553,144"/>
-<area shape="rect" id="node7" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a24e334f3a0ed59b61698aebc80f7419c" title=" " alt="" coords="408,168,560,209"/>
-<area shape="rect" id="node3" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a70d0e35cffd2b1eee9b2313a5ce5f35b" title=" " alt="" coords="208,5,360,47"/>
-<area shape="rect" id="node5" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#acafb707e753a944c720f24084fa3042d" title=" " alt="" coords="208,71,360,112"/>
-<area shape="rect" id="node4" href="$dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html#a6225e05e399f2b30913ae6074d9db7cf" title=" " alt="" coords="5,5,160,47"/>
+<area shape="rect" id="node1" title="Applies function taking both elements of tuple as arguments." alt="" coords="608,101,753,141"/>
+<area shape="rect" id="node2" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#ab07152fb360c8aed5fa35ef70a253ba1" title=" " alt="" coords="408,37,560,77"/>
+<area shape="rect" id="node6" href="$da/d95/class_gam_r_1_1_tree_1_1_t_event.html#ab2423d2c884f5f8d79c970fbee53caa8" title=" " alt="" coords="415,101,553,141"/>
+<area shape="rect" id="node7" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a24e334f3a0ed59b61698aebc80f7419c" title=" " alt="" coords="408,165,560,205"/>
+<area shape="rect" id="node3" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a70d0e35cffd2b1eee9b2313a5ce5f35b" title=" " alt="" coords="208,5,360,45"/>
+<area shape="rect" id="node5" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#acafb707e753a944c720f24084fa3042d" title=" " alt="" coords="208,69,360,109"/>
+<area shape="rect" id="node4" href="$dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html#a6225e05e399f2b30913ae6074d9db7cf" title=" " alt="" coords="5,5,160,45"/>
 </map>

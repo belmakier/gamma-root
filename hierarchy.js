@@ -27,7 +27,7 @@ var hierarchy =
     [ "GamR::Efficiency::FitParams", "d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html", null ],
     [ "GamR::Efficiency::MultiDataSet", "d8/d35/class_gam_r_1_1_efficiency_1_1_multi_data_set.html", null ],
     [ "GamR::Efficiency::MultiEffFit", "df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html", null ],
-    [ "GamR::Nucleus::LevelScheme::Scheme::GlobalChiSquare", "d0/d06/class_gam_r_1_1_nucleus_1_1_level_scheme_1_1_scheme_1_1_global_chi_square.html", null ],
+    [ "GamR::Nucleus::LevelSchemeFitter::Scheme::GlobalChiSquare", "de/d2b/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme_1_1_global_chi_square.html", null ],
     [ "GamR::Processor::TimeWalk", "d3/d48/class_gam_r_1_1_processor_1_1_time_walk.html", null ],
     [ "GamR::Processor::TimeWalk::GlobalChiSquare", "d4/dd5/class_gam_r_1_1_processor_1_1_time_walk_1_1_global_chi_square.html", null ],
     [ "GamR::Sort::Sorter", "d3/d27/class_gam_r_1_1_sort_1_1_sorter.html", null ],
@@ -70,13 +70,14 @@ var hierarchy =
     [ "GamR::Utils::REPL", "d6/dee/class_gam_r_1_1_utils_1_1_r_e_p_l.html", null ],
     [ "GamR::Viewer::Viewer< TExpDefn, TEvent >", "dc/d00/class_gam_r_1_1_viewer_1_1_viewer.html", null ],
     [ "TArrow", null, [
-      [ "GamR::Nucleus::LevelScheme::Transition", "d5/d3a/class_gam_r_1_1_nucleus_1_1_level_scheme_1_1_transition.html", null ]
+      [ "GamR::Nucleus::LevelSchemeFitter::Transition", "d7/df7/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_transition.html", null ]
     ] ],
     [ "TAttFill", null, [
       [ "GamR::TK::Gate", "d0/d79/class_gam_r_1_1_t_k_1_1_gate.html", null ]
     ] ],
     [ "TAttLine", null, [
-      [ "GamR::Nucleus::LevelScheme::State", "d6/dc7/class_gam_r_1_1_nucleus_1_1_level_scheme_1_1_state.html", null ],
+      [ "GamR::Nucleus::LevelSchemeDraw::State", "d0/d50/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_state.html", null ],
+      [ "GamR::Nucleus::LevelSchemeFitter::State", "d3/d4b/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_state.html", null ],
       [ "GamR::TK::BPeak", "d8/dc0/class_gam_r_1_1_t_k_1_1_b_peak.html", null ],
       [ "GamR::TK::Gate", "d0/d79/class_gam_r_1_1_t_k_1_1_gate.html", null ]
     ] ],
@@ -85,8 +86,10 @@ var hierarchy =
     ] ],
     [ "TNamed", null, [
       [ "GamR::AngDist::AngCorrFit", "d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html", null ],
-      [ "GamR::Nucleus::LevelScheme::Scheme", "dc/def/class_gam_r_1_1_nucleus_1_1_level_scheme_1_1_scheme.html", null ],
-      [ "GamR::Nucleus::LevelScheme::State", "d6/dc7/class_gam_r_1_1_nucleus_1_1_level_scheme_1_1_state.html", null ],
+      [ "GamR::Nucleus::LevelSchemeDraw::Scheme", "d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html", null ],
+      [ "GamR::Nucleus::LevelSchemeDraw::State", "d0/d50/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_state.html", null ],
+      [ "GamR::Nucleus::LevelSchemeFitter::Scheme", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html", null ],
+      [ "GamR::Nucleus::LevelSchemeFitter::State", "d3/d4b/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_state.html", null ],
       [ "GamR::Nucleus::State", "d7/d30/class_gam_r_1_1_nucleus_1_1_state.html", null ],
       [ "GamR::Nucleus::Transition", "df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html", [
         [ "GamR::Nucleus::Photon", "d0/d20/class_gam_r_1_1_nucleus_1_1_photon.html", null ]
@@ -101,5 +104,8 @@ var hierarchy =
       [ "GamR::Tree::TDetector< Ts >", "dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html", null ],
       [ "GamR::Tree::TEvent< ADets >", "da/d95/class_gam_r_1_1_tree_1_1_t_event.html", null ],
       [ "GamR::Tree::TExpDefn< ADefns >", "d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html", null ]
+    ] ],
+    [ "TPolyLine", null, [
+      [ "GamR::Nucleus::LevelSchemeDraw::Transition", "d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html", null ]
     ] ]
 ];

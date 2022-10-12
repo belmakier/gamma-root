@@ -1,4 +1,4 @@
 <map id="GamR::Spect::FFT" name="GamR::Spect::FFT">
-<area shape="rect" id="node1" title=" " alt="" coords="5,13,135,39"/>
-<area shape="rect" id="node2" href="$dc/d89/namespace_gam_r_1_1_spect.html#a0c1c0458051261537a2abe8245fdd877" title="Scales the labels of a histogram. Preferable over GamR::Spect::Scale and GamR::Spect::ScalePoly as it..." alt="" coords="183,5,360,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,135,38"/>
+<area shape="rect" id="node2" href="$dc/d89/namespace_gam_r_1_1_spect.html#a0c1c0458051261537a2abe8245fdd877" title="Scales the labels of a histogram. Preferable over GamR::Spect::Scale and GamR::Spect::ScalePoly as it..." alt="" coords="183,5,360,45"/>
 </map>

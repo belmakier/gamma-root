@@ -1,8 +1,7 @@
 <map id="GamR::AngDist::W" name="GamR::AngDist::W">
-<area shape="rect" id="node1" title=" " alt="" coords="5,76,135,103"/>
-<area shape="rect" id="node2" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a89a9c2f80ccb6db585b8de73129aefdd" title=" " alt="" coords="413,5,546,32"/>
-<area shape="rect" id="node4" href="$d2/dbb/class_gam_r_1_1_ang_dist_1_1_solid_attenuation.html#a00f8c011eba761ff461e3d603493a4a9" title=" " alt="" coords="360,61,599,88"/>
-<area shape="rect" id="node5" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#ad168a84f080bfe78322c7973ee3337cc" title=" " alt="" coords="389,123,570,165"/>
-<area shape="rect" id="node6" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a86706e3a9cf18220393e8bed727f8e3e" title=" " alt="" coords="183,51,312,77"/>
-<area shape="rect" id="node3" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#adfb2b629389730b25f867d1e51922438" title=" " alt="" coords="647,5,779,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,55,135,80"/>
+<area shape="rect" id="node2" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a89a9c2f80ccb6db585b8de73129aefdd" title=" " alt="" coords="235,5,369,31"/>
+<area shape="rect" id="node4" href="$d2/dbb/class_gam_r_1_1_ang_dist_1_1_solid_attenuation.html#a00f8c011eba761ff461e3d603493a4a9" title=" " alt="" coords="183,55,421,80"/>
+<area shape="rect" id="node5" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#ad168a84f080bfe78322c7973ee3337cc" title=" " alt="" coords="211,105,393,145"/>
+<area shape="rect" id="node3" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#adfb2b629389730b25f867d1e51922438" title=" " alt="" coords="469,5,601,31"/>
 </map>

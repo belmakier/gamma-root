@@ -1,21 +1,21 @@
 <map id="GamR::TK::Gate::GetBinWidth" name="GamR::TK::Gate::GetBinWidth">
-<area shape="rect" id="node1" title=" " alt="" coords="792,300,987,327"/>
-<area shape="rect" id="node2" href="$dc/d89/namespace_gam_r_1_1_spect.html#a796934a2403375f7aaef94f590ea1547" title=" " alt="" coords="512,56,744,83"/>
-<area shape="rect" id="node5" href="$dc/d89/namespace_gam_r_1_1_spect.html#a30e3d5141c8253d594aae4bf21b2ffe8" title=" " alt="" coords="512,132,744,159"/>
-<area shape="rect" id="node10" href="$d0/d74/group___t_k.html#gab381e88d04607d0734a48c8d691fca0d" title=" " alt="" coords="536,183,720,209"/>
-<area shape="rect" id="node11" href="$d0/d74/group___t_k.html#gad0279e78c3bed6506c1a54a945bc169a" title=" " alt="" coords="536,234,720,275"/>
-<area shape="rect" id="node12" href="$d0/d74/group___t_k.html#gaeca0e4de9fa391610a005e6a1db09d65" title=" " alt="" coords="535,300,721,327"/>
-<area shape="rect" id="node13" href="$d0/d74/group___t_k.html#ga45f3e8e6347e8da6dc3959632221248b" title=" " alt="" coords="535,351,721,393"/>
-<area shape="rect" id="node14" href="$d0/d74/group___t_k.html#ga9db1ed9dd4cd4818f5399fbddf5ee388" title=" " alt="" coords="525,417,731,444"/>
-<area shape="rect" id="node18" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#ac8de6ea6d44aec17b159e42321fae371" title=" " alt="" coords="529,468,727,495"/>
-<area shape="rect" id="node19" href="$d0/d74/group___t_k.html#ga4f526f6f266c468a27e072932764f83a" title=" " alt="" coords="551,519,705,545"/>
-<area shape="rect" id="node3" href="$dc/d89/namespace_gam_r_1_1_spect.html#add80c1be39bf712a6792454b88bba02d" title=" " alt="" coords="232,5,464,32"/>
-<area shape="rect" id="node4" href="$d0/d17/_abbreviations_8cc.html#aef6a8ea45b0f28181d783909d2ba41e9" title=" " alt="" coords="327,56,369,83"/>
-<area shape="rect" id="node6" href="$dc/d89/namespace_gam_r_1_1_spect.html#aa46918fe9f40f4f0dcadec10181a1f5f" title=" " alt="" coords="232,107,464,133"/>
-<area shape="rect" id="node7" href="$d0/d17/_abbreviations_8cc.html#a4ce2a9b78d35f59e1431d654198b17ae" title=" " alt="" coords="327,157,369,184"/>
-<area shape="rect" id="node8" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a7d0d1589078b53be7a8da0372924c349" title=" " alt="" coords="259,209,437,250"/>
-<area shape="rect" id="node9" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#ade67fbd9efac760657e3d1455a2f5592" title=" " alt="" coords="5,209,184,250"/>
-<area shape="rect" id="node15" href="$dc/d89/namespace_gam_r_1_1_spect.html#a7b2279e1335941677826aeafb539e6b8" title=" " alt="" coords="253,388,443,415"/>
-<area shape="rect" id="node16" href="$dc/d89/namespace_gam_r_1_1_spect.html#aa4da6909a49d9510105c06b27cd4bffc" title=" " alt="" coords="257,439,439,481"/>
-<area shape="rect" id="node17" href="$d0/d17/_abbreviations_8cc.html#ae47533f48063bc9ba85ff0be37004a05" title=" " alt="" coords="69,447,120,473"/>
+<area shape="rect" id="node1" title=" " alt="" coords="792,292,987,317"/>
+<area shape="rect" id="node2" href="$dc/d89/namespace_gam_r_1_1_spect.html#a796934a2403375f7aaef94f590ea1547" title=" " alt="" coords="512,55,744,80"/>
+<area shape="rect" id="node5" href="$dc/d89/namespace_gam_r_1_1_spect.html#a30e3d5141c8253d594aae4bf21b2ffe8" title=" " alt="" coords="512,128,744,153"/>
+<area shape="rect" id="node10" href="$d0/d74/group___t_k.html#gab381e88d04607d0734a48c8d691fca0d" title=" " alt="" coords="536,177,720,203"/>
+<area shape="rect" id="node11" href="$d0/d74/group___t_k.html#gad0279e78c3bed6506c1a54a945bc169a" title=" " alt="" coords="536,227,720,267"/>
+<area shape="rect" id="node12" href="$d0/d74/group___t_k.html#gaeca0e4de9fa391610a005e6a1db09d65" title=" " alt="" coords="535,292,721,317"/>
+<area shape="rect" id="node13" href="$d0/d74/group___t_k.html#ga45f3e8e6347e8da6dc3959632221248b" title=" " alt="" coords="535,342,721,382"/>
+<area shape="rect" id="node14" href="$d0/d74/group___t_k.html#ga9db1ed9dd4cd4818f5399fbddf5ee388" title=" " alt="" coords="525,407,731,432"/>
+<area shape="rect" id="node18" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#ac8de6ea6d44aec17b159e42321fae371" title=" " alt="" coords="529,456,727,481"/>
+<area shape="rect" id="node19" href="$d0/d74/group___t_k.html#ga4f526f6f266c468a27e072932764f83a" title=" " alt="" coords="551,505,705,531"/>
+<area shape="rect" id="node3" href="$dc/d89/namespace_gam_r_1_1_spect.html#add80c1be39bf712a6792454b88bba02d" title=" " alt="" coords="232,5,464,31"/>
+<area shape="rect" id="node4" href="$d0/d17/_abbreviations_8cc.html#aef6a8ea45b0f28181d783909d2ba41e9" title=" " alt="" coords="327,55,369,80"/>
+<area shape="rect" id="node6" href="$dc/d89/namespace_gam_r_1_1_spect.html#aa46918fe9f40f4f0dcadec10181a1f5f" title=" " alt="" coords="232,104,464,129"/>
+<area shape="rect" id="node7" href="$d0/d17/_abbreviations_8cc.html#a4ce2a9b78d35f59e1431d654198b17ae" title=" " alt="" coords="327,153,369,179"/>
+<area shape="rect" id="node8" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a7d0d1589078b53be7a8da0372924c349" title=" " alt="" coords="259,203,437,243"/>
+<area shape="rect" id="node9" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#ade67fbd9efac760657e3d1455a2f5592" title=" " alt="" coords="5,203,184,243"/>
+<area shape="rect" id="node15" href="$dc/d89/namespace_gam_r_1_1_spect.html#a7b2279e1335941677826aeafb539e6b8" title=" " alt="" coords="253,377,443,403"/>
+<area shape="rect" id="node16" href="$dc/d89/namespace_gam_r_1_1_spect.html#aa4da6909a49d9510105c06b27cd4bffc" title=" " alt="" coords="257,427,439,467"/>
+<area shape="rect" id="node17" href="$d0/d17/_abbreviations_8cc.html#ae47533f48063bc9ba85ff0be37004a05" title=" " alt="" coords="69,435,120,460"/>
 </map>

@@ -16,6 +16,7 @@ var _display_8cc =
     [ "OverlaySpectra", "d4/def/_display_8cc.html#a28e180fb78daf1ac9319931d9668fe78", null ],
     [ "OverlaySpectra", "d4/def/_display_8cc.html#ad0355c8ed94e9e1b8c5fbe3084bd6156", null ],
     [ "OverlaySpectra", "d4/def/_display_8cc.html#ac8066f6a336819fe738fb47f3f9402a2", null ],
+    [ "Rename", "d4/def/_display_8cc.html#a61cee306e7922e8ac4fa42229ed51467", null ],
     [ "StackSpectra", "d4/def/_display_8cc.html#ad6336c2a214e9d575dda1e7fb52d1cd1", null ],
     [ "StackSpectra", "d4/def/_display_8cc.html#ac29ec26a20579c4881180a7deba05b6b", null ],
     [ "StackSpectra", "d4/def/_display_8cc.html#ab983da62eb972889ea13491189e13913", null ],

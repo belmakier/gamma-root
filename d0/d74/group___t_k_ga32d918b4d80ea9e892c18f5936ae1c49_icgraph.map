@@ -1,11 +1,11 @@
 <map id="GamR::TK::BPeak::GetCentError" name="GamR::TK::BPeak::GetCentError">
-<area shape="rect" id="node1" title=" " alt="" coords="764,74,945,115"/>
-<area shape="rect" id="node2" href="$d0/d74/group___t_k.html#gaa496d15cf9600fa5790ff50c9392b0fd" title=" " alt="" coords="546,56,706,83"/>
-<area shape="rect" id="node8" href="$d0/d74/group___t_k.html#ga705f798b5ced39a94fe9582dd39c55ed" title=" " alt="" coords="536,107,716,133"/>
-<area shape="rect" id="node3" href="$d0/d74/group___t_k.html#gab9295d2a9e654d7540ee264d036590cd" title=" " alt="" coords="332,5,488,32"/>
-<area shape="rect" id="node5" href="$d0/d74/group___t_k.html#gaf641b8c1f292803f8695310a0aee1896" title=" " alt="" coords="339,56,481,83"/>
-<area shape="rect" id="node4" href="$d0/d17/_abbreviations_8cc.html#a56da1b89cd1ce3720264ffb38d8505aa" title=" " alt="" coords="241,5,284,32"/>
-<area shape="rect" id="node6" href="$d0/d17/_abbreviations_8cc.html#a544c36017b9d9387f39e84863d9ae9a4" title=" " alt="" coords="243,56,282,83"/>
-<area shape="rect" id="node7" href="$d3/d48/class_gam_r_1_1_processor_1_1_time_walk.html#a10cdc74a1e9f4a14e1c449c9712ba085" title="Iterating through calibration peaks for each detector pair: calculate the time difference spectrum (w..." alt="" coords="5,49,193,90"/>
-<area shape="rect" id="node9" href="$d0/d74/group___t_k.html#gacea94387106c6b07d16c53a1614a86b9" title=" " alt="" coords="333,107,487,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="764,73,945,113"/>
+<area shape="rect" id="node2" href="$d0/d74/group___t_k.html#gaa496d15cf9600fa5790ff50c9392b0fd" title=" " alt="" coords="546,55,706,80"/>
+<area shape="rect" id="node8" href="$d0/d74/group___t_k.html#ga705f798b5ced39a94fe9582dd39c55ed" title=" " alt="" coords="536,104,716,129"/>
+<area shape="rect" id="node3" href="$d0/d74/group___t_k.html#gab9295d2a9e654d7540ee264d036590cd" title=" " alt="" coords="332,5,488,31"/>
+<area shape="rect" id="node5" href="$d0/d74/group___t_k.html#gaf641b8c1f292803f8695310a0aee1896" title=" " alt="" coords="339,55,481,80"/>
+<area shape="rect" id="node4" href="$d0/d17/_abbreviations_8cc.html#a56da1b89cd1ce3720264ffb38d8505aa" title=" " alt="" coords="241,5,284,31"/>
+<area shape="rect" id="node6" href="$d0/d17/_abbreviations_8cc.html#a544c36017b9d9387f39e84863d9ae9a4" title=" " alt="" coords="243,55,282,80"/>
+<area shape="rect" id="node7" href="$d3/d48/class_gam_r_1_1_processor_1_1_time_walk.html#a10cdc74a1e9f4a14e1c449c9712ba085" title="Iterating through calibration peaks for each detector pair: calculate the time difference spectrum (w..." alt="" coords="5,47,193,87"/>
+<area shape="rect" id="node9" href="$d0/d74/group___t_k.html#gacea94387106c6b07d16c53a1614a86b9" title=" " alt="" coords="333,104,487,129"/>
 </map>

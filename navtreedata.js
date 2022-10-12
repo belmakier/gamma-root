@@ -112,18 +112,19 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d0/d68/_abbreviations_8hh.html#ad4d31b91d8d504d5516a3dee9524d450",
-"d0/d74/group___t_k.html#gafd4aa571225c67e107f550b691faee72",
-"d1/da3/class_gam_r_1_1_sort_1_1_type_1_1_matrix.html#a80a76df8dd9e760076391cffc9ef390ca212896d589b77d7e52d6de2ceb51616d",
-"d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#ae0d8c505c6272e84a35125c118d04237",
-"d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#aa8c87af76f1effd71b25dbf649c8b521",
-"d5/d66/_t_d_p_a_d_8hh.html#ab1285067386ad9d3c80f6a7d9f6531fb",
-"d7/d30/class_gam_r_1_1_nucleus_1_1_state.html",
-"d9/db7/_display_8hh.html#ad6336c2a214e9d575dda1e7fb52d1cd1",
-"dc/d02/_gated_time_difference_8hh.html",
-"dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html#a4b1d3a76f9f736477857ca907644bb3e",
-"df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a1acd94c1670f649c8308288f9e1b4d82",
-"df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a8371c35b7871fc83888dbb2c38a06f3d"
+"d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#adf997e0aeab4bc362c60b72f01b33bd9",
+"d0/d74/group___t_k.html#gac11e7795d8a663651876fd749373c8f5",
+"d1/d57/class_gam_r_1_1_coulex_1_1_transition.html#a968f19b8a7d201a680099e8b0830ebcb",
+"d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a22cc58bf6eb5d0eda0bc207561b76921",
+"d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#a154e7ab79f00141862b67bd16d99ee0e",
+"d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a975e4d51ef11c887736f9a870fefa704",
+"d6/d76/namespace_gam_r_1_1_coulex.html#a97b5444076de6642d9578032354c13c5ad0bf83e206565477a0e528a80c044c3e",
+"d8/d1f/_cut_8cc.html#a30e3d5141c8253d594aae4bf21b2ffe8",
+"da/d4e/struct_gam_r_1_1_spect_1_1_peak_fit_1_1_peak_params.html#a43f2a02677c70fa0a33d6b184fc1cf03",
+"dc/d1a/_transform_8hh.html#ad6aa0eb1273bb8c272d61ad55883f270",
+"dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#addd2470bdf99b90c3c15ca36bdf44afe",
+"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a0694e373c318ef014eecb73a1d862b08",
+"df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a5f681061967984aca7315871f9bdea66"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

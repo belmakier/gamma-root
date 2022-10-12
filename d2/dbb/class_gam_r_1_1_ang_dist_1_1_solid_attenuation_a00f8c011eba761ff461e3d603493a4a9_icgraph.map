@@ -1,9 +1,8 @@
 <map id="GamR::AngDist::SolidAttenuation::Get" name="GamR::AngDist::SolidAttenuation::Get">
-<area shape="rect" id="node1" title=" " alt="" coords="429,143,668,170"/>
-<area shape="rect" id="node2" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#aff931e179fa69b6b1d8c9d16d4812613" title=" " alt="" coords="191,5,373,47"/>
-<area shape="rect" id="node3" href="$da/d73/class_gam_r_1_1_ang_dist_1_1_ang_corr.html#ab736c46e109d3b9c91d984576886d861" title=" " alt="" coords="200,71,364,112"/>
-<area shape="rect" id="node4" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#a46af4656457f9e9731c2fbee2c2a27b7" title=" " alt="" coords="191,136,373,177"/>
-<area shape="rect" id="node5" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#ad2b2d77bf8d7c0f4d159c5e0011e1b78" title=" " alt="" coords="183,226,381,253"/>
-<area shape="rect" id="node6" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a86706e3a9cf18220393e8bed727f8e3e" title=" " alt="" coords="217,277,347,303"/>
-<area shape="rect" id="node7" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#acb8013df6dcb1d7635f67a7371bb0eb5" title=" " alt="" coords="5,277,135,303"/>
+<area shape="rect" id="node1" title=" " alt="" coords="252,141,491,166"/>
+<area shape="rect" id="node2" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#aff931e179fa69b6b1d8c9d16d4812613" title=" " alt="" coords="14,5,195,45"/>
+<area shape="rect" id="node3" href="$da/d73/class_gam_r_1_1_ang_dist_1_1_ang_corr.html#ab736c46e109d3b9c91d984576886d861" title=" " alt="" coords="23,69,187,109"/>
+<area shape="rect" id="node4" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#a46af4656457f9e9731c2fbee2c2a27b7" title=" " alt="" coords="14,133,195,173"/>
+<area shape="rect" id="node5" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#ad2b2d77bf8d7c0f4d159c5e0011e1b78" title=" " alt="" coords="5,198,204,223"/>
+<area shape="rect" id="node6" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a86706e3a9cf18220393e8bed727f8e3e" title=" " alt="" coords="40,247,169,273"/>
 </map>

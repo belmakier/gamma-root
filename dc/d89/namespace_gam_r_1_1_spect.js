@@ -99,6 +99,7 @@ var namespace_gam_r_1_1_spect =
     [ "ProjY", "dc/d89/namespace_gam_r_1_1_spect.html#ae5e6149e08d3a93646d03c8d3839bbe7", null ],
     [ "Rebin", "dc/d89/namespace_gam_r_1_1_spect.html#a36cc6f0992bd2bb29fb31f0f600a740d", null ],
     [ "Rebin", "dc/d89/namespace_gam_r_1_1_spect.html#ab6884a6323a0b4f61d4e3e5a47ce60ae", null ],
+    [ "Rename", "dc/d89/namespace_gam_r_1_1_spect.html#a61cee306e7922e8ac4fa42229ed51467", null ],
     [ "Reverse", "dc/d89/namespace_gam_r_1_1_spect.html#a9bb12037f20a35882a118917a342b902", null ],
     [ "RotateTH2", "dc/d89/namespace_gam_r_1_1_spect.html#ac24889ff341907d82919d40ef521958a", null ],
     [ "Scale", "dc/d89/namespace_gam_r_1_1_spect.html#a70ab295cc830d4c5a8827a4c3a9df3d5", null ],

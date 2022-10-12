@@ -1,9 +1,9 @@
 <map id="GamR::Coulex::LevelScheme::AddLevel" name="GamR::Coulex::LevelScheme::AddLevel">
-<area shape="rect" id="node1" title=" " alt="" coords="760,64,951,105"/>
-<area shape="rect" id="node2" href="$db/d16/class_gam_r_1_1_coulex_1_1_level_scheme.html#a160dc2ca214bb7c945ac1516086bd18e" title=" " alt="" coords="510,5,701,47"/>
-<area shape="rect" id="node3" href="$dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#a79a4ea8f06954b1cf8b8431010fedbf3" title=" " alt="" coords="237,61,451,103"/>
-<area shape="rect" id="node6" href="$dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#a46d4f1bd67b5c6c438efd93b9f1e4838" title=" " alt="" coords="499,124,712,165"/>
-<area shape="rect" id="node4" href="$d6/d76/namespace_gam_r_1_1_coulex.html#a41b07b0aa204c45d637b7c5a4e57d989" title=" " alt="" coords="15,71,180,98"/>
-<area shape="rect" id="node5" href="$d6/d76/namespace_gam_r_1_1_coulex.html#a2551a0108b265de32e08ef2042a02212" title=" " alt="" coords="5,124,189,165"/>
-<area shape="rect" id="node7" href="$dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#ae8ce7427467c968c1a44f74a06ce4a30" title=" " alt="" coords="237,127,451,168"/>
+<area shape="rect" id="node1" title=" " alt="" coords="760,63,951,103"/>
+<area shape="rect" id="node2" href="$db/d16/class_gam_r_1_1_coulex_1_1_level_scheme.html#a160dc2ca214bb7c945ac1516086bd18e" title=" " alt="" coords="510,5,701,45"/>
+<area shape="rect" id="node3" href="$dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#a79a4ea8f06954b1cf8b8431010fedbf3" title=" " alt="" coords="237,60,451,100"/>
+<area shape="rect" id="node6" href="$dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#a46d4f1bd67b5c6c438efd93b9f1e4838" title=" " alt="" coords="499,121,712,161"/>
+<area shape="rect" id="node4" href="$d6/d76/namespace_gam_r_1_1_coulex.html#a41b07b0aa204c45d637b7c5a4e57d989" title=" " alt="" coords="15,58,180,83"/>
+<area shape="rect" id="node5" href="$d6/d76/namespace_gam_r_1_1_coulex.html#a2551a0108b265de32e08ef2042a02212" title=" " alt="" coords="5,132,189,172"/>
+<area shape="rect" id="node7" href="$dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#ae8ce7427467c968c1a44f74a06ce4a30" title=" " alt="" coords="237,124,451,164"/>
 </map>

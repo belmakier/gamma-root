@@ -1,14 +1,14 @@
 <map id="GamR::Coulex::LevelScheme" name="GamR::Coulex::LevelScheme">
-<area shape="rect" id="node1" title=" " alt="" coords="120,1165,311,1419"/>
-<area shape="rect" id="node2" title=" " alt="" coords="92,812,256,904"/>
-<area shape="rect" id="node3" title=" " alt="" coords="28,235,107,312"/>
-<area shape="rect" id="node5" href="$d1/d65/class_gam_r_1_1_coulex_1_1_level.html" title=" " alt="" coords="132,463,275,643"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,5,129,97"/>
-<area shape="rect" id="node11" href="$d1/d57/class_gam_r_1_1_coulex_1_1_transition.html" title=" " alt="" coords="280,768,447,948"/>
-<area shape="rect" id="node6" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html" title=" " alt="" coords="131,147,313,400"/>
-<area shape="rect" id="node7" title=" " alt="" coords="298,514,415,591"/>
-<area shape="rect" id="node8" title=" " alt="" coords="337,235,376,312"/>
-<area shape="rect" id="node9" title=" " alt="" coords="455,235,493,312"/>
-<area shape="rect" id="node12" title=" " alt="" coords="466,667,578,744"/>
-<area shape="rect" id="node10" title=" " alt="" coords="292,1011,435,1103"/>
+<area shape="rect" id="node1" title=" " alt="" coords="124,1015,319,1245"/>
+<area shape="rect" id="node2" title=" " alt="" coords="97,721,261,776"/>
+<area shape="rect" id="node3" title=" " alt="" coords="28,205,111,245"/>
+<area shape="rect" id="node5" href="$d1/d65/class_gam_r_1_1_coulex_1_1_level.html" title=" " alt="" coords="132,403,279,575"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,5,133,60"/>
+<area shape="rect" id="node11" href="$d1/d57/class_gam_r_1_1_coulex_1_1_transition.html" title=" " alt="" coords="285,663,456,835"/>
+<area shape="rect" id="node6" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html" title=" " alt="" coords="135,109,321,340"/>
+<area shape="rect" id="node7" title=" " alt="" coords="303,469,425,509"/>
+<area shape="rect" id="node8" title=" " alt="" coords="345,205,383,245"/>
+<area shape="rect" id="node9" title=" " alt="" coords="462,205,501,245"/>
+<area shape="rect" id="node12" title=" " alt="" coords="471,599,587,639"/>
+<area shape="rect" id="node10" title=" " alt="" coords="299,897,442,952"/>
 </map>

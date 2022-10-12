@@ -1,0 +1,26 @@
+var class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme =
+[
+    [ "GlobalChiSquare", "de/d2b/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme_1_1_global_chi_square.html", "de/d2b/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme_1_1_global_chi_square" ],
+    [ "Scheme", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#a971afd3ef69f5e49d78f3f54177d2b76", null ],
+    [ "Scheme", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#aabd7f13d0cf09cccb37169d6437bacbb", null ],
+    [ "AddState", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#acc24e38883d302989045aad2f0070a97", null ],
+    [ "AddTransition", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#af58cfdd0737d81148a09b940eab11c08", null ],
+    [ "ClassDef", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#aca64f4e1c8260ff6abb4fcd3633af58c", null ],
+    [ "Fit", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#a928abbaf33c85ee54a7053cdd6906b84", null ],
+    [ "GetChiSquared", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#aee33371a96c3ae22fb0b8b786d6bb36c", null ],
+    [ "GetStateByIndex", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#a4e3968c4399004753eadaf5aa8473c6a", null ],
+    [ "Paint", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#ab2a9e368cc3283d91bf496a884df468d", null ],
+    [ "Print", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#aea096c53f42d75913bb8b1c12a9d53f9", null ],
+    [ "PrintState", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#a82d1edf349eb1b2e7f3d039f6a84e1ca", null ],
+    [ "PrintStates", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#a4c9be5dc0f3b66d7ea57561621318226", null ],
+    [ "PrintTransitions", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#a7593306552f1a1578abbafa7be216a44", null ],
+    [ "SaveTable", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#a9c3ac4f8125fcf6199f089da10944379", null ],
+    [ "SetDrawRange", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#adebf6ad39672961422fe11a5d56b38f1", null ],
+    [ "SetIndices", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#ae296426748889bef3a6a78266526a7fb", null ],
+    [ "drawHigh", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#aa583c9991851f0362a790848a0e793b7", null ],
+    [ "drawLow", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#a54902de2f11bf968acb2b8528996224b", null ],
+    [ "fAxis", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#ae7b5b55b9914820fe0f75b48657a8019", null ],
+    [ "fDrawHist", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#a38f6de6ab5c0e57c6d0aad6e72fc5823", null ],
+    [ "fStates", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#a1ad1d3a77cf1e4dac385c9617269065d", null ],
+    [ "fTransitions", "d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#a5e25e187c1f6c3a5a00a60a2d23cfff0", null ]
+];

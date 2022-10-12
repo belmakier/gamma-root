@@ -1,11 +1,11 @@
 <map id="GamR::Sort::Sorter::Tick" name="GamR::Sort::Sorter::Tick">
-<area shape="rect" id="node1" title=" " alt="" coords="269,235,400,276"/>
-<area shape="rect" id="node2" href="$dd/da0/class_gam_r_1_1_sort_1_1_type_1_1_coincidence_cube_diff.html#a38594500e35cc42a7d2d255023895993" title=" " alt="" coords="13,5,213,47"/>
-<area shape="rect" id="node3" href="$df/d71/class_gam_r_1_1_sort_1_1_type_1_1_coincidence_matrix.html#a132a50b82dd314a036a883c70e6cb765" title=" " alt="" coords="13,71,213,112"/>
-<area shape="rect" id="node4" href="$d6/daa/class_gam_r_1_1_sort_1_1_type_1_1_coincidence_matrix_pair.html#a8e27cf0183aa0b2d8520fff0575909f9" title=" " alt="" coords="13,136,213,177"/>
-<area shape="rect" id="node5" href="$d3/d6c/class_gam_r_1_1_sort_1_1_type_1_1_gated_time_difference.html#a24e85e6f4818336f371ac8e011146570" title=" " alt="" coords="17,201,210,243"/>
-<area shape="rect" id="node6" href="$d1/da3/class_gam_r_1_1_sort_1_1_type_1_1_matrix.html#ae415be51a3f058b904d921fc7443b220" title=" " alt="" coords="31,267,195,308"/>
-<area shape="rect" id="node7" href="$db/d1b/class_gam_r_1_1_sort_1_1_type_1_1_time_difference.html#af280ea60b9b0fd1ad348775bd7c0383a" title=" " alt="" coords="5,332,221,373"/>
-<area shape="rect" id="node8" href="$d7/d5f/class_gam_r_1_1_sort_1_1_type_1_1_time_difference_pairs.html#a364f5b4a6df32433f3b866409864cf2e" title=" " alt="" coords="5,397,221,439"/>
-<area shape="rect" id="node9" href="$df/d01/class_gam_r_1_1_sort_1_1_type_1_1_time_walk_cal.html#a15bb7f30ca89fcb2f9e8dac0ef351cfc" title=" " alt="" coords="20,463,207,504"/>
+<area shape="rect" id="node1" title=" " alt="" coords="269,229,400,269"/>
+<area shape="rect" id="node2" href="$dd/da0/class_gam_r_1_1_sort_1_1_type_1_1_coincidence_cube_diff.html#a38594500e35cc42a7d2d255023895993" title=" " alt="" coords="13,5,213,45"/>
+<area shape="rect" id="node3" href="$df/d71/class_gam_r_1_1_sort_1_1_type_1_1_coincidence_matrix.html#a132a50b82dd314a036a883c70e6cb765" title=" " alt="" coords="13,69,213,109"/>
+<area shape="rect" id="node4" href="$d6/daa/class_gam_r_1_1_sort_1_1_type_1_1_coincidence_matrix_pair.html#a8e27cf0183aa0b2d8520fff0575909f9" title=" " alt="" coords="13,133,213,173"/>
+<area shape="rect" id="node5" href="$d3/d6c/class_gam_r_1_1_sort_1_1_type_1_1_gated_time_difference.html#a24e85e6f4818336f371ac8e011146570" title=" " alt="" coords="17,197,210,237"/>
+<area shape="rect" id="node6" href="$d1/da3/class_gam_r_1_1_sort_1_1_type_1_1_matrix.html#ae415be51a3f058b904d921fc7443b220" title=" " alt="" coords="31,261,195,301"/>
+<area shape="rect" id="node7" href="$db/d1b/class_gam_r_1_1_sort_1_1_type_1_1_time_difference.html#af280ea60b9b0fd1ad348775bd7c0383a" title=" " alt="" coords="5,325,221,365"/>
+<area shape="rect" id="node8" href="$d7/d5f/class_gam_r_1_1_sort_1_1_type_1_1_time_difference_pairs.html#a364f5b4a6df32433f3b866409864cf2e" title=" " alt="" coords="5,389,221,429"/>
+<area shape="rect" id="node9" href="$df/d01/class_gam_r_1_1_sort_1_1_type_1_1_time_walk_cal.html#a15bb7f30ca89fcb2f9e8dac0ef351cfc" title=" " alt="" coords="20,453,207,493"/>
 </map>
