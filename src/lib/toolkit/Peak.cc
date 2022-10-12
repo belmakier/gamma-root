@@ -554,12 +554,12 @@ namespace GamR {
     void BPeak::Set(TH1 *hist, Option_t *foption, Option_t *option) {
       GamR::TK::Gate peak;
       std::cout << "Select peak region: " << std::endl;
-      peak.SetGate();
+      peak.SetGate(gPad->GetCanvas(), "x");
       std::cout << "Select background regions:" << std::endl;
       std::vector<GamR::TK::Gate > background;
       while(true) {
         GamR::TK::Gate bg;
-        int retval = bg.SetGate();
+        int retval = bg.SetGate(gPad->GetCanvas(), "x");
         if (retval<0) { break; }
         background.push_back(bg);
       }
@@ -571,12 +571,12 @@ namespace GamR {
       std::cout << "Select prompt region: " << std::endl;
       TH1D *projx = hist->ProjectionX();
       projx->Draw();
-      prompt.SetGate();
+      prompt.SetGate(gPad->GetCanvas(), "x");
       std::cout << "Select non-prompt regions: " << std::endl;
       std::vector<GamR::TK::Gate > nonprompt;
       while(true) {
         GamR::TK::Gate np;
-        int retval = np.SetGate();
+        int retval = np.SetGate(gPad->GetCanvas(), "x");
         if (retval<0) { break; }
         nonprompt.push_back(np);
       }
@@ -602,14 +602,14 @@ namespace GamR {
       //select peak and background regions
       GamR::TK::Gate peak;
       std::cout << "Select peak region: " << std::endl;
-      peak.SetGate();
+      peak.SetGate(gPad->GetCanvas(), "x");
       std::cout << "Select background regions:" << std::endl;
       std::vector<GamR::TK::Gate > background;
       double lowest = 1e9;
       double highest = -1e9;
       while(true) {
         GamR::TK::Gate bg;
-        int retval = bg.SetGate();
+        int retval = bg.SetGate(gPad->GetCanvas(), "x");
         if (retval<0) { break; }
         background.push_back(bg);
         if (bg.GetLow() < lowest) {

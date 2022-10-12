@@ -37,6 +37,7 @@ namespace GamR {
 
     void NormSpectra(TVirtualPad *canvas = NULL, Option_t *option = "");
     void NormSpectraBackSub(TVirtualPad *canvas = NULL);
+    void Rename(TVirtualPad *canvas = NULL);
   }
 }
 

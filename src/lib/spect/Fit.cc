@@ -11,6 +11,7 @@
 #include <TText.h>
 #include <TPolyMarker.h>
 #include <TRatioPlot.h>
+#include <TFitResult.h>
 
 #include "Fit.hh"
 #include "FitGuesses.hh"
@@ -372,7 +373,7 @@ namespace GamR {
         fFitGuesses->Print();
       }
       std::string fopts(foption);
-      fopts = fopts + "R";
+      fopts = fopts + " R";
 
       // first fit, only gaussian
       // this seems to be broken (sometimes?) with tails when tail amplitude fixed at zero

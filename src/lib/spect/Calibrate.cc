@@ -4,8 +4,10 @@
 #include <spect/Calibrate.hh>
 #include <spect/Transform.hh>
 
+#include <TSystem.h>
 #include <TSpectrum.h>
 #include <TMarker.h>
+#include <TLine.h>
 
 namespace GamR {
   namespace Spect {
@@ -15,6 +17,8 @@ namespace GamR {
       TObject *obj;
       TSpectrum *spect = new TSpectrum();
       TH1D *hist = GamR::Utils::GetHist1D(canvas);
+      double startlow = canvas->GetUxmin();
+      double starthigh = canvas->GetUxmax();;      
       double range = 10*sigma*hist->GetBinWidth(1);
       if (range < 100*hist->GetBinWidth(1)) {
         range = 100*hist->GetBinWidth(1);
@@ -37,10 +41,14 @@ namespace GamR {
       double highPos = -1;
       double lowEn;
       double highEn;
-      
+
+      TLine *line_low;
+      TLine *line_high;
       canvas->AddExec("ex", functioncall.c_str());
       std::cout << "Click for lower peak" << std::endl;
       while (true){
+        canvas->Modified();
+        canvas->Update();
         obj=canvas->WaitPrimitive();
         if (!obj) break;
         if (strncmp(obj->ClassName(),"TMarker",7)==0) {
@@ -58,13 +66,16 @@ namespace GamR {
               if (dist < closest) {
                 closest = dist;
                 lowPos = posX;
+                line_low = new TLine(lowPos, canvas->GetUymin(), lowPos, canvas->GetUymax());
+                line_low->SetLineColor(kRed);
+                line_low->SetLineWidth(2);
+                line_low->Draw();
               }
             }            
+            hist->GetXaxis()->SetRangeUser(startlow, starthigh);            
             canvas->Update();
 
             std::cout << "Peak estimate: " << lowPos << std::endl;
-            std::cout << "Peak energy: ";
-            std::cin >> lowEn;
 
             std::cout << "Click for upper peak..." << std::endl;
           } else {
@@ -80,13 +91,17 @@ namespace GamR {
               if (dist < closest) {
                 closest = dist;
                 highPos = posX;
+                line_high = new TLine(highPos, canvas->GetUymin(), highPos, canvas->GetUymax());
+                line_high->SetLineColor(kRed);
+                line_high->SetLineWidth(2);
+                line_high->Draw();
               }
-            }           
+            }
+            hist->GetXaxis()->SetRangeUser(startlow, starthigh);
             canvas->Update();
+            canvas->Modified();
 
             std::cout << "Peak estimate: " << highPos << std::endl;
-            std::cout << "Peak energy: ";
-            std::cin >> highEn;
             
             delete marker;
             ex = ex + 1;
@@ -95,12 +110,26 @@ namespace GamR {
           delete marker;
         }
       }
-      
       canvas->DeleteExec("ex");
+      canvas->SetCrosshair(0);
+      line_low->Draw();
+      line_high->Draw();
+      canvas->Modified();
+      canvas->Update();
+      gSystem->ProcessEvents();
+      canvas->Modified();
+      canvas->Update();
+
+      std::cout << "Low peak energy: ";
+      std::cin >> lowEn;
+      std::cout << "High peak energy: ";
+      std::cin >> highEn;
       
       if (ex < 0) { // quit prematurely
         std::cout << "calibration cancelled" << std::endl;
         canvas->SetCrosshair(0);
+        line_low->Delete();
+        line_high->Delete();
         return std::pair<double,double>(-1,-1);
       } else {
         canvas->SetCrosshair(0);
@@ -120,6 +149,8 @@ namespace GamR {
             break;
           }
         }
+        line_low->Delete();
+        line_high->Delete();
         return std::pair<double,double>(gradient,offset);
       }
 

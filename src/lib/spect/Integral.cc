@@ -33,7 +33,7 @@ namespace GamR{
       TH1D *hist = GamR::Utils::GetHist1D(canvas);
       if (!hist) { return std::pair<int, int>(-1, -1); }
       GamR::TK::Gate gate;
-      gate.SetGate(canvas);
+      gate.SetGate(canvas, "x");
       return Integral(hist, gate);
     }
 
@@ -84,7 +84,7 @@ namespace GamR{
       TH1D *hist = GamR::Utils::GetHist1D(canvas);
       if (!hist) { return std::pair<int, int>(-1, -1); }
       GamR::TK::Gate gate;
-      gate.SetGate(canvas);
+      gate.SetGate(canvas, "x");
       return Counts(hist, gate);
     }
 

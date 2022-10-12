@@ -71,7 +71,7 @@ namespace GamR {
         }
       }
       if (!hist) {
-        std::cout << "no histogram found in Canvas!" << std::endl;
+        //std::cout << "no histogram found in Canvas!" << std::endl;
         return NULL;
       }
       // if (nHists > 1) {        
@@ -91,7 +91,7 @@ namespace GamR {
         }
       }
       if (hists.size() == 0) {
-        std::cout << "no histogram found in Canvas!" << std::endl;
+        //std::cout << "no histogram found in Canvas!" << std::endl;
         return hists;
       }
       return hists;
@@ -108,11 +108,11 @@ namespace GamR {
         }
       }
       if (!hist) {
-        std::cout << "no histogram found in Canvas!" << std::endl;
+        //std::cout << "no histogram found in Canvas!" << std::endl;
         return NULL;
       }
       if (nHists > 1) {
-        std::cout << "Warning: Canvas has more than one histogram!" << std::endl;
+        //std::cout << "Warning: Canvas has more than one histogram!" << std::endl;
       }
       return hist;
     }

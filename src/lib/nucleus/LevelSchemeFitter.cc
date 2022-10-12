@@ -11,7 +11,7 @@
 #include <TArrow.h>
 #include <TMinuit.h>
 
-#include "LevelScheme.hh"
+#include "LevelSchemeFitter.hh"
 #include <utils/Utilities.hh>
 
 // ignoring npar, gin, iflag in GlobalChiSquare::doit
@@ -20,7 +20,7 @@
 
 namespace GamR {
   namespace Nucleus {
-    namespace LevelScheme {      
+    namespace LevelSchemeFitter {      
 
       void State::Paint(Option_t *option) {
         TAttLine::Modify();

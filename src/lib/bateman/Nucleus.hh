@@ -17,6 +17,7 @@ namespace Bateman {
     std::string name;
     double efficiency;
     double efficiency_err;
+    double N0;
 
     std::vector<Nucleus*> feeders;
     std::vector<double> branches; //branching ratios from each feeder
@@ -24,8 +25,8 @@ namespace Bateman {
 
     float *population;  //population as a function of time    
   public:
-    Nucleus() : index(-1), lifetime(-1), efficiency(1.0), lifetime_err(0.0), efficiency_err(0.0) { population = new float[GAMR_BATEMAN_MAX_STEPS]; }
-    Nucleus(int indx, std::string n, double lt, double eff, double lt_err, double eff_err) : index(indx), name(n), lifetime(lt), efficiency(eff), lifetime_err(lt_err), efficiency_err(eff_err) { population = new float[GAMR_BATEMAN_MAX_STEPS]; };
+    Nucleus() : index(-1), lifetime(-1), efficiency(1.0), lifetime_err(0.0), efficiency_err(0.0), N0(0.0) { population = new float[GAMR_BATEMAN_MAX_STEPS]; }
+    Nucleus(int indx, std::string n, double lt, double eff, double lt_err, double eff_err, double N_0) : index(indx), name(n), lifetime(lt), efficiency(eff), lifetime_err(lt_err), efficiency_err(eff_err), N0(N_0) { population = new float[GAMR_BATEMAN_MAX_STEPS]; };
     double GetDC() { return 1.0/lifetime; }
     void AddFeeder(Nucleus *nuc, double branch) { feeders.push_back(nuc); branches.push_back(branch); }
     void Print(std::ostream &stream);

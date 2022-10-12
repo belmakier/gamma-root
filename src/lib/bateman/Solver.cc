@@ -8,8 +8,7 @@ namespace Bateman {
     void Solver::solve(Scheme &scheme) {
       std::vector<double> x;
       for (int i=0; i<scheme.nuclei.size(); ++i) {
-        if (i == 0) { x.push_back(N0); }
-        else { x.push_back(0.0); }
+        x.push_back(N0 * scheme.nuclei[i]->N0);
       }
 
       double time = 0.0;

@@ -251,7 +251,7 @@ namespace GamR {
       std::vector<GamR::TK::Gate > background;
       while(true) {
         GamR::TK::Gate bg;
-        int retval = bg.SetGate(canvas);
+        int retval = bg.SetGate(canvas, "x");
         if (retval<0) { break; }
         background.push_back(bg);
       }
@@ -273,7 +273,7 @@ namespace GamR {
       std::vector<GamR::TK::Gate > background;
       while(true) {
         GamR::TK::Gate bg;
-        int retval = bg.SetGate(canvas);
+        int retval = bg.SetGate(canvas, "x");
         if (retval<0) { break; }
         background.push_back(bg);
       }
@@ -375,7 +375,7 @@ namespace GamR {
       std::vector<GamR::TK::Gate > background;
       while(true) {
         GamR::TK::Gate bg;
-        int retval = bg.SetGate(canvas);
+        int retval = bg.SetGate(canvas, "x");
         if (retval<0) { break; }
         background.push_back(bg);
       }
@@ -398,7 +398,7 @@ namespace GamR {
       std::vector<GamR::TK::Gate > background;
       while(true) {
         GamR::TK::Gate bg;
-        int retval = bg.SetGate(canvas);
+        int retval = bg.SetGate(canvas, "x");
         if (retval<0) { break; }
         background.push_back(bg);
       }

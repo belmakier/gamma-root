@@ -9,6 +9,7 @@
 #pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/Photon.hh;
 #pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/State.hh;
 #pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/Transition.hh;
-#pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/LevelScheme.hh;
+#pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/LevelSchemeFitter.hh;
+#pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/LevelSchemeDraw.hh;
 
 #endif

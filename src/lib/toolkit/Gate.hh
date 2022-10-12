@@ -42,9 +42,9 @@ namespace GamR {
       };
       Gate(const char *name);
       Gate(const char *name, const char *title);
-      Gate(const char *name, TVirtualPad *canvas);
-      Gate(const char *name, const char *title, TVirtualPad *canvas);
-      Gate(TVirtualPad *canvas);
+      Gate(const char *name, TVirtualPad *canvas, Option_t *opt="");
+      Gate(const char *name, const char *title, TVirtualPad *canvas, Option_t *opt="");
+      Gate(TVirtualPad *canvas, Option_t *opt="");
       Gate(double l, double h) : Gate()
       {
         Low = l;
@@ -54,7 +54,7 @@ namespace GamR {
       ~Gate() { };
       
       int SetGate(); // *MENU*
-      int SetGate(TVirtualPad *canvas);
+      int SetGate(TVirtualPad *canvas, Option_t *opt="");
       void SetGate(double l, double h)
       {
         Low = l;

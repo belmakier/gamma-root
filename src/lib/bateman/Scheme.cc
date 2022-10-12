@@ -36,8 +36,9 @@ namespace GamR {
           double tau_err;
           double eff;
           double eff_err;
-          ss >> id >> name >> tau >> tau_err >> eff >> eff_err;
-          AddNucleus(name, tau, eff, tau_err, eff_err);          
+          double N0;
+          ss >> id >> name >> tau >> tau_err >> eff >> eff_err >> N0;
+          AddNucleus(name, tau, eff, tau_err, eff_err, N0);          
         }
         else if (type == "B") {
           int id1, id2;
@@ -58,10 +59,21 @@ namespace GamR {
       }
 
       NormBranches();
+      NormN0();
 
       fclose(file);
     }
 
+    void Scheme::NormN0() {
+      double sumN0 = 0;
+      for (int j=0; j<nuclei.size(); ++j) {
+        sumN0 += nuclei[j]->N0;        
+      }
+      for (int j=0; j<nuclei.size(); ++j) {
+        nuclei[j]->N0 = nuclei[j]->N0/sumN0;        
+      }
+    }
+    
     void Scheme::NormBranches() {
       double branches[100][100];
       double branch_errs[100][100];
@@ -173,6 +185,26 @@ namespace GamR {
         n0 += nuclei[j]->efficiency * nuclei[j]->population[i] * 1.0/nuclei[j]->lifetime;
         n1 += nuclei[j]->efficiency * nuclei[j]->population[i+1] * 1.0/nuclei[j]->lifetime;
       }
+      double frac = (t - time)/solver.stepsize;
+      return n0+frac*(n1-n0);
+    }
+
+    double Scheme::Get(int indx, double t, Solver &solver) {
+      int i=0;
+      double time = 0.0;
+      if (t >= solver.max_time) { std::cout << "Evaluation ouside bounds!" << std::endl; return -1; }
+      if (t < 0 ) { std::cout << "Evaluation ouside bounds!" << std::endl; return -1; }
+      while (time < solver.max_time) {
+        if (t >= time && t < time+solver.stepsize) { break; }      
+        ++i;
+        time += solver.stepsize;
+      }
+
+      //now we interpolate between i and i+1
+      double n0 = 0.0;
+      double n1 = 0.0;    
+      n0 = nuclei[indx]->efficiency * nuclei[indx]->population[i] * 1.0/nuclei[indx]->lifetime;
+      n1 += nuclei[indx]->efficiency * nuclei[indx]->population[i+1] * 1.0/nuclei[indx]->lifetime;
       double frac = (t - time)/solver.stepsize;
       return n0+frac*(n1-n0);
     }

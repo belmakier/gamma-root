@@ -9,7 +9,7 @@
 
 namespace GamR {
   namespace Nucleus {
-    namespace LevelScheme {
+    namespace LevelSchemeFitter {
       class State : public TNamed, public TAttLine {
       public:
         int index;

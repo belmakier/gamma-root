@@ -418,7 +418,7 @@ namespace GamR {
       }
       else {
         GamR::TK::Gate gate;
-        gate.SetGate(canvas);
+        gate.SetGate(canvas, "x");
         for (int i=0; i<spectra.size(); ++i) {
           if (i != ind) {
             gate.Norm(spectra[i], norm_hist);
@@ -440,15 +440,34 @@ namespace GamR {
       TH1D* norm_hist = spectra[ind];
       std::cout << "Set peak region: " << std::endl;
       GamR::TK::Gate gate;
-      gate.SetGate(canvas);
+      gate.SetGate(canvas, "x");
       std::cout << "Set background region: " << std::endl;
       GamR::TK::Gate back;
-      back.SetGate(canvas);
+      back.SetGate(canvas, "x");
       for (int i=0; i<spectra.size(); ++i) {
         gate.NormBackSub(spectra[i], norm_hist, back);
       }
       canvas->Update();        
     }
+    
+    void Rename(TVirtualPad *canvas) {
+      if (!canvas) { if (gPad) { canvas = gPad->GetCanvas(); } else { std::cout << "No active canvas" << std::endl; return; } }
+      std::vector<TH1D*> spectra = Utils::GetHists1D(canvas);
+      int ind = 0;
+      if (spectra.size() > 1) {
+        for (int i=0; i<spectra.size(); ++i) {
+          printf("%i     %s\n", i, spectra[i]->GetName());
+        }
+        std::cout << "Enter spectrum to rename: ";
+        std::cin >> ind;
+      }
+      TH1D* hist = spectra[ind];
+      std::cout << "Enter new name: ";
+      std::string name;
+      std::cin >> name;
+      spectra[ind]->SetName(name.c_str());
+      return;
+    }        
   }
 }
 

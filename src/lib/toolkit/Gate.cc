@@ -55,22 +55,22 @@ namespace GamR {
       SetLineColor(8); SetFillStyle(3003); SetFillColor(8);
     }
 
-    Gate::Gate(const char *name, TVirtualPad *canvas) : TNamed(name, name)
+    Gate::Gate(const char *name, TVirtualPad *canvas, Option_t *opt) : TNamed(name, name)
     {
       SetLineColor(8); SetFillStyle(3003); SetFillColor(8);
-      this->SetGate(canvas);
+      this->SetGate(canvas, opt);
     }
 
-    Gate::Gate(const char *name, const char *title, TVirtualPad *canvas) : TNamed(name, title)
+    Gate::Gate(const char *name, const char *title, TVirtualPad *canvas, Option_t *opt) : TNamed(name, title)
     {
       SetLineColor(8); SetFillStyle(3003); SetFillColor(8);
-      this->SetGate(canvas);
+      this->SetGate(canvas, opt);
     }
     
-    Gate::Gate(TVirtualPad *canvas)
+    Gate::Gate(TVirtualPad *canvas, Option_t *opt)
     {
       SetLineColor(8); SetFillStyle(3003); SetFillColor(8);
-      this->SetGate(canvas);
+      this->SetGate(canvas, opt);
     }
 
     int Gate::SetGate()
@@ -83,8 +83,11 @@ namespace GamR {
        @param canvas Pointer to a canvas cointaining some coordinate system. Not tested for anything other than a single histogram.
        @return Return value < 0 means a failure of some kind, otherwise the gate values have been set successfully
     */
-    int Gate::SetGate(TVirtualPad *canvas)
+    int Gate::SetGate(TVirtualPad *canvas, Option_t *opt)
     {
+      TString sOpt(opt);
+      sOpt.ToLower();      
+      
       TMarker *marker = new TMarker();
       TObject *obj;
 
@@ -128,13 +131,23 @@ namespace GamR {
         }
       }
       // set gate values
-      if ((highX - lowX) / (canvas->GetUxmax() - canvas->GetUxmin()) >=
-          (highY - lowY) / (canvas->GetUymax() - canvas->GetUymin())) {
+      if (sOpt.Contains("x")) {
         this->Low = lowX;
         this->High = highX;
-      } else {
+      }
+      else if (sOpt.Contains("y")) {
         this->Low = lowY;
         this->High = highY;
+      }
+      else {
+        if ((highX - lowX) / (canvas->GetUxmax() - canvas->GetUxmin()) >=
+            (highY - lowY) / (canvas->GetUymax() - canvas->GetUymin())) {
+          this->Low = lowX;
+          this->High = highX;
+        } else {
+          this->Low = lowY;
+          this->High = highY;
+        }
       }
 
       canvas->DeleteExec("ex");

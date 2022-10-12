@@ -70,6 +70,7 @@ TH1 *rb(TH1 *hist, int rebin) { return GamR::Spect::Rebin(hist, rebin); }
 void rb(TVirtualPad *canvas , int rebin) { GamR::Spect::Rebin(canvas, rebin); }
 void ns(TVirtualPad *canvas, Option_t *option) { GamR::Spect::NormSpectra(canvas, option); }
 void nsbs(TVirtualPad *canvas) { GamR::Spect::NormSpectraBackSub(canvas); }
+void rn(TVirtualPad *canvas) { GamR::Spect::Rename(canvas); }
 
 //2-D
 void ls2() { GamR::Spect::List2DSpectra(); }
