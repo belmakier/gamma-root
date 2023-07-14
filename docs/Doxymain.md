@@ -53,6 +53,28 @@ To make and install the documentation and get here:
 make lazydoc
 make opendoc
 ```
+## Build options
+
+GamR is comprised of several modules, not all of which are necessary
+and some of which have extra dependencies. By default, a selection of
+the most commonly used are enabled in `gamma-root/CMakeLists.txt`:
+
+```
+GAMRSORT "GamR sort program" OFF
+GAMRNUCLEUS "GamR level scheme drawing and fitting tools " ON
+GAMRANGDIST "GamR angular distributions and correlations" ON
+GAMRSPECT "GamR spectroscopy tools" ON
+GAMRORNL "GamR interface to old ORNL file formats" OFF
+GAMRTREE "GamR tree processing" OFF
+GAMRVIEWER "GamR tree processing - experimental" OFF
+GAMRPROC "GamR fast-timing processor" OFF
+GAMREFF "GamR HPGe efficiency fitting" ON
+GAMRCOULEX "GamR implementation of Winther-deBoer Coulex codes" OFF
+GAMRABBREVS "GamR abbreviations for command-line use" ON
+GAMRBATEMAN "GamR Bateman equation solver - requires BOOST" OFF
+```
+
+These can be adjusted for your requirements in `gamma-root/CMakeLists.txt`.
 
 ## Using GamR everywhere {#environment}
 
@@ -60,7 +82,7 @@ The following example assumes you have built and installed with
 `prefix=~/.local`. If not, adjust accordingly.
 
 Set your environment variables by putting the following in your
-`~/.profile` or something similar:
+`~/.profile`, `~/.bashrc`, or something similar:
 
 ```{.cc}
 export LD_LIBRARY_PATH=~/.local/lib:$LD_LIBRARY_PATH
@@ -81,7 +103,7 @@ In `~/.rootlogon.cc` add the following to intialize GammaROOT
 ```{.cxx}
 {
   // GammaROOT
-  gROOT->ProcessLine(".x $HOME/.local/share/gamr-0.0/gamrlogon.cc");
+  gROOT->ProcessLine(".x $HOME/.local/share/gamr-0.0.0/gamrlogon.cc");
 }
 ```
 

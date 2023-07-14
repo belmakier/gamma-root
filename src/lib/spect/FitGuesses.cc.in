@@ -1,3 +1,5 @@
+#include <regex>
+
 #include "FitGuesses.hh"
 
 namespace GamR {
@@ -125,9 +127,23 @@ namespace GamR {
         default:
           break;      
         }
-        std::cout << "Enter [value   low    high]: ";
+        std::string str;         
+        std::getline(std::cin, str);
         double val,low,high;        
-        std::cin >> val >> low >> high;
+        while (true) {
+          std::cout << "Enter [value   low    high]: ";
+          std::getline(std::cin, str);
+          std::regex rgx("[\\s,]+");
+          std::sregex_token_iterator iter(str.begin(), str.end(), rgx, -1);
+          std::sregex_token_iterator end;
+          std::vector<std::string> vals = {iter, end};
+          if (vals.size() != 3) { std::cout << "Invalid input" << std::endl;  continue; }
+          val = std::atof(vals[0].c_str());
+          low = std::atof(vals[1].c_str());
+          high = std::atof(vals[2].c_str());
+          break;          
+        }
+        
         Set(par, val, low, high);
         std::cout << "Parameter starting guesses are [val, low, high]:" << std::endl;
         std::cout << "0   Gaussian Width    [" << fWidth.val << ", " << fWidth.low << ", " << fWidth.high << " ]" << std::endl;

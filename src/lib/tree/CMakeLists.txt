@@ -1,5 +1,6 @@
 # EasyMode gamr/src/lib/tree/CMakeLists.txt
 set_property(GLOBAL APPEND PROPERTY GAMR_LIBS gamr_tree)
+set_property(GLOBAL APPEND PROPERTY GAMR_LIBDIRS tree)
 
 include_directories(${PROJECT_SOURCE_DIR}/src/lib)
 include_directories(${PROJECT_SOURCE_DIR}/extern)

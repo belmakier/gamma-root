@@ -289,8 +289,9 @@ namespace GamR {
       /* set initial guesses */
       double slope = (hist->GetBinContent(hist->FindBin(fHigh)) - hist->GetBinContent(hist->FindBin(fLow))) / (fHigh - fLow);
       fTotal->SetParameter(1, slope);
-      fTotal->SetParameter(0, (hist->GetBinContent(hist->FindBin(fLow)) +
-                           hist->GetBinContent(hist->FindBin(fHigh)))/2.0);
+      double offset = (hist->GetBinContent(hist->FindBin(fLow)) +
+                       hist->GetBinContent(hist->FindBin(fHigh)))/2.0;
+      fTotal->SetParameter(0, offset);
       if (parameters.iQuadBack) {
         fTotal->SetParameter(2, 0.01);
       }
@@ -304,7 +305,7 @@ namespace GamR {
         int nBin = hist->FindBin(cent);
         //auto pp = fPeakParamInds[i];
         auto pp = fPeakParamInds[peakKey];
-        fTotal->SetParameter(pp.iAmplitude, hist->GetBinContent(nBin));
+        fTotal->SetParameter(pp.iAmplitude, hist->GetBinContent(nBin) - (offset + slope*(cent - (fHigh + fLow)/2.0)));
         //fTotal->SetParameter(pp.iCentroid, Peaks[i]);
         fTotal->SetParameter(pp.iCentroid, cent);
         std::cout << pp.iCentroid << "   " << cent << std::endl;

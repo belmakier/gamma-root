@@ -14,6 +14,11 @@
 #include <toolkit/Peak.hh>
 
 
+//////////
+// HELP //
+//////////
+void help(std::string topic="");
+
 ////////////
 // GATING //
 ////////////

@@ -1,4 +1,5 @@
 set_property(GLOBAL APPEND PROPERTY GAMR_LIBS gamr_bateman)
+set_property(GLOBAL APPEND PROPERTY GAMR_LIBDIRS bateman)
 
 include_directories(${PROJECT_SOURCE_DIR}/src/lib ${Boost_INCLUDE_DIRS})
 

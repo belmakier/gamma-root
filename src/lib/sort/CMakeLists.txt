@@ -1,4 +1,5 @@
 set_property(GLOBAL APPEND PROPERTY GAMR_LIBS gamr_sort)
+set_property(GLOBAL APPEND PROPERTY GAMR_LIBDIRS sort)
 
 include_directories(${PROJECT_SOURCE_DIR}/src/lib)
 

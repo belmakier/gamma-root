@@ -1,4 +1,5 @@
 set_property(GLOBAL APPEND PROPERTY GAMR_LIBS gamr_utils)
+set_property(GLOBAL APPEND PROPERTY GAMR_LIBDIRS utils)
 
 #make root library
 configure_file(gamr_utils_Linkdef.h.in ${CMAKE_CURRENT_BINARY_DIR}/gamr_utils_Linkdef.h @ONLY)

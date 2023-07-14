@@ -1,5 +1,99 @@
 #include "Abbreviations.hh"
 
+//////////
+// HELP //
+//////////
+void help(std::string topic) {
+  if (topic.size() == 0) {
+    std::cout << "GamR help: " << std::endl;
+    std::cout << "help(<topic>)                       - help on specific topic" << std::endl;
+    std::cout << "topics include: " << std::endl;
+    std::cout << "    abbrevs                         - quick abbreviations for common functions" << std::endl;
+    std::cout << "    spect                           - spectroscopy tools" << std::endl;
+    std::cout << "    angdist                         - gamma-ray angular distribution and correlations" << std::endl;
+    std::cout << "    bateman                         - Bateman equation fitting" << std::endl;
+    std::cout << "    efficiency                      - fit efficienties for HPGe detectors and arrays" << std::endl;
+    std::cout << "    nucleus                         - fit and draw level schemes" << std::endl;
+  }
+  else if (topic == "abbrevs") {
+    std::cout << "GamR Abbreviations help: " << std::endl;
+    std::cout << "Abbreviations are commonly used functions designed to be used from the ROOT command line. They " << std::endl;
+    std::cout << "will typically call a more verbosely named GamR function in the appropriate namespace. Look at " << std::endl;
+    std::cout << "src/abbrevs/Abbreviations.hh and src/abbrevs/Abbreviations.cc to see the specific functions " << std::endl;
+    std::cout << "they are calling." << std::endl << std::endl;
+    std::cout << "    px(), py()                      - projections into X- or Y- axes, operates on current Canvas" << std::endl;
+    std::cout << "    gx(), gy()                      - interactive gating on X- or Y-axes" << std::endl;
+    std::cout << "    bsx(), bsy()                    - interactive background subtraction" << std::endl;
+    std::cout << std::endl;
+    std::cout << "    pf()                            - fit (Gaussian) peaks" << std::endl;
+    std::cout << "    pfconf()                        - configure fit parameters" << std::endl;
+    std::cout << "    pfprint()                       - print parameters" << std::endl;
+    std::cout << "    pfsave()                        - save parameters" << std::endl;
+    std::cout << std::endl;
+    std::cout << "    bp()                            - \"basic peak\". This sums the counts over a background, " << std::endl;
+    std::cout << "                                      which is usually fitted" << std::endl;
+    std::cout << "    cbp()                           - \"click basic peak\". As above, but background is a straight" << std::endl;
+    std::cout << "                                      line between two clicks on the canvas" << std::endl;
+    std::cout << "    ig()                            - integrate between two bounds" << std::endl;
+    std::cout << "    igbs()                          - integrate with background subtraction" << std::endl;
+    std::cout << "    ct()                            - counts between two bounds" << std::endl;
+    std::cout << "    ctbs()                          - counts with background subtraction" << std::endl;
+    std::cout << "    fp()                            - \"find peaks\", implementation of ROOTs TSpectrum search" << std::endl;
+    std::cout << std::endl;
+    std::cout << "    ls()                            - list 1D histograms in current directory" << std::endl;
+    std::cout << "    sp(i)                           - draw histogram i" << std::endl;
+    std::cout << "    os()                            - overlay 1D histograms. This takes a {list} of indices, histogram" << std::endl;
+    std::cout << "                                      pointers, or start and stop indices for sequential lists. Also can" << std::endl;
+    std::cout << "                                      do x-slices of a 2D histogram, or a {list} of file names followed by" << std::endl;
+    std::cout << "                                      a histogram name (the same in each file)" << std::endl;
+    std::cout << "    ss()                            - stack spectra, same arguments as above" << std::endl;
+    std::cout << std::endl;
+    std::cout << "    lin()                           - linear (y) scale" << std::endl;
+    std::cout << "    log()                           - log (y) scale" << std::endl;
+    std::cout << "    zx(), zy()                      - zoom to limits on x/y" << std::endl;
+    std::cout << "    uzx(), uzy(), uz()              - unzoom" << std::endl;
+    std::cout << std::endl;
+    std::cout << "    ca()                            - calibrate, returns pair of gain/offset for linear calibration" << std::endl;
+    std::cout << std::endl;
+    std::cout << "    add()                           - sum lists of spectra together" << std::endl;
+    std::cout << "    rb()                            - rebin" << std::endl;
+    std::cout << "    ns()                            - \"norm spectra\", normalize to region indicated by clicks" << std::endl;
+    std::cout << "    nsbs()                          - as above but with background subtraction" << std::endl;
+    std::cout << "    rn()                            - rename currently plotted histogram" << std::endl;
+    std::cout << std::endl;
+    std::cout << "    ls2()                           - list 2D spectra" << std::endl;
+    std::cout << "    sp2(i)                          - plot 2D spectrum by index" << std::endl;
+    std::cout << "    add2()                          - add 2D spectra" << std::endl;
+    std::cout << std::endl;
+  }
+  else if ( topic == "spect" ) {
+    std::cout << "GamR Spectroscopy help: " << std::endl;
+    std::cout << "Spectroscopy tools - calibrations, cuts, display utilities, peak fitting, and I/O to ASCII text formats." << std::endl;
+    std::cout << "Look in src/lib/spect/ for more details" << std::endl;
+  }
+  else if (topic == "angdist" ) {
+    std::cout << "GamR Angdist help: " << std::endl;
+    std::cout << "Angular distribution/correlation tools. Formalism for statistical tensors, population parameters, Fk and" << std::endl;
+    std::cout << "Ak coefficients, gamma-ray angular distributions and correlations. Fitting angular correlations is here," << std::endl;
+    std::cout << "as well as Time-Dependent Perturbed Angular Distributions." << std::endl;
+  }
+  else if (topic == "bateman" ) {
+    std::cout << "GamR Bateman help: " << std::endl;
+    std::cout << "For fitting the Bateman equations numerically for an arbitrary feeding/decay scheme" << std::endl;
+  }
+  else if (topic == "efficiency" ) {
+    std::cout << "GamR Efficiency help: " << std::endl;
+    std::cout << "Classes for fitting HPGe efficiency curves. Uses the Radware 7-parameter function, can stitch together " << std::endl;
+    std::cout << "multiple data sets, do several detectors simultaneously, and optionally anchor to absolute efficiency points" << std::endl;
+  }
+  else if (topic == "nucleus") {
+    std::cout << "GamR Nucleus help: " << std::endl;
+    std::cout << "Classes for fitting and drawing level schemes" << std::endl;
+  }
+  else {
+    std::cout << "Unknown topic" << std::endl;
+  }
+}   
 ////////////
 // GATING //
 ////////////

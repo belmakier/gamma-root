@@ -1,4 +1,5 @@
 set_property(GLOBAL APPEND PROPERTY GAMR_LIBS gamr_toolkit)
+set_property(GLOBAL APPEND PROPERTY GAMR_LIBDIRS toolkit)
 
 include_directories(${PROJECT_SOURCE_DIR}/src/lib)
 

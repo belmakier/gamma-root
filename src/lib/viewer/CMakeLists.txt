@@ -1,4 +1,5 @@
 set_property(GLOBAL APPEND PROPERTY GAMR_LIBS gamr_viewer)
+set_property(GLOBAL APPEND PROPERTY GAMR_LIBDIRS viewer)
 
 include_directories(${PROJECT_SOURCE_DIR}/src/lib)
 include_directories(${PROJECT_BINARY_DIR}/src/lib)

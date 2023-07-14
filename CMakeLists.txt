@@ -21,12 +21,29 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3 -march=native -pipe")
 
 #set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 
+option(GAMRSORT "GamR sort program" OFF)
+option(GAMRNUCLEUS "GamR level scheme drawing and fitting tools " ON)
+option(GAMRANGDIST "GamR angular distributions and correlations" ON)
+option(GAMRSPECT "GamR spectroscopy tools" ON)
+option(GAMRORNL "GamR interface to old ORNL file formats" ON)
+option(GAMRTREE "GamR tree processing" OFF)
+option(GAMRVIEWER "GamR tree processing - experimental" OFF)
+option(GAMRPROC "GamR fast-timing processor" OFF)
+option(GAMREFF "GamR HPGe efficiency fitting" ON)
+option(GAMRCOULEX "GamR implementation of Winther-deBoer Coulex codes" ON)
+option(GAMRABBREVS "GamR abbreviations for command-line use" ON)
+option(GAMRBATEMAN "GamR Bateman equation solver - requires BOOST" ON)
+
 option(gamr_WITH_TESTING "Build tests/examples" ON)
 option(gamr_NO_INSTALL "Skip installation process" OFF)
 
 define_property(GLOBAL PROPERTY GAMR_LIBS
   BRIEF_DOCS "List of GamR libraries"
   FULL_DOCS "List of GamR libraries"
+)
+define_property(GLOBAL PROPERTY GAMR_LIBDIRS
+  BRIEF_DOCS "List of GamR library directories"
+  FULL_DOCS "List of GamR library directories"
 )
 
 if(${PROJECT_SOURCE_DIR} STREQUAL ${PROJECT_BINARY_DIR})
@@ -56,6 +73,9 @@ include(${ROOT_USE_FILE})
 
 #boost
 find_package(Boost)
+if (NOT ${Boost_FOUND})
+  set(GAMRBATEMAN OFF)
+endif()
 
 #doxygen
 find_package(Doxygen)
@@ -107,6 +127,7 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/src/bin)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/tests)
 
 get_property(libs GLOBAL PROPERTY GAMR_LIBS)
+get_property(libdirs GLOBAL PROPERTY GAMR_LIBDIRS)
 #generate rootlogon
 set(GAMR_ROOTLOGON_LIBS "// Libraries")
 foreach (lib ${libs})
@@ -115,7 +136,11 @@ endforeach()
 
 set(GAMR_ROOTLOGON_INCLUDES "// Includes")
 set(GAMR_ROOTLOGON_INCLUDES "${GAMR_ROOTLOGON_INCLUDES}\ngROOT->ProcessLine(\".include ${CMAKE_INSTALL_PREFIX}/${GAMR_INSTALL_INCDIR}\");")
-file(GLOB_RECURSE includes RELATIVE "${PROJECT_SOURCE_DIR}/src/lib" "${PROJECT_SOURCE_DIR}/src/lib/*.hh")
+
+foreach (lib ${libdirs})
+  file(GLOB_RECURSE inc RELATIVE "${PROJECT_SOURCE_DIR}/src/lib/" "${PROJECT_SOURCE_DIR}/src/lib/${lib}/*.hh")
+  list(APPEND includes ${inc})
+endforeach()
 
 foreach(inc ${includes})
   set(GAMR_ROOTLOGON_INCLUDES "${GAMR_ROOTLOGON_INCLUDES}\ngROOT->ProcessLine(\"#include <${inc}>\");")

@@ -967,6 +967,13 @@ namespace GamR {
       fclose(file);
     }
 
+    void MultiEffFit::WriteGraphs(std::string outDir)
+    {
+      for ( auto &det : fEffFits) {
+        det.second.WriteGraph(outDir+"/det"+std::to_string(det.first));      
+      }
+    }        
+
     void EffFit::PrintParams(const char *outFile) {
       FILE *file;
       file = fopen(outFile, "wa");

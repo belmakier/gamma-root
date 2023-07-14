@@ -124,6 +124,7 @@ namespace GamR {
       void EraseData(int iDataSet, std::string key);
       void Fit();
       void Fit(int ID);
+      void WriteGraphs(std::string outDir);
       void Draw(const char *outFile, double xlow=-1, double xhigh=-1);
       void PrintDataSet(int i, const char *fileNameBase);
       void PrintDataSet(int i, int ID, const char *fileNameBase);

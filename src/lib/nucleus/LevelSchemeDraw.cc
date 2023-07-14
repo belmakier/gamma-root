@@ -1,6 +1,7 @@
 #include <string>
 #include <algorithm>
 #include <iostream>
+#include <iomanip>
 
 #include <TStyle.h>
 #include <TH2F.h>
@@ -31,8 +32,8 @@ namespace GamR {
           extline->SetY1(fDrawPos);
           extline->SetY2(fDrawPos);
           extline->SetLineColor(kGray+1);
-          extline->SetLineWidth(3);
           extline->SetLineStyle(2);
+          extline->SetLineWidth(1);
           extline->Paint();
         }
 
