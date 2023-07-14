@@ -1,5 +1,8 @@
 <map id="ss" name="ss">
-<area shape="rect" id="node1" title=" " alt="" coords="5,29,44,55"/>
-<area shape="rect" id="node2" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="92,29,276,55"/>
-<area shape="rect" id="node3" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="324,29,512,55"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,44,55"/>
+<area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="92,29,275,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,40,77,40,77,45,44,45"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="156,30,151,21,154,11,165,5,183,3,204,6,214,13,211,17,202,11,183,8,167,10,158,15,156,20,161,28"/>
+<area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="323,29,510,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="275,40,308,40,308,45,275,45"/>
 </map>

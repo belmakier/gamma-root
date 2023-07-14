@@ -1,4 +1,5 @@
 <map id="add" name="add">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,48,31"/>
-<area shape="rect" id="node2" href="$dc/d89/namespace_gam_r_1_1_spect.html#af3880c68bdb7330d8a4f8984b0a056a7" title=" " alt="" coords="96,5,224,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,48,31"/>
+<area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#af3880c68bdb7330d8a4f8984b0a056a7" title=" " alt="" coords="96,5,223,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="48,16,80,16,80,21,48,21"/>
 </map>

@@ -1,11 +1,21 @@
 <map id="GamR::Nucleus::Photon" name="GamR::Nucleus::Photon">
-<area shape="rect" id="node1" title=" " alt="" coords="25,1444,189,1660"/>
-<area shape="rect" id="node2" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html" title=" " alt="" coords="17,1076,197,1395"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,81,45"/>
-<area shape="rect" id="node4" href="$d0/d79/class_gam_r_1_1_t_k_1_1_gate.html" title=" " alt="" coords="79,108,234,896"/>
-<area shape="rect" id="node7" title=" " alt="" coords="177,959,317,1013"/>
-<area shape="rect" id="node5" title=" " alt="" coords="105,5,181,45"/>
-<area shape="rect" id="node6" title=" " alt="" coords="205,5,273,45"/>
-<area shape="rect" id="node8" title=" " alt="" coords="259,482,375,522"/>
-<area shape="rect" id="node9" title=" " alt="" coords="297,5,336,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="17,1860,168,2145"/>
+<area shape="rect" id="Node000002" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html" title=" " alt="" coords="9,1405,176,1810"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,1825,95,1860,90,1860,90,1825"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,68,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="39,85,39,537,45,864,58,1199,74,1405,69,1405,53,1199,40,864,34,537,34,85"/>
+<area shape="rect" id="Node000004" href="$d0/d79/class_gam_r_1_1_t_k_1_1_gate.html" title=" " alt="" coords="67,134,211,1199"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="49,84,51,94,70,198,65,199,46,95,44,85"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="110,1199,107,1262,102,1388,97,1388,102,1262,105,1199"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="161,1262,288,1342"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="148,1198,163,1237,169,1247,164,1250,158,1239,143,1200"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="97,5,160,71"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="132,85,133,134,128,134,127,85"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="184,5,239,71"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="209,85,203,134,198,134,203,85"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="210,1343,185,1401,180,1399,206,1341"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="236,634,339,699"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="285,713,231,1263,226,1262,280,713"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="277,5,298,71"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="290,70,290,616,285,616,285,70"/>
 </map>

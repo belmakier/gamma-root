@@ -1,6 +1,9 @@
 <map id="GamR::Utils::Simps" name="GamR::Utils::Simps">
-<area shape="rect" id="node1" title=" " alt="" coords="480,45,615,70"/>
-<area shape="rect" id="node2" href="$d2/dbb/class_gam_r_1_1_ang_dist_1_1_solid_attenuation.html#a39379826114a965263db0d711beebd23" title=" " alt="" coords="219,5,431,45"/>
-<area shape="rect" id="node3" href="$dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#a4df2a2d0965e337fde3c1c7f2e68e669" title=" " alt="" coords="219,69,432,109"/>
-<area shape="rect" id="node4" href="$d6/d76/namespace_gam_r_1_1_coulex.html#a41b07b0aa204c45d637b7c5a4e57d989" title=" " alt="" coords="5,77,171,102"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="478,46,612,72"/>
+<area shape="rect" id="Node000002" href="$d2/dbb/class_gam_r_1_1_ang_dist_1_1_solid_attenuation.html#a39379826114a965263db0d711beebd23" title=" " alt="" coords="218,5,430,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="463,49,430,44,430,39,464,44"/>
+<area shape="rect" id="Node000003" href="$dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#a4df2a2d0965e337fde3c1c7f2e68e669" title=" " alt="" coords="218,71,430,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="464,73,431,78,430,73,463,68"/>
+<area shape="rect" id="Node000004" href="$d6/d76/namespace_gam_r_1_1_coulex.html#a41b07b0aa204c45d637b7c5a4e57d989" title=" " alt="" coords="5,78,170,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="203,94,170,94,170,88,203,88"/>
 </map>

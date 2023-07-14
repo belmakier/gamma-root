@@ -1,6 +1,9 @@
 <map id="bsx" name="bsx">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,48,56"/>
-<area shape="rect" id="node2" href="$dc/d89/namespace_gam_r_1_1_spect.html#a796934a2403375f7aaef94f590ea1547" title=" " alt="" coords="96,31,328,56"/>
-<area shape="rect" id="node3" href="$d0/d74/group___t_k.html#ga6a034a8dfa2c1699aabb9e4111d79cbf" title=" " alt="" coords="392,5,555,31"/>
-<area shape="rect" id="node4" href="$d0/d74/group___t_k.html#ga19210db8af7134007ff4fc26878b5dc2" title=" " alt="" coords="376,55,571,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,47,56"/>
+<area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#a796934a2403375f7aaef94f590ea1547" title=" " alt="" coords="95,31,326,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="47,41,80,41,80,46,47,46"/>
+<area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#ga6a034a8dfa2c1699aabb9e4111d79cbf" title=" " alt="" coords="390,5,552,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="326,30,375,25,375,30,327,35"/>
+<area shape="rect" id="Node000004" href="$d0/d74/group___t_k.html#ga19210db8af7134007ff4fc26878b5dc2" title=" " alt="" coords="374,55,568,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="327,52,359,55,359,60,326,57"/>
 </map>

@@ -1,13 +1,25 @@
 <map id="GamR::Tree::TDetDefn&lt; Ts &gt;::InterpretPointers" name="GamR::Tree::TDetDefn&lt; Ts &gt;::InterpretPointers">
-<area shape="rect" id="node1" title=" " alt="" coords="198,563,359,661"/>
-<area shape="rect" id="node2" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html" title=" " alt="" coords="5,225,181,500"/>
-<area shape="rect" id="node3" title=" " alt="" coords="57,123,129,163"/>
-<area shape="rect" id="node4" title=" " alt="" coords="205,328,352,397"/>
-<area shape="rect" id="node5" title=" " alt="" coords="509,123,592,163"/>
-<area shape="rect" id="node10" title=" " alt="" coords="377,343,541,383"/>
-<area shape="rect" id="node6" title=" " alt="" coords="487,5,615,60"/>
-<area shape="rect" id="node7" title=" " alt="" coords="186,123,307,163"/>
-<area shape="rect" id="node8" title=" " alt="" coords="214,13,253,53"/>
-<area shape="rect" id="node9" title=" " alt="" coords="331,13,370,53"/>
-<area shape="rect" id="node11" title=" " alt="" coords="341,123,457,163"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="187,700,339,800"/>
+<area shape="rect" id="Node000002" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html" title=" " alt="" coords="5,277,172,637"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,614,187,635,219,684,215,687,182,638,170,617"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="59,148,118,214"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,228,91,277,86,277,86,228"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="197,417,330,497"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="266,497,266,683,261,683,261,497"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="493,148,562,214"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="508,215,489,237,465,255,447,263,430,266,401,265,373,265,359,269,344,279,319,305,300,336,286,369,276,401,271,400,281,368,295,334,315,302,340,275,356,264,372,260,401,259,430,260,445,257,462,250,485,233,504,212"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="355,424,505,489"/>
+<area shape="poly" id="edge10_Node000010_Node000005" title=" " alt="" coords="536,214,535,253,522,297,503,339,463,411,458,409,499,337,517,295,530,252,531,213"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="470,5,585,85"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="530,99,530,148,525,148,525,99"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="176,148,284,214"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="233,228,234,252,245,341,258,416,253,417,240,341,229,253,227,228"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="206,13,227,78"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="219,78,221,124,222,132,217,132,216,125,214,78"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="322,13,343,78"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="324,62,266,137,262,134,320,59"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="329,148,432,214"/>
+<area shape="poly" id="edge12_Node000011_Node000009" title=" " alt="" coords="346,75,366,131,361,133,341,77"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="426,490,398,578,376,629,348,677,339,689,335,686,344,674,372,626,393,576,420,488"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="383,228,385,252,403,346,423,423,418,425,397,347,380,253,378,228"/>
 </map>

@@ -1,7 +1,13 @@
 <map id="src/lib/bateman/Scheme.hh" name="src/lib/bateman/Scheme.hh">
-<area shape="rect" id="node1" title=" " alt="" coords="31,5,211,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,152,60,177"/>
-<area shape="rect" id="node3" title=" " alt="" coords="181,152,239,177"/>
-<area shape="rect" id="node4" href="$d8/dfb/_nucleus_8hh.html" title=" " alt="" coords="77,79,164,104"/>
-<area shape="rect" id="node5" title=" " alt="" coords="85,152,157,177"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="29,5,208,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,153,59,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,33,86,54,66,80,51,110,41,140,36,138,47,108,62,78,82,51,103,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="178,153,235,178"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,30,155,51,176,78,191,108,202,138,197,140,186,110,171,80,151,54,130,33"/>
+<area shape="rect" id="Node000004" href="$d8/dfb/_nucleus_8hh.html" title=" " alt="" coords="76,79,162,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="121,31,121,64,116,64,116,31"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="106,107,59,145,56,141,102,103"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="135,103,182,141,179,145,132,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="83,153,154,178"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="121,105,121,138,116,138,116,105"/>
 </map>

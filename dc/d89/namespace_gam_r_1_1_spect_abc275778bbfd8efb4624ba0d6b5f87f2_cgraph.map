@@ -1,6 +1,9 @@
 <map id="GamR::Spect::CountsBS" name="GamR::Spect::CountsBS">
-<area shape="rect" id="node1" title=" " alt="" coords="5,45,169,70"/>
-<area shape="rect" id="node2" href="$dc/d89/namespace_gam_r_1_1_spect.html#a4be92f8a1a93dce88a3536f732eb6080" title=" " alt="" coords="217,45,381,70"/>
-<area shape="rect" id="node3" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#afd83986d64ce37818c1d1dade9881e75" title=" " alt="" coords="429,5,605,45"/>
-<area shape="rect" id="node4" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a3f8c39fbbcecc2006167727936830ae0" title=" " alt="" coords="429,69,605,109"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,46,169,72"/>
+<area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#a4be92f8a1a93dce88a3536f732eb6080" title=" " alt="" coords="217,46,380,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,56,202,56,202,62,169,62"/>
+<area shape="rect" id="Node000003" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#afd83986d64ce37818c1d1dade9881e75" title=" " alt="" coords="428,5,603,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="380,44,413,39,414,44,381,49"/>
+<area shape="rect" id="Node000004" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a3f8c39fbbcecc2006167727936830ae0" title=" " alt="" coords="428,71,603,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="381,68,414,73,413,79,380,74"/>
 </map>

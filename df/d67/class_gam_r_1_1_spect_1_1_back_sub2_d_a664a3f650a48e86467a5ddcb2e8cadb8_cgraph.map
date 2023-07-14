@@ -1,13 +1,23 @@
 <map id="GamR::Spect::BackSub2D::BackSub2D" name="GamR::Spect::BackSub2D::BackSub2D">
-<area shape="rect" id="node1" title=" " alt="" coords="5,229,180,269"/>
-<area shape="rect" id="node2" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a1acd94c1670f649c8308288f9e1b4d82" title=" " alt="" coords="228,5,403,45"/>
-<area shape="rect" id="node3" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#ae2b4bdcc7f8e7f92a46c7357570c78e1" title=" " alt="" coords="228,69,403,109"/>
-<area shape="rect" id="node4" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a4522f7d3d64a2461d86beaa10ae5ee16" title=" " alt="" coords="228,133,403,173"/>
-<area shape="rect" id="node5" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a7364f6379ed6bffcd1cceb3ad6c31303" title=" " alt="" coords="228,197,403,237"/>
-<area shape="rect" id="node6" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#aed5a33c8e7cee9f4090341fba68eb616" title=" " alt="" coords="228,261,403,301"/>
-<area shape="rect" id="node7" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a95e9c510d42f64b4bbd8c7faac2361a7" title=" " alt="" coords="228,325,403,365"/>
-<area shape="rect" id="node8" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a04e137f9d80e42a97910980dd8000ec7" title=" " alt="" coords="228,389,403,429"/>
-<area shape="rect" id="node9" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a9a5803edfc6d768c32ed659cabae8847" title=" " alt="" coords="228,453,403,493"/>
-<area shape="rect" id="node10" href="$d0/d74/group___t_k.html#gac1c2149596c0bc3ee71f38a871d0aa98" title=" " alt="" coords="451,435,621,461"/>
-<area shape="rect" id="node11" href="$d0/d74/group___t_k.html#ga0c870043965f984b34e65455819d47cf" title=" " alt="" coords="452,485,620,510"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,235,179,275"/>
+<area shape="rect" id="Node000002" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a1acd94c1670f649c8308288f9e1b4d82" title=" " alt="" coords="227,5,400,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,233,118,196,146,149,182,100,225,57,233,51,236,56,228,61,186,103,150,152,123,198,105,235"/>
+<area shape="rect" id="Node000003" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#ae2b4bdcc7f8e7f92a46c7357570c78e1" title=" " alt="" coords="227,71,400,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,232,157,178,190,149,225,122,236,116,238,121,228,127,193,153,161,182,112,236"/>
+<area shape="rect" id="Node000004" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a4522f7d3d64a2461d86beaa10ae5ee16" title=" " alt="" coords="227,136,400,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="133,232,226,187,242,180,244,185,228,192,135,237"/>
+<area shape="rect" id="Node000005" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a7364f6379ed6bffcd1cceb3ad6c31303" title=" " alt="" coords="227,201,400,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="179,239,211,234,212,240,180,245"/>
+<area shape="rect" id="Node000006" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#aed5a33c8e7cee9f4090341fba68eb616" title=" " alt="" coords="227,267,400,307"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="180,265,212,270,211,275,179,270"/>
+<area shape="rect" id="Node000007" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a95e9c510d42f64b4bbd8c7faac2361a7" title=" " alt="" coords="227,332,400,373"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="136,274,228,317,244,324,242,329,226,321,134,278"/>
+<area shape="rect" id="Node000008" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a04e137f9d80e42a97910980dd8000ec7" title=" " alt="" coords="227,397,400,438"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="112,274,161,327,193,356,228,382,238,388,236,393,225,387,190,360,157,331,108,277"/>
+<area shape="rect" id="Node000009" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a9a5803edfc6d768c32ed659cabae8847" title=" " alt="" coords="227,463,400,503"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="105,274,123,311,150,357,186,405,228,448,236,453,233,457,225,452,182,409,146,360,118,314,100,277"/>
+<area shape="rect" id="Node000010" href="$d0/d74/group___t_k.html#gac1c2149596c0bc3ee71f38a871d0aa98" title=" " alt="" coords="448,445,617,471"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="400,470,433,467,433,472,401,476"/>
+<area shape="rect" id="Node000011" href="$d0/d74/group___t_k.html#ga0c870043965f984b34e65455819d47cf" title=" " alt="" coords="449,494,616,520"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="401,490,435,494,434,499,400,495"/>
 </map>

@@ -1,6 +1,9 @@
 <map id="GamR::TK::BPeak" name="GamR::TK::BPeak">
-<area shape="rect" id="node1" title=" " alt="" coords="125,299,256,676"/>
-<area shape="rect" id="node2" href="$d3/d75/class_gam_r_1_1_t_k_1_1_peak.html" title=" " alt="" coords="5,5,128,251"/>
-<area shape="rect" id="node3" title=" " alt="" coords="153,108,229,148"/>
-<area shape="rect" id="node4" title=" " alt="" coords="253,108,329,148"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="113,379,233,884"/>
+<area shape="rect" id="Node000002" href="$d3/d75/class_gam_r_1_1_t_k_1_1_peak.html" title=" " alt="" coords="5,5,117,331"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,344,116,383,111,384,101,345"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="142,135,205,201"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="176,215,176,379,171,379,171,215"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="229,135,291,201"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="254,215,223,380,218,379,249,214"/>
 </map>

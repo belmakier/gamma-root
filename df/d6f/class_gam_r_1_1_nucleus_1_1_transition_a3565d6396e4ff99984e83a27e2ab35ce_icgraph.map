@@ -1,8 +1,19 @@
 <map id="GamR::Nucleus::Transition::Apply" name="GamR::Nucleus::Transition::Apply">
-<area shape="rect" id="node1" title=" " alt="" coords="459,77,635,117"/>
-<area shape="rect" id="node2" href="$dc/d89/namespace_gam_r_1_1_spect.html#a96b06b9b004342fbf0f54cd3d6a308a8" title=" " alt="" coords="238,55,405,80"/>
-<area shape="rect" id="node5" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a7d0d1589078b53be7a8da0372924c349" title=" " alt="" coords="232,105,411,145"/>
-<area shape="rect" id="node3" href="$d0/d17/_abbreviations_8cc.html#a3b6d2dcc82484190d559ea26a6facead" title=" " alt="" coords="71,5,118,31"/>
-<area shape="rect" id="node4" href="$dc/d89/namespace_gam_r_1_1_spect.html#a65b45f6deafa9285890fe026d37bff2e" title=" " alt="" coords="11,55,178,80"/>
-<area shape="rect" id="node6" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#ade67fbd9efac760657e3d1455a2f5592" title=" " alt="" coords="5,105,184,145"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="458,150,633,191"/>
+<area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#a96b06b9b004342fbf0f54cd3d6a308a8" title=" " alt="" coords="238,104,404,130"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="443,149,377,133,379,128,444,143"/>
+<area shape="rect" id="Node000007" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a7d0d1589078b53be7a8da0372924c349" title=" " alt="" coords="232,203,410,244"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="444,197,410,205,409,200,443,192"/>
+<area shape="rect" id="Node000003" href="$d0/d17/_abbreviations_8cc.html#a3b6d2dcc82484190d559ea26a6facead" title=" " alt="" coords="72,5,117,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="286,98,238,71,183,45,117,25,118,20,185,40,240,66,288,94"/>
+<area shape="rect" id="Node000004" href="$dc/d89/namespace_gam_r_1_1_spect.html#a5c8a9e7165c96f14b6627917438a8bd0" title=" " alt="" coords="12,55,177,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="244,103,156,84,157,78,245,98"/>
+<area shape="rect" id="Node000005" href="$dc/d89/namespace_gam_r_1_1_spect.html#a362ed8e162c3ae603c3e410100f93d30" title=" " alt="" coords="12,104,177,130"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="224,120,178,120,178,114,224,114"/>
+<area shape="rect" id="Node000006" href="$dc/d89/namespace_gam_r_1_1_spect.html#a65b45f6deafa9285890fe026d37bff2e" title=" " alt="" coords="12,153,177,179"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="245,136,157,155,156,150,244,131"/>
+<area shape="rect" id="Node000008" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#ade67fbd9efac760657e3d1455a2f5592" title=" " alt="" coords="5,203,184,244"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="217,226,184,226,184,221,217,221"/>
+<area shape="rect" id="Node000009" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a22cc58bf6eb5d0eda0bc207561b76921" title=" " alt="" coords="5,269,184,309"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="235,251,168,270,167,265,234,246"/>
 </map>

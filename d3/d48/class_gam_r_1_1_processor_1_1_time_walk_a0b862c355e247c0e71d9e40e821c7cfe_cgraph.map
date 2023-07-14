@@ -1,6 +1,10 @@
 <map id="GamR::Processor::TimeWalk::Draw" name="GamR::Processor::TimeWalk::Draw">
-<area shape="rect" id="node1" title="Draws Time Walk graphs." alt="" coords="5,22,193,62"/>
-<area shape="rect" id="node2" href="$d0/d17/_abbreviations_8cc.html#a5d1794b612bdcca3f4f4baa3d2e38a0b" title=" " alt="" coords="241,29,280,55"/>
-<area shape="rect" id="node3" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="328,29,512,55"/>
-<area shape="rect" id="node4" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="560,29,748,55"/>
+<area shape="rect" id="Node000001" title="Draws Time Walk graphs." alt="" coords="5,22,193,63"/>
+<area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#a5d1794b612bdcca3f4f4baa3d2e38a0b" title=" " alt="" coords="241,29,279,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,40,226,40,226,45,193,45"/>
+<area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="327,29,510,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="280,40,312,40,312,45,280,45"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="392,30,386,21,390,11,401,5,419,3,439,6,449,13,446,17,437,11,419,8,402,10,394,15,392,20,396,28"/>
+<area shape="rect" id="Node000004" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="558,29,746,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="511,40,543,40,543,45,511,45"/>
 </map>

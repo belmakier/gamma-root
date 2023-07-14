@@ -1,6 +1,9 @@
 <map id="ig" name="ig">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,44,60"/>
-<area shape="rect" id="node2" href="$dc/d89/namespace_gam_r_1_1_spect.html#afbcb55a2fec43bce818cc083d4ce1a67" title=" " alt="" coords="92,35,240,60"/>
-<area shape="rect" id="node3" href="$d0/d74/group___t_k.html#gaae543a7d595e5faacbfb4da05718e3f3" title=" " alt="" coords="288,5,475,31"/>
-<area shape="rect" id="node4" href="$d0/d74/group___t_k.html#gaa69e554368ffbdbf2a5aa6cb6828e52b" title=" " alt="" coords="288,55,475,95"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,44,60"/>
+<area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#afbcb55a2fec43bce818cc083d4ce1a67" title=" " alt="" coords="92,35,239,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,45,77,45,77,50,44,50"/>
+<area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#gaae543a7d595e5faacbfb4da05718e3f3" title=" " alt="" coords="287,5,472,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="239,35,272,30,273,36,240,40"/>
+<area shape="rect" id="Node000004" href="$d0/d74/group___t_k.html#gaa69e554368ffbdbf2a5aa6cb6828e52b" title=" " alt="" coords="287,55,472,96"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="240,54,273,59,272,64,239,60"/>
 </map>

@@ -1,5 +1,8 @@
 <map id="GamR::Spect::ZoomAllX" name="GamR::Spect::ZoomAllX">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,168,56"/>
-<area shape="rect" id="node2" href="$d0/db7/namespace_gam_r_1_1_utils.html#a31f74a9ca644d560dc14e19c4dbd773b" title=" " alt="" coords="216,5,375,31"/>
-<area shape="rect" id="node3" href="$d0/db7/namespace_gam_r_1_1_utils.html#a0adbf2bb55ef0a9adfc45b00210c92c0" title=" " alt="" coords="216,55,375,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,167,56"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="51,32,44,22,49,12,63,6,86,4,113,7,125,15,123,19,111,12,86,9,64,11,52,16,50,21,56,29"/>
+<area shape="rect" id="Node000002" href="$d0/db7/namespace_gam_r_1_1_utils.html#a31f74a9ca644d560dc14e19c4dbd773b" title=" " alt="" coords="215,5,373,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,31,200,27,200,32,168,36"/>
+<area shape="rect" id="Node000003" href="$d0/db7/namespace_gam_r_1_1_utils.html#a0adbf2bb55ef0a9adfc45b00210c92c0" title=" " alt="" coords="215,55,373,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,50,200,54,200,59,167,55"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="GamR::AngDist::AngCorrFit::GetChiGraph" name="GamR::AngDist::AngCorrFit::GetChiGraph">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,184,45"/>
-<area shape="rect" id="node2" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a5b4762b8dd39dccfc4bb816065fe6422" title=" " alt="" coords="232,5,411,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,184,46"/>
+<area shape="rect" id="Node000002" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a5b4762b8dd39dccfc4bb816065fe6422" title=" " alt="" coords="232,5,410,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,23,216,23,216,28,184,28"/>
 </map>

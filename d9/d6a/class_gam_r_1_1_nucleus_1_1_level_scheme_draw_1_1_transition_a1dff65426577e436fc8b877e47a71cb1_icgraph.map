@@ -1,5 +1,7 @@
 <map id="GamR::Nucleus::LevelSchemeDraw::Transition::GetHeadLength" name="GamR::Nucleus::LevelSchemeDraw::Transition::GetHeadLength">
-<area shape="rect" id="node1" title=" " alt="" coords="499,5,712,45"/>
-<area shape="rect" id="node2" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a81da29d9ed290b48be5b2b06e4806ee5" title=" " alt="" coords="252,5,451,45"/>
-<area shape="rect" id="node3" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#ad71d5d8d4386caf0427b1ce89516bd93" title=" " alt="" coords="5,5,204,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="498,5,710,46"/>
+<area shape="rect" id="Node000002" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a81da29d9ed290b48be5b2b06e4806ee5" title=" " alt="" coords="252,5,450,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="483,28,450,28,450,23,483,23"/>
+<area shape="rect" id="Node000003" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#ad71d5d8d4386caf0427b1ce89516bd93" title=" " alt="" coords="5,5,204,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="236,28,204,28,204,23,236,23"/>
 </map>

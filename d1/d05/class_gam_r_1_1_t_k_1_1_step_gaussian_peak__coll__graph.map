@@ -1,5 +1,7 @@
 <map id="GamR::TK::StepGaussianPeak" name="GamR::TK::StepGaussianPeak">
-<area shape="rect" id="node1" title=" " alt="" coords="5,577,209,925"/>
-<area shape="rect" id="node2" href="$da/d4a/class_gam_r_1_1_t_k_1_1_f_peak.html" title=" " alt="" coords="42,299,173,529"/>
-<area shape="rect" id="node3" href="$d3/d75/class_gam_r_1_1_t_k_1_1_peak.html" title=" " alt="" coords="46,5,169,251"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,712,196,1177"/>
+<area shape="rect" id="Node000002" href="$da/d4a/class_gam_r_1_1_t_k_1_1_f_peak.html" title=" " alt="" coords="41,379,161,664"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,678,103,712,98,712,98,678"/>
+<area shape="rect" id="Node000003" href="$d3/d75/class_gam_r_1_1_t_k_1_1_peak.html" title=" " alt="" coords="45,5,157,331"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="103,345,103,379,98,379,98,345"/>
 </map>

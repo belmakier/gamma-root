@@ -1,6 +1,10 @@
 <map id="GamR::Tree::TExpDefn::FillDetDefns::operator()" name="GamR::Tree::TExpDefn::FillDetDefns::operator()">
-<area shape="rect" id="node1" title=" " alt="" coords="5,22,165,62"/>
-<area shape="rect" id="node2" href="$d0/d17/_abbreviations_8cc.html#a5d1794b612bdcca3f4f4baa3d2e38a0b" title=" " alt="" coords="213,29,252,55"/>
-<area shape="rect" id="node3" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="300,29,484,55"/>
-<area shape="rect" id="node4" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="532,29,720,55"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,22,165,63"/>
+<area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#a5d1794b612bdcca3f4f4baa3d2e38a0b" title=" " alt="" coords="213,29,251,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,40,198,40,198,45,165,45"/>
+<area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="299,29,482,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="252,40,284,40,284,45,252,45"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="364,30,358,21,362,11,373,5,391,3,411,6,421,13,418,17,409,11,391,8,374,10,366,15,364,20,368,28"/>
+<area shape="rect" id="Node000004" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="530,29,718,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="483,40,515,40,515,45,483,45"/>
 </map>

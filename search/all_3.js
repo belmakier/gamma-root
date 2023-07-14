@@ -26,7 +26,7 @@ var searchData=
   ['coincidencematrixpair_23',['CoincidenceMatrixPair',['../d6/daa/class_gam_r_1_1_sort_1_1_type_1_1_coincidence_matrix_pair.html#a55f5a71ebac6483ad276b8566d540aae',1,'GamR::Sort::Type::CoincidenceMatrixPair::CoincidenceMatrixPair()'],['../d6/daa/class_gam_r_1_1_sort_1_1_type_1_1_coincidence_matrix_pair.html',1,'GamR::Sort::Type::CoincidenceMatrixPair&lt; DetX, DetY, X, Y &gt;']]],
   ['coincidencematrixpair_2ehh_24',['CoincidenceMatrixPair.hh',['../db/dde/_coincidence_matrix_pair_8hh.html',1,'']]],
   ['convert_25',['Convert',['../d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#a4afc516777cbb1fa5b720713d75c83c1',1,'GamR::Tree::TExpDefn']]],
-  ['converting_20data_20into_20an_20event_20tree_26',['Converting data into an Event Tree',['../d4/d4d/root_to_gamr.html',1,'']]],
+  ['converting_20data_20into_20an_20event_20tree_26',['Converting data into an Event Tree',['../d8/d9f/md_docs_2md_2tree_2root2gamr.html',1,'']]],
   ['coulex_2ecc_27',['Coulex.cc',['../d2/d58/_coulex_8cc.html',1,'']]],
   ['coulex_2ehh_28',['Coulex.hh',['../df/d7f/_coulex_8hh.html',1,'']]],
   ['coulex_5f_29',['coulex_',['../d7/de5/namespace_gam_r_1_1_coulex_1_1_w_d_b.html#a1d67a1924aa8e24388857db043e61077',1,'GamR::Coulex::WDB']]],

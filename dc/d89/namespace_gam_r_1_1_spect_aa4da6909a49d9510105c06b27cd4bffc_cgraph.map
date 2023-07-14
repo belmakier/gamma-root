@@ -1,8 +1,14 @@
 <map id="GamR::Spect::NormSpectraBackSub" name="GamR::Spect::NormSpectraBackSub">
-<area shape="rect" id="node1" title=" " alt="" coords="5,47,188,87"/>
-<area shape="rect" id="node2" href="$d0/db7/namespace_gam_r_1_1_utils.html#a80902df5d8d695b20de04c64ed685df2" title=" " alt="" coords="256,5,423,31"/>
-<area shape="rect" id="node3" href="$d0/d74/group___t_k.html#ga9db1ed9dd4cd4818f5399fbddf5ee388" title=" " alt="" coords="236,55,443,80"/>
-<area shape="rect" id="node6" href="$d0/d74/group___t_k.html#ga78f4477af7c95058e8a572065086f68a" title=" " alt="" coords="254,128,425,153"/>
-<area shape="rect" id="node4" href="$d0/d74/group___t_k.html#ga19210db8af7134007ff4fc26878b5dc2" title=" " alt="" coords="491,31,685,56"/>
-<area shape="rect" id="node5" href="$d0/d74/group___t_k.html#gaae543a7d595e5faacbfb4da05718e3f3" title=" " alt="" coords="495,80,681,105"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,187,88"/>
+<area shape="rect" id="Node000002" href="$d0/db7/namespace_gam_r_1_1_utils.html#a80902df5d8d695b20de04c64ed685df2" title=" " alt="" coords="255,5,421,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,46,257,32,258,37,188,52"/>
+<area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#ga9db1ed9dd4cd4818f5399fbddf5ee388" title=" " alt="" coords="235,55,441,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,65,220,65,220,70,187,70"/>
+<area shape="rect" id="Node000006" href="$d0/d74/group___t_k.html#ga78f4477af7c95058e8a572065086f68a" title=" " alt="" coords="253,128,423,154"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="166,86,280,121,278,126,164,91"/>
+<area shape="rect" id="Node000004" href="$d0/d74/group___t_k.html#ga19210db8af7134007ff4fc26878b5dc2" title=" " alt="" coords="489,31,683,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="441,55,474,52,474,57,442,60"/>
+<area shape="rect" id="Node000005" href="$d0/d74/group___t_k.html#gaae543a7d595e5faacbfb4da05718e3f3" title=" " alt="" coords="494,80,679,106"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="442,75,479,79,479,85,441,81"/>
+<area shape="poly" id="edge6_Node000006_Node000006" title=" " alt="" coords="298,129,290,119,295,110,311,103,338,101,369,104,384,112,381,117,368,110,338,107,312,109,298,114,295,119,302,126"/>
 </map>

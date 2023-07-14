@@ -1,7 +1,11 @@
 <map id="GamR::Nucleus::LevelSchemeFitter::State::DistancetoPrimitive" name="GamR::Nucleus::LevelSchemeFitter::State::DistancetoPrimitive">
-<area shape="rect" id="node1" title=" " alt="" coords="5,23,213,63"/>
-<area shape="rect" id="node2" href="$d0/d17/_abbreviations_8cc.html#addb21d32acc58c64bf98c616bebe77fc" title=" " alt="" coords="261,5,300,31"/>
-<area shape="rect" id="node4" href="$d0/d17/_abbreviations_8cc.html#ada52d00d8b5e1ca20ee1be4110ac3175" title=" " alt="" coords="261,55,300,80"/>
-<area shape="rect" id="node3" href="$dc/d89/namespace_gam_r_1_1_spect.html#aab35a8f2d75f6fd8f3175f37c4f5f0cd" title=" " alt="" coords="348,5,485,31"/>
-<area shape="rect" id="node5" href="$dc/d89/namespace_gam_r_1_1_spect.html#a16ff9da3440d1c99c085b58a70b447b9" title=" " alt="" coords="348,55,485,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,213,64"/>
+<area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#addb21d32acc58c64bf98c616bebe77fc" title=" " alt="" coords="261,5,299,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,25,245,20,246,26,213,31"/>
+<area shape="rect" id="Node000004" href="$d0/d17/_abbreviations_8cc.html#ada52d00d8b5e1ca20ee1be4110ac3175" title=" " alt="" coords="261,55,299,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="213,56,246,60,245,65,213,61"/>
+<area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#aab35a8f2d75f6fd8f3175f37c4f5f0cd" title=" " alt="" coords="347,5,483,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="300,16,332,16,332,21,300,21"/>
+<area shape="rect" id="Node000005" href="$dc/d89/namespace_gam_r_1_1_spect.html#a16ff9da3440d1c99c085b58a70b447b9" title=" " alt="" coords="347,55,483,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="300,65,332,65,332,70,300,70"/>
 </map>

@@ -1,8 +1,14 @@
 <map id="GamR::Sort::Type::TimeWalkCal::TimeWalkCal" name="GamR::Sort::Type::TimeWalkCal::TimeWalkCal">
-<area shape="rect" id="node1" title=" " alt="" coords="5,63,192,103"/>
-<area shape="rect" id="node2" href="$d3/d27/class_gam_r_1_1_sort_1_1_sorter.html#ae6f53503e0c3225df3b5763192a54f0a" title=" " alt="" coords="240,5,371,45"/>
-<area shape="rect" id="node3" href="$d0/d17/_abbreviations_8cc.html#a5d1794b612bdcca3f4f4baa3d2e38a0b" title=" " alt="" coords="286,70,325,95"/>
-<area shape="rect" id="node6" href="$d3/d27/class_gam_r_1_1_sort_1_1_sorter.html#a51c1581fef56e2b16c8e9a3fc3a4ad4e" title=" " alt="" coords="240,120,371,160"/>
-<area shape="rect" id="node4" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="419,70,603,95"/>
-<area shape="rect" id="node5" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="651,70,839,95"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,192,103"/>
+<area shape="rect" id="Node000002" href="$d3/d27/class_gam_r_1_1_sort_1_1_sorter.html#ae6f53503e0c3225df3b5763192a54f0a" title=" " alt="" coords="240,5,369,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,60,225,45,226,50,174,65"/>
+<area shape="rect" id="Node000003" href="$d0/d17/_abbreviations_8cc.html#a5d1794b612bdcca3f4f4baa3d2e38a0b" title=" " alt="" coords="285,70,324,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,80,271,80,271,86,192,86"/>
+<area shape="rect" id="Node000006" href="$d3/d27/class_gam_r_1_1_sort_1_1_sorter.html#a51c1581fef56e2b16c8e9a3fc3a4ad4e" title=" " alt="" coords="240,120,369,161"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="174,101,226,116,225,121,173,106"/>
+<area shape="rect" id="Node000004" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="417,70,600,96"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="324,80,402,80,402,86,324,86"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="475,71,468,62,472,52,486,46,509,44,535,47,547,54,545,59,533,52,509,49,487,51,476,56,473,61,479,68"/>
+<area shape="rect" id="Node000005" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="648,70,836,96"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="601,80,633,80,633,86,601,86"/>
 </map>

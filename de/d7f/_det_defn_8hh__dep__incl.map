@@ -1,6 +1,9 @@
 <map id="src/lib/tree/DetDefn.hh" name="src/lib/tree/DetDefn.hh">
-<area shape="rect" id="node1" title=" " alt="" coords="93,5,244,31"/>
-<area shape="rect" id="node2" href="$db/d79/_det_defn_8cc.html" title=" " alt="" coords="5,79,156,104"/>
-<area shape="rect" id="node3" href="$db/db2/_detector_8hh.html" title=" " alt="" coords="180,79,333,104"/>
-<area shape="rect" id="node4" href="$df/d54/_detector_8cc.html" title=" " alt="" coords="180,152,333,177"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="93,5,244,31"/>
+<area shape="rect" id="Node000002" href="$db/d79/_det_defn_8cc.html" title=" " alt="" coords="5,79,156,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,43,97,81,94,77,140,39"/>
+<area shape="rect" id="Node000003" href="$db/db2/_detector_8hh.html" title=" " alt="" coords="180,79,333,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,39,243,77,240,81,193,43"/>
+<area shape="rect" id="Node000004" href="$df/d54/_detector_8cc.html" title=" " alt="" coords="180,153,333,178"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="259,119,259,152,254,152,254,119"/>
 </map>

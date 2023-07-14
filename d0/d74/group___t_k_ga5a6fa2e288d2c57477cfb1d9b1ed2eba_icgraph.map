@@ -1,4 +1,5 @@
 <map id="GamR::TK::TwoTailGaussianPeak::GetArea" name="GamR::TK::TwoTailGaussianPeak::GetArea">
-<area shape="rect" id="node1" title=" " alt="" coords="269,5,459,45"/>
-<area shape="rect" id="node2" href="$d0/d74/group___t_k.html#ga9903450d361d220990425726db31d6cf" title=" " alt="" coords="5,5,221,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="269,5,457,46"/>
+<area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#ga9903450d361d220990425726db31d6cf" title=" " alt="" coords="5,5,221,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="254,28,221,28,221,23,254,23"/>
 </map>

@@ -19,6 +19,7 @@ var group___efficiency =
       [ "SetNorm", "df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#ad236a1fa4883a802af7f927cfdd24f80", null ],
       [ "SetNorm", "df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aa367877de7f6e423de8213f9490ab17c", null ],
       [ "SetParams", "df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a29f5a20b149855ac76f729618ed470c6", null ],
-      [ "SetParams", "df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aef1a50d387b95814a4f6caaf27f9cba7", null ]
+      [ "SetParams", "df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aef1a50d387b95814a4f6caaf27f9cba7", null ],
+      [ "WriteGraphs", "df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a965cd9ba60d9ca62f5f22a226baf7dfd", null ]
     ] ]
 ];

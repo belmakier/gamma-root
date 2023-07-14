@@ -1,6 +1,10 @@
 <map id="src/lib/coulex/Coulex.hh" name="src/lib/coulex/Coulex.hh">
-<area shape="rect" id="node1" title=" " alt="" coords="123,5,281,31"/>
-<area shape="rect" id="node2" href="$d2/d58/_coulex_8cc.html" title=" " alt="" coords="5,79,164,104"/>
-<area shape="rect" id="node3" href="$dc/d19/_coulex_calculation_8cc.html" title=" " alt="" coords="164,152,387,177"/>
-<area shape="rect" id="node4" href="$db/dba/_coulex_calculation_8hh.html" title=" " alt="" coords="239,79,461,104"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="121,5,279,31"/>
+<area shape="rect" id="Node000002" href="$d2/d58/_coulex_8cc.html" title=" " alt="" coords="5,79,163,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,41,105,81,102,76,167,37"/>
+<area shape="rect" id="Node000003" href="$dc/d19/_coulex_calculation_8cc.html" title=" " alt="" coords="163,153,384,178"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="208,45,216,74,228,103,245,130,264,151,259,154,241,133,223,106,210,76,202,46"/>
+<area shape="rect" id="Node000004" href="$db/dba/_coulex_calculation_8hh.html" title=" " alt="" coords="237,79,459,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="239,35,324,76,322,81,237,40"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="327,117,288,154,284,150,323,113"/>
 </map>

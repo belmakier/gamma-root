@@ -1,7 +1,11 @@
 <map id="GamR::TK::FPeak::GetFunc" name="GamR::TK::FPeak::GetFunc">
-<area shape="rect" id="node1" title=" " alt="" coords="269,109,452,134"/>
-<area shape="rect" id="node2" href="$d0/d74/group___t_k.html#ga713035c4a54cdc4a501fdd46666eed2a" title=" " alt="" coords="6,5,221,45"/>
-<area shape="rect" id="node3" href="$d0/d74/group___t_k.html#ga9903450d361d220990425726db31d6cf" title=" " alt="" coords="5,69,221,109"/>
-<area shape="rect" id="node4" href="$d0/d74/group___t_k.html#ga00bac43722f0956b8bda250c208cd2fb" title=" " alt="" coords="6,133,221,173"/>
-<area shape="rect" id="node5" href="$d0/d74/group___t_k.html#ga693b521572918646f63ede66354055bf" title=" " alt="" coords="5,197,221,237"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="269,112,450,137"/>
+<area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#ga713035c4a54cdc4a501fdd46666eed2a" title=" " alt="" coords="6,5,220,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="319,107,220,61,185,49,187,44,222,57,321,102"/>
+<area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#ga9903450d361d220990425726db31d6cf" title=" " alt="" coords="5,71,221,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="254,113,221,108,222,103,254,107"/>
+<area shape="rect" id="Node000004" href="$d0/d74/group___t_k.html#ga00bac43722f0956b8bda250c208cd2fb" title=" " alt="" coords="6,136,220,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="254,141,221,145,220,140,254,135"/>
+<area shape="rect" id="Node000005" href="$d0/d74/group___t_k.html#ga693b521572918646f63ede66354055bf" title=" " alt="" coords="5,201,221,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="320,146,222,191,187,203,185,198,220,186,318,142"/>
 </map>

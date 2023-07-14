@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['n0_0',['N0',['../d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html#a2215fa0bfdfeb58b21b1ef33c4e80555',1,'GamR::Bateman::Nucleus::N0()'],['../d1/d32/class_gam_r_1_1_bateman_1_1_solver.html#a5413863295ecedf284d50061810614fa',1,'GamR::Bateman::Solver::N0()']]],
+  ['n0_0',['N0',['../d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html#a2215fa0bfdfeb58b21b1ef33c4e80555',1,'GamR::Bateman::Nucleus::N0'],['../d1/d32/class_gam_r_1_1_bateman_1_1_solver.html#a5413863295ecedf284d50061810614fa',1,'GamR::Bateman::Solver::N0']]],
   ['n1n2_1',['n1n2',['../d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#a48d89958a13c9f778b5c33f79f8b3d2a',1,'GamR::AngDist::DoubleGaussianDistr']]],
   ['name_2',['name',['../d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html#a30b3ca37487fe19c98010225cfd34e77',1,'GamR::Bateman::Nucleus']]],
   ['next_3',['Next',['../dc/d00/class_gam_r_1_1_viewer_1_1_viewer.html#a26cffc9e7b60eecf0eadcf9261b76f12',1,'GamR::Viewer::Viewer::Next()'],['../d1/dab/class_gam_r_1_1_tree_1_1_reader.html#ae7e1c8754a9bcba5aaf8c23d33e34b49',1,'GamR::Tree::Reader::Next()']]],

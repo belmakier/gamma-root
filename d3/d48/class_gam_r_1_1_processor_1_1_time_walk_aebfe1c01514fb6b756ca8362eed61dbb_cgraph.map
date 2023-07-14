@@ -1,8 +1,12 @@
 <map id="GamR::Processor::TimeWalk::Fit" name="GamR::Processor::TimeWalk::Fit">
-<area shape="rect" id="node1" title="Conducts a global &#160;fit to solve for an absolute time calibration for each detector." alt="" coords="5,70,215,95"/>
-<area shape="rect" id="node2" href="$d3/d48/class_gam_r_1_1_processor_1_1_time_walk.html#a0b862c355e247c0e71d9e40e821c7cfe" title="Draws Time Walk graphs." alt="" coords="263,5,451,45"/>
-<area shape="rect" id="node3" href="$d0/d17/_abbreviations_8cc.html#a5d1794b612bdcca3f4f4baa3d2e38a0b" title=" " alt="" coords="499,42,537,67"/>
-<area shape="rect" id="node6" href="$d4/dd5/class_gam_r_1_1_processor_1_1_time_walk_1_1_global_chi_square.html#a2bdd7e091b4519eb4cf93b5ff13e9fe7" title=" " alt="" coords="263,120,451,160"/>
-<area shape="rect" id="node4" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="585,42,769,67"/>
-<area shape="rect" id="node5" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="817,42,1005,67"/>
+<area shape="rect" id="Node000001" title="Conducts a global &#160;fit to solve for an absolute time calibration for each detector." alt="" coords="5,42,214,68"/>
+<area shape="rect" id="Node000002" href="$d4/dd5/class_gam_r_1_1_processor_1_1_time_walk_1_1_global_chi_square.html#a2bdd7e091b4519eb4cf93b5ff13e9fe7" title=" " alt="" coords="262,5,449,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,40,246,36,247,41,215,45"/>
+<area shape="rect" id="Node000003" href="$d0/d17/_abbreviations_8cc.html#a5d1794b612bdcca3f4f4baa3d2e38a0b" title=" " alt="" coords="336,70,375,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="215,64,322,77,321,82,214,70"/>
+<area shape="rect" id="Node000004" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="497,70,680,96"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="375,80,482,80,482,86,375,86"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="550,71,542,62,547,52,563,46,589,44,619,47,633,54,630,59,617,52,589,49,564,51,551,56,548,61,554,68"/>
+<area shape="rect" id="Node000005" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="728,70,916,96"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="681,80,713,80,713,86,681,86"/>
 </map>

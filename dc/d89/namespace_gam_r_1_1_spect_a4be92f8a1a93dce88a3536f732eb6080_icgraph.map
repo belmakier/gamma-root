@@ -1,5 +1,13 @@
 <map id="GamR::Spect::CountsBS" name="GamR::Spect::CountsBS">
-<area shape="rect" id="node1" title=" " alt="" coords="217,31,381,56"/>
-<area shape="rect" id="node2" href="$dc/d89/namespace_gam_r_1_1_spect.html#a02f79fc5532999bf21539d9a7cd9b415" title=" " alt="" coords="5,5,169,31"/>
-<area shape="rect" id="node3" href="$d0/d17/_abbreviations_8cc.html#a28436370d9b0523ba4046a3ad2faef7e" title=" " alt="" coords="64,55,111,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="217,104,380,130"/>
+<area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#a504796b948f22b277d3dc82001df407e" title=" " alt="" coords="5,5,169,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="264,98,219,71,168,45,139,34,141,29,170,40,222,66,267,93"/>
+<area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#abc275778bbfd8efb4624ba0d6b5f87f2" title=" " alt="" coords="5,55,169,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="225,103,145,84,146,78,226,97"/>
+<area shape="rect" id="Node000004" href="$dc/d89/namespace_gam_r_1_1_spect.html#a02f79fc5532999bf21539d9a7cd9b415" title=" " alt="" coords="5,104,169,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="202,120,169,120,169,114,202,114"/>
+<area shape="rect" id="Node000005" href="$dc/d89/namespace_gam_r_1_1_spect.html#ae4617cc4b723ae8ff59b0521c25ee484" title=" " alt="" coords="5,153,169,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="226,136,146,155,145,150,225,131"/>
+<area shape="rect" id="Node000006" href="$d0/d17/_abbreviations_8cc.html#a28436370d9b0523ba4046a3ad2faef7e" title=" " alt="" coords="64,203,110,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="267,140,222,168,170,194,111,213,110,208,168,189,219,163,264,136"/>
 </map>

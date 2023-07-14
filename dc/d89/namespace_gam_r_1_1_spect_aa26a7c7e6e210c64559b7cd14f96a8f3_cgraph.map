@@ -1,5 +1,7 @@
 <map id="GamR::Spect::ProjX" name="GamR::Spect::ProjX">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,143,56"/>
-<area shape="rect" id="node2" href="$d0/db7/namespace_gam_r_1_1_utils.html#ae51db26569561ca73c083a6c9276f148" title=" " alt="" coords="191,5,349,31"/>
-<area shape="rect" id="node3" href="$dc/d89/namespace_gam_r_1_1_spect.html#aab35a8f2d75f6fd8f3175f37c4f5f0cd" title=" " alt="" coords="201,55,339,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,142,56"/>
+<area shape="rect" id="Node000002" href="$d0/db7/namespace_gam_r_1_1_utils.html#ae51db26569561ca73c083a6c9276f148" title=" " alt="" coords="190,5,348,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,32,175,28,175,33,143,37"/>
+<area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#aab35a8f2d75f6fd8f3175f37c4f5f0cd" title=" " alt="" coords="201,55,337,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="143,49,186,55,186,60,142,55"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="GamR::Spect::PeakFit::SetGuesses" name="GamR::Spect::PeakFit::SetGuesses">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,156,45"/>
-<area shape="rect" id="node2" href="$df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a39bc01ae87be8ef38796c3bdc27df86e" title=" " alt="" coords="204,5,355,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,155,46"/>
+<area shape="rect" id="Node000002" href="$df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a39bc01ae87be8ef38796c3bdc27df86e" title=" " alt="" coords="203,5,352,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,23,188,23,188,28,155,28"/>
 </map>

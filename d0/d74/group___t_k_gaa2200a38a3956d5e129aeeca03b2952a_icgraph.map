@@ -1,11 +1,20 @@
 <map id="GamR::TK::BPeak::GetWidth" name="GamR::TK::BPeak::GetWidth">
-<area shape="rect" id="node1" title=" " alt="" coords="764,41,951,67"/>
-<area shape="rect" id="node2" href="$d3/d48/class_gam_r_1_1_processor_1_1_time_walk.html#a10cdc74a1e9f4a14e1c449c9712ba085" title="Iterating through calibration peaks for each detector pair: calculate the time difference spectrum (w..." alt="" coords="5,22,193,62"/>
-<area shape="rect" id="node3" href="$d0/d74/group___t_k.html#gaa496d15cf9600fa5790ff50c9392b0fd" title=" " alt="" coords="546,41,706,67"/>
-<area shape="rect" id="node8" href="$d0/d74/group___t_k.html#ga705f798b5ced39a94fe9582dd39c55ed" title=" " alt="" coords="536,115,716,140"/>
-<area shape="rect" id="node4" href="$d0/d74/group___t_k.html#gab9295d2a9e654d7540ee264d036590cd" title=" " alt="" coords="332,29,488,55"/>
-<area shape="rect" id="node6" href="$d0/d74/group___t_k.html#gaf641b8c1f292803f8695310a0aee1896" title=" " alt="" coords="339,79,481,104"/>
-<area shape="rect" id="node5" href="$d0/d17/_abbreviations_8cc.html#a56da1b89cd1ce3720264ffb38d8505aa" title=" " alt="" coords="241,29,284,55"/>
-<area shape="rect" id="node7" href="$d0/d17/_abbreviations_8cc.html#a544c36017b9d9387f39e84863d9ae9a4" title=" " alt="" coords="243,79,282,104"/>
-<area shape="rect" id="node9" href="$d0/d74/group___t_k.html#gacea94387106c6b07d16c53a1614a86b9" title=" " alt="" coords="333,128,487,153"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="762,41,948,67"/>
+<area shape="rect" id="Node000002" href="$d3/d48/class_gam_r_1_1_processor_1_1_time_walk.html#a10cdc74a1e9f4a14e1c449c9712ba085" title="Iterating through calibration peaks for each detector pair: calculate the time difference spectrum (w..." alt="" coords="5,22,193,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="774,41,713,31,581,17,477,9,374,10,241,19,194,25,193,20,240,14,373,5,477,4,581,11,714,26,775,35"/>
+<area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#gaa496d15cf9600fa5790ff50c9392b0fd" title=" " alt="" coords="544,41,704,67"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="747,57,704,57,704,51,747,51"/>
+<area shape="rect" id="Node000008" href="$d0/d74/group___t_k.html#ga705f798b5ced39a94fe9582dd39c55ed" title=" " alt="" coords="534,114,714,140"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="799,74,668,116,666,111,797,69"/>
+<area shape="rect" id="Node000004" href="$d0/d74/group___t_k.html#gab9295d2a9e654d7540ee264d036590cd" title=" " alt="" coords="331,29,486,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="530,51,487,49,487,44,530,46"/>
+<area shape="rect" id="Node000006" href="$d0/d74/group___t_k.html#gaf641b8c1f292803f8695310a0aee1896" title=" " alt="" coords="338,78,479,104"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="532,73,480,82,479,76,531,67"/>
+<area shape="rect" id="Node000005" href="$d0/d17/_abbreviations_8cc.html#a56da1b89cd1ce3720264ffb38d8505aa" title=" " alt="" coords="241,29,283,55"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="316,45,283,45,283,39,316,39"/>
+<area shape="rect" id="Node000007" href="$d0/d17/_abbreviations_8cc.html#a544c36017b9d9387f39e84863d9ae9a4" title=" " alt="" coords="243,78,281,104"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="323,94,281,94,281,89,323,89"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="228,84,168,66,169,60,229,79"/>
+<area shape="rect" id="Node000009" href="$d0/d74/group___t_k.html#gacea94387106c6b07d16c53a1614a86b9" title=" " alt="" coords="333,128,485,153"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="519,136,485,139,485,133,519,131"/>
 </map>

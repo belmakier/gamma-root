@@ -1,4 +1,5 @@
 <map id="GamR::Spect::PeakFit::Fit" name="GamR::Spect::PeakFit::Fit">
-<area shape="rect" id="node1" title=" " alt="" coords="211,5,381,31"/>
-<area shape="rect" id="node2" href="$dc/d89/namespace_gam_r_1_1_spect.html#a509e9d3432c6d23f1db25ab0363497b8" title=" " alt="" coords="5,5,163,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="210,5,380,31"/>
+<area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#a509e9d3432c6d23f1db25ab0363497b8" title=" " alt="" coords="5,5,162,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,21,162,21,162,16,195,16"/>
 </map>

@@ -1,5 +1,7 @@
 <map id="GamR::AngDist::RatioFunction" name="GamR::AngDist::RatioFunction">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,203,56"/>
-<area shape="rect" id="node2" href="$d0/d74/group___t_k.html#ga6a034a8dfa2c1699aabb9e4111d79cbf" title=" " alt="" coords="267,5,429,31"/>
-<area shape="rect" id="node3" href="$d0/d74/group___t_k.html#ga19210db8af7134007ff4fc26878b5dc2" title=" " alt="" coords="251,55,445,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,202,56"/>
+<area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#ga6a034a8dfa2c1699aabb9e4111d79cbf" title=" " alt="" coords="266,5,428,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,31,251,25,251,31,202,36"/>
+<area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#ga19210db8af7134007ff4fc26878b5dc2" title=" " alt="" coords="250,55,444,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,51,235,54,235,59,202,56"/>
 </map>

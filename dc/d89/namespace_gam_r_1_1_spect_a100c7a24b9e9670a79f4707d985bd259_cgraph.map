@@ -1,5 +1,7 @@
 <map id="GamR::Spect::Counts" name="GamR::Spect::Counts">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,152,60"/>
-<area shape="rect" id="node2" href="$d0/d74/group___t_k.html#ga4607d5e3d8f5d83d75f4ca038572a7f8" title=" " alt="" coords="200,5,384,31"/>
-<area shape="rect" id="node3" href="$d0/d74/group___t_k.html#ga0073e987a24adc053cfbf2c833d41749" title=" " alt="" coords="200,55,384,95"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,151,60"/>
+<area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#ga4607d5e3d8f5d83d75f4ca038572a7f8" title=" " alt="" coords="199,5,382,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,35,183,30,184,36,151,40"/>
+<area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#ga0073e987a24adc053cfbf2c833d41749" title=" " alt="" coords="199,55,382,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="151,54,184,59,183,64,151,60"/>
 </map>

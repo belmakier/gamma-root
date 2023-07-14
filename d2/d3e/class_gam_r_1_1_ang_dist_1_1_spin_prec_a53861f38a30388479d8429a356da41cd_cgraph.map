@@ -1,9 +1,15 @@
 <map id="GamR::AngDist::SpinPrec::SpinPrec" name="GamR::AngDist::SpinPrec::SpinPrec">
-<area shape="rect" id="node1" title=" " alt="" coords="5,165,176,205"/>
-<area shape="rect" id="node2" href="$d2/d3e/class_gam_r_1_1_ang_dist_1_1_spin_prec.html#afc23c32a47ba2be760ef934069ae150f" title=" " alt="" coords="224,5,395,45"/>
-<area shape="rect" id="node3" href="$d2/d3e/class_gam_r_1_1_ang_dist_1_1_spin_prec.html#a04c331684fb0e374a2405b93ba4e4add" title=" " alt="" coords="224,69,395,109"/>
-<area shape="rect" id="node4" href="$d2/d3e/class_gam_r_1_1_ang_dist_1_1_spin_prec.html#afa82f2b9528d46758216ec654171c3b1" title=" " alt="" coords="224,133,395,173"/>
-<area shape="rect" id="node5" href="$d2/d3e/class_gam_r_1_1_ang_dist_1_1_spin_prec.html#a555162bf01356d34d133900e823faf56" title=" " alt="" coords="224,197,395,237"/>
-<area shape="rect" id="node6" href="$d2/d3e/class_gam_r_1_1_ang_dist_1_1_spin_prec.html#ae79f42113f8b14d2cf2e48d6e9ed980e" title=" " alt="" coords="224,261,395,301"/>
-<area shape="rect" id="node7" href="$d2/d3e/class_gam_r_1_1_ang_dist_1_1_spin_prec.html#aaecff32506240f4b7684e0d7b41cf0b7" title=" " alt="" coords="224,325,395,365"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,169,175,210"/>
+<area shape="rect" id="Node000002" href="$d2/d3e/class_gam_r_1_1_ang_dist_1_1_spin_prec.html#afc23c32a47ba2be760ef934069ae150f" title=" " alt="" coords="223,5,392,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,167,154,113,186,83,221,57,231,51,234,55,224,61,190,87,158,117,110,171"/>
+<area shape="rect" id="Node000003" href="$d2/d3e/class_gam_r_1_1_ang_dist_1_1_spin_prec.html#a04c331684fb0e374a2405b93ba4e4add" title=" " alt="" coords="223,71,392,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="130,166,222,122,237,115,240,120,224,127,132,171"/>
+<area shape="rect" id="Node000004" href="$d2/d3e/class_gam_r_1_1_ang_dist_1_1_spin_prec.html#afa82f2b9528d46758216ec654171c3b1" title=" " alt="" coords="223,136,392,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="175,174,207,169,208,174,175,179"/>
+<area shape="rect" id="Node000005" href="$d2/d3e/class_gam_r_1_1_ang_dist_1_1_spin_prec.html#a555162bf01356d34d133900e823faf56" title=" " alt="" coords="223,201,392,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="175,199,208,204,208,210,175,205"/>
+<area shape="rect" id="Node000006" href="$d2/d3e/class_gam_r_1_1_ang_dist_1_1_spin_prec.html#ae79f42113f8b14d2cf2e48d6e9ed980e" title=" " alt="" coords="223,267,392,307"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="134,208,224,251,240,258,237,263,222,256,131,213"/>
+<area shape="rect" id="Node000007" href="$d2/d3e/class_gam_r_1_1_ang_dist_1_1_spin_prec.html#aaecff32506240f4b7684e0d7b41cf0b7" title=" " alt="" coords="223,332,392,373"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="110,209,158,262,190,291,224,317,234,323,231,327,221,321,186,295,154,266,106,212"/>
 </map>

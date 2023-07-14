@@ -1,10 +1,17 @@
 <map id="GamR::Utils::GetHists1D" name="GamR::Utils::GetHists1D">
-<area shape="rect" id="node1" title=" " alt="" coords="335,92,501,117"/>
-<area shape="rect" id="node2" href="$dc/d89/namespace_gam_r_1_1_spect.html#a65d31e04d30d9c24dc657bef81f251bb" title=" " alt="" coords="104,5,287,31"/>
-<area shape="rect" id="node4" href="$dc/d89/namespace_gam_r_1_1_spect.html#aa4da6909a49d9510105c06b27cd4bffc" title=" " alt="" coords="104,55,287,95"/>
-<area shape="rect" id="node6" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab6884a6323a0b4f61d4e3e5a47ce60ae" title=" " alt="" coords="126,120,265,145"/>
-<area shape="rect" id="node7" href="$dc/d89/namespace_gam_r_1_1_spect.html#a61cee306e7922e8ac4fa42229ed51467" title=" " alt="" coords="119,169,272,195"/>
-<area shape="rect" id="node3" href="$d0/d17/_abbreviations_8cc.html#a8150489ebcfa245dd4ea5c051de4181d" title=" " alt="" coords="11,5,50,31"/>
-<area shape="rect" id="node5" href="$d0/d17/_abbreviations_8cc.html#ae47533f48063bc9ba85ff0be37004a05" title=" " alt="" coords="5,63,56,88"/>
-<area shape="rect" id="node8" href="$d0/d17/_abbreviations_8cc.html#abf87b4b011d6e9811628e5109928e22a" title=" " alt="" coords="11,169,50,195"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="332,92,497,118"/>
+<area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#a65d31e04d30d9c24dc657bef81f251bb" title=" " alt="" coords="103,5,284,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="375,87,283,46,247,34,248,29,285,41,377,83"/>
+<area shape="rect" id="Node000004" href="$dc/d89/namespace_gam_r_1_1_spect.html#aa4da6909a49d9510105c06b27cd4bffc" title=" " alt="" coords="103,55,284,96"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="317,95,284,90,285,85,318,89"/>
+<area shape="rect" id="Node000006" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab6884a6323a0b4f61d4e3e5a47ce60ae" title=" " alt="" coords="125,120,262,146"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="318,120,263,127,262,121,317,114"/>
+<area shape="rect" id="Node000007" href="$dc/d89/namespace_gam_r_1_1_spect.html#a61cee306e7922e8ac4fa42229ed51467" title=" " alt="" coords="117,169,270,195"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="372,127,285,161,250,171,249,166,283,156,370,122"/>
+<area shape="rect" id="Node000003" href="$d0/d17/_abbreviations_8cc.html#a8150489ebcfa245dd4ea5c051de4181d" title=" " alt="" coords="11,5,49,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="88,21,49,21,49,16,88,16"/>
+<area shape="rect" id="Node000005" href="$d0/d17/_abbreviations_8cc.html#ae47533f48063bc9ba85ff0be37004a05" title=" " alt="" coords="5,63,55,88"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="88,78,55,78,55,73,88,73"/>
+<area shape="rect" id="Node000008" href="$d0/d17/_abbreviations_8cc.html#abf87b4b011d6e9811628e5109928e22a" title=" " alt="" coords="11,169,49,195"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="103,185,49,185,49,180,103,180"/>
 </map>

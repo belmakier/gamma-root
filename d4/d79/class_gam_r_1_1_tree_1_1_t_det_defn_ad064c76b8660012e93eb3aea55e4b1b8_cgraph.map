@@ -1,6 +1,10 @@
 <map id="GamR::Tree::TDetDefn::SetPollGates" name="GamR::Tree::TDetDefn::SetPollGates">
-<area shape="rect" id="node1" title=" " alt="" coords="5,22,157,62"/>
-<area shape="rect" id="node2" href="$d0/d17/_abbreviations_8cc.html#a5d1794b612bdcca3f4f4baa3d2e38a0b" title=" " alt="" coords="205,29,244,55"/>
-<area shape="rect" id="node3" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="292,29,476,55"/>
-<area shape="rect" id="node4" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="524,29,712,55"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,22,157,63"/>
+<area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#a5d1794b612bdcca3f4f4baa3d2e38a0b" title=" " alt="" coords="205,29,243,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,40,190,40,190,45,157,45"/>
+<area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="291,29,474,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="244,40,276,40,276,45,244,45"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="356,30,350,21,354,11,365,5,383,3,403,6,413,13,410,17,401,11,383,8,366,10,358,15,356,20,360,28"/>
+<area shape="rect" id="Node000004" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="522,29,710,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="475,40,507,40,507,45,475,45"/>
 </map>

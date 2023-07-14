@@ -1,5 +1,7 @@
 <map id="GamR::Nucleus::LevelSchemeFitter::Scheme::SetIndices" name="GamR::Nucleus::LevelSchemeFitter::Scheme::SetIndices">
-<area shape="rect" id="node1" title=" " alt="" coords="252,37,451,77"/>
-<area shape="rect" id="node2" href="$d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#ab2a9e368cc3283d91bf496a884df468d" title=" " alt="" coords="5,5,204,45"/>
-<area shape="rect" id="node3" href="$d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#a9c3ac4f8125fcf6199f089da10944379" title=" " alt="" coords="5,69,204,109"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="252,39,450,79"/>
+<area shape="rect" id="Node000002" href="$d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#ab2a9e368cc3283d91bf496a884df468d" title=" " alt="" coords="5,5,204,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,46,204,42,205,36,237,41"/>
+<area shape="rect" id="Node000003" href="$d6/da4/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_scheme.html#a9c3ac4f8125fcf6199f089da10944379" title=" " alt="" coords="5,71,204,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="237,76,205,81,204,75,237,71"/>
 </map>

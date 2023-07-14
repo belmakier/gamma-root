@@ -1,6 +1,9 @@
 <map id="src/lib/spect/Calibrate.hh" name="src/lib/spect/Calibrate.hh">
-<area shape="rect" id="node1" title=" " alt="" coords="131,5,297,31"/>
-<area shape="rect" id="node2" href="$d0/d68/_abbreviations_8hh.html" title=" " alt="" coords="5,79,212,104"/>
-<area shape="rect" id="node4" href="$d6/d44/_calibrate_8cc.html" title=" " alt="" coords="237,79,402,104"/>
-<area shape="rect" id="node3" href="$d0/d17/_abbreviations_8cc.html" title=" " alt="" coords="5,152,212,177"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="130,5,295,31"/>
+<area shape="rect" id="Node000002" href="$d0/d68/_abbreviations_8hh.html" title=" " alt="" coords="5,79,212,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,42,128,81,125,76,182,37"/>
+<area shape="rect" id="Node000004" href="$d6/d44/_calibrate_8cc.html" title=" " alt="" coords="236,79,400,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="244,37,301,76,298,81,241,42"/>
+<area shape="rect" id="Node000003" href="$d0/d17/_abbreviations_8cc.html" title=" " alt="" coords="5,153,212,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="111,119,111,152,106,152,106,119"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="GamR::Spect::GateX" name="GamR::Spect::GateX">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,148,31"/>
-<area shape="rect" id="node2" href="$d0/d74/group___t_k.html#ga6a034a8dfa2c1699aabb9e4111d79cbf" title=" " alt="" coords="196,5,359,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,147,31"/>
+<area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#ga6a034a8dfa2c1699aabb9e4111d79cbf" title=" " alt="" coords="195,5,357,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,16,180,16,180,21,147,21"/>
 </map>

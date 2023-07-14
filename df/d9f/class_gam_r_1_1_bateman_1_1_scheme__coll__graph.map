@@ -1,10 +1,19 @@
 <map id="GamR::Bateman::Scheme" name="GamR::Bateman::Scheme">
-<area shape="rect" id="node1" title=" " alt="" coords="387,372,562,559"/>
-<area shape="rect" id="node2" title=" " alt="" coords="305,225,452,280"/>
-<area shape="rect" id="node3" href="$d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html" title=" " alt="" coords="142,357,317,573"/>
-<area shape="rect" id="node4" title=" " alt="" coords="28,233,111,273"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,108,133,163"/>
-<area shape="rect" id="node6" title=" " alt="" coords="135,225,281,280"/>
-<area shape="rect" id="node7" title=" " alt="" coords="235,115,351,155"/>
-<area shape="rect" id="node8" title=" " alt="" coords="274,5,313,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="362,445,523,690"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="279,277,417,357"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="398,355,416,379,434,427,429,429,411,382,394,358"/>
+<area shape="rect" id="Node000003" href="$d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html" title=" " alt="" coords="125,435,286,700"/>
+<area shape="poly" id="edge5_Node000003_Node000002" title=" " alt="" coords="284,358,261,382,240,420,236,417,257,379,280,355"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="284,464,316,409,331,372,336,374,321,412,288,467"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="28,284,97,349"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="77,348,106,409,118,431,114,434,101,412,73,350"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,134,120,214"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="65,227,65,284,60,284,60,227"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="121,284,255,349"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="170,350,157,381,153,418,148,418,152,380,165,348"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="187,141,290,206"/>
+<area shape="poly" id="edge9_Node000002_Node000007" title=" " alt="" coords="274,216,320,275,316,278,270,219"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="225,220,202,285,197,283,220,218"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="228,5,249,71"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="241,71,241,124,236,124,236,71"/>
 </map>

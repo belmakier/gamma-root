@@ -1,4 +1,5 @@
 <map id="src/lib/angdist/SolidAttenuation.hh" name="src/lib/angdist/SolidAttenuation.hh">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,224,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="85,79,144,104"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,224,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="86,79,143,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,31,117,64,112,64,112,31"/>
 </map>

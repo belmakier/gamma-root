@@ -1,4 +1,5 @@
 <map id="GamR::AngDist::Agen" name="GamR::AngDist::Agen">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,152,31"/>
-<area shape="rect" id="node2" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a96b00c034e0b8aa9807d13c08970ba79" title=" " alt="" coords="200,5,347,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,152,31"/>
+<area shape="rect" id="Node000002" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a96b00c034e0b8aa9807d13c08970ba79" title=" " alt="" coords="200,5,345,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,16,185,16,185,21,152,21"/>
 </map>

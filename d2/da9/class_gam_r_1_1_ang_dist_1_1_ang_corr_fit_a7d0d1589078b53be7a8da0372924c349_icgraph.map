@@ -1,4 +1,7 @@
 <map id="GamR::AngDist::AngCorrFit::SetData" name="GamR::AngDist::AngCorrFit::SetData">
-<area shape="rect" id="node1" title=" " alt="" coords="232,5,411,45"/>
-<area shape="rect" id="node2" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#ade67fbd9efac760657e3d1455a2f5592" title=" " alt="" coords="5,5,184,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="232,39,410,79"/>
+<area shape="rect" id="Node000002" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#ade67fbd9efac760657e3d1455a2f5592" title=" " alt="" coords="5,5,184,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,46,184,41,185,36,217,41"/>
+<area shape="rect" id="Node000003" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a22cc58bf6eb5d0eda0bc207561b76921" title=" " alt="" coords="5,71,184,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,76,185,81,184,76,217,71"/>
 </map>

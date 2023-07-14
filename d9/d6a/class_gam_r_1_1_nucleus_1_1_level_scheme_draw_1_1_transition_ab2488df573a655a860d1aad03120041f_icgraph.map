@@ -1,4 +1,5 @@
 <map id="GamR::Nucleus::LevelSchemeDraw::Transition::DistancetoPrimitive" name="GamR::Nucleus::LevelSchemeDraw::Transition::DistancetoPrimitive">
-<area shape="rect" id="node1" title=" " alt="" coords="253,5,488,45"/>
-<area shape="rect" id="node2" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#ac6affc8cf9d5a8c89d3e5be46b53128b" title=" " alt="" coords="5,5,205,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="253,5,486,46"/>
+<area shape="rect" id="Node000002" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#ac6affc8cf9d5a8c89d3e5be46b53128b" title=" " alt="" coords="5,5,205,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,28,205,28,205,23,238,23"/>
 </map>

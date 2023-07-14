@@ -1,4 +1,6 @@
 <map id="GamR::Spect::StackSpectra" name="GamR::Spect::StackSpectra">
-<area shape="rect" id="node1" title=" " alt="" coords="5,29,189,55"/>
-<area shape="rect" id="node2" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="237,29,425,55"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,189,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="58,31,51,21,55,11,71,5,97,3,127,6,141,14,139,18,126,11,97,8,72,10,59,15,56,20,63,27"/>
+<area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="237,29,424,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,40,222,40,222,45,189,45"/>
 </map>

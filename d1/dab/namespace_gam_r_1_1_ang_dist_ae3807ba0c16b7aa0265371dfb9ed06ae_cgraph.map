@@ -1,6 +1,9 @@
 <map id="GamR::AngDist::RatioFunction" name="GamR::AngDist::RatioFunction">
-<area shape="rect" id="node1" title=" " alt="" coords="5,77,203,102"/>
-<area shape="rect" id="node2" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a3eacef62898caaaff029fd33931ad1bb" title=" " alt="" coords="261,5,437,45"/>
-<area shape="rect" id="node3" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#ac5be2345b951980c46ad6df7ac0254ab" title=" " alt="" coords="261,69,437,109"/>
-<area shape="rect" id="node4" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a3d351aa26df98579aa5eea3c0d3bbb39" title=" " alt="" coords="251,134,448,159"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,78,202,104"/>
+<area shape="rect" id="Node000002" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a3eacef62898caaaff029fd33931ad1bb" title=" " alt="" coords="260,5,436,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,75,254,48,256,53,155,80"/>
+<area shape="rect" id="Node000003" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#ac5be2345b951980c46ad6df7ac0254ab" title=" " alt="" coords="260,71,436,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,88,245,88,245,94,202,94"/>
+<area shape="rect" id="Node000004" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a3d351aa26df98579aa5eea3c0d3bbb39" title=" " alt="" coords="250,136,446,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="162,102,276,129,275,134,161,107"/>
 </map>

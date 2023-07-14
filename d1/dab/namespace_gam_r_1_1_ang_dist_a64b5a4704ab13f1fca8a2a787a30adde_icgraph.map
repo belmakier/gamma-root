@@ -1,6 +1,9 @@
 <map id="GamR::AngDist::BigD" name="GamR::AngDist::BigD">
-<area shape="rect" id="node1" title=" " alt="" coords="252,70,397,95"/>
-<area shape="rect" id="node2" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#aff931e179fa69b6b1d8c9d16d4812613" title=" " alt="" coords="14,5,195,45"/>
-<area shape="rect" id="node3" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#abb01ce9f84e22b3024fb507ff3ad7546" title=" " alt="" coords="11,70,198,95"/>
-<area shape="rect" id="node4" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#ad2b2d77bf8d7c0f4d159c5e0011e1b78" title=" " alt="" coords="5,119,204,145"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="252,70,396,96"/>
+<area shape="rect" id="Node000002" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#aff931e179fa69b6b1d8c9d16d4812613" title=" " alt="" coords="14,5,195,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="257,68,184,49,186,44,259,63"/>
+<area shape="rect" id="Node000003" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#abb01ce9f84e22b3024fb507ff3ad7546" title=" " alt="" coords="11,70,198,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="237,86,198,86,198,80,237,80"/>
+<area shape="rect" id="Node000004" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#ad2b2d77bf8d7c0f4d159c5e0011e1b78" title=" " alt="" coords="5,120,204,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="250,102,166,121,164,116,249,97"/>
 </map>

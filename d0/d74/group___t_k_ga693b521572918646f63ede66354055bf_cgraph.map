@@ -1,5 +1,7 @@
 <map id="GamR::TK::TwoTailStepGaussianPeak::GetAreaError" name="GamR::TK::TwoTailStepGaussianPeak::GetAreaError">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,221,75"/>
-<area shape="rect" id="node2" href="$d0/d74/group___t_k.html#gaf14b0576fa0e1133f8991aa186d50fb8" title=" " alt="" coords="269,5,459,45"/>
-<area shape="rect" id="node3" href="$d0/d74/group___t_k.html#gaea3f5cb2c25b5827dafe494c5c284d31" title=" " alt="" coords="273,70,455,95"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,221,75"/>
+<area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#gaf14b0576fa0e1133f8991aa186d50fb8" title=" " alt="" coords="269,5,457,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,40,253,36,254,41,222,45"/>
+<area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#gaea3f5cb2c25b5827dafe494c5c284d31" title=" " alt="" coords="272,70,454,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="222,64,258,69,257,74,221,70"/>
 </map>

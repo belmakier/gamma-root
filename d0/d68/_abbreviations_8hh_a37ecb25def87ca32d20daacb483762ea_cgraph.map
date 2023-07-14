@@ -1,5 +1,7 @@
 <map id="gx" name="gx">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,44,31"/>
-<area shape="rect" id="node2" href="$dc/d89/namespace_gam_r_1_1_spect.html#afc1d3c98f1aa4fdc052b238ab931a9f9" title=" " alt="" coords="92,5,235,31"/>
-<area shape="rect" id="node3" href="$d0/d74/group___t_k.html#ga6a034a8dfa2c1699aabb9e4111d79cbf" title=" " alt="" coords="283,5,445,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,44,31"/>
+<area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#afc1d3c98f1aa4fdc052b238ab931a9f9" title=" " alt="" coords="92,5,233,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,16,77,16,77,21,44,21"/>
+<area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#ga6a034a8dfa2c1699aabb9e4111d79cbf" title=" " alt="" coords="281,5,443,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="233,16,266,16,266,21,233,21"/>
 </map>

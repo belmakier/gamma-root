@@ -19,6 +19,7 @@ var _abbreviations_8hh =
     [ "fp", "d0/d68/_abbreviations_8hh.html#a51dba508c5a64c9b447ff3948f0eec9b", null ],
     [ "gx", "d0/d68/_abbreviations_8hh.html#a37ecb25def87ca32d20daacb483762ea", null ],
     [ "gy", "d0/d68/_abbreviations_8hh.html#a8a9dd41db99bd26b5335309340d99560", null ],
+    [ "help", "d0/d68/_abbreviations_8hh.html#abefde31621a1971f12f83fe2d0948a4e", null ],
     [ "ig", "d0/d68/_abbreviations_8hh.html#a7817a0d8cba51a276b7a75e5a63c7f14", null ],
     [ "igbs", "d0/d68/_abbreviations_8hh.html#acea4bb7fb1d09237101cd228a94f0bfa", null ],
     [ "lin", "d0/d68/_abbreviations_8hh.html#a8c5d7355e4582fe745334736ca6c6d31", null ],

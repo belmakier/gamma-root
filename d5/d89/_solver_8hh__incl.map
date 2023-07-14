@@ -1,9 +1,18 @@
 <map id="src/lib/bateman/Solver.hh" name="src/lib/bateman/Solver.hh">
-<area shape="rect" id="node1" title=" " alt="" coords="82,5,251,31"/>
-<area shape="rect" id="node2" href="$d8/dfb/_nucleus_8hh.html" title=" " alt="" coords="123,152,210,177"/>
-<area shape="rect" id="node6" href="$d2/dc7/_scheme_8hh.html" title=" " alt="" coords="42,79,129,104"/>
-<area shape="rect" id="node7" title=" " alt="" coords="205,79,371,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="168,225,240,251"/>
-<area shape="rect" id="node4" title=" " alt="" coords="89,225,143,251"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,225,64,251"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="81,5,249,31"/>
+<area shape="rect" id="Node000002" href="$d8/dfb/_nucleus_8hh.html" title=" " alt="" coords="122,153,208,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,31,167,138,162,138,162,31"/>
+<area shape="rect" id="Node000006" href="$d2/dc7/_scheme_8hh.html" title=" " alt="" coords="42,79,128,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="153,34,111,71,107,67,149,30"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="202,79,368,105"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="186,29,253,69,250,73,184,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="165,226,236,252"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="173,177,190,212,186,214,168,180"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="87,226,141,252"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="158,180,133,216,129,212,154,177"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,226,63,252"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="144,181,70,221,68,216,141,177"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="100,103,142,141,139,145,96,107"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="90,104,111,211,106,212,84,106"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="83,106,45,213,40,211,78,104"/>
 </map>

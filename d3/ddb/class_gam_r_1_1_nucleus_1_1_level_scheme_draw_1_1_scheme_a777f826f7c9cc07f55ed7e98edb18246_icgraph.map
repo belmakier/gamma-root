@@ -1,4 +1,5 @@
 <map id="GamR::Nucleus::LevelSchemeDraw::Scheme::AddState" name="GamR::Nucleus::LevelSchemeDraw::Scheme::AddState">
-<area shape="rect" id="node1" title=" " alt="" coords="252,5,451,45"/>
-<area shape="rect" id="node2" href="$d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html#ab938e7f1c7cba45783402692e0192909" title=" " alt="" coords="5,5,204,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="252,5,450,46"/>
+<area shape="rect" id="Node000002" href="$d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html#ab938e7f1c7cba45783402692e0192909" title=" " alt="" coords="5,5,204,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,28,204,28,204,23,236,23"/>
 </map>

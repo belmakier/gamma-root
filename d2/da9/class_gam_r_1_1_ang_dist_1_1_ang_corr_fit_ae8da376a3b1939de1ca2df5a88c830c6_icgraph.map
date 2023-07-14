@@ -1,4 +1,5 @@
 <map id="GamR::AngDist::AngCorrFit::GetGraph" name="GamR::AngDist::AngCorrFit::GetGraph">
-<area shape="rect" id="node1" title=" " alt="" coords="253,5,432,45"/>
-<area shape="rect" id="node2" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#afb40b46c8473166d5449b680a03eed79" title=" " alt="" coords="5,13,205,38"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="253,5,431,46"/>
+<area shape="rect" id="Node000002" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#afb40b46c8473166d5449b680a03eed79" title=" " alt="" coords="5,13,205,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,28,205,28,205,23,238,23"/>
 </map>

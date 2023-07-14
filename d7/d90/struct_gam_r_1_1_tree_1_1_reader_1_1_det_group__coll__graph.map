@@ -1,8 +1,13 @@
 <map id="GamR::Tree::Reader::DetGroup" name="GamR::Tree::Reader::DetGroup">
-<area shape="rect" id="node1" title=" " alt="" coords="29,401,172,515"/>
-<area shape="rect" id="node2" href="$d1/dab/class_gam_r_1_1_tree_1_1_reader.html" title=" " alt="" coords="5,240,148,339"/>
-<area shape="rect" id="node3" title=" " alt="" coords="173,240,351,339"/>
-<area shape="rect" id="node4" title=" " alt="" coords="193,108,331,163"/>
-<area shape="rect" id="node5" title=" " alt="" coords="208,5,247,45"/>
-<area shape="rect" id="node6" title=" " alt="" coords="277,5,316,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="29,480,159,600"/>
+<area shape="rect" id="Node000002" href="$d1/dab/class_gam_r_1_1_tree_1_1_reader.html" title=" " alt="" coords="5,292,135,417"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,416,87,463,81,464,75,417"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="159,297,328,412"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,413,154,469,150,466,196,410"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="181,134,306,214"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="246,228,246,297,241,297,241,228"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="198,5,219,71"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="209,70,213,109,216,117,211,119,208,110,204,71"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="267,5,289,71"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="272,71,260,118,255,116,267,70"/>
 </map>

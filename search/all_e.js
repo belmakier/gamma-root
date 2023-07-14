@@ -4,7 +4,7 @@ var searchData=
   ['oakridge_2ecc_1',['OakRidge.cc',['../df/d71/_oak_ridge_8cc.html',1,'']]],
   ['oakridge_2ehh_2',['OakRidge.hh',['../de/d11/_oak_ridge_8hh.html',1,'']]],
   ['observedprop_3',['ObservedProp',['../da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#aff931e179fa69b6b1d8c9d16d4812613',1,'GamR::AngDist::StatTensor']]],
-  ['offset_4',['offset',['../d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a10ce4d80daa419c704850cb6ac89fee6',1,'GamR::AngDist::GaussianDistr::offset()'],['../d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#a2ebdf64e5144d5fba0ce5fc319159fe7',1,'GamR::AngDist::DoubleGaussianDistr::offset()']]],
+  ['offset_4',['offset',['../d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a10ce4d80daa419c704850cb6ac89fee6',1,'GamR::AngDist::GaussianDistr::offset'],['../d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#a2ebdf64e5144d5fba0ce5fc319159fe7',1,'GamR::AngDist::DoubleGaussianDistr::offset']]],
   ['onetailgaussian_5',['OneTailGaussian',['../d0/d74/group___t_k.html#gga2f09f75494227f20e8894d80261fc089aa7b63ea281e23dad3462b367f4d316ec',1,'GamR::TK']]],
   ['onetailgaussianpeak_6',['OneTailGaussianPeak',['../db/d4d/class_gam_r_1_1_t_k_1_1_one_tail_gaussian_peak.html',1,'GamR::TK::OneTailGaussianPeak'],['../d0/d74/group___t_k.html#ga57b826566c4ed962d27d16787fa8cdb9',1,'GamR::TK::OneTailGaussianPeak::OneTailGaussianPeak()'],['../d0/d74/group___t_k.html#ga4d9185c8e5f5d90747c81359066bdc8e',1,'GamR::TK::OneTailGaussianPeak::OneTailGaussianPeak(double Low, double High)']]],
   ['onetailstepgaussian_7',['OneTailStepGaussian',['../d0/d74/group___t_k.html#gga2f09f75494227f20e8894d80261fc089a1818e9d0bcff82626004eb17c0de5e25',1,'GamR::TK']]],

@@ -1,8 +1,13 @@
 <map id="GamR::Utils::Fac10" name="GamR::Utils::Fac10">
-<area shape="rect" id="node1" title=" " alt="" coords="643,70,777,95"/>
-<area shape="rect" id="node2" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a0877eda04da307add630755c3b61f322" title=" " alt="" coords="445,70,595,95"/>
-<area shape="rect" id="node3" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a64b5a4704ab13f1fca8a2a787a30adde" title=" " alt="" coords="252,70,397,95"/>
-<area shape="rect" id="node4" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#aff931e179fa69b6b1d8c9d16d4812613" title=" " alt="" coords="14,5,195,45"/>
-<area shape="rect" id="node5" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#abb01ce9f84e22b3024fb507ff3ad7546" title=" " alt="" coords="11,70,198,95"/>
-<area shape="rect" id="node6" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#ad2b2d77bf8d7c0f4d159c5e0011e1b78" title=" " alt="" coords="5,119,204,145"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="640,70,774,96"/>
+<area shape="rect" id="Node000002" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a0877eda04da307add630755c3b61f322" title=" " alt="" coords="444,70,592,96"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="625,86,593,86,593,80,625,80"/>
+<area shape="rect" id="Node000003" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a64b5a4704ab13f1fca8a2a787a30adde" title=" " alt="" coords="252,70,396,96"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="429,86,396,86,396,80,429,80"/>
+<area shape="rect" id="Node000004" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#aff931e179fa69b6b1d8c9d16d4812613" title=" " alt="" coords="14,5,195,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="257,68,184,49,186,44,259,63"/>
+<area shape="rect" id="Node000005" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#abb01ce9f84e22b3024fb507ff3ad7546" title=" " alt="" coords="11,70,198,96"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="237,86,198,86,198,80,237,80"/>
+<area shape="rect" id="Node000006" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#ad2b2d77bf8d7c0f4d159c5e0011e1b78" title=" " alt="" coords="5,120,204,145"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="250,102,166,121,164,116,249,97"/>
 </map>

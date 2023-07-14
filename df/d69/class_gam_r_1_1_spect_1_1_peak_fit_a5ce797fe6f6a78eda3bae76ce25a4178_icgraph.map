@@ -1,6 +1,9 @@
 <map id="GamR::Spect::PeakFit::GetFunc" name="GamR::Spect::PeakFit::GetFunc">
-<area shape="rect" id="node1" title=" " alt="" coords="409,27,560,67"/>
-<area shape="rect" id="node2" href="$df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a09faee682fd6d1162f528ead04b219e6" title=" " alt="" coords="211,27,361,67"/>
-<area shape="rect" id="node3" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab6376882b1b259ab8ae15200fa9ce7c3" title=" " alt="" coords="5,5,163,31"/>
-<area shape="rect" id="node4" href="$df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a08437f372fe945499ff292c3aff36686" title=" " alt="" coords="9,55,159,95"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="407,27,556,68"/>
+<area shape="rect" id="Node000002" href="$df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a09faee682fd6d1162f528ead04b219e6" title=" " alt="" coords="210,27,359,68"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="392,50,359,50,359,45,392,45"/>
+<area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab6376882b1b259ab8ae15200fa9ce7c3" title=" " alt="" coords="5,5,162,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="195,37,162,32,162,27,195,32"/>
+<area shape="rect" id="Node000004" href="$df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a08437f372fe945499ff292c3aff36686" title=" " alt="" coords="9,55,158,96"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="195,63,159,68,158,62,194,57"/>
 </map>

@@ -1,6 +1,10 @@
 <map id="GamR::Efficiency::EffCFunc" name="GamR::Efficiency::EffCFunc">
-<area shape="rect" id="node1" title=" " alt="" coords="5,29,184,55"/>
-<area shape="rect" id="node2" href="$d0/d17/_abbreviations_8cc.html#aac6b7f4e4bdca0828a1553bfe8a0bca5" title=" " alt="" coords="232,29,271,55"/>
-<area shape="rect" id="node3" href="$dc/d89/namespace_gam_r_1_1_spect.html#aa3a93f8152a5a49fd88de42c1eb4f97f" title=" " alt="" coords="319,29,461,55"/>
-<area shape="rect" id="node4" href="$d0/db7/namespace_gam_r_1_1_utils.html#a0adbf2bb55ef0a9adfc45b00210c92c0" title=" " alt="" coords="509,29,668,55"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,183,55"/>
+<area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#aac6b7f4e4bdca0828a1553bfe8a0bca5" title=" " alt="" coords="231,29,269,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,40,216,40,216,45,183,45"/>
+<area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#aa3a93f8152a5a49fd88de42c1eb4f97f" title=" " alt="" coords="317,29,458,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="269,40,302,40,302,45,269,45"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="364,30,359,21,362,11,372,5,388,3,406,6,414,13,411,17,403,10,388,8,374,10,366,14,365,20,369,28"/>
+<area shape="rect" id="Node000004" href="$d0/db7/namespace_gam_r_1_1_utils.html#a0adbf2bb55ef0a9adfc45b00210c92c0" title=" " alt="" coords="506,29,665,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="459,40,492,40,492,45,459,45"/>
 </map>

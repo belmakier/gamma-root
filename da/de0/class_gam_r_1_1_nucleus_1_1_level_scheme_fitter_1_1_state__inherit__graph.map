@@ -1,5 +1,7 @@
 <map id="GamR::Nucleus::LevelSchemeFitter::State" name="GamR::Nucleus::LevelSchemeFitter::State">
-<area shape="rect" id="node1" title=" " alt="" coords="5,93,208,368"/>
-<area shape="rect" id="node2" title=" " alt="" coords="19,5,95,45"/>
-<area shape="rect" id="node3" title=" " alt="" coords="119,5,195,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,119,195,459"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="26,5,89,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,84,74,119,68,120,62,85"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="113,5,175,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,85,132,120,127,119,133,84"/>
 </map>

@@ -1,11 +1,23 @@
 <map id="GamR::Nucleus::LevelSchemeDraw::Transition::GetHeadLength" name="GamR::Nucleus::LevelSchemeDraw::Transition::GetHeadLength">
-<area shape="rect" id="node1" title=" " alt="" coords="5,104,219,144"/>
-<area shape="rect" id="node2" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a2152d1ab40683e52d72746545848d0a7" title=" " alt="" coords="267,72,473,112"/>
-<area shape="rect" id="node9" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#ac68606c67221fcd3748aa115be80fd9e" title=" " alt="" coords="770,133,969,173"/>
-<area shape="rect" id="node3" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#abcedf04d6777f5d4f01f76582891414a" title=" " alt="" coords="521,71,720,111"/>
-<area shape="rect" id="node4" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a446c07e96e5a62e16d4f6245b93e8745" title=" " alt="" coords="768,69,971,109"/>
-<area shape="rect" id="node5" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a363fddf60003acf60803f9c139a9f33e" title=" " alt="" coords="1019,133,1217,173"/>
-<area shape="rect" id="node6" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a9c11d11111db2f88c9c20abd9539b03f" title=" " alt="" coords="1019,197,1217,237"/>
-<area shape="rect" id="node7" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a2c8c938a3ae417d75d773190da2db8c6" title=" " alt="" coords="1019,5,1217,45"/>
-<area shape="rect" id="node8" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a6153e44bb7e3dd553328f23a38dfbfea" title=" " alt="" coords="1019,69,1217,109"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,104,218,145"/>
+<area shape="rect" id="Node000002" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a2152d1ab40683e52d72746545848d0a7" title=" " alt="" coords="266,75,471,115"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,110,251,106,251,111,218,115"/>
+<area shape="rect" id="Node000009" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#ac68606c67221fcd3748aa115be80fd9e" title=" " alt="" coords="767,136,965,177"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="218,126,752,149,752,154,218,131"/>
+<area shape="rect" id="Node000003" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#abcedf04d6777f5d4f01f76582891414a" title=" " alt="" coords="519,73,717,114"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="472,92,504,92,504,97,472,97"/>
+<area shape="rect" id="Node000004" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a446c07e96e5a62e16d4f6245b93e8745" title=" " alt="" coords="765,71,967,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="718,90,750,90,750,95,718,95"/>
+<area shape="rect" id="Node000005" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a363fddf60003acf60803f9c139a9f33e" title=" " alt="" coords="1015,136,1213,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="947,109,1021,129,1019,134,945,115"/>
+<area shape="rect" id="Node000006" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a9c11d11111db2f88c9c20abd9539b03f" title=" " alt="" coords="1015,201,1213,242"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="946,110,968,122,984,139,993,155,1001,171,1016,186,1025,192,1022,196,1013,190,997,174,988,158,980,142,965,126,944,114"/>
+<area shape="rect" id="Node000007" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a2c8c938a3ae417d75d773190da2db8c6" title=" " alt="" coords="1015,5,1213,46"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="945,67,1019,48,1021,53,947,73"/>
+<area shape="rect" id="Node000008" href="$d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a6153e44bb7e3dd553328f23a38dfbfea" title=" " alt="" coords="1015,71,1213,111"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="967,88,999,88,999,94,967,94"/>
+<area shape="poly" id="edge9_Node000009_Node000005" title=" " alt="" coords="966,154,1000,154,1000,159,966,159"/>
+<area shape="poly" id="edge10_Node000009_Node000006" title=" " alt="" coords="947,175,1021,194,1019,200,945,180"/>
+<area shape="poly" id="edge11_Node000009_Node000007" title=" " alt="" coords="944,133,965,121,980,106,988,90,997,73,1013,57,1022,51,1025,55,1016,61,1001,76,993,92,984,109,968,125,946,138"/>
+<area shape="poly" id="edge12_Node000009_Node000008" title=" " alt="" coords="945,133,1019,113,1021,118,947,138"/>
 </map>

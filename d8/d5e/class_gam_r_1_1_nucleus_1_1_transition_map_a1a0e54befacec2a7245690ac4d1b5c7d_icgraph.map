@@ -1,4 +1,5 @@
 <map id="GamR::Nucleus::TransitionMap::GetMap" name="GamR::Nucleus::TransitionMap::GetMap">
-<area shape="rect" id="node1" title=" " alt="" coords="225,5,401,45"/>
-<area shape="rect" id="node2" href="$d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a949ad48307b3ec103a33693ba519be1d" title=" " alt="" coords="5,5,177,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="225,5,400,46"/>
+<area shape="rect" id="Node000002" href="$d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a949ad48307b3ec103a33693ba519be1d" title=" " alt="" coords="5,5,177,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,28,177,28,177,23,210,23"/>
 </map>

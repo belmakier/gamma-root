@@ -1,8 +1,14 @@
 <map id="GamR::TK::operator&lt;&lt;" name="GamR::TK::operator&lt;&lt;">
-<area shape="rect" id="node1" title=" " alt="" coords="5,55,156,80"/>
-<area shape="rect" id="node2" href="$d0/d74/group___t_k.html#gac1c2149596c0bc3ee71f38a871d0aa98" title=" " alt="" coords="204,5,375,31"/>
-<area shape="rect" id="node3" href="$d0/d74/group___t_k.html#ga0c870043965f984b34e65455819d47cf" title=" " alt="" coords="205,55,373,80"/>
-<area shape="rect" id="node4" href="$d0/d17/_abbreviations_8cc.html#a8b606d712a770338ea74bd251231698d" title=" " alt="" coords="270,104,309,129"/>
-<area shape="rect" id="node5" href="$dc/d89/namespace_gam_r_1_1_spect.html#a9baa566867cd3f57cd8b1e5c0137ef3e" title=" " alt="" coords="423,104,617,129"/>
-<area shape="rect" id="node6" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="665,104,853,129"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,156,80"/>
+<area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#gac1c2149596c0bc3ee71f38a871d0aa98" title=" " alt="" coords="204,5,373,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,51,216,32,218,38,139,57"/>
+<area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#ga0c870043965f984b34e65455819d47cf" title=" " alt="" coords="205,55,372,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,65,190,65,190,70,156,70"/>
+<area shape="rect" id="Node000004" href="$d0/d17/_abbreviations_8cc.html#a8b606d712a770338ea74bd251231698d" title=" " alt="" coords="269,104,308,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="139,78,255,106,254,112,137,84"/>
+<area shape="rect" id="Node000005" href="$dc/d89/namespace_gam_r_1_1_spect.html#a9baa566867cd3f57cd8b1e5c0137ef3e" title=" " alt="" coords="421,104,614,130"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="308,114,406,114,406,120,308,120"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="480,105,472,95,477,86,492,79,518,77,547,80,561,88,558,93,546,86,518,83,493,85,480,89,477,95,484,102"/>
+<area shape="rect" id="Node000006" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="662,104,850,130"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="615,114,647,114,647,120,615,120"/>
 </map>

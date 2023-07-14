@@ -1,7 +1,13 @@
 <map id="GamR::AngDist::Ak" name="GamR::AngDist::Ak">
-<area shape="rect" id="node1" title=" " alt="" coords="464,62,597,87"/>
-<area shape="rect" id="node2" href="$da/d73/class_gam_r_1_1_ang_dist_1_1_ang_corr.html#a6476abedaa195d3205a83d9dfc263ac5" title=" " alt="" coords="223,13,410,38"/>
-<area shape="rect" id="node4" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#ad2b2d77bf8d7c0f4d159c5e0011e1b78" title=" " alt="" coords="217,62,416,87"/>
-<area shape="rect" id="node5" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a86706e3a9cf18220393e8bed727f8e3e" title=" " alt="" coords="252,111,381,137"/>
-<area shape="rect" id="node3" href="$da/d73/class_gam_r_1_1_ang_dist_1_1_ang_corr.html#ab736c46e109d3b9c91d984576886d861" title=" " alt="" coords="5,5,169,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="463,88,595,113"/>
+<area shape="rect" id="Node000002" href="$da/d73/class_gam_r_1_1_ang_dist_1_1_ang_corr.html#a6476abedaa195d3205a83d9dfc263ac5" title=" " alt="" coords="223,13,409,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="487,83,414,52,378,42,380,37,416,47,489,78"/>
+<area shape="rect" id="Node000004" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#ad2b2d77bf8d7c0f4d159c5e0011e1b78" title=" " alt="" coords="217,62,415,88"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="448,93,415,89,416,84,449,88"/>
+<area shape="rect" id="Node000005" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a86706e3a9cf18220393e8bed727f8e3e" title=" " alt="" coords="252,112,380,137"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="449,112,381,120,380,114,448,107"/>
+<area shape="rect" id="Node000006" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#acb8013df6dcb1d7635f67a7371bb0eb5" title=" " alt="" coords="252,161,380,187"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="489,122,416,152,379,163,378,158,414,147,487,117"/>
+<area shape="rect" id="Node000003" href="$da/d73/class_gam_r_1_1_ang_dist_1_1_ang_corr.html#ab736c46e109d3b9c91d984576886d861" title=" " alt="" coords="5,5,169,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="208,28,169,28,169,23,208,23"/>
 </map>

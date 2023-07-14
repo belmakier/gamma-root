@@ -1,4 +1,5 @@
 <map id="GamR::AngDist::PopulationParameter::GetPm" name="GamR::AngDist::PopulationParameter::GetPm">
-<area shape="rect" id="node1" title=" " alt="" coords="235,5,413,45"/>
-<area shape="rect" id="node2" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#a0fce2bb045b2272c1ae108e71534699f" title=" " alt="" coords="5,5,187,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="234,5,411,46"/>
+<area shape="rect" id="Node000002" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#a0fce2bb045b2272c1ae108e71534699f" title=" " alt="" coords="5,5,186,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,28,186,28,186,23,218,23"/>
 </map>

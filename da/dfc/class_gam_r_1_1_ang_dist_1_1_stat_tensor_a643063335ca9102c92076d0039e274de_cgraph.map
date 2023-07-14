@@ -1,5 +1,7 @@
 <map id="GamR::AngDist::StatTensor::Perturbation" name="GamR::AngDist::StatTensor::Perturbation">
-<area shape="rect" id="node1" title=" " alt="" coords="5,23,187,63"/>
-<area shape="rect" id="node2" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#af8a856cc5021ee7cd1b451ff185def49" title=" " alt="" coords="235,5,443,31"/>
-<area shape="rect" id="node3" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#a601edccee805ff4cf763bd8c8b7a6c6f" title=" " alt="" coords="235,55,442,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,186,64"/>
+<area shape="rect" id="Node000002" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#af8a856cc5021ee7cd1b451ff185def49" title=" " alt="" coords="234,5,441,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,31,218,28,219,33,187,37"/>
+<area shape="rect" id="Node000003" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#a601edccee805ff4cf763bd8c8b7a6c6f" title=" " alt="" coords="234,55,441,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,50,220,53,219,58,186,55"/>
 </map>

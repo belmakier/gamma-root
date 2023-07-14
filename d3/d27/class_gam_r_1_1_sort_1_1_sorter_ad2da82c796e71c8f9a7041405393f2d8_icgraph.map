@@ -1,4 +1,5 @@
 <map id="GamR::Sort::Sorter::Process" name="GamR::Sort::Sorter::Process">
-<area shape="rect" id="node1" title=" " alt="" coords="104,5,235,45"/>
-<area shape="rect" id="node2" href="$d9/da5/gamrsort_8cc.html#ad53223b8779f25caeddb70a3b9172967" title=" " alt="" coords="5,13,56,38"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="103,5,232,46"/>
+<area shape="rect" id="Node000002" href="$d9/da5/gamrsort_8cc.html#ad53223b8779f25caeddb70a3b9172967" title=" " alt="" coords="5,13,55,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,28,55,28,55,23,88,23"/>
 </map>

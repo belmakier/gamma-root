@@ -1,8 +1,13 @@
 <map id="GamR::Spect::IntegralBS" name="GamR::Spect::IntegralBS">
-<area shape="rect" id="node1" title=" " alt="" coords="5,55,172,80"/>
-<area shape="rect" id="node2" href="$d0/d74/group___t_k.html#gac1c2149596c0bc3ee71f38a871d0aa98" title=" " alt="" coords="220,5,391,31"/>
-<area shape="rect" id="node3" href="$d0/d74/group___t_k.html#ga0c870043965f984b34e65455819d47cf" title=" " alt="" coords="221,55,389,80"/>
-<area shape="rect" id="node4" href="$dc/d89/namespace_gam_r_1_1_spect.html#a96b06b9b004342fbf0f54cd3d6a308a8" title=" " alt="" coords="222,104,389,129"/>
-<area shape="rect" id="node5" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a3565d6396e4ff99984e83a27e2ab35ce" title=" " alt="" coords="439,65,615,105"/>
-<area shape="rect" id="node6" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a8054df5976ecd1f68768286918001af5" title=" " alt="" coords="439,129,615,169"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,171,80"/>
+<area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#gac1c2149596c0bc3ee71f38a871d0aa98" title=" " alt="" coords="219,5,388,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,51,229,32,230,38,148,57"/>
+<area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#ga0c870043965f984b34e65455819d47cf" title=" " alt="" coords="220,55,387,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="171,65,205,65,205,70,171,70"/>
+<area shape="rect" id="Node000004" href="$dc/d89/namespace_gam_r_1_1_spect.html#a96b06b9b004342fbf0f54cd3d6a308a8" title=" " alt="" coords="221,104,386,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="148,78,230,97,229,103,147,84"/>
+<area shape="rect" id="Node000005" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a3565d6396e4ff99984e83a27e2ab35ce" title=" " alt="" coords="436,63,611,104"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="386,102,421,96,422,102,387,107"/>
+<area shape="rect" id="Node000006" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a8054df5976ecd1f68768286918001af5" title=" " alt="" coords="436,129,611,169"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="387,126,422,131,421,137,386,131"/>
 </map>

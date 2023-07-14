@@ -1,4 +1,5 @@
 <map id="GamR::TK::BPeak::SetStep" name="GamR::TK::BPeak::SetStep">
-<area shape="rect" id="node1" title=" " alt="" coords="207,5,387,31"/>
-<area shape="rect" id="node2" href="$d0/d74/group___t_k.html#gacea94387106c6b07d16c53a1614a86b9" title=" " alt="" coords="5,5,159,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="206,5,385,31"/>
+<area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#gacea94387106c6b07d16c53a1614a86b9" title=" " alt="" coords="5,5,158,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,21,158,21,158,16,191,16"/>
 </map>

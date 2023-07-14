@@ -1,11 +1,19 @@
 <map id="GamR::Sort::Sorter::Tick" name="GamR::Sort::Sorter::Tick">
-<area shape="rect" id="node1" title=" " alt="" coords="269,229,400,269"/>
-<area shape="rect" id="node2" href="$dd/da0/class_gam_r_1_1_sort_1_1_type_1_1_coincidence_cube_diff.html#a38594500e35cc42a7d2d255023895993" title=" " alt="" coords="13,5,213,45"/>
-<area shape="rect" id="node3" href="$df/d71/class_gam_r_1_1_sort_1_1_type_1_1_coincidence_matrix.html#a132a50b82dd314a036a883c70e6cb765" title=" " alt="" coords="13,69,213,109"/>
-<area shape="rect" id="node4" href="$d6/daa/class_gam_r_1_1_sort_1_1_type_1_1_coincidence_matrix_pair.html#a8e27cf0183aa0b2d8520fff0575909f9" title=" " alt="" coords="13,133,213,173"/>
-<area shape="rect" id="node5" href="$d3/d6c/class_gam_r_1_1_sort_1_1_type_1_1_gated_time_difference.html#a24e85e6f4818336f371ac8e011146570" title=" " alt="" coords="17,197,210,237"/>
-<area shape="rect" id="node6" href="$d1/da3/class_gam_r_1_1_sort_1_1_type_1_1_matrix.html#ae415be51a3f058b904d921fc7443b220" title=" " alt="" coords="31,261,195,301"/>
-<area shape="rect" id="node7" href="$db/d1b/class_gam_r_1_1_sort_1_1_type_1_1_time_difference.html#af280ea60b9b0fd1ad348775bd7c0383a" title=" " alt="" coords="5,325,221,365"/>
-<area shape="rect" id="node8" href="$d7/d5f/class_gam_r_1_1_sort_1_1_type_1_1_time_difference_pairs.html#a364f5b4a6df32433f3b866409864cf2e" title=" " alt="" coords="5,389,221,429"/>
-<area shape="rect" id="node9" href="$df/d01/class_gam_r_1_1_sort_1_1_type_1_1_time_walk_cal.html#a15bb7f30ca89fcb2f9e8dac0ef351cfc" title=" " alt="" coords="20,453,207,493"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="269,235,398,275"/>
+<area shape="rect" id="Node000002" href="$dd/da0/class_gam_r_1_1_sort_1_1_type_1_1_coincidence_cube_diff.html#a38594500e35cc42a7d2d255023895993" title=" " alt="" coords="13,5,213,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="319,222,304,184,283,141,255,98,219,61,199,49,202,44,222,57,259,95,288,138,309,182,324,220"/>
+<area shape="rect" id="Node000003" href="$df/d71/class_gam_r_1_1_sort_1_1_type_1_1_coincidence_matrix.html#a132a50b82dd314a036a883c70e6cb765" title=" " alt="" coords="13,71,213,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="310,224,271,173,247,148,219,127,196,114,198,109,222,122,250,144,275,170,314,220"/>
+<area shape="rect" id="Node000004" href="$d6/daa/class_gam_r_1_1_sort_1_1_type_1_1_coincidence_matrix_pair.html#a8e27cf0183aa0b2d8520fff0575909f9" title=" " alt="" coords="13,136,213,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="288,229,220,192,187,180,189,175,222,187,290,224"/>
+<area shape="rect" id="Node000005" href="$d3/d6c/class_gam_r_1_1_sort_1_1_type_1_1_gated_time_difference.html#a24e85e6f4818336f371ac8e011146570" title=" " alt="" coords="17,201,209,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="254,246,209,239,210,234,255,240"/>
+<area shape="rect" id="Node000006" href="$d1/da3/class_gam_r_1_1_sort_1_1_type_1_1_matrix.html#ae415be51a3f058b904d921fc7443b220" title=" " alt="" coords="31,267,195,307"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="254,269,195,278,195,272,254,264"/>
+<area shape="rect" id="Node000007" href="$db/d1b/class_gam_r_1_1_sort_1_1_type_1_1_time_difference.html#af280ea60b9b0fd1ad348775bd7c0383a" title=" " alt="" coords="5,332,221,373"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="289,286,222,321,189,334,187,329,220,317,286,281"/>
+<area shape="rect" id="Node000008" href="$d7/d5f/class_gam_r_1_1_sort_1_1_type_1_1_time_difference_pairs.html#a364f5b4a6df32433f3b866409864cf2e" title=" " alt="" coords="5,397,221,438"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="314,289,275,339,250,365,222,387,198,399,196,394,219,382,247,361,271,336,310,286"/>
+<area shape="rect" id="Node000009" href="$df/d01/class_gam_r_1_1_sort_1_1_type_1_1_time_walk_cal.html#a15bb7f30ca89fcb2f9e8dac0ef351cfc" title=" " alt="" coords="20,463,206,503"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="324,290,309,327,287,371,259,414,222,452,202,464,199,460,219,448,254,411,283,368,304,325,319,288"/>
 </map>

@@ -1,7 +1,11 @@
 <map id="GamR::Coulex::Transition" name="GamR::Coulex::Transition">
-<area shape="rect" id="node1" title=" " alt="" coords="63,652,233,824"/>
-<area shape="rect" id="node2" href="$d1/d65/class_gam_r_1_1_coulex_1_1_level.html" title=" " alt="" coords="75,403,221,575"/>
-<area shape="rect" id="node3" title=" " alt="" coords="28,205,111,245"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,5,133,60"/>
-<area shape="rect" id="node5" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html" title=" " alt="" coords="135,109,321,340"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="56,786,213,992"/>
+<area shape="rect" id="Node000002" href="$d1/d65/class_gam_r_1_1_coulex_1_1_level.html" title=" " alt="" coords="68,503,201,708"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,708,137,770,132,770,132,708"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="28,255,97,320"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="72,319,110,486,105,487,67,320"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,5,120,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="65,99,65,255,60,255,60,99"/>
+<area shape="rect" id="Node000005" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html" title=" " alt="" coords="122,135,294,440"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="176,440,165,487,160,486,170,439"/>
 </map>
