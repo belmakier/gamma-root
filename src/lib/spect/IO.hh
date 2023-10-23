@@ -21,11 +21,16 @@ namespace GamR {
     std::string ToText(const TGraph *g, std::string outfile = "", std::string delimiter=",");
     std::string ToText(const TGraph *g, int ID, std::string outfile = "", std::string delimiter=",");
     std::string ToText(const TF1 *f, std::string outfile = "", std::string delimiter=",");
-    void ToBin(const TH2 *h, std::string outfile = "");
+    void ToBin(const TH2 *h, std::string outfile = "", int padx=0, int pady=0);
     void ToBin(const TH1 *h, std::string outfile = "");
     void ToSPE(const TH1 *h, std::string outfile = "");
     TH1D FromText(std::string s, std::string name);
+    TH1D *FromBin(std::string s, std::string name, std::string title, int nx, double low, double high, int size);
     TCutG *CutFromText(std::string s, std::string name);
+    TH2D *FromBin(std::string s, std::string name, std::string title,
+                  int nx, double xlow, double xhigh,
+                  int ny, double ylow, double yhigh,
+                  int size);
 
   } // namespace Spect
 } // namespace GamR

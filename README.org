@@ -20,8 +20,10 @@ made. This should make libraries that can be loaded in =ROOT=.
 git clone <wherever this is>/gamma-root
 cd gamma-root
 mkdir build
-cmake -DCMAKE_BUILD_TYPE=RELEASE ../src
+cd build
+cmake -DCMAKE_BUILD_TYPE=RELEASE ../
 make
+make install
 #+END_SRC
 
 It is recommended to use =CMake= and the compiled libraries as it has

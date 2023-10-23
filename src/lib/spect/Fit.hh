@@ -6,6 +6,7 @@
 #include <RtypesCore.h>
 #include <TCanvas.h>
 #include <TF1.h>
+#include <TGraph.h>
 #include <TROOT.h>
 #include <TSpectrum.h>
 
@@ -31,7 +32,9 @@ namespace GamR {
       struct Parameters {
         int iQuiet;
         int iFixWidths;
+        int iFixWidthsFile;
         int iQuadBack;
+        int iConstantBack;
         int iStep;
         int iTails1;
         int iTails2;        
@@ -45,6 +48,15 @@ namespace GamR {
       double fChi2;
       double fLow;
       double fHigh;
+      int fNData;
+      int fNPars;
+
+      TGraph *gWidth = NULL;
+      TGraph *gStep = NULL;
+      TGraph *gSkew = NULL;
+      TGraph *gSkewAmp = NULL;
+      TGraph *gSkew2 = NULL;
+      TGraph *gSkewAmp2 = NULL;
       
       GamR::TK::PeakType fPeakType;
       //std::vector<GamR::TK::Peak*> fPeaks;
@@ -165,6 +177,13 @@ namespace GamR {
       void AddPeak(std::string peakKey, GamR::TK::PeakType peaktype, double centroid);
 
       void ToText(std::string filename, std::string delimiter=" ", int nPoints=1000);
+
+      TGraph *GetWidthGraph() { return gWidth; }
+      TGraph *GetStepGraph() { return gStep; }
+      TGraph *GetSkewAmpGraph() { return gSkewAmp; }
+      TGraph *GetSkewGraph() { return gSkew; }
+      TGraph *GetSkewAmp2Graph() { return gSkewAmp2; }
+      TGraph *GetSkew2Graph() { return gSkew2; }
       
       GamR::TK::FPeak* Get(std::string peakKey) { return fPeaks[peakKey]; }
       GamR::TK::FPeak* Get(int i) { return fPeaks[fPeakKeys[i]]; }     

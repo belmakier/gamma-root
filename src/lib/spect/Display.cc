@@ -306,6 +306,11 @@ namespace GamR {
         if (hist) {
           hist->GetXaxis()->SetRangeUser(low, high);
         }
+        TH2D *hist2 = GamR::Utils::GetHist2D(canvas);
+        if (hist2) {
+          hist2->GetXaxis()->SetRangeUser(low, high);
+        }
+
         canvas->Modified();
       }
       
@@ -327,6 +332,11 @@ namespace GamR {
         if (hist) {
           hist->GetYaxis()->SetRangeUser(low, high);
         }
+        TH2D *hist2 = GamR::Utils::GetHist2D(canvas);
+        if (hist2) {
+          hist2->GetYaxis()->SetRangeUser(low, high);
+        }
+
         canvas->Modified();
       }
       

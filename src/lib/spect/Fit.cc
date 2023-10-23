@@ -48,8 +48,14 @@ namespace GamR {
       if (opts.Contains("f")) {
         parameters.iFixWidths = 1;
       }
+      if (opts.Contains("ff")) {
+        parameters.iFixWidthsFile = 1;
+      }
       if (opts.Contains("q")) {
         parameters.iQuadBack = 1;
+      }
+      if (opts.Contains("c")) {
+        parameters.iConstantBack = 1;
       }
       if (opts.Contains("t")) {
         parameters.iTails1 = 1;
@@ -95,10 +101,15 @@ namespace GamR {
       if (parameters.iQuadBack) {
         sFuncString.Form("[0] + [1]*(x-%f) + [2]*pow(x-%f, 2)", (fHigh+fLow)/2, (fHigh+fLow)/2);
         iParamCount = iParamCount + 3;
-      } else {
+      } else if (parameters.iConstantBack) {
+        sFuncString.Form("[0]");
+        iParamCount = iParamCount + 1;
+      }
+      else {
         sFuncString.Form("[0] + [1]*(x-%f)", (fHigh+fLow)/2);
         iParamCount = iParamCount + 2;
       }
+
       
       fBackground = new TF1("fBackground", sFuncString.Data(), fLow, fHigh);
     }
@@ -143,7 +154,10 @@ namespace GamR {
         int iStepAmpParam;
         int iSkewAmpParam2;
         int iSkewWidthParam2;
-        if (parameters.iFixWidths) {
+        if (parameters.iFixWidthsFile) {
+          iWidthParam = -1;
+        }
+        else if (parameters.iFixWidths) {
           if (i == 0) {
             iWidthParam = iParamCount;
             iParamCount++;
@@ -159,8 +173,21 @@ namespace GamR {
         if (fPeakType == GamR::TK::StepGaussian ||
             fPeakType == GamR::TK::OneTailStepGaussian ||
             fPeakType == GamR::TK::TwoTailStepGaussian) {
-          iStepAmpParam = iParamCount;
-          iParamCount++;
+          if (parameters.iFixWidthsFile) {
+            iStepAmpParam = -1;
+          }
+          else if (parameters.iFixWidths) {
+            if (i == 0) {
+              iStepAmpParam = iParamCount;
+              iParamCount++;
+              firstKey = peakKey;
+            } else {
+              iStepAmpParam = fPeakParamInds[firstKey].iStepAmplitude;
+            }
+          } else {
+            iStepAmpParam = iParamCount;
+            iParamCount++;            
+          }
           fPeakParamInds[peakKey].iStepAmplitude = iStepAmpParam;
         }
 
@@ -169,7 +196,11 @@ namespace GamR {
             fPeakType == GamR::TK::TwoTailGaussian ||
             fPeakType == GamR::TK::TwoTailStepGaussian) {
 
-          if (parameters.iFixWidths) {
+          if (parameters.iFixWidthsFile) {
+            iSkewAmpParam = -1;
+            iSkewWidthParam = -1;
+          }
+          else if (parameters.iFixWidths ) {
             if (i == 0) {
               iSkewAmpParam = iParamCount;
               iParamCount++;
@@ -183,8 +214,7 @@ namespace GamR {
             iSkewAmpParam = iParamCount;
             iParamCount++;
             iSkewWidthParam = iParamCount;
-            iParamCount++;
-            
+            iParamCount++;       
           }
           fPeakParamInds[peakKey].iSkewAmplitude = iSkewAmpParam;
           fPeakParamInds[peakKey].iSkewWidth = iSkewWidthParam;
@@ -192,7 +222,11 @@ namespace GamR {
           if (fPeakType == GamR::TK::TwoTailGaussian ||
               fPeakType == GamR::TK::TwoTailStepGaussian) {
 
-            if (parameters.iFixWidths) {
+            if (parameters.iFixWidthsFile) {
+              iSkewAmpParam2 = -1;
+              iSkewWidthParam2 = -1;
+            }
+            else if (parameters.iFixWidths) {
               if (i == 0) {
                 iSkewAmpParam2 = iParamCount;
                 iParamCount++;
@@ -221,7 +255,9 @@ namespace GamR {
       
       /* set parameter names */
       fTotal->SetParName(0, "c");
-      fTotal->SetParName(1, "b");
+      if (!parameters.iConstantBack) {
+        fTotal->SetParName(1, "b");
+      }
       if (parameters.iQuadBack) {
         fTotal->SetParName(2, "a");
       }
@@ -232,15 +268,20 @@ namespace GamR {
         auto pp = mpp.second;
         fTotal->SetParName(pp.iAmplitude, ("Amp" + std::to_string(i)).c_str());
         fTotal->SetParName(pp.iCentroid, ("Cent" + std::to_string(i)).c_str());
-        if (parameters.iFixWidths) {
+        if (parameters.iFixWidths && !parameters.iFixWidthsFile) {
           fTotal->SetParName(pp.iWidth, "Sigma");
         } else {
           fTotal->SetParName(pp.iWidth, ("Sigma" + std::to_string(i)).c_str());
-        }
+        }        
         if (fPeakType == GamR::TK::StepGaussian ||
             fPeakType == GamR::TK::OneTailStepGaussian ||
             fPeakType == GamR::TK::TwoTailStepGaussian) {
-          fTotal->SetParName(pp.iStepAmplitude, ("H" + std::to_string(i)).c_str());
+          if (parameters.iFixWidths && !parameters.iFixWidthsFile) {
+            fTotal->SetParName(pp.iStepAmplitude, "H");
+          }
+          else {
+            fTotal->SetParName(pp.iStepAmplitude, ("H" + std::to_string(i)).c_str());
+          }
         }
 
         if (fPeakType == GamR::TK::OneTailGaussian ||
@@ -248,7 +289,7 @@ namespace GamR {
             fPeakType == GamR::TK::TwoTailGaussian ||
             fPeakType == GamR::TK::TwoTailStepGaussian) {
 
-          if (parameters.iFixWidths) {
+          if (parameters.iFixWidths && !parameters.iFixWidthsFile) {
             fTotal->SetParName(pp.iSkewAmplitude, "R");
             fTotal->SetParName(pp.iSkewWidth, "Beta");
           } else {
@@ -258,7 +299,7 @@ namespace GamR {
 
           if (fPeakType == GamR::TK::TwoTailGaussian ||
               fPeakType == GamR::TK::TwoTailStepGaussian) {
-            if (parameters.iFixWidths) {
+            if (parameters.iFixWidths && !parameters.iFixWidthsFile) {
               fTotal->SetParName(pp.iSkewAmplitude2, "R2");
               fTotal->SetParName(pp.iSkewWidth2, "Beta2");
             } else {
@@ -287,8 +328,11 @@ namespace GamR {
       }
 	
       /* set initial guesses */
+      fNData = hist->FindBin(fHigh) - hist->FindBin(fLow) + 1;
       double slope = (hist->GetBinContent(hist->FindBin(fHigh)) - hist->GetBinContent(hist->FindBin(fLow))) / (fHigh - fLow);
-      fTotal->SetParameter(1, slope);
+      if (!parameters.iConstantBack) {
+        fTotal->SetParameter(1, slope);
+      }
       double offset = (hist->GetBinContent(hist->FindBin(fLow)) +
                        hist->GetBinContent(hist->FindBin(fHigh)))/2.0;
       fTotal->SetParameter(0, offset);
@@ -316,8 +360,10 @@ namespace GamR {
         }
         //sigma = 5*bin width (?)        
         //fTotal->SetParameter(pp.iWidth, 5.0*hist->GetBinWidth(i));
+        if (!parameters.iFixWidthsFile) {
         fTotal->SetParameter(pp.iWidth, fFitGuesses->fWidth.val);
         fTotal->SetParLimits(pp.iWidth, fFitGuesses->fWidth.low, fFitGuesses->fWidth.high);
+        }
 
         if (fPeakType == GamR::TK::StepGaussian ||
             fPeakType == GamR::TK::OneTailStepGaussian ||
@@ -332,7 +378,9 @@ namespace GamR {
             fTotal->SetParameter(pp.iStepAmplitude, (high-low)/2.);
           }
           */
+          if (!parameters.iFixWidthsFile) {
           fTotal->FixParameter(pp.iStepAmplitude, 0.);
+          }
         }
 
         if (fPeakType == GamR::TK::OneTailGaussian ||
@@ -348,13 +396,17 @@ namespace GamR {
             fTotal->SetParameter(stepAmplitudeParameters[i], 1.);
             fTotal->SetParLimits(stepAmplitudeParameters[i], 0, 20);
           */
+          if (!parameters.iFixWidthsFile) {
           fTotal->FixParameter(pp.iSkewWidth, 2.5);
           fTotal->FixParameter(pp.iSkewAmplitude, 0.0);
+          }
           if (fPeakType == GamR::TK::TwoTailGaussian ||
               fPeakType == GamR::TK::TwoTailStepGaussian) {
 
+            if (!parameters.iFixWidthsFile) {
             fTotal->FixParameter(pp.iSkewWidth2, 5);
             fTotal->FixParameter(pp.iSkewAmplitude2, 0.0);
+            }
           }
         }
       }
@@ -376,6 +428,42 @@ namespace GamR {
       std::string fopts(foption);
       fopts = fopts + " R";
 
+      //
+      if (parameters.iFixWidthsFile) {
+        FILE *file = fopen("FitWidths.dat", "ra");
+        if (!file) { std::cerr << "Error! file FitWidths.dat not opened" << std::endl; return;}    
+        std::stringstream ss;
+        char cline[2048];
+
+        gWidth = new TGraph();
+        gStep = new TGraph();
+        gSkew = new TGraph();
+        gSkewAmp = new TGraph();
+        gSkew2 = new TGraph();
+        gSkewAmp2 = new TGraph();
+        
+        while(std::fgets(cline, sizeof cline, file)!=NULL) {
+          std::string line(cline);
+          if (line.size() == 0) { continue; }
+          if (line[0] == '#') { continue; }
+          if (line[0] == ';') { continue; }
+          if (line[0] == '!') { continue; }
+
+          ss.clear();
+          ss.str(line);
+
+          double energy, width, step, skew, skewamp, skew2, skewamp2;
+          ss >> energy >> width >> step >> skew >> skewamp >> skew2 >> skewamp2;
+
+          gWidth->AddPoint(energy, width);
+          gStep->AddPoint(energy,step);
+          gSkew->AddPoint(energy,skew);
+          gSkewAmp->AddPoint(energy,skewamp);
+          gSkew2->AddPoint(energy,skew2);          
+          gSkewAmp2->AddPoint(energy,skewamp2);
+        }
+      }
+      
       // first fit, only gaussian
       // this seems to be broken (sometimes?) with tails when tail amplitude fixed at zero
       if (fPeakType == GamR::TK::Gaussian) {
@@ -391,8 +479,10 @@ namespace GamR {
         for (auto &mpp : fPeakParamInds) {
           auto peakKey = mpp.first;
           auto pp = mpp.second;
+          if (!parameters.iFixWidthsFile) {
           fTotal->SetParameter(pp.iStepAmplitude, fFitGuesses->fStepAmp.val);
           fTotal->SetParLimits(pp.iStepAmplitude, fFitGuesses->fStepAmp.low, fFitGuesses->fStepAmp.high);
+          }
           /*
           double low;
           double high;
@@ -416,10 +506,12 @@ namespace GamR {
         for (auto &mpp : fPeakParamInds) {
           auto peakKey = mpp.first;
           auto pp = mpp.second;
+          if (!parameters.iFixWidthsFile) {
           fTotal->SetParameter(pp.iSkewWidth, fFitGuesses->fSkewWidth.val);
           fTotal->SetParLimits(pp.iSkewWidth, fFitGuesses->fSkewWidth.low, fFitGuesses->fSkewWidth.high);
           fTotal->SetParameter(pp.iSkewAmplitude, fFitGuesses->fSkewAmp.val);
           fTotal->SetParLimits(pp.iSkewAmplitude, fFitGuesses->fSkewAmp.low, fFitGuesses->fSkewAmp.high);
+          }
         }
         if (!parameters.iNoFit) {
           hist->Fit(fTotal, fopts.c_str());
@@ -431,10 +523,12 @@ namespace GamR {
         for (auto &mpp : fPeakParamInds) {
           auto peakKey = mpp.first;
           auto pp = mpp.second;
+          if (!parameters.iFixWidthsFile) {
           fTotal->SetParameter(pp.iSkewWidth2, fFitGuesses->fSkewWidth2.val);
           fTotal->SetParLimits(pp.iSkewWidth2, fFitGuesses->fSkewWidth2.low, fFitGuesses->fSkewWidth2.high);
           fTotal->SetParameter(pp.iSkewAmplitude2, fFitGuesses->fSkewAmp2.val);
           fTotal->SetParLimits(pp.iSkewAmplitude2, fFitGuesses->fSkewAmp2.low, fFitGuesses->fSkewAmp2.high);
+          }
         }
         if (!parameters.iNoFit) {
           hist->Fit(fTotal, fopts.c_str());
@@ -447,7 +541,9 @@ namespace GamR {
       /* set results in all the components of the results object from fTotal*/
       
       GetBackground()->SetParameter(0, fTotal->GetParameter(0));
-      GetBackground()->SetParameter(1, fTotal->GetParameter(1));        
+      if (!parameters.iConstantBack) {
+        GetBackground()->SetParameter(1, fTotal->GetParameter(1));
+      }
       if (parameters.iQuadBack) {
         GetBackground()->SetParameter(2, fTotal->GetParameter(2));
       }
@@ -458,56 +554,126 @@ namespace GamR {
         auto pp = fPeakParamInds[peakKey];
         switch(fPeakType) {
         case GamR::TK::Gaussian : {
-          peak->SetParameters({fTotal->GetParameter(pp.iAmplitude),
+          if (parameters.iFixWidthsFile) {
+            peak->SetParameters({fTotal->GetParameter(pp.iAmplitude),
+                fTotal->GetParameter(pp.iCentroid),
+                gWidth->Eval(fTotal->GetParameter(pp.iCentroid))/2.3548});
+            peak->SetParErrors({fTotal->GetParError(pp.iAmplitude),
+                fTotal->GetParError(pp.iCentroid),
+                0});
+          }
+          else {
+            peak->SetParameters({fTotal->GetParameter(pp.iAmplitude),
                 fTotal->GetParameter(pp.iCentroid),
                 fTotal->GetParameter(pp.iWidth)});
-          peak->SetParErrors({fTotal->GetParError(pp.iAmplitude),
+            peak->SetParErrors({fTotal->GetParError(pp.iAmplitude),
                 fTotal->GetParError(pp.iCentroid),
-                fTotal->GetParError(pp.iWidth)});
+                0.0});
+          }
           break;
         }
         case GamR::TK::StepGaussian : {
-          peak->SetParameters({fTotal->GetParameter(pp.iAmplitude),
+          if (parameters.iFixWidthsFile) {
+            peak->SetParameters({fTotal->GetParameter(pp.iAmplitude),
+                fTotal->GetParameter(pp.iCentroid),
+                gWidth->Eval(fTotal->GetParameter(pp.iCentroid))/2.3548,
+                gStep->Eval(fTotal->GetParameter(pp.iCentroid))});
+            peak->SetParErrors({fTotal->GetParError(pp.iAmplitude),
+                fTotal->GetParError(pp.iCentroid),
+                0.0,
+                0.0});
+          }
+          else {
+            peak->SetParameters({fTotal->GetParameter(pp.iAmplitude),
                 fTotal->GetParameter(pp.iCentroid),
                 fTotal->GetParameter(pp.iWidth),
                 fTotal->GetParameter(pp.iStepAmplitude)});
-          peak->SetParErrors({fTotal->GetParError(pp.iAmplitude),
+            peak->SetParErrors({fTotal->GetParError(pp.iAmplitude),
                 fTotal->GetParError(pp.iCentroid),
                 fTotal->GetParError(pp.iWidth),
                 fTotal->GetParError(pp.iStepAmplitude)});
+          }
           break;
         }
         case GamR::TK::OneTailGaussian : {
-          peak->SetParameters({fTotal->GetParameter(pp.iAmplitude),
+          if (parameters.iFixWidthsFile) {
+            peak->SetParameters({fTotal->GetParameter(pp.iAmplitude),
+                fTotal->GetParameter(pp.iCentroid),
+                gWidth->Eval(fTotal->GetParameter(pp.iCentroid))/2.3548,
+                gSkewAmp->Eval(fTotal->GetParameter(pp.iCentroid)),
+                gSkew->Eval(fTotal->GetParameter(pp.iCentroid))});
+            peak->SetParErrors({fTotal->GetParError(pp.iAmplitude),
+                fTotal->GetParError(pp.iCentroid),
+                0.0,
+                0.0,
+                0.0});
+          }
+          else {
+            peak->SetParameters({fTotal->GetParameter(pp.iAmplitude),
                 fTotal->GetParameter(pp.iCentroid),
                 fTotal->GetParameter(pp.iWidth),
                 fTotal->GetParameter(pp.iSkewAmplitude),
                 fTotal->GetParameter(pp.iSkewWidth)});
-          peak->SetParErrors({fTotal->GetParError(pp.iAmplitude),
+            peak->SetParErrors({fTotal->GetParError(pp.iAmplitude),
                 fTotal->GetParError(pp.iCentroid),
                 fTotal->GetParError(pp.iWidth),
                 fTotal->GetParError(pp.iSkewAmplitude),
                 fTotal->GetParError(pp.iSkewWidth)});
+          }
           break;
         }
         case GamR::TK::TwoTailGaussian : {
-          peak->SetParameters({fTotal->GetParameter(pp.iAmplitude),
+          if (parameters.iFixWidthsFile) {
+            peak->SetParameters({fTotal->GetParameter(pp.iAmplitude),
+                fTotal->GetParameter(pp.iCentroid),
+                gWidth->Eval(fTotal->GetParameter(pp.iCentroid))/2.3548,
+                gSkewAmp->Eval(fTotal->GetParameter(pp.iCentroid)),
+                gSkew->Eval(fTotal->GetParameter(pp.iCentroid)),
+                gSkewAmp2->Eval(fTotal->GetParameter(pp.iCentroid)),
+                gSkew2->Eval(fTotal->GetParameter(pp.iCentroid))});
+            peak->SetParErrors({fTotal->GetParError(pp.iAmplitude),
+                fTotal->GetParError(pp.iCentroid),
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0});
+          }
+          else {          
+            peak->SetParameters({fTotal->GetParameter(pp.iAmplitude),
                 fTotal->GetParameter(pp.iCentroid),
                 fTotal->GetParameter(pp.iWidth),
                 fTotal->GetParameter(pp.iSkewAmplitude),
                 fTotal->GetParameter(pp.iSkewWidth),
                 fTotal->GetParameter(pp.iSkewAmplitude2),
                 fTotal->GetParameter(pp.iSkewWidth2)});
-          peak->SetParErrors({fTotal->GetParError(pp.iAmplitude),
+            peak->SetParErrors({fTotal->GetParError(pp.iAmplitude),
                 fTotal->GetParError(pp.iCentroid),
                 fTotal->GetParError(pp.iWidth),
                 fTotal->GetParError(pp.iSkewAmplitude),
                 fTotal->GetParError(pp.iSkewWidth),
                 fTotal->GetParError(pp.iSkewAmplitude2),
                 fTotal->GetParError(pp.iSkewWidth2)});
+          }
           break;
         }
         case GamR::TK::OneTailStepGaussian : {
+          if (parameters.iFixWidthsFile) {
+            peak->SetParameters({fTotal->GetParameter(pp.iAmplitude),
+                fTotal->GetParameter(pp.iCentroid),
+                gWidth->Eval(fTotal->GetParameter(pp.iCentroid))/2.3548,
+                gSkewAmp->Eval(fTotal->GetParameter(pp.iCentroid)),
+                gSkew->Eval(fTotal->GetParameter(pp.iCentroid)),
+                gStep->Eval(fTotal->GetParameter(pp.iCentroid))});
+            peak->SetParErrors({fTotal->GetParError(pp.iAmplitude),
+                fTotal->GetParError(pp.iCentroid),
+                0.0,
+                0.0,
+                0.0,
+                0.0});
+
+          }
+          else {
           peak->SetParameters({fTotal->GetParameter(pp.iAmplitude),
                 fTotal->GetParameter(pp.iCentroid),
                 fTotal->GetParameter(pp.iWidth),
@@ -520,10 +686,30 @@ namespace GamR {
                 fTotal->GetParError(pp.iSkewAmplitude),
                 fTotal->GetParError(pp.iSkewWidth),
                 fTotal->GetParError(pp.iStepAmplitude)});
+          }
           break;
         }
         case GamR::TK::TwoTailStepGaussian : {
-          peak->SetParameters({fTotal->GetParameter(pp.iAmplitude),
+          if (parameters.iFixWidthsFile) {
+            peak->SetParameters({fTotal->GetParameter(pp.iAmplitude),
+                fTotal->GetParameter(pp.iCentroid),
+                gWidth->Eval(fTotal->GetParameter(pp.iCentroid))/2.3548,
+                gSkewAmp->Eval(fTotal->GetParameter(pp.iCentroid)),
+                gSkew->Eval(fTotal->GetParameter(pp.iCentroid)),
+                gSkewAmp2->Eval(fTotal->GetParameter(pp.iCentroid)),
+                gSkew2->Eval(fTotal->GetParameter(pp.iCentroid)),
+                gStep->Eval(fTotal->GetParameter(pp.iCentroid))});
+            peak->SetParErrors({fTotal->GetParError(pp.iAmplitude),
+                fTotal->GetParError(pp.iCentroid),
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0});
+          }
+          else {
+            peak->SetParameters({fTotal->GetParameter(pp.iAmplitude),
                 fTotal->GetParameter(pp.iCentroid),
                 fTotal->GetParameter(pp.iWidth),
                 fTotal->GetParameter(pp.iSkewAmplitude),
@@ -531,7 +717,7 @@ namespace GamR {
                 fTotal->GetParameter(pp.iSkewAmplitude2),
                 fTotal->GetParameter(pp.iSkewWidth2),
                 fTotal->GetParameter(pp.iStepAmplitude)});
-          peak->SetParErrors({fTotal->GetParError(pp.iAmplitude),
+            peak->SetParErrors({fTotal->GetParError(pp.iAmplitude),
                 fTotal->GetParError(pp.iCentroid),
                 fTotal->GetParError(pp.iWidth),
                 fTotal->GetParError(pp.iSkewAmplitude),
@@ -539,6 +725,7 @@ namespace GamR {
                 fTotal->GetParError(pp.iSkewAmplitude2),
                 fTotal->GetParError(pp.iSkewWidth2),
                 fTotal->GetParError(pp.iStepAmplitude)});
+          }
           break;
         }
         }
@@ -546,7 +733,8 @@ namespace GamR {
     }
 
     void GamR::Spect::PeakFit::PrintResults() {
-      TString sPrintString;
+      std::cout << "Chi2 = " << fChi2 << ", ndata = " << fNData << ",  NDF = " << fNData - fNPars << ", Chi2/NDF = " << fChi2/(double)(fNData - fNPars) << std::endl;
+      TString sPrintString;      
       if (!parameters.iQuiet) {
         sPrintString.Form("Peak   Centroid       Height         FWHM           Area           ");
         std::printf("%s\n", sPrintString.Data());
@@ -786,11 +974,15 @@ namespace GamR {
           //TF1 *single = retval->GetPeakBG(i);
           TF1 *single = retval->GetPeakBG(peakKey);
           single->SetNpx(500);
+          single->SetLineColor(kBlue+1);
+          single->SetLineWidth(2);
           single->Draw("same");
 
           TF1 *step = retval->GetPeakStepBG(peakKey);
           if (step != NULL) {
             step->SetNpx(500);
+            step->SetLineColor(kBlack);
+            step->SetLineWidth(1);
             step->Draw("same");
           }
 
@@ -799,6 +991,8 @@ namespace GamR {
             TF1 *gauss = retval->GetPeakGaussBG(peakKey);
             if (gauss != NULL) {
               gauss->SetNpx(500);
+              gauss->SetLineWidth(1);
+              gauss->SetLineColor(kGreen+2);
               gauss->Draw("same");
             }
           }
@@ -847,11 +1041,13 @@ namespace GamR {
       for (int i = 1; i <= iHighBin - iLowBin + 1; i++) {
         residuals->SetBinContent(i, hist->GetBinContent(i + iLowBin - 1) -
                                  func->Eval(hist->GetBinCenter(i + iLowBin - 1)) + offset);
+        residuals->SetBinError(i, hist->GetBinError(i + iLowBin - 1));
       }
 
       TF1 *zeroFunc = new TF1("zero", "[0]", low, high);
       zeroFunc->SetParameter(0, offset);
-      residuals->Draw("hist same");
+      residuals->SetMarkerSize(0.5);
+      residuals->Draw("hist E1 same");
       zeroFunc->Draw("same");      
       
       
@@ -980,7 +1176,9 @@ namespace GamR {
                        [&](double *x, double *p){
                          double ret = 0;
                          fBackground->SetParameter(0, p[0]);
-                         fBackground->SetParameter(1, p[1]);
+                         if (!parameters.iConstantBack) {
+                           fBackground->SetParameter(1, p[1]);
+                         }
                          if (parameters.iQuadBack) {
                            fBackground->SetParameter(2, p[2]);
                          }
@@ -991,47 +1189,103 @@ namespace GamR {
                            auto pp = mpp.second;
                            switch(fPeakType) {      
                            case GamR::TK::Gaussian: {
-                             fPeaks[peakKey]->SetParameters({p[pp.iAmplitude],
+                             if (parameters.iFixWidthsFile) {
+                               fPeaks[peakKey]->SetParameters({p[pp.iAmplitude],
+                                   p[pp.iCentroid],                                   
+                                   gWidth->Eval(p[pp.iCentroid])/2.3548});
+                             }
+                             else {
+                               fPeaks[peakKey]->SetParameters({p[pp.iAmplitude],
                                    p[pp.iCentroid],
                                    p[pp.iWidth]});
+                             }
                              break;
                            }
                            case GamR::TK::StepGaussian: {
+                             if (parameters.iFixWidthsFile) {
                              fPeaks[peakKey]->SetParameters({p[pp.iAmplitude],
+                                   p[pp.iCentroid],
+                                   gWidth->Eval(p[pp.iCentroid])/2.3548,
+                                   gStep->Eval(p[pp.iCentroid])});
+                             }
+                             else {
+                               fPeaks[peakKey]->SetParameters({p[pp.iAmplitude],
                                    p[pp.iCentroid],
                                    p[pp.iWidth],
                                    p[pp.iStepAmplitude]});
+                             }
                              break;
                            }
                            case GamR::TK::OneTailGaussian: {
-                             fPeaks[peakKey]->SetParameters({p[pp.iAmplitude],
+                             if (parameters.iFixWidthsFile) {
+                               fPeaks[peakKey]->SetParameters({p[pp.iAmplitude],
+                                   p[pp.iCentroid],
+                                   gWidth->Eval(p[pp.iCentroid])/2.3548,
+                                   gSkewAmp->Eval(p[pp.iCentroid]),
+                                   gSkew->Eval(p[pp.iCentroid])});
+                             }
+                             else {
+                               fPeaks[peakKey]->SetParameters({p[pp.iAmplitude],
                                    p[pp.iCentroid],
                                    p[pp.iWidth],
                                    p[pp.iSkewAmplitude],
                                    p[pp.iSkewWidth]});
+                             }
                              break;
                            }
                            case GamR::TK::TwoTailGaussian: {
-                             fPeaks[peakKey]->SetParameters({p[pp.iAmplitude],
+                             if (parameters.iFixWidthsFile) {
+                               fPeaks[peakKey]->SetParameters({p[pp.iAmplitude],
+                                   p[pp.iCentroid],
+                                   gWidth->Eval(p[pp.iCentroid])/2.3548,
+                                   gSkewAmp->Eval(p[pp.iCentroid]),
+                                   gSkew->Eval(p[pp.iCentroid]),
+                                   gSkewAmp2->Eval(p[pp.iCentroid]),
+                                   gSkew2->Eval(p[pp.iCentroid])});
+                             }
+                             else {
+                               fPeaks[peakKey]->SetParameters({p[pp.iAmplitude],
                                    p[pp.iCentroid],
                                    p[pp.iWidth],
                                    p[pp.iSkewAmplitude],
                                    p[pp.iSkewWidth],
                                    p[pp.iSkewAmplitude2],
                                    p[pp.iSkewWidth2]});
+                             }
                              break;
                            }
                            case GamR::TK::OneTailStepGaussian: {
-                             fPeaks[peakKey]->SetParameters({p[pp.iAmplitude],
+                             if (parameters.iFixWidthsFile) {
+                               fPeaks[peakKey]->SetParameters({p[pp.iAmplitude],
+                                   p[pp.iCentroid],
+                                   gWidth->Eval(p[pp.iCentroid])/2.3548,
+                                   gSkewAmp->Eval(p[pp.iCentroid]),
+                                   gSkew->Eval(p[pp.iCentroid]),
+                                   gStep->Eval(p[pp.iCentroid])});
+                             }
+                             else {
+                               fPeaks[peakKey]->SetParameters({p[pp.iAmplitude],
                                    p[pp.iCentroid],
                                    p[pp.iWidth],
                                    p[pp.iSkewAmplitude],
                                    p[pp.iSkewWidth],
                                    p[pp.iStepAmplitude]});
+                             }
                              break;
                            }
                            case GamR::TK::TwoTailStepGaussian: {
-                             fPeaks[peakKey]->SetParameters({p[pp.iAmplitude],
+                             if (parameters.iFixWidthsFile) {
+                               fPeaks[peakKey]->SetParameters({p[pp.iAmplitude],
+                                   p[pp.iCentroid],
+                                   gWidth->Eval(p[pp.iCentroid])/2.3548,
+                                   gSkewAmp->Eval(p[pp.iCentroid]),
+                                   gSkew->Eval(p[pp.iCentroid]),
+                                   gSkewAmp2->Eval(p[pp.iCentroid]),
+                                   gSkew2->Eval(p[pp.iCentroid]),
+                                   gStep->Eval(p[pp.iCentroid])});
+                             }
+                             else {
+                               fPeaks[peakKey]->SetParameters({p[pp.iAmplitude],
                                    p[pp.iCentroid],
                                    p[pp.iWidth],
                                    p[pp.iSkewAmplitude],
@@ -1039,6 +1293,7 @@ namespace GamR {
                                    p[pp.iSkewAmplitude2],
                                    p[pp.iSkewWidth2],
                                    p[pp.iStepAmplitude]});
+                             }
                              break;
                            }
                            }
@@ -1082,13 +1337,15 @@ namespace GamR {
           if (low!=high) {
             fTotal->SetParLimits(pp.iCentroid, low, high);
           }
-          func->GetParLimits(2,low,high);
-          if (low!=high) {
-            fTotal->SetParLimits(pp.iWidth, low, high);
-          }
-          func->GetParLimits(3,low,high);
-          if (low!=high) {
-            fTotal->SetParLimits(pp.iStepAmplitude, low, high);
+          if (!parameters.iFixWidthsFile) {
+            func->GetParLimits(2,low,high);
+            if (low!=high) {
+              fTotal->SetParLimits(pp.iWidth, low, high);
+            }
+            func->GetParLimits(3,low,high);
+            if (low!=high) {
+              fTotal->SetParLimits(pp.iStepAmplitude, low, high);
+            }
           }
           break;
         }
@@ -1103,6 +1360,7 @@ namespace GamR {
           if (low!=high) {
             fTotal->SetParLimits(pp.iCentroid, low, high);
           }
+          if (!parameters.iFixWidthsFile) {
           func->GetParLimits(2,low,high);
           if (low!=high) {
             fTotal->SetParLimits(pp.iWidth, low, high);
@@ -1114,6 +1372,7 @@ namespace GamR {
           func->GetParLimits(4,low,high);
           if (low!=high) {
             fTotal->SetParLimits(pp.iSkewWidth, low, high);
+          }
           }
           break;
         }
@@ -1128,6 +1387,7 @@ namespace GamR {
           if (low!=high) {
             fTotal->SetParLimits(pp.iCentroid, low, high);
           }
+          if (!parameters.iFixWidthsFile) {
           func->GetParLimits(2,low,high);
           if (low!=high) {
             fTotal->SetParLimits(pp.iWidth, low, high);
@@ -1148,6 +1408,7 @@ namespace GamR {
           if (low!=high) {
             fTotal->SetParLimits(pp.iSkewWidth2, low, high);
           }
+          }
           break;
         }
         case GamR::TK::OneTailStepGaussian: {
@@ -1161,6 +1422,7 @@ namespace GamR {
           if (low!=high) {
             fTotal->SetParLimits(pp.iCentroid, low, high);
           }
+          if (!parameters.iFixWidthsFile) {
           func->GetParLimits(2,low,high);
           if (low!=high) {
             fTotal->SetParLimits(pp.iWidth, low, high);
@@ -1177,6 +1439,7 @@ namespace GamR {
           if (low!=high) {
             fTotal->SetParLimits(pp.iStepAmplitude, low, high);
           }
+          }
           break;
         }
         case GamR::TK::TwoTailStepGaussian: {
@@ -1190,6 +1453,7 @@ namespace GamR {
           if (low!=high) {
             fTotal->SetParLimits(pp.iCentroid, low, high);
           }
+          if (!parameters.iFixWidthsFile) {
           func->GetParLimits(2,low,high);
           if (low!=high) {
             fTotal->SetParLimits(pp.iWidth, low, high);
@@ -1214,10 +1478,13 @@ namespace GamR {
           if (low!=high) {
             fTotal->SetParLimits(pp.iStepAmplitude, low, high);
           }
+          }
           break;
         }
         }
       }
+
+      fNPars = fTotal->GetNpar();
     }
 
     TF1 *PeakFit::GetPeakBG(std::string peakKey) {
