@@ -1,7 +1,7 @@
 <map id="GamR::TK::Gate::Browse" name="GamR::TK::Gate::Browse">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,5,171,31"/>
 <area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#a0a4a3cef40cd8acefe8d3913380a814a" title=" " alt="" coords="219,5,257,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,16,204,16,204,21,171,21"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,16,203,16,203,21,171,21"/>
 <area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="305,5,492,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="257,16,290,16,290,21,257,21"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="257,16,289,16,289,21,257,21"/>
 </map>

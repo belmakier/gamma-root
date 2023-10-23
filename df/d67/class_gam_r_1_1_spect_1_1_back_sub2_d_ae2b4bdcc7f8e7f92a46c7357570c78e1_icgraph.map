@@ -1,7 +1,7 @@
 <map id="GamR::Spect::BackSub2D::AddBackDiag" name="GamR::Spect::BackSub2D::AddBackDiag">
 <area shape="rect" id="Node000001" title=" " alt="" coords="227,39,400,79"/>
 <area shape="rect" id="Node000002" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a664a3f650a48e86467a5ddcb2e8cadb8" title=" " alt="" coords="5,5,179,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,46,179,41,180,36,212,41"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,46,179,41,180,36,212,41"/>
 <area shape="rect" id="Node000003" href="$df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a17eeaab203866512aac21a93534f38d6" title=" " alt="" coords="5,71,179,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,76,180,81,179,76,212,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,76,180,81,179,76,211,71"/>
 </map>

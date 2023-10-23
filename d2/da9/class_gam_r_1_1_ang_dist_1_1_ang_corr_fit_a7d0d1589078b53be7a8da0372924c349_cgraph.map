@@ -1,13 +1,13 @@
 <map id="GamR::AngDist::AngCorrFit::SetData" name="GamR::AngDist::AngCorrFit::SetData">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,71,184,111"/>
 <area shape="rect" id="Node000002" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a3565d6396e4ff99984e83a27e2ab35ce" title=" " alt="" coords="260,5,435,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,67,251,48,252,53,177,73"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,67,250,48,252,53,177,73"/>
 <area shape="rect" id="Node000003" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a8054df5976ecd1f68768286918001af5" title=" " alt="" coords="260,71,435,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,88,245,88,245,94,184,94"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,88,244,88,244,94,184,94"/>
 <area shape="rect" id="Node000004" href="$dc/d89/namespace_gam_r_1_1_spect.html#a30e3d5141c8253d594aae4bf21b2ffe8" title=" " alt="" coords="232,136,463,161"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="185,109,232,120,271,129,270,134,231,126,184,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="185,109,232,120,271,129,269,134,231,126,184,115"/>
 <area shape="rect" id="Node000005" href="$d0/d74/group___t_k.html#ga32700ec383e9f60b1a48009bec316606" title=" " alt="" coords="527,110,689,136"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="463,134,512,130,512,135,464,140"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="463,134,511,130,512,135,464,140"/>
 <area shape="rect" id="Node000006" href="$d0/d74/group___t_k.html#ga19210db8af7134007ff4fc26878b5dc2" title=" " alt="" coords="511,160,705,185"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="464,156,496,159,496,165,463,162"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="464,156,496,159,495,165,463,162"/>
 </map>

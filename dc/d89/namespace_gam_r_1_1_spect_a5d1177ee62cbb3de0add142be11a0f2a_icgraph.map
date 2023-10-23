@@ -1,7 +1,11 @@
 <map id="GamR::Spect::FindPeaks" name="GamR::Spect::FindPeaks">
-<area shape="rect" id="Node000001" title=" " alt="" coords="189,5,355,31"/>
-<area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#a3e7a5c76c7867b28613e7189fe27c9ca" title=" " alt="" coords="103,5,141,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,21,141,21,141,16,174,16"/>
-<area shape="rect" id="Node000003" href="$d5/d23/bin2root_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,55,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="88,21,55,21,55,16,88,16"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="293,55,459,80"/>
+<area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#a3e7a5c76c7867b28613e7189fe27c9ca" title=" " alt="" coords="207,55,245,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="277,70,245,70,245,65,277,65"/>
+<area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#aca0e689af0daf510c3ccf1b39806d6a1" title=" " alt="" coords="5,5,159,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="191,57,158,45,126,34,128,29,160,40,193,52"/>
+<area shape="rect" id="Node000004" href="$dc/d89/namespace_gam_r_1_1_spect.html#ac1342693bbf4e93fc0ca31009a6d3f7b" title=" " alt="" coords="5,55,159,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="191,70,159,70,159,65,191,65"/>
+<area shape="rect" id="Node000005" href="$d5/d23/bin2root_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="57,104,107,130"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="193,83,160,95,108,112,106,107,158,90,191,78"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="GamR::AngDist::BigD" name="GamR::AngDist::BigD">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,5,150,31"/>
 <area shape="rect" id="Node000002" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a0877eda04da307add630755c3b61f322" title=" " alt="" coords="198,5,346,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,16,183,16,183,21,150,21"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,16,182,16,182,21,150,21"/>
 <area shape="rect" id="Node000003" href="$d0/db7/namespace_gam_r_1_1_utils.html#a7099ce4f94ee95597184a93c9bd8607a" title=" " alt="" coords="394,5,527,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="346,16,379,16,379,21,346,21"/>
 </map>

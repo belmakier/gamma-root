@@ -1,7 +1,7 @@
 <map id="GamR::Spect::TwoPointCalibrate" name="GamR::Spect::TwoPointCalibrate">
 <area shape="rect" id="Node000001" title=" " alt="" coords="92,31,302,56"/>
 <area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#ae833726892f432d347532036895c56d6" title=" " alt="" coords="5,5,44,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,31,43,23,44,18,91,25"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,30,43,23,44,18,91,25"/>
 <area shape="rect" id="Node000003" href="$d0/d17/_abbreviations_8cc.html#afc0346c4741aa38dbc47cbfdac5363bf" title=" " alt="" coords="5,55,44,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="86,62,45,68,44,62,86,56"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="86,62,45,68,44,62,85,56"/>
 </map>

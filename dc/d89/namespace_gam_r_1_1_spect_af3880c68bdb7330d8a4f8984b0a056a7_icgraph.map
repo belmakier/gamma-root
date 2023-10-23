@@ -1,23 +1,23 @@
 <map id="GamR::Spect::Add" name="GamR::Spect::Add">
 <area shape="rect" id="Node000001" title=" " alt="" coords="285,179,412,204"/>
 <area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#a10df776702ce57734ddd75476416dffb" title=" " alt="" coords="149,5,191,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="332,167,294,105,267,73,235,44,213,32,191,25,192,20,216,27,239,40,271,69,298,102,337,164"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="332,166,293,105,267,73,235,44,213,32,191,25,192,20,216,27,239,40,270,69,298,102,336,163"/>
 <area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#a609e50eb2a0f45c2e62398f0997df729" title=" " alt="" coords="106,55,234,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="324,169,285,131,236,94,214,83,217,79,238,89,288,127,328,166"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="324,169,285,131,236,94,214,83,217,79,238,89,288,127,327,165"/>
 <area shape="rect" id="Node000004" href="$d0/d17/_abbreviations_8cc.html#a95d58ccb5cb27cf5736515f0766838e3" title=" " alt="" coords="149,104,191,130"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="306,175,236,143,191,126,192,121,238,138,308,170"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="305,174,236,143,191,126,192,121,238,138,308,169"/>
 <area shape="rect" id="Node000005" href="$dc/d89/namespace_gam_r_1_1_spect.html#a37148e4391500d73c34d5a9cf41700ed" title=" " alt="" coords="106,153,234,179"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="270,183,234,178,235,173,271,178"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="269,183,234,178,235,173,270,178"/>
 <area shape="rect" id="Node000006" href="$d0/d17/_abbreviations_8cc.html#acc87ea73930f179c8aeaa06e69d92875" title=" " alt="" coords="149,203,191,228"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="271,205,192,215,191,210,270,199"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="270,205,192,215,191,210,269,199"/>
 <area shape="rect" id="Node000007" href="$dc/d89/namespace_gam_r_1_1_spect.html#af042b3ad5a9feb38703bd7d4ae1b8b8a" title=" " alt="" coords="103,252,237,278"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="307,213,238,243,210,254,208,249,236,238,305,208"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="307,213,238,243,210,254,208,249,236,238,305,209"/>
 <area shape="rect" id="Node000008" href="$dc/d89/namespace_gam_r_1_1_spect.html#a3fa6e89388767f5fb285536bed4f8bca" title=" " alt="" coords="103,301,237,327"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="328,217,288,255,238,292,217,303,214,298,236,288,285,251,324,213"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="327,218,288,256,238,292,217,303,214,298,236,288,284,251,324,214"/>
 <area shape="rect" id="Node000011" href="$d0/d17/_abbreviations_8cc.html#acf4eac0287d40ff0b779dd09ddfd4200" title=" " alt="" coords="145,351,195,376"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="336,219,298,280,270,313,239,342,217,354,196,361,194,356,215,349,235,337,267,309,293,277,332,216"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="336,219,298,280,270,313,239,342,217,354,196,361,194,356,215,349,235,337,266,309,293,277,332,216"/>
 <area shape="rect" id="Node000009" href="$d0/d17/_abbreviations_8cc.html#a889780b0a79a95b6adb4bf3b8a9ea53d" title=" " alt="" coords="5,277,55,303"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="88,303,54,297,55,292,88,297"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="87,303,54,297,55,292,88,297"/>
 <area shape="rect" id="Node000010" href="$d0/d17/_abbreviations_8cc.html#af5c80c6bba31add2644b048beff02625" title=" " alt="" coords="5,327,55,352"/>
-<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="89,332,55,338,54,333,88,326"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="88,332,55,338,54,333,87,327"/>
 </map>

@@ -1,6 +1,6 @@
 <map id="GamR::Spect::LinAll" name="GamR::Spect::LinAll">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,29,143,55"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="41,30,35,21,39,11,52,5,74,3,99,6,111,13,108,18,97,11,74,8,53,10,42,15,40,20,46,27"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="41,30,35,21,39,11,52,5,74,3,98,5,110,12,108,17,96,10,74,8,53,10,42,15,40,20,46,27"/>
 <area shape="rect" id="Node000002" href="$d0/db7/namespace_gam_r_1_1_utils.html#a0adbf2bb55ef0a9adfc45b00210c92c0" title=" " alt="" coords="191,29,349,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,40,176,40,176,45,143,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,40,175,40,175,45,143,45"/>
 </map>

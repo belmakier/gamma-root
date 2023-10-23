@@ -1,9 +1,9 @@
 <map id="ca" name="ca">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,35,44,60"/>
 <area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#a2c1c99bf79bde9fc90d7bd8294ade75e" title=" " alt="" coords="92,35,302,60"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,45,77,45,77,50,44,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,45,76,45,76,50,44,50"/>
 <area shape="rect" id="Node000003" href="$d0/db7/namespace_gam_r_1_1_utils.html#a31f74a9ca644d560dc14e19c4dbd773b" title=" " alt="" coords="359,5,517,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="302,32,344,27,344,32,303,37"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="302,32,343,27,344,32,303,37"/>
 <area shape="rect" id="Node000004" href="$dc/d89/namespace_gam_r_1_1_spect.html#a0c1c0458051261537a2abe8245fdd877" title="Scales the labels of a histogram. Preferable over GamR::Spect::Scale and GamR::Spect::ScalePoly as it..." alt="" coords="350,55,526,96"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="303,57,335,61,335,66,302,62"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="303,57,335,61,334,66,302,62"/>
 </map>

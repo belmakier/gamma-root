@@ -1,25 +1,25 @@
 <map id="GamR::AngDist::GaussianDistr::Print" name="GamR::AngDist::GaussianDistr::Print">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,332,204,373"/>
 <area shape="rect" id="Node000002" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a4e4571ecf501cab81950b57e9b71af55" title=" " alt="" coords="252,5,450,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,331,123,277,150,203,192,125,219,89,250,57,257,52,260,56,253,61,223,92,197,128,155,205,128,278,113,332"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,331,123,277,150,203,192,125,219,89,250,57,256,52,259,56,253,61,223,92,197,128,155,205,128,278,113,332"/>
 <area shape="rect" id="Node000003" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a723fe48eff900c9e00e82828d9962c8f" title=" " alt="" coords="252,71,450,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="111,330,130,287,160,231,200,173,224,146,250,122,258,117,261,121,253,126,227,150,204,176,164,234,135,289,116,332"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="111,330,130,287,160,231,200,173,224,146,250,122,257,117,260,121,253,126,227,150,204,176,164,234,135,289,116,332"/>
 <area shape="rect" id="Node000004" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a5e2cdd7e2ffb47da4658477b54ebf3e1" title=" " alt="" coords="252,136,450,177"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="117,330,170,261,207,222,250,187,260,181,263,186,253,192,211,226,174,264,121,333"/>
 <area shape="rect" id="Node000005" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a22bac52f5e23fc5630e131cb242516a7" title=" " alt="" coords="252,201,450,242"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="131,329,185,291,250,253,266,245,268,250,253,257,188,296,134,334"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="131,329,185,291,250,253,266,246,268,251,253,257,188,296,134,334"/>
 <area shape="rect" id="Node000006" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#ac0907a847e42cd649adefef197bb0264" title=" " alt="" coords="252,267,450,307"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="183,329,257,309,258,314,185,334"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="183,329,256,309,257,314,185,334"/>
 <area shape="rect" id="Node000007" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a18635d6cd2955fab8902597c393b5ac9" title=" " alt="" coords="252,332,450,373"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="204,350,237,350,237,355,204,355"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="204,350,236,350,236,355,204,355"/>
 <area shape="rect" id="Node000008" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a6932c81d66ebc699d882734d487dedb1" title=" " alt="" coords="252,397,450,438"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="185,371,258,390,257,396,183,376"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="185,371,257,390,256,395,183,376"/>
 <area shape="rect" id="Node000009" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a1e8461ea1a7e4b2e051840c753523b67" title=" " alt="" coords="252,463,450,503"/>
 <area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="134,371,188,409,253,447,268,454,266,459,250,452,185,414,131,375"/>
 <area shape="rect" id="Node000010" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a434a20f457c4876c3c5948d7912c3b85" title=" " alt="" coords="252,528,450,569"/>
 <area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="121,371,174,440,211,479,253,513,263,519,260,523,250,517,207,483,170,444,117,375"/>
 <area shape="rect" id="Node000011" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a31330b29ae581a92fc97c26a0710836c" title=" " alt="" coords="252,593,450,634"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="116,372,135,415,164,471,204,528,227,555,253,578,261,584,258,588,250,582,224,559,200,532,160,473,130,418,111,374"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="116,372,135,415,164,471,204,528,227,555,253,578,260,583,257,588,250,582,224,559,200,532,160,473,130,418,111,374"/>
 <area shape="rect" id="Node000012" href="$d0/db7/namespace_gam_r_1_1_utils.html#a80bc6c0c1ecd5d28cd4f9e3ae38f92ed" title=" " alt="" coords="279,658,423,684"/>
-<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="113,372,127,427,154,501,172,540,195,578,222,613,253,644,267,652,264,657,250,648,218,617,191,581,168,542,149,503,122,429,107,374"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="113,372,127,427,154,501,172,540,195,578,222,613,253,644,266,652,263,657,250,648,218,617,191,581,168,542,149,503,122,429,107,374"/>
 </map>

@@ -1,9 +1,9 @@
 <map id="GamR::TK::Gate::Norm" name="GamR::TK::Gate::Norm">
 <area shape="rect" id="Node000001" title=" " alt="" coords="321,31,474,56"/>
 <area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#af9fba674d9c05d797eef6dd563d2fc62" title=" " alt="" coords="114,5,251,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="306,35,251,29,251,24,307,30"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="305,35,251,29,251,24,306,30"/>
 <area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#a65d31e04d30d9c24dc657bef81f251bb" title=" " alt="" coords="92,55,273,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="307,56,274,60,273,55,306,51"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="306,56,274,60,273,55,306,51"/>
 <area shape="rect" id="Node000004" href="$d0/d17/_abbreviations_8cc.html#a8150489ebcfa245dd4ea5c051de4181d" title=" " alt="" coords="5,55,44,80"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="77,70,44,70,44,65,77,65"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="76,70,44,70,44,65,76,65"/>
 </map>

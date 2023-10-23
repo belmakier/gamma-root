@@ -1,8 +1,8 @@
 <map id="lin" name="lin">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,29,44,55"/>
 <area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#a7c014b37fef6c9127b7d862a977e4e36" title=" " alt="" coords="92,29,229,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,40,77,40,77,45,44,45"/>
-<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="137,30,132,21,135,11,145,5,160,3,178,6,187,13,183,17,176,10,160,8,147,10,139,14,138,20,142,28"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,40,76,40,76,45,44,45"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="137,30,132,21,135,11,145,5,160,3,177,5,186,12,183,16,175,10,160,8,147,10,139,14,138,20,142,28"/>
 <area shape="rect" id="Node000003" href="$d0/db7/namespace_gam_r_1_1_utils.html#a0adbf2bb55ef0a9adfc45b00210c92c0" title=" " alt="" coords="277,29,435,55"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="229,40,262,40,262,45,229,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="229,40,261,40,261,45,229,45"/>
 </map>

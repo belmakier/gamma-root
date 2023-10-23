@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['angdist_0',['AngDist',['../d9/d06/group___ang_dist.html',1,'']]]
+  ['efficiency_0',['Efficiency',['../d1/d7e/group___efficiency.html',1,'']]]
 ];

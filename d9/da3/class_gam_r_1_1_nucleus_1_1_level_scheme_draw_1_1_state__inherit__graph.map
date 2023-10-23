@@ -1,7 +1,7 @@
 <map id="GamR::Nucleus::LevelSchemeDraw::State" name="GamR::Nucleus::LevelSchemeDraw::State">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,119,195,739"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="26,5,89,71"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,84,69,118,63,119,60,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,85,69,118,63,119,60,86"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="113,5,175,71"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="142,85,138,119,132,118,136,84"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,86,138,119,132,118,136,85"/>
 </map>

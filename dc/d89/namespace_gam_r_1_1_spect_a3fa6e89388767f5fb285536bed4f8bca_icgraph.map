@@ -1,7 +1,7 @@
 <map id="GamR::Spect::Add2" name="GamR::Spect::Add2">
 <area shape="rect" id="Node000001" title=" " alt="" coords="103,31,237,56"/>
 <area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#a889780b0a79a95b6adb4bf3b8a9ea53d" title=" " alt="" coords="5,5,55,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,31,54,25,55,20,89,26"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,31,54,25,55,20,88,26"/>
 <area shape="rect" id="Node000003" href="$d0/d17/_abbreviations_8cc.html#af5c80c6bba31add2644b048beff02625" title=" " alt="" coords="5,55,55,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="88,60,55,66,54,61,88,55"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="88,60,55,66,54,61,87,55"/>
 </map>

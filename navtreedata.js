@@ -26,48 +26,48 @@ var NAVTREE =
 [
   [ "GamR", "index.html", [
     [ "Welcome to GammaROOT!", "index.html", "index" ],
-    [ "Converting data into an Event Tree", "d8/d9f/md_docs_2md_2tree_2root2gamr.html", null ],
-    [ "About the Event Tree", "df/d88/md_docs_2md_2tree_2tree.html", [
-      [ "Event and Detector objects", "df/d88/md_docs_2md_2tree_2tree.html#tevent_tedetector", null ]
+    [ "Converting data into an Event Tree", "d4/d4d/root_to_gamr.html", null ],
+    [ "About the Event Tree", "d0/d38/tree.html", [
+      [ "Event and Detector objects", "d0/d38/tree.html#tevent_tedetector", null ]
     ] ],
-    [ "Tree Definitions", "d0/ddd/md_docs_2md_2tree_2treetypes.html", [
-      [ "DCP", "d0/ddd/md_docs_2md_2tree_2treetypes.html#DCP", [
-        [ "D1", "d0/ddd/md_docs_2md_2tree_2treetypes.html#D1", null ],
-        [ "D2", "d0/ddd/md_docs_2md_2tree_2treetypes.html#D2", null ],
-        [ "D3", "d0/ddd/md_docs_2md_2tree_2treetypes.html#D3", null ],
-        [ "D21", "d0/ddd/md_docs_2md_2tree_2treetypes.html#D21", null ],
-        [ "D22", "d0/ddd/md_docs_2md_2tree_2treetypes.html#D22", null ],
-        [ "D33", "d0/ddd/md_docs_2md_2tree_2treetypes.html#D33", null ],
-        [ "D221", "d0/ddd/md_docs_2md_2tree_2treetypes.html#D221", null ],
-        [ "D321", "d0/ddd/md_docs_2md_2tree_2treetypes.html#D321", null ],
-        [ "D322", "d0/ddd/md_docs_2md_2tree_2treetypes.html#D322", null ],
-        [ "D2111", "d0/ddd/md_docs_2md_2tree_2treetypes.html#D2111", null ],
-        [ "D3221", "d0/ddd/md_docs_2md_2tree_2treetypes.html#D3221", null ],
-        [ "D3333", "d0/ddd/md_docs_2md_2tree_2treetypes.html#D3333", null ]
+    [ "Tree Definitions", "de/dca/treetypes.html", [
+      [ "DCP", "de/dca/treetypes.html#DCP", [
+        [ "D1", "de/dca/treetypes.html#D1", null ],
+        [ "D2", "de/dca/treetypes.html#D2", null ],
+        [ "D3", "de/dca/treetypes.html#D3", null ],
+        [ "D21", "de/dca/treetypes.html#D21", null ],
+        [ "D22", "de/dca/treetypes.html#D22", null ],
+        [ "D33", "de/dca/treetypes.html#D33", null ],
+        [ "D221", "de/dca/treetypes.html#D221", null ],
+        [ "D321", "de/dca/treetypes.html#D321", null ],
+        [ "D322", "de/dca/treetypes.html#D322", null ],
+        [ "D2111", "de/dca/treetypes.html#D2111", null ],
+        [ "D3221", "de/dca/treetypes.html#D3221", null ],
+        [ "D3333", "de/dca/treetypes.html#D3333", null ]
       ] ],
-      [ "PIXIE", "d0/ddd/md_docs_2md_2tree_2treetypes.html#PIXIE", [
-        [ "P1", "d0/ddd/md_docs_2md_2tree_2treetypes.html#P1", null ],
-        [ "P1T", "d0/ddd/md_docs_2md_2tree_2treetypes.html#P1T", null ],
-        [ "P2T", "d0/ddd/md_docs_2md_2tree_2treetypes.html#P2T", null ],
-        [ "PS", "d0/ddd/md_docs_2md_2tree_2treetypes.html#PS", null ]
+      [ "PIXIE", "de/dca/treetypes.html#PIXIE", [
+        [ "P1", "de/dca/treetypes.html#P1", null ],
+        [ "P1T", "de/dca/treetypes.html#P1T", null ],
+        [ "P2T", "de/dca/treetypes.html#P2T", null ],
+        [ "PS", "de/dca/treetypes.html#PS", null ]
       ] ],
-      [ "GRETINA_CHICO", "d0/ddd/md_docs_2md_2tree_2treetypes.html#GRETINA_CHICO", [
-        [ "GCPG", "d0/ddd/md_docs_2md_2tree_2treetypes.html#GCPG", null ]
+      [ "GRETINA_CHICO", "de/dca/treetypes.html#GRETINA_CHICO", [
+        [ "GCPG", "de/dca/treetypes.html#GCPG", null ]
       ] ],
-      [ "CLARION_HYBALL", "d0/ddd/md_docs_2md_2tree_2treetypes.html#CLARION_HYBALL", [
-        [ "CLHB", "d0/ddd/md_docs_2md_2tree_2treetypes.html#CLHB", null ]
+      [ "CLARION_HYBALL", "de/dca/treetypes.html#CLARION_HYBALL", [
+        [ "CLHB", "de/dca/treetypes.html#CLHB", null ]
       ] ],
-      [ "DIGITAL_GAMMASPHERE", "d0/ddd/md_docs_2md_2tree_2treetypes.html#DIGITAL_GAMMASPHERE", [
-        [ "DGS", "d0/ddd/md_docs_2md_2tree_2treetypes.html#DGS", null ]
+      [ "DIGITAL_GAMMASPHERE", "de/dca/treetypes.html#DIGITAL_GAMMASPHERE", [
+        [ "DGS", "de/dca/treetypes.html#DGS", null ]
       ] ],
-      [ "RIKEN", "d0/ddd/md_docs_2md_2tree_2treetypes.html#RIKEN", [
-        [ "PAD2018", "d0/ddd/md_docs_2md_2tree_2treetypes.html#PAD2018", null ]
+      [ "RIKEN", "de/dca/treetypes.html#RIKEN", [
+        [ "PAD2018", "de/dca/treetypes.html#PAD2018", null ]
       ] ],
-      [ "OSCAR", "d0/ddd/md_docs_2md_2tree_2treetypes.html#OSCAR", [
-        [ "OSC", "d0/ddd/md_docs_2md_2tree_2treetypes.html#OSC", null ]
+      [ "OSCAR", "de/dca/treetypes.html#OSCAR", [
+        [ "OSC", "de/dca/treetypes.html#OSC", null ]
       ] ]
     ] ],
-    [ "Modules", "modules.html", "modules" ],
+    [ "Topics", "topics.html", "topics" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -107,19 +107,19 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#aec7d4f249dda28cfdf50de2e5d9c81df",
-"d0/d74/group___t_k.html#gac11e7795d8a663651876fd749373c8f5",
-"d1/d32/class_gam_r_1_1_bateman_1_1_solver.html#a20ff1c649dfad87839e8b4011c5d4266",
-"d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html#a9c9f4244e5ca48eb9a9b8cfdd9a65815",
-"d3/d4b/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_state.html#ad7ce9ff2c8003de9da9402cbd93a0d40",
-"d4/d5b/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr_1_1_global_chi_square.html#a8da107c5c63fcc0d22612057bbb788ce",
-"d6/d35/struct_gam_r_1_1_spect_1_1_peak_fit_1_1_parameters.html#ac748f3d4147e5cc562fd4dcba0eca2bc",
-"d7/df7/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_transition.html#a25c6a55b281addf9e84c944204a7681c",
-"d9/db7/_display_8hh.html#ad0355c8ed94e9e1b8c5fbe3084bd6156",
-"dc/d02/_exp_defn_8hh_source.html",
-"dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#a73b102e9bab00f6460caf510c0acb1d1",
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a0694e373c318ef014eecb73a1d862b08",
-"df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a361a9a1dfacfe8abe972ff86554c7601"
+"d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#adf997e0aeab4bc362c60b72f01b33bd9",
+"d0/d74/group___t_k.html#gac01dfdcd197d6f55811ebb161d2f0e33",
+"d1/d57/class_gam_r_1_1_coulex_1_1_transition.html#a85f89e555d85864ef047c7969560730a",
+"d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a1b21ec484fca40f2c75fa09c17489d86",
+"d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#a11ca2478819471f12f8c65aa49fdcdf2",
+"d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a4e8f294413d8fcdc060015a9e97a3c69",
+"d6/d76/namespace_gam_r_1_1_coulex.html#a351854c76290e8827fc74f10b586f316",
+"d7/df7/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_transition.html#a8bb23f1b0c0bc2f8b44aae845615ad3b",
+"da/d04/struct_gam_r_1_1_tree_1_1_t_event_1_1_clear_vector.html",
+"dc/d1a/_transform_8hh.html#a3fa6e89388767f5fb285536bed4f8bca",
+"dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#aca677242c3581c26b863a466060789dd",
+"df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#aed5a33c8e7cee9f4090341fba68eb616",
+"df/dbd/_ang_dist_8cc.html#a96b00c034e0b8aa9807d13c08970ba79"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

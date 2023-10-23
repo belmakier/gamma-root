@@ -1,4 +1,4 @@
-var modules =
+var topics =
 [
     [ "(Toolkit)", "d0/d74/group___t_k.html", "d0/d74/group___t_k" ],
     [ "AngDist", "d9/d06/group___ang_dist.html", "d9/d06/group___ang_dist" ],

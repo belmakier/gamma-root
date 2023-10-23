@@ -1,7 +1,9 @@
 var NAVTREEINDEX1 =
 {
-"d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#aec7d4f249dda28cfdf50de2e5d9c81df":[6,0,0,0,3,37],
+"d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#adf997e0aeab4bc362c60b72f01b33bd9":[6,0,0,0,3,26],
+"d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#adf997e0aeab4bc362c60b72f01b33bd9":[5,0,0,0,3,26],
 "d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#aec7d4f249dda28cfdf50de2e5d9c81df":[5,0,0,0,3,37],
+"d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#aec7d4f249dda28cfdf50de2e5d9c81df":[6,0,0,0,3,37],
 "d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#afb32915f9ebb1709208a0df45d89ced1":[5,0,0,0,3,2],
 "d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#afb32915f9ebb1709208a0df45d89ced1":[6,0,0,0,3,2],
 "d0/d68/_abbreviations_8hh.html":[7,0,1,1,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "d0/d74/group___t_k.html#gab865f6e8e84344abc6a89f16cc796307":[4,0,98],
 "d0/d74/group___t_k.html#gab9295d2a9e654d7540ee264d036590cd":[4,0,61],
 "d0/d74/group___t_k.html#gaba991ee39dd8f2af7759f113f742d64d":[4,0,130],
-"d0/d74/group___t_k.html#gabe9febe06ad5c3011ce247254014b145":[4,0,140],
-"d0/d74/group___t_k.html#gac01dfdcd197d6f55811ebb161d2f0e33":[4,0,66],
-"d0/d74/group___t_k.html#gac083ac86c150085adae965936f41bb49":[4,0,121]
+"d0/d74/group___t_k.html#gabe9febe06ad5c3011ce247254014b145":[4,0,140]
 };

@@ -1,6 +1,6 @@
 <map id="GamR::Coulex::CoulexCalculation::SetBeam" name="GamR::Coulex::CoulexCalculation::SetBeam">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,29,218,70"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="70,29,68,19,75,10,90,5,112,3,136,5,149,12,147,17,134,10,111,8,91,10,78,15,74,21,76,28"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="70,29,68,19,75,10,90,5,112,3,135,5,149,11,147,16,134,10,111,8,91,10,78,15,74,21,76,28"/>
 <area shape="rect" id="Node000002" href="$d2/d80/namespace_gam_r_1_1_t_k.html#aa4ba5d5a5ab0b3c595e31d23334e4f90" title=" " alt="" coords="266,37,391,63"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,47,251,47,251,52,218,52"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,47,250,47,250,52,218,52"/>
 </map>

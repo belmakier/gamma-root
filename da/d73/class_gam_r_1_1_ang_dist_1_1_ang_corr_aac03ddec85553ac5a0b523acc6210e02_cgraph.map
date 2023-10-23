@@ -1,10 +1,10 @@
 <map id="GamR::AngDist::AngCorr::Mixed" name="GamR::AngDist::AngCorr::Mixed">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,39,169,79"/>
 <area shape="rect" id="Node000002" href="$da/d73/class_gam_r_1_1_ang_dist_1_1_ang_corr.html#ad883a52cf63a6ee2b4bfbdd133c6d145" title=" " alt="" coords="217,5,380,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,43,201,38,202,43,169,49"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,43,201,38,202,44,169,49"/>
 <area shape="rect" id="Node000004" href="$da/d73/class_gam_r_1_1_ang_dist_1_1_ang_corr.html#a2ce08f5274d4e7b9467b7dfd65831a73" title=" " alt="" coords="217,71,380,111"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="169,69,202,74,201,79,169,74"/>
 <area shape="rect" id="Node000003" href="$da/d73/class_gam_r_1_1_ang_dist_1_1_ang_corr.html#a5820aca3c27eca5ac487a83c958076f7" title=" " alt="" coords="428,39,591,79"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="381,36,414,41,413,46,380,41"/>
-<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="380,76,413,71,414,76,381,81"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="381,36,413,41,412,46,380,41"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="380,76,412,71,413,76,381,81"/>
 </map>

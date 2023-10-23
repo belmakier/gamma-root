@@ -1,9 +1,9 @@
 <map id="GamR::Spect::BackgroundSubtractY" name="GamR::Spect::BackgroundSubtractY">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,31,237,56"/>
 <area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#a30e3d5141c8253d594aae4bf21b2ffe8" title=" " alt="" coords="285,31,516,56"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,41,270,41,270,46,237,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,41,269,41,269,46,237,46"/>
 <area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#ga32700ec383e9f60b1a48009bec316606" title=" " alt="" coords="580,5,742,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="516,30,565,25,565,30,517,35"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="516,30,564,25,565,30,517,35"/>
 <area shape="rect" id="Node000004" href="$d0/d74/group___t_k.html#ga19210db8af7134007ff4fc26878b5dc2" title=" " alt="" coords="564,55,758,80"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="517,52,549,55,549,60,516,57"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="517,52,549,55,548,60,516,57"/>
 </map>

@@ -1,12 +1,12 @@
 <map id="GamR::AngDist::AngCorrFit::GetNCombs" name="GamR::AngDist::AngCorrFit::GetNCombs">
 <area shape="rect" id="Node000001" title=" " alt="" coords="458,92,636,133"/>
 <area shape="rect" id="Node000002" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a030a9df7c30731fbeb7337688a28e6c7" title=" " alt="" coords="232,5,410,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="477,89,375,49,377,44,479,84"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="477,88,375,49,377,44,479,83"/>
 <area shape="rect" id="Node000003" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#ae0d8c505c6272e84a35125c118d04237" title=" " alt="" coords="5,92,184,133"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="443,112,410,111,232,111,184,112,184,107,232,106,410,106,443,106"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="442,112,410,111,232,111,184,112,184,107,232,106,410,106,442,106"/>
 <area shape="rect" id="Node000004" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a97a615ac3eee64961d103fe9629a5c19" title=" " alt="" coords="232,120,410,161"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="444,128,411,132,410,127,443,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="443,128,411,132,410,127,442,123"/>
 <area shape="rect" id="Node000005" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#ad9334d18a5aa340cc0de938e0301c61f" title=" " alt="" coords="232,185,410,226"/>
-<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="488,141,411,175,380,187,378,182,409,170,486,137"/>
-<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="217,130,184,126,185,121,217,125"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="488,142,411,175,380,187,378,182,409,170,486,137"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="216,130,184,126,185,121,216,125"/>
 </map>

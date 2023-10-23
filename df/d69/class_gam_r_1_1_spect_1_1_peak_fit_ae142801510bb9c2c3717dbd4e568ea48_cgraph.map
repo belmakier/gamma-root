@@ -1,0 +1,10 @@
+<map id="GamR::Spect::PeakFit::Fit" name="GamR::Spect::PeakFit::Fit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,176,55"/>
+<area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#a5d1794b612bdcca3f4f4baa3d2e38a0b" title=" " alt="" coords="224,29,262,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,40,208,40,208,45,176,45"/>
+<area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="310,29,493,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="263,40,294,40,294,45,263,45"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="375,30,369,21,373,11,384,5,402,3,421,5,431,12,428,16,419,10,402,8,385,10,377,15,375,20,379,28"/>
+<area shape="rect" id="Node000004" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="541,29,729,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="494,40,526,40,526,45,494,45"/>
+</map>

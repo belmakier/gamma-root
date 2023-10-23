@@ -1,10 +1,10 @@
 <map id="GamR::Spect::OverlaySpectra" name="GamR::Spect::OverlaySpectra">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,43,199,68"/>
 <area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#a0aad1e3c1b928bb9c61bfa9c20df882e" title=" " alt="" coords="250,5,437,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,39,241,31,242,37,190,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,39,241,31,241,37,190,45"/>
 <area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#a9baa566867cd3f57cd8b1e5c0137ef3e" title=" " alt="" coords="247,79,440,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,66,238,73,238,78,192,72"/>
-<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="304,80,296,70,301,60,317,54,343,52,374,55,388,63,386,68,373,60,343,57,318,59,304,64,301,69,308,77"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,66,238,73,237,78,192,72"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="304,80,296,70,301,60,317,54,343,52,373,55,388,62,385,67,372,60,343,57,318,59,304,64,301,69,308,77"/>
 <area shape="rect" id="Node000004" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="488,79,675,104"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="441,89,473,89,473,94,441,94"/>
 </map>

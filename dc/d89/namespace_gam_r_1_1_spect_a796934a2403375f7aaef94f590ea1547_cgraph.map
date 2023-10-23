@@ -1,7 +1,7 @@
 <map id="GamR::Spect::BackgroundSubtractX" name="GamR::Spect::BackgroundSubtractX">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,31,237,56"/>
 <area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#ga6a034a8dfa2c1699aabb9e4111d79cbf" title=" " alt="" coords="301,5,463,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,30,286,25,286,30,237,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,30,285,25,286,30,237,35"/>
 <area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#ga19210db8af7134007ff4fc26878b5dc2" title=" " alt="" coords="285,55,479,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="237,52,270,55,269,60,237,57"/>
 </map>

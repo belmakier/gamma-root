@@ -1,9 +1,9 @@
 <map id="GamR::Spect::StackSpectra" name="GamR::Spect::StackSpectra">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,7,189,33"/>
 <area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="468,7,655,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,8,237,5,328,3,420,5,453,7,453,13,420,11,328,8,237,11,189,14"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,8,237,5,328,3,420,5,453,7,452,12,420,11,328,8,237,11,189,14"/>
 <area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="237,44,420,70"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,31,231,39,230,44,180,36"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,31,230,39,229,44,180,36"/>
 <area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="413,41,462,33,463,38,413,46"/>
-<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="290,46,282,36,287,26,303,20,328,18,358,21,372,29,369,33,357,26,328,23,304,25,291,30,288,35,294,42"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="290,46,282,36,287,26,303,20,328,18,357,20,371,27,369,32,355,26,328,23,304,25,291,30,288,35,294,42"/>
 </map>

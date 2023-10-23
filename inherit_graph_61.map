@@ -1,11 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="Node000000" title=" " alt="" coords="5,112,73,137"/>
 <area shape="rect" id="Node000001" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html" title=" " alt="" coords="122,5,273,46"/>
-<area shape="poly" id="edge28_Node000000_Node000001" title=" " alt="" coords="63,99,119,57,143,44,145,49,122,61,66,104"/>
+<area shape="poly" id="edge28_Node000000_Node000001" title=" " alt="" coords="64,99,119,57,143,44,145,49,122,61,67,103"/>
 <area shape="rect" id="Node000002" href="$dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html" title=" " alt="" coords="121,71,274,111"/>
 <area shape="poly" id="edge29_Node000000_Node000002" title=" " alt="" coords="87,112,120,105,121,110,88,117"/>
 <area shape="rect" id="Node000003" href="$da/d95/class_gam_r_1_1_tree_1_1_t_event.html" title=" " alt="" coords="129,136,266,177"/>
 <area shape="poly" id="edge30_Node000000_Node000003" title=" " alt="" coords="88,131,129,140,128,145,87,137"/>
 <area shape="rect" id="Node000004" href="$d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html" title=" " alt="" coords="121,201,274,242"/>
-<area shape="poly" id="edge31_Node000000_Node000004" title=" " alt="" coords="67,145,122,186,145,198,143,203,119,191,64,149"/>
+<area shape="poly" id="edge31_Node000000_Node000004" title=" " alt="" coords="68,146,122,186,145,198,143,203,119,191,65,150"/>
 </map>

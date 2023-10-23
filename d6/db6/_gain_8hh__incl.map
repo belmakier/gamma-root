@@ -1,13 +1,13 @@
 <map id="src/bin/gamrcal/Gain.hh" name="src/bin/gamrcal/Gain.hh">
 <area shape="rect" id="Node000001" title=" " alt="" coords="128,5,286,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,79,59,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,34,73,77,71,72,176,29"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,34,74,76,72,71,176,29"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="83,79,141,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,34,141,72,138,68,189,29"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,34,142,72,138,67,189,29"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="165,79,248,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="209,31,209,64,204,64,204,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="209,31,209,63,204,63,204,31"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="273,79,327,105"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="224,29,274,68,271,72,221,34"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="224,29,274,67,271,72,221,34"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="352,79,408,105"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="237,29,339,71,337,76,235,34"/>
 </map>

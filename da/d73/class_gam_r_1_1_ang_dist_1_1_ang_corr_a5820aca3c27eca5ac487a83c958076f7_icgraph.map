@@ -1,14 +1,14 @@
 <map id="GamR::AngDist::AngCorr::Mixed" name="GamR::AngDist::AngCorr::Mixed">
 <area shape="rect" id="Node000001" title=" " alt="" coords="464,23,627,64"/>
 <area shape="rect" id="Node000002" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#afb40b46c8473166d5449b680a03eed79" title=" " alt="" coords="5,31,205,57"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="459,22,416,14,334,8,253,14,156,33,155,28,252,9,334,3,416,9,460,17"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="458,22,416,14,334,8,253,14,156,33,155,28,252,9,334,3,416,9,459,17"/>
 <area shape="rect" id="Node000003" href="$da/d73/class_gam_r_1_1_ang_dist_1_1_ang_corr.html#ad883a52cf63a6ee2b4bfbdd133c6d145" title=" " alt="" coords="253,89,416,129"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="465,71,404,91,402,86,463,66"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="464,72,404,91,402,86,463,67"/>
 <area shape="rect" id="Node000005" href="$da/d73/class_gam_r_1_1_ang_dist_1_1_ang_corr.html#a2ce08f5274d4e7b9467b7dfd65831a73" title=" " alt="" coords="253,23,416,64"/>
 <area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="449,46,416,46,416,41,449,41"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="246,87,152,60,154,55,247,82"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="246,87,152,60,154,55,247,81"/>
 <area shape="rect" id="Node000004" href="$da/d73/class_gam_r_1_1_ang_dist_1_1_ang_corr.html#aac03ddec85553ac5a0b523acc6210e02" title=" " alt="" coords="23,85,187,125"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="238,110,187,109,187,104,238,105"/>
-<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="238,46,205,46,205,41,238,41"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="237,110,187,109,187,104,237,105"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="237,46,205,46,205,41,237,41"/>
 <area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="242,71,184,87,183,82,241,66"/>
 </map>

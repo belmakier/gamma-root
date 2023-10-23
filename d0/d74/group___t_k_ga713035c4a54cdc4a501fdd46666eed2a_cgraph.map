@@ -1,7 +1,7 @@
 <map id="GamR::TK::OneTailStepGaussianPeak::GetArea" name="GamR::TK::OneTailStepGaussianPeak::GetArea">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,35,220,75"/>
 <area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#ga51a1c111dedb59156fa4540b8a463537" title=" " alt="" coords="268,5,455,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,40,253,36,253,41,220,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,40,252,36,253,41,220,45"/>
 <area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#gaea3f5cb2c25b5827dafe494c5c284d31" title=" " alt="" coords="271,70,452,96"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="220,64,256,69,256,74,220,70"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="220,64,256,68,255,74,220,70"/>
 </map>

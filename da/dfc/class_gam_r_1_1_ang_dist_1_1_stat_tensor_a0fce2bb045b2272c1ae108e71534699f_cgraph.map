@@ -1,7 +1,7 @@
 <map id="GamR::AngDist::StatTensor::StatTensor" name="GamR::AngDist::StatTensor::StatTensor">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,35,186,75"/>
 <area shape="rect" id="Node000002" href="$d1/d11/class_gam_r_1_1_ang_dist_1_1_population_parameter.html#abcdc5c0e4328caabcf9c09ccaef1bf77" title=" " alt="" coords="248,5,426,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,41,233,36,234,41,186,47"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,41,232,36,233,41,186,47"/>
 <area shape="rect" id="Node000003" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#a601edccee805ff4cf763bd8c8b7a6c6f" title=" " alt="" coords="234,70,440,96"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,63,219,67,218,72,186,68"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,63,218,67,218,72,186,68"/>
 </map>

@@ -1,27 +1,27 @@
 <map id="GamR::AngDist::GaussianDistr::Fit" name="GamR::AngDist::GaussianDistr::Fit">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,149,225,175"/>
 <area shape="rect" id="Node000002" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a83f21e40c202039c64d10adffb27521e" title=" " alt="" coords="273,55,471,95"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,146,294,98,296,103,156,151"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,146,294,98,295,103,156,151"/>
 <area shape="rect" id="Node000003" href="$da/d5e/class_gam_r_1_1_ang_dist_1_1_gaussian_distr_1_1_global_chi_square.html#a25963f6a31ae06ee8718430f4f920ba5" title=" " alt="" coords="273,169,471,210"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="226,171,258,175,258,180,225,176"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="226,171,258,175,257,180,225,176"/>
 <area shape="rect" id="Node000006" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#adf997e0aeab4bc362c60b72f01b33bd9" title=" " alt="" coords="519,5,717,46"/>
-<area shape="poly" id="edge11_Node000001_Node000006" title=" " alt="" coords="225,150,365,132,427,119,470,105,484,94,493,82,503,70,517,57,529,50,532,55,521,61,506,73,498,85,488,98,472,109,428,124,366,137,226,155"/>
+<area shape="poly" id="edge11_Node000001_Node000006" title=" " alt="" coords="225,150,365,132,427,119,470,105,484,94,493,82,503,70,517,57,528,51,531,55,521,61,506,73,498,85,488,98,472,109,428,124,366,137,226,155"/>
 <area shape="rect" id="Node000012" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a1ce4601cff334d3d161ccb03e3447114" title=" " alt="" coords="273,259,471,299"/>
-<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="147,173,314,250,312,255,144,178"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="147,173,313,250,311,254,144,178"/>
 <area shape="rect" id="Node000004" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a0a71e5a8f2c68571713f8e8fd71e9b9e" title=" " alt="" coords="519,71,717,111"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="429,166,470,149,518,122,536,114,538,119,520,127,472,153,431,171"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="429,166,470,149,518,122,535,115,537,120,520,127,472,153,431,171"/>
 <area shape="rect" id="Node000005" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a95b77d306e541c4f6cf4c633e29c3d33" title=" " alt="" coords="519,136,717,177"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="471,174,504,169,505,174,472,179"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="443,167,469,149,486,127,492,104,499,80,517,57,524,52,527,56,521,61,504,83,497,105,490,129,473,153,446,171"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="471,174,503,169,504,174,472,179"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="443,167,469,149,486,127,492,104,499,80,517,57,523,52,527,56,521,61,504,83,497,105,490,129,473,153,446,171"/>
 <area shape="rect" id="Node000008" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a03348cf6737958c2c453c04505979214" title=" " alt="" coords="519,201,717,242"/>
-<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="472,200,505,204,504,210,471,205"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="472,200,504,204,503,209,471,205"/>
 <area shape="rect" id="Node000009" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a33cb5cb42ce83331d7a95fadcc8f0b3f" title=" " alt="" coords="519,267,717,307"/>
-<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="442,208,472,221,496,236,520,251,536,259,534,263,518,256,494,241,470,225,440,213"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="442,208,472,221,496,236,520,251,536,258,533,263,518,256,494,241,470,225,440,213"/>
 <area shape="rect" id="Node000010" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a5576b603deb4001d2bf7d7b383565a77" title=" " alt="" coords="519,332,717,373"/>
-<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="454,208,473,221,491,246,498,270,504,294,521,317,527,322,524,326,517,321,499,296,492,272,486,248,469,225,451,213"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="454,208,473,221,491,246,498,270,504,294,521,317,527,322,523,326,517,321,499,296,492,272,486,248,469,225,451,213"/>
 <area shape="rect" id="Node000011" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#ad596ff728506fa481997c4514d6b15f6" title=" " alt="" coords="519,397,717,438"/>
-<area shape="poly" id="edge10_Node000003_Node000011" title=" " alt="" coords="457,209,473,221,488,242,496,263,498,304,500,343,507,363,521,383,525,386,521,390,517,386,502,365,494,344,492,304,490,264,483,244,469,225,454,213"/>
+<area shape="poly" id="edge10_Node000003_Node000011" title=" " alt="" coords="457,209,473,221,488,242,496,263,498,304,500,343,507,363,521,383,524,386,521,390,517,386,502,365,494,344,492,304,490,264,483,244,469,225,454,213"/>
 <area shape="rect" id="Node000007" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#a881a3b0bcf6d61d2f6da05f43a103b4f" title=" " alt="" coords="765,5,964,46"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="718,23,750,23,750,28,718,28"/>
-<area shape="poly" id="edge13_Node000012_Node000012" title=" " alt="" coords="326,259,323,249,331,240,347,234,372,232,399,235,415,241,413,246,398,240,372,237,348,239,334,244,328,250,331,257"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="718,23,749,23,749,28,718,28"/>
+<area shape="poly" id="edge13_Node000012_Node000012" title=" " alt="" coords="326,259,323,249,331,240,347,234,372,232,398,234,414,241,412,246,397,240,372,237,348,239,334,244,328,250,331,257"/>
 </map>

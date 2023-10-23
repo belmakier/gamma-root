@@ -1,20 +1,20 @@
 <map id="GamR::Coulex::LevelScheme::Print" name="GamR::Coulex::LevelScheme::Print">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,137,195,178"/>
 <area shape="rect" id="Node000002" href="$db/d16/class_gam_r_1_1_coulex_1_1_level_scheme.html#a4b86aa22b5d902bb4bd3a0103744e423" title=" " alt="" coords="243,88,432,129"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,135,227,128,228,134,196,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,135,226,129,228,134,196,141"/>
 <area shape="rect" id="Node000006" href="$db/d16/class_gam_r_1_1_coulex_1_1_level_scheme.html#aec7be097855daffdbd46cf158993ed67" title=" " alt="" coords="243,169,432,210"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="195,168,228,172,227,178,195,173"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="195,168,227,172,227,177,195,173"/>
 <area shape="rect" id="Node000003" href="$db/d16/class_gam_r_1_1_coulex_1_1_level_scheme.html#a0084c39cedee838191658398fa05f16a" title=" " alt="" coords="480,5,669,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="397,85,499,49,501,54,399,90"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="397,85,499,49,500,54,399,90"/>
 <area shape="rect" id="Node000004" href="$d1/d65/class_gam_r_1_1_coulex_1_1_level.html#a5b8c0227f0d4f75f5e57c58d61b9bf4b" title=" " alt="" coords="504,71,645,111"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="432,99,489,95,489,100,433,104"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="432,99,488,95,489,100,433,104"/>
 <area shape="rect" id="Node000005" href="$db/d16/class_gam_r_1_1_coulex_1_1_level_scheme.html#a807279006620a7c5d147431f72ed5be6" title=" " alt="" coords="480,136,669,177"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="433,125,466,132,465,137,432,130"/>
-<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="432,174,465,169,465,174,433,179"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="433,125,465,131,464,137,432,130"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="432,174,464,169,465,174,433,179"/>
 <area shape="rect" id="Node000007" href="$d1/d57/class_gam_r_1_1_coulex_1_1_transition.html#a968f19b8a7d201a680099e8b0830ebcb" title=" " alt="" coords="492,201,658,242"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="433,200,477,206,476,211,432,205"/>
 <area shape="rect" id="Node000008" href="$d1/d57/class_gam_r_1_1_coulex_1_1_transition.html#a1eb0854064b55ad398a44509b3bf799a" title=" " alt="" coords="492,267,658,307"/>
-<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="383,208,481,251,500,259,498,264,479,256,381,213"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="383,208,481,251,499,258,497,263,479,256,381,213"/>
 <area shape="rect" id="Node000009" href="$d1/d57/class_gam_r_1_1_coulex_1_1_transition.html#ad14d319ec7f096d0a48f2ad1c6760a4e" title=" " alt="" coords="717,267,884,307"/>
-<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="658,284,702,284,702,290,658,290"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="658,284,701,284,701,290,658,290"/>
 </map>

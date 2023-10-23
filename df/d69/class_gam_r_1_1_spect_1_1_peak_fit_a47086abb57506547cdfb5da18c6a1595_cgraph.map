@@ -1,7 +1,7 @@
 <map id="GamR::Spect::PeakFit::AddPeak" name="GamR::Spect::PeakFit::AddPeak">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,39,155,79"/>
 <area shape="rect" id="Node000002" href="$df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a649b7fb4b094dc62a5ad407c3443297b" title=" " alt="" coords="203,5,352,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,44,187,38,188,43,155,49"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,44,187,38,188,44,155,49"/>
 <area shape="rect" id="Node000003" href="$df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a5c20e81fd6b4fcb3b289544dfb586880" title=" " alt="" coords="203,71,352,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,68,188,74,188,79,154,74"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,68,188,74,187,79,154,74"/>
 </map>

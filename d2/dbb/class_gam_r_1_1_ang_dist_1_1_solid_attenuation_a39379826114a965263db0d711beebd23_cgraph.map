@@ -1,7 +1,7 @@
 <map id="GamR::AngDist::SolidAttenuation::SolidAttenuation" name="GamR::AngDist::SolidAttenuation::SolidAttenuation">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,23,217,64"/>
 <area shape="rect" id="Node000002" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#ae4438678fbc74d1ce8dd87de6df84a83" title=" " alt="" coords="265,5,434,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,30,249,26,250,31,217,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,30,249,26,249,31,217,35"/>
 <area shape="rect" id="Node000003" href="$d0/db7/namespace_gam_r_1_1_utils.html#ace3f0394455ab3d454776c11e1573a1a" title=" " alt="" coords="282,55,417,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,52,268,57,267,62,217,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,52,267,57,267,62,217,57"/>
 </map>

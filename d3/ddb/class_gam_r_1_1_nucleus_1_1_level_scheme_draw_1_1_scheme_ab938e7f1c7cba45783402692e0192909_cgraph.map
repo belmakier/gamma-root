@@ -1,14 +1,14 @@
 <map id="GamR::Nucleus::LevelSchemeDraw::Scheme::ReadScheme" name="GamR::Nucleus::LevelSchemeDraw::Scheme::ReadScheme">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,71,204,111"/>
 <area shape="rect" id="Node000002" href="$d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html#a777f826f7c9cc07f55ed7e98edb18246" title=" " alt="" coords="252,5,450,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,67,257,48,258,53,185,73"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,67,256,48,257,53,185,73"/>
 <area shape="rect" id="Node000003" href="$d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html#a3ba4703bdfad223fd2d1b188edf2d054" title=" " alt="" coords="252,71,450,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="204,88,237,88,237,94,204,94"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="204,88,236,88,236,94,204,94"/>
 <area shape="rect" id="Node000004" href="$d0/d17/_abbreviations_8cc.html#a5d1794b612bdcca3f4f4baa3d2e38a0b" title=" " alt="" coords="332,136,370,161"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="195,109,317,138,316,143,194,115"/>
 <area shape="rect" id="Node000005" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="498,136,681,161"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="371,146,483,146,483,151,371,151"/>
-<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="551,137,543,127,548,117,564,111,590,109,620,112,634,120,631,124,618,117,590,114,565,116,552,121,549,126,555,133"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="551,137,543,127,548,117,564,111,590,109,618,112,633,118,630,123,617,117,590,114,565,116,552,121,549,126,555,133"/>
 <area shape="rect" id="Node000006" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="729,136,917,161"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="682,146,714,146,714,151,682,151"/>
 </map>

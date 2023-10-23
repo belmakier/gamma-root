@@ -6,7 +6,7 @@ var searchData=
   ['linall_3',['LinAll',['../dc/d89/namespace_gam_r_1_1_spect.html#a7c014b37fef6c9127b7d862a977e4e36',1,'GamR::Spect']]],
   ['list1dspectra_4',['List1DSpectra',['../dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4',1,'GamR::Spect']]],
   ['list2dspectra_5',['List2DSpectra',['../dc/d89/namespace_gam_r_1_1_spect.html#a0aad1e3c1b928bb9c61bfa9c20df882e',1,'GamR::Spect']]],
-  ['load_6',['Load',['../d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#a1fbfc310eec282ac4ff33b6117de967f',1,'GamR::Tree::TExpDefn::Load()'],['../dd/dfd/class_gam_r_1_1_spect_1_1_peak_fit_guesses.html#aa104322f034fa4bc3cc0c5841d73821c',1,'GamR::Spect::PeakFitGuesses::Load()']]],
+  ['load_6',['load',['../d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#a1fbfc310eec282ac4ff33b6117de967f',1,'GamR::Tree::TExpDefn::Load()'],['../dd/dfd/class_gam_r_1_1_spect_1_1_peak_fit_guesses.html#aa104322f034fa4bc3cc0c5841d73821c',1,'GamR::Spect::PeakFitGuesses::Load()']]],
   ['loadguesses_7',['LoadGuesses',['../dc/d89/namespace_gam_r_1_1_spect.html#ad7ce25809952b87fed88db08f6e3ac0d',1,'GamR::Spect']]],
   ['loadraw_8',['LoadRaw',['../d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#ad18875e3efcf669c9f8e90a8446da366',1,'GamR::Tree::TExpDefn']]],
   ['loadscoef_9',['loadSCOEF',['../d6/d76/namespace_gam_r_1_1_coulex.html#ace79bcce69203b5740a6b158a40242d5',1,'GamR::Coulex']]],

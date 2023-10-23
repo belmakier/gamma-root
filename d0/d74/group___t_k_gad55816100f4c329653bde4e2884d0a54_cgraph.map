@@ -1,7 +1,7 @@
 <map id="GamR::TK::Gate::GetIntegral" name="GamR::TK::Gate::GetIntegral">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,31,191,56"/>
 <area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#gab865f6e8e84344abc6a89f16cc796307" title=" " alt="" coords="239,5,427,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,31,224,27,224,33,191,36"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,31,223,27,223,33,191,36"/>
 <area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#ga4f8f88a7cb3ed077f9a3c3d81f02b31a" title=" " alt="" coords="240,55,426,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,50,225,54,225,59,191,56"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,50,225,54,224,59,191,56"/>
 </map>

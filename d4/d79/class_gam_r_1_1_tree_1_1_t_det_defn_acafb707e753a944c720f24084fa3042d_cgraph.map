@@ -1,7 +1,7 @@
 <map id="GamR::Tree::TDetDefn::GetDatum" name="GamR::Tree::TDetDefn::GetDatum">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,5,157,46"/>
 <area shape="rect" id="Node000002" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#ab07152fb360c8aed5fa35ef70a253ba1" title=" " alt="" coords="205,5,356,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,23,190,23,190,28,157,28"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,23,189,23,189,28,157,28"/>
 <area shape="rect" id="Node000003" href="$d0/db7/namespace_gam_r_1_1_utils.html#a6a625e83f7fe144617cb2d4ab7acb6f8" title="Applies function taking both elements of tuple as arguments." alt="" coords="404,5,548,46"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="356,23,389,23,389,28,356,28"/>
 </map>

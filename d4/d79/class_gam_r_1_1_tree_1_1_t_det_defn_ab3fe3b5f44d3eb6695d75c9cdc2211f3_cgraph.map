@@ -1,12 +1,12 @@
 <map id="GamR::Tree::TDetDefn::SetPtrs" name="GamR::Tree::TDetDefn::SetPtrs">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,35,157,75"/>
 <area shape="rect" id="Node000002" href="$d0/db7/namespace_gam_r_1_1_utils.html#a6751af789290ad0a5f984de34a0ce481" title="Applies function on each element of tuple." alt="" coords="205,5,352,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,41,189,36,190,41,157,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,41,189,36,190,42,157,46"/>
 <area shape="rect" id="Node000003" href="$d0/d17/_abbreviations_8cc.html#a5d1794b612bdcca3f4f4baa3d2e38a0b" title=" " alt="" coords="259,70,298,96"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="157,63,245,76,244,81,157,68"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="157,63,244,76,243,81,157,68"/>
 <area shape="rect" id="Node000004" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="400,70,583,96"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="298,80,385,80,385,86,298,86"/>
-<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="456,71,449,62,453,52,468,46,492,44,519,47,532,54,529,59,517,52,492,49,469,51,457,56,454,61,460,68"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="298,80,384,80,384,86,298,86"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="456,71,449,62,453,52,468,46,492,44,518,46,531,53,529,58,516,51,492,49,469,51,457,56,454,61,460,68"/>
 <area shape="rect" id="Node000005" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="631,70,819,96"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="584,80,616,80,616,86,584,86"/>
 </map>

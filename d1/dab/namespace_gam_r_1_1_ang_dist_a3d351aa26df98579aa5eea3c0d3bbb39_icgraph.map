@@ -1,11 +1,11 @@
 <map id="GamR::AngDist::RatioFunction" name="GamR::AngDist::RatioFunction">
 <area shape="rect" id="Node000001" title=" " alt="" coords="250,80,446,106"/>
 <area shape="rect" id="Node000002" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#aca4fecef890dcba5b92901d09b227c71" title=" " alt="" coords="5,5,202,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,77,201,45,162,34,164,29,202,40,299,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="296,77,201,45,162,34,164,29,202,40,298,72"/>
 <area shape="rect" id="Node000003" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a27d6ed29ea36eacdc97228eaf2cb5cab" title=" " alt="" coords="5,55,202,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="235,84,202,80,203,75,235,78"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="234,84,202,80,203,75,235,78"/>
 <area shape="rect" id="Node000004" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#ae3807ba0c16b7aa0265371dfb9ed06ae" title=" " alt="" coords="5,104,202,130"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="235,107,203,110,202,105,235,101"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="235,107,203,110,202,105,234,101"/>
 <area shape="rect" id="Node000005" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#ab1285067386ad9d3c80f6a7d9f6531fb" title=" " alt="" coords="5,153,202,179"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="297,114,202,145,163,155,162,150,201,140,295,109"/>
 </map>

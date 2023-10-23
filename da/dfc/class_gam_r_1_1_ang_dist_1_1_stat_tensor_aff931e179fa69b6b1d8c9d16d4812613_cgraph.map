@@ -1,19 +1,19 @@
 <map id="GamR::AngDist::StatTensor::ObservedProp" name="GamR::AngDist::StatTensor::ObservedProp">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,97,186,137"/>
 <area shape="rect" id="Node000002" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#ae487cb5f3bba6d1bbf415c825b7d8d74" title=" " alt="" coords="280,5,426,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,94,176,66,233,40,265,30,266,35,235,45,178,70,130,98"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,94,176,66,233,40,264,30,265,35,235,45,178,70,130,98"/>
 <area shape="rect" id="Node000004" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a64b5a4704ab13f1fca8a2a787a30adde" title=" " alt="" coords="281,55,425,80"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,97,267,81,268,86,187,102"/>
 <area shape="rect" id="Node000007" href="$d2/dbb/class_gam_r_1_1_ang_dist_1_1_solid_attenuation.html#a00f8c011eba761ff461e3d603493a4a9" title=" " alt="" coords="234,104,472,130"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="186,114,219,114,219,120,186,120"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="186,114,218,114,218,120,186,120"/>
 <area shape="rect" id="Node000008" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#af8a856cc5021ee7cd1b451ff185def49" title=" " alt="" coords="249,153,457,179"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="187,132,268,147,267,153,186,137"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="187,132,268,147,267,152,186,137"/>
 <area shape="rect" id="Node000009" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#a601edccee805ff4cf763bd8c8b7a6c6f" title=" " alt="" coords="250,203,456,228"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="130,136,178,163,235,189,257,196,255,201,233,194,176,168,127,140"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="130,136,178,163,235,189,255,196,254,201,233,194,176,168,127,140"/>
 <area shape="rect" id="Node000003" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a96b00c034e0b8aa9807d13c08970ba79" title=" " alt="" coords="522,5,667,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="426,16,507,16,507,21,426,21"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="426,16,506,16,506,21,426,21"/>
 <area shape="rect" id="Node000005" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a0877eda04da307add630755c3b61f322" title=" " alt="" coords="520,55,668,80"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="425,65,505,65,505,70,425,70"/>
 <area shape="rect" id="Node000006" href="$d0/db7/namespace_gam_r_1_1_utils.html#a7099ce4f94ee95597184a93c9bd8607a" title=" " alt="" coords="716,55,850,80"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="669,65,702,65,702,70,669,70"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="669,65,701,65,701,70,669,70"/>
 </map>

@@ -1,6 +1,6 @@
 <map id="GamR::Efficiency::MultiEffFit::AddData" name="GamR::Efficiency::MultiEffFit::AddData">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,29,173,70"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="47,29,45,19,52,10,67,5,89,3,114,5,128,12,126,17,112,10,89,8,68,10,55,15,50,21,52,28"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="47,29,45,19,52,10,67,5,89,3,113,5,127,11,125,16,112,10,89,8,68,10,55,15,50,21,52,28"/>
 <area shape="rect" id="Node000002" href="$d8/d35/class_gam_r_1_1_efficiency_1_1_multi_data_set.html#a050ffbf88257594bd12994421a5ec8ff" title=" " alt="" coords="221,29,400,70"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="173,47,206,47,206,52,173,52"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="173,47,205,47,205,52,173,52"/>
 </map>
