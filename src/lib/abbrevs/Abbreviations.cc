@@ -69,7 +69,66 @@ void help(std::string topic) {
   else if ( topic == "spect" ) {
     std::cout << "GamR Spectroscopy help: " << std::endl;
     std::cout << "Spectroscopy tools - calibrations, cuts, display utilities, peak fitting, and I/O to ASCII text formats." << std::endl;
+    std::cout << "See also help(\"spect/fitting\")" << std::endl;
     std::cout << "Look in src/lib/spect/ for more details" << std::endl;
+  }
+  else if ( topic == "spect/fitting" ) {
+    std::cout << "Peak fitting is done through the 'pf()' [GamR::Spect::FitPeaks()] or 'bp()' [GamR::TK::FitBPeak()] functions" << std::endl;
+    std::cout << std::endl;
+    std::cout << "GamR::TK::FitBPeak()" << std::endl << std::endl;
+    
+    std::cout << "BPeak stands for \'Basic' Peak -- the idea being to extract information about a peak while making no assumption" << std::endl;
+    std::cout << "about its shape. This proceeds by defining a peak region and then several background regions: usually at least " << std::endl;
+    std::cout << "one on either side of the peak. The background regions are then fit with some function(s), and the extrapolation/" << std::endl;
+    std::cout << "interpolation of these into the peak area is used to get the peak area and centroid after subtracting the background" << std::endl << std::endl;
+    
+    std::cout << "The call signature is" << std::endl << std::endl;
+
+    std::cout << "   bp(canvas, ROOT fitting options, BPeak options)," << std::endl << std::endl;
+    
+    std::cout << "where the canvas is a ROOT canvas on which the histogram is plotted, and the second two arguments are optional" << std::endl;
+    std::cout << "strings. The first is passed to the ROOT TF1::Fit() function (see appropriate ROOT documentation). The second defines" << std::endl;
+    std::cout << "what kind of background to fit, and usually contains two characters. The first represents the functional form of the" << std::endl;
+    std::cout << "background: " << std::endl;
+    std::cout << "   \"c\" : constant" << std::endl;
+    std::cout << "   \"l\" : linear" << std::endl;
+    std::cout << "   \"q\" : quadratic" << std::endl;
+    std::cout << "The second letter represents how the interpolation is conducted:" << std::endl;
+    std::cout << "   \"s\" : smooth -- a single function is fitted to the union of all background regions." << std::endl;
+    std::cout << "   \"p\" : point -- two background functions are fitted, one above and one below the peak region. These are extrapolated" << std::endl;
+    std::cout << "         to the edges of the peak region, and then a straight line between the two intersections is used beneath the peak" << std::endl;
+    std::cout << "   \"x\" : step -- two background functions are fitted, and then a smooth interpolation between them using the error " << std::endl;
+    std::cout << "         function (erf) connects the two regions" << std::endl <<std::endl;
+    std::cout << "The default BPeak option is \"ls\" -- a linear smooth background" << std::endl;
+    std::cout << std::endl;
+    std::cout << "GamR::Spect::FitPeaks()" << std::endl << std::endl;
+    
+    std::cout << "This actually fits a functional form to the peak(s). The most basic peak shape is a Gaussian, but this can be modified" << std::endl;
+    std::cout << "in several ways -- by adding one or two skewed components, and/or a step underneath the peak. The call signature is:" << std::endl << std::endl;
+    
+    std::cout << "   pf(canvas, ROOT fitting options, FitPeaks options)," << std::endl << std::endl;
+    
+    std::cout << "in a similar fashion to bp(). The FitPeak options are:" << std::endl;
+    std::cout << "   \"z\"  : quiet mode" << std::endl;
+    std::cout << "   \"f\"  : fix widths -- all peaks are fitted with common width/skew/step parameters" << std::endl;
+    std::cout << "   \"ff\" : fix widths from file --- the width/skew/step parameters are not fitted but read from a file (see below)" << std::endl;
+    std::cout << "   \"q\"  : quadratic background" << std::endl;
+    std::cout << "   \"c\"  : constant background" << std::endl;
+    std::cout << "   \"q\"  : quadratic background" << std::endl;
+    std::cout << "   \"t\"  : one tail (skewed component)" << std::endl;
+    std::cout << "   \"g\"  : two tails (two skewed components)" << std::endl;
+    std::cout << "   \"s\"  : step" << std::endl;
+    std::cout << "   \"e\"  : fix energy of one or more peaks" << std::endl;
+    std::cout << "   \"n\"  : no fit --- just create the template function with starting guesses but do not fit" << std::endl << std::endl;
+    
+    std::cout << "The option \"ff\" requires an additional file named \"FitWidths.dat\" in the current directory. It should contain several" << std::endl;
+    std::cout << "rows, each with 7 numbers corresponding to:" << std::endl;
+    std::cout << std::endl;
+    std::cout << "Energy    Width    Step    Skew    SkewAmp    Skew2    SkewAmp2" << std::endl << std::endl;
+    std::cout << "With several rows at different energies, the shapes of the detector response across the whole energy range can be specified." << std::endl;
+    std::cout << "The fitting function will read this file and interpolate (linearly) between the energies defining the appropriate shape" << std::endl;
+    std::cout << "for the correct region of the spectrum. Thus, the only fitted parameters for each peak are its location (centroid) and " << std::endl;
+    std::cout << "its amplitude. An example \"FitWidths.dat\" file can be found in the share folder inside the install directory." << std::endl;      
   }
   else if (topic == "angdist" ) {
     std::cout << "GamR Angdist help: " << std::endl;
