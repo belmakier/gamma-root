@@ -434,7 +434,7 @@ $(document).ready(function(){initNavTree('df/d08/_efficiency_8cc_source.html','.
 <div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>            y_err = y_err * fAbsScale;</div>
 <div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>          }          </div>
 <div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>          graph-&gt;SetPoint(i, fEnergies[i], y);</div>
-<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>          graph-&gt;SetPointError(i, 0, 0.00001);</div>
+<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>          graph-&gt;SetPointError(i, 0, 0.1*fAbsScale);</div>
 <div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>        }</div>
 <div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>      <span class="keywordflow">return</span> graph;</div>
 <div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>    }</div>
@@ -532,496 +532,501 @@ $(document).ready(function(){initNavTree('df/d08/_efficiency_8cc_source.html','.
 <div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>              graph = p-&gt;<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetGraphErrors();</div>
 <div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>            }</div>
 <div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>            f += graph-&gt;Chisquare(p-&gt;<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>);</div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>            <span class="keyword">delete</span> graph;</div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>          }</div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>        }</div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>      }</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span> </div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>            <span class="keyword">delete</span> graph;</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>          }</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>        }</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>      }</div>
 </div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>    };</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>    };</div>
 </div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span> </div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>    <a class="code hl_class" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html">EffFit</a> *EffFit::GlobalChiSquare::p = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span> </div>
-<div class="foldopen" id="foldopen00560" data-start="{" data-end="}">
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno"><a class="line" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a5737e643d04001de514eb77ba7e010eb">  560</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a5737e643d04001de514eb77ba7e010eb">EffFit::Fit</a>(<span class="keywordtype">int</span> quiet<span class="comment">/*=0*/</span>)</div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>    {</div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>      <span class="keywordtype">int</span> nDataSets = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>.size();</div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>      Int_t npars = 8 + nDataSets;</div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>      <span class="keyword">auto</span> gMinuit = <span class="keyword">new</span> TMinuit(npars);</div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>      <span class="comment">//gMinuit-&gt;Command(&quot;SET PRINT -1&quot;);</span></div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span> </div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>      <a class="code hl_class" href="../../d1/d16/class_gam_r_1_1_efficiency_1_1_eff_fit_1_1_global_chi_square.html">GlobalChiSquare</a> func(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>      gMinuit-&gt;SetFCN(func.<a class="code hl_function" href="../../d1/d16/class_gam_r_1_1_efficiency_1_1_eff_fit_1_1_global_chi_square.html#a840869018bdd011ba6cf26e273b04031">minuit</a>);</div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span> </div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>      Double_t arglist[10];</div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>      arglist[0] = 1;</div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span> </div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>      Int_t ierflg = 0; <span class="comment">// some error flag ???</span></div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span> </div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>      gMinuit-&gt;mnexcm(<span class="stringliteral">&quot;SET ERR&quot;</span>, arglist, 1, ierflg);</div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>      arglist[0] = 2;</div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>      gMinuit-&gt;mnexcm(<span class="stringliteral">&quot;SET STR&quot;</span>, arglist, 1, ierflg);</div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span> </div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>      Int_t parnum = 0;</div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span> </div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>      std::vector&lt; std::string &gt; parnames = {<span class="stringliteral">&quot;A&quot;</span>, <span class="stringliteral">&quot;B&quot;</span>, <span class="stringliteral">&quot;C&quot;</span>, <span class="stringliteral">&quot;D&quot;</span>, <span class="stringliteral">&quot;E&quot;</span>, <span class="stringliteral">&quot;F&quot;</span>, <span class="stringliteral">&quot;G&quot;</span>, <span class="stringliteral">&quot;AbsScale&quot;</span>};</div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>      <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i=0; i&lt;8; ++i ) {</div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>        <span class="keywordtype">double</span> parmin, parmax;</div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>        <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParLimits(i, parmin, parmax);</div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>        <span class="comment">//std::cout &lt;&lt; &quot;Setting parameter &quot; &lt;&lt; parnum &lt;&lt; &quot; : &quot; &lt;&lt; parnames[i].c_str() &lt;&lt; &quot;   &quot; &lt;&lt; EffFunc-&gt;GetParameter(i) &lt;&lt; &quot;  &quot; &lt;&lt;  EffFunc-&gt;GetParError(i) &lt;&lt; &quot;  &quot; &lt;&lt;  parmin &lt;&lt; &quot;  &quot; &lt;&lt;  parmax;</span></div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>        <span class="keywordflow">if</span> (parmin==parmax) {</div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>          parmin = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParameter(i) - 1;  <span class="comment">//because Minuit doesn&#39;t allow equal upper and lower bounds</span></div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>          parmax = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParameter(i) + 1;</div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>        }</div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>        gMinuit-&gt;mnparm(parnum, parnames[i].c_str(), <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParameter(i), <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParError(i), parmin, parmax, ierflg);</div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>        ++parnum;</div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>      }</div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span> </div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;8; ++i) {</div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>        <span class="keywordtype">double</span> parmin, parmax;</div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>        <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParLimits(i, parmin, parmax);</div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>        <span class="keywordflow">if</span> (parmin*parmax != 0 &amp;&amp; parmin &gt;= parmax) {</div>
-<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>          gMinuit-&gt;FixParameter(i);</div>
-<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>        }</div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>      }</div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>          </div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;nDataSets; ++i) {</div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Initial fNorm &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetNorm() &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>        gMinuit-&gt;mnparm(parnum, (<span class="stringliteral">&quot;N&quot;</span>+std::to_string(i)).c_str(), <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetNorm(), 0.1*<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetNorm(), 0.0, 10*<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetNorm(), ierflg);</div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetNData() == 0 || <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetAbsolute()) {</div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>          gMinuit-&gt;FixParameter(parnum);</div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>        }</div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>        ++parnum;</div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>      }</div>
-<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span> </div>
-<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>      gMinuit-&gt;FixParameter(8);      </div>
-<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>      </div>
-<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>      <span class="comment">/* MINIMIZE */</span></div>
-<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>      arglist[0] = 100000; <span class="comment">// Max Iterations</span></div>
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>      arglist[1] = 1;      <span class="comment">// Number of sigma max step</span></div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>      gMinuit-&gt;mnexcm(<span class="stringliteral">&quot;MINIGRAD&quot;</span>, arglist, 2, ierflg);</div>
-<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>      gMinuit-&gt;mnimpr(); <span class="comment">// Improve fit by searching for other minima</span></div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>      gMinuit-&gt;mnexcm(<span class="stringliteral">&quot;HESSE&quot;</span>, arglist, 2, ierflg);</div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>      gMinuit-&gt;mnexcm(<span class="stringliteral">&quot;MINOS&quot;</span>, arglist, 2, ierflg);</div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span> </div>
-<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>      <span class="comment">//get parameters + errors and put into EffFunc</span></div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;8; ++i) {</div>
-<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>        <span class="keywordtype">double</span> parVal, parErr;</div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>        gMinuit-&gt;GetParameter(i, parVal, parErr);</div>
-<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>        <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParameter(i, parVal);</div>
-<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>        <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParError(i, parErr);</div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>        <span class="keywordflow">if</span> (i==7) {</div>
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a000cd866c3274a21ffa0855e7ec260fd">fAbsScale</a> = parVal;</div>
-<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>        }</div>
-<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>      }</div>
-<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span> </div>
-<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>      <span class="keyword">delete</span> gMinuit;</div>
-<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span> </div>
-<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>      <span class="keywordflow">if</span> (quiet==0) {</div>
-<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>        TCanvas *c1 = <span class="keyword">new</span> TCanvas(<span class="stringliteral">&quot;cEff&quot;</span>, <span class="stringliteral">&quot;Efficiency Curve&quot;</span>, 1280, 720);</div>
-<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>        this-&gt;<a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a976665472fd0985ab779dff93252bad8">Draw</a>(c1);</div>
-<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>      }</div>
-<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>      </div>
-<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>    }</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span> </div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>    <a class="code hl_class" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html">EffFit</a> *EffFit::GlobalChiSquare::p = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span> </div>
+<div class="foldopen" id="foldopen00561" data-start="{" data-end="}">
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno"><a class="line" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a5737e643d04001de514eb77ba7e010eb">  561</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a5737e643d04001de514eb77ba7e010eb">EffFit::Fit</a>(<span class="keywordtype">int</span> quiet<span class="comment">/*=0*/</span>)</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>    {</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>      <span class="keywordtype">int</span> nDataSets = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>.size();</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>      Int_t npars = 8 + nDataSets;</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>      <span class="keyword">auto</span> gMinuit = <span class="keyword">new</span> TMinuit(npars);</div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>      <span class="comment">//gMinuit-&gt;Command(&quot;SET PRINT -1&quot;);</span></div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span> </div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>      <a class="code hl_class" href="../../d1/d16/class_gam_r_1_1_efficiency_1_1_eff_fit_1_1_global_chi_square.html">GlobalChiSquare</a> func(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>      gMinuit-&gt;SetFCN(func.<a class="code hl_function" href="../../d1/d16/class_gam_r_1_1_efficiency_1_1_eff_fit_1_1_global_chi_square.html#a840869018bdd011ba6cf26e273b04031">minuit</a>);</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span> </div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>      Double_t arglist[10];</div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>      arglist[0] = 1;</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span> </div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>      Int_t ierflg = 0; <span class="comment">// some error flag ???</span></div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span> </div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>      gMinuit-&gt;mnexcm(<span class="stringliteral">&quot;SET ERR&quot;</span>, arglist, 1, ierflg);</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>      arglist[0] = 2;</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>      gMinuit-&gt;mnexcm(<span class="stringliteral">&quot;SET STR&quot;</span>, arglist, 1, ierflg);</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span> </div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>      Int_t parnum = 0;</div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span> </div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>      std::vector&lt; std::string &gt; parnames = {<span class="stringliteral">&quot;A&quot;</span>, <span class="stringliteral">&quot;B&quot;</span>, <span class="stringliteral">&quot;C&quot;</span>, <span class="stringliteral">&quot;D&quot;</span>, <span class="stringliteral">&quot;E&quot;</span>, <span class="stringliteral">&quot;F&quot;</span>, <span class="stringliteral">&quot;G&quot;</span>, <span class="stringliteral">&quot;AbsScale&quot;</span>};</div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>      <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i=0; i&lt;8; ++i ) {</div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>        <span class="keywordtype">double</span> parmin, parmax;</div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>        <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParLimits(i, parmin, parmax);</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>        <span class="comment">//std::cout &lt;&lt; &quot;Setting parameter &quot; &lt;&lt; parnum &lt;&lt; &quot; : &quot; &lt;&lt; parnames[i].c_str() &lt;&lt; &quot;   &quot; &lt;&lt; EffFunc-&gt;GetParameter(i) &lt;&lt; &quot;  &quot; &lt;&lt;  EffFunc-&gt;GetParError(i) &lt;&lt; &quot;  &quot; &lt;&lt;  parmin &lt;&lt; &quot;  &quot; &lt;&lt;  parmax;</span></div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>        <span class="keywordflow">if</span> (parmin==parmax) {</div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>          parmin = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParameter(i) - 1;  <span class="comment">//because Minuit doesn&#39;t allow equal upper and lower bounds</span></div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>          parmax = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParameter(i) + 1;</div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>        }</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>        gMinuit-&gt;mnparm(parnum, parnames[i].c_str(), <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParameter(i), <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParError(i), parmin, parmax, ierflg);</div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>        ++parnum;</div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>      }</div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span> </div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;8; ++i) {</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>        <span class="keywordtype">double</span> parmin, parmax;</div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>        <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParLimits(i, parmin, parmax);</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>        <span class="keywordflow">if</span> (parmin*parmax != 0 &amp;&amp; parmin &gt;= parmax) {</div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>          gMinuit-&gt;FixParameter(i);</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>        }</div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>      }</div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>          </div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;nDataSets; ++i) {</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Initial fNorm &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetNorm() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>        gMinuit-&gt;mnparm(parnum, (<span class="stringliteral">&quot;N&quot;</span>+std::to_string(i)).c_str(), <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetNorm(), 0.1*<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetNorm(), 0.0, 10*<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetNorm(), ierflg);</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetNData() == 0 || <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetAbsolute()) {</div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>          gMinuit-&gt;FixParameter(parnum);</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>        }</div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>        ++parnum;</div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>      }</div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span> </div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>      gMinuit-&gt;FixParameter(8);      </div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>      </div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>      <span class="comment">/* MINIMIZE */</span></div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>      arglist[0] = 100000; <span class="comment">// Max Iterations</span></div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>      arglist[1] = 1;      <span class="comment">// Number of sigma max step</span></div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>      gMinuit-&gt;mnexcm(<span class="stringliteral">&quot;MINIGRAD&quot;</span>, arglist, 2, ierflg);</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>      gMinuit-&gt;mnimpr(); <span class="comment">// Improve fit by searching for other minima</span></div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>      gMinuit-&gt;mnexcm(<span class="stringliteral">&quot;HESSE&quot;</span>, arglist, 2, ierflg);</div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>      gMinuit-&gt;mnexcm(<span class="stringliteral">&quot;MINOS&quot;</span>, arglist, 2, ierflg);</div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span> </div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>      <span class="comment">//get parameters + errors and put into EffFunc</span></div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;8; ++i) {</div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>        <span class="keywordtype">double</span> parVal, parErr;</div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>        gMinuit-&gt;GetParameter(i, parVal, parErr);</div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>        <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParameter(i, parVal);</div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>        <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParError(i, parErr);</div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>        <span class="keywordflow">if</span> (i==7) {</div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a000cd866c3274a21ffa0855e7ec260fd">fAbsScale</a> = parVal;</div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>        }</div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>      }</div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span> </div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>      <span class="keyword">delete</span> gMinuit;</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span> </div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>      <span class="keywordflow">if</span> (quiet==0) {</div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>        TCanvas *c1 = <span class="keyword">new</span> TCanvas(<span class="stringliteral">&quot;cEff&quot;</span>, <span class="stringliteral">&quot;Efficiency Curve&quot;</span>, 1280, 720);</div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>        this-&gt;<a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a976665472fd0985ab779dff93252bad8">Draw</a>(c1);</div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>      }</div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>      </div>
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>    }</div>
 </div>
-<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span> </div>
-<div class="foldopen" id="foldopen00641" data-start="{" data-end="}">
-<div class="line"><a id="l00641" name="l00641"></a><span class="lineno"><a class="line" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a37bd5eeb087e51fa9e76286b65ec7139">  641</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a37bd5eeb087e51fa9e76286b65ec7139">EffFit::SetParams</a>(<a class="code hl_class" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html">FitParams</a> params) {</div>
-<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>.size(); ++i) {</div>
-<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetAbsolute()) {</div>
-<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].SetAbsScale(1.0);</div>
-<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>        }</div>
-<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>        <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].SetAbsScale(<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a000cd866c3274a21ffa0855e7ec260fd">fAbsScale</a>);</div>
-<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>        }</div>
-<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>      }</div>
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;params.<a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a3686ea824492fca91875ce8cacdcb1cc">params</a>.size(); ++i) {</div>
-<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>        <span class="keywordtype">double</span> plow, phigh;</div>
-<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>        <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParLimits(i, plow, phigh);</div>
-<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>        <span class="keywordtype">double</span> parmin = params.<a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a387295bdfe2b3ed49cad860aa1f288cf">limlow</a>[i].Eval(plow);</div>
-<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>        <span class="keywordtype">double</span> parmax = params.<a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#acd27917de7b681e7e66b2fab528f9264">limhigh</a>[i].Eval(phigh);</div>
-<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>        <span class="comment">//EffFunc-&gt;GetParLimits(i, parmin, parmax);</span></div>
-<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span> </div>
-<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>        <span class="keywordflow">if</span> (params.<a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#ac2a872f300e63024bfe5a5e164fdc877">fixed</a>[i]==1) {</div>
-<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParameter(i, params.<a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a3686ea824492fca91875ce8cacdcb1cc">params</a>[i].Eval(<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParameter(i)));                   </div>
-<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParLimits(i, parmin, parmax);</div>
-<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;FixParameter(i, params.<a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a3686ea824492fca91875ce8cacdcb1cc">params</a>[i].Eval(<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParameter(i)));</div>
-<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>        }</div>
-<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>        <span class="keywordflow">else</span> {          </div>
-<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;ReleaseParameter(i);</div>
-<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParameter(i, params.<a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a3686ea824492fca91875ce8cacdcb1cc">params</a>[i].Eval(<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParameter(i)));          </div>
-<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParLimits(i, parmin, parmax);</div>
-<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>          <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParError(i) == 0) {</div>
-<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>            <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParError(i, 0.1);</div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>          }</div>
-<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>        }</div>
-<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>      }</div>
-<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>      <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParameter(7, <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a000cd866c3274a21ffa0855e7ec260fd">fAbsScale</a>);</div>
-<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>    }</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span> </div>
+<div class="foldopen" id="foldopen00642" data-start="{" data-end="}">
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno"><a class="line" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a37bd5eeb087e51fa9e76286b65ec7139">  642</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a37bd5eeb087e51fa9e76286b65ec7139">EffFit::SetParams</a>(<a class="code hl_class" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html">FitParams</a> params) {</div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>.size(); ++i) {</div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetAbsolute()) {</div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].SetAbsScale(1.0);</div>
+<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>        }</div>
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].SetAbsScale(<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a000cd866c3274a21ffa0855e7ec260fd">fAbsScale</a>);</div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>        }</div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>      }</div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;params.<a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a3686ea824492fca91875ce8cacdcb1cc">params</a>.size(); ++i) {</div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>        <span class="keywordtype">double</span> plow, phigh;</div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>        <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParLimits(i, plow, phigh);</div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>        <span class="keywordtype">double</span> parmin = params.<a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a387295bdfe2b3ed49cad860aa1f288cf">limlow</a>[i].Eval(plow);</div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>        <span class="keywordtype">double</span> parmax = params.<a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#acd27917de7b681e7e66b2fab528f9264">limhigh</a>[i].Eval(phigh);</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>        <span class="comment">//EffFunc-&gt;GetParLimits(i, parmin, parmax);</span></div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span> </div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>        <span class="keywordflow">if</span> (params.<a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#ac2a872f300e63024bfe5a5e164fdc877">fixed</a>[i]==1) {</div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParameter(i, params.<a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a3686ea824492fca91875ce8cacdcb1cc">params</a>[i].Eval(<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParameter(i)));                   </div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParLimits(i, parmin, parmax);</div>
+<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;FixParameter(i, params.<a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a3686ea824492fca91875ce8cacdcb1cc">params</a>[i].Eval(<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParameter(i)));</div>
+<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>        }</div>
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>        <span class="keywordflow">else</span> {          </div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;ReleaseParameter(i);</div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParameter(i, params.<a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a3686ea824492fca91875ce8cacdcb1cc">params</a>[i].Eval(<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParameter(i)));          </div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParLimits(i, parmin, parmax);</div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>          <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParError(i) == 0) {</div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>            <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParError(i, 0.1);</div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>          }</div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>        }</div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>      }</div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>      <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParLimits(7, 0.1*<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a000cd866c3274a21ffa0855e7ec260fd">fAbsScale</a>, 10.0*<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a000cd866c3274a21ffa0855e7ec260fd">fAbsScale</a>);</div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>      <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParameter(7, <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a000cd866c3274a21ffa0855e7ec260fd">fAbsScale</a>);</div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>    }</div>
 </div>
-<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>    </div>
-<div class="foldopen" id="foldopen00674" data-start="{" data-end="}">
-<div class="line"><a id="l00674" name="l00674"></a><span class="lineno"><a class="line" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a976665472fd0985ab779dff93252bad8">  674</a></span>    TMultiGraph* <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a976665472fd0985ab779dff93252bad8">EffFit::Draw</a>(TCanvas *canvas, <span class="keywordtype">int</span> detID<span class="comment">/*=0*/</span>, <span class="keywordtype">double</span> xlow<span class="comment">/*=-1*/</span>, <span class="keywordtype">double</span> xhigh<span class="comment">/*=-1*/</span>)</div>
-<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>    {</div>
-<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;Drawing Detector &quot;</span> &lt;&lt; detID &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>      canvas-&gt;Clear();</div>
-<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>      canvas-&gt;cd();</div>
-<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>      <span class="keywordtype">int</span> nDataSets = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>.size();</div>
-<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>      TMultiGraph *graph = <span class="keyword">new</span> TMultiGraph();</div>
-<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>      graph-&gt;SetTitle((<span class="stringliteral">&quot;Efficiency &quot;</span>+std::to_string(detID)).c_str());</div>
-<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>      std::vector&lt;Color_t&gt; colors = {kRed, kBlue, kGreen, kMagenta, kCyan, kBlack, kYellow};</div>
-<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;nDataSets; ++i)</div>
-<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>        {</div>
-<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>          TGraphErrors *dsetgraph = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetGraphErrors();</div>
-<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>          std::cout &lt;&lt; <span class="stringliteral">&quot;    Data Set &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;, nPoints &quot;</span> &lt;&lt; dsetgraph-&gt;GetN() &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>          dsetgraph-&gt;SetLineColor(colors[i]);</div>
-<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>          dsetgraph-&gt;SetMarkerColor(colors[i]);</div>
-<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>          graph-&gt;Add(dsetgraph);          </div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>        }</div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>      graph-&gt;Draw(<span class="stringliteral">&quot;A*&quot;</span>);</div>
-<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>      <span class="keywordflow">if</span> (xlow!=xhigh) {</div>
-<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>        graph-&gt;GetXaxis()-&gt;SetLimits(xlow, xhigh);</div>
-<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>      }</div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>    </div>
+<div class="foldopen" id="foldopen00676" data-start="{" data-end="}">
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno"><a class="line" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a976665472fd0985ab779dff93252bad8">  676</a></span>    TMultiGraph* <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a976665472fd0985ab779dff93252bad8">EffFit::Draw</a>(TCanvas *canvas, <span class="keywordtype">int</span> detID<span class="comment">/*=0*/</span>, <span class="keywordtype">double</span> xlow<span class="comment">/*=-1*/</span>, <span class="keywordtype">double</span> xhigh<span class="comment">/*=-1*/</span>)</div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>    {</div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;Drawing Detector &quot;</span> &lt;&lt; detID &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>      canvas-&gt;Clear();</div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>      canvas-&gt;cd();</div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>      <span class="keywordtype">int</span> nDataSets = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>.size();</div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>      TMultiGraph *graph = <span class="keyword">new</span> TMultiGraph();</div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>      graph-&gt;SetTitle((<span class="stringliteral">&quot;Efficiency &quot;</span>+std::to_string(detID)).c_str());</div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>      std::vector&lt;Color_t&gt; colors = {kRed, kBlue, kGreen, kMagenta, kCyan, kBlack, kYellow};</div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;nDataSets; ++i)</div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>        {</div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>          <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].SetAbsScale(<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a000cd866c3274a21ffa0855e7ec260fd">fAbsScale</a>);</div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>          TGraphErrors *dsetgraph = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetGraphErrors();</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>          std::cout &lt;&lt; <span class="stringliteral">&quot;    Data Set &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;, nPoints &quot;</span> &lt;&lt; dsetgraph-&gt;GetN() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>          dsetgraph-&gt;SetLineColor(colors[i]);</div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>          dsetgraph-&gt;SetMarkerColor(colors[i]);</div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>          graph-&gt;Add(dsetgraph);          </div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>        }</div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>      graph-&gt;GetHistogram()-&gt;SetMinimum(0.0);</div>
 <div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>      graph-&gt;Draw(<span class="stringliteral">&quot;A*&quot;</span>);</div>
-<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>      <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;Draw(<span class="stringliteral">&quot;same&quot;</span>);</div>
-<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>      <span class="keywordflow">return</span> graph;</div>
-<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>    }</div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>      <span class="keywordflow">if</span> (xlow!=xhigh) {</div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>        graph-&gt;GetXaxis()-&gt;SetLimits(xlow, xhigh);</div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>      }</div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>      graph-&gt;Draw(<span class="stringliteral">&quot;A*&quot;</span>);</div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>      <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;SetParameter(7, <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a000cd866c3274a21ffa0855e7ec260fd">fAbsScale</a>);</div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>      <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;Draw(<span class="stringliteral">&quot;same&quot;</span>);</div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>      <span class="keywordflow">return</span> graph;</div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>    }</div>
 </div>
-<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span> </div>
-<div class="foldopen" id="foldopen00700" data-start="{" data-end="}">
-<div class="line"><a id="l00700" name="l00700"></a><span class="lineno"><a class="line" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a755fc1719a3f4a1b34ed117c802f8933">  700</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a755fc1719a3f4a1b34ed117c802f8933">EffFit::WriteGraph</a>(std::string outDir)</div>
-<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>    {      </div>
-<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>      <span class="keywordtype">int</span> nDataSets = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>.size();</div>
-<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>      </div>
-<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;nDataSets; ++i)</div>
-<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>        {</div>
-<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>          std::string fname = outDir+<span class="stringliteral">&quot;/dset_&quot;</span>+std::to_string(i)+<span class="stringliteral">&quot;.dat&quot;</span>;</div>
-<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>          std::ofstream dset_file(fname);            </div>
-<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>          TGraphErrors *dsetgraph = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetGraphErrors();</div>
-<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>          std::cout &lt;&lt; <span class="stringliteral">&quot;    Data Set &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;, nPoints &quot;</span> &lt;&lt; dsetgraph-&gt;GetN() &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0; j&lt;dsetgraph-&gt;GetN(); ++j) {</div>
-<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>            <span class="keywordtype">double</span> x, y, yerr;</div>
-<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>            dsetgraph-&gt;GetPoint(j, x, y);</div>
-<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>            yerr = dsetgraph-&gt;GetErrorY(j);</div>
-<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>            dset_file &lt;&lt; x &lt;&lt; <span class="stringliteral">&quot;    &quot;</span> &lt;&lt; y &lt;&lt; <span class="stringliteral">&quot;    &quot;</span> &lt;&lt; yerr &lt;&lt; std::endl;            </div>
-<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>          }</div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>          dset_file.close();</div>
-<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>        }</div>
-<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span> </div>
-<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>      std::string fname = outDir+<span class="stringliteral">&quot;/efficiency.dat&quot;</span>;</div>
-<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>      std::ofstream eff_file(fname);            </div>
-<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=1; i&lt;=4096; ++i) {</div>
-<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>        eff_file &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;   &quot;</span> &lt;&lt; <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;Eval((<span class="keywordtype">double</span>)i) &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>      }</div>
-<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>      eff_file.close();</div>
-<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>    }</div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span> </div>
+<div class="foldopen" id="foldopen00705" data-start="{" data-end="}">
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno"><a class="line" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a755fc1719a3f4a1b34ed117c802f8933">  705</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a755fc1719a3f4a1b34ed117c802f8933">EffFit::WriteGraph</a>(std::string outDir)</div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>    {      </div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>      <span class="keywordtype">int</span> nDataSets = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>.size();</div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>      </div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;nDataSets; ++i)</div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>        {</div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>          std::string fname = outDir+<span class="stringliteral">&quot;/dset_&quot;</span>+std::to_string(i)+<span class="stringliteral">&quot;.dat&quot;</span>;</div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>          std::ofstream dset_file(fname);            </div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>          TGraphErrors *dsetgraph = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetGraphErrors();</div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>          std::cout &lt;&lt; <span class="stringliteral">&quot;    Data Set &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;, nPoints &quot;</span> &lt;&lt; dsetgraph-&gt;GetN() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0; j&lt;dsetgraph-&gt;GetN(); ++j) {</div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>            <span class="keywordtype">double</span> x, y, yerr;</div>
+<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>            dsetgraph-&gt;GetPoint(j, x, y);</div>
+<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>            yerr = dsetgraph-&gt;GetErrorY(j);</div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>            dset_file &lt;&lt; x &lt;&lt; <span class="stringliteral">&quot;    &quot;</span> &lt;&lt; y &lt;&lt; <span class="stringliteral">&quot;    &quot;</span> &lt;&lt; yerr &lt;&lt; std::endl;            </div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>          }</div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>          dset_file.close();</div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>        }</div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span> </div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>      std::string fname = outDir+<span class="stringliteral">&quot;/efficiency.dat&quot;</span>;</div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>      std::ofstream eff_file(fname);            </div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=1; i&lt;=4096; ++i) {</div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>        eff_file &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;   &quot;</span> &lt;&lt; <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;Eval((<span class="keywordtype">double</span>)i) &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>      }</div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>      eff_file.close();</div>
+<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>    }</div>
 </div>
-<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span> </div>
-<div class="foldopen" id="foldopen00727" data-start="{" data-end="}">
-<div class="line"><a id="l00727" name="l00727"></a><span class="lineno"><a class="line" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#aeac5d2e46d99f0cd15cabb2d7f55c5d0">  727</a></span>    TMultiGraph* <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#aeac5d2e46d99f0cd15cabb2d7f55c5d0">EffFit::DrawRes</a>(TCanvas *canvas, <span class="keywordtype">int</span> detID<span class="comment">/*=0*/</span>, <span class="keywordtype">double</span> xlow<span class="comment">/*=-1*/</span>, <span class="keywordtype">double</span> xhigh<span class="comment">/*=-1*/</span>)</div>
-<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>    {</div>
-<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;Drawing Detector &quot;</span> &lt;&lt; detID &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>      canvas-&gt;Clear();</div>
-<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>      canvas-&gt;cd();</div>
-<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>      <span class="keywordtype">int</span> nDataSets = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>.size();</div>
-<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>      TMultiGraph *graph = <span class="keyword">new</span> TMultiGraph();</div>
-<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>      graph-&gt;SetTitle((<span class="stringliteral">&quot;Efficiency &quot;</span>+std::to_string(detID)).c_str());</div>
-<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>      std::vector&lt;Color_t&gt; colors = {kRed, kBlue, kGreen, kMagenta, kCyan, kBlack, kYellow};</div>
-<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>      <span class="keywordtype">double</span> std_dev = 0;</div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>      <span class="keywordtype">int</span> nPoints = 0;</div>
-<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;nDataSets; ++i)</div>
-<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>        {</div>
-<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>          TGraphErrors *dsetgraph = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetGraphErrors();</div>
-<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>          std::cout &lt;&lt; <span class="stringliteral">&quot;    Data Set &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;, nPoints &quot;</span> &lt;&lt; dsetgraph-&gt;GetN() &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>          TGraphErrors *residuals = <span class="keyword">new</span> TGraphErrors();</div>
-<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0; j&lt;dsetgraph-&gt;GetN(); ++j) {</div>
-<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>            ++nPoints;</div>
-<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>            <span class="keywordtype">double</span> x,y;</div>
-<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>            dsetgraph-&gt;GetPoint(j, x, y);</div>
-<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>            y = (y - <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;Eval(x))/<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;Eval(x)*100.0;</div>
-<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>            std_dev += y*y;</div>
-<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>            residuals-&gt;SetPoint(j, x, y);</div>
-<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>            residuals-&gt;SetPointError(j, 0, dsetgraph-&gt;GetErrorY(j)/<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;Eval(x)*100.0);</div>
-<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>          }</div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>          </div>
-<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>          residuals-&gt;SetLineColor(colors[i]);</div>
-<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>          residuals-&gt;SetMarkerColor(colors[i]);</div>
-<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>          graph-&gt;Add(residuals);          </div>
-<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>        }</div>
-<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>      std_dev = std::sqrt(std_dev/(<span class="keywordtype">double</span>)nPoints);</div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;Spread = &quot;</span> &lt;&lt; std_dev &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>      graph-&gt;Draw(<span class="stringliteral">&quot;A*&quot;</span>);</div>
-<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>      <span class="keywordflow">if</span> (xlow!=xhigh) {</div>
-<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>        graph-&gt;GetXaxis()-&gt;SetLimits(xlow, xhigh);</div>
-<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>      }</div>
-<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>      graph-&gt;Draw(<span class="stringliteral">&quot;A*&quot;</span>);</div>
-<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>      TF1 *con = <span class="keyword">new</span> TF1(<span class="stringliteral">&quot;con&quot;</span>, <span class="stringliteral">&quot;0&quot;</span>, xlow, xhigh);</div>
-<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>      con-&gt;Draw(<span class="stringliteral">&quot;same&quot;</span>);</div>
-<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>      <span class="keywordflow">return</span> graph;</div>
-<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>    }</div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span> </div>
+<div class="foldopen" id="foldopen00732" data-start="{" data-end="}">
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno"><a class="line" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#aeac5d2e46d99f0cd15cabb2d7f55c5d0">  732</a></span>    TMultiGraph* <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#aeac5d2e46d99f0cd15cabb2d7f55c5d0">EffFit::DrawRes</a>(TCanvas *canvas, <span class="keywordtype">int</span> detID<span class="comment">/*=0*/</span>, <span class="keywordtype">double</span> xlow<span class="comment">/*=-1*/</span>, <span class="keywordtype">double</span> xhigh<span class="comment">/*=-1*/</span>)</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>    {</div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;Drawing Detector &quot;</span> &lt;&lt; detID &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>      canvas-&gt;Clear();</div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>      canvas-&gt;cd();</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>      <span class="keywordtype">int</span> nDataSets = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>.size();</div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>      TMultiGraph *graph = <span class="keyword">new</span> TMultiGraph();</div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>      graph-&gt;SetTitle((<span class="stringliteral">&quot;Efficiency &quot;</span>+std::to_string(detID)).c_str());</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>      std::vector&lt;Color_t&gt; colors = {kRed, kBlue, kGreen, kMagenta, kCyan, kBlack, kYellow};</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>      <span class="keywordtype">double</span> std_dev = 0;</div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>      <span class="keywordtype">int</span> nPoints = 0;</div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;nDataSets; ++i)</div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>        {</div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>          TGraphErrors *dsetgraph = <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">fDataSets</a>[i].GetGraphErrors();</div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>          std::cout &lt;&lt; <span class="stringliteral">&quot;    Data Set &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;, nPoints &quot;</span> &lt;&lt; dsetgraph-&gt;GetN() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>          TGraphErrors *residuals = <span class="keyword">new</span> TGraphErrors();</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0; j&lt;dsetgraph-&gt;GetN(); ++j) {</div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>            ++nPoints;</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>            <span class="keywordtype">double</span> x,y;</div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>            dsetgraph-&gt;GetPoint(j, x, y);</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>            y = (y - <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;Eval(x))/<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;Eval(x)*100.0;</div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>            std_dev += y*y;</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>            residuals-&gt;SetPoint(j, x, y);</div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>            residuals-&gt;SetPointError(j, 0, dsetgraph-&gt;GetErrorY(j)/<a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;Eval(x)*100.0);</div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>          }</div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>          </div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>          residuals-&gt;SetLineColor(colors[i]);</div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>          residuals-&gt;SetMarkerColor(colors[i]);</div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>          graph-&gt;Add(residuals);          </div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>        }</div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>      std_dev = std::sqrt(std_dev/(<span class="keywordtype">double</span>)nPoints);</div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;Spread = &quot;</span> &lt;&lt; std_dev &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>      graph-&gt;Draw(<span class="stringliteral">&quot;A*&quot;</span>);</div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>      <span class="keywordflow">if</span> (xlow!=xhigh) {</div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>        graph-&gt;GetXaxis()-&gt;SetLimits(xlow, xhigh);</div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>      }</div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>      graph-&gt;Draw(<span class="stringliteral">&quot;A*&quot;</span>);</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>      TF1 *con = <span class="keyword">new</span> TF1(<span class="stringliteral">&quot;con&quot;</span>, <span class="stringliteral">&quot;0&quot;</span>, xlow, xhigh);</div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>      con-&gt;Draw(<span class="stringliteral">&quot;same&quot;</span>);</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>      <span class="keywordflow">return</span> graph;</div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>    }</div>
 </div>
-<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span> </div>
-<div class="foldopen" id="foldopen00769" data-start="{" data-end="}">
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno"><a class="line" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a93c2443872b4c644fe95120c27da51ea">  769</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a976665472fd0985ab779dff93252bad8">EffFit::Draw</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* outFile, <span class="keywordtype">double</span> xlow, <span class="keywordtype">double</span> xhigh) {</div>
-<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>      TCanvas *c1 = <span class="keyword">new</span> TCanvas();</div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>      c1-&gt;Print(((std::string)outFile+<span class="stringliteral">&quot;[&quot;</span>).c_str());</div>
-<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>      TMultiGraph *graph = <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a976665472fd0985ab779dff93252bad8">Draw</a>(c1, 0, xlow, xhigh);</div>
-<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>      c1-&gt;Update();</div>
-<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>      c1-&gt;Print(outFile);</div>
-<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>      TMultiGraph *res = <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#aeac5d2e46d99f0cd15cabb2d7f55c5d0">DrawRes</a>(c1, 0, xlow, xhigh);</div>
-<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>      c1-&gt;Update();</div>
-<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>      c1-&gt;Print(outFile);</div>
-<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>      c1-&gt;Print(((std::string)outFile+<span class="stringliteral">&quot;]&quot;</span>).c_str());</div>
-<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>      <span class="keyword">delete</span> graph;</div>
-<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>      <span class="keyword">delete</span> res;</div>
-<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>    }</div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span> </div>
+<div class="foldopen" id="foldopen00774" data-start="{" data-end="}">
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno"><a class="line" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a93c2443872b4c644fe95120c27da51ea">  774</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a976665472fd0985ab779dff93252bad8">EffFit::Draw</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* outFile, <span class="keywordtype">double</span> xlow, <span class="keywordtype">double</span> xhigh) {</div>
+<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>      TCanvas *c1 = <span class="keyword">new</span> TCanvas();</div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>      c1-&gt;Print(((std::string)outFile+<span class="stringliteral">&quot;[&quot;</span>).c_str());</div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>      TMultiGraph *graph = <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a976665472fd0985ab779dff93252bad8">Draw</a>(c1, 0, xlow, xhigh);</div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>      c1-&gt;Update();</div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>      c1-&gt;Print(outFile);</div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>      TMultiGraph *res = <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#aeac5d2e46d99f0cd15cabb2d7f55c5d0">DrawRes</a>(c1, 0, xlow, xhigh);</div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>      c1-&gt;Update();</div>
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>      c1-&gt;Print(outFile);</div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>      c1-&gt;Print(((std::string)outFile+<span class="stringliteral">&quot;]&quot;</span>).c_str());</div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>      <span class="keyword">delete</span> graph;</div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>      <span class="keyword">delete</span> res;</div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>    }</div>
 </div>
-<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span> </div>
-<div class="foldopen" id="foldopen00783" data-start="{" data-end="}">
-<div class="line"><a id="l00783" name="l00783"></a><span class="lineno"><a class="line" href="../../d8/d35/class_gam_r_1_1_efficiency_1_1_multi_data_set.html#a5fb7af29a4e5e782f1ccb087e659e3e7">  783</a></span>    <a class="code hl_function" href="../../d8/d35/class_gam_r_1_1_efficiency_1_1_multi_data_set.html#a0160fc15c426b3175a64afd9f0a80125">MultiDataSet::MultiDataSet</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *histFile, <span class="keyword">const</span> <span class="keywordtype">char</span> *histName, <span class="keyword">const</span> <span class="keywordtype">char</span> *gateFile, <span class="keyword">const</span> <span class="keywordtype">char</span> *mapName, <span class="keyword">const</span> <span class="keywordtype">char</span> *intensityFile)</div>
-<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>    {</div>
-<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>      TFile *hisFile = <span class="keyword">new</span> TFile(histFile);      </div>
-<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>      TH2D *fHist = (TH2D*)hisFile-&gt;Get(histName);</div>
-<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>      </div>
-<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>      TFile *gatFile = <span class="keyword">new</span> TFile(gateFile);</div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>      <a class="code hl_class" href="../../d8/d5e/class_gam_r_1_1_nucleus_1_1_transition_map.html">GamR::Nucleus::TransitionMap</a> *fTransitionMap = (<a class="code hl_class" href="../../d8/d5e/class_gam_r_1_1_nucleus_1_1_transition_map.html">GamR::Nucleus::TransitionMap</a>*)gatFile-&gt;Get(mapName);</div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span> </div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>      std::ifstream intFile(intensityFile);</div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span> </div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>      std::string key;</div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>      <span class="keywordtype">double</span> energy;</div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>      <span class="keywordtype">double</span> intensity;</div>
-<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>      std::map&lt;std::string, std::pair&lt;double, double&gt; &gt; fIntensityMap;</div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>      <span class="keywordflow">while</span>(intFile &gt;&gt; key &gt;&gt; energy &gt;&gt; intensity) {</div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>        fIntensityMap[key] = std::pair&lt;double, double&gt;(energy, intensity);</div>
-<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>      }</div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span> </div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=1; i&lt;fHist-&gt;GetYaxis()-&gt;GetNbins()+1; ++i) {</div>
-<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>        TH1D *proj = (TH1D*)fHist-&gt;ProjectionX(<span class="stringliteral">&quot;proj&quot;</span>, i, i);        </div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;ADDING DETECTOR &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; proj-&gt;GetEntries() &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>        <span class="keywordflow">if</span> (proj-&gt;GetEntries()&gt;0) {</div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>          fDataSets[i] = <a class="code hl_class" href="../../d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html">DataSet</a>(proj, fTransitionMap, fIntensityMap);</div>
-<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>        }</div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>        <span class="keyword">delete</span> proj;</div>
-<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span> </div>
-<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>      }</div>
-<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span> </div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>      hisFile-&gt;Close();</div>
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>      gatFile-&gt;Close();</div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span> </div>
+<div class="foldopen" id="foldopen00788" data-start="{" data-end="}">
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno"><a class="line" href="../../d8/d35/class_gam_r_1_1_efficiency_1_1_multi_data_set.html#a5fb7af29a4e5e782f1ccb087e659e3e7">  788</a></span>    <a class="code hl_function" href="../../d8/d35/class_gam_r_1_1_efficiency_1_1_multi_data_set.html#a0160fc15c426b3175a64afd9f0a80125">MultiDataSet::MultiDataSet</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *histFile, <span class="keyword">const</span> <span class="keywordtype">char</span> *histName, <span class="keyword">const</span> <span class="keywordtype">char</span> *gateFile, <span class="keyword">const</span> <span class="keywordtype">char</span> *mapName, <span class="keyword">const</span> <span class="keywordtype">char</span> *intensityFile)</div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>    {</div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>      TFile *hisFile = <span class="keyword">new</span> TFile(histFile);      </div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>      TH2D *fHist = (TH2D*)hisFile-&gt;Get(histName);</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>      </div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>      TFile *gatFile = <span class="keyword">new</span> TFile(gateFile);</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>      <a class="code hl_class" href="../../d8/d5e/class_gam_r_1_1_nucleus_1_1_transition_map.html">GamR::Nucleus::TransitionMap</a> *fTransitionMap = (<a class="code hl_class" href="../../d8/d5e/class_gam_r_1_1_nucleus_1_1_transition_map.html">GamR::Nucleus::TransitionMap</a>*)gatFile-&gt;Get(mapName);</div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span> </div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>      std::ifstream intFile(intensityFile);</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span> </div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>      std::string key;</div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>      <span class="keywordtype">double</span> energy;</div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>      <span class="keywordtype">double</span> intensity;</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>      std::map&lt;std::string, std::pair&lt;double, double&gt; &gt; fIntensityMap;</div>
+<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>      <span class="keywordflow">while</span>(intFile &gt;&gt; key &gt;&gt; energy &gt;&gt; intensity) {</div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>        fIntensityMap[key] = std::pair&lt;double, double&gt;(energy, intensity);</div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>      }</div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span> </div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=1; i&lt;fHist-&gt;GetYaxis()-&gt;GetNbins()+1; ++i) {</div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>        TH1D *proj = (TH1D*)fHist-&gt;ProjectionX(<span class="stringliteral">&quot;proj&quot;</span>, i, i);        </div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;ADDING DETECTOR &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; proj-&gt;GetEntries() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>        <span class="keywordflow">if</span> (proj-&gt;GetEntries()&gt;0) {</div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>          fDataSets[i] = <a class="code hl_class" href="../../d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html">DataSet</a>(proj, fTransitionMap, fIntensityMap);</div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>        }</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>        <span class="keyword">delete</span> proj;</div>
 <div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span> </div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>    }</div>
-</div>
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>      }</div>
 <div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span> </div>
-<div class="foldopen" id="foldopen00816" data-start="{" data-end="}">
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno"><a class="line" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a17745ff068a5b1275cd8c37cbc05d6cb">  816</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a17745ff068a5b1275cd8c37cbc05d6cb">FitParams::SetParams</a>(std::vector&lt;std::string&gt; sParams, std::vector&lt;std::string&gt; sFixed, std::vector&lt;std::string&gt; sLimLow, std::vector&lt;std::string&gt; sLimHigh)</div>
-<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>    {</div>
-<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;sParams.size(); ++i) {</div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>        TFormula fval(<span class="stringliteral">&quot;fval&quot;</span>, sParams[i].c_str());</div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>        TFormula flow(<span class="stringliteral">&quot;flow&quot;</span>, sLimLow[i].c_str());</div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>        TFormula fhigh(<span class="stringliteral">&quot;fhigh&quot;</span>, sLimHigh[i].c_str());</div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;TFormula for parameter &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; fval.GetTitle() &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;TFormula for low limit &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; flow.GetTitle() &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;TFormula for high limit &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; fhigh.GetTitle() &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>        <span class="keywordtype">double</span> parlow, parhigh;</div>
-<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>        <span class="comment">//func-&gt;GetParLimits(i, parlow, parhigh);</span></div>
-<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>        <a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a3686ea824492fca91875ce8cacdcb1cc">params</a>[i] = fval;<span class="comment">//.Eval(func-&gt;GetParameter(i));</span></div>
-<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>        <a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a387295bdfe2b3ed49cad860aa1f288cf">limlow</a>[i] = flow;<span class="comment">//.Eval(parlow);</span></div>
-<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>        <a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#acd27917de7b681e7e66b2fab528f9264">limhigh</a>[i] = fhigh;<span class="comment">//.Eval(parhigh);</span></div>
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>        <span class="keywordflow">if</span> (atoi(sFixed[i].c_str())==1) {</div>
-<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>          <a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#ac2a872f300e63024bfe5a5e164fdc877">fixed</a>[i] = 1;          </div>
-<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>        }</div>
-<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>        <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>          <a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#ac2a872f300e63024bfe5a5e164fdc877">fixed</a>[i] = 0;</div>
-<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>        }</div>
-<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Fixed = &quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#ac2a872f300e63024bfe5a5e164fdc877">fixed</a>[i] &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>      }</div>
-<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>    }  </div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>      hisFile-&gt;Close();</div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>      gatFile-&gt;Close();</div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span> </div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>    }</div>
 </div>
-<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span> </div>
-<div class="foldopen" id="foldopen00840" data-start="{" data-end="}">
-<div class="line"><a id="l00840" name="l00840"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a5f681061967984aca7315871f9bdea66">  840</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a5f681061967984aca7315871f9bdea66">MultiEffFit::AddData</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *histFile, <span class="keyword">const</span> <span class="keywordtype">char</span> *histName, <span class="keyword">const</span> <span class="keywordtype">char</span> *gateFile, <span class="keyword">const</span> <span class="keywordtype">char</span> *mapName, <span class="keyword">const</span> <span class="keywordtype">char</span> *intensityFile)</div>
-<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>    {</div>
-<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>      <a class="code hl_class" href="../../d8/d35/class_gam_r_1_1_efficiency_1_1_multi_data_set.html">MultiDataSet</a> mdataset(histFile, histName, gateFile, mapName, intensityFile);</div>
-<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;dset : *(mdataset.<a class="code hl_function" href="../../d8/d35/class_gam_r_1_1_efficiency_1_1_multi_data_set.html#a050ffbf88257594bd12994421a5ec8ff">GetDataSets</a>())) {</div>
-<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>        <span class="keywordtype">int</span> i = dset.first;</div>
-<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>        <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a5f681061967984aca7315871f9bdea66">AddData</a>(dset.second, dset.first);   </div>
-<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>      }      </div>
-<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>    }</div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span> </div>
+<div class="foldopen" id="foldopen00821" data-start="{" data-end="}">
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno"><a class="line" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a17745ff068a5b1275cd8c37cbc05d6cb">  821</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a17745ff068a5b1275cd8c37cbc05d6cb">FitParams::SetParams</a>(std::vector&lt;std::string&gt; sParams, std::vector&lt;std::string&gt; sFixed, std::vector&lt;std::string&gt; sLimLow, std::vector&lt;std::string&gt; sLimHigh)</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>    {</div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;sParams.size(); ++i) {</div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>        TFormula fval(<span class="stringliteral">&quot;fval&quot;</span>, sParams[i].c_str());</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>        TFormula flow(<span class="stringliteral">&quot;flow&quot;</span>, sLimLow[i].c_str());</div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>        TFormula fhigh(<span class="stringliteral">&quot;fhigh&quot;</span>, sLimHigh[i].c_str());</div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;TFormula for parameter &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; fval.GetTitle() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;TFormula for low limit &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; flow.GetTitle() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;TFormula for high limit &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; fhigh.GetTitle() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>        <span class="keywordtype">double</span> parlow, parhigh;</div>
+<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>        <span class="comment">//func-&gt;GetParLimits(i, parlow, parhigh);</span></div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>        <a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a3686ea824492fca91875ce8cacdcb1cc">params</a>[i] = fval;<span class="comment">//.Eval(func-&gt;GetParameter(i));</span></div>
+<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>        <a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a387295bdfe2b3ed49cad860aa1f288cf">limlow</a>[i] = flow;<span class="comment">//.Eval(parlow);</span></div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>        <a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#acd27917de7b681e7e66b2fab528f9264">limhigh</a>[i] = fhigh;<span class="comment">//.Eval(parhigh);</span></div>
+<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>        <span class="keywordflow">if</span> (atoi(sFixed[i].c_str())==1) {</div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>          <a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#ac2a872f300e63024bfe5a5e164fdc877">fixed</a>[i] = 1;          </div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>        }</div>
+<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>          <a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#ac2a872f300e63024bfe5a5e164fdc877">fixed</a>[i] = 0;</div>
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>        }</div>
+<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Fixed = &quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#ac2a872f300e63024bfe5a5e164fdc877">fixed</a>[i] &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>      }</div>
+<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>    }  </div>
 </div>
-<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span> </div>
-<div class="foldopen" id="foldopen00849" data-start="{" data-end="}">
-<div class="line"><a id="l00849" name="l00849"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a2dcb09c15d0cb6318932a2f87b2db021">  849</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a5f681061967984aca7315871f9bdea66">MultiEffFit::AddData</a>(<a class="code hl_class" href="../../d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html">DataSet</a> dataSet, <span class="keywordtype">int</span> ID) {</div>
-<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>      <span class="keywordflow">if</span> (fEffFits.find(ID) == fEffFits.end()) {</div>
-<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>        fEffFits[ID] = <a class="code hl_class" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html">EffFit</a>();</div>
-<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>        fDetNorm[ID] = 1.0;</div>
-<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>      }</div>
-<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>      fEffFits[ID].AddData(dataSet);</div>
-<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;Added Det &quot;</span> &lt;&lt; ID &lt;&lt; <span class="stringliteral">&quot; with &quot;</span> &lt;&lt; dataSet.<a class="code hl_function" href="../../d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#ae2d81604b034ed4716ac584c1ba00973">GetNData</a>() &lt;&lt; <span class="stringliteral">&quot; efficiency calibration points&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0; j&lt;dataSet.<a class="code hl_function" href="../../d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#ae2d81604b034ed4716ac584c1ba00973">GetNData</a>(); ++j) {</div>
-<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>        std::cout &lt;&lt; dataSet.<a class="code hl_function" href="../../d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a416b0c2dbc75dee3d3724cd81d2013c2">GetEnergy</a>(j) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; dataSet.<a class="code hl_function" href="../../d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a70378712fedeb882d55b4eb034b54d4c">GetEfficiency</a>(j) &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>      }    </div>
-<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>    }</div>
+<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span> </div>
+<div class="foldopen" id="foldopen00845" data-start="{" data-end="}">
+<div class="line"><a id="l00845" name="l00845"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a5f681061967984aca7315871f9bdea66">  845</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a5f681061967984aca7315871f9bdea66">MultiEffFit::AddData</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *histFile, <span class="keyword">const</span> <span class="keywordtype">char</span> *histName, <span class="keyword">const</span> <span class="keywordtype">char</span> *gateFile, <span class="keyword">const</span> <span class="keywordtype">char</span> *mapName, <span class="keyword">const</span> <span class="keywordtype">char</span> *intensityFile)</div>
+<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>    {</div>
+<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>      <a class="code hl_class" href="../../d8/d35/class_gam_r_1_1_efficiency_1_1_multi_data_set.html">MultiDataSet</a> mdataset(histFile, histName, gateFile, mapName, intensityFile);</div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;dset : *(mdataset.<a class="code hl_function" href="../../d8/d35/class_gam_r_1_1_efficiency_1_1_multi_data_set.html#a050ffbf88257594bd12994421a5ec8ff">GetDataSets</a>())) {</div>
+<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>        <span class="keywordtype">int</span> i = dset.first;</div>
+<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>        <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a5f681061967984aca7315871f9bdea66">AddData</a>(dset.second, dset.first);   </div>
+<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>      }      </div>
+<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>    }</div>
 </div>
-<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span> </div>
-<div class="foldopen" id="foldopen00861" data-start="{" data-end="}">
-<div class="line"><a id="l00861" name="l00861"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a44224ecec64ffd88687c3636943a2eb1">  861</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a44224ecec64ffd88687c3636943a2eb1">MultiEffFit::SetData</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *effFile, <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> ID)</div>
-<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>    {</div>
-<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>      fEffFits[ID].fDataSets[i].SetData(effFile);</div>
+<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span> </div>
+<div class="foldopen" id="foldopen00854" data-start="{" data-end="}">
+<div class="line"><a id="l00854" name="l00854"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a2dcb09c15d0cb6318932a2f87b2db021">  854</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a5f681061967984aca7315871f9bdea66">MultiEffFit::AddData</a>(<a class="code hl_class" href="../../d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html">DataSet</a> dataSet, <span class="keywordtype">int</span> ID) {</div>
+<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span>      <span class="keywordflow">if</span> (fEffFits.find(ID) == fEffFits.end()) {</div>
+<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>        fEffFits[ID] = <a class="code hl_class" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html">EffFit</a>();</div>
+<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>        fDetNorm[ID] = 1.0;</div>
+<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>      }</div>
+<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>      fEffFits[ID].AddData(dataSet);</div>
+<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;Added Det &quot;</span> &lt;&lt; ID &lt;&lt; <span class="stringliteral">&quot; with &quot;</span> &lt;&lt; dataSet.<a class="code hl_function" href="../../d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#ae2d81604b034ed4716ac584c1ba00973">GetNData</a>() &lt;&lt; <span class="stringliteral">&quot; efficiency calibration points&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0; j&lt;dataSet.<a class="code hl_function" href="../../d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#ae2d81604b034ed4716ac584c1ba00973">GetNData</a>(); ++j) {</div>
+<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>        std::cout &lt;&lt; dataSet.<a class="code hl_function" href="../../d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a416b0c2dbc75dee3d3724cd81d2013c2">GetEnergy</a>(j) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; dataSet.<a class="code hl_function" href="../../d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#a70378712fedeb882d55b4eb034b54d4c">GetEfficiency</a>(j) &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>      }    </div>
 <div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>    }</div>
 </div>
-<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>    </div>
+<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span> </div>
 <div class="foldopen" id="foldopen00866" data-start="{" data-end="}">
-<div class="line"><a id="l00866" name="l00866"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a29f5a20b149855ac76f729618ed470c6">  866</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a29f5a20b149855ac76f729618ed470c6">MultiEffFit::SetParams</a>(<a class="code hl_class" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html">FitParams</a> params)</div>
+<div class="line"><a id="l00866" name="l00866"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a44224ecec64ffd88687c3636943a2eb1">  866</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a44224ecec64ffd88687c3636943a2eb1">MultiEffFit::SetData</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *effFile, <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> ID)</div>
 <div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>    {</div>
-<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;efffit : fEffFits) {</div>
-<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>        efffit.second.SetParams(params);</div>
-<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>      }</div>
-<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>    }</div>
+<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>      fEffFits[ID].fDataSets[i].SetData(effFile);</div>
+<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>    }</div>
 </div>
-<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span> </div>
-<div class="foldopen" id="foldopen00873" data-start="{" data-end="}">
-<div class="line"><a id="l00873" name="l00873"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aef1a50d387b95814a4f6caaf27f9cba7">  873</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a29f5a20b149855ac76f729618ed470c6">MultiEffFit::SetParams</a>(<span class="keywordtype">int</span> ID, <a class="code hl_class" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html">FitParams</a> params)</div>
-<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>    {</div>
-<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>      fEffFits[ID].SetParams(params);</div>
+<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>    </div>
+<div class="foldopen" id="foldopen00871" data-start="{" data-end="}">
+<div class="line"><a id="l00871" name="l00871"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a29f5a20b149855ac76f729618ed470c6">  871</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a29f5a20b149855ac76f729618ed470c6">MultiEffFit::SetParams</a>(<a class="code hl_class" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html">FitParams</a> params)</div>
+<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span>    {</div>
+<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;efffit : fEffFits) {</div>
+<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>        efffit.second.SetParams(params);</div>
+<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>      }</div>
 <div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>    }</div>
 </div>
 <div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span> </div>
 <div class="foldopen" id="foldopen00878" data-start="{" data-end="}">
-<div class="line"><a id="l00878" name="l00878"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a7daeed5563859e226fea0292f5d58cfb">  878</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a7daeed5563859e226fea0292f5d58cfb">MultiEffFit::SetDetNorms</a>(<span class="keywordtype">int</span> ID, <span class="keywordtype">int</span> iDataSet, std::string key)</div>
+<div class="line"><a id="l00878" name="l00878"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aef1a50d387b95814a4f6caaf27f9cba7">  878</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a29f5a20b149855ac76f729618ed470c6">MultiEffFit::SetParams</a>(<span class="keywordtype">int</span> ID, <a class="code hl_class" href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html">FitParams</a> params)</div>
 <div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>    {</div>
-<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>      <span class="keywordtype">int</span> index = fEffFits[ID].fDataSets[iDataSet].GetIndex(key);</div>
-<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>      <span class="keywordtype">double</span> normArea = fEffFits[ID].fDataSets[iDataSet].GetPeak(index);</div>
+<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>      fEffFits[ID].SetParams(params);</div>
+<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>    }</div>
+</div>
 <div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span> </div>
-<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;efffit : fEffFits) {</div>
-<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>        <span class="keywordflow">if</span> (efffit.first != ID) {</div>
-<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>          index = efffit.second.fDataSets[iDataSet].GetIndex(key);</div>
-<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>          fDetNorm[efffit.first] = efffit.second.fDataSets[iDataSet].GetPeak(index)/normArea;</div>
-<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span>        }</div>
-<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>      }      </div>
-<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>    }</div>
+<div class="foldopen" id="foldopen00883" data-start="{" data-end="}">
+<div class="line"><a id="l00883" name="l00883"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a7daeed5563859e226fea0292f5d58cfb">  883</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a7daeed5563859e226fea0292f5d58cfb">MultiEffFit::SetDetNorms</a>(<span class="keywordtype">int</span> ID, <span class="keywordtype">int</span> iDataSet, std::string key)</div>
+<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>    {</div>
+<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>      <span class="keywordtype">int</span> index = fEffFits[ID].fDataSets[iDataSet].GetIndex(key);</div>
+<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>      <span class="keywordtype">double</span> normArea = fEffFits[ID].fDataSets[iDataSet].GetPeak(index);</div>
+<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span> </div>
+<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;efffit : fEffFits) {</div>
+<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>        <span class="keywordflow">if</span> (efffit.first != ID) {</div>
+<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>          index = efffit.second.fDataSets[iDataSet].GetIndex(key);</div>
+<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span>          fDetNorm[efffit.first] = efffit.second.fDataSets[iDataSet].GetPeak(index)/normArea;</div>
+<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>        }</div>
+<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>      }      </div>
+<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>    }</div>
 </div>
-<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>    </div>
-<div class="foldopen" id="foldopen00891" data-start="{" data-end="}">
-<div class="line"><a id="l00891" name="l00891"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aa367877de7f6e423de8213f9490ab17c">  891</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aa367877de7f6e423de8213f9490ab17c">MultiEffFit::SetNorm</a>(<span class="keywordtype">int</span> iDataSet, <span class="keywordtype">double</span> factor) {</div>
-<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;efffit : fEffFits) {</div>
-<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>        <span class="keywordtype">double</span> curNorm = efffit.second.fDataSets[iDataSet].GetNorm();</div>
-<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>        efffit.second.fDataSets[iDataSet].SetNorm(curNorm*factor);</div>
-<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>      }</div>
-<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>    }</div>
-</div>
-<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span> </div>
-<div class="foldopen" id="foldopen00898" data-start="{" data-end="}">
-<div class="line"><a id="l00898" name="l00898"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#ad236a1fa4883a802af7f927cfdd24f80">  898</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aa367877de7f6e423de8213f9490ab17c">MultiEffFit::SetNorm</a>(<span class="keywordtype">int</span> ID, <span class="keywordtype">int</span> iDataSet, <span class="keywordtype">double</span> factor) {</div>
-<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>      <span class="keywordtype">double</span> curNorm = fEffFits[ID].fDataSets[iDataSet].GetNorm();</div>
-<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>      fEffFits[ID].fDataSets[iDataSet].SetNorm(curNorm*factor);</div>
+<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>    </div>
+<div class="foldopen" id="foldopen00896" data-start="{" data-end="}">
+<div class="line"><a id="l00896" name="l00896"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aa367877de7f6e423de8213f9490ab17c">  896</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aa367877de7f6e423de8213f9490ab17c">MultiEffFit::SetNorm</a>(<span class="keywordtype">int</span> iDataSet, <span class="keywordtype">double</span> factor) {</div>
+<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;efffit : fEffFits) {</div>
+<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>        <span class="keywordtype">double</span> curNorm = efffit.second.fDataSets[iDataSet].GetNorm();</div>
+<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>        efffit.second.fDataSets[iDataSet].SetNorm(curNorm*factor);</div>
+<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>      }</div>
 <div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>    }</div>
 </div>
 <div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span> </div>
 <div class="foldopen" id="foldopen00903" data-start="{" data-end="}">
-<div class="line"><a id="l00903" name="l00903"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a2d614b149b95d5fd5b34755178d2a838">  903</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#ad98ad1484ae912947925c52559ab8506">MultiEffFit::EraseData</a>(<span class="keywordtype">int</span> iDataSet, std::string key) {</div>
-<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;efffit : fEffFits) {</div>
-<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>        efffit.second.fDataSets[iDataSet].EraseData(key);</div>
-<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>      }</div>
-<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>    }</div>
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#ad236a1fa4883a802af7f927cfdd24f80">  903</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aa367877de7f6e423de8213f9490ab17c">MultiEffFit::SetNorm</a>(<span class="keywordtype">int</span> ID, <span class="keywordtype">int</span> iDataSet, <span class="keywordtype">double</span> factor) {</div>
+<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>      <span class="keywordtype">double</span> curNorm = fEffFits[ID].fDataSets[iDataSet].GetNorm();</div>
+<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>      fEffFits[ID].fDataSets[iDataSet].SetNorm(curNorm*factor);</div>
+<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>    }</div>
 </div>
-<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>    </div>
-<div class="foldopen" id="foldopen00909" data-start="{" data-end="}">
-<div class="line"><a id="l00909" name="l00909"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aa7929ccb436149aae461269e491711b8">  909</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aa7929ccb436149aae461269e491711b8">MultiEffFit::Fit</a>()</div>
-<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>    {</div>
-<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;efffit : fEffFits) {</div>
-<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>        efffit.second.Fit(1);</div>
-<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>      }</div>
-<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>    }</div>
+<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span> </div>
+<div class="foldopen" id="foldopen00908" data-start="{" data-end="}">
+<div class="line"><a id="l00908" name="l00908"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a2d614b149b95d5fd5b34755178d2a838">  908</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#ad98ad1484ae912947925c52559ab8506">MultiEffFit::EraseData</a>(<span class="keywordtype">int</span> iDataSet, std::string key) {</div>
+<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;efffit : fEffFits) {</div>
+<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>        efffit.second.fDataSets[iDataSet].EraseData(key);</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>      }</div>
+<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>    }</div>
 </div>
-<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span> </div>
-<div class="foldopen" id="foldopen00916" data-start="{" data-end="}">
-<div class="line"><a id="l00916" name="l00916"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a361a9a1dfacfe8abe972ff86554c7601">  916</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aa7929ccb436149aae461269e491711b8">MultiEffFit::Fit</a>(<span class="keywordtype">int</span> ID)</div>
-<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>    {</div>
-<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>      fEffFits[ID].Fit(1);</div>
+<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>    </div>
+<div class="foldopen" id="foldopen00914" data-start="{" data-end="}">
+<div class="line"><a id="l00914" name="l00914"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aa7929ccb436149aae461269e491711b8">  914</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aa7929ccb436149aae461269e491711b8">MultiEffFit::Fit</a>()</div>
+<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>    {</div>
+<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;efffit : fEffFits) {</div>
+<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>        efffit.second.Fit(1);</div>
+<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>      }</div>
 <div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>    }</div>
 </div>
-<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>    </div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span> </div>
 <div class="foldopen" id="foldopen00921" data-start="{" data-end="}">
-<div class="line"><a id="l00921" name="l00921"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#ada3427a7ee20adbef6b21fb19a95c8d7">  921</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#ada3427a7ee20adbef6b21fb19a95c8d7">MultiEffFit::Draw</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *outFile, <span class="keywordtype">double</span> xlow<span class="comment">/*=-1*/</span>, <span class="keywordtype">double</span> xhigh<span class="comment">/*=-1*/</span>)</div>
+<div class="line"><a id="l00921" name="l00921"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a361a9a1dfacfe8abe972ff86554c7601">  921</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aa7929ccb436149aae461269e491711b8">MultiEffFit::Fit</a>(<span class="keywordtype">int</span> ID)</div>
 <div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>    {</div>
-<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>      std::vector&lt;int&gt; presentIDs;</div>
-<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>      TCanvas *c1 = <span class="keyword">new</span> TCanvas(<span class="stringliteral">&quot;c1&quot;</span>, <span class="stringliteral">&quot;c1&quot;</span>, 1280, 720);</div>
-<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>      c1-&gt;Print((outFile+std::string(<span class="stringliteral">&quot;[&quot;</span>)).c_str());</div>
-<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;efffit : fEffFits) {</div>
-<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>        <span class="keywordtype">int</span> detID = efffit.first;</div>
-<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>        c1-&gt;Clear();</div>
-<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>        TMultiGraph *graph = efffit.second.Draw(c1, detID, xlow, xhigh);</div>
-<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>        c1-&gt;Update();</div>
-<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>        c1-&gt;Print(outFile);</div>
-<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>        presentIDs.push_back(detID);</div>
-<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>        <span class="keyword">delete</span> graph;</div>
-<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>      }</div>
-<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>      c1-&gt;Clear();</div>
-<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>      c1-&gt;Print((outFile+std::string(<span class="stringliteral">&quot;]&quot;</span>)).c_str());</div>
-<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>    }</div>
+<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>      fEffFits[ID].Fit(1);</div>
+<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>    }</div>
 </div>
-<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span> </div>
-<div class="foldopen" id="foldopen00939" data-start="{" data-end="}">
-<div class="line"><a id="l00939" name="l00939"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a9157b9652d96ef956be2efbbc58364d8">  939</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aad95ebf69176d15b27f7f407eeb53b63">MultiEffFit::PrintDataSet</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> ID, <span class="keyword">const</span> <span class="keywordtype">char</span> *fileName)</div>
-<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>    {</div>
-<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>      fEffFits[ID].fDataSets[i].Print(fileName);</div>
+<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>    </div>
+<div class="foldopen" id="foldopen00926" data-start="{" data-end="}">
+<div class="line"><a id="l00926" name="l00926"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#ada3427a7ee20adbef6b21fb19a95c8d7">  926</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#ada3427a7ee20adbef6b21fb19a95c8d7">MultiEffFit::Draw</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *outFile, <span class="keywordtype">double</span> xlow<span class="comment">/*=-1*/</span>, <span class="keywordtype">double</span> xhigh<span class="comment">/*=-1*/</span>)</div>
+<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>    {</div>
+<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>      std::vector&lt;int&gt; presentIDs;</div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>      TCanvas *c1 = <span class="keyword">new</span> TCanvas(<span class="stringliteral">&quot;c1&quot;</span>, <span class="stringliteral">&quot;c1&quot;</span>, 1280, 720);</div>
+<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>      c1-&gt;Print((outFile+std::string(<span class="stringliteral">&quot;[&quot;</span>)).c_str());</div>
+<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;efffit : fEffFits) {</div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>        <span class="keywordtype">int</span> detID = efffit.first;</div>
+<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>        c1-&gt;Clear();</div>
+<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>        TMultiGraph *graph = efffit.second.Draw(c1, detID, xlow, xhigh);</div>
+<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>        c1-&gt;Update();</div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>        c1-&gt;Print(outFile);</div>
+<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>        presentIDs.push_back(detID);</div>
+<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>        <span class="keyword">delete</span> graph;</div>
+<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>      }</div>
+<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>      c1-&gt;Clear();</div>
+<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>      c1-&gt;Print((outFile+std::string(<span class="stringliteral">&quot;]&quot;</span>)).c_str());</div>
 <div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>    }</div>
 </div>
 <div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span> </div>
 <div class="foldopen" id="foldopen00944" data-start="{" data-end="}">
-<div class="line"><a id="l00944" name="l00944"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aad95ebf69176d15b27f7f407eeb53b63">  944</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aad95ebf69176d15b27f7f407eeb53b63">MultiEffFit::PrintDataSet</a>(<span class="keywordtype">int</span> i, <span class="keyword">const</span> <span class="keywordtype">char</span> *fileNameBase)</div>
-<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>    {           </div>
-<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;efffit : fEffFits) {</div>
-<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>        std::string fileName((std::string(fileNameBase)+<span class="stringliteral">&quot;.&quot;</span>+std::to_string(efffit.first)).c_str());</div>
-<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>        efffit.second.fDataSets[i].Print(fileName.c_str());</div>
-<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>      }</div>
-<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>    }</div>
+<div class="line"><a id="l00944" name="l00944"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a9157b9652d96ef956be2efbbc58364d8">  944</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aad95ebf69176d15b27f7f407eeb53b63">MultiEffFit::PrintDataSet</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> ID, <span class="keyword">const</span> <span class="keywordtype">char</span> *fileName)</div>
+<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>    {</div>
+<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>      fEffFits[ID].fDataSets[i].Print(fileName);</div>
+<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>    }</div>
 </div>
-<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>    </div>
-<div class="foldopen" id="foldopen00952" data-start="{" data-end="}">
-<div class="line"><a id="l00952" name="l00952"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a7a2087c79633c77fa32e6755b721ba1d">  952</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a7a2087c79633c77fa32e6755b721ba1d">MultiEffFit::PrintParams</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *outFile)</div>
-<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>    {</div>
-<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>      FILE *file;</div>
-<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>      file = fopen(outFile, <span class="stringliteral">&quot;wa&quot;</span>);</div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>      fprintf(file, <span class="stringliteral">&quot;  ID     AbsScale    RelNorm     A     Aerr    B     Berr    C     Cerr    D     Derr    E     Eerr    F     Ferr    G     Gerr\n&quot;</span>);</div>
-<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;efffit : fEffFits) {</div>
-<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>        <span class="keywordtype">int</span> detID = efffit.first;</div>
-<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>        fprintf(file, <span class="stringliteral">&quot;%4i&quot;</span>, detID);</div>
-<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>        fprintf(file, <span class="stringliteral">&quot;  %8.7f   &quot;</span>, efffit.second.EffFunc-&gt;GetParameter(7));</div>
-<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>        fprintf(file, <span class="stringliteral">&quot;  %10.3f&quot;</span>, fDetNorm[efffit.first]);</div>
-<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;7; ++i) {</div>
-<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>          fprintf(file, <span class="stringliteral">&quot;  %5.4f  %5.4f &quot;</span>, efffit.second.EffFunc-&gt;GetParameter(i), efffit.second.EffFunc-&gt;GetParError(i));</div>
-<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>        }</div>
-<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span>        fprintf(file,<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>      }</div>
-<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>      fclose(file);</div>
-<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>    }</div>
+<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span> </div>
+<div class="foldopen" id="foldopen00949" data-start="{" data-end="}">
+<div class="line"><a id="l00949" name="l00949"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aad95ebf69176d15b27f7f407eeb53b63">  949</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aad95ebf69176d15b27f7f407eeb53b63">MultiEffFit::PrintDataSet</a>(<span class="keywordtype">int</span> i, <span class="keyword">const</span> <span class="keywordtype">char</span> *fileNameBase)</div>
+<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>    {           </div>
+<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;efffit : fEffFits) {</div>
+<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>        std::string fileName((std::string(fileNameBase)+<span class="stringliteral">&quot;.&quot;</span>+std::to_string(efffit.first)).c_str());</div>
+<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>        efffit.second.fDataSets[i].Print(fileName.c_str());</div>
+<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>      }</div>
+<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>    }</div>
 </div>
-<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span> </div>
-<div class="foldopen" id="foldopen00970" data-start="{" data-end="}">
-<div class="line"><a id="l00970" name="l00970"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a965cd9ba60d9ca62f5f22a226baf7dfd">  970</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a965cd9ba60d9ca62f5f22a226baf7dfd">MultiEffFit::WriteGraphs</a>(std::string outDir)</div>
-<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>    {</div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>      <span class="keywordflow">for</span> ( <span class="keyword">auto</span> &amp;det : fEffFits) {</div>
-<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>        det.second.WriteGraph(outDir+<span class="stringliteral">&quot;/det&quot;</span>+std::to_string(det.first));      </div>
-<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>      }</div>
-<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>    }        </div>
+<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>    </div>
+<div class="foldopen" id="foldopen00957" data-start="{" data-end="}">
+<div class="line"><a id="l00957" name="l00957"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a7a2087c79633c77fa32e6755b721ba1d">  957</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a7a2087c79633c77fa32e6755b721ba1d">MultiEffFit::PrintParams</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *outFile)</div>
+<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>    {</div>
+<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>      FILE *file;</div>
+<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>      file = fopen(outFile, <span class="stringliteral">&quot;wa&quot;</span>);</div>
+<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>      fprintf(file, <span class="stringliteral">&quot;  ID     AbsScale    RelNorm     A     Aerr    B     Berr    C     Cerr    D     Derr    E     Eerr    F     Ferr    G     Gerr\n&quot;</span>);</div>
+<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;efffit : fEffFits) {</div>
+<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>        <span class="keywordtype">int</span> detID = efffit.first;</div>
+<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>        fprintf(file, <span class="stringliteral">&quot;%4i&quot;</span>, detID);</div>
+<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span>        fprintf(file, <span class="stringliteral">&quot;  %8.7f   &quot;</span>, efffit.second.EffFunc-&gt;GetParameter(7));</div>
+<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>        fprintf(file, <span class="stringliteral">&quot;  %10.3f&quot;</span>, fDetNorm[efffit.first]);</div>
+<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;7; ++i) {</div>
+<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>          fprintf(file, <span class="stringliteral">&quot;  %5.4f  %5.4f &quot;</span>, efffit.second.EffFunc-&gt;GetParameter(i), efffit.second.EffFunc-&gt;GetParError(i));</div>
+<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>        }</div>
+<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>        fprintf(file,<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>      }</div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>      fclose(file);</div>
+<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>    }</div>
 </div>
-<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span> </div>
-<div class="foldopen" id="foldopen00977" data-start="{" data-end="}">
-<div class="line"><a id="l00977" name="l00977"></a><span class="lineno"><a class="line" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a35fc388823fe00763f92f622fe4af1d3">  977</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a35fc388823fe00763f92f622fe4af1d3">EffFit::PrintParams</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *outFile) {</div>
-<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>      FILE *file;</div>
-<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>      file = fopen(outFile, <span class="stringliteral">&quot;wa&quot;</span>);</div>
-<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>      fprintf(file, <span class="stringliteral">&quot;AbsScale     A     Aerr    B     Berr    C     Cerr    D     Derr    E     Eerr    F     Ferr    G     Gerr\n&quot;</span>);</div>
-<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>      fprintf(file, <span class="stringliteral">&quot;  %8.7f   &quot;</span>, <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParameter(7));</div>
-<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;7; ++i) {</div>
-<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>        fprintf(file, <span class="stringliteral">&quot;  %5.4f  %5.4f &quot;</span>, <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParameter(i), <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParError(i));</div>
-<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>      }</div>
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>      fprintf(file,<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>      fclose(file);</div>
-<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>    }</div>
+<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span> </div>
+<div class="foldopen" id="foldopen00975" data-start="{" data-end="}">
+<div class="line"><a id="l00975" name="l00975"></a><span class="lineno"><a class="line" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a965cd9ba60d9ca62f5f22a226baf7dfd">  975</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a965cd9ba60d9ca62f5f22a226baf7dfd">MultiEffFit::WriteGraphs</a>(std::string outDir)</div>
+<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>    {</div>
+<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>      <span class="keywordflow">for</span> ( <span class="keyword">auto</span> &amp;det : fEffFits) {</div>
+<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>        det.second.WriteGraph(outDir+<span class="stringliteral">&quot;/det&quot;</span>+std::to_string(det.first));      </div>
+<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>      }</div>
+<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>    }        </div>
 </div>
-<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>  }    </div>
-<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>}</div>
+<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span> </div>
+<div class="foldopen" id="foldopen00982" data-start="{" data-end="}">
+<div class="line"><a id="l00982" name="l00982"></a><span class="lineno"><a class="line" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a35fc388823fe00763f92f622fe4af1d3">  982</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a35fc388823fe00763f92f622fe4af1d3">EffFit::PrintParams</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *outFile) {</div>
+<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>      FILE *file;</div>
+<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>      file = fopen(outFile, <span class="stringliteral">&quot;wa&quot;</span>);</div>
+<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>      fprintf(file, <span class="stringliteral">&quot;AbsScale     A     Aerr    B     Berr    C     Cerr    D     Derr    E     Eerr    F     Ferr    G     Gerr\n&quot;</span>);</div>
+<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>      fprintf(file, <span class="stringliteral">&quot;  %8.7f   &quot;</span>, <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParameter(7));</div>
+<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;7; ++i) {</div>
+<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>        fprintf(file, <span class="stringliteral">&quot;  %5.4f  %5.4f &quot;</span>, <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParameter(i), <a class="code hl_variable" href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">EffFunc</a>-&gt;GetParError(i));</div>
+<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>      }</div>
+<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>      fprintf(file,<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>      fclose(file);</div>
+<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>    }</div>
+</div>
+<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>  }    </div>
+<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>}</div>
 <div class="ttc" id="a_abbreviations_8cc_html_aac6b7f4e4bdca0828a1553bfe8a0bca5"><div class="ttname"><a href="../../d0/d17/_abbreviations_8cc.html#aac6b7f4e4bdca0828a1553bfe8a0bca5">log</a></div><div class="ttdeci">void log(TVirtualPad *canvas)</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d17/_abbreviations_8cc_source.html#l00211">Abbreviations.cc:211</a></div></div>
 <div class="ttc" id="a_efficiency_8hh_html"><div class="ttname"><a href="../../da/df3/_efficiency_8hh.html">Efficiency.hh</a></div></div>
 <div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_data_set_html"><div class="ttname"><a href="../../d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html">GamR::Efficiency::DataSet</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_efficiency_8hh_source.html#l00025">Efficiency.hh:25</a></div></div>
@@ -1043,16 +1048,16 @@ $(document).ready(function(){initNavTree('df/d08/_efficiency_8cc_source.html','.
 <div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_eff_fit_html_a000cd866c3274a21ffa0855e7ec260fd"><div class="ttname"><a href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a000cd866c3274a21ffa0855e7ec260fd">GamR::Efficiency::EffFit::fAbsScale</a></div><div class="ttdeci">double fAbsScale</div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_efficiency_8hh_source.html#l00082">Efficiency.hh:82</a></div></div>
 <div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_eff_fit_html_a1f6b619603feaa1a195f15d12a9437ad"><div class="ttname"><a href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a1f6b619603feaa1a195f15d12a9437ad">GamR::Efficiency::EffFit::fDataSets</a></div><div class="ttdeci">std::vector&lt; DataSet &gt; fDataSets</div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_efficiency_8hh_source.html#l00081">Efficiency.hh:81</a></div></div>
 <div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_eff_fit_html_a253378c895d2ac0ba1d8ada6c5ae8f4b"><div class="ttname"><a href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a253378c895d2ac0ba1d8ada6c5ae8f4b">GamR::Efficiency::EffFit::EffFit</a></div><div class="ttdeci">EffFit()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00485">Efficiency.cc:485</a></div></div>
-<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_eff_fit_html_a35fc388823fe00763f92f622fe4af1d3"><div class="ttname"><a href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a35fc388823fe00763f92f622fe4af1d3">GamR::Efficiency::EffFit::PrintParams</a></div><div class="ttdeci">void PrintParams(const char *fileName)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00977">Efficiency.cc:977</a></div></div>
-<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_eff_fit_html_a37bd5eeb087e51fa9e76286b65ec7139"><div class="ttname"><a href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a37bd5eeb087e51fa9e76286b65ec7139">GamR::Efficiency::EffFit::SetParams</a></div><div class="ttdeci">void SetParams(FitParams params)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00641">Efficiency.cc:641</a></div></div>
-<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_eff_fit_html_a5737e643d04001de514eb77ba7e010eb"><div class="ttname"><a href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a5737e643d04001de514eb77ba7e010eb">GamR::Efficiency::EffFit::Fit</a></div><div class="ttdeci">void Fit(int quiet=0)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00560">Efficiency.cc:560</a></div></div>
+<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_eff_fit_html_a35fc388823fe00763f92f622fe4af1d3"><div class="ttname"><a href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a35fc388823fe00763f92f622fe4af1d3">GamR::Efficiency::EffFit::PrintParams</a></div><div class="ttdeci">void PrintParams(const char *fileName)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00982">Efficiency.cc:982</a></div></div>
+<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_eff_fit_html_a37bd5eeb087e51fa9e76286b65ec7139"><div class="ttname"><a href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a37bd5eeb087e51fa9e76286b65ec7139">GamR::Efficiency::EffFit::SetParams</a></div><div class="ttdeci">void SetParams(FitParams params)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00642">Efficiency.cc:642</a></div></div>
+<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_eff_fit_html_a5737e643d04001de514eb77ba7e010eb"><div class="ttname"><a href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a5737e643d04001de514eb77ba7e010eb">GamR::Efficiency::EffFit::Fit</a></div><div class="ttdeci">void Fit(int quiet=0)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00561">Efficiency.cc:561</a></div></div>
 <div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_eff_fit_html_a60d3eb6cb2dc11fb64c063b1da1325a9"><div class="ttname"><a href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a60d3eb6cb2dc11fb64c063b1da1325a9">GamR::Efficiency::EffFit::EqualWeights</a></div><div class="ttdeci">bool EqualWeights</div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_efficiency_8hh_source.html#l00083">Efficiency.hh:83</a></div></div>
-<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_eff_fit_html_a755fc1719a3f4a1b34ed117c802f8933"><div class="ttname"><a href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a755fc1719a3f4a1b34ed117c802f8933">GamR::Efficiency::EffFit::WriteGraph</a></div><div class="ttdeci">void WriteGraph(std::string outDir)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00700">Efficiency.cc:700</a></div></div>
-<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_eff_fit_html_a976665472fd0985ab779dff93252bad8"><div class="ttname"><a href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a976665472fd0985ab779dff93252bad8">GamR::Efficiency::EffFit::Draw</a></div><div class="ttdeci">TMultiGraph * Draw(TCanvas *canvas, int detID=0, double xlow=-1, double xhigh=-1)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00674">Efficiency.cc:674</a></div></div>
+<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_eff_fit_html_a755fc1719a3f4a1b34ed117c802f8933"><div class="ttname"><a href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a755fc1719a3f4a1b34ed117c802f8933">GamR::Efficiency::EffFit::WriteGraph</a></div><div class="ttdeci">void WriteGraph(std::string outDir)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00705">Efficiency.cc:705</a></div></div>
+<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_eff_fit_html_a976665472fd0985ab779dff93252bad8"><div class="ttname"><a href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a976665472fd0985ab779dff93252bad8">GamR::Efficiency::EffFit::Draw</a></div><div class="ttdeci">TMultiGraph * Draw(TCanvas *canvas, int detID=0, double xlow=-1, double xhigh=-1)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00676">Efficiency.cc:676</a></div></div>
 <div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_eff_fit_html_ac6e3c473cf7a4648fcb6317472f25daa"><div class="ttname"><a href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa">GamR::Efficiency::EffFit::EffFunc</a></div><div class="ttdeci">TF1 * EffFunc</div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_efficiency_8hh_source.html#l00084">Efficiency.hh:84</a></div></div>
-<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_eff_fit_html_aeac5d2e46d99f0cd15cabb2d7f55c5d0"><div class="ttname"><a href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#aeac5d2e46d99f0cd15cabb2d7f55c5d0">GamR::Efficiency::EffFit::DrawRes</a></div><div class="ttdeci">TMultiGraph * DrawRes(TCanvas *canvas, int detID=0, double xlow=-1, double xhigh=-1)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00727">Efficiency.cc:727</a></div></div>
+<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_eff_fit_html_aeac5d2e46d99f0cd15cabb2d7f55c5d0"><div class="ttname"><a href="../../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#aeac5d2e46d99f0cd15cabb2d7f55c5d0">GamR::Efficiency::EffFit::DrawRes</a></div><div class="ttdeci">TMultiGraph * DrawRes(TCanvas *canvas, int detID=0, double xlow=-1, double xhigh=-1)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00732">Efficiency.cc:732</a></div></div>
 <div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_fit_params_html"><div class="ttname"><a href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html">GamR::Efficiency::FitParams</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_efficiency_8hh_source.html#l00065">Efficiency.hh:65</a></div></div>
-<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_fit_params_html_a17745ff068a5b1275cd8c37cbc05d6cb"><div class="ttname"><a href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a17745ff068a5b1275cd8c37cbc05d6cb">GamR::Efficiency::FitParams::SetParams</a></div><div class="ttdeci">void SetParams(std::vector&lt; std::string &gt; sParams, std::vector&lt; std::string &gt; sFixed, std::vector&lt; std::string &gt; sLimLow, std::vector&lt; std::string &gt; sLimHigh)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00816">Efficiency.cc:816</a></div></div>
+<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_fit_params_html_a17745ff068a5b1275cd8c37cbc05d6cb"><div class="ttname"><a href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a17745ff068a5b1275cd8c37cbc05d6cb">GamR::Efficiency::FitParams::SetParams</a></div><div class="ttdeci">void SetParams(std::vector&lt; std::string &gt; sParams, std::vector&lt; std::string &gt; sFixed, std::vector&lt; std::string &gt; sLimLow, std::vector&lt; std::string &gt; sLimHigh)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00821">Efficiency.cc:821</a></div></div>
 <div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_fit_params_html_a3686ea824492fca91875ce8cacdcb1cc"><div class="ttname"><a href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a3686ea824492fca91875ce8cacdcb1cc">GamR::Efficiency::FitParams::params</a></div><div class="ttdeci">std::vector&lt; TFormula &gt; params</div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_efficiency_8hh_source.html#l00067">Efficiency.hh:67</a></div></div>
 <div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_fit_params_html_a387295bdfe2b3ed49cad860aa1f288cf"><div class="ttname"><a href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#a387295bdfe2b3ed49cad860aa1f288cf">GamR::Efficiency::FitParams::limlow</a></div><div class="ttdeci">std::vector&lt; TFormula &gt; limlow</div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_efficiency_8hh_source.html#l00068">Efficiency.hh:68</a></div></div>
 <div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_fit_params_html_ac2a872f300e63024bfe5a5e164fdc877"><div class="ttname"><a href="../../d0/dd5/class_gam_r_1_1_efficiency_1_1_fit_params.html#ac2a872f300e63024bfe5a5e164fdc877">GamR::Efficiency::FitParams::fixed</a></div><div class="ttdeci">std::vector&lt; int &gt; fixed</div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_efficiency_8hh_source.html#l00070">Efficiency.hh:70</a></div></div>
@@ -1060,17 +1065,17 @@ $(document).ready(function(){initNavTree('df/d08/_efficiency_8cc_source.html','.
 <div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_data_set_html"><div class="ttname"><a href="../../d8/d35/class_gam_r_1_1_efficiency_1_1_multi_data_set.html">GamR::Efficiency::MultiDataSet</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_efficiency_8hh_source.html#l00097">Efficiency.hh:97</a></div></div>
 <div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_data_set_html_a0160fc15c426b3175a64afd9f0a80125"><div class="ttname"><a href="../../d8/d35/class_gam_r_1_1_efficiency_1_1_multi_data_set.html#a0160fc15c426b3175a64afd9f0a80125">GamR::Efficiency::MultiDataSet::MultiDataSet</a></div><div class="ttdeci">MultiDataSet()</div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_efficiency_8hh_source.html#l00101">Efficiency.hh:101</a></div></div>
 <div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_data_set_html_a050ffbf88257594bd12994421a5ec8ff"><div class="ttname"><a href="../../d8/d35/class_gam_r_1_1_efficiency_1_1_multi_data_set.html#a050ffbf88257594bd12994421a5ec8ff">GamR::Efficiency::MultiDataSet::GetDataSets</a></div><div class="ttdeci">std::map&lt; int, DataSet &gt; * GetDataSets()</div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_efficiency_8hh_source.html#l00104">Efficiency.hh:104</a></div></div>
-<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_a29f5a20b149855ac76f729618ed470c6"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a29f5a20b149855ac76f729618ed470c6">GamR::Efficiency::MultiEffFit::SetParams</a></div><div class="ttdeci">void SetParams(FitParams params)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00866">Efficiency.cc:866</a></div></div>
-<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_a44224ecec64ffd88687c3636943a2eb1"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a44224ecec64ffd88687c3636943a2eb1">GamR::Efficiency::MultiEffFit::SetData</a></div><div class="ttdeci">void SetData(const char *effFile, int i, int ID)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00861">Efficiency.cc:861</a></div></div>
-<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_a5f681061967984aca7315871f9bdea66"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a5f681061967984aca7315871f9bdea66">GamR::Efficiency::MultiEffFit::AddData</a></div><div class="ttdeci">void AddData(const char *histFile, const char *histName, const char *gateFile, const char *mapName, const char *intensityFile)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00840">Efficiency.cc:840</a></div></div>
-<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_a7a2087c79633c77fa32e6755b721ba1d"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a7a2087c79633c77fa32e6755b721ba1d">GamR::Efficiency::MultiEffFit::PrintParams</a></div><div class="ttdeci">void PrintParams(const char *outFile)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00952">Efficiency.cc:952</a></div></div>
-<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_a7daeed5563859e226fea0292f5d58cfb"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a7daeed5563859e226fea0292f5d58cfb">GamR::Efficiency::MultiEffFit::SetDetNorms</a></div><div class="ttdeci">void SetDetNorms(int ID, int iDataSet, std::string key)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00878">Efficiency.cc:878</a></div></div>
-<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_a965cd9ba60d9ca62f5f22a226baf7dfd"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a965cd9ba60d9ca62f5f22a226baf7dfd">GamR::Efficiency::MultiEffFit::WriteGraphs</a></div><div class="ttdeci">void WriteGraphs(std::string outDir)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00970">Efficiency.cc:970</a></div></div>
-<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_aa367877de7f6e423de8213f9490ab17c"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aa367877de7f6e423de8213f9490ab17c">GamR::Efficiency::MultiEffFit::SetNorm</a></div><div class="ttdeci">void SetNorm(int iDataSet, double factor)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00891">Efficiency.cc:891</a></div></div>
-<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_aa7929ccb436149aae461269e491711b8"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aa7929ccb436149aae461269e491711b8">GamR::Efficiency::MultiEffFit::Fit</a></div><div class="ttdeci">void Fit()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00909">Efficiency.cc:909</a></div></div>
-<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_aad95ebf69176d15b27f7f407eeb53b63"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aad95ebf69176d15b27f7f407eeb53b63">GamR::Efficiency::MultiEffFit::PrintDataSet</a></div><div class="ttdeci">void PrintDataSet(int i, const char *fileNameBase)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00944">Efficiency.cc:944</a></div></div>
+<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_a29f5a20b149855ac76f729618ed470c6"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a29f5a20b149855ac76f729618ed470c6">GamR::Efficiency::MultiEffFit::SetParams</a></div><div class="ttdeci">void SetParams(FitParams params)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00871">Efficiency.cc:871</a></div></div>
+<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_a44224ecec64ffd88687c3636943a2eb1"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a44224ecec64ffd88687c3636943a2eb1">GamR::Efficiency::MultiEffFit::SetData</a></div><div class="ttdeci">void SetData(const char *effFile, int i, int ID)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00866">Efficiency.cc:866</a></div></div>
+<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_a5f681061967984aca7315871f9bdea66"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a5f681061967984aca7315871f9bdea66">GamR::Efficiency::MultiEffFit::AddData</a></div><div class="ttdeci">void AddData(const char *histFile, const char *histName, const char *gateFile, const char *mapName, const char *intensityFile)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00845">Efficiency.cc:845</a></div></div>
+<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_a7a2087c79633c77fa32e6755b721ba1d"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a7a2087c79633c77fa32e6755b721ba1d">GamR::Efficiency::MultiEffFit::PrintParams</a></div><div class="ttdeci">void PrintParams(const char *outFile)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00957">Efficiency.cc:957</a></div></div>
+<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_a7daeed5563859e226fea0292f5d58cfb"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a7daeed5563859e226fea0292f5d58cfb">GamR::Efficiency::MultiEffFit::SetDetNorms</a></div><div class="ttdeci">void SetDetNorms(int ID, int iDataSet, std::string key)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00883">Efficiency.cc:883</a></div></div>
+<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_a965cd9ba60d9ca62f5f22a226baf7dfd"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a965cd9ba60d9ca62f5f22a226baf7dfd">GamR::Efficiency::MultiEffFit::WriteGraphs</a></div><div class="ttdeci">void WriteGraphs(std::string outDir)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00975">Efficiency.cc:975</a></div></div>
+<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_aa367877de7f6e423de8213f9490ab17c"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aa367877de7f6e423de8213f9490ab17c">GamR::Efficiency::MultiEffFit::SetNorm</a></div><div class="ttdeci">void SetNorm(int iDataSet, double factor)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00896">Efficiency.cc:896</a></div></div>
+<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_aa7929ccb436149aae461269e491711b8"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aa7929ccb436149aae461269e491711b8">GamR::Efficiency::MultiEffFit::Fit</a></div><div class="ttdeci">void Fit()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00914">Efficiency.cc:914</a></div></div>
+<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_aad95ebf69176d15b27f7f407eeb53b63"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#aad95ebf69176d15b27f7f407eeb53b63">GamR::Efficiency::MultiEffFit::PrintDataSet</a></div><div class="ttdeci">void PrintDataSet(int i, const char *fileNameBase)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00949">Efficiency.cc:949</a></div></div>
 <div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_ad98ad1484ae912947925c52559ab8506"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#ad98ad1484ae912947925c52559ab8506">GamR::Efficiency::MultiEffFit::EraseData</a></div><div class="ttdeci">void EraseData(int ID, int iDataSet, std::string key)</div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_efficiency_8hh_source.html#l00123">Efficiency.hh:123</a></div></div>
-<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_ada3427a7ee20adbef6b21fb19a95c8d7"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#ada3427a7ee20adbef6b21fb19a95c8d7">GamR::Efficiency::MultiEffFit::Draw</a></div><div class="ttdeci">void Draw(const char *outFile, double xlow=-1, double xhigh=-1)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00921">Efficiency.cc:921</a></div></div>
+<div class="ttc" id="aclass_gam_r_1_1_efficiency_1_1_multi_eff_fit_html_ada3427a7ee20adbef6b21fb19a95c8d7"><div class="ttname"><a href="../../df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#ada3427a7ee20adbef6b21fb19a95c8d7">GamR::Efficiency::MultiEffFit::Draw</a></div><div class="ttdeci">void Draw(const char *outFile, double xlow=-1, double xhigh=-1)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00926">Efficiency.cc:926</a></div></div>
 <div class="ttc" id="aclass_gam_r_1_1_nucleus_1_1_transition_map_html"><div class="ttname"><a href="../../d8/d5e/class_gam_r_1_1_nucleus_1_1_transition_map.html">GamR::Nucleus::TransitionMap</a></div><div class="ttdef"><b>Definition</b> <a href="../../d3/d2c/_transition_8hh_source.html#l00046">Transition.hh:46</a></div></div>
 <div class="ttc" id="aclass_gam_r_1_1_nucleus_1_1_transition_map_html_a1a0e54befacec2a7245690ac4d1b5c7d"><div class="ttname"><a href="../../d8/d5e/class_gam_r_1_1_nucleus_1_1_transition_map.html#a1a0e54befacec2a7245690ac4d1b5c7d">GamR::Nucleus::TransitionMap::GetMap</a></div><div class="ttdeci">std::map&lt; std::string, Transition &gt; * GetMap()</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d2c/_transition_8hh_source.html#l00054">Transition.hh:54</a></div></div>
 <div class="ttc" id="anamespace_gam_r_1_1_efficiency_html_a427d0e741996ac1982ee55180be3ecdf"><div class="ttname"><a href="../../d7/dd8/namespace_gam_r_1_1_efficiency.html#a427d0e741996ac1982ee55180be3ecdf">GamR::Efficiency::EffCFunc</a></div><div class="ttdeci">double EffCFunc(double *x, double *pars)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d08/_efficiency_8cc_source.html#l00193">Efficiency.cc:193</a></div></div>
@@ -1082,7 +1087,7 @@ $(document).ready(function(){initNavTree('df/d08/_efficiency_8cc_source.html','.
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_c85d3e3c5052e9ad9ce18c6863244a25.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_b2fab0ad9db13d6f662bc066abb6118d.html">efficiency</a></li><li class="navelem"><a class="el" href="../../df/d08/_efficiency_8cc.html">Efficiency.cc</a></li>
-    <li class="footer">Generated on Mon Oct 23 2023 18:37:38 for GamR by
+    <li class="footer">Generated on Thu Dec 7 2023 21:21:10 for GamR by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.9.8 </li>
   </ul>

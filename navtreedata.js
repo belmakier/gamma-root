@@ -118,8 +118,8 @@ var NAVTREEINDEX =
 "da/d04/struct_gam_r_1_1_tree_1_1_t_event_1_1_clear_vector.html",
 "dc/d1a/_transform_8hh.html#a3fa6e89388767f5fb285536bed4f8bca",
 "dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#aca677242c3581c26b863a466060789dd",
-"df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#aed5a33c8e7cee9f4090341fba68eb616",
-"df/dbd/_ang_dist_8cc.html#a96b00c034e0b8aa9807d13c08970ba79"
+"df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#ae5f442495b00b156ec77a901861e565d",
+"df/dbd/_ang_dist_8cc.html#a86706e3a9cf18220393e8bed727f8e3e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,7 +1,7 @@
 var NAVTREEINDEX1 =
 {
-"d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#adf997e0aeab4bc362c60b72f01b33bd9":[6,0,0,0,3,26],
 "d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#adf997e0aeab4bc362c60b72f01b33bd9":[5,0,0,0,3,26],
+"d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#adf997e0aeab4bc362c60b72f01b33bd9":[6,0,0,0,3,26],
 "d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#aec7d4f249dda28cfdf50de2e5d9c81df":[5,0,0,0,3,37],
 "d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#aec7d4f249dda28cfdf50de2e5d9c81df":[6,0,0,0,3,37],
 "d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#afb32915f9ebb1709208a0df45d89ced1":[5,0,0,0,3,2],
