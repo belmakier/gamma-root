@@ -458,7 +458,7 @@ namespace GamR {
             y_err = y_err * fAbsScale;
           }          
           graph->SetPoint(i, fEnergies[i], y);
-          graph->SetPointError(i, 0, 0.00001);
+          graph->SetPointError(i, 0, 0.1*fAbsScale);
         }
       return graph;
     }
@@ -549,6 +549,7 @@ namespace GamR {
               graph = p->fDataSets[i].GetGraphErrors();
             }
             f += graph->Chisquare(p->EffFunc);
+
             delete graph;
           }
         }
@@ -668,6 +669,7 @@ namespace GamR {
           }
         }
       }
+      EffFunc->SetParLimits(7, 0.1*fAbsScale, 10.0*fAbsScale);
       EffFunc->SetParameter(7, fAbsScale);
     }
     
@@ -682,17 +684,20 @@ namespace GamR {
       std::vector<Color_t> colors = {kRed, kBlue, kGreen, kMagenta, kCyan, kBlack, kYellow};
       for (int i=0; i<nDataSets; ++i)
         {
+          fDataSets[i].SetAbsScale(fAbsScale);
           TGraphErrors *dsetgraph = fDataSets[i].GetGraphErrors();
           std::cout << "    Data Set " << i << ", nPoints " << dsetgraph->GetN() << std::endl;
           dsetgraph->SetLineColor(colors[i]);
           dsetgraph->SetMarkerColor(colors[i]);
           graph->Add(dsetgraph);          
         }
+      graph->GetHistogram()->SetMinimum(0.0);
       graph->Draw("A*");
       if (xlow!=xhigh) {
         graph->GetXaxis()->SetLimits(xlow, xhigh);
       }
       graph->Draw("A*");
+      EffFunc->SetParameter(7, fAbsScale);
       EffFunc->Draw("same");
       return graph;
     }

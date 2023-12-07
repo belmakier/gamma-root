@@ -736,7 +736,7 @@ namespace GamR {
       std::cout << "Chi2 = " << fChi2 << ", ndata = " << fNData << ",  NDF = " << fNData - fNPars << ", Chi2/NDF = " << fChi2/(double)(fNData - fNPars) << std::endl;
       TString sPrintString;      
       if (!parameters.iQuiet) {
-        sPrintString.Form("Peak   Centroid       Height         FWHM           Area           ");
+        sPrintString.Form("Peak   Centroid       Height         FWHM           Area           Counts  ");
         std::printf("%s\n", sPrintString.Data());
       }
       
@@ -754,6 +754,8 @@ namespace GamR {
                               peak->GetWidthError(), 45);
         GamR::Utils::wrresult(line, peak->GetArea(),
                               peak->GetAreaError(), 60);
+        GamR::Utils::wrresult(line, peak->GetArea()*fFitGuesses->fScale.val,
+                              peak->GetAreaError()*fFitGuesses->fScale.val, 60);
         if (!parameters.iQuiet) {
           std::printf("%-5d %s\n", i, line);
         }
@@ -1024,6 +1026,8 @@ namespace GamR {
           ++i;
         }
       }
+
+      func->Draw("same");
       
       //TRatioPlot *rp = new TRatioPlot(hist);
       //rp->Draw();

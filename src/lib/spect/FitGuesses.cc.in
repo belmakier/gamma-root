@@ -31,6 +31,7 @@ namespace GamR {
         else if (index == 3) { fSkewWidth = {val, low, high}; }
         else if (index == 4) { fSkewAmp2 = {val, low, high}; }
         else if (index == 5) { fSkewWidth2 = {val, low, high}; }
+        else if (index == 6) { fScale = {val, low, high}; }
       }
       return 0;
     }
@@ -43,6 +44,8 @@ namespace GamR {
       printf("Skew Width:      %6.2f    %6.2f    %6.2f\n", fSkewWidth.val, fSkewWidth.low, fSkewWidth.high);
       printf("Skew Amp 2:      %6.2f    %6.2f    %6.2f\n", fSkewAmp2.val, fSkewAmp2.low, fSkewAmp2.high);
       printf("Skew Width 2:    %6.2f    %6.2f    %6.2f\n", fSkewWidth2.val, fSkewWidth2.low, fSkewWidth2.high);
+      printf("");
+      printf("Scale for printing: %3.1f", fScale.val);
     }
 
     void PeakFitGuesses::Save(std::string filename) {
@@ -54,6 +57,7 @@ namespace GamR {
       outfile << "3     " << fSkewWidth.val << "    " << fSkewWidth.low << "   " << fSkewWidth.high << std::endl;
       outfile << "4     " << fSkewAmp2.val << "    " << fSkewAmp2.low << "   " << fSkewAmp2.high << std::endl;
       outfile << "5     " << fSkewWidth2.val << "    " << fSkewWidth2.low << "   " << fSkewWidth2.high << std::endl;
+      outfile << "6     " << fScale.val << "    " << fScale.low << "   " << fScale.high << std::endl;
 
       outfile.close();
     }
@@ -78,6 +82,9 @@ namespace GamR {
       case 5:
         fSkewWidth2 = {val, low, high};
         break;
+      case 6:
+        fScale = {val, low, high};
+        break;
       default:
         break;
       }
@@ -92,6 +99,7 @@ namespace GamR {
         std::cout << "3   Skew Width        [" << fSkewWidth.val << ", " << fSkewWidth.low << ", " << fSkewWidth.high << " ]" << std::endl;
         std::cout << "4   Skew Amplitude 2  [" << fSkewAmp2.val << ", " << fSkewAmp2.low << ", " << fSkewAmp2.high << " ]" << std::endl;
         std::cout << "5   Skew Width 2      [" << fSkewWidth2.val << ", " << fSkewWidth2.low << ", " << fSkewWidth2.high << " ]" << std::endl;
+        std::cout << "6   Scale             [" << fScale.val << "]" << std::endl;
         int par = -1;
         char answer; 
         int valid = 0;
@@ -102,7 +110,7 @@ namespace GamR {
             return;
           }
           par = atoi(&answer);          
-          if (par == 0 || par == 1 || par == 2 || par == 3 || par == 4 || par == 5) { valid = 1; }
+          if (par == 0 || par == 1 || par == 2 || par == 3 || par == 4 || par == 5 || par==6) { valid = 1; }
         }
         std::cout << "Current values are ";
         switch (par) {
@@ -124,6 +132,8 @@ namespace GamR {
         case 5:        
           std::cout << "[" << fSkewWidth2.val << ", " << fSkewWidth2.low << ", " << fSkewWidth2.high << " ]" << std::endl;
           break;
+        case 6:
+          std::cout << "[" << fScale.val << "]" << std::endl;
         default:
           break;      
         }
@@ -152,6 +162,7 @@ namespace GamR {
         std::cout << "3   Skew Width        [" << fSkewWidth.val << ", " << fSkewWidth.low << ", " << fSkewWidth.high << " ]" << std::endl;
         std::cout << "4   Skew Amplitude 2  [" << fSkewAmp2.val << ", " << fSkewAmp2.low << ", " << fSkewAmp2.high << " ]" << std::endl;
         std::cout << "5   Skew Width 2      [" << fSkewWidth2.val << ", " << fSkewWidth2.low << ", " << fSkewWidth2.high << " ]" << std::endl;
+        std::cout << "6   Scale             [" << fScale.val << "]" << std::endl;
         std::cout << "Would you like to adjust another parameter? [y/n]: ";
         valid = 0;
         int br = 0;

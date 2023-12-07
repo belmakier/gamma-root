@@ -28,6 +28,8 @@ namespace GamR {
       Parameter fSkewWidth;
       Parameter fSkewAmp2;
       Parameter fSkewWidth2;
+      Parameter fScale; //goes between area and counts, only used for printing
+
 
     public:
       PeakFitGuesses() {
@@ -36,7 +38,8 @@ namespace GamR {
         fSkewAmp = {10,0,100};
         fSkewWidth = {2.5,0,10};
         fSkewAmp2 = {5,0,100};
-        fSkewWidth2 = {5,0,10};       
+        fSkewWidth2 = {5,0,10};
+        fScale = {1.0, 1.0, 1.0};
       }      
 
       int Load(std::string filename);
