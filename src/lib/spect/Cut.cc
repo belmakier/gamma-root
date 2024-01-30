@@ -31,7 +31,7 @@ namespace GamR {
     }
 
     TH1D *ProjY(TH2 *hist) {
-      return hist->ProjectionY(((std::string)hist->GetName()+"_px").c_str());
+      return hist->ProjectionY(((std::string)hist->GetName()+"_py").c_str());
     }
 
     TH1D *ProjY(TVirtualPad *canvas, const char *name) {
@@ -126,7 +126,7 @@ namespace GamR {
     TH1D *GateY(TH2 *hist, GamR::TK::Gate peak)
     {
       /* applying gates in Y direction */
-      TH1D *hOut = peak.ApplyY(hist, ((std::string)hist->GetName()+"_gx").c_str());
+      TH1D *hOut = peak.ApplyY(hist, ((std::string)hist->GetName()+"_gy").c_str());
       return hOut;
     }
 

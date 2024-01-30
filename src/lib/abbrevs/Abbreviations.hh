@@ -81,6 +81,7 @@ void uzx(TVirtualPad *canvas = NULL);
 void uzy(TVirtualPad *canvas = NULL);
 void uz(TVirtualPad *canvas = NULL);
 std::pair<double, double> ca(TVirtualPad *canvas = NULL, double sigma = 2);
+std::pair<double, double> ca2(TVirtualPad *canvas = NULL);
 std::pair<double, double> ca(TH1 *hist, double lowEst, double highEst, double lowEn, double highEn, double sigma);
 TH1 *add(std::vector<TH1*> hists, const char *name = "sum");
 TH1 *add(std::vector<int> hists, const char *name = "sum");

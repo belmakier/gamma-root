@@ -215,6 +215,7 @@ void uzx(TVirtualPad *canvas ) { GamR::Spect::UnZoomAllX(canvas); }
 void uzy(TVirtualPad *canvas ) { GamR::Spect::UnZoomAllY(canvas); }
 void uz(TVirtualPad *canvas ) { GamR::Spect::UnZoomAllX(canvas); GamR::Spect::UnZoomAllY(canvas); }
 std::pair<double, double> ca(TVirtualPad *canvas , double sigma) { return GamR::Spect::TwoPointCalibrate(canvas, sigma); }
+std::pair<double, double> ca2(TVirtualPad *canvas ) { return GamR::Spect::TwoClickCalibrate(canvas); }
 std::pair<double, double> ca(TH1 *hist, double lowEst, double highEst, double lowEn, double highEn, double sigma) { return GamR::Spect::TwoPointCalibrate(hist, lowEst, highEst, lowEn, highEn, sigma); }
 TH1 *add(std::vector<TH1*> hists, const char *name ) { return GamR::Spect::Add(hists, name); }
 TH1 *add(std::vector<int> hists, const char *name ) { return GamR::Spect::Add(hists, name); }
