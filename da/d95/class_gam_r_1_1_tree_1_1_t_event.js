@@ -3,7 +3,7 @@ var class_gam_r_1_1_tree_1_1_t_event =
     [ "ClearVector", "da/d04/struct_gam_r_1_1_tree_1_1_t_event_1_1_clear_vector.html", "da/d04/struct_gam_r_1_1_tree_1_1_t_event_1_1_clear_vector" ],
     [ "EventTupleFiller", "d5/dbc/struct_gam_r_1_1_tree_1_1_t_event_1_1_event_tuple_filler.html", "d5/dbc/struct_gam_r_1_1_tree_1_1_t_event_1_1_event_tuple_filler" ],
     [ "IgnoreTObject", "d1/dae/struct_gam_r_1_1_tree_1_1_t_event_1_1_ignore_t_object.html", "d1/dae/struct_gam_r_1_1_tree_1_1_t_event_1_1_ignore_t_object" ],
-    [ "detector_type", "da/d95/class_gam_r_1_1_tree_1_1_t_event.html#a70668011547a1e9b75dfda9eb9acf9ec", null ],
+    [ "detector_type", "da/d95/class_gam_r_1_1_tree_1_1_t_event.html#ad7775afd1d07af8ec96f42874fd73a5b", null ],
     [ "TEvent", "da/d95/class_gam_r_1_1_tree_1_1_t_event.html#a31e52e525bfb0c2383fc0b02ed0329a7", null ],
     [ "~TEvent", "da/d95/class_gam_r_1_1_tree_1_1_t_event.html#afc79842e9de01c334da7cb58cb640543", null ],
     [ "ClassDef", "da/d95/class_gam_r_1_1_tree_1_1_t_event.html#a4488840b8264845e53b211c9cb16e12e", null ],

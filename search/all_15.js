@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['w_0',['w',['../d1/dab/namespace_gam_r_1_1_ang_dist.html#acb8013df6dcb1d7635f67a7371bb0eb5',1,'GamR::AngDist::W()'],['../da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#ad2b2d77bf8d7c0f4d159c5e0011e1b78',1,'GamR::AngDist::StatTensor::W()'],['../d1/dab/namespace_gam_r_1_1_ang_dist.html#a86706e3a9cf18220393e8bed727f8e3e',1,'GamR::AngDist::W()'],['../d3/d0e/_i_o_8cc.html#a333d6cb81e85f8c09dc51f71d0f45b69',1,'W:&#160;IO.cc']]],
+  ['w_0',['W',['../da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#ad2b2d77bf8d7c0f4d159c5e0011e1b78',1,'GamR::AngDist::StatTensor::W()'],['../d3/d0e/_i_o_8cc.html#a333d6cb81e85f8c09dc51f71d0f45b69',1,'W:&#160;IO.cc'],['../d1/dab/namespace_gam_r_1_1_ang_dist.html#a86706e3a9cf18220393e8bed727f8e3e',1,'GamR::AngDist::W(double theta, double ji, double lambda, double lambdaPrime, double jf, double delta, StatTensor *rho, SolidAttenuation *Qk, double kmax)'],['../d1/dab/namespace_gam_r_1_1_ang_dist.html#acb8013df6dcb1d7635f67a7371bb0eb5',1,'GamR::AngDist::W(std::vector&lt; double &gt; theta, double ji, double lambda, double lambdaPrime, double jf, double delta, StatTensor *rho, SolidAttenuation *Qk, double kmax)']]],
   ['wdb_5fnuclvl_1',['WDB_nuclvl',['../d8/dc4/struct_gam_r_1_1_coulex_1_1_w_d_b__nuclvl.html',1,'GamR::Coulex']]],
   ['wdb_5fnuctrans_2',['WDB_nuctrans',['../d1/d10/struct_gam_r_1_1_coulex_1_1_w_d_b__nuctrans.html',1,'GamR::Coulex']]],
   ['wdbsubs_2ehh_3',['WDBSubs.hh',['../db/d0f/_w_d_b_subs_8hh.html',1,'']]],

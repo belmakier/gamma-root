@@ -1,6 +1,6 @@
 var class_gam_r_1_1_tree_1_1_t_detector =
 [
-    [ "meas_type", "dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html#a0b121104f78a94383df3fb4e648279cb", null ],
+    [ "meas_type", "dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html#a3eed57c9d09a7beaa015f2e51224e118", null ],
     [ "measurements_type", "dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html#a9d62bf0c93ac3ece52dcd1dd53c2f493", null ],
     [ "TDetector", "dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html#aecfa21c81b3bb8f3e6ffef76dab84b7f", null ],
     [ "TDetector", "dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html#a6225e05e399f2b30913ae6074d9db7cf", null ],

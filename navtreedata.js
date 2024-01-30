@@ -107,19 +107,19 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#adf997e0aeab4bc362c60b72f01b33bd9",
-"d0/d74/group___t_k.html#gac01dfdcd197d6f55811ebb161d2f0e33",
-"d1/d57/class_gam_r_1_1_coulex_1_1_transition.html#a85f89e555d85864ef047c7969560730a",
-"d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a1b21ec484fca40f2c75fa09c17489d86",
-"d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#a11ca2478819471f12f8c65aa49fdcdf2",
-"d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a4e8f294413d8fcdc060015a9e97a3c69",
-"d6/d76/namespace_gam_r_1_1_coulex.html#a351854c76290e8827fc74f10b586f316",
-"d7/df7/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_transition.html#a8bb23f1b0c0bc2f8b44aae845615ad3b",
-"da/d04/struct_gam_r_1_1_tree_1_1_t_event_1_1_clear_vector.html",
-"dc/d1a/_transform_8hh.html#a3fa6e89388767f5fb285536bed4f8bca",
-"dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#aca677242c3581c26b863a466060789dd",
-"df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#ae5f442495b00b156ec77a901861e565d",
-"df/dbd/_ang_dist_8cc.html#a86706e3a9cf18220393e8bed727f8e3e"
+"d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#add89d8123ae12e83b47c547df44077ca",
+"d0/d74/group___t_k.html#gaba991ee39dd8f2af7759f113f742d64d",
+"d1/d57/class_gam_r_1_1_coulex_1_1_transition.html#a7fbd95982a6598e4cf33cd22cc2ad234",
+"d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a1646c1c9573afb29e01fd2972a7226dd",
+"d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#a0f5695032133a765e5af8dcf29a49245",
+"d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a329c7691b25de23668b020a1ca8c37ad",
+"d6/d76/namespace_gam_r_1_1_coulex.html#a05f705d48afc37fffba20f0a60726a39",
+"d7/df7/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_transition.html#a5ea759fbf59073ef851500efe3f979a7",
+"d9/df7/struct_gam_r_1_1_tree_1_1_t_det_defn_1_1_cal_functor_1_1_cal_functor_inner.html#a706e4664fd8295941e913367c0671df6",
+"dc/d19/_coulex_calculation_8cc_source.html",
+"dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#aa95e40411a2f81ebe2b4106d8069cc89",
+"df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#ad2d47e0ab8817313d98ef8eeeb9a70a1",
+"df/d7f/_coulex_8hh.html#a8bda628a11d99b6ff94a88a338ffd590"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

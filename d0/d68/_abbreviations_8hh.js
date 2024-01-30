@@ -13,6 +13,7 @@ var _abbreviations_8hh =
     [ "bsy", "d0/d68/_abbreviations_8hh.html#ad4d31b91d8d504d5516a3dee9524d450", null ],
     [ "ca", "d0/d68/_abbreviations_8hh.html#ae833726892f432d347532036895c56d6", null ],
     [ "ca", "d0/d68/_abbreviations_8hh.html#a48d1f6c83af688bf836113a346c6da2d", null ],
+    [ "ca2", "d0/d68/_abbreviations_8hh.html#af6b006358ba7d423ddf8e7c318509de9", null ],
     [ "cbp", "d0/d68/_abbreviations_8hh.html#a94261f4a27b5fce124ce123ac6ba9cc9", null ],
     [ "ct", "d0/d68/_abbreviations_8hh.html#a1aed397f04ed8c9364c9ca641093cea1", null ],
     [ "ctbs", "d0/d68/_abbreviations_8hh.html#a4364aff95246ef7f34a75c080b428552", null ],

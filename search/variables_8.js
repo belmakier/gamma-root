@@ -3,7 +3,7 @@ var searchData=
   ['iamplitude_0',['iAmplitude',['../da/d4e/struct_gam_r_1_1_spect_1_1_peak_fit_1_1_peak_params.html#aa412aeed6b2aefa29d7e05f008f1bb5d',1,'GamR::Spect::PeakFit::PeakParams']]],
   ['icentroid_1',['iCentroid',['../da/d4e/struct_gam_r_1_1_spect_1_1_peak_fit_1_1_peak_params.html#aeac2fb008e93f6a2044dc4576f8ca177',1,'GamR::Spect::PeakFit::PeakParams']]],
   ['iconstantback_2',['iConstantBack',['../d6/d35/struct_gam_r_1_1_spect_1_1_peak_fit_1_1_parameters.html#ad41aaff129a52f2061ed5efa033fda53',1,'GamR::Spect::PeakFit::Parameters']]],
-  ['id_3',['id',['../dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html#acd801f70d6df0b710094047df29db430',1,'GamR::Tree::TDetector::ID'],['../d4/d60/struct_gam_r_1_1_tree_1_1_reader_1_1_det_group.html#af777fd4e4e06b134b871bcc5f431883c',1,'GamR::Tree::Reader::DetGroup::ID']]],
+  ['id_3',['ID',['../dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html#acd801f70d6df0b710094047df29db430',1,'GamR::Tree::TDetector::ID'],['../d4/d60/struct_gam_r_1_1_tree_1_1_reader_1_1_det_group.html#af777fd4e4e06b134b871bcc5f431883c',1,'GamR::Tree::Reader::DetGroup::ID']]],
   ['idxdetgroup_4',['idxDetGroup',['../dd/dff/struct_gam_r_1_1_tree_1_1_t_exp_defn_1_1_fill_det_defns.html#ac29183aeb1a0ecf3cd5fec55ef264195',1,'GamR::Tree::TExpDefn::FillDetDefns']]],
   ['idxkey_5',['idxKey',['../dd/d9c/struct_gam_r_1_1_tree_1_1_t_det_defn_1_1_interpret_pointers.html#aaa70479ee5c867e81af090ac749cd334',1,'GamR::Tree::TDetDefn::InterpretPointers']]],
   ['ifixenergy_6',['iFixEnergy',['../d6/d35/struct_gam_r_1_1_spect_1_1_peak_fit_1_1_parameters.html#ad7cf0a337dc4fd34bd7ea0bfc102d18a',1,'GamR::Spect::PeakFit::Parameters']]],

@@ -13,6 +13,7 @@ var _abbreviations_8cc =
     [ "bsy", "d0/d17/_abbreviations_8cc.html#a8374a0fbdf56305647965f811eabe250", null ],
     [ "ca", "d0/d17/_abbreviations_8cc.html#ae833726892f432d347532036895c56d6", null ],
     [ "ca", "d0/d17/_abbreviations_8cc.html#afc0346c4741aa38dbc47cbfdac5363bf", null ],
+    [ "ca2", "d0/d17/_abbreviations_8cc.html#a96ec10d296fbeaf19a056513e9d5c732", null ],
     [ "cbp", "d0/d17/_abbreviations_8cc.html#a56da1b89cd1ce3720264ffb38d8505aa", null ],
     [ "ct", "d0/d17/_abbreviations_8cc.html#a6d5ec59ed9dad8b1a1d52615652abf81", null ],
     [ "ctbs", "d0/d17/_abbreviations_8cc.html#a28436370d9b0523ba4046a3ad2faef7e", null ],
