@@ -1,10 +1,10 @@
 <map id="GamR::Spect::List2DSpectra" name="GamR::Spect::List2DSpectra">
 <area shape="rect" id="Node000001" title=" " alt="" coords="344,129,531,155"/>
-<area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#af042b3ad5a9feb38703bd7d4ae1b8b8a" title=" " alt="" coords="132,5,267,31"/>
+<area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#af042b3ad5a9feb38703bd7d4ae1b8b8a" title=" " alt="" coords="132,5,266,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="408,121,358,82,295,45,266,34,268,29,297,40,361,77,412,117"/>
-<area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#a3fa6e89388767f5fb285536bed4f8bca" title=" " alt="" coords="132,55,267,80"/>
+<area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#a3fa6e89388767f5fb285536bed4f8bca" title=" " alt="" coords="132,55,266,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="387,126,295,94,257,83,259,78,297,89,389,121"/>
-<area shape="rect" id="Node000006" href="$dc/d89/namespace_gam_r_1_1_spect.html#a302119df82e9ca4cbd9f3cf92a0ad352" title=" " alt="" coords="124,104,275,130"/>
+<area shape="rect" id="Node000006" href="$dc/d89/namespace_gam_r_1_1_spect.html#a302119df82e9ca4cbd9f3cf92a0ad352" title=" " alt="" coords="124,104,274,130"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="328,133,275,127,275,122,329,128"/>
 <area shape="rect" id="Node000008" href="$d0/d17/_abbreviations_8cc.html#a76a51a400746f08dc36c70661108a0c2" title=" " alt="" coords="180,153,219,179"/>
 <area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="329,156,219,167,219,162,329,150"/>

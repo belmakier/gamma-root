@@ -1,10 +1,19 @@
 <map id="GamR::Spect::LogAll" name="GamR::Spect::LogAll">
-<area shape="rect" id="Node000001" title=" " alt="" coords="519,29,661,55"/>
-<area shape="poly" id="edge4_Node000001_Node000001" title=" " alt="" coords="613,16,605,10,590,8,576,10,569,14,567,20,571,28,566,30,562,21,564,11,574,5,590,3,607,5,616,12"/>
-<area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#aac6b7f4e4bdca0828a1553bfe8a0bca5" title=" " alt="" coords="433,29,471,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="504,45,472,45,472,40,504,40"/>
-<area shape="rect" id="Node000003" href="$d7/dd8/namespace_gam_r_1_1_efficiency.html#a427d0e741996ac1982ee55180be3ecdf" title=" " alt="" coords="208,29,385,55"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="417,45,385,45,385,40,417,40"/>
-<area shape="rect" id="Node000004" href="$dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a253378c895d2ac0ba1d8ada6c5ae8f4b" title=" " alt="" coords="5,22,160,63"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="192,45,160,45,160,40,192,40"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="540,104,682,129"/>
+<area shape="poly" id="edge9_Node000001_Node000001" title=" " alt="" coords="634,90,626,84,611,82,597,84,590,89,588,94,592,102,587,104,583,95,585,85,595,79,611,77,628,80,637,86"/>
+<area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#aac6b7f4e4bdca0828a1553bfe8a0bca5" title=" " alt="" coords="454,104,492,129"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="525,119,493,119,493,114,525,114"/>
+<area shape="rect" id="Node000003" href="$dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a6f2310a0f99a99aebaa93bc84a6fd1a8" title=" " alt="" coords="16,5,170,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="452,93,431,71,405,53,346,33,284,23,224,19,170,20,170,15,224,14,285,17,348,28,407,49,434,67,456,89"/>
+<area shape="rect" id="Node000004" href="$dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a820a25ceeb770de93de22cb00135bf2c" title=" " alt="" coords="240,63,394,103"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="438,112,394,102,395,97,439,107"/>
+<area shape="rect" id="Node000006" href="$df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a612e799f57988942f58120f0491483d9" title=" " alt="" coords="234,128,401,169"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="439,126,402,134,401,128,438,121"/>
+<area shape="rect" id="Node000007" href="$d7/dd8/namespace_gam_r_1_1_efficiency.html#a427d0e741996ac1982ee55180be3ecdf" title=" " alt="" coords="229,193,406,218"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="454,143,433,164,407,183,381,195,378,190,405,178,429,160,450,139"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="225,62,170,48,171,43,226,57"/>
+<area shape="rect" id="Node000005" href="$dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a5737e643d04001de514eb77ba7e010eb" title=" " alt="" coords="5,70,181,96"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="224,86,181,86,181,80,224,80"/>
+<area shape="rect" id="Node000008" href="$dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a253378c895d2ac0ba1d8ada6c5ae8f4b" title=" " alt="" coords="16,185,170,226"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="213,208,171,208,171,203,213,203"/>
 </map>

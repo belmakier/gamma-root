@@ -1,17 +1,17 @@
 <map id="GamR::Bateman::Nucleus" name="GamR::Bateman::Nucleus">
-<area shape="rect" id="Node000001" title=" " alt="" coords="131,420,292,685"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="48,748,186,828"/>
-<area shape="poly" id="edge4_Node000004_Node000001" title=" " alt="" coords="133,666,115,710,112,732,107,731,110,709,128,664"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="286,277,356,342"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="311,343,287,397,283,406,279,403,282,395,306,341"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="264,134,378,214"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="324,229,324,277,318,277,318,229"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="163,747,180,723,190,701,195,703,185,726,167,750"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="42,141,144,206"/>
-<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="70,221,39,288,25,327,15,366,9,420,10,475,18,529,31,582,65,676,98,747,93,750,60,678,26,584,13,530,5,476,3,420,10,366,20,325,34,286,66,219"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="128,277,261,342"/>
-<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="128,217,173,275,169,279,124,220"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="82,5,104,71"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="96,71,96,124,90,124,90,71"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="199,341,204,403,198,403,194,342"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="132,420,294,685"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="50,748,187,828"/>
+<area shape="poly" id="edge4_Node000004_Node000001" title=" " alt="" coords="135,666,117,710,114,732,108,731,112,709,130,664"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="288,277,357,342"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="311,343,287,397,284,406,279,403,283,395,306,341"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="265,134,380,214"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="325,229,325,277,320,277,320,229"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="164,747,181,723,191,701,196,703,186,726,168,750"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="43,141,146,206"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="71,221,40,288,26,327,15,367,9,420,10,475,19,529,32,582,65,676,99,747,94,750,61,678,26,584,13,530,5,476,3,420,10,365,20,325,35,286,67,218"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="129,277,262,342"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="129,217,174,275,170,279,125,220"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="84,5,105,71"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="97,71,97,124,92,124,92,71"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="201,341,205,403,200,403,195,342"/>
 </map>

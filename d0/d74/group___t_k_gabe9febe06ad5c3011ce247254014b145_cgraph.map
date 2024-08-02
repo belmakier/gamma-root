@@ -1,11 +1,11 @@
 <map id="GamR::TK::Gate::GetIntegralError" name="GamR::TK::Gate::GetIntegralError">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,73,191,113"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,72,191,113"/>
 <area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#gab865f6e8e84344abc6a89f16cc796307" title=" " alt="" coords="239,5,427,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,69,238,40,260,33,262,38,239,45,154,74"/>
 <area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#ga4f8f88a7cb3ed077f9a3c3d81f02b31a" title=" " alt="" coords="240,55,426,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,80,224,77,225,82,191,85"/>
 <area shape="rect" id="Node000004" href="$d0/d74/group___t_k.html#gac1c2149596c0bc3ee71f38a871d0aa98" title=" " alt="" coords="248,104,418,130"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="191,100,233,104,232,109,191,105"/>
-<area shape="rect" id="Node000005" href="$d0/d74/group___t_k.html#ga0c870043965f984b34e65455819d47cf" title=" " alt="" coords="249,153,417,179"/>
+<area shape="rect" id="Node000005" href="$d0/d74/group___t_k.html#ga0c870043965f984b34e65455819d47cf" title=" " alt="" coords="249,153,416,179"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="156,111,239,140,262,146,261,151,238,145,154,116"/>
 </map>

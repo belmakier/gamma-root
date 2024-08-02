@@ -72,7 +72,7 @@ var NAVTREE =
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", "namespacemembers_dup" ],
-        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Functions", "namespacemembers_func.html", "namespacemembers_func" ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Enumerations", "namespacemembers_enum.html", null ],
         [ "Enumerator", "namespacemembers_eval.html", null ]
@@ -107,19 +107,20 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#add89d8123ae12e83b47c547df44077ca",
-"d0/d74/group___t_k.html#gaba991ee39dd8f2af7759f113f742d64d",
-"d1/d57/class_gam_r_1_1_coulex_1_1_transition.html#a7fbd95982a6598e4cf33cd22cc2ad234",
-"d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a1646c1c9573afb29e01fd2972a7226dd",
-"d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#a0f5695032133a765e5af8dcf29a49245",
-"d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a329c7691b25de23668b020a1ca8c37ad",
-"d6/d76/namespace_gam_r_1_1_coulex.html#a05f705d48afc37fffba20f0a60726a39",
-"d7/df7/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_transition.html#a5ea759fbf59073ef851500efe3f979a7",
-"d9/df7/struct_gam_r_1_1_tree_1_1_t_det_defn_1_1_cal_functor_1_1_cal_functor_inner.html#a706e4664fd8295941e913367c0671df6",
-"dc/d19/_coulex_calculation_8cc_source.html",
-"dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#aa95e40411a2f81ebe2b4106d8069cc89",
-"df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#ad2d47e0ab8817313d98ef8eeeb9a70a1",
-"df/d7f/_coulex_8hh.html#a8bda628a11d99b6ff94a88a338ffd590"
+"d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#ac5fb2c34aa14ac5ae613b09d926fb099",
+"d0/d74/group___t_k.html#gaafc7a191acbe4f20452f52cecaaf16d7",
+"d1/d3d/struct_gam_r_1_1_tree_1_1_t_det_defn_1_1_update_goodness.html",
+"d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html#aed205770d8e3f49bf45ad5c383526748",
+"d3/d4b/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_state.html#afa23aec2bd5dfa905c0de73db799a66b",
+"d4/d60/struct_gam_r_1_1_tree_1_1_reader_1_1_det_group.html",
+"d6/d35/struct_gam_r_1_1_spect_1_1_peak_fit_1_1_parameters.html#a2ec96e0b212cd41db3b3417b4b72ce6d",
+"d7/dd8/namespace_gam_r_1_1_efficiency.html#a427d0e741996ac1982ee55180be3ecdf",
+"d9/db7/_display_8hh.html#a61cee306e7922e8ac4fa42229ed51467",
+"db/dec/_fit_8hh.html#aa47cc8d6e0495c5518321fc5de17ae3c",
+"dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html#a9d62bf0c93ac3ece52dcd1dd53c2f493",
+"df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a1940fffec987261d139125f8aa07988b",
+"df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a3eacef62898caaaff029fd33931ad1bb",
+"namespacemembers_o.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

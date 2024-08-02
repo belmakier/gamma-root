@@ -1,6 +1,6 @@
 <map id="GamR::Coulex::LevelScheme::AddLevel" name="GamR::Coulex::LevelScheme::AddLevel">
 <area shape="rect" id="Node000001" title=" " alt="" coords="757,63,947,103"/>
-<area shape="rect" id="Node000002" href="$db/d16/class_gam_r_1_1_coulex_1_1_level_scheme.html#a160dc2ca214bb7c945ac1516086bd18e" title=" " alt="" coords="509,5,698,46"/>
+<area shape="rect" id="Node000002" href="$db/d16/class_gam_r_1_1_coulex_1_1_level_scheme.html#a160dc2ca214bb7c945ac1516086bd18e" title=" " alt="" coords="508,5,698,46"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="745,61,694,49,695,44,747,56"/>
 <area shape="rect" id="Node000003" href="$dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#a79a4ea8f06954b1cf8b8431010fedbf3" title=" " alt="" coords="237,60,449,101"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="742,85,449,84,449,78,742,80"/>

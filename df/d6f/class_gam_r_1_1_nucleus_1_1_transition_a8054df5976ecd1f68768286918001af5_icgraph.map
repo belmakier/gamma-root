@@ -1,5 +1,5 @@
 <map id="GamR::Nucleus::Transition::ApplyError" name="GamR::Nucleus::Transition::ApplyError">
-<area shape="rect" id="Node000001" title=" " alt="" coords="458,150,633,191"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="458,150,633,190"/>
 <area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#a96b06b9b004342fbf0f54cd3d6a308a8" title=" " alt="" coords="238,104,404,130"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="443,148,377,133,379,128,444,143"/>
 <area shape="rect" id="Node000007" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a7d0d1589078b53be7a8da0372924c349" title=" " alt="" coords="232,203,410,244"/>
@@ -14,6 +14,6 @@
 <area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="244,136,157,155,156,150,243,131"/>
 <area shape="rect" id="Node000008" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#ade67fbd9efac760657e3d1455a2f5592" title=" " alt="" coords="5,203,184,244"/>
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="216,226,184,226,184,221,216,221"/>
-<area shape="rect" id="Node000009" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a22cc58bf6eb5d0eda0bc207561b76921" title=" " alt="" coords="5,269,184,309"/>
+<area shape="rect" id="Node000009" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a22cc58bf6eb5d0eda0bc207561b76921" title=" " alt="" coords="5,268,184,309"/>
 <area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="235,251,168,270,167,265,233,246"/>
 </map>

@@ -1,8 +1,8 @@
 <map id="GamR::Spect::CountsBS" name="GamR::Spect::CountsBS">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,117,169,143"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,117,169,142"/>
 <area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#a4be92f8a1a93dce88a3536f732eb6080" title=" " alt="" coords="223,68,386,93"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,114,229,95,230,100,148,119"/>
-<area shape="rect" id="Node000005" href="$d0/db7/namespace_gam_r_1_1_utils.html#a31f74a9ca644d560dc14e19c4dbd773b" title=" " alt="" coords="225,117,384,143"/>
+<area shape="rect" id="Node000005" href="$d0/db7/namespace_gam_r_1_1_utils.html#a31f74a9ca644d560dc14e19c4dbd773b" title=" " alt="" coords="225,117,384,142"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="169,127,210,127,210,132,169,132"/>
 <area shape="rect" id="Node000006" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a8396c7f1f74d0314bf9e4c4cfe07e033" title=" " alt="" coords="217,167,392,207"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="139,141,210,160,209,165,138,146"/>
@@ -14,7 +14,7 @@
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="392,180,424,179,425,184,392,185"/>
 <area shape="rect" id="Node000009" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a55eeee9e8bc166f0ef8cce260b3da59b" title=" " alt="" coords="440,221,615,262"/>
 <area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="391,205,428,214,426,220,390,211"/>
-<area shape="rect" id="Node000008" href="$d0/d74/group___t_k.html#ga78f4477af7c95058e8a572065086f68a" title=" " alt="" coords="663,197,833,223"/>
+<area shape="rect" id="Node000008" href="$d0/d74/group___t_k.html#ga78f4477af7c95058e8a572065086f68a" title=" " alt="" coords="663,197,833,222"/>
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="616,187,648,192,647,197,615,192"/>
 <area shape="poly" id="edge8_Node000008_Node000008" title=" " alt="" coords="711,198,704,188,708,178,723,172,748,170,775,173,789,180,786,184,773,178,748,175,725,178,712,182,709,188,716,195"/>
 <area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="615,226,647,222,648,227,616,232"/>

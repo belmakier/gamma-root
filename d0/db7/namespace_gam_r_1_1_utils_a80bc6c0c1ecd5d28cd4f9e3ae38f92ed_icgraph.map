@@ -4,10 +4,10 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="853,225,837,188,814,144,783,99,745,61,725,49,728,44,748,57,787,96,818,141,842,185,858,223"/>
 <area shape="rect" id="Node000003" href="$d7/df7/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_transition.html#a25c6a55b281addf9e84c944204a7681c" title=" " alt="" coords="542,71,740,111"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="845,227,803,176,776,149,745,127,721,114,724,109,748,122,779,145,807,172,849,224"/>
-<area shape="rect" id="Node000004" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#abe2779b9bf1a77cbb982c99eba1df80e" title=" " alt="" coords="542,136,740,177"/>
+<area shape="rect" id="Node000004" href="$d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#ac019d45ea1678772bdc4dc7b542a8e4c" title=" " alt="" coords="535,136,747,177"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="828,233,746,192,712,180,714,175,748,187,830,228"/>
-<area shape="rect" id="Node000005" href="$d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#ac019d45ea1678772bdc4dc7b542a8e4c" title=" " alt="" coords="535,201,747,242"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="779,242,747,238,748,233,780,237"/>
+<area shape="rect" id="Node000005" href="$d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#abe2779b9bf1a77cbb982c99eba1df80e" title=" " alt="" coords="542,201,740,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="779,242,740,237,741,232,780,237"/>
 <area shape="rect" id="Node000006" href="$d0/d74/group___t_k.html#gaa496d15cf9600fa5790ff50c9392b0fd" title=" " alt="" coords="561,266,721,292"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="780,264,722,272,721,266,779,259"/>
 <area shape="rect" id="Node000012" href="$df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a392759dbcf7aa7088cf847fb88f4fbae" title=" " alt="" coords="566,316,716,357"/>
@@ -16,11 +16,11 @@
 <area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="848,278,805,325,778,349,748,371,723,383,720,378,745,366,774,345,801,321,844,275"/>
 <area shape="rect" id="Node000015" href="$d0/db7/namespace_gam_r_1_1_utils.html#ac40ffec6ca9461e9f22e68cad4e88a47" title=" " alt="" coords="569,446,713,472"/>
 <area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="858,279,842,315,818,358,787,400,748,436,714,452,712,447,745,431,783,396,814,355,837,313,853,277"/>
-<area shape="rect" id="Node000007" href="$d0/d74/group___t_k.html#gab9295d2a9e654d7540ee264d036590cd" title=" " alt="" coords="332,221,487,247"/>
+<area shape="rect" id="Node000007" href="$d0/d74/group___t_k.html#gab9295d2a9e654d7540ee264d036590cd" title=" " alt="" coords="332,221,487,246"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="556,265,478,250,479,244,557,260"/>
-<area shape="rect" id="Node000009" href="$d0/d74/group___t_k.html#gaf641b8c1f292803f8695310a0aee1896" title=" " alt="" coords="339,270,480,296"/>
+<area shape="rect" id="Node000009" href="$d0/d74/group___t_k.html#gaf641b8c1f292803f8695310a0aee1896" title=" " alt="" coords="338,270,480,296"/>
 <area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="546,283,480,284,480,279,546,278"/>
-<area shape="rect" id="Node000008" href="$d0/d17/_abbreviations_8cc.html#a56da1b89cd1ce3720264ffb38d8505aa" title=" " alt="" coords="241,221,283,247"/>
+<area shape="rect" id="Node000008" href="$d0/d17/_abbreviations_8cc.html#a56da1b89cd1ce3720264ffb38d8505aa" title=" " alt="" coords="241,221,283,246"/>
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="316,236,283,236,283,231,316,231"/>
 <area shape="rect" id="Node000010" href="$d0/d17/_abbreviations_8cc.html#a544c36017b9d9387f39e84863d9ae9a4" title=" " alt="" coords="243,270,281,296"/>
 <area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="323,286,282,286,282,280,323,280"/>

@@ -1,9 +1,9 @@
 <map id="src/lib/angdist/WignerD.hh" name="src/lib/angdist/WignerD.hh">
-<area shape="rect" id="Node000001" title=" " alt="" coords="207,5,379,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="206,5,379,31"/>
 <area shape="rect" id="Node000002" href="$df/dbd/_ang_dist_8cc.html" title=" " alt="" coords="5,79,175,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,39,125,81,124,76,243,34"/>
 <area shape="rect" id="Node000003" href="$dd/dbc/_stat_tensor_8cc.html" title=" " alt="" coords="199,79,386,105"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="295,46,295,79,290,79,290,46"/>
-<area shape="rect" id="Node000004" href="$d1/db4/_wigner_d_8cc.html" title=" " alt="" coords="411,79,583,105"/>
+<area shape="rect" id="Node000004" href="$d1/db4/_wigner_d_8cc.html" title=" " alt="" coords="410,79,583,105"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="342,34,463,76,461,81,340,39"/>
 </map>

@@ -50,5 +50,6 @@ var class_gam_r_1_1_t_k_1_1_gate =
     [ "SetHigh", "d0/d74/group___t_k.html#gaa651a72cdf22944bdd51fe337e82b550", null ],
     [ "SetLow", "d0/d74/group___t_k.html#ga3d39e18fbcfe0cf3971a10e61f0d9191", null ],
     [ "SetLow", "d0/d74/group___t_k.html#ga70c86ffda923e199ce6625fb73b75f4b", null ],
+    [ "SetScale", "d0/d74/group___t_k.html#gaf449734945b1eab96a4835598d95aee8", null ],
     [ "Valid", "d0/d74/group___t_k.html#gaca9203f72ff0b9ea7a58b97a9e9e012e", null ]
 ];

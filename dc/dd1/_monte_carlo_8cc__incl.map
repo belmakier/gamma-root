@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title=" " alt="" coords="260,5,442,31"/>
 <area shape="rect" id="Node000002" href="$d3/d31/_monte_carlo_8hh.html" title=" " alt="" coords="188,79,292,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="333,34,273,73,270,68,330,29"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="317,79,385,105"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="316,79,385,105"/>
 <area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="353,31,353,63,348,63,348,31"/>
 <area shape="rect" id="Node000009" title=" " alt="" coords="409,79,492,105"/>
 <area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="369,29,423,67,420,72,366,34"/>
@@ -14,6 +14,6 @@
 <area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="243,105,243,137,237,137,237,105"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="305,153,362,178"/>
 <area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="257,103,307,141,304,145,254,107"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="386,153,481,178"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="386,153,480,178"/>
 <area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="274,103,387,144,385,149,272,108"/>
 </map>

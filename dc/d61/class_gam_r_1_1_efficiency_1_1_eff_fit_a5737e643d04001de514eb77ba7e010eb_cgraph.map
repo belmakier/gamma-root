@@ -1,7 +1,12 @@
 <map id="GamR::Efficiency::EffFit::Fit" name="GamR::Efficiency::EffFit::Fit">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,46,181,72"/>
-<area shape="rect" id="Node000002" href="$dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a976665472fd0985ab779dff93252bad8" title=" " alt="" coords="234,5,389,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,43,218,37,219,42,181,48"/>
-<area shape="rect" id="Node000003" href="$d1/d16/class_gam_r_1_1_efficiency_1_1_eff_fit_1_1_global_chi_square.html#a840869018bdd011ba6cf26e273b04031" title=" " alt="" coords="229,71,394,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,69,213,74,213,79,180,74"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,181,55"/>
+<area shape="rect" id="Node000002" href="$dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a820a25ceeb770de93de22cb00135bf2c" title=" " alt="" coords="229,22,383,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,40,213,40,213,45,181,45"/>
+<area shape="rect" id="Node000003" href="$d0/d17/_abbreviations_8cc.html#aac6b7f4e4bdca0828a1553bfe8a0bca5" title=" " alt="" coords="431,29,469,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="383,40,415,40,415,45,383,45"/>
+<area shape="rect" id="Node000004" href="$dc/d89/namespace_gam_r_1_1_spect.html#aa3a93f8152a5a49fd88de42c1eb4f97f" title=" " alt="" coords="517,29,659,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="470,40,502,40,502,45,470,45"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="564,30,560,21,562,11,572,5,588,3,605,5,614,12,611,16,603,10,588,8,574,10,567,14,565,20,569,28"/>
+<area shape="rect" id="Node000005" href="$d0/db7/namespace_gam_r_1_1_utils.html#a0adbf2bb55ef0a9adfc45b00210c92c0" title=" " alt="" coords="707,29,865,55"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="659,40,691,40,691,45,659,45"/>
 </map>

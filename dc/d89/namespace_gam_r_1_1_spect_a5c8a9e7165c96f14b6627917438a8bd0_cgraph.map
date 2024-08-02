@@ -1,6 +1,6 @@
 <map id="GamR::Spect::IntegralBS" name="GamR::Spect::IntegralBS">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,78,171,104"/>
-<area shape="rect" id="Node000002" href="$d0/db7/namespace_gam_r_1_1_utils.html#a31f74a9ca644d560dc14e19c4dbd773b" title=" " alt="" coords="227,29,386,55"/>
+<area shape="rect" id="Node000002" href="$d0/db7/namespace_gam_r_1_1_utils.html#a31f74a9ca644d560dc14e19c4dbd773b" title=" " alt="" coords="227,29,386,54"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,75,231,56,232,61,149,80"/>
 <area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#a96b06b9b004342fbf0f54cd3d6a308a8" title=" " alt="" coords="224,78,389,104"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="171,88,208,88,208,94,171,94"/>
@@ -14,7 +14,7 @@
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="394,154,427,154,427,159,394,159"/>
 <area shape="rect" id="Node000009" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a55eeee9e8bc166f0ef8cce260b3da59b" title=" " alt="" coords="442,201,617,242"/>
 <area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="379,175,444,194,442,199,377,180"/>
-<area shape="rect" id="Node000008" href="$d0/d74/group___t_k.html#ga78f4477af7c95058e8a572065086f68a" title=" " alt="" coords="665,177,835,203"/>
+<area shape="rect" id="Node000008" href="$d0/d74/group___t_k.html#ga78f4477af7c95058e8a572065086f68a" title=" " alt="" coords="665,177,835,202"/>
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="618,167,650,172,649,177,617,172"/>
 <area shape="poly" id="edge8_Node000008_Node000008" title=" " alt="" coords="713,178,706,168,710,158,725,152,750,150,777,153,791,160,788,164,775,158,750,155,727,158,714,162,711,168,718,175"/>
 <area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="617,206,649,202,650,207,618,212"/>

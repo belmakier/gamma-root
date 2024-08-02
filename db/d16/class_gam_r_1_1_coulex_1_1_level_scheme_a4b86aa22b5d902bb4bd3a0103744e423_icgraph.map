@@ -1,6 +1,6 @@
 <map id="GamR::Coulex::LevelScheme::PrintLevels" name="GamR::Coulex::LevelScheme::PrintLevels">
 <area shape="rect" id="Node000001" title=" " alt="" coords="757,39,947,79"/>
-<area shape="rect" id="Node000002" href="$db/d16/class_gam_r_1_1_coulex_1_1_level_scheme.html#a43e42d464d621adff7a959aeeef6b690" title=" " alt="" coords="509,5,698,46"/>
+<area shape="rect" id="Node000002" href="$db/d16/class_gam_r_1_1_coulex_1_1_level_scheme.html#a43e42d464d621adff7a959aeeef6b690" title=" " alt="" coords="508,5,698,46"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="742,47,698,41,699,36,742,42"/>
 <area shape="rect" id="Node000006" href="$dd/d3e/class_gam_r_1_1_coulex_1_1_coulex_calculation.html#a46d4f1bd67b5c6c438efd93b9f1e4838" title=" " alt="" coords="497,71,709,111"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="742,76,710,80,710,75,742,70"/>

@@ -1,0 +1,11 @@
+<map id="GamR::Spect::ContourCalc" name="GamR::Spect::ContourCalc">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,181,60"/>
+<area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#a6d5ec59ed9dad8b1a1d52615652abf81" title=" " alt="" coords="229,35,267,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,45,213,45,213,50,181,50"/>
+<area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#a100c7a24b9e9670a79f4707d985bd259" title=" " alt="" coords="315,35,460,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="268,45,300,45,300,50,268,50"/>
+<area shape="rect" id="Node000004" href="$d0/d74/group___t_k.html#ga4607d5e3d8f5d83d75f4ca038572a7f8" title=" " alt="" coords="508,5,692,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="460,35,493,30,493,36,461,40"/>
+<area shape="rect" id="Node000005" href="$d0/d74/group___t_k.html#ga0073e987a24adc053cfbf2c833d41749" title=" " alt="" coords="508,55,692,96"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="461,54,493,59,493,64,460,60"/>
+</map>
