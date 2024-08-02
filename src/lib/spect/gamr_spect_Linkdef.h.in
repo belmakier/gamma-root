@@ -16,5 +16,6 @@
 #pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/FFT.hh;
 #pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/BackSub.hh;
 #pragma link C++ defined_in @CMAKE_CURRENT_SOURCE_DIR@/Calibrate.hh;
+#pragma link C++ global GamR::Spect::gFitGuesses;
 
 #endif

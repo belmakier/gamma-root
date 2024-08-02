@@ -719,6 +719,7 @@ namespace GamR {
     }
 
     void Gate::NormBackSub(TH1 *hist, TH1 *ref, Gate background) {
+      /*
       //this is very dumb: subtracts constant background from all histograms and then rescales
       double back_level = background.GetIntegral(hist)/(double)background.GetBinWidth(hist);
       std::cout << "hist = " << hist->GetName() << std::endl;
@@ -733,6 +734,10 @@ namespace GamR {
       }
       std::cout << GetIntegral(hist) << "   " << GetIntegral(ref) << std::endl;
       double scale = GetIntegral(ref)/GetIntegral(hist);
+      hist->Scale(scale);
+      */
+
+      double scale = GetIntegral(ref, background)/GetIntegral(hist, background);
       hist->Scale(scale);
     }
     

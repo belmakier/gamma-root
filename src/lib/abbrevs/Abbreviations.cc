@@ -232,3 +232,9 @@ void sp2(int i, Option_t *option ) { GamR::Spect::Draw2D(i, option); }
 TH2 *add2(std::vector<TH2*> hists, const char *name ) { return GamR::Spect::Add(hists, name); }
 TH2 *add2(std::vector<int> hists, const char *name ) { return GamR::Spect::Add2(hists, name); }
 TH2 *add2(int iStart, int iStop, const char *name ) { return GamR::Spect::Add2(iStart, iStop, name); }
+TH2 *rbx(TH2 *hist, int rebin) { return GamR::Spect::RebinX(hist, rebin); }
+void rbx(TVirtualPad *canvas , int rebin) { GamR::Spect::RebinX(canvas, rebin); }
+TH2 *rby(TH2 *hist, int rebin) { return GamR::Spect::RebinY(hist, rebin); }
+void rby(TVirtualPad *canvas , int rebin) { GamR::Spect::RebinY(canvas, rebin); }
+void cc(TH2 *hist, int ncontours, double bias) { GamR::Spect::ContourCalc(hist, ncontours, bias); }
+void cc(TVirtualPad *canvas, int ncontours, double bias) { GamR::Spect::ContourCalc(canvas, ncontours, bias); }

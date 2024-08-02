@@ -307,7 +307,55 @@ namespace GamR {
       hist->Rebin(rebin);
       return hist;
     }
+
+    TH2 *RebinX(TH2 *hist, int rebin) {
+      hist->RebinX(rebin);
+      return hist;
+    }
+
+    TH2 *RebinY(TH2 *hist, int rebin) {
+      hist->RebinY(rebin);
+      return hist;
+    }
+
+    void RebinX(TVirtualPad *canvas, int rebin) {
+      if (!canvas) { if (!gPad) { return; } canvas = gPad; }
+
+      int nPads = GamR::Utils::GetNPads(canvas);
+      
+      if (!nPads) {
+        TH2D* hist = GamR::Utils::GetHist2D(canvas);
+        GamR::Spect::RebinX(hist, rebin);
+        canvas->Modified();
+      }      
+      
+      for (int i=0; i<nPads; ++i) {
+        canvas->cd(i+1);
+        RebinX(canvas->cd(i+1), rebin);
+      }
+      canvas->Modified();
+      canvas->cd();
+    }
     
+    void RebinY(TVirtualPad *canvas, int rebin) {
+      if (!canvas) { if (!gPad) { return; } canvas = gPad; }
+
+      int nPads = GamR::Utils::GetNPads(canvas);
+      
+      if (!nPads) {
+        TH2D* hist = GamR::Utils::GetHist2D(canvas);
+        GamR::Spect::RebinY(hist, rebin);
+        canvas->Modified();
+      }      
+      
+      for (int i=0; i<nPads; ++i) {
+        canvas->cd(i+1);
+        RebinY(canvas->cd(i+1), rebin);
+      }
+      canvas->Modified();
+      canvas->cd();
+    }
+
     void Rebin(TVirtualPad *canvas, int rebin) {
       if (!canvas) { if (!gPad) { return; } canvas = gPad; }
 

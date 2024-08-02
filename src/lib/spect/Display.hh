@@ -28,6 +28,8 @@ namespace GamR {
     void StackSpectra(int i2D, int iStart, int iStop, Option_t *option = "hist");
     void StackSpectra(std::vector<std::string> files, std::string name, int iX, Option_t *option = "hist");
     void StackSpectra(std::vector<std::string> files, std::string name, Option_t *option = "hist");
+    void ContourCalc(TH2 *hist, int ncontours=20, double bias=0.2);
+    void ContourCalc(TVirtualPad *canvas = NULL, int ncontours=20, double bias = 0.2);
     void LinAll(TVirtualPad *canvas = NULL);
     void LogAll(TVirtualPad *canvas = NULL);
     void ZoomAllX(double low, double high, TVirtualPad *canvas = NULL);

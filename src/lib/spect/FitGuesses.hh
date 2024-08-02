@@ -2,7 +2,7 @@
 #define GAMR_SPECT_FITGUESSES_HH
 
 #include <vector>
-#include <iostream>                             
+#include <iostream>
 #include <string>
 #include <fstream>
 

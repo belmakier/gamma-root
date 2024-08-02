@@ -36,6 +36,10 @@ namespace GamR {
     TH2D *Add2(int iStart, int iStop, const char *name);
     TH1 *Rebin(TH1 *hist, int rebin);
     void Rebin(TVirtualPad *canvas, int rebin);
+    TH2 *RebinX(TH2 *hist, int rebin);
+    void RebinX(TVirtualPad *canvas, int rebin);
+    TH2 *RebinY(TH2 *hist, int rebin);
+    void RebinY(TVirtualPad *canvas, int rebin);
     TH1D *Multiply(TH1 *hist1, const char *name, double c1 = 1);
     void Reverse(TH1 *h);
     TH2D *RotateTH2(TH2 *hist, float angle, const char *name, TCutG *bananaGate = 0);

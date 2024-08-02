@@ -19,7 +19,12 @@
 #include <TMultiGraph.h>
 #include <TFile.h>
 #include <TColor.h>
-#include <TMinuit.h>
+
+#include <Math/Functor.h>
+#include <Math/Factory.h>
+#include <Math/Minimizer.h>
+#include <Math/MinimizerOptions.h>
+
 
 #include "Efficiency.hh"
 
@@ -198,11 +203,21 @@ namespace GamR {
       double g = pars[6];
       double f1 = pars[0] + pars[1]*x1 + pars[2]*x1*x1;
       double f2 = pars[3] + pars[4]*x2 + pars[5]*x2*x2;
-
+      
       double abs_scale = pars[7];
       double f = 0;
       double nf = 0;
       double r = 0;
+
+      //if both are negative we have a problem, f1^(-g) + f2^(-g) is potentially undefined
+      //--> return zero
+      if (f1 < 0 && f2 < 0) {
+        if (x[0] > 50 && x[0] < 8192) {
+          std::cerr << "Warning! Both parabolic components of efficiency are < 0 for E_gamma = " << x[0] << " keV, consider decreasing normalization for data sets" << std::endl; 
+        }
+        return 0;
+      }
+
       if (f1 <= f2 ) {
         r = f1/f2;
         f = f1;
@@ -213,13 +228,33 @@ namespace GamR {
         f = f2;
         nf = f1;
       }
-      
+
+      //if one is negative, and the other positive, or both positive but one is much smaller than the other
+      //approximation where only large component matters
       if (r <= 1e-6) {
-        return exp(f)*abs_scale;
+        double retval = exp(f)*abs_scale;
+        /*
+        if (retval > 0.05) {
+          std::cout << "x = " << x[0] << ", f1, f2 = " << f1 << "  " << f2 << std::endl;
+          std::cout << "exp(f) = " << exp(f) << ", abs_scale = " << abs_scale << std::endl;
+          std::cout << "eff = " << retval << std::endl;
+        }
+        */
+        return retval;
       }
+      //both are positive and approximately the same size
+      //full evaluation
       else {
         double y = pow(pow(r, g) + 1.0, -1.0/g);
-        return exp(y*f)*abs_scale;
+        double retval = exp(y*f)*abs_scale;
+        /*
+        if (retval > 0.05) {
+          std::cout << "x = " << x[0] << ", f1, f2 = " << f1 << "  " << f2 << std::endl;
+          std::cout << "exp(y*f) = " << exp(y*f) << ", abs_scale = " << abs_scale << std::endl;
+          std::cout << "eff = " << retval << std::endl;
+          }
+        */
+        return retval;
       }
     }      
 
@@ -456,9 +491,9 @@ namespace GamR {
           if (!fAbsolute) {
             y = y * fAbsScale;
             y_err = y_err * fAbsScale;
-          }          
+          }
           graph->SetPoint(i, fEnergies[i], y);
-          graph->SetPointError(i, 0, 0.1*fAbsScale);
+          graph->SetPointError(i, 0, 0.01*fAbsScale);
         }
       return graph;
     }
@@ -475,7 +510,8 @@ namespace GamR {
           if (!fAbsolute) {
             y = y * fAbsScale;
             y_err = y_err * fAbsScale;
-          }          
+          }
+          std::cout << fEnergies[i] << "   " << fEfficiencies[i] << "   " << fNormalisation << "   " << y << std::endl;
           graph->SetPoint(i, fEnergies[i], y);
           graph->SetPointError(i, 0, y_err);
         }
@@ -523,6 +559,51 @@ namespace GamR {
     public:
       GlobalChiSquare(EffFit *parent) { p = parent; }
 
+      double operator()(const double *par) {
+        double chisq = 0;
+
+        p->EffFunc->SetParameter(0, par[0]);
+        p->EffFunc->SetParameter(1, par[1]);
+        p->EffFunc->SetParameter(2, par[2]);
+        p->EffFunc->SetParameter(3, par[3]);
+        p->EffFunc->SetParameter(4, par[4]);
+        p->EffFunc->SetParameter(5, par[5]);
+        p->EffFunc->SetParameter(6, par[6]);
+        p->EffFunc->SetParameter(7, par[7]);
+
+        int nDataSets = p->fDataSets.size();
+        for (int i=0; i<8+nDataSets; ++i) {
+          std::cout << Form("%6.3f   ", par[i]);
+        }
+
+        for (int i=0; i<nDataSets; ++i) {
+          p->fDataSets[i].SetAbsScale(par[7]);
+          p->fDataSets[i].SetNorm(par[8+i]);
+          if (p->fDataSets[i].GetNData() > 0) {
+            TGraphErrors *graph;
+            if (p->EqualWeights) {
+              graph = p->fDataSets[i].GetGraph();
+            }
+            else {
+              graph = p->fDataSets[i].GetGraphErrors();
+            }
+            if (p->fDataSets[i].GetAbsolute()) { //a bit of extra encouragement here, as for absolute normalizations we typically have a few data points with which we should achieve almost perfect agreement
+              chisq += 100.0*graph->Chisquare(p->EffFunc);
+            }
+            else {
+              chisq += graph->Chisquare(p->EffFunc);
+            }
+
+            delete graph;
+          }
+        }
+        std::cout << Form("chisq=%5.1f",chisq);
+        std::cout << std::endl;
+        return chisq;
+      }
+      
+
+      /*
       static void minuit(Int_t &npar, Double_t *gin, Double_t &f, Double_t *par, Int_t iflag)
       {
         f = 0;
@@ -554,13 +635,108 @@ namespace GamR {
           }
         }
       }
+    */
     };
+
 
     EffFit *EffFit::GlobalChiSquare::p = nullptr;
 
-    void EffFit::Fit(int quiet/*=0*/)
+    void EffFit::Fit(int quiet)
     {
       int nDataSets = fDataSets.size();
+      if (nDataSets == 0) { return; }
+      Int_t npars = 8 + nDataSets;
+
+      ROOT::Math::Minimizer *min = NULL;
+      min=ROOT::Math::Factory::CreateMinimizer("Minuit2", "Minimize");
+  
+      if (min==NULL) { std::cerr << "Minimizer failed to create!" << std::endl; exit(1); }
+
+      GlobalChiSquare func(this);
+      ROOT::Math::Functor f_init(func,npars);
+
+      min->SetErrorDef(1.);
+      min->SetMaxFunctionCalls(100000);
+      min->SetMaxIterations(100000);
+      min->SetTolerance(1e-6);
+      min->SetPrecision(1e-8);
+      min->SetFunction(f_init);
+
+      Int_t parnum = 0;
+
+      std::cout << "Starting fit with guesses: " << std::endl;
+      std::vector< std::string > parnames = {"A", "B", "C", "D", "E", "F", "G", "AbsScale"};
+      for ( int i=0; i<8; ++i ) {
+        double parmin, parmax;
+        EffFunc->GetParLimits(i, parmin, parmax);
+        if (parmin==parmax) {
+          parmin = EffFunc->GetParameter(i) - 1;  //because Minuit doesn't allow equal upper and lower bounds
+          parmax = EffFunc->GetParameter(i) + 1;
+        }
+        std::cout << "   " << parnames[i] << "  " << EffFunc->GetParameter(i) << "  (" << parmin << "," << parmax << ")" << std::endl;
+        min->SetLimitedVariable(parnum, parnames[i].c_str(), EffFunc->GetParameter(i), EffFunc->GetParError(i), parmin, parmax);
+        min->SetVariableStepSize(parnum, 0.1);
+        ++parnum;
+      }
+
+      for (int i=0; i<8; ++i) {
+        double parmin, parmax;
+        EffFunc->GetParLimits(i, parmin, parmax);
+        if (parmin*parmax != 0 && parmin >= parmax) {
+          min->FixVariable(i);
+        }
+      }
+          
+      for (int i=0; i<nDataSets; ++i) {
+        std::cout << "Initial fNorm " << i << " = " << fDataSets[i].GetNorm() << std::endl;
+        min->SetLimitedVariable(parnum, ("N"+std::to_string(i)).c_str(), fDataSets[i].GetNorm(), 0.02*fDataSets[i].GetNorm(), 0.8*fDataSets[i].GetNorm(), 1.2*fDataSets[i].GetNorm());
+        if (fDataSets[i].GetNData() == 0 || fDataSets[i].GetAbsolute()) {
+          min->FixVariable(parnum);
+        }
+        ++parnum;
+      }
+        
+      min->FixVariable(7); //absolute scale
+      min->FixVariable(8); //first data set
+      
+      // MINIMIZE 
+      min->Minimize();
+      min->PrintResults();
+      
+      //get parameters + errors and put into EffFunc
+      for (int i=0; i<8; ++i) {
+        double parVal, parErr;
+        parVal = min->X()[i];
+        parErr = min->Errors()[i];
+        EffFunc->SetParameter(i, parVal);
+        EffFunc->SetParError(i, parErr);
+        if (i==7) {
+          fAbsScale = parVal;
+        }
+      }
+      //set final normalizations
+      std::cout << "Setting final normalizations" << std::endl;
+      for (int i=0; i<nDataSets; ++i) {
+        double parVal, parErr;
+        parVal = min->X()[8+i];
+        fDataSets[i].SetNorm(parVal);
+        std::cout << "Dataset " << i << ": " << parVal << std::endl;
+      }
+
+      delete min;
+
+      if (quiet==0) {
+        TCanvas *c1 = new TCanvas("cEff", "Efficiency Curve", 1280, 720);
+        this->Draw(c1);
+      }
+      
+    }
+    
+    /*
+    void EffFit::Fit(int quiet)
+    {
+      int nDataSets = fDataSets.size();
+      if (nDataSets == 0) { return; }
       Int_t npars = 8 + nDataSets;
       auto gMinuit = new TMinuit(npars);
       //gMinuit->Command("SET PRINT -1");
@@ -602,16 +778,16 @@ namespace GamR {
           
       for (int i=0; i<nDataSets; ++i) {
         std::cout << "Initial fNorm " << i << " = " << fDataSets[i].GetNorm() << std::endl;
-        gMinuit->mnparm(parnum, ("N"+std::to_string(i)).c_str(), fDataSets[i].GetNorm(), 0.1*fDataSets[i].GetNorm(), 0.0, 10*fDataSets[i].GetNorm(), ierflg);
+        gMinuit->mnparm(parnum, ("N"+std::to_string(i)).c_str(), fDataSets[i].GetNorm(), 0.02*fDataSets[i].GetNorm(), 0.8*fDataSets[i].GetNorm(), 1.2*fDataSets[i].GetNorm(), ierflg);
         if (fDataSets[i].GetNData() == 0 || fDataSets[i].GetAbsolute()) {
           gMinuit->FixParameter(parnum);
         }
         ++parnum;
       }
-
-      gMinuit->FixParameter(8);      
+        
+      gMinuit->FixParameter(7); //absolute scale
       
-      /* MINIMIZE */
+      // MINIMIZE 
       arglist[0] = 100000; // Max Iterations
       arglist[1] = 1;      // Number of sigma max step
       gMinuit->mnexcm("MINIGRAD", arglist, 2, ierflg);
@@ -629,6 +805,12 @@ namespace GamR {
           fAbsScale = parVal;
         }
       }
+      //set final normalizations
+      for (int i=0; i<nDataSets; ++i) {
+        double parVal, parErr;
+        gMinuit->GetParameter(8+i, parVal, parErr);
+        fDataSets[i].SetNorm(parVal);
+      }
 
       delete gMinuit;
 
@@ -638,6 +820,7 @@ namespace GamR {
       }
       
     }
+    */
 
     void EffFit::SetParams(FitParams params) {
       for (int i=0; i<fDataSets.size(); ++i) {
@@ -673,7 +856,7 @@ namespace GamR {
       EffFunc->SetParameter(7, fAbsScale);
     }
     
-    TMultiGraph* EffFit::Draw(TCanvas *canvas, int detID/*=0*/, double xlow/*=-1*/, double xhigh/*=-1*/)
+    TMultiGraph* EffFit::Draw(TCanvas *canvas, int detID/*=0*/, double xlow/*=-1*/, double xhigh/*=-1*/, bool log/*=false*/)
     {
       std::cout << "Drawing Detector " << detID << std::endl;
       canvas->Clear();
@@ -691,7 +874,12 @@ namespace GamR {
           dsetgraph->SetMarkerColor(colors[i]);
           graph->Add(dsetgraph);          
         }
-      graph->GetHistogram()->SetMinimum(0.0);
+      if (log) {
+        graph->GetHistogram()->SetMinimum(0.001);
+      }
+      else {
+        graph->GetHistogram()->SetMinimum(0.0);
+      }
       graph->Draw("A*");
       if (xlow!=xhigh) {
         graph->GetXaxis()->SetLimits(xlow, xhigh);
@@ -699,6 +887,16 @@ namespace GamR {
       graph->Draw("A*");
       EffFunc->SetParameter(7, fAbsScale);
       EffFunc->Draw("same");
+      /*
+      std::cout << "EXPLICIT PRINT OUT" << std::endl;
+      for (int i=1; i<4096; ++i) {
+        std::cout << i << "  " << EffFunc->Eval(i) << std::endl;
+      }
+      */
+      if (log) {
+        canvas->SetLogy();
+        canvas->SetLogx();
+      }
       return graph;
     }
 
@@ -712,6 +910,7 @@ namespace GamR {
           std::ofstream dset_file(fname);            
           TGraphErrors *dsetgraph = fDataSets[i].GetGraphErrors();
           std::cout << "    Data Set " << i << ", nPoints " << dsetgraph->GetN() << std::endl;
+          std::cout << fname << std::endl;
           for (int j=0; j<dsetgraph->GetN(); ++j) {
             double x, y, yerr;
             dsetgraph->GetPoint(j, x, y);
@@ -761,6 +960,7 @@ namespace GamR {
         }
       std_dev = std::sqrt(std_dev/(double)nPoints);
       std::cout << "Spread = " << std_dev << std::endl;
+      canvas->SetLogy(0);
       graph->Draw("A*");
       if (xlow!=xhigh) {
         graph->GetXaxis()->SetLimits(xlow, xhigh);
@@ -771,10 +971,10 @@ namespace GamR {
       return graph;
     }
 
-    void EffFit::Draw(const char* outFile, double xlow, double xhigh) {
+    void EffFit::Draw(const char* outFile, double xlow, double xhigh, bool log) {
       TCanvas *c1 = new TCanvas();
       c1->Print(((std::string)outFile+"[").c_str());
-      TMultiGraph *graph = Draw(c1, 0, xlow, xhigh);
+      TMultiGraph *graph = Draw(c1, 0, xlow, xhigh, log);
       c1->Update();
       c1->Print(outFile);
       TMultiGraph *res = DrawRes(c1, 0, xlow, xhigh);
@@ -824,9 +1024,6 @@ namespace GamR {
         TFormula fval("fval", sParams[i].c_str());
         TFormula flow("flow", sLimLow[i].c_str());
         TFormula fhigh("fhigh", sLimHigh[i].c_str());
-        std::cout << "TFormula for parameter " << i << ": " << fval.GetTitle() << std::endl;
-        std::cout << "TFormula for low limit " << i << ": " << flow.GetTitle() << std::endl;
-        std::cout << "TFormula for high limit " << i << ": " << fhigh.GetTitle() << std::endl;
         double parlow, parhigh;
         //func->GetParLimits(i, parlow, parhigh);
         params[i] = fval;//.Eval(func->GetParameter(i));
@@ -838,7 +1035,6 @@ namespace GamR {
         else {
           fixed[i] = 0;
         }
-        std::cout << "Fixed = " << fixed[i] << std::endl;
       }
     }  
 
@@ -877,6 +1073,7 @@ namespace GamR {
 
     void MultiEffFit::SetParams(int ID, FitParams params)
     {
+      if (fEffFits.find(ID) == fEffFits.end()) { return; }
       fEffFits[ID].SetParams(params);
     }
 
@@ -910,28 +1107,39 @@ namespace GamR {
         efffit.second.fDataSets[iDataSet].EraseData(key);
       }
     }
+
+    void MultiEffFit::SetEqualWeights(bool eq) {
+      for (auto &efffit : fEffFits) {
+        efffit.second.EqualWeights = true;
+      }
+    }
     
     void MultiEffFit::Fit()
     {
       for (auto &efffit : fEffFits) {
+        std::cout << "=====================================================" << std::endl;
+        std::cout << "FITTING DETECTOR " << efffit.first << std::endl;
+        std::cout << "=====================================================" << std::endl;
         efffit.second.Fit(1);
       }
     }
 
     void MultiEffFit::Fit(int ID)
     {
+      if (fEffFits.find(ID) == fEffFits.end()) { return; }
       fEffFits[ID].Fit(1);
     }
     
-    void MultiEffFit::Draw(const char *outFile, double xlow/*=-1*/, double xhigh/*=-1*/)
+    void MultiEffFit::Draw(const char *outFile, double xlow/*=-1*/, double xhigh/*=-1*/, bool log/*=false*/)
     {
       std::vector<int> presentIDs;
       TCanvas *c1 = new TCanvas("c1", "c1", 1280, 720);
       c1->Print((outFile+std::string("[")).c_str());
       for (auto &efffit : fEffFits) {
         int detID = efffit.first;
+        std::cout << "Drawing Det " << detID << std::endl;
         c1->Clear();
-        TMultiGraph *graph = efffit.second.Draw(c1, detID, xlow, xhigh);
+        TMultiGraph *graph = efffit.second.Draw(c1, detID, xlow, xhigh, log);
         c1->Update();
         c1->Print(outFile);
         presentIDs.push_back(detID);

@@ -20,7 +20,8 @@
 
 namespace GamR {
   namespace Spect {
-
+    //extern PeakFitGuesses *gFitGuesses;
+    
     GamR::Spect::PeakFit::PeakFit() {
       fFitGuesses = gFitGuesses;
     }
@@ -340,24 +341,29 @@ namespace GamR {
         fTotal->SetParameter(2, 0.01);
       }
       //for (int i = 0; i < (int)Peaks.size(); i++) {
+      double histMax = hist->GetMaximum();
       for (auto &peak : Peaks) {
         auto peakKey = peak.first;
         auto cent = peak.second;
 
-        std::cout << peakKey << "   " << cent << std::endl;
+        //std::cout << peakKey << "   " << cent << std::endl;
         //int nBin = hist->FindBin(peaks[i]);
         int nBin = hist->FindBin(cent);
         //auto pp = fPeakParamInds[i];
         auto pp = fPeakParamInds[peakKey];
         fTotal->SetParameter(pp.iAmplitude, hist->GetBinContent(nBin) - (offset + slope*(cent - (fHigh + fLow)/2.0)));
+        //make sure peaks are not negative
+        fTotal->SetParLimits(pp.iAmplitude, 0, histMax*2.0);
         //fTotal->SetParameter(pp.iCentroid, Peaks[i]);
         fTotal->SetParameter(pp.iCentroid, cent);
-        std::cout << pp.iCentroid << "   " << cent << std::endl;
+        //std::cout << pp.iCentroid << "   " << cent << std::endl;
         if (fPeakEnFix.find(peakKey) != fPeakEnFix.end()) {
           if ( fPeakEnFix[peakKey] == 1 ) {
             fTotal->FixParameter(pp.iCentroid, cent);
           }
         }
+
+
         //sigma = 5*bin width (?)        
         //fTotal->SetParameter(pp.iWidth, 5.0*hist->GetBinWidth(i));
         if (!parameters.iFixWidthsFile) {
@@ -422,9 +428,9 @@ namespace GamR {
     }
 
     void GamR::Spect::PeakFit::Fit(TH1 *hist, Option_t *foption) {
-      if (!parameters.iQuiet) {
-        fFitGuesses->Print();
-      }
+      //if (!parameters.iQuiet) {
+      //  fFitGuesses->Print();
+      //}
       std::string fopts(foption);
       fopts = fopts + " R";
 
@@ -1127,7 +1133,7 @@ namespace GamR {
     }
 
     double PeakFit::GetAmp(std::string peakKey) {
-      return fPeaks[peakKey]->GetCent();
+      return fPeaks[peakKey]->GetAmp();
     }
 
     double PeakFit::GetAmpError(std::string peakKey) {

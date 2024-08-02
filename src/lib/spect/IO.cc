@@ -31,19 +31,23 @@ namespace GamR {
       return ss.str();
     }
 
-    std::string ToText(const TH2 *h, std::string outfile, std::string delimiter, int binx, int biny)
+    std::string ToText(const TH2 *h, std::string outfile, std::string delimiter, int binx_lo, int binx_hi, int biny_lo, int biny_hi)
     {
       std::stringstream ss;
       ss << "#ROOT TH2 in ASCII format" <<std::endl;
       ss << "#name : " << h->GetName() << "   title : " << h->GetTitle() << std::endl;
       ss << "#x-axis : " << h->GetXaxis()->GetTitle() << "   y-axis : " << h->GetYaxis()->GetTitle() << std::endl;
       ss << "#x" << delimiter << "y" << delimiter << "count" << delimiter << "error\n";
+      int minx = 1;
+      int miny = 1;
       int maxx = h->GetNbinsX();
       int maxy = h->GetNbinsY();
-      if (binx > 0) { maxx = binx; }
-      if (biny > 0) { maxy = biny; }
-      for (int i = 0; i < maxx; ++i) {
-        for (int j = 0; j < maxy; ++j) {
+      if (binx_lo > 0) { minx = binx_lo; }
+      if (biny_lo > 0) { miny = biny_lo; }
+      if (binx_hi > 0) { maxx = binx_hi; }
+      if (biny_hi > 0) { maxy = biny_hi; }
+      for (int i = minx; i < maxx; ++i) {
+        for (int j = miny; j < maxy; ++j) {
           ss << h->GetXaxis()->GetBinCenter(i) << delimiter;
           ss << h->GetYaxis()->GetBinCenter(j) << delimiter;
           ss << h->GetBinContent(i,j) << delimiter;          

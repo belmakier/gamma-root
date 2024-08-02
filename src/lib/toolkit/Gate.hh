@@ -65,6 +65,7 @@ namespace GamR {
       void SetLow(std::string l) { std::stringstream(l) >> Low; Valid();};
       void SetHigh(double h) { High = h; Valid();}; // *MENU* *ARGS={h=>High}
       void SetHigh(std::string h) { std::stringstream(h) >> High; Valid();};
+      void SetScale(double s) { double cent = (Low + High)/2.; double width = GetWidth(); Low = cent - s*width/2.; High = cent + s*width/2.; }
       double GetLow() const { return Low; };
       double GetHigh() const { return High; };
       double GetWidth() const { return High - Low; };

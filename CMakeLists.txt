@@ -11,7 +11,7 @@ set(PROJECT_DESCRIPTION "GammaROOT")
 
 set(GAMR_PROJ_VER ${PROJECT_NAME}-${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH})
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -30,11 +30,11 @@ option(GAMRTREE "GamR tree processing" OFF)
 option(GAMRVIEWER "GamR tree processing - experimental" OFF)
 option(GAMRPROC "GamR fast-timing processor" OFF)
 option(GAMREFF "GamR HPGe efficiency fitting" ON)
-option(GAMRCOULEX "GamR implementation of Winther-deBoer Coulex codes" ON)
+option(GAMRCOULEX "GamR implementation of Winther-deBoer Coulex codes" OFF)
 option(GAMRABBREVS "GamR abbreviations for command-line use" ON)
-option(GAMRBATEMAN "GamR Bateman equation solver - requires BOOST" ON)
+option(GAMRBATEMAN "GamR Bateman equation solver - requires BOOST" OFF)
 
-option(gamr_WITH_TESTING "Build tests/examples" ON)
+option(gamr_WITH_TESTING "Build tests/examples" OFF)
 option(gamr_NO_INSTALL "Skip installation process" OFF)
 
 define_property(GLOBAL PROPERTY GAMR_LIBS
@@ -124,15 +124,17 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/extern)
 add_definitions("-DINI_MAX_LINE=2000")
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/lib)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/bin)
-add_subdirectory(${PROJECT_SOURCE_DIR}/src/tests)
+if (gamr_WITH_TESTING) 
+  add_subdirectory(${PROJECT_SOURCE_DIR}/src/tests)
+endif()
 
 get_property(libs GLOBAL PROPERTY GAMR_LIBS)
 get_property(libdirs GLOBAL PROPERTY GAMR_LIBDIRS)
-#generate rootlogon
-set(GAMR_ROOTLOGON_LIBS "// Libraries")
-foreach (lib ${libs})
-  set(GAMR_ROOTLOGON_LIBS "${GAMR_ROOTLOGON_LIBS}\ngROOT->ProcessLine(\".L ${CMAKE_INSTALL_PREFIX}/${GAMR_INSTALL_LIBDIR}/lib${lib}.${LIB_SUFFIX}\");")  
-endforeach()
+#generate rootlogon -> this started breaking things and apparently wasn't necessary (?!?)
+#set(GAMR_ROOTLOGON_LIBS "// Libraries")
+#foreach (lib ${libs})
+#  set(GAMR_ROOTLOGON_LIBS "${GAMR_ROOTLOGON_LIBS}\ngROOT->ProcessLine(\".L ${CMAKE_INSTALL_PREFIX}/${GAMR_INSTALL_LIBDIR}/lib${lib}.${LIB_SUFFIX}\");")  
+#endforeach()
 
 set(GAMR_ROOTLOGON_INCLUDES "// Includes")
 set(GAMR_ROOTLOGON_INCLUDES "${GAMR_ROOTLOGON_INCLUDES}\ngROOT->ProcessLine(\".include ${CMAKE_INSTALL_PREFIX}/${GAMR_INSTALL_INCDIR}\");")

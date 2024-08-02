@@ -6,6 +6,7 @@
 
 #include <TCanvas.h>
 #include <TH2.h>
+#include <TCutG.h>
 #include <TSpectrum2.h>
 
 #include <utils/Utilities.hh>
@@ -54,6 +55,11 @@ namespace GamR {
     TH1D *BackgroundSubtractY(TCanvas *canvas);
 
     TH2D *BackgroundSubtract2D(TH2 *peak, TH2 *background, double scale);
+
+    TCutG *DrawCut(TVirtualPad *canvas, bool verbose=false);
+    TCutG *DrawCut(std::string cutfile, int ID, TVirtualPad *canvas);
+
+    void PrintCut(TCutG *cut);
 
     std::shared_ptr<TH2D> BackgroundEstimate(const TH2 *hist, Int_t NiterX = 4, Int_t NiterY = 4,
                                              Int_t direction = TSpectrum2::kBackIncreasingWindow,

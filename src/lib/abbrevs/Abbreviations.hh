@@ -98,6 +98,12 @@ void sp2(int i, Option_t *option = "colz2");
 TH2 *add2(std::vector<TH2*> hists, const char *name = "sum");
 TH2 *add2(std::vector<int> hists, const char *name = "sum");
 TH2 *add2(int iStart, int iStop, const char *name = "sum");
+TH2 *rbx(TH2 *hist, int rebin);
+void rbx(TVirtualPad *canvas = NULL, int rebin = 2);
+TH2 *rby(TH2 *hist, int rebin);
+void rby(TVirtualPad *canvas = NULL, int rebin = 2);
+void cc(TH2 *hist, int ncontours=20, double bias=0.2);
+void cc(TVirtualPad *canvas=NULL, int ncontours=20, double bias=0.2);
 
 
 #endif

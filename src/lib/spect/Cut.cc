@@ -1,4 +1,8 @@
+#include <TMarker.h>
+
 #include "Cut.hh"
+
+
 
 namespace GamR {
   namespace Spect {
@@ -469,6 +473,107 @@ namespace GamR {
 
       return backsub;
     }
+
+    TCutG *DrawCut(TVirtualPad *canvas, bool verbose) {
+      TMarker *marker = new TMarker();      
+      TObject *obj;
+
+      std::string canvasname = canvas->GetName();
+
+      TGraph *gr = new TGraph();
+      gr->SetLineColor(kRed);
+      gr->SetMarkerColor(kRed);
+      gr->SetMarkerStyle(8);
+      gr->Draw("same LP");
+      
+      std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
+      canvas->AddExec("ex", functioncall.c_str());
+      while (true){
+        std::cout << "Click for next point, press any key to exit..." << std::endl;
+        obj=canvas->WaitPrimitive();
+        if (!obj) break;
+        if (strncmp(obj->ClassName(),"TMarker",7)==0) {
+          marker=(TMarker*)obj;
+          gr->AddPoint(marker->GetX(), marker->GetY());
+          delete marker;
+        }
+        canvas->Modified();
+        canvas->Update();        
+      }
+
+      //add first point again;
+      double x,y;
+      gr->GetPoint(0,x,y);
+      gr->AddPoint(x,y);
+
+      if (verbose) {
+        PrintCut((TCutG*)gr);
+      }
+      return (TCutG*)gr;
+    }
+
+    TCutG *DrawCut(std::string cutfile, int ID, TVirtualPad *canvas) {
+      FILE *file = fopen(cutfile.c_str(), "ra");
+      if (file == NULL) { std::cout << "Cuts file " << cutfile << " does not exist" << std::endl; return 0; }
+      std::stringstream ss;
+      char cline[2048];
+
+      int ind = 0;
+      while(std::fgets(cline, sizeof cline, file)!=NULL) {
+        std::string line(cline);
+        if (line.size() <= 1) { continue; }
+        if (line[0] == '#') { continue; }
+        if (line[0] == ';') { continue; }
+
+        ss.clear();
+        ss.str(line);
+
+        std::string name;
+        int id, npoints;        
+        ss >> id;
+        ss >> npoints;
+        ss >> name;
+
+        TCutG *cut = new TCutG();
+        cut->SetName(name.c_str());
+        cut->SetLineColor(kRed);
+        cut->SetMarkerColor(kRed);
+
+        int ct = 0;
+        while (ct < npoints) {
+          if (std::fgets(cline, sizeof cline, file) == NULL ) { return 0 ; }
+
+          std::string line2(cline);
+          if (line2.size() <= 1) { continue; }
+          if (line2[0] == '#') { continue; }
+          if (line2[0] == ';') { continue; }
+
+          ss.clear();
+          ss.str(line2);
+
+          double x, y;
+          ss >> x;
+          ss >> y;
+
+          cut->AddPoint(x,y);
+          ++ct;
+        }
+        if (id == ID) { fclose(file); canvas->cd(); cut->Draw("same LP"); return cut; }
+        else { delete cut; }
+      }
+
+      return 0;
+    }
+
+    void PrintCut(TCutG *cut) {
+      double x,y;
+      std::cout << "ID    " << cut->GetN() << std::endl;
+      for (int i=0; i<cut->GetN(); ++i) {
+        cut->GetPoint(i,x,y);
+        std::cout << x << "   " << y << std::endl;
+      }
+    }
+      
 
   } // namespace Spect
 } // namespace GamR

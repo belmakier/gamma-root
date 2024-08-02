@@ -88,10 +88,10 @@ namespace GamR {
       void SetParams(FitParams params);
       void PrintParams(const char *fileName);
       void Fit(int quiet = 0);
-      TMultiGraph* Draw(TCanvas *canvas, int detID=0, double xlow=-1, double xhigh=-1);
+      TMultiGraph* Draw(TCanvas *canvas, int detID=0, double xlow=-1, double xhigh=-1, bool log=false);
       void WriteGraph(std::string outDir);
       TMultiGraph* DrawRes(TCanvas *canvas, int detID=0, double xlow=-1, double xhigh=-1);
-      void Draw(const char *outFile, double xlow=-1, double xhigh=-1);
+      void Draw(const char *outFile, double xlow=-1, double xhigh=-1, bool log=false);
     };
 
     class MultiDataSet {
@@ -125,10 +125,11 @@ namespace GamR {
       void Fit();
       void Fit(int ID);
       void WriteGraphs(std::string outDir);
-      void Draw(const char *outFile, double xlow=-1, double xhigh=-1);
+      void Draw(const char *outFile, double xlow=-1, double xhigh=-1, bool log=false);
       void PrintDataSet(int i, const char *fileNameBase);
       void PrintDataSet(int i, int ID, const char *fileNameBase);
       void PrintParams(const char *outFile);
+      void SetEqualWeights(bool eq);
     };   
   }
   /*! @} */

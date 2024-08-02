@@ -262,6 +262,101 @@ namespace GamR {
       }
       StackSpectra(hists);
     }
+
+    void ContourCalc(TH2* hist, int ncontours, double bias) {
+      if (ncontours==0) { //reset
+        hist->SetContour(0);
+        return;
+      }
+  
+      int lowx = hist->GetXaxis()->GetFirst();
+      int highx = hist->GetXaxis()->GetLast();
+      int lowy = hist->GetYaxis()->GetFirst();
+      int highy = hist->GetYaxis()->GetLast();
+
+      double maxCont = hist->GetMaximum();
+      double minCont = hist->GetMinimum();
+
+      //TH1D *contsHist = new TH1D("contsHist", "contsHist", std::min(1024, (int)(maxCont-minCont)), minCont, maxCont);
+
+      int nbins = std::min(1024, (int)(maxCont-minCont));
+      std::vector<double> contsHist(nbins, 0);
+      
+      for (int i=lowx; i<=highx; ++i) {
+        for (int j=lowy; j<=highy; ++j) {
+          double conts = hist->GetBinContent(i,j);
+          int bin = (int)((conts-minCont)/(maxCont-minCont)*(nbins-1) + 0.5);
+          if (bin < 0 || bin >= nbins) { continue; }
+          contsHist[bin] += (1+conts*bias); //bias towards high-count bins slightly
+        }
+      }
+
+      while (true) {
+        double thresh = 0;
+        for (int i=0; i<nbins; ++i) {
+          thresh += contsHist[i];
+        }
+        //double thresh = contsHist->Integral()/(double)ncontours;
+        thresh /= (double)ncontours;
+        bool exceeded = false;
+        /*
+        for (int i=1; i<=contsHist->GetNbinsX(); ++i) {
+          if (contsHist->GetBinContent(i) > thresh) { contsHist->SetBinContent(i, thresh); exceeded = true; }      
+        }
+        */
+        for (int i=0; i<nbins; ++i) {
+          if (contsHist[i] > thresh) {
+            contsHist[i] = thresh;
+            exceeded=true;
+          }
+        }
+        if (!exceeded) { break; }
+      }
+
+      double levels[ncontours+1];
+      double sum = 0;
+      //double total = contsHist->Integral();
+      double total = 0;
+      for (int i=0; i<nbins; ++i) {
+        total += contsHist[i];
+      }
+      int ct = 0;
+      levels[0] = minCont-0.01*std::abs(minCont);
+      ct += 1;
+      for (int i=0; i<nbins; ++i) {
+        sum += contsHist[i];
+        if (sum/total > (double)ct/(double)ncontours) {
+          //levels[ct] = contsHist->GetBinLowEdge(i);
+          levels[ct] = minCont + (double)i/((double)nbins) * (maxCont - minCont);
+          ++ct;
+        }
+      }
+
+      levels[ncontours] = maxCont + 0.01*std::abs(maxCont);
+  
+      hist->SetContour(ncontours+1, &levels[0]);
+
+      //delete contsHist;
+    }
+
+    void ContourCalc(TVirtualPad *canvas, int ncontours, double bias) { 
+      if (!canvas) { if (!gPad) { return; } canvas = gPad; }
+
+      int nPads = GamR::Utils::GetNPads(canvas);
+      
+      if (!nPads) {
+        TH2D* hist = GamR::Utils::GetHist2D(canvas);
+        GamR::Spect::ContourCalc(hist, ncontours, bias);
+        canvas->Modified();
+      }      
+      
+      for (int i=0; i<nPads; ++i) {
+        canvas->cd(i+1);
+        ContourCalc(canvas->cd(i+1), ncontours, bias);
+      }
+      canvas->Modified();
+      canvas->cd();
+    }
     
     void LinAll(TVirtualPad *canvas) {
       if (!canvas) { if (!gPad) { return; } canvas = gPad; }
