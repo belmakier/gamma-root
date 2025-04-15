@@ -217,7 +217,7 @@ namespace GamR {
       fclose(file);
     }
 
-    TH1D FromText(std::string s, std::string name) {
+    TH1D *FromText(std::string s, std::string name, bool fill) {
       FILE *file = fopen(s.c_str(), "ra");
       std::stringstream ss;
       char cline[2048];
@@ -255,10 +255,17 @@ namespace GamR {
       double start = x_data[0]-bin_width/2.0;
       double stop = x_data[x_data.size()-1]+bin_width/2.0;
       
-      TH1D hist(name.c_str(), name.c_str(), n, start, stop);
+      TH1D *hist = new TH1D(name.c_str(), name.c_str(), n, start, stop);
       for (int i=0; i<n; ++i) {
-        hist.SetBinContent(i+1, y_data[i]);
-        hist.SetBinError(i+1, y_err[i]);
+        if (fill) {
+          for (int j=0; j<y_data[i]; ++j) {
+            hist->Fill(x_data[i]);
+          }
+        }
+        else {
+          hist->SetBinContent(i+1, y_data[i]);
+          hist->SetBinError(i+1, y_err[i]);
+        }
       }
       return hist;      
     }

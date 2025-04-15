@@ -55,7 +55,7 @@ namespace GamR {
         void SetWidth(double width) { double cent = (fLeft + fRight)/2.0; fLeft = cent - width/2.0; fRight = cent + width/2.0; } // *MENU* *ARGS={width=>fRight-fLeft}
         void SetLabels(const char *leftlab, const char *rightlab) { fLeftLab = (std::string)leftlab; fRightLab = (std::string)rightlab; } // *MENU*
         void SetExtension(double left, double right) { fExtLeft = left; fExtRight = right; extension = true; extline = new TLine(); } // *MENU*
-        void AddTransition(const char* name_fin, double width, double start, double stop, EColor color=kBlack); // *MENU*
+        void AddTransition(const char* name_fin, double width, double start, double stop, double labelpos = 0.5, EColor color=kBlack); // *MENU*
         Int_t DistancetoPrimitive(Int_t px, Int_t py);
         void ExecuteEvent(Int_t event, Int_t px, Int_t py);
         void Paint(Option_t *option="");
@@ -76,18 +76,20 @@ namespace GamR {
         Double_t fStart;
         Double_t fStop;
         Double_t fWidth;
+        Double_t fLabelPos;
         TText *fLabel = NULL;
         TBox *fLabelBox = NULL;
         double textsize = 0.05;
-        Transition() : fInitial(NULL), fFinal(NULL), TPolyLine(), fStart(0.5), fStop(0.5) { SetLineColor(kBlack); SetFillColor(kBlack); fLabel = new TText(); fLabelBox = new TBox(); SetPolyLine(7); }
-        Transition(Scheme *scheme, State *initial, State *final, double width, double start, double stop, EColor color) :
+        Transition() : fInitial(NULL), fFinal(NULL), TPolyLine(), fStart(0.5), fStop(0.5), fLabelPos(0.5) { SetLineColor(kBlack); SetFillColor(kBlack); fLabel = new TText(); fLabelBox = new TBox(); SetPolyLine(7); }
+        Transition(Scheme *scheme, State *initial, State *final, double width, double start, double stop, double labelpos, EColor color) :
           fScheme(scheme),
           TPolyLine(),
           fInitial(initial),
           fFinal(final),
           fWidth(width),
           fStart(start),
-          fStop(stop)
+          fStop(stop),
+          fLabelPos(labelpos)
         { SetLineColor(color); SetFillColor(color); fLabel = new TText(); fLabelBox = new TBox(); SetPolyLine(7); }
         ~Transition() {}
         void SetStartStop(double start, double stop) { fStart = start; fStop = stop; } // *MENU* *ARGS={start=>fStart stop=>fStop}
@@ -137,8 +139,8 @@ namespace GamR {
         Scheme() { fDrawHist = new TH2F("", "", 100, xlo, xhi, 100, ylo, yhi); }
         Scheme(std::string name) : TNamed(name, name) { fDrawHist = new TH2F(name.c_str(), name.c_str(), 100, xlo, xhi, 100, ylo, yhi); }
         void AddState(std::string name, double energy, double left, double right, std::string leftlab, std::string rightlab, EColor color=kBlack) { State state(name, this, energy, left, right, leftlab, rightlab, color); state.textsize = textsize; fStates[name]=state; }
-        void AddTransition(std::string initState, std::string finState, double width, double start, double stop, EColor color=kBlack) {
-          Transition transition(this, &fStates[initState], &fStates[finState], width, start, stop, color);
+        void AddTransition(std::string initState, std::string finState, double width, double start, double stop, double labelpos=0.5, EColor color=kBlack) {
+          Transition transition(this, &fStates[initState], &fStates[finState], width, start, stop, labelpos, color);
           transition.textsize = textsize;
           fTransitions.push_back(transition);
           

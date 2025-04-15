@@ -289,7 +289,9 @@ namespace GamR {
         
         TString transition_string;
         transition_string.Form("%3.2g", fWidth);
-        fLabel->SetText((GetX1() + GetX2())/2.0, (GetY1() + GetY2())/2.0, transition_string.Data());        
+        double label_x = GetX1() + fLabelPos*(GetX2()-GetX1());
+        double label_y = GetY1() + fLabelPos*(GetY2()-GetY1());
+        fLabel->SetText(label_x, label_y, transition_string.Data());        
         fLabel->SetTextFont(42);
         //fLabel->SetTextAngle(45);
         fLabel->SetTextSize(textsize);
@@ -297,10 +299,10 @@ namespace GamR {
         fLabel->SetTextColor(kBlack);
         UInt_t w, h;
         fLabel->GetBoundingBox(w,h);
-        fLabelBox->SetX1(gPad->PixeltoX(gPad->XtoPixel((GetX1() + GetX2())/2.0) - w/2 - 5));
-        fLabelBox->SetX2(gPad->PixeltoX(gPad->XtoPixel((GetX1() + GetX2())/2.0) + w/2 + 5));
-        fLabelBox->SetY1(gPad->AbsPixeltoY(gPad->YtoAbsPixel((GetY1() + GetY2())/2.0) + h/2 + 5));
-        fLabelBox->SetY2(gPad->AbsPixeltoY(gPad->YtoAbsPixel((GetY1() + GetY2())/2.0) - h/2 - 5));
+        fLabelBox->SetX1(gPad->PixeltoX(gPad->XtoPixel(label_x) - w/2 - 5));
+        fLabelBox->SetX2(gPad->PixeltoX(gPad->XtoPixel(label_x) + w/2 + 5));
+        fLabelBox->SetY1(gPad->AbsPixeltoY(gPad->YtoAbsPixel(label_y) + h/2 + 5));
+        fLabelBox->SetY2(gPad->AbsPixeltoY(gPad->YtoAbsPixel(label_y) - h/2 - 5));
 
         fLabelBox->SetFillColorAlpha(kWhite, 0.7);
         fLabelBox->Paint();
@@ -464,13 +466,14 @@ namespace GamR {
             double width;
             double start;
             double stop;
-            UInt_t color;            
+            UInt_t color;
+            double labelpos;
 
-            ss >> name_init >> name_fin >> width >> start >> stop >> color;
+            ss >> name_init >> name_fin >> width >> start >> stop >> labelpos >> color;
 
             EColor col = static_cast<EColor>(color);
 
-            AddTransition(name_init, name_fin, width, start, stop, col);            
+            AddTransition(name_init, name_fin, width, start, stop, labelpos, col);            
           }
         }
       }
@@ -502,15 +505,16 @@ namespace GamR {
                   << std::setw(10) << std::left << transition.fFinal->GetName()
                   << std::setw(10) << std::left << transition.fWidth
                   << std::setw(10) << std::left << std::setprecision(5) << transition.fStart
-                  << std::setw(10) << std::left << std::setprecision(5) << transition.fStop 
+                  << std::setw(10) << std::left << std::setprecision(5) << transition.fStop
+                  << std::setw(10) << std::left << std::setprecision(5) << transition.fLabelPos
                   << std::setw(10) << std::left << transition.GetFillColor() << std::endl;
           
         }
       }
 
-      void State::AddTransition(const char *name_fin, double width, double start, double stop, EColor color) {
+      void State::AddTransition(const char *name_fin, double width, double start, double stop, double labelpos, EColor color) {
         std::string nf(name_fin);
-        fScheme->AddTransition(GetName(), nf, width, start, stop, color);
+        fScheme->AddTransition(GetName(), nf, width, start, stop, labelpos, color);
       }
     }
   }

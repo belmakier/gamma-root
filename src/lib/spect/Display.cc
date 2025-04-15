@@ -173,6 +173,17 @@ namespace GamR {
       OverlaySpectra(hists);
     }
 
+    void OverlaySpectra(std::vector<std::string> files, std::string name, int iXstart, int iXstop, Option_t *option) {
+      std::vector<TH1*> hists;
+      for (int iFile = 0; iFile<files.size(); ++iFile) {
+        TFile *file = new TFile(files[iFile].c_str());
+        TH2D* hist2 = (TH2D*)file->Get<TH2>(name.c_str());
+        TH1* hist = (TH1*)hist2->ProjectionX(files[iFile].substr(0, files[iFile].size()-5).c_str(), iXstart, iXstop);
+        hists.push_back(hist);
+      }
+      OverlaySpectra(hists);
+    }
+    
     void OverlaySpectra(std::vector<std::string> files, std::string name, Option_t *option) {
       std::vector<TH1*> hists;
       for (int iFile = 0; iFile<files.size(); ++iFile) {

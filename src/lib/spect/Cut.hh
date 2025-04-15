@@ -56,7 +56,7 @@ namespace GamR {
 
     TH2D *BackgroundSubtract2D(TH2 *peak, TH2 *background, double scale);
 
-    TCutG *DrawCut(TVirtualPad *canvas, bool verbose=false);
+    TCutG *DrawCut(TVirtualPad *canvas, bool verbose=false, std::string filename="", int ID=-1);
     TCutG *DrawCut(std::string cutfile, int ID, TVirtualPad *canvas);
 
     void PrintCut(TCutG *cut);

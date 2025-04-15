@@ -24,7 +24,7 @@ namespace GamR {
     void ToBin(const TH2 *h, std::string outfile = "", int padx=0, int pady=0);
     void ToBin(const TH1 *h, std::string outfile = "");
     void ToSPE(const TH1 *h, std::string outfile = "");
-    TH1D FromText(std::string s, std::string name);
+    TH1D *FromText(std::string s, std::string name, bool fill=false);
     TH1D *FromBin(std::string s, std::string name, std::string title, int nx, double low, double high, int size);
     TCutG *CutFromText(std::string s, std::string name);
     TH2D *FromBin(std::string s, std::string name, std::string title,

@@ -20,6 +20,7 @@ namespace GamR {
     void OverlaySpectra(TH2 *hist, std::vector<int> indices, Option_t *option = "hist");
     void OverlaySpectra(int i2D, int iStart, int iStop, Option_t *option = "hist");
     void OverlaySpectra(std::vector<std::string> files, std::string name, int iX, Option_t *option = "hist");
+    void OverlaySpectra(std::vector<std::string> files, std::string name, int iXstart, int iXstop, Option_t *option = "hist");
     void OverlaySpectra(std::vector<std::string> files, std::string name, Option_t *option = "hist");
     void StackSpectra(std::vector<int> display_indexes, TCanvas *canvas = NULL, Option_t *option = "hist");
     void StackSpectra(int iStart, int iStop, TCanvas *canvas = NULL, Option_t *option = "hist");

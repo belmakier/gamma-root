@@ -65,6 +65,7 @@ void os(TH2 *hist, int iStart, int iStop);
 void os(TH2 *hist, std::vector<int> indices);
 void os(int i2D, int iStart, int iStop);
 void os(std::vector<std::string> files, std::string name, int iX, Option_t *option = "hist");
+void os(std::vector<std::string> files, std::string name, int iXstart, int iXstop, Option_t *option = "hist");
 void os(std::vector<std::string> files, std::string name, Option_t *option = "hist");
 void ss(std::vector<int> indexes, TCanvas *canvas = NULL, Option_t *option = "hist");
 void ss(std::vector<TH1*> hists, TCanvas *canvas = NULL, Option_t *option = "hist");

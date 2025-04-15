@@ -1,3 +1,5 @@
+#include <chrono>
+
 #include <TMarker.h>
 
 #include "Cut.hh"
@@ -86,7 +88,7 @@ namespace GamR {
       if (!hist) { return NULL; }
       hist->ProjectionX()->Draw("hist");
       std::cout << "Select peak region:" << std::endl;
-      GamR::TK::Gate peak(canvas);
+      GamR::TK::Gate peak(canvas, "x");
       //std::cout << peak << std::endl;
 
       TH1D *hOut = GateX(hist, peak, name);
@@ -101,7 +103,7 @@ namespace GamR {
       if (!hist) { return NULL; }
       hist->ProjectionX()->Draw("hist");
       std::cout << "Select peak region:" << std::endl;
-      GamR::TK::Gate peak(canvas);
+      GamR::TK::Gate peak(canvas, "x");
       //std::cout << peak << std::endl;
 
       TH1D *hOut = GateX(hist, peak);
@@ -141,7 +143,7 @@ namespace GamR {
       if (!hist) { return NULL; }
       hist->ProjectionY()->Draw("hist");
       std::cout << "Select peak region:" << std::endl;
-      GamR::TK::Gate peak(canvas);
+      GamR::TK::Gate peak(canvas, "x");
       //std::cout << peak << std::endl;
 
       TH1D *hOut = GateY(hist, peak, name);
@@ -156,7 +158,7 @@ namespace GamR {
       if (!hist) { return NULL; }
       hist->ProjectionY()->Draw("hist");
       std::cout << "Select peak region:" << std::endl;
-      GamR::TK::Gate peak(canvas);
+      GamR::TK::Gate peak(canvas, "x");
       //std::cout << peak << std::endl;
 
       TH1D *hOut = GateY(hist, peak);
@@ -249,7 +251,7 @@ namespace GamR {
       if (!hist) { return NULL; }
       hist->ProjectionX()->Draw("hist");
       std::cout << "Select peak region:" << std::endl;
-      GamR::TK::Gate peak(canvas);
+      GamR::TK::Gate peak(canvas, "x");
       //std::cout << peak << std::endl;
       std::cout << "Select background regions, key press to stop:" << std::endl;
       std::vector<GamR::TK::Gate > background;
@@ -272,7 +274,7 @@ namespace GamR {
       if (!hist) { return NULL; }
       hist->ProjectionX()->Draw("hist");
       std::cout << "Select peak region:" << std::endl;
-      GamR::TK::Gate peak(canvas);
+      GamR::TK::Gate peak(canvas, "x");
       std::cout << "Select background regions, key press to stop:" << std::endl;
       std::vector<GamR::TK::Gate > background;
       while(true) {
@@ -373,7 +375,7 @@ namespace GamR {
       if (!hist) { return NULL; }
       hist->ProjectionY()->Draw("hist");
       std::cout << "Select peak region:" << std::endl;
-      GamR::TK::Gate peak(canvas);
+      GamR::TK::Gate peak(canvas, "x");
       //std::cout << peak << std::endl;
       std::cout << "Select background regions:" << std::endl;
       std::vector<GamR::TK::Gate > background;
@@ -396,7 +398,7 @@ namespace GamR {
       if (!hist) { return NULL; }
       hist->ProjectionY()->Draw("hist");
       std::cout << "Select peak region:" << std::endl;
-      GamR::TK::Gate peak(canvas);
+      GamR::TK::Gate peak(canvas, "x");
       //std::cout << peak << std::endl;
       std::cout << "Select background regions:" << std::endl;
       std::vector<GamR::TK::Gate > background;
@@ -474,41 +476,86 @@ namespace GamR {
       return backsub;
     }
 
-    TCutG *DrawCut(TVirtualPad *canvas, bool verbose) {
-      TMarker *marker = new TMarker();      
+    TCutG *DrawCut(TVirtualPad *canvas, bool verbose, std::string filename, int ID) {
+      TMarker *marker;      
       TObject *obj;
 
       std::string canvasname = canvas->GetName();
-
+      
       TGraph *gr = new TGraph();
       gr->SetLineColor(kRed);
       gr->SetMarkerColor(kRed);
       gr->SetMarkerStyle(8);
-      gr->Draw("same LP");
       
       std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
       canvas->AddExec("ex", functioncall.c_str());
       while (true){
         std::cout << "Click for next point, press any key to exit..." << std::endl;
+        //auto start = std::chrono::high_resolution_clock::now();
         obj=canvas->WaitPrimitive();
+        //auto stop = std::chrono::high_resolution_clock::now();
+        //auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+        //std::cout << duration.count() << " us to wait and get click" << std::endl;
+        //start = std::chrono::high_resolution_clock::now();
         if (!obj) break;
         if (strncmp(obj->ClassName(),"TMarker",7)==0) {
           marker=(TMarker*)obj;
           gr->AddPoint(marker->GetX(), marker->GetY());
+          if (gr->GetN()==1){
+            gr->Draw("same LP");
+          }
           delete marker;
         }
-        canvas->Modified();
+        //stop = std::chrono::high_resolution_clock::now();
+        //duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+        //std::cout << duration.count() << " us to get marker" << std::endl;
+        //start = std::chrono::high_resolution_clock::now();
+        //canvas->Modified();
         canvas->Update();        
+        //stop = std::chrono::high_resolution_clock::now();
+        //duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+        //std::cout << duration.count() << " us to update canvas" << std::endl;
       }
+      canvas->DeleteExec("ex");
 
       //add first point again;
       double x,y;
       gr->GetPoint(0,x,y);
       gr->AddPoint(x,y);
+      
+      canvas->Update();
 
       if (verbose) {
         PrintCut((TCutG*)gr);
       }
+
+      if (filename.size()>0) {
+        std::ofstream ofile(filename.c_str(), std::ios_base::app);
+        while (ID<=-1) {
+          std::cout << "Enter ID: ";
+          std::string sID;
+          std::cin >> sID;
+          try {
+            ID = std::atoi(sID.c_str());
+          }
+          catch (...) {
+            std::cout << "Invalid input!" << std::endl;
+          }
+          if (ID == 0) {
+            std::cout << "Invalid input!" << std::endl;
+          }
+        }
+        std::cout << "Enter name: ";
+        std::string name;
+        std::cin >> name;
+        gr->SetName(name.c_str());
+        ofile << ID << "   " << gr->GetN() << "   " << name << std::endl;
+        for (int i=0; i<gr->GetN(); ++i) {
+          gr->GetPoint(i,x,y);
+          ofile << x << "   " << y << std::endl;
+        }
+      }
+
       return (TCutG*)gr;
     }
 
@@ -564,7 +611,7 @@ namespace GamR {
 
       return 0;
     }
-
+    
     void PrintCut(TCutG *cut) {
       double x,y;
       std::cout << "ID    " << cut->GetN() << std::endl;

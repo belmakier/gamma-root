@@ -1,6 +1,7 @@
 /* General computational utility functions */
 /* Tim Gray - timothy.gray@anu.edu.au */
 
+#include <chrono>
 #include <iostream>
 
 #include <TMarker.h>
@@ -36,6 +37,7 @@ namespace GamR {
 
     void GetClick(TVirtualPad *canvas)
     {
+      auto start = std::chrono::high_resolution_clock::now();
       canvas->GetCanvas()->FeedbackMode(kTRUE);
 
       int event = canvas->GetEvent();
