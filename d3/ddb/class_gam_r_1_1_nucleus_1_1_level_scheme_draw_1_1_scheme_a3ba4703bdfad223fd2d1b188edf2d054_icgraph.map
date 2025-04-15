@@ -1,7 +1,0 @@
-<map id="GamR::Nucleus::LevelSchemeDraw::Scheme::AddTransition" name="GamR::Nucleus::LevelSchemeDraw::Scheme::AddTransition">
-<area shape="rect" id="Node000001" title=" " alt="" coords="252,39,450,79"/>
-<area shape="rect" id="Node000002" href="$d0/d50/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_state.html#a0f79979b6c9abe192a4b669bfce26c50" title=" " alt="" coords="5,5,204,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,46,204,42,205,36,236,41"/>
-<area shape="rect" id="Node000003" href="$d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html#ab938e7f1c7cba45783402692e0192909" title=" " alt="" coords="5,71,204,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,77,205,81,204,75,236,71"/>
-</map>

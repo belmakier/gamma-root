@@ -1,7 +1,9 @@
 <map id="GamR::Spect::NormBackSub" name="GamR::Spect::NormBackSub">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,195,31"/>
-<area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#ga9db1ed9dd4cd4818f5399fbddf5ee388" title=" " alt="" coords="243,5,449,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,16,227,16,227,21,195,21"/>
-<area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#gaae543a7d595e5faacbfb4da05718e3f3" title=" " alt="" coords="497,5,682,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="449,16,482,16,482,21,449,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,195,56"/>
+<area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#ga9db1ed9dd4cd4818f5399fbddf5ee388" title=" " alt="" coords="243,31,449,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,41,227,41,227,46,195,46"/>
+<area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#gaced7ac0e322ea19a0ade4d2666727666" title=" " alt="" coords="515,5,664,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="449,30,499,25,499,30,450,35"/>
+<area shape="rect" id="Node000004" href="$d0/d74/group___t_k.html#gaae543a7d595e5faacbfb4da05718e3f3" title=" " alt="" coords="497,55,682,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="450,51,482,54,481,60,449,56"/>
 </map>

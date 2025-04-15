@@ -108,20 +108,19 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#ac5fb2c34aa14ac5ae613b09d926fb099",
-"d0/d74/group___t_k.html#gaafc7a191acbe4f20452f52cecaaf16d7",
-"d1/d3d/struct_gam_r_1_1_tree_1_1_t_det_defn_1_1_update_goodness.html",
-"d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html#aed205770d8e3f49bf45ad5c383526748",
-"d3/d4b/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_state.html#afa23aec2bd5dfa905c0de73db799a66b",
-"d4/d60/struct_gam_r_1_1_tree_1_1_reader_1_1_det_group.html",
-"d6/d35/struct_gam_r_1_1_spect_1_1_peak_fit_1_1_parameters.html#a2ec96e0b212cd41db3b3417b4b72ce6d",
-"d7/dd8/namespace_gam_r_1_1_efficiency.html#a427d0e741996ac1982ee55180be3ecdf",
-"d9/db7/_display_8hh.html#a61cee306e7922e8ac4fa42229ed51467",
-"db/dec/_fit_8hh.html#aa47cc8d6e0495c5518321fc5de17ae3c",
-"dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html#a9d62bf0c93ac3ece52dcd1dd53c2f493",
-"df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a1940fffec987261d139125f8aa07988b",
-"df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a3eacef62898caaaff029fd33931ad1bb",
-"namespacemembers_o.html"
+"d0/d74/group___t_k.html#gaafa8098032c9c44213c6d8a94d8d5638",
+"d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#ad18875e3efcf669c9f8e90a8446da366",
+"d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html",
+"d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html",
+"d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a24e334f3a0ed59b61698aebc80f7419c",
+"d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#ae2d81604b034ed4716ac584c1ba00973",
+"d8/d35/class_gam_r_1_1_efficiency_1_1_multi_data_set.html#af4f19f093ff992500d4119f9ae0bd19a",
+"da/d95/class_gam_r_1_1_tree_1_1_t_event.html#a1a5c28d78c004a0ac4aff5a075a5c923",
+"dc/d89/namespace_gam_r_1_1_spect.html#a1ee08c4dcd78e613fcd6065110ce6a3c",
+"dd/d9c/struct_gam_r_1_1_tree_1_1_t_det_defn_1_1_interpret_pointers.html#a25fcbda37082ea66f5cec97a1056e2b9",
+"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a3de27f30c663b65e77c8124e24b6e5de",
+"functions_eval.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';

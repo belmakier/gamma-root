@@ -1,5 +1,6 @@
 <map id="GamR::AngDist::StatTensor::W" name="GamR::AngDist::StatTensor::W">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,80,204,106"/>
+<area shape="poly" id="edge8_Node000001_Node000001" title=" " alt="" coords="61,81,52,71,57,61,75,55,105,53,138,56,154,64,152,69,137,61,104,59,76,61,61,66,57,71,65,78"/>
 <area shape="rect" id="Node000002" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a89a9c2f80ccb6db585b8de73129aefdd" title=" " alt="" coords="305,5,437,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,77,251,40,289,30,290,36,252,45,141,82"/>
 <area shape="rect" id="Node000004" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a64b5a4704ab13f1fca8a2a787a30adde" title=" " alt="" coords="299,55,443,80"/>

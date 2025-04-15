@@ -1,7 +1,5 @@
 <map id="GamR::Sort::Sorter::SetXsize" name="GamR::Sort::Sorter::SetXsize">
-<area shape="rect" id="Node000001" title=" " alt="" coords="253,35,382,75"/>
-<area shape="rect" id="Node000002" href="$df/d71/class_gam_r_1_1_sort_1_1_type_1_1_coincidence_matrix.html#a24aa51e13015e482caf76330cf53e074" title=" " alt="" coords="5,5,205,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,47,205,42,206,37,238,41"/>
-<area shape="rect" id="Node000003" href="$d9/da5/gamrsort_8cc.html#ad53223b8779f25caeddb70a3b9172967" title=" " alt="" coords="80,70,130,96"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="238,68,130,83,129,77,237,63"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="103,5,232,46"/>
+<area shape="rect" id="Node000002" href="$d9/da5/gamrsort_8cc.html#ad53223b8779f25caeddb70a3b9172967" title=" " alt="" coords="5,13,55,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,28,55,28,55,23,87,23"/>
 </map>

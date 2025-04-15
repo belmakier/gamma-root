@@ -1,7 +1,7 @@
 var class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition =
 [
     [ "Transition", "d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a68e94f086a4e90a8e73510206ff44c4e", null ],
-    [ "Transition", "d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a5db59fe9c659ce6d44e57422ebfece4d", null ],
+    [ "Transition", "d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#ab965c33954880216d36144ed12f9a4e2", null ],
     [ "~Transition", "d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a9a63c883801b19e488f0e86fa53baf76", null ],
     [ "DistancetoPrimitive", "d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#ab2488df573a655a860d1aad03120041f", null ],
     [ "Draw", "d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a894f4df5b3909fbfdd35a710076159b4", null ],
@@ -26,6 +26,7 @@ var class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition =
     [ "fInitial", "d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#aec3abb47413d6e876ea2263b67376806", null ],
     [ "fLabel", "d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#aec3872611307b1bc452fdedec2b28f48", null ],
     [ "fLabelBox", "d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a04135c2dab0abdf3a15070c876f5979f", null ],
+    [ "fLabelPos", "d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a29e032fed86e2b65e4a0d0f4d31431d4", null ],
     [ "fScheme", "d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a86674e5b659e39dd1172030ce049c81f", null ],
     [ "fStart", "d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#abfb287f86ba158518cd9e451e5db4e56", null ],
     [ "fStop", "d9/d6a/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_transition.html#a59eaec785046a87bcfa983f697408167", null ],

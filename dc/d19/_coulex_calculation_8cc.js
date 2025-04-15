@@ -7,6 +7,6 @@ var _coulex_calculation_8cc =
     [ "ANSI_COLOR_RED", "dc/d19/_coulex_calculation_8cc.html#a34995b955465f6bbb37c359173d50477", null ],
     [ "ANSI_COLOR_RESET", "dc/d19/_coulex_calculation_8cc.html#a92a364c2b863dde1a024a77eac2a5b3b", null ],
     [ "ANSI_COLOR_YELLOW", "dc/d19/_coulex_calculation_8cc.html#a5a123b382640b3aa65dd5db386002fbc", null ],
-    [ "DoCoulex", "dc/d19/_coulex_calculation_8cc.html#a41b07b0aa204c45d637b7c5a4e57d989", null ],
-    [ "ExperimentalSetup", "dc/d19/_coulex_calculation_8cc.html#a2551a0108b265de32e08ef2042a02212", null ]
+    [ "GamR::Coulex::DoCoulex", "d6/d76/namespace_gam_r_1_1_coulex.html#a41b07b0aa204c45d637b7c5a4e57d989", null ],
+    [ "GamR::Coulex::ExperimentalSetup", "d6/d76/namespace_gam_r_1_1_coulex.html#a2551a0108b265de32e08ef2042a02212", null ]
 ];

@@ -1,5 +1,7 @@
 <map id="GamR::TK::Gate::NormBackSub" name="GamR::TK::Gate::NormBackSub">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,212,31"/>
-<area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#gaae543a7d595e5faacbfb4da05718e3f3" title=" " alt="" coords="260,5,445,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,16,244,16,244,21,212,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,212,56"/>
+<area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#gaced7ac0e322ea19a0ade4d2666727666" title=" " alt="" coords="278,5,427,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,30,262,25,262,30,212,35"/>
+<area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#gaae543a7d595e5faacbfb4da05718e3f3" title=" " alt="" coords="260,55,445,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,51,245,54,244,60,212,56"/>
 </map>

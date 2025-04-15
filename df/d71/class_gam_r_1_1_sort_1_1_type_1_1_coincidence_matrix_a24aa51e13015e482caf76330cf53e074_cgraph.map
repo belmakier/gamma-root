@@ -1,9 +1,0 @@
-<map id="GamR::Sort::Type::CoincidenceMatrix::CoincidenceMatrix" name="GamR::Sort::Type::CoincidenceMatrix::CoincidenceMatrix">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,205,111"/>
-<area shape="rect" id="Node000002" href="$d3/d27/class_gam_r_1_1_sort_1_1_sorter.html#ae6f53503e0c3225df3b5763192a54f0a" title=" " alt="" coords="253,5,382,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,68,237,47,239,53,174,73"/>
-<area shape="rect" id="Node000003" href="$d3/d27/class_gam_r_1_1_sort_1_1_sorter.html#a7b6f275a64940fe5704f85f2a7ce3837" title=" " alt="" coords="253,71,382,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="205,88,237,88,237,94,205,94"/>
-<area shape="rect" id="Node000004" href="$d3/d27/class_gam_r_1_1_sort_1_1_sorter.html#af97adfbc42ffff40f141aceaee89a221" title=" " alt="" coords="253,136,382,177"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="174,109,239,129,237,135,172,114"/>
-</map>

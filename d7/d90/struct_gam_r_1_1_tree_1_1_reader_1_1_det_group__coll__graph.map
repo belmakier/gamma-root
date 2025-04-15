@@ -1,13 +1,13 @@
 <map id="GamR::Tree::Reader::DetGroup" name="GamR::Tree::Reader::DetGroup">
-<area shape="rect" id="Node000001" title=" " alt="" coords="29,480,159,600"/>
-<area shape="rect" id="Node000002" href="$d1/dab/class_gam_r_1_1_tree_1_1_reader.html" title=" " alt="" coords="5,292,135,417"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,416,87,463,81,464,75,417"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="159,297,328,412"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,413,154,469,150,466,196,410"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="181,134,306,214"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="246,229,246,297,241,297,241,229"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="198,5,219,71"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="209,70,213,109,216,117,211,119,208,110,204,71"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="267,5,289,71"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="272,71,260,118,255,116,267,70"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="29,484,156,606"/>
+<area shape="rect" id="Node000002" href="$d1/dab/class_gam_r_1_1_tree_1_1_reader.html" title=" " alt="" coords="5,294,132,421"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,421,85,467,80,468,74,421"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="156,299,323,416"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,417,152,473,148,470,192,414"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="178,135,301,216"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="242,231,242,299,237,299,237,231"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="195,5,214,72"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="205,71,209,110,212,118,207,120,204,111,200,72"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="265,5,283,72"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="268,72,256,119,251,117,263,71"/>
 </map>

@@ -1,12 +1,10 @@
 <map id="GamR::AngDist::AngCorr::operator()" name="GamR::AngDist::AngCorr::operator()">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,48,169,89"/>
-<area shape="rect" id="Node000002" href="$da/d73/class_gam_r_1_1_ang_dist_1_1_ang_corr.html#a6476abedaa195d3205a83d9dfc263ac5" title=" " alt="" coords="243,31,428,56"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,58,228,52,228,57,170,63"/>
-<area shape="rect" id="Node000005" href="$d2/dbb/class_gam_r_1_1_ang_dist_1_1_solid_attenuation.html#a00f8c011eba761ff461e3d603493a4a9" title=" " alt="" coords="217,80,455,106"/>
-<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="170,74,201,77,201,82,169,79"/>
-<area shape="rect" id="Node000003" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a89a9c2f80ccb6db585b8de73129aefdd" title=" " alt="" coords="503,5,635,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="429,31,487,24,488,30,429,36"/>
-<area shape="rect" id="Node000004" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#adfb2b629389730b25f867d1e51922438" title=" " alt="" coords="683,31,815,56"/>
-<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="429,41,668,41,668,46,429,46"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="636,25,668,29,668,35,636,30"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,169,64"/>
+<area shape="rect" id="Node000002" href="$da/d73/class_gam_r_1_1_ang_dist_1_1_ang_corr.html#a6476abedaa195d3205a83d9dfc263ac5" title=" " alt="" coords="217,31,402,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,41,201,41,201,46,169,46"/>
+<area shape="rect" id="Node000003" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#a89a9c2f80ccb6db585b8de73129aefdd" title=" " alt="" coords="450,5,582,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="402,29,434,25,435,31,403,35"/>
+<area shape="rect" id="Node000004" href="$d1/dab/namespace_gam_r_1_1_ang_dist.html#adfb2b629389730b25f867d1e51922438" title=" " alt="" coords="630,31,762,56"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="403,41,615,41,615,46,403,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="583,25,615,29,615,35,583,30"/>
 </map>

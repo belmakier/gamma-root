@@ -13,7 +13,7 @@ var searchData=
   ['draw2d_10',['Draw2D',['../dc/d89/namespace_gam_r_1_1_spect.html#a302119df82e9ca4cbd9f3cf92a0ad352',1,'GamR::Spect']]],
   ['drawangcorr_11',['DrawAngCorr',['../d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a030a9df7c30731fbeb7337688a28e6c7',1,'GamR::AngDist::AngCorrFit']]],
   ['drawchigraph_12',['DrawChiGraph',['../d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#ae0d8c505c6272e84a35125c118d04237',1,'GamR::AngDist::AngCorrFit']]],
-  ['drawcut_13',['DrawCut',['../dc/d89/namespace_gam_r_1_1_spect.html#ad5ab5c6404af083dbccafc09405cf59f',1,'GamR::Spect::DrawCut(TVirtualPad *canvas, bool verbose)'],['../dc/d89/namespace_gam_r_1_1_spect.html#a54c8602ace7191262719e2ca5dd8b8d6',1,'GamR::Spect::DrawCut(std::string cutfile, int ID, TVirtualPad *canvas)']]],
+  ['drawcut_13',['DrawCut',['../dc/d89/namespace_gam_r_1_1_spect.html#a214cb3bd28bf02700ce373bcc4c75264',1,'GamR::Spect::DrawCut(TVirtualPad *canvas, bool verbose, std::string filename, int ID)'],['../dc/d89/namespace_gam_r_1_1_spect.html#a54c8602ace7191262719e2ca5dd8b8d6',1,'GamR::Spect::DrawCut(std::string cutfile, int ID, TVirtualPad *canvas)']]],
   ['drawres_14',['DrawRes',['../dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#aeac5d2e46d99f0cd15cabb2d7f55c5d0',1,'GamR::Efficiency::EffFit']]],
   ['drawsetup_15',['DrawSetup',['../dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#accc646bcdeb4eb0a57d24c474128b29f',1,'GamR::Coulex::ParticleDetector::DrawSetup()'],['../d6/d76/namespace_gam_r_1_1_coulex.html#a80c70c5c99095da3a8a10a05513f1d23',1,'GamR::Coulex::DrawSetup()']]]
 ];

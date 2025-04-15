@@ -1,7 +1,7 @@
 <map id="src/lib/spect/Fit.hh" name="src/lib/spect/Fit.hh">
 <area shape="rect" id="Node000001" title=" " alt="" coords="289,5,417,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="698,153,755,178"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="412,29,489,49,571,77,639,109,696,142,694,147,637,114,569,81,487,54,411,34"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="411,29,488,49,570,77,639,109,696,142,694,147,636,114,568,81,486,54,410,34"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="35,153,133,178"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="332,34,121,147,119,142,329,29"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="394,226,477,252"/>
@@ -24,7 +24,7 @@
 <area shape="rect" id="Node000010" title=" " alt="" coords="1375,226,1449,252"/>
 <area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="1050,93,1105,99,1170,109,1240,126,1306,150,1354,180,1392,213,1388,217,1351,184,1304,155,1238,131,1169,114,1104,104,1049,98"/>
 <area shape="rect" id="Node000011" title=" " alt="" coords="1473,226,1519,252"/>
-<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="1050,94,1186,111,1266,127,1345,150,1412,181,1468,215,1465,220,1410,186,1343,155,1265,132,1185,116,1049,99"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="1050,94,1186,111,1267,127,1346,150,1413,181,1468,215,1465,220,1410,186,1344,155,1266,132,1186,116,1050,99"/>
 <area shape="rect" id="Node000012" title=" " alt="" coords="810,226,878,252"/>
 <area shape="poly" id="edge12_Node000009_Node000012" title=" " alt="" coords="985,107,869,218,865,214,982,103"/>
 <area shape="rect" id="Node000013" title=" " alt="" coords="732,226,785,252"/>

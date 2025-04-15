@@ -1,7 +1,9 @@
 <map id="GamR::TK::Gate::GetCountsError" name="GamR::TK::Gate::GetCountsError">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,27,189,68"/>
-<area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#ga19210db8af7134007ff4fc26878b5dc2" title=" " alt="" coords="237,5,431,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,33,221,29,222,35,190,39"/>
-<area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#ga0073e987a24adc053cfbf2c833d41749" title=" " alt="" coords="242,55,426,96"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="190,56,227,60,226,65,189,61"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,189,88"/>
+<area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#gaced7ac0e322ea19a0ade4d2666727666" title=" " alt="" coords="259,5,408,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,46,253,32,254,37,190,51"/>
+<area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#ga19210db8af7134007ff4fc26878b5dc2" title=" " alt="" coords="237,55,431,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="189,65,221,65,221,70,189,70"/>
+<area shape="rect" id="Node000004" href="$d0/d74/group___t_k.html#ga0073e987a24adc053cfbf2c833d41749" title=" " alt="" coords="242,104,426,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="184,86,233,98,232,103,183,91"/>
 </map>

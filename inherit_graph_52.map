@@ -1,3 +1,29 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$d1/d3d/struct_gam_r_1_1_tree_1_1_t_det_defn_1_1_update_goodness.html" title=" " alt="" coords="5,5,171,46"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,418,73,444"/>
+<area shape="rect" id="Node000001" href="$d1/de2/struct_gam_r_1_1_tree_1_1_t_det_defn_1_1_cal_functor.html" title=" " alt="" coords="143,5,294,46"/>
+<area shape="poly" id="edge28_Node000000_Node000001" title=" " alt="" coords="40,402,49,323,65,220,87,122,102,83,119,56,141,39,144,43,123,59,107,85,93,123,70,221,54,324,45,403"/>
+<area shape="rect" id="Node000002" href="$d9/df7/struct_gam_r_1_1_tree_1_1_t_det_defn_1_1_cal_functor_1_1_cal_functor_inner.html" title=" " alt="" coords="121,70,317,126"/>
+<area shape="poly" id="edge29_Node000000_Node000002" title=" " alt="" coords="38,403,41,348,53,277,63,240,77,203,95,168,119,136,132,124,135,128,123,139,100,170,82,205,68,241,58,278,46,348,43,403"/>
+<area shape="rect" id="Node000003" href="$d4/d83/struct_gam_r_1_1_tree_1_1_t_det_defn_1_1_dereference_pointers.html" title=" " alt="" coords="128,149,310,190"/>
+<area shape="poly" id="edge30_Node000000_Node000003" title=" " alt="" coords="40,402,47,358,60,305,83,250,99,224,119,201,135,189,138,193,123,205,104,227,88,252,65,306,52,359,45,403"/>
+<area shape="rect" id="Node000004" href="$dd/d9c/struct_gam_r_1_1_tree_1_1_t_det_defn_1_1_interpret_pointers.html" title=" " alt="" coords="139,215,299,255"/>
+<area shape="poly" id="edge31_Node000000_Node000004" title=" " alt="" coords="44,403,70,335,91,298,119,266,137,254,140,258,122,270,95,301,74,337,49,404"/>
+<area shape="rect" id="Node000005" href="$d1/d3d/struct_gam_r_1_1_tree_1_1_t_det_defn_1_1_update_goodness.html" title=" " alt="" coords="136,280,302,321"/>
+<area shape="poly" id="edge32_Node000000_Node000005" title=" " alt="" coords="54,403,82,366,119,332,142,319,144,324,122,336,86,370,58,406"/>
+<area shape="rect" id="Node000006" href="$da/d04/struct_gam_r_1_1_tree_1_1_t_event_1_1_clear_vector.html" title=" " alt="" coords="142,345,296,386"/>
+<area shape="poly" id="edge33_Node000000_Node000006" title=" " alt="" coords="86,410,120,397,154,384,156,389,122,401,88,414"/>
+<area shape="rect" id="Node000007" href="$d5/dbc/struct_gam_r_1_1_tree_1_1_t_event_1_1_event_tuple_filler.html" title=" " alt="" coords="130,411,308,451"/>
+<area shape="poly" id="edge34_Node000000_Node000007" title=" " alt="" coords="88,428,129,428,129,434,88,434"/>
+<area shape="rect" id="Node000008" href="$d1/dae/struct_gam_r_1_1_tree_1_1_t_event_1_1_ignore_t_object.html" title=" " alt="" coords="135,476,302,517"/>
+<area shape="poly" id="edge35_Node000000_Node000008" title=" " alt="" coords="88,448,122,461,156,473,154,478,120,465,86,452"/>
+<area shape="rect" id="Node000009" href="$dd/dff/struct_gam_r_1_1_tree_1_1_t_exp_defn_1_1_fill_det_defns.html" title=" " alt="" coords="137,541,300,582"/>
+<area shape="poly" id="edge36_Node000000_Node000009" title=" " alt="" coords="58,456,86,492,122,526,144,538,142,543,119,530,82,496,54,459"/>
+<area shape="rect" id="Node000010" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html" title=" " alt="" coords="143,607,294,647"/>
+<area shape="poly" id="edge37_Node000000_Node000010" title=" " alt="" coords="49,458,74,525,95,561,122,592,144,606,141,610,119,596,91,564,70,527,44,459"/>
+<area shape="rect" id="Node000011" href="$dd/d16/class_gam_r_1_1_tree_1_1_t_detector.html" title=" " alt="" coords="142,672,296,713"/>
+<area shape="poly" id="edge38_Node000000_Node000011" title=" " alt="" coords="45,459,52,503,65,556,88,610,104,635,122,657,143,672,140,676,119,661,99,638,83,612,60,557,47,504,40,460"/>
+<area shape="rect" id="Node000012" href="$da/d95/class_gam_r_1_1_tree_1_1_t_event.html" title=" " alt="" coords="150,737,288,778"/>
+<area shape="poly" id="edge39_Node000000_Node000012" title=" " alt="" coords="42,459,45,514,56,584,67,622,81,658,99,692,122,722,151,742,148,746,119,726,95,695,76,660,62,623,51,586,40,515,37,459"/>
+<area shape="rect" id="Node000013" href="$d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html" title=" " alt="" coords="143,803,295,843"/>
+<area shape="poly" id="edge40_Node000000_Node000013" title=" " alt="" coords="46,459,55,535,71,634,94,727,107,763,123,788,144,804,141,808,119,791,103,766,88,729,66,635,50,536,40,459"/>
 </map>

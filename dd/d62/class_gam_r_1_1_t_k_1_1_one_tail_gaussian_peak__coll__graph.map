@@ -1,7 +1,7 @@
 <map id="GamR::TK::OneTailGaussianPeak" name="GamR::TK::OneTailGaussianPeak">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,712,215,1177"/>
-<area shape="rect" id="Node000002" href="$da/d4a/class_gam_r_1_1_t_k_1_1_f_peak.html" title=" " alt="" coords="50,379,170,664"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,679,113,712,107,712,107,679"/>
-<area shape="rect" id="Node000003" href="$d3/d75/class_gam_r_1_1_t_k_1_1_peak.html" title=" " alt="" coords="54,5,166,331"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="113,346,113,379,107,379,107,346"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,722,212,1195"/>
+<area shape="rect" id="Node000002" href="$da/d4a/class_gam_r_1_1_t_k_1_1_f_peak.html" title=" " alt="" coords="49,384,169,674"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,689,111,722,106,722,106,689"/>
+<area shape="rect" id="Node000003" href="$d3/d75/class_gam_r_1_1_t_k_1_1_peak.html" title=" " alt="" coords="52,5,165,336"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="111,351,111,384,106,384,106,351"/>
 </map>

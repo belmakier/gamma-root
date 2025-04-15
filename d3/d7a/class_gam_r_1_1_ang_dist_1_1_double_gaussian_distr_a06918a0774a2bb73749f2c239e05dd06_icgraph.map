@@ -1,10 +1,7 @@
 <map id="GamR::AngDist::DoubleGaussianDistr::Normalise" name="GamR::AngDist::DoubleGaussianDistr::Normalise">
-<area shape="rect" id="Node000001" title=" " alt="" coords="783,5,995,46"/>
-<area shape="rect" id="Node000002" href="$d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#ad9b7b5d099ecb3829ed2157b3116182b" title=" " alt="" coords="524,5,735,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="768,28,736,28,736,23,768,23"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="524,5,735,46"/>
+<area shape="rect" id="Node000002" href="$d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#ad9b7b5d099ecb3829ed2157b3116182b" title=" " alt="" coords="265,5,476,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="509,28,477,28,477,23,509,23"/>
 <area shape="rect" id="Node000003" href="$d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#aa8c87af76f1effd71b25dbf649c8b521" title=" " alt="" coords="5,5,217,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="508,25,476,24,265,24,217,25,217,20,265,19,476,19,508,20"/>
-<area shape="rect" id="Node000004" href="$d4/d5b/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr_1_1_global_chi_square.html#a49c7c38d393123ef5249655ff12fd72a" title=" " alt="" coords="265,33,476,74"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="509,41,477,45,476,40,508,36"/>
-<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="249,43,217,40,217,34,249,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="249,28,217,28,217,23,249,23"/>
 </map>

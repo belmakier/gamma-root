@@ -3,7 +3,7 @@ var class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme =
     [ "Scheme", "d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html#ad00db9567d6040a7ee8cca76f63e9f7f", null ],
     [ "Scheme", "d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html#a06f72956db07f9199d62eecb265b4e08", null ],
     [ "AddState", "d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html#a777f826f7c9cc07f55ed7e98edb18246", null ],
-    [ "AddTransition", "d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html#a3ba4703bdfad223fd2d1b188edf2d054", null ],
+    [ "AddTransition", "d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html#ae10c0d08f8eb3ee27ebe22463cf2bad0", null ],
     [ "ClassDef", "d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html#afd1340a965eb5ab045895eb6a48123ef", null ],
     [ "Paint", "d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html#a37e6bcce0dcc25a11bf076b27696df92", null ],
     [ "PaintArrow", "d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html#a0f59cbd5baaedd778e5d4d39d2f19014", null ],

@@ -1,19 +1,19 @@
 <map id="GamR::Bateman::Scheme" name="GamR::Bateman::Scheme">
-<area shape="rect" id="Node000001" title=" " alt="" coords="362,445,523,690"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="279,277,417,357"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="398,355,416,379,434,427,429,429,411,382,394,358"/>
-<area shape="rect" id="Node000003" href="$d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html" title=" " alt="" coords="125,435,286,700"/>
-<area shape="poly" id="edge5_Node000003_Node000002" title=" " alt="" coords="284,358,261,382,240,420,236,417,257,379,280,355"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="284,464,316,409,331,372,336,374,321,412,288,467"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="28,284,97,349"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="77,348,105,409,118,434,114,436,100,412,72,350"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="5,134,120,214"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="65,229,65,284,60,284,60,229"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="121,284,255,349"/>
-<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="170,350,157,381,153,418,148,418,152,380,165,348"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="187,141,290,206"/>
-<area shape="poly" id="edge9_Node000002_Node000007" title=" " alt="" coords="274,216,320,275,316,278,270,220"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="225,221,202,285,197,283,220,219"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="228,5,249,71"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="241,71,241,124,236,124,236,71"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="356,448,516,698"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="274,279,410,360"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="392,358,409,383,427,431,422,433,405,386,387,362"/>
+<area shape="rect" id="Node000003" href="$d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html" title=" " alt="" coords="120,438,280,708"/>
+<area shape="poly" id="edge5_Node000003_Node000002" title=" " alt="" coords="277,362,255,386,234,424,230,421,251,383,274,358"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="278,468,310,413,325,375,330,377,315,416,282,471"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="28,286,95,353"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="74,351,98,413,114,442,109,444,94,415,69,353"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,135,118,216"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="64,231,64,287,59,287,59,231"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="119,286,250,353"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="164,354,151,385,147,422,141,421,145,384,160,351"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="185,142,285,208"/>
+<area shape="poly" id="edge9_Node000002_Node000007" title=" " alt="" coords="270,219,314,277,310,281,266,222"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="221,223,198,288,193,286,216,221"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="226,5,244,72"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="238,72,238,125,232,125,232,72"/>
 </map>

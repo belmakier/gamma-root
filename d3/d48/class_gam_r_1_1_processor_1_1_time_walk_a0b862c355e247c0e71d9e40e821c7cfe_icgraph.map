@@ -1,5 +1,7 @@
 <map id="GamR::Processor::TimeWalk::Draw" name="GamR::Processor::TimeWalk::Draw">
-<area shape="rect" id="Node000001" title="Draws Time Walk graphs." alt="" coords="241,5,428,46"/>
-<area shape="rect" id="Node000002" href="$d3/d48/class_gam_r_1_1_processor_1_1_time_walk.html#a10cdc74a1e9f4a14e1c449c9712ba085" title="Iterating through calibration peaks for each detector pair: calculate the time difference spectrum (w..." alt="" coords="5,5,193,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="225,28,193,28,193,23,225,23"/>
+<area shape="rect" id="Node000001" title="Draws Time Walk graphs." alt="" coords="262,27,449,68"/>
+<area shape="rect" id="Node000002" href="$d3/d48/class_gam_r_1_1_processor_1_1_time_walk.html#aebfe1c01514fb6b756ca8362eed61dbb" title="Conducts a global &#160;fit to solve for an absolute time calibration for each detector." alt="" coords="5,5,214,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,37,214,33,215,28,246,32"/>
+<area shape="rect" id="Node000003" href="$d3/d48/class_gam_r_1_1_processor_1_1_time_walk.html#a10cdc74a1e9f4a14e1c449c9712ba085" title="Iterating through calibration peaks for each detector pair: calculate the time difference spectrum (w..." alt="" coords="16,55,203,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="246,63,204,67,203,62,246,57"/>
 </map>

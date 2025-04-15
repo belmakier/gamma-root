@@ -1,17 +1,15 @@
 <map id="GamR::Processor::TimeWalk::MakeGraphs" name="GamR::Processor::TimeWalk::MakeGraphs">
-<area shape="rect" id="Node000001" title="Iterating through calibration peaks for each detector pair: calculate the time difference spectrum (w..." alt="" coords="5,590,193,630"/>
-<area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#a544c36017b9d9387f39e84863d9ae9a4" title=" " alt="" coords="315,383,354,408"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,587,306,417,309,421,125,591"/>
-<area shape="rect" id="Node000014" href="$d0/d74/group___t_k.html#gaa2200a38a3956d5e129aeeca03b2952a" title=" " alt="" coords="907,563,1094,588"/>
-<area shape="poly" id="edge21_Node000001_Node000014" title=" " alt="" coords="178,587,240,576,419,562,598,558,760,560,892,566,892,571,760,566,598,563,419,567,241,581,179,592"/>
-<area shape="rect" id="Node000017" href="$d3/d48/class_gam_r_1_1_processor_1_1_time_walk.html#a0b862c355e247c0e71d9e40e821c7cfe" title="Draws Time Walk graphs." alt="" coords="241,590,428,630"/>
-<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="193,608,225,608,225,613,193,613"/>
-<area shape="rect" id="Node000018" href="$d0/d17/_abbreviations_8cc.html#a5d1794b612bdcca3f4f4baa3d2e38a0b" title=" " alt="" coords="527,635,566,660"/>
-<area shape="poly" id="edge23_Node000001_Node000018" title=" " alt="" coords="180,629,241,640,317,646,392,648,512,646,512,652,392,654,316,651,240,645,179,634"/>
-<area shape="rect" id="Node000021" href="$d2/d80/namespace_gam_r_1_1_t_k.html#a718e33e862c5ff75b9ef81e312ff2325" title=" " alt="" coords="258,705,411,731"/>
-<area shape="poly" id="edge22_Node000001_Node000021" title=" " alt="" coords="136,629,185,656,242,684,276,697,274,702,240,689,183,661,133,633"/>
+<area shape="rect" id="Node000001" title="Iterating through calibration peaks for each detector pair: calculate the time difference spectrum (w..." alt="" coords="5,446,193,486"/>
+<area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#a544c36017b9d9387f39e84863d9ae9a4" title=" " alt="" coords="315,325,354,351"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,443,301,353,303,358,140,448"/>
+<area shape="rect" id="Node000017" href="$d3/d48/class_gam_r_1_1_processor_1_1_time_walk.html#a0b862c355e247c0e71d9e40e821c7cfe" title="Draws Time Walk graphs." alt="" coords="241,416,428,457"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="193,452,225,448,226,453,194,457"/>
+<area shape="rect" id="Node000018" href="$d0/d17/_abbreviations_8cc.html#a5d1794b612bdcca3f4f4baa3d2e38a0b" title=" " alt="" coords="527,481,566,507"/>
+<area shape="poly" id="edge22_Node000001_Node000018" title=" " alt="" coords="193,469,512,489,512,495,193,475"/>
+<area shape="rect" id="Node000021" href="$d2/d80/namespace_gam_r_1_1_t_k.html#a718e33e862c5ff75b9ef81e312ff2325" title=" " alt="" coords="258,532,411,558"/>
+<area shape="poly" id="edge21_Node000001_Node000021" title=" " alt="" coords="163,485,280,524,278,529,161,490"/>
 <area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#gaf641b8c1f292803f8695310a0aee1896" title=" " alt="" coords="476,305,617,331"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="353,386,494,334,496,339,355,391"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="354,334,460,324,461,329,354,339"/>
 <area shape="rect" id="Node000004" href="$d0/db7/namespace_gam_r_1_1_utils.html#a31f74a9ca644d560dc14e19c4dbd773b" title=" " alt="" coords="678,256,836,282"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="604,302,683,283,685,288,605,307"/>
 <area shape="rect" id="Node000005" href="$d0/d74/group___t_k.html#gaa496d15cf9600fa5790ff50c9392b0fd" title=" " alt="" coords="677,305,837,331"/>
@@ -32,15 +30,16 @@
 <area shape="poly" id="edge11_Node000005_Node000012" title=" " alt="" coords="837,325,888,331,888,336,837,330"/>
 <area shape="rect" id="Node000013" href="$d0/d74/group___t_k.html#gac083ac86c150085adae965936f41bb49" title=" " alt="" coords="903,383,1098,424"/>
 <area shape="poly" id="edge12_Node000005_Node000013" title=" " alt="" coords="792,329,898,369,917,375,915,381,896,374,790,334"/>
-<area shape="poly" id="edge13_Node000005_Node000014" title=" " alt="" coords="765,330,779,373,806,433,846,496,870,525,898,549,904,553,901,557,895,554,866,529,841,499,801,435,774,375,760,332"/>
-<area shape="rect" id="Node000015" href="$d0/d74/group___t_k.html#ga7673c2803d0941563430bf8ef217da80" title=" " alt="" coords="907,448,1094,489"/>
-<area shape="poly" id="edge14_Node000005_Node000015" title=" " alt="" coords="772,329,824,379,860,408,898,433,910,440,908,444,895,438,856,412,821,383,769,333"/>
-<area shape="rect" id="Node000016" href="$d0/db7/namespace_gam_r_1_1_utils.html#a80bc6c0c1ecd5d28cd4f9e3ae38f92ed" title=" " alt="" coords="929,513,1072,539"/>
-<area shape="poly" id="edge15_Node000005_Node000016" title=" " alt="" coords="767,330,784,364,813,410,851,458,898,499,915,508,913,512,895,503,847,462,809,413,780,367,762,332"/>
-<area shape="poly" id="edge17_Node000017_Node000018" title=" " alt="" coords="429,624,512,639,511,644,428,629"/>
-<area shape="rect" id="Node000019" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="665,635,849,660"/>
-<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="566,645,650,645,650,650,566,650"/>
-<area shape="poly" id="edge20_Node000019_Node000019" title=" " alt="" coords="722,636,715,626,719,616,734,610,757,608,783,611,796,618,793,622,781,616,757,613,735,615,723,620,720,625,726,633"/>
-<area shape="rect" id="Node000020" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="907,635,1094,660"/>
-<area shape="poly" id="edge19_Node000019_Node000020" title=" " alt="" coords="849,645,891,645,891,650,849,650"/>
+<area shape="rect" id="Node000014" href="$d0/d74/group___t_k.html#gaa2200a38a3956d5e129aeeca03b2952a" title=" " alt="" coords="907,448,1094,474"/>
+<area shape="poly" id="edge13_Node000005_Node000014" title=" " alt="" coords="772,329,823,380,859,409,898,433,914,440,912,445,895,438,856,413,820,384,768,333"/>
+<area shape="rect" id="Node000015" href="$d0/d74/group___t_k.html#ga7673c2803d0941563430bf8ef217da80" title=" " alt="" coords="907,498,1094,538"/>
+<area shape="poly" id="edge14_Node000005_Node000015" title=" " alt="" coords="768,330,816,403,854,446,898,484,905,488,903,493,895,488,850,450,812,406,763,333"/>
+<area shape="rect" id="Node000016" href="$d0/db7/namespace_gam_r_1_1_utils.html#a80bc6c0c1ecd5d28cd4f9e3ae38f92ed" title=" " alt="" coords="929,563,1072,588"/>
+<area shape="poly" id="edge15_Node000005_Node000016" title=" " alt="" coords="765,330,780,373,806,432,846,495,870,524,898,548,915,558,913,563,895,552,867,527,842,498,802,435,775,375,760,332"/>
+<area shape="poly" id="edge17_Node000017_Node000018" title=" " alt="" coords="413,455,513,483,512,488,411,460"/>
+<area shape="rect" id="Node000019" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="665,563,849,588"/>
+<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="567,499,708,554,706,559,565,504"/>
+<area shape="poly" id="edge20_Node000019_Node000019" title=" " alt="" coords="722,564,715,554,719,544,734,538,757,536,783,539,796,546,793,550,781,544,757,541,735,543,723,548,720,553,726,561"/>
+<area shape="rect" id="Node000020" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="907,612,1094,638"/>
+<area shape="poly" id="edge19_Node000019_Node000020" title=" " alt="" coords="825,586,919,606,918,611,824,592"/>
 </map>

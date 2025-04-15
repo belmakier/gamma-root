@@ -1,19 +1,21 @@
 <map id="GamR::Spect::LogAll" name="GamR::Spect::LogAll">
-<area shape="rect" id="Node000001" title=" " alt="" coords="540,104,682,129"/>
-<area shape="poly" id="edge9_Node000001_Node000001" title=" " alt="" coords="634,90,626,84,611,82,597,84,590,89,588,94,592,102,587,104,583,95,585,85,595,79,611,77,628,80,637,86"/>
-<area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#aac6b7f4e4bdca0828a1553bfe8a0bca5" title=" " alt="" coords="454,104,492,129"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="525,119,493,119,493,114,525,114"/>
-<area shape="rect" id="Node000003" href="$dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a6f2310a0f99a99aebaa93bc84a6fd1a8" title=" " alt="" coords="16,5,170,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="452,93,431,71,405,53,346,33,284,23,224,19,170,20,170,15,224,14,285,17,348,28,407,49,434,67,456,89"/>
-<area shape="rect" id="Node000004" href="$dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a820a25ceeb770de93de22cb00135bf2c" title=" " alt="" coords="240,63,394,103"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="438,112,394,102,395,97,439,107"/>
-<area shape="rect" id="Node000006" href="$df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a612e799f57988942f58120f0491483d9" title=" " alt="" coords="234,128,401,169"/>
-<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="439,126,402,134,401,128,438,121"/>
-<area shape="rect" id="Node000007" href="$d7/dd8/namespace_gam_r_1_1_efficiency.html#a427d0e741996ac1982ee55180be3ecdf" title=" " alt="" coords="229,193,406,218"/>
-<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="454,143,433,164,407,183,381,195,378,190,405,178,429,160,450,139"/>
-<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="225,62,170,48,171,43,226,57"/>
-<area shape="rect" id="Node000005" href="$dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a5737e643d04001de514eb77ba7e010eb" title=" " alt="" coords="5,70,181,96"/>
-<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="224,86,181,86,181,80,224,80"/>
-<area shape="rect" id="Node000008" href="$dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a253378c895d2ac0ba1d8ada6c5ae8f4b" title=" " alt="" coords="16,185,170,226"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="213,208,171,208,171,203,213,203"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="816,104,957,129"/>
+<area shape="poly" id="edge10_Node000001_Node000001" title=" " alt="" coords="909,90,901,84,886,82,872,84,865,89,863,94,867,102,862,104,858,95,861,85,871,79,886,77,903,80,912,86"/>
+<area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#aac6b7f4e4bdca0828a1553bfe8a0bca5" title=" " alt="" coords="729,104,768,129"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="800,119,768,119,768,114,800,114"/>
+<area shape="rect" id="Node000003" href="$dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a6f2310a0f99a99aebaa93bc84a6fd1a8" title=" " alt="" coords="291,5,446,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="727,93,706,71,680,53,622,33,560,23,500,19,446,20,446,15,500,14,560,17,623,28,683,49,710,67,731,89"/>
+<area shape="rect" id="Node000004" href="$dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a820a25ceeb770de93de22cb00135bf2c" title=" " alt="" coords="516,63,670,103"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="714,112,670,102,671,97,715,107"/>
+<area shape="rect" id="Node000006" href="$df/dea/class_gam_r_1_1_efficiency_1_1_multi_eff_fit.html#a612e799f57988942f58120f0491483d9" title=" " alt="" coords="509,128,676,169"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="715,126,677,134,676,128,714,121"/>
+<area shape="rect" id="Node000007" href="$d7/dd8/namespace_gam_r_1_1_efficiency.html#a427d0e741996ac1982ee55180be3ecdf" title=" " alt="" coords="504,193,681,218"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="729,143,708,164,683,183,656,195,654,190,680,178,705,160,725,139"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="500,62,445,48,447,43,501,57"/>
+<area shape="rect" id="Node000005" href="$dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a5737e643d04001de514eb77ba7e010eb" title=" " alt="" coords="281,70,456,96"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="500,86,456,86,456,80,500,80"/>
+<area shape="rect" id="Node000008" href="$dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a253378c895d2ac0ba1d8ada6c5ae8f4b" title=" " alt="" coords="291,185,446,226"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="489,208,446,208,446,203,489,203"/>
+<area shape="rect" id="Node000009" href="$d1/d16/class_gam_r_1_1_efficiency_1_1_eff_fit_1_1_global_chi_square.html#a4abee9105f06105968c79a510c51ae70" title=" " alt="" coords="5,185,233,226"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="275,208,233,208,233,203,275,203"/>
 </map>

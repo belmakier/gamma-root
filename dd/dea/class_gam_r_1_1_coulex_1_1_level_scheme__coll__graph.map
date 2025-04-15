@@ -1,28 +1,28 @@
 <map id="GamR::Coulex::LevelScheme" name="GamR::Coulex::LevelScheme">
-<area shape="rect" id="Node000001" title=" " alt="" coords="105,1233,287,1538"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="80,884,235,964"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,964,185,1216,179,1217,158,964"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="28,255,97,320"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="63,320,59,390,58,487,63,597,78,708,103,793,133,868,129,870,98,795,73,709,58,597,52,487,54,390,57,319"/>
-<area shape="rect" id="Node000005" href="$d1/d65/class_gam_r_1_1_coulex_1_1_level.html" title=" " alt="" coords="125,503,259,708"/>
-<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="74,319,91,375,113,439,134,487,129,489,108,441,85,377,69,321"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="5,5,120,85"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="65,100,65,255,60,255,60,100"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="165,709,161,733,156,803,157,867,151,867,151,802,156,732,160,708"/>
-<area shape="rect" id="Node000011" href="$d1/d57/class_gam_r_1_1_coulex_1_1_transition.html" title=" " alt="" coords="259,822,416,1027"/>
-<area shape="poly" id="edge12_Node000011_Node000005" title=" " alt="" coords="221,707,255,797,260,806,255,808,251,799,216,709"/>
-<area shape="rect" id="Node000006" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html" title=" " alt="" coords="122,135,294,440"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="203,440,201,486,195,486,198,439"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="283,573,391,638"/>
-<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="335,653,321,736,311,774,298,799,286,810,274,814,261,817,248,824,215,854,187,886,183,883,211,850,245,819,259,812,272,809,283,805,294,796,306,772,316,735,329,652"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="323,255,344,320"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="336,320,338,479,339,556,334,556,333,479,331,320"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="439,255,460,320"/>
-<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="441,319,357,558,352,556,436,317"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="446,732,549,798"/>
-<area shape="poly" id="edge14_Node000012_Node000009" title=" " alt="" coords="455,320,495,715,490,715,450,320"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="271,1090,404,1170"/>
-<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="318,1171,291,1219,287,1217,314,1168"/>
-<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="340,1027,340,1073,335,1073,335,1027"/>
-<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="496,813,488,868,473,935,447,1004,430,1037,409,1068,386,1092,382,1088,405,1064,425,1035,442,1002,468,934,483,867,491,812"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="102,1248,280,1559"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="76,896,229,977"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,977,179,1231,174,1232,153,977"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="28,258,95,324"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="62,324,58,395,57,493,62,605,77,717,101,804,130,880,125,882,95,806,72,719,57,605,52,493,53,395,57,324"/>
+<area shape="rect" id="Node000005" href="$d1/d65/class_gam_r_1_1_coulex_1_1_level.html" title=" " alt="" coords="124,509,255,718"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="72,324,88,381,109,445,130,493,125,495,105,447,83,382,67,325"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,5,118,87"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="64,101,64,258,59,258,59,101"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="161,718,156,742,151,813,151,879,146,879,146,813,151,742,155,717"/>
+<area shape="rect" id="Node000011" href="$d1/d57/class_gam_r_1_1_coulex_1_1_transition.html" title=" " alt="" coords="253,832,409,1041"/>
+<area shape="poly" id="edge12_Node000011_Node000005" title=" " alt="" coords="217,717,250,807,255,816,250,819,246,809,212,719"/>
+<area shape="rect" id="Node000006" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html" title=" " alt="" coords="120,136,289,446"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="200,446,198,492,193,492,195,446"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="280,580,385,647"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="330,662,316,746,306,784,293,810,281,820,269,825,256,828,243,835,210,865,182,898,178,894,206,861,240,830,254,823,267,819,278,816,289,807,301,782,311,745,324,662"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="317,258,337,324"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="330,324,332,485,334,564,328,564,326,485,325,324"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="434,258,452,324"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="436,320,351,566,346,564,431,318"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="441,742,541,808"/>
+<area shape="poly" id="edge14_Node000012_Node000009" title=" " alt="" coords="449,324,489,725,484,725,443,324"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="265,1104,397,1185"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="312,1186,286,1235,281,1232,307,1184"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="334,1041,334,1087,328,1087,328,1041"/>
+<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="490,824,482,880,466,947,440,1017,423,1051,402,1082,380,1106,376,1102,398,1078,418,1048,435,1015,461,946,476,879,485,823"/>
 </map>

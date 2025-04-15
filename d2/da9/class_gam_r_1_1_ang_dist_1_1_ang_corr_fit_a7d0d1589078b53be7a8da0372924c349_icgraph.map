@@ -1,7 +1,9 @@
 <map id="GamR::AngDist::AngCorrFit::SetData" name="GamR::AngDist::AngCorrFit::SetData">
-<area shape="rect" id="Node000001" title=" " alt="" coords="232,39,410,79"/>
-<area shape="rect" id="Node000002" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#ade67fbd9efac760657e3d1455a2f5592" title=" " alt="" coords="5,5,184,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,46,184,41,185,36,217,41"/>
-<area shape="rect" id="Node000003" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a22cc58bf6eb5d0eda0bc207561b76921" title=" " alt="" coords="5,71,184,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,76,185,81,184,76,216,71"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="458,39,636,79"/>
+<area shape="rect" id="Node000002" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#ade67fbd9efac760657e3d1455a2f5592" title=" " alt="" coords="232,5,410,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="442,46,410,41,411,36,443,41"/>
+<area shape="rect" id="Node000003" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a22cc58bf6eb5d0eda0bc207561b76921" title=" " alt="" coords="232,71,410,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="443,76,411,81,410,76,442,71"/>
+<area shape="rect" id="Node000004" href="$d2/da9/class_gam_r_1_1_ang_dist_1_1_ang_corr_fit.html#a6776446f8f35f750e75771cde142fae3" title=" " alt="" coords="5,71,184,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="216,94,184,94,184,88,216,88"/>
 </map>

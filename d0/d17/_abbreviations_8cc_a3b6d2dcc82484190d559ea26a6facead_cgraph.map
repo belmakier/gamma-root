@@ -4,6 +4,12 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,56,83,56,83,62,51,62"/>
 <area shape="rect" id="Node000003" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a3565d6396e4ff99984e83a27e2ab35ce" title=" " alt="" coords="312,5,487,46"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="264,44,296,39,297,44,265,49"/>
-<area shape="rect" id="Node000004" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a8054df5976ecd1f68768286918001af5" title=" " alt="" coords="312,71,487,111"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="265,68,297,73,296,79,264,74"/>
+<area shape="rect" id="Node000006" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a8054df5976ecd1f68768286918001af5" title=" " alt="" coords="312,71,487,111"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="265,68,297,73,296,79,264,74"/>
+<area shape="rect" id="Node000004" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a3eacef62898caaaff029fd33931ad1bb" title=" " alt="" coords="535,5,711,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="488,23,520,23,520,28,488,28"/>
+<area shape="rect" id="Node000005" href="$df/d6f/class_gam_r_1_1_nucleus_1_1_transition.html#a7a6d76bd209176b0448f58d8292ae293" title=" " alt="" coords="535,71,711,111"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="472,44,537,63,535,68,471,49"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="471,68,535,48,537,54,472,73"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="488,88,520,88,520,94,488,94"/>
 </map>

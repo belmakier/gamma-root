@@ -1,9 +1,9 @@
 <map id="GamR::TK::BPeak" name="GamR::TK::BPeak">
-<area shape="rect" id="Node000001" title=" " alt="" coords="113,379,233,884"/>
-<area shape="rect" id="Node000002" href="$d3/d75/class_gam_r_1_1_t_k_1_1_peak.html" title=" " alt="" coords="5,5,117,331"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,345,116,383,111,384,101,346"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="142,135,205,201"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="176,216,176,379,171,379,171,216"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="229,135,291,201"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="254,216,223,380,218,379,249,215"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="112,384,233,898"/>
+<area shape="rect" id="Node000002" href="$d3/d75/class_gam_r_1_1_t_k_1_1_peak.html" title=" " alt="" coords="5,5,118,336"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,350,115,384,110,385,101,351"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="142,138,203,204"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,219,175,384,170,384,170,219"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="228,138,288,204"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="252,219,222,385,216,384,247,218"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="GamR::ORNL::BananaGate" name="GamR::ORNL::BananaGate">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,119,176,864"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="65,5,116,71"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,86,93,119,88,119,88,86"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,120,174,877"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="65,5,114,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,87,92,120,87,120,87,87"/>
 </map>
