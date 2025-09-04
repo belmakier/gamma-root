@@ -6,5 +6,7 @@ var searchData=
   ['parent_3',['parent',['../d1/d3d/struct_gam_r_1_1_tree_1_1_t_det_defn_1_1_update_goodness.html#adb04dbc06cc072235d11e0dfe8e5368a',1,'GamR::Tree::TDetDefn::UpdateGoodness']]],
   ['pointermap_4',['PointerMap',['../dd/d9c/struct_gam_r_1_1_tree_1_1_t_det_defn_1_1_interpret_pointers.html#a9b662a2671c61c5f291105fc069d4309',1,'GamR::Tree::TDetDefn::InterpretPointers']]],
   ['population_5',['population',['../d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html#a4517811c52aec9fdf465114ee2237fb2',1,'GamR::Bateman::Nucleus']]],
-  ['ptrmatrix_6',['ptrMatrix',['../d1/da3/class_gam_r_1_1_sort_1_1_type_1_1_matrix.html#ade4f563d2a4911be953ce7c032989406',1,'GamR::Sort::Type::Matrix']]]
+  ['ptrmatrix_6',['ptrMatrix',['../d1/da3/class_gam_r_1_1_sort_1_1_type_1_1_matrix.html#ade4f563d2a4911be953ce7c032989406',1,'GamR::Sort::Type::Matrix']]],
+  ['px_7',['px',['../d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#afdd330e02e3ddfc7249d518cf8177f50',1,'GamR::Utils::Clicker']]],
+  ['py_8',['py',['../d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#a28e893270eeaae5cdf8ae8787f099fce',1,'GamR::Utils::Clicker']]]
 ];

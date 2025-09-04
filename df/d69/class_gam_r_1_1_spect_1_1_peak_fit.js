@@ -26,6 +26,7 @@ var class_gam_r_1_1_spect_1_1_peak_fit =
     [ "GetCentError", "df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#abbe681240c13572e6ace88fc3a0dcf00", null ],
     [ "GetCentError", "df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#ad3938962fe709dac6495bcaf1f56f9ed", null ],
     [ "GetChi2", "df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a4226b76ef3a8db129e7b2a16640e5f4d", null ],
+    [ "GetClick", "df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#ad42bdc25c93ef66ee4b1532d9b4013c7", null ],
     [ "GetFixWidths", "df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a3af71818aa43037dc4a14a24c70a2d61", null ],
     [ "GetFunc", "df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a5ce797fe6f6a78eda3bae76ce25a4178", null ],
     [ "GetHigh", "df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#ac148675b60a4b5917975cffacd85d740", null ],

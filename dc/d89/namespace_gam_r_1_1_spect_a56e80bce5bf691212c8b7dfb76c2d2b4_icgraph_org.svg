@@ -613,145 +613,145 @@
 </a>
 </g>
 </g>
-<!-- Node71 -->
-<g id="Node000071" class="node">
-<title>Node71</title>
-<g id="a_Node000071"><a xlink:href="../../d0/d17/_abbreviations_8cc.html#ace9e0e6a05765a233977c7ad858435d3" target="_top" xlink:title=" ">
+<!-- Node77 -->
+<g id="Node000077" class="node">
+<title>Node77</title>
+<g id="a_Node000077"><a xlink:href="../../d0/d17/_abbreviations_8cc.html#ace9e0e6a05765a233977c7ad858435d3" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="476.65,-278.25 447.85,-278.25 447.85,-259 476.65,-259 476.65,-278.25"/>
 <text text-anchor="middle" x="462.25" y="-264.75" font-family="Helvetica,sans-Serif" font-size="10.00">ss</text>
 </a>
 </g>
 </g>
-<!-- Node32&#45;&gt;Node71 -->
-<g id="edge45_Node000032_Node000071" class="edge">
-<title>Node32&#45;&gt;Node71</title>
-<g id="a_edge45_Node000032_Node000071"><a xlink:title=" ">
+<!-- Node32&#45;&gt;Node77 -->
+<g id="edge45_Node000032_Node000077" class="edge">
+<title>Node32&#45;&gt;Node77</title>
+<g id="a_edge45_Node000032_Node000077"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M582.44,-243.99C544.78,-251.77 499.2,-261.19 476.89,-265.81"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="582.77,-247.49 591.86,-242.04 581.35,-240.64 582.77,-247.49"/>
-</a>
-</g>
-</g>
-<!-- Node72 -->
-<g id="Node000072" class="node">
-<title>Node72</title>
-<g id="a_Node000072"><a xlink:href="../../d0/d17/_abbreviations_8cc.html#a6b9b302fbbba1ba11f98375e78dd3bf8" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="476.65,-241.25 447.85,-241.25 447.85,-222 476.65,-222 476.65,-241.25"/>
-<text text-anchor="middle" x="462.25" y="-227.75" font-family="Helvetica,sans-Serif" font-size="10.00">ss</text>
-</a>
-</g>
-</g>
-<!-- Node32&#45;&gt;Node72 -->
-<g id="edge46_Node000032_Node000072" class="edge">
-<title>Node32&#45;&gt;Node72</title>
-<g id="a_edge46_Node000032_Node000072"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M562.62,-231.62C529.96,-231.62 495.53,-231.62 477,-231.62"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="562.55,-235.13 572.55,-231.63 562.55,-228.13 562.55,-235.13"/>
-</a>
-</g>
-</g>
-<!-- Node73 -->
-<g id="Node000073" class="node">
-<title>Node73</title>
-<g id="a_Node000073"><a xlink:href="../../d0/d17/_abbreviations_8cc.html#a0b29a3ee3205d98e66f5a1dbf182487c" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="476.65,-204.25 447.85,-204.25 447.85,-185 476.65,-185 476.65,-204.25"/>
-<text text-anchor="middle" x="462.25" y="-190.75" font-family="Helvetica,sans-Serif" font-size="10.00">ss</text>
-</a>
-</g>
-</g>
-<!-- Node32&#45;&gt;Node73 -->
-<g id="edge47_Node000032_Node000073" class="edge">
-<title>Node32&#45;&gt;Node73</title>
-<g id="a_edge47_Node000032_Node000073"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M582.44,-219.26C544.78,-211.48 499.2,-202.06 476.89,-197.44"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="581.35,-222.61 591.86,-221.21 582.77,-215.76 581.35,-222.61"/>
-</a>
-</g>
-</g>
-<!-- Node74 -->
-<g id="Node000074" class="node">
-<title>Node74</title>
-<g id="a_Node000074"><a xlink:href="../../d0/d17/_abbreviations_8cc.html#aa278136478d11c553b193d5ca40e18c6" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="476.65,-167.25 447.85,-167.25 447.85,-148 476.65,-148 476.65,-167.25"/>
-<text text-anchor="middle" x="462.25" y="-153.75" font-family="Helvetica,sans-Serif" font-size="10.00">ss</text>
-</a>
-</g>
-</g>
-<!-- Node32&#45;&gt;Node74 -->
-<g id="edge48_Node000032_Node000074" class="edge">
-<title>Node32&#45;&gt;Node74</title>
-<g id="a_edge48_Node000032_Node000074"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M616.17,-215.83C594.88,-203.49 563.69,-186.63 534.75,-175.62 515.25,-168.21 491.59,-162.94 476.98,-160.09"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="614.35,-218.82 624.75,-220.88 617.9,-212.79 614.35,-218.82"/>
-</a>
-</g>
-</g>
-<!-- Node75 -->
-<g id="Node000075" class="node">
-<title>Node75</title>
-<g id="a_Node000075"><a xlink:href="../../dc/d89/namespace_gam_r_1_1_spect.html#ad6336c2a214e9d575dda1e7fb52d1cd1" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="531,-130.25 393.5,-130.25 393.5,-111 531,-111 531,-130.25"/>
-<text text-anchor="middle" x="462.25" y="-116.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Spect::StackSpectra</text>
-</a>
-</g>
-</g>
-<!-- Node32&#45;&gt;Node75 -->
-<g id="edge49_Node000032_Node000075" class="edge">
-<title>Node32&#45;&gt;Node75</title>
-<g id="a_edge49_Node000032_Node000075"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M626.26,-213.37C606.74,-192.24 571.74,-157.88 534.75,-138.62 528.73,-135.49 522.14,-132.89 515.47,-130.72"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="623.55,-215.59 632.85,-220.67 628.74,-210.9 623.55,-215.59"/>
-</a>
-</g>
-</g>
-<!-- Node76 -->
-<g id="Node000076" class="node">
-<title>Node76</title>
-<g id="a_Node000076"><a xlink:href="../../dc/d89/namespace_gam_r_1_1_spect.html#a79aa3b2f80e5a59db0680eb7cdd6b20f" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="531,-93.25 393.5,-93.25 393.5,-74 531,-74 531,-93.25"/>
-<text text-anchor="middle" x="462.25" y="-79.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Spect::StackSpectra</text>
-</a>
-</g>
-</g>
-<!-- Node32&#45;&gt;Node76 -->
-<g id="edge52_Node000032_Node000076" class="edge">
-<title>Node32&#45;&gt;Node76</title>
-<g id="a_edge52_Node000032_Node000076"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M631.49,-211.92C614.71,-183.13 579.54,-129.91 534.75,-101.62 529.77,-98.48 524.27,-95.89 518.6,-93.74"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="628.28,-213.37 636.25,-220.34 634.37,-209.92 628.28,-213.37"/>
-</a>
-</g>
-</g>
-<!-- Node77 -->
-<g id="Node000077" class="node">
-<title>Node77</title>
-<g id="a_Node000077"><a xlink:href="../../dc/d89/namespace_gam_r_1_1_spect.html#a7fb45903c4b75ec007d205af02d49667" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="531,-56.25 393.5,-56.25 393.5,-37 531,-37 531,-56.25"/>
-<text text-anchor="middle" x="462.25" y="-42.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Spect::StackSpectra</text>
-</a>
-</g>
-</g>
-<!-- Node32&#45;&gt;Node77 -->
-<g id="edge53_Node000032_Node000077" class="edge">
-<title>Node32&#45;&gt;Node77</title>
-<g id="a_edge53_Node000032_Node000077"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M635.02,-211.43C621.25,-175.99 587.84,-102.75 534.75,-64.62 530.28,-61.41 525.29,-58.77 520.09,-56.6"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="631.62,-212.33 638.4,-220.47 638.18,-209.88 631.62,-212.33"/>
 </a>
 </g>
 </g>
 <!-- Node78 -->
 <g id="Node000078" class="node">
 <title>Node78</title>
-<g id="a_Node000078"><a xlink:href="../../dc/d89/namespace_gam_r_1_1_spect.html#a1ee08c4dcd78e613fcd6065110ce6a3c" target="_top" xlink:title=" ">
+<g id="a_Node000078"><a xlink:href="../../d0/d17/_abbreviations_8cc.html#a6b9b302fbbba1ba11f98375e78dd3bf8" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="476.65,-241.25 447.85,-241.25 447.85,-222 476.65,-222 476.65,-241.25"/>
+<text text-anchor="middle" x="462.25" y="-227.75" font-family="Helvetica,sans-Serif" font-size="10.00">ss</text>
+</a>
+</g>
+</g>
+<!-- Node32&#45;&gt;Node78 -->
+<g id="edge46_Node000032_Node000078" class="edge">
+<title>Node32&#45;&gt;Node78</title>
+<g id="a_edge46_Node000032_Node000078"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M562.62,-231.62C529.96,-231.62 495.53,-231.62 477,-231.62"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="562.55,-235.13 572.55,-231.63 562.55,-228.13 562.55,-235.13"/>
+</a>
+</g>
+</g>
+<!-- Node79 -->
+<g id="Node000079" class="node">
+<title>Node79</title>
+<g id="a_Node000079"><a xlink:href="../../d0/d17/_abbreviations_8cc.html#a0b29a3ee3205d98e66f5a1dbf182487c" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="476.65,-204.25 447.85,-204.25 447.85,-185 476.65,-185 476.65,-204.25"/>
+<text text-anchor="middle" x="462.25" y="-190.75" font-family="Helvetica,sans-Serif" font-size="10.00">ss</text>
+</a>
+</g>
+</g>
+<!-- Node32&#45;&gt;Node79 -->
+<g id="edge47_Node000032_Node000079" class="edge">
+<title>Node32&#45;&gt;Node79</title>
+<g id="a_edge47_Node000032_Node000079"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M582.44,-219.26C544.78,-211.48 499.2,-202.06 476.89,-197.44"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="581.35,-222.61 591.86,-221.21 582.77,-215.76 581.35,-222.61"/>
+</a>
+</g>
+</g>
+<!-- Node80 -->
+<g id="Node000080" class="node">
+<title>Node80</title>
+<g id="a_Node000080"><a xlink:href="../../d0/d17/_abbreviations_8cc.html#aa278136478d11c553b193d5ca40e18c6" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="476.65,-167.25 447.85,-167.25 447.85,-148 476.65,-148 476.65,-167.25"/>
+<text text-anchor="middle" x="462.25" y="-153.75" font-family="Helvetica,sans-Serif" font-size="10.00">ss</text>
+</a>
+</g>
+</g>
+<!-- Node32&#45;&gt;Node80 -->
+<g id="edge48_Node000032_Node000080" class="edge">
+<title>Node32&#45;&gt;Node80</title>
+<g id="a_edge48_Node000032_Node000080"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M616.17,-215.83C594.88,-203.49 563.69,-186.63 534.75,-175.62 515.25,-168.21 491.59,-162.94 476.98,-160.09"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="614.35,-218.82 624.75,-220.88 617.9,-212.79 614.35,-218.82"/>
+</a>
+</g>
+</g>
+<!-- Node81 -->
+<g id="Node000081" class="node">
+<title>Node81</title>
+<g id="a_Node000081"><a xlink:href="../../dc/d89/namespace_gam_r_1_1_spect.html#ad6336c2a214e9d575dda1e7fb52d1cd1" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="531,-130.25 393.5,-130.25 393.5,-111 531,-111 531,-130.25"/>
+<text text-anchor="middle" x="462.25" y="-116.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Spect::StackSpectra</text>
+</a>
+</g>
+</g>
+<!-- Node32&#45;&gt;Node81 -->
+<g id="edge49_Node000032_Node000081" class="edge">
+<title>Node32&#45;&gt;Node81</title>
+<g id="a_edge49_Node000032_Node000081"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M626.26,-213.37C606.74,-192.24 571.74,-157.88 534.75,-138.62 528.73,-135.49 522.14,-132.89 515.47,-130.72"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="623.55,-215.59 632.85,-220.67 628.74,-210.9 623.55,-215.59"/>
+</a>
+</g>
+</g>
+<!-- Node82 -->
+<g id="Node000082" class="node">
+<title>Node82</title>
+<g id="a_Node000082"><a xlink:href="../../dc/d89/namespace_gam_r_1_1_spect.html#a79aa3b2f80e5a59db0680eb7cdd6b20f" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="531,-93.25 393.5,-93.25 393.5,-74 531,-74 531,-93.25"/>
+<text text-anchor="middle" x="462.25" y="-79.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Spect::StackSpectra</text>
+</a>
+</g>
+</g>
+<!-- Node32&#45;&gt;Node82 -->
+<g id="edge52_Node000032_Node000082" class="edge">
+<title>Node32&#45;&gt;Node82</title>
+<g id="a_edge52_Node000032_Node000082"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M631.49,-211.92C614.71,-183.13 579.54,-129.91 534.75,-101.62 529.77,-98.48 524.27,-95.89 518.6,-93.74"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="628.28,-213.37 636.25,-220.34 634.37,-209.92 628.28,-213.37"/>
+</a>
+</g>
+</g>
+<!-- Node83 -->
+<g id="Node000083" class="node">
+<title>Node83</title>
+<g id="a_Node000083"><a xlink:href="../../dc/d89/namespace_gam_r_1_1_spect.html#a7fb45903c4b75ec007d205af02d49667" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="531,-56.25 393.5,-56.25 393.5,-37 531,-37 531,-56.25"/>
+<text text-anchor="middle" x="462.25" y="-42.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Spect::StackSpectra</text>
+</a>
+</g>
+</g>
+<!-- Node32&#45;&gt;Node83 -->
+<g id="edge53_Node000032_Node000083" class="edge">
+<title>Node32&#45;&gt;Node83</title>
+<g id="a_edge53_Node000032_Node000083"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M635.02,-211.43C621.25,-175.99 587.84,-102.75 534.75,-64.62 530.28,-61.41 525.29,-58.77 520.09,-56.6"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="631.62,-212.33 638.4,-220.47 638.18,-209.88 631.62,-212.33"/>
+</a>
+</g>
+</g>
+<!-- Node84 -->
+<g id="Node000084" class="node">
+<title>Node84</title>
+<g id="a_Node000084"><a xlink:href="../../dc/d89/namespace_gam_r_1_1_spect.html#a1ee08c4dcd78e613fcd6065110ce6a3c" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="531,-19.25 393.5,-19.25 393.5,0 531,0 531,-19.25"/>
 <text text-anchor="middle" x="462.25" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Spect::StackSpectra</text>
 </a>
 </g>
 </g>
-<!-- Node32&#45;&gt;Node78 -->
-<g id="edge54_Node000032_Node000078" class="edge">
-<title>Node32&#45;&gt;Node78</title>
-<g id="a_edge54_Node000032_Node000078"><a xlink:title=" ">
+<!-- Node32&#45;&gt;Node84 -->
+<g id="edge54_Node000032_Node000084" class="edge">
+<title>Node32&#45;&gt;Node84</title>
+<g id="a_edge54_Node000032_Node000084"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M637.35,-210.78C626.45,-169.23 596.2,-75.94 534.75,-27.62 530.72,-24.46 526.21,-21.85 521.46,-19.69"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="633.89,-211.37 639.7,-220.23 640.68,-209.68 633.89,-211.37"/>
 </a>

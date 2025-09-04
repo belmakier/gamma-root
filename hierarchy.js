@@ -58,6 +58,7 @@ var hierarchy =
     ] ],
     [ "GamR::Tree::Reader", "d1/dab/class_gam_r_1_1_tree_1_1_reader.html", null ],
     [ "GamR::Tree::Reader::DetGroup", "d4/d60/struct_gam_r_1_1_tree_1_1_reader_1_1_det_group.html", null ],
+    [ "GamR::Utils::Clicker", "d5/db8/class_gam_r_1_1_utils_1_1_clicker.html", null ],
     [ "GamR::Utils::REPL", "d6/dee/class_gam_r_1_1_utils_1_1_r_e_p_l.html", null ],
     [ "GamR::Viewer::Viewer< TExpDefn, TEvent >", "dc/d00/class_gam_r_1_1_viewer_1_1_viewer.html", null ],
     [ "TArrow", null, [

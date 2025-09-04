@@ -96,6 +96,7 @@ var annotated_dup =
         [ "TExpDefn", "d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html", "d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn" ]
       ] ],
       [ "Utils", "d0/db7/namespace_gam_r_1_1_utils.html", [
+        [ "Clicker", "d5/db8/class_gam_r_1_1_utils_1_1_clicker.html", "d5/db8/class_gam_r_1_1_utils_1_1_clicker" ],
         [ "REPL", "d6/dee/class_gam_r_1_1_utils_1_1_r_e_p_l.html", "d6/dee/class_gam_r_1_1_utils_1_1_r_e_p_l" ]
       ] ],
       [ "Viewer", "dd/d4f/namespace_gam_r_1_1_viewer.html", [

@@ -1,9 +1,9 @@
 <map id="GamR::TK::Gate" name="GamR::TK::Gate">
-<area shape="rect" id="Node000001" title=" " alt="" coords="48,120,194,1223"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="48,120,194,1243"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,5,66,72"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,86,51,135,46,135,39,87"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,86,51,136,46,137,39,87"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="91,5,151,72"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="124,87,124,120,118,120,118,87"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="176,5,229,72"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="199,87,195,121,189,120,194,86"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="199,87,195,120,190,119,194,86"/>
 </map>

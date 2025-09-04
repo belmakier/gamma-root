@@ -13,6 +13,7 @@ var class_gam_r_1_1_spect_1_1_back_sub2_d =
     [ "AddBackY", "df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a662151f7e3c76b22597cba4a1c8e0db6", null ],
     [ "AddBackY", "df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a7364f6379ed6bffcd1cceb3ad6c31303", null ],
     [ "AddBackY", "df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#ad19c3edf9ea02ea2769157f735a799c1", null ],
+    [ "GetClick", "df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#af38961524ee5e524133ca0bbec35f7f8", null ],
     [ "GetPeakArea", "df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a0b899646f7198a5fc11717f520e85783", null ],
     [ "GetPeakAreaError", "df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#a0a43b779ef7db3214dac9ca8b8be3e18", null ],
     [ "GetPeakCounts", "df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#aed5a33c8e7cee9f4090341fba68eb616", null ],

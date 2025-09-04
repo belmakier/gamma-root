@@ -108,18 +108,18 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d0/d66/class_gam_r_1_1_ang_dist_1_1_gaussian_distr.html#ac5fb2c34aa14ac5ae613b09d926fb099",
-"d0/d74/group___t_k.html#gaafa8098032c9c44213c6d8a94d8d5638",
+"d0/d74/group___t_k.html#gaae543a7d595e5faacbfb4da05718e3f3",
 "d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#ad18875e3efcf669c9f8e90a8446da366",
 "d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html",
 "d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html",
 "d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a24e334f3a0ed59b61698aebc80f7419c",
 "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#ae2d81604b034ed4716ac584c1ba00973",
-"d8/d35/class_gam_r_1_1_efficiency_1_1_multi_data_set.html#af4f19f093ff992500d4119f9ae0bd19a",
-"da/d95/class_gam_r_1_1_tree_1_1_t_event.html#a1a5c28d78c004a0ac4aff5a075a5c923",
-"dc/d89/namespace_gam_r_1_1_spect.html#a1ee08c4dcd78e613fcd6065110ce6a3c",
-"dd/d9c/struct_gam_r_1_1_tree_1_1_t_det_defn_1_1_interpret_pointers.html#a25fcbda37082ea66f5cec97a1056e2b9",
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a3de27f30c663b65e77c8124e24b6e5de",
-"functions_eval.html"
+"d8/d1f/_cut_8cc_source.html",
+"da/d95/class_gam_r_1_1_tree_1_1_t_event.html#a0b4488a6d9135d6ac182f9a4ad74493e",
+"dc/d89/namespace_gam_r_1_1_spect.html",
+"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a865f1c9f1c75afa6c6c0db44e565901a",
+"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a35c3e32218f20481018e85a7f1d4dc6f",
+"dir_c183064df1291357db1d38c637c6e87c.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

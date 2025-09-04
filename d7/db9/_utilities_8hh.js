@@ -1,11 +1,11 @@
 var _utilities_8hh =
 [
+    [ "GamR::Utils::Clicker", "d5/db8/class_gam_r_1_1_utils_1_1_clicker.html", "d5/db8/class_gam_r_1_1_utils_1_1_clicker" ],
     [ "GamR::Utils::c_to_f_str", "d0/db7/namespace_gam_r_1_1_utils.html#a37f21bdeb0aebbff06a00907a11ffe39", null ],
     [ "GamR::Utils::catcherr", "d0/db7/namespace_gam_r_1_1_utils.html#ad0dc77d5ee1f99355aa36516fa14731d", null ],
     [ "GamR::Utils::catcherr", "d0/db7/namespace_gam_r_1_1_utils.html#af0ed36257c0666c5b3c81804e33bdca1", null ],
     [ "GamR::Utils::catcherr", "d0/db7/namespace_gam_r_1_1_utils.html#a1d80d1e0e752b45bb205ef0a13472b67", null ],
     [ "GamR::Utils::Fac10", "d0/db7/namespace_gam_r_1_1_utils.html#a7099ce4f94ee95597184a93c9bd8607a", null ],
-    [ "GamR::Utils::GetClick", "d0/db7/namespace_gam_r_1_1_utils.html#a6b9c540b72eb169751ad7bd1f5568359", null ],
     [ "GamR::Utils::GetHist1D", "d0/db7/namespace_gam_r_1_1_utils.html#a31f74a9ca644d560dc14e19c4dbd773b", null ],
     [ "GamR::Utils::GetHist2D", "d0/db7/namespace_gam_r_1_1_utils.html#ae51db26569561ca73c083a6c9276f148", null ],
     [ "GamR::Utils::GetHists1D", "d0/db7/namespace_gam_r_1_1_utils.html#a80902df5d8d695b20de04c64ed685df2", null ],
