@@ -1,6 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#ad18875e3efcf669c9f8e90a8446da366":[5,0,0,10,4,9],
 "d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#ad18875e3efcf669c9f8e90a8446da366":[5,0,0,10,4,0,8],
 "d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#ad18875e3efcf669c9f8e90a8446da366":[6,0,0,10,4,9],
 "d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#ad18875e3efcf669c9f8e90a8446da366":[6,0,0,10,4,0,8],
@@ -249,5 +248,6 @@ var NAVTREEINDEX3 =
 "d2/d80/namespace_gam_r_1_1_t_k.html#a8e957f4effbe05201873e6d6caceeacc":[5,0,0,9,15],
 "d2/d80/namespace_gam_r_1_1_t_k.html#aa4ba5d5a5ab0b3c595e31d23334e4f90":[5,0,0,9,16],
 "d2/d80/namespace_gam_r_1_1_t_k.html#ab68778d00b24b2c60ce6d144fce04019":[5,0,0,9,20],
-"d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html":[5,0,0,1,0]
+"d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html":[5,0,0,1,0],
+"d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html":[6,0,0,1,0]
 };

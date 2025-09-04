@@ -1,6 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html":[6,0,0,1,0],
 "d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html#a2215fa0bfdfeb58b21b1ef33c4e80555":[5,0,0,1,0,13],
 "d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html#a2215fa0bfdfeb58b21b1ef33c4e80555":[6,0,0,1,0,13],
 "d2/d84/class_gam_r_1_1_bateman_1_1_nucleus.html#a30b3ca37487fe19c98010225cfd34e77":[5,0,0,1,0,14],
@@ -249,5 +248,6 @@ var NAVTREEINDEX4 =
 "d3/d6c/class_gam_r_1_1_sort_1_1_type_1_1_gated_time_difference.html#a044c4c6493ecba6989b7e92b36da6ddc":[6,0,0,7,0,3,0],
 "d3/d6c/class_gam_r_1_1_sort_1_1_type_1_1_gated_time_difference.html#a24e85e6f4818336f371ac8e011146570":[5,0,0,7,0,3,1],
 "d3/d6c/class_gam_r_1_1_sort_1_1_type_1_1_gated_time_difference.html#a24e85e6f4818336f371ac8e011146570":[6,0,0,7,0,3,1],
-"d3/d75/class_gam_r_1_1_t_k_1_1_peak.html":[4,0,3]
+"d3/d75/class_gam_r_1_1_t_k_1_1_peak.html":[4,0,3],
+"d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html":[5,0,0,0,2]
 };

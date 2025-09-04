@@ -1,6 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a24e334f3a0ed59b61698aebc80f7419c":[6,0,0,10,1,3,9],
 "d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a2cf1054e7d073717fdb3296077cb5a28":[5,0,0,10,1,4],
 "d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a2cf1054e7d073717fdb3296077cb5a28":[5,0,0,10,1,0,17],
 "d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a2cf1054e7d073717fdb3296077cb5a28":[5,0,0,10,1,0,0,16],
@@ -249,5 +248,6 @@ var NAVTREEINDEX6 =
 "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#acfed57ca8d72bf980df5007ba3bb500b":[5,0,0,3,0,22],
 "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#acfed57ca8d72bf980df5007ba3bb500b":[6,0,0,3,0,22],
 "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#ad9c0651307b9b9c3beb31e912ef63e0a":[5,0,0,3,0,5],
-"d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#ad9c0651307b9b9c3beb31e912ef63e0a":[6,0,0,3,0,5]
+"d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#ad9c0651307b9b9c3beb31e912ef63e0a":[6,0,0,3,0,5],
+"d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#ae2d81604b034ed4716ac584c1ba00973":[5,0,0,3,0,15]
 };

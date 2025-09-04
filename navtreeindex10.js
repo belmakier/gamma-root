@@ -1,6 +1,5 @@
 var NAVTREEINDEX10 =
 {
-"dc/d89/namespace_gam_r_1_1_spect.html":[4,4,0],
 "dc/d89/namespace_gam_r_1_1_spect.html#a047d85658df00552fa33ff79d3230ec1":[5,0,0,8,93],
 "dc/d89/namespace_gam_r_1_1_spect.html#a0aad1e3c1b928bb9c61bfa9c20df882e":[5,0,0,8,75],
 "dc/d89/namespace_gam_r_1_1_spect.html#a0c1c0458051261537a2abe8245fdd877":[5,0,0,8,111],
@@ -249,5 +248,6 @@ var NAVTREEINDEX10 =
 "dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a25c02ff0835685e20164d19042b76f28":[6,0,0,2,4,5],
 "dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a33c99b9e125d81f6208101fa43b33be5":[5,0,0,2,5,2],
 "dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a33c99b9e125d81f6208101fa43b33be5":[6,0,0,2,4,2],
-"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a865f1c9f1c75afa6c6c0db44e565901a":[5,0,0,2,5,4]
+"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a865f1c9f1c75afa6c6c0db44e565901a":[5,0,0,2,5,4],
+"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a865f1c9f1c75afa6c6c0db44e565901a":[6,0,0,2,4,4]
 };

@@ -18,7 +18,6 @@ var class_gam_r_1_1_t_k_1_1_gate =
     [ "GetBinHigh", "d0/d74/group___t_k.html#gab865f6e8e84344abc6a89f16cc796307", null ],
     [ "GetBinLow", "d0/d74/group___t_k.html#ga4f8f88a7cb3ed077f9a3c3d81f02b31a", null ],
     [ "GetBinWidth", "d0/d74/group___t_k.html#ga19210db8af7134007ff4fc26878b5dc2", null ],
-    [ "GetClick", "d0/d74/group___t_k.html#ga6a004aeb766982533080d9b2fd8b9c8a", null ],
     [ "GetCounts", "d0/d74/group___t_k.html#ga4607d5e3d8f5d83d75f4ca038572a7f8", null ],
     [ "GetCounts", "d0/d74/group___t_k.html#gab381e88d04607d0734a48c8d691fca0d", null ],
     [ "GetCounts", "d0/d74/group___t_k.html#gab53bf42d11340ff4e3cf1c27306cc998", null ],

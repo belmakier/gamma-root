@@ -1,6 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#ae2d81604b034ed4716ac584c1ba00973":[5,0,0,3,0,15],
 "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#ae2d81604b034ed4716ac584c1ba00973":[6,0,0,3,0,15],
 "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#afea3ac162e8be0236bf802dbcee5a6cc":[5,0,0,3,0,11],
 "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#afea3ac162e8be0236bf802dbcee5a6cc":[6,0,0,3,0,11],
@@ -249,5 +248,6 @@ var NAVTREEINDEX7 =
 "d7/df7/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_transition.html#aeaafdf1c58b91dbd0bae610717c0f338":[6,0,0,4,1,2,4],
 "d7/df7/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_transition.html#af9e91db9a282c32125cd74917ad441b2":[5,0,0,4,1,2,9],
 "d7/df7/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_transition.html#af9e91db9a282c32125cd74917ad441b2":[6,0,0,4,1,2,9],
-"d8/d1f/_cut_8cc.html":[7,0,1,1,9,4]
+"d8/d1f/_cut_8cc.html":[7,0,1,1,9,4],
+"d8/d1f/_cut_8cc_source.html":[7,0,1,1,9,4]
 };

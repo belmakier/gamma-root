@@ -1,6 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html":[5,0,0,0,2],
 "d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html":[6,0,0,0,2],
 "d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#a01e848070d428dcc440bc454a18d9b4d":[5,0,0,0,2,50],
 "d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html#a01e848070d428dcc440bc454a18d9b4d":[6,0,0,0,2,50],
@@ -249,5 +248,6 @@ var NAVTREEINDEX5 =
 "d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a24e334f3a0ed59b61698aebc80f7419c":[6,0,0,10,1,0,10],
 "d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a24e334f3a0ed59b61698aebc80f7419c":[6,0,0,10,1,0,0,9],
 "d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a24e334f3a0ed59b61698aebc80f7419c":[6,0,0,10,1,1,8],
-"d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a24e334f3a0ed59b61698aebc80f7419c":[6,0,0,10,1,2,9]
+"d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a24e334f3a0ed59b61698aebc80f7419c":[6,0,0,10,1,2,9],
+"d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a24e334f3a0ed59b61698aebc80f7419c":[6,0,0,10,1,3,9]
 };
