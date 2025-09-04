@@ -66,18 +66,21 @@ namespace GamR{
     }
 
 
-    std::pair<double, double> Counts(TH1 *hist, GamR::TK::Gate peak) {
+    std::pair<double, double> Counts(TH1 *hist, GamR::TK::Gate peak, std::string opt) {
       double peakArea = peak.GetCounts((TH1D*)hist);
       double peakAreaError = peak.GetCountsError((TH1D*)hist);
+      TString opt_st(opt);
+      if (!opt_st.Contains("q"))  {
       std::cout << "             Peak Area          Error" << std::endl;
-      printf("%21.4f %15.4f\n", peakArea, peakAreaError);
+        printf("%21.4f %15.4f\n", peakArea, peakAreaError);
+      }
       std::pair<double, double> area = std::pair<double, double>(peakArea, peakAreaError);
       return area;
     }
       
-    std::pair<double, double> Counts(TH1 *hist, double peakLow, double peakHigh) {
+    std::pair<double, double> Counts(TH1 *hist, double peakLow, double peakHigh, std::string opt) {
       GamR::TK::Gate gate(peakLow, peakHigh);
-      return Counts(hist, gate);
+      return Counts(hist, gate, opt);
     }
 
     std::pair<double, double> Counts(TCanvas *canvas /*= gPad->GetCanvas()*/) {
@@ -88,31 +91,34 @@ namespace GamR{
       return Counts(hist, gate);
     }
 
-    std::pair<double, double> CountsBS(TH1 *hist, GamR::Nucleus::Transition transition) {
+    std::pair<double, double> CountsBS(TH1 *hist, GamR::Nucleus::Transition transition, std::string opt) {
       double peakArea = transition.ApplyCounts((TH1D*)hist);
       double peakAreaError = transition.ApplyCountsError((TH1D*)hist);
-      std::cout << "             Peak Counts        Error" << std::endl;
-      printf("%21.4f %15.4f\n", peakArea, peakAreaError);
+      TString opt_st(opt);
+      if (!opt_st.Contains("q"))  {
+        std::cout << "             Peak Counts        Error" << std::endl;
+        printf("%21.4f %15.4f\n", peakArea, peakAreaError);
+      }
       std::pair<double, double> peak = std::pair<double, double>(peakArea, peakAreaError);
       return peak;
     }
 
-    std::pair<double, double> CountsBS(TH1 *hist, GamR::TK::Gate peak, GamR::TK::Gate background) {
+    std::pair<double, double> CountsBS(TH1 *hist, GamR::TK::Gate peak, GamR::TK::Gate background, std::string opt) {
       GamR::Nucleus::Transition transition(0, peak.GetLow(), peak.GetHigh(), background.GetLow(), background.GetHigh());
-      return CountsBS(hist, transition);
+      return CountsBS(hist, transition, opt);
     }
 
-    std::pair<double, double> CountsBS(TH1 *hist, GamR::TK::Gate peak, std::vector<GamR::TK::Gate> backgrounds) {
+    std::pair<double, double> CountsBS(TH1 *hist, GamR::TK::Gate peak, std::vector<GamR::TK::Gate> backgrounds, std::string opt) {
       GamR::Nucleus::Transition transition(0, peak.GetLow(), peak.GetHigh(), backgrounds[0].GetLow(), backgrounds[0].GetHigh());
       for (int i=1; i<backgrounds.size(); ++i) {
         transition.AddBackground(backgrounds[i].GetLow(), backgrounds[i].GetHigh());
       }
-      return CountsBS(hist, transition);
+      return CountsBS(hist, transition, opt);
     }
     
-    std::pair<double, double> CountsBS(TH1 *hist, double peakLow, double peakHigh, double backLow, double backHigh) {
+    std::pair<double, double> CountsBS(TH1 *hist, double peakLow, double peakHigh, double backLow, double backHigh, std::string opt) {
       GamR::Nucleus::Transition transition(0, peakLow, peakHigh, backLow, backHigh);
-      return CountsBS(hist, transition);
+      return CountsBS(hist, transition, opt);
     }   
     
     std::pair<double, double> CountsBS(TCanvas *canvas/*=gPad->GetCanvas()*/)

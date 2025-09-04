@@ -233,13 +233,6 @@ namespace GamR {
       //approximation where only large component matters
       if (r <= 1e-6) {
         double retval = exp(f)*abs_scale;
-        /*
-        if (retval > 0.05) {
-          std::cout << "x = " << x[0] << ", f1, f2 = " << f1 << "  " << f2 << std::endl;
-          std::cout << "exp(f) = " << exp(f) << ", abs_scale = " << abs_scale << std::endl;
-          std::cout << "eff = " << retval << std::endl;
-        }
-        */
         return retval;
       }
       //both are positive and approximately the same size
@@ -247,13 +240,6 @@ namespace GamR {
       else {
         double y = pow(pow(r, g) + 1.0, -1.0/g);
         double retval = exp(y*f)*abs_scale;
-        /*
-        if (retval > 0.05) {
-          std::cout << "x = " << x[0] << ", f1, f2 = " << f1 << "  " << f2 << std::endl;
-          std::cout << "exp(y*f) = " << exp(y*f) << ", abs_scale = " << abs_scale << std::endl;
-          std::cout << "eff = " << retval << std::endl;
-          }
-        */
         return retval;
       }
     }      
@@ -365,11 +351,16 @@ namespace GamR {
       std::string key;
       std::string line;
       std::ifstream eff_file(effFile);      
+      std::stringstream ss;
       if (!eff_file.is_open()) {
         std::cerr << "Error opening " << effFile << std::endl;
       }
-      getline(eff_file, line);
-      while (eff_file >> key >> energy >> intens >> area >> areaerror) {
+      while (getline(eff_file, line)) {
+	if (line.size()==0) { continue; }
+ 	if (line[0]=='#') { continue; }	
+	ss.clear();
+	ss.str(line);
+        ss >> key >> energy >> intens >> area >> areaerror;
         double eff = area/intens;
         double efferr = areaerror/intens;
         if (area <=0 ) {
@@ -875,7 +866,7 @@ namespace GamR {
           graph->Add(dsetgraph);          
         }
       if (log) {
-        graph->GetHistogram()->SetMinimum(0.001);
+        graph->GetHistogram()->SetMinimum(0.01);
       }
       else {
         graph->GetHistogram()->SetMinimum(0.0);

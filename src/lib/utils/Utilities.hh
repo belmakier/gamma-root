@@ -23,7 +23,15 @@ namespace GamR {
   //! physics-y
   namespace Utils {
     double Fac10(int n);
-    void GetClick(TVirtualPad *canvas);
+    //void GetClick(TVirtualPad *canvas);
+
+    class Clicker {
+      public:
+        void GetClick(Int_t,Int_t,Int_t,TObject*);
+        int px, py;
+        double cx, cy;
+    };
+
     TH1D *GetHist1D(TVirtualPad *canvas);
     std::vector<TH1D*> GetHists1D(TVirtualPad *canvas);
     TH2D *GetHist2D(TVirtualPad *canvas);

@@ -434,6 +434,8 @@ namespace GamR {
       std::string fopts(foption);
       fopts = fopts + " R";
 
+      fFitGuesses->fScale.val = 1./(hist->GetBinCenter(2)-hist->GetBinCenter(1));
+
       //
       if (parameters.iFixWidthsFile) {
         FILE *file = fopen("FitWidths.dat", "ra");
@@ -862,9 +864,11 @@ namespace GamR {
 
       std::string canvasname = canvas->GetName();
 
-      std::string functioncall = "GamR::Utils::GetClick(" + canvasname + ")";
+      //std::string functioncall = "GamR::Utils::GetClick(" + canvasname + ")";
 
-      canvas->AddExec("ex", functioncall.c_str());
+      GamR::Utils::Clicker click;
+      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+      //canvas->AddExec("ex", functioncall.c_str());
 
       while (true) {
         if (peaks == -2) {
@@ -928,7 +932,8 @@ namespace GamR {
         }
       }
 
-      canvas->DeleteExec("ex");
+      //canvas->DeleteExec("ex");
+      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
 
       if (peaks < 1) {
         if (!iQuiet){

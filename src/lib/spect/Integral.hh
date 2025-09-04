@@ -25,14 +25,14 @@ namespace GamR {
     std::pair<double, double> IntegralBS(TH1 *hist, double peakLow, double peakHigh, double backLow, double backHigh);   
     std::pair<double, double> IntegralBS(TCanvas *canvas = gPad->GetCanvas());
 
-    std::pair<double, double> Counts(TH1 *hist, GamR::TK::Gate peak);
-    std::pair<double, double> Counts(TH1 *hist, double peakLow, double peakHigh);
+    std::pair<double, double> Counts(TH1 *hist, GamR::TK::Gate peak, std::string opt="");
+    std::pair<double, double> Counts(TH1 *hist, double peakLow, double peakHigh, std::string opt="");
     std::pair<double, double> Counts(TCanvas *canvas = gPad->GetCanvas());
 
-    std::pair<double, double> CountsBS(TH1 *hist, GamR::Nucleus::Transition transition);
-    std::pair<double, double> CountsBS(TH1 *hist, GamR::TK::Gate peak, GamR::TK::Gate background);
-    std::pair<double, double> CountsBS(TH1 *hist, GamR::TK::Gate peak, std::vector<GamR::TK::Gate> backgrounds);
-    std::pair<double, double> CountsBS(TH1 *hist, double peakLow, double peakHigh, double backLow, double backHigh);
+    std::pair<double, double> CountsBS(TH1 *hist, GamR::Nucleus::Transition transition, std::string opt="");
+    std::pair<double, double> CountsBS(TH1 *hist, GamR::TK::Gate peak, GamR::TK::Gate background, std::string opt="");
+    std::pair<double, double> CountsBS(TH1 *hist, GamR::TK::Gate peak, std::vector<GamR::TK::Gate> backgrounds, std::string opt="");
+    std::pair<double, double> CountsBS(TH1 *hist, double peakLow, double peakHigh, double backLow, double backHigh, std::string opt="");
     
 
     std::pair<double, double> CountsBS(TCanvas *canvas = gPad->GetCanvas());

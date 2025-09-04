@@ -89,6 +89,31 @@ namespace GamR {
       return ss.str();
     }
 
+    std::string ToText(const TGraphAsymmErrors *g, std::string outfile, std::string delimiter)
+    {
+      std::stringstream ss;
+      ss << "#ROOT TGraphAsymmErrors in ASCII format" <<std::endl;
+      ss << "#name : " << g->GetName() << "   title : " << g->GetTitle() << std::endl;
+      ss << "#x" << delimiter << "y" << delimiter << "yerror\n";
+      for (int i = 0; i < g->GetN(); ++i) {
+        double x;
+        double y;
+        g->GetPoint(i,x,y);
+        ss << x << delimiter;
+        ss << y << delimiter;
+        ss << g->GetErrorYlow(i) << delimiter;
+        ss << g->GetErrorYhigh(i) << "\n";
+      }
+
+      if (!outfile.empty()) {
+        std::ofstream file(outfile);
+        file << ss.str();
+        file.close();
+      }
+
+      return ss.str();
+    }
+
     std::string ToText(const TGraph *g, std::string outfile, std::string delimiter)
     {
       std::stringstream ss;

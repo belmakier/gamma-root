@@ -23,6 +23,7 @@
 #include <TROOT.h>
 #include <TMath.h>
 #include <TVirtualX.h>
+#include <TQObject.h>
 
 /* GAMMA */
 #include <utils/Utilities.hh>
@@ -44,7 +45,6 @@
 
 namespace GamR {
   namespace TK {
-
     Gate::Gate(const char *name) : TNamed(name, name)
     {
       SetLineColor(8); SetFillStyle(3003); SetFillColor(8); 
@@ -104,9 +104,12 @@ namespace GamR {
 
       std::string canvasname = canvas->GetName();
 
-      std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
+      //std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
       
-      canvas->AddExec("ex", functioncall.c_str());
+      //canvas->AddExec("ex", functioncall.c_str());
+      GamR::Utils::Clicker click;
+      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+
       std::cout << "Click for lower bound of region, press any key to exit..." << std::endl;
       while (true){
         obj=canvas->WaitPrimitive();
@@ -150,7 +153,8 @@ namespace GamR {
         }
       }
 
-      canvas->DeleteExec("ex");
+      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+      //canvas->DeleteExec("ex");
 
       if (ex < 0) { // quit prematurely
         std::cout << "gating cancelled" << std::endl;
@@ -562,7 +566,7 @@ namespace GamR {
         back += backgate.GetCounts(hist);
         back_width += backgate.GetBinWidth(hist);
       }
-      std::cout << "peak: " << peak << "    back: " << back << "    scale: " << (double)GetBinWidth(hist)/back_width << std::endl;
+      //std::cout << "peak: " << peak << "    back: " << back << "    scale: " << (double)GetBinWidth(hist)/back_width << std::endl;
       return peak - back*(double)GetBinWidth(hist)/back_width;
 
       /*
@@ -656,7 +660,7 @@ namespace GamR {
         back += backgate.GetCountsError(hist);
         back_width += backgate.GetBinWidth(hist);
       }
-      std::cout << "peak err: " << peak << "    back err: " << back << "    scale: " << (double)GetBinWidth(hist)/back_width << std::endl;
+      //std::cout << "peak err: " << peak << "    back err: " << back << "    scale: " << (double)GetBinWidth(hist)/back_width << std::endl;
       return sqrt(pow(peak, 2) + pow(back*(double)GetBinWidth(hist)/back_width, 2));
 
       /*

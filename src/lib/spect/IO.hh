@@ -9,6 +9,7 @@
 #include <TH1.h>
 #include <TH2.h>
 #include <TGraphErrors.h>
+#include <TGraphAsymmErrors.h>
 #include <TF1.h>
 #include <TCutG.h>
 
@@ -18,6 +19,7 @@ namespace GamR {
     std::string ToText(const TH1 *h, std::string outfile = "", std::string delimiter=",");
     std::string ToText(const TH2 *h, std::string outfile = "", std::string delimiter=",", int binx_lo = -1, int binx_hi = -1, int biny_lo = -1, int biny_hi = -1);
     std::string ToText(const TGraphErrors *g, std::string outfile = "", std::string delimiter=",");
+    std::string ToText(const TGraphAsymmErrors *g, std::string outfile = "", std::string delimiter=",");
     std::string ToText(const TGraph *g, std::string outfile = "", std::string delimiter=",");
     std::string ToText(const TGraph *g, int ID, std::string outfile = "", std::string delimiter=",");
     std::string ToText(const TF1 *f, std::string outfile = "", std::string delimiter=",");

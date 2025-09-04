@@ -28,7 +28,8 @@ namespace GamR {
 
       std::string canvasname = canvas->GetName();
 
-      std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
+      GamR::Utils::Clicker click;
+      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
 
       double lowy = -1;                  
       double highy = -1;
@@ -38,7 +39,7 @@ namespace GamR {
       line->SetMarkerStyle(kFullCircle);
       line->SetMarkerColor(kRed);
       line->Draw("same LP");
-      canvas->AddExec("ex", functioncall.c_str());
+      //canvas->AddExec("ex", functioncall.c_str());
       std::cout << "Click for first point" << std::endl;
       while (true){
         canvas->Modified();
@@ -68,7 +69,7 @@ namespace GamR {
           delete marker;
         }
       }
-      canvas->DeleteExec("ex");
+      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
       canvas->SetCrosshair(0);
       canvas->Modified();
       canvas->Update();
@@ -115,7 +116,8 @@ namespace GamR {
 
       std::string canvasname = canvas->GetName();
 
-      std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
+      GamR::Utils::Clicker click;
+      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
 
       double lowPos = -1;                  
       double highPos = -1;
@@ -124,7 +126,7 @@ namespace GamR {
 
       TLine *line_low;
       TLine *line_high;
-      canvas->AddExec("ex", functioncall.c_str());
+      //canvas->AddExec("ex", functioncall.c_str());
       std::cout << "Click for lower peak" << std::endl;
       while (true){
         canvas->Modified();
@@ -190,7 +192,7 @@ namespace GamR {
           delete marker;
         }
       }
-      canvas->DeleteExec("ex");
+      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
       canvas->SetCrosshair(0);
       line_low->Draw();
       line_high->Draw();
@@ -262,14 +264,16 @@ namespace GamR {
 
       std::string canvasname = canvas->GetName();
 
-      std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
+      //std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
+      GamR::Utils::Clicker click;
+      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
 
       double lowPos = -1;                  
       double highPos = -1;
 
       TLine *line_low;
       TLine *line_high;
-      canvas->AddExec("ex", functioncall.c_str());
+      //canvas->AddExec("ex", functioncall.c_str());
       std::cout << "Click for lower peak" << std::endl;
       while (true){
         canvas->Modified();
@@ -335,7 +339,7 @@ namespace GamR {
           delete marker;
         }
       }
-      canvas->DeleteExec("ex");
+      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
       canvas->SetCrosshair(0);
       line_low->Draw();
       line_high->Draw();

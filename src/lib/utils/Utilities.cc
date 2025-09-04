@@ -35,14 +35,16 @@ namespace GamR {
       return fac;
     }
 
+    /*
     void GetClick(TVirtualPad *canvas)
     {
-      auto start = std::chrono::high_resolution_clock::now();
       canvas->GetCanvas()->FeedbackMode(kTRUE);
 
       int event = canvas->GetEvent();
-      if (event != 1)
+
+      if (event != 1) {
         return;
+      }
       double x = canvas->AbsPixeltoX(canvas->GetEventX());
       double y = canvas->AbsPixeltoY(canvas->GetEventY());
 
@@ -56,6 +58,29 @@ namespace GamR {
         return;
       } else {
         TMarker *marker = new TMarker(x, y, 0);
+        marker->Draw();
+      }
+    }
+    */
+
+    void Clicker::GetClick(int event, int x, int y, TObject *selected) {
+      if ( event != 1 ) { return; }
+      TCanvas *c = (TCanvas*)gTQSender;
+      px = x;
+      py = y;
+      cx = c->AbsPixeltoX(x);
+      cy = c->AbsPixeltoY(y);
+
+      double xmin;
+      double ymin;
+      double xmax;
+      double ymax;
+      c->GetRangeAxis(xmin, ymin, xmax, ymax);
+
+      if (cx <= xmin || cx >= xmax || cy <= ymin || cy >= ymax) {
+        return;
+      } else {
+        TMarker *marker = new TMarker(cx, cy, 0);
         marker->Draw();
       }
     }

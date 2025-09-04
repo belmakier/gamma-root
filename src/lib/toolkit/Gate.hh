@@ -25,6 +25,7 @@ namespace GamR {
   //! useful physics analysis tools.
   namespace TK {
 
+
     /**
        Basic 1D gate object for analysis
     */
@@ -53,6 +54,7 @@ namespace GamR {
       };
       ~Gate() { };
       
+      void GetClick(Int_t,Int_t,Int_t,TObject* selected);
       int SetGate(); // *MENU*
       int SetGate(TVirtualPad *canvas, Option_t *opt="");
       void SetGate(double l, double h)

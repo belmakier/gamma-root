@@ -7,6 +7,7 @@
 
 namespace GamR {
   namespace Spect {
+
     int BackSub2D::SetPeak(TCanvas *canvas) {
       TMarker *marker = new TMarker();
       TObject *obj;
@@ -24,9 +25,11 @@ namespace GamR {
 
       std::string canvasname = canvas->GetName();
 
-      std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
+      //std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
+      GamR::Utils::Clicker click;
+      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
       
-      canvas->AddExec("ex", functioncall.c_str());
+      //canvas->AddExec("ex", functioncall.c_str());
       std::cout << "Click for corner 1, press any key to exit..." << std::endl;
       while (true){
         obj=canvas->WaitPrimitive();
@@ -38,6 +41,7 @@ namespace GamR {
             lowY = marker->GetY();
             // this->Low=marker->GetX();
             ex = ex + 1;
+            delete marker;
             std::cout << "Click for corner 2, press any key to exit..." << std::endl;
           } else {
             highX = marker->GetX();
@@ -76,7 +80,8 @@ namespace GamR {
       fPeakX = x;
       fPeakY = y;
       
-      canvas->DeleteExec("ex");
+      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+      //canvas->DeleteExec("ex");
 
       if (ex < 0) { // quit prematurely
         std::cout << "gating cancelled" << std::endl;
@@ -107,9 +112,11 @@ namespace GamR {
 
       std::string canvasname = canvas->GetName();
 
-      std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
+      GamR::Utils::Clicker click;
+      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+      //std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
       
-      canvas->AddExec("ex", functioncall.c_str());
+      //canvas->AddExec("ex", functioncall.c_str());
       std::cout << "Click for corner 1, press any key to exit..." << std::endl;
       while (true){
         obj=canvas->WaitPrimitive();
@@ -146,7 +153,8 @@ namespace GamR {
         lowY = temp;
       }
       
-      canvas->DeleteExec("ex");
+      //canvas->DeleteExec("ex");
+      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
 
       if (ex < 0) { // quit prematurely
         std::cout << "gating cancelled" << std::endl;
@@ -189,9 +197,12 @@ namespace GamR {
 
       std::string canvasname = canvas->GetName();
 
-      std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
+      //std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
       
-      canvas->AddExec("ex", functioncall.c_str());
+      //canvas->AddExec("ex", functioncall.c_str());
+      GamR::Utils::Clicker click;
+      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+
       std::cout << "Click for corner 1, press any key to exit..." << std::endl;
       while (true){
         obj=canvas->WaitPrimitive();
@@ -228,7 +239,8 @@ namespace GamR {
         lowY = temp;
       }
       
-      canvas->DeleteExec("ex");
+      //canvas->DeleteExec("ex");
+      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
 
       if (ex < 0) { // quit prematurely
         std::cout << "gating cancelled" << std::endl;
@@ -272,9 +284,12 @@ namespace GamR {
 
       std::string canvasname = canvas->GetName();
 
-      std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
+      //std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
       
-      canvas->AddExec("ex", functioncall.c_str());
+      //canvas->AddExec("ex", functioncall.c_str());
+      GamR::Utils::Clicker click;
+      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+
       std::cout << "Click for corner 1, press any key to exit..." << std::endl;
       while (true){
         obj=canvas->WaitPrimitive();
@@ -312,7 +327,8 @@ namespace GamR {
       }
       
       
-      canvas->DeleteExec("ex");
+      //canvas->DeleteExec("ex");
+      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
 
       if (ex < 0) { // quit prematurely
         std::cout << "gating cancelled" << std::endl;
@@ -355,9 +371,12 @@ namespace GamR {
 
       std::string canvasname = canvas->GetName();
 
-      std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
+      //std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
       
-      canvas->AddExec("ex", functioncall.c_str());
+      //canvas->AddExec("ex", functioncall.c_str());
+      GamR::Utils::Clicker click;
+      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+
       std::cout << "Click for corner 1, press any key to exit..." << std::endl;
       while (true){
         obj=canvas->WaitPrimitive();
@@ -394,7 +413,8 @@ namespace GamR {
         lowY = temp;
       }
       
-      canvas->DeleteExec("ex");
+     // canvas->DeleteExec("ex");
+      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
 
       if (ex < 0) { // quit prematurely
         std::cout << "gating cancelled" << std::endl;
