@@ -864,11 +864,8 @@ namespace GamR {
 
       std::string canvasname = canvas->GetName();
 
-      //std::string functioncall = "GamR::Utils::GetClick(" + canvasname + ")";
-
       GamR::Utils::Clicker click;
       canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
-      //canvas->AddExec("ex", functioncall.c_str());
 
       while (true) {
         if (peaks == -2) {
@@ -932,7 +929,6 @@ namespace GamR {
         }
       }
 
-      //canvas->DeleteExec("ex");
       canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
 
       if (peaks < 1) {

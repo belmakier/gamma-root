@@ -54,7 +54,6 @@ namespace GamR {
       };
       ~Gate() { };
       
-      void GetClick(Int_t,Int_t,Int_t,TObject* selected);
       int SetGate(); // *MENU*
       int SetGate(TVirtualPad *canvas, Option_t *opt="");
       void SetGate(double l, double h)

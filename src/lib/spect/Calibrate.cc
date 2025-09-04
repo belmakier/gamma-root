@@ -39,7 +39,6 @@ namespace GamR {
       line->SetMarkerStyle(kFullCircle);
       line->SetMarkerColor(kRed);
       line->Draw("same LP");
-      //canvas->AddExec("ex", functioncall.c_str());
       std::cout << "Click for first point" << std::endl;
       while (true){
         canvas->Modified();
@@ -126,7 +125,6 @@ namespace GamR {
 
       TLine *line_low;
       TLine *line_high;
-      //canvas->AddExec("ex", functioncall.c_str());
       std::cout << "Click for lower peak" << std::endl;
       while (true){
         canvas->Modified();
@@ -273,7 +271,6 @@ namespace GamR {
 
       TLine *line_low;
       TLine *line_high;
-      //canvas->AddExec("ex", functioncall.c_str());
       std::cout << "Click for lower peak" << std::endl;
       while (true){
         canvas->Modified();

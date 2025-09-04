@@ -487,9 +487,8 @@ namespace GamR {
       gr->SetMarkerColor(kRed);
       gr->SetMarkerStyle(8);
       
-      //std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
-      //canvas->AddExec("ex", functioncall.c_str());
-      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", nullptr, nullptr, "GamR::Utils::GetClick(Int_t,Int_t,Int_t,TObject*)");
+      GamR::Utils::Clicker click;
+      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
       while (true){
         std::cout << "Click for next point, press any key to exit..." << std::endl;
         //auto start = std::chrono::high_resolution_clock::now();
@@ -517,8 +516,7 @@ namespace GamR {
         //duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
         //std::cout << duration.count() << " us to update canvas" << std::endl;
       }
-      //canvas->DeleteExec("ex");
-      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", nullptr, "GamR::Utils::GetClick(Int_t,Int_t,Int_t,TObject*)");
+      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
 
       //add first point again;
       double x,y;

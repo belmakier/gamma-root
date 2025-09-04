@@ -89,7 +89,6 @@ namespace GamR {
       PeakFit();
       PeakFit(double Low, double High);
       PeakFit(double Low, double High, PeakFitGuesses *FitGuesses);
-      void GetClick(Int_t,Int_t,Int_t,TObject* selected);
       GamR::TK::PeakType GetPeakType() { return fPeakType; }
       TF1 *GetBackground() { return fBackground; }
       TF1 *GetTotal() { return fTotal; }

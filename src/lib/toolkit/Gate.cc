@@ -104,9 +104,6 @@ namespace GamR {
 
       std::string canvasname = canvas->GetName();
 
-      //std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
-      
-      //canvas->AddExec("ex", functioncall.c_str());
       GamR::Utils::Clicker click;
       canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
 
@@ -154,7 +151,6 @@ namespace GamR {
       }
 
       canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
-      //canvas->DeleteExec("ex");
 
       if (ex < 0) { // quit prematurely
         std::cout << "gating cancelled" << std::endl;

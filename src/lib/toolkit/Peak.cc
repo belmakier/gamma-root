@@ -891,9 +891,7 @@ namespace GamR {
 
       GamR::Utils::Clicker click;
       canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
-      //std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
       
-      //canvas->AddExec("ex", functioncall.c_str());
       std::cout << "Click for lower point, press any key to exit..." << std::endl;
       while (true){
         obj=canvas->WaitPrimitive();
@@ -918,7 +916,6 @@ namespace GamR {
         }
       }
       canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
-      //canvas->DeleteExec("ex");
       canvas->SetCrosshair(0);
 
       peak->Set(hist, lowX, lowY, highX, highY);

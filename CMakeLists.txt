@@ -133,7 +133,7 @@ get_property(libdirs GLOBAL PROPERTY GAMR_LIBDIRS)
 #generate rootlogon -> this started breaking things and apparently wasn't necessary (?!?)
 set(GAMR_ROOTLOGON_LIBS "// Libraries")
 foreach (lib ${libs})
-  set(GAMR_ROOTLOGON_LIBS "${GAMR_ROOTLOGON_LIBS}\ngROOT->ProcessLine(\"gSystem->Load(${CMAKE_INSTALL_PREFIX}/${GAMR_INSTALL_LIBDIR}/lib${lib}.${LIB_SUFFIX}\");")  
+  set(GAMR_ROOTLOGON_LIBS "${GAMR_ROOTLOGON_LIBS}\ngSystem->Load(\"${CMAKE_INSTALL_PREFIX}/${GAMR_INSTALL_LIBDIR}/lib${lib}.${LIB_SUFFIX}\");")  
 endforeach()
 
 set(GAMR_ROOTLOGON_INCLUDES "// Includes")

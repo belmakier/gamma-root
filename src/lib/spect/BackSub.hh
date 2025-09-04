@@ -32,8 +32,6 @@ namespace GamR {
       TH2D *unsubtracted;
       TH2D *subtracted;
 
-      void GetClick(Int_t,Int_t,Int_t,TObject *selected);
-
       int SetPeak(GamR::TK::Gate x, GamR::TK::Gate y) {
         fPeakX = x;
         fPeakY = y;
