@@ -1,5 +1,7 @@
 <map id="GamR::TK::Gate::SetGate" name="GamR::TK::Gate::SetGate">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,175,31"/>
-<area shape="rect" id="Node000002" href="$d0/d74/group___t_k.html#gaca9203f72ff0b9ea7a58b97a9e9e012e" title=" " alt="" coords="223,5,373,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,16,207,16,207,21,175,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,42,175,68"/>
+<area shape="rect" id="Node000002" href="$d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#a2303baf332dfdfecf946e78f7aa33c86" title=" " alt="" coords="229,5,366,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,40,214,35,214,40,175,46"/>
+<area shape="rect" id="Node000003" href="$d0/d74/group___t_k.html#gaca9203f72ff0b9ea7a58b97a9e9e012e" title=" " alt="" coords="223,70,373,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,64,208,68,207,73,174,69"/>
 </map>

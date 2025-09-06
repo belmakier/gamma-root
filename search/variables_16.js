@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['y_5fsub_0',['y_sub',['../df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#aba3d2508ed2dca5c1e7eaadf567d007b',1,'GamR::Spect::BackSub2D']]],
-  ['yaxis_1',['YAxis',['../d1/da3/class_gam_r_1_1_sort_1_1_type_1_1_matrix.html#afbf884f21311efea978776ebf06e3138',1,'GamR::Sort::Type::Matrix']]],
-  ['yhi_2',['yhi',['../d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html#a8a043c79bd54fb9f20aeeb6e5a62727c',1,'GamR::Nucleus::LevelSchemeDraw::Scheme']]],
-  ['ylo_3',['ylo',['../d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html#a5a55e3381ea2393b810b5acb4986c61c',1,'GamR::Nucleus::LevelSchemeDraw::Scheme']]]
+  ['x_5fsub_0',['x_sub',['../df/d67/class_gam_r_1_1_spect_1_1_back_sub2_d.html#add7d72edef3d7ea27f7a0a7241f1cc11',1,'GamR::Spect::BackSub2D']]],
+  ['xaxis_1',['XAxis',['../d1/da3/class_gam_r_1_1_sort_1_1_type_1_1_matrix.html#a420695c4874af2ac169afffb3af7d312',1,'GamR::Sort::Type::Matrix']]],
+  ['xhi_2',['xhi',['../d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html#a3f9984075a18d348d965d8b5a3cf193a',1,'GamR::Nucleus::LevelSchemeDraw::Scheme']]],
+  ['xlo_3',['xlo',['../d3/ddb/class_gam_r_1_1_nucleus_1_1_level_scheme_draw_1_1_scheme.html#a6e64b0b915f3cba0ad6089f653b327ce',1,'GamR::Nucleus::LevelSchemeDraw::Scheme']]],
+  ['xs_4',['xs',['../d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#a3b4d91aa8e307fb7dbc91114f8dbc02f',1,'GamR::Utils::Clicker']]]
 ];

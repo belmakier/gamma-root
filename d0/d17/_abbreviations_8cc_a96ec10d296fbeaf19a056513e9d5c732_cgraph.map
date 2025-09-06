@@ -1,7 +1,9 @@
 <map id="ca2" name="ca2">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,48,31"/>
-<area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#af3d7d5c1765cb1afd821277ee2efd7a5" title=" " alt="" coords="96,5,305,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="48,16,80,16,80,21,48,21"/>
-<area shape="rect" id="Node000003" href="$d0/db7/namespace_gam_r_1_1_utils.html#a31f74a9ca644d560dc14e19c4dbd773b" title=" " alt="" coords="353,5,511,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="306,16,337,16,337,21,306,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,42,48,68"/>
+<area shape="rect" id="Node000002" href="$dc/d89/namespace_gam_r_1_1_spect.html#af3d7d5c1765cb1afd821277ee2efd7a5" title=" " alt="" coords="96,42,305,68"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="48,52,80,52,80,58,48,58"/>
+<area shape="rect" id="Node000003" href="$d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#a2303baf332dfdfecf946e78f7aa33c86" title=" " alt="" coords="364,5,501,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="305,39,348,34,349,39,306,44"/>
+<area shape="rect" id="Node000004" href="$d0/db7/namespace_gam_r_1_1_utils.html#a31f74a9ca644d560dc14e19c4dbd773b" title=" " alt="" coords="353,70,511,96"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="306,65,338,69,337,74,305,70"/>
 </map>

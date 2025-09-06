@@ -23,17 +23,18 @@
 <g id="Node000001" class="node">
 <title>Node1</title>
 <g id="a_Node000001"><a xlink:title=" ">
-<polygon fill="#999999" stroke="#666666" points="116.5,-252.25 0,-252.25 0,-233 116.5,-233 116.5,-252.25"/>
-<text text-anchor="middle" x="58.25" y="-238.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::ClickBPeak</text>
+<polygon fill="#999999" stroke="#666666" points="116.5,-271.25 0,-271.25 0,-252 116.5,-252 116.5,-271.25"/>
+<text text-anchor="middle" x="58.25" y="-257.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::ClickBPeak</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d0/db7/namespace_gam_r_1_1_utils.html#a31f74a9ca644d560dc14e19c4dbd773b" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="271.62,-271.25 152.88,-271.25 152.88,-252 271.62,-252 271.62,-271.25"/>
-<text text-anchor="middle" x="212.25" y="-257.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Utils::GetHist1D</text>
+<g id="a_Node000002"><a xlink:href="../../d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#a2303baf332dfdfecf946e78f7aa33c86" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="263.75,-319.88 160.75,-319.88 160.75,-289.38 263.75,-289.38 263.75,-319.88"/>
+<text text-anchor="start" x="168.75" y="-306.38" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Utils::Clicker</text>
+<text text-anchor="middle" x="212.25" y="-295.12" font-family="Helvetica,sans-Serif" font-size="10.00">::GetClicks</text>
 </a>
 </g>
 </g>
@@ -41,17 +42,17 @@
 <g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
 <g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M116.71,-249.81C124.66,-250.8 132.89,-251.83 141.03,-252.85"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="140.58,-256.32 150.94,-254.09 141.45,-249.37 140.58,-256.32"/>
+<path fill="none" stroke="#63b8ff" d="M94.89,-271.71C111.1,-276.29 130.75,-281.85 149.26,-287.09"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="148.26,-290.44 158.84,-289.8 150.17,-283.71 148.26,-290.44"/>
 </a>
 </g>
 </g>
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="../../d0/d74/group___t_k.html#gaa496d15cf9600fa5790ff50c9392b0fd" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="272,-234.25 152.5,-234.25 152.5,-215 272,-215 272,-234.25"/>
-<text text-anchor="middle" x="212.25" y="-220.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::Print</text>
+<g id="a_Node000003"><a xlink:href="../../d0/db7/namespace_gam_r_1_1_utils.html#a31f74a9ca644d560dc14e19c4dbd773b" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="271.62,-271.25 152.88,-271.25 152.88,-252 271.62,-252 271.62,-271.25"/>
+<text text-anchor="middle" x="212.25" y="-257.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Utils::GetHist1D</text>
 </a>
 </g>
 </g>
@@ -59,208 +60,226 @@
 <g id="edge2_Node000001_Node000003" class="edge">
 <title>Node1&#45;&gt;Node3</title>
 <g id="a_edge2_Node000001_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M116.71,-235.82C124.6,-234.89 132.77,-233.92 140.85,-232.96"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="141.17,-236.45 150.68,-231.8 140.34,-229.5 141.17,-236.45"/>
+<path fill="none" stroke="#63b8ff" d="M116.71,-261.62C124.66,-261.62 132.89,-261.62 141.03,-261.62"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="140.93,-265.13 150.93,-261.63 140.93,-258.13 140.93,-265.13"/>
 </a>
 </g>
 </g>
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="../../d0/d74/group___t_k.html#ga0133d6b49ae4051d478518e61ae0c8a5" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="453.38,-437.25 318.12,-437.25 318.12,-418 453.38,-418 453.38,-437.25"/>
-<text text-anchor="middle" x="385.75" y="-423.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetAmp</text>
+<g id="a_Node000004"><a xlink:href="../../d0/d74/group___t_k.html#gaa496d15cf9600fa5790ff50c9392b0fd" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="272,-234.25 152.5,-234.25 152.5,-215 272,-215 272,-234.25"/>
+<text text-anchor="middle" x="212.25" y="-220.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::Print</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node4 -->
-<g id="edge3_Node000003_Node000004" class="edge">
-<title>Node3&#45;&gt;Node4</title>
-<g id="a_edge3_Node000003_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M261.98,-234.73C265.69,-236.88 269.11,-239.48 272,-242.62 323.36,-298.55 254.8,-355.45 308,-409.62 308.38,-410.02 308.77,-410.4 309.17,-410.77"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="307.01,-413.53 317.13,-416.67 311.18,-407.91 307.01,-413.53"/>
+<!-- Node1&#45;&gt;Node4 -->
+<g id="edge3_Node000001_Node000004" class="edge">
+<title>Node1&#45;&gt;Node4</title>
+<g id="a_edge3_Node000001_Node000004"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M100.78,-251.51C118.63,-247.17 139.69,-242.04 158.61,-237.44"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="159.41,-240.85 168.29,-235.08 157.75,-234.05 159.41,-240.85"/>
 </a>
 </g>
 </g>
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="../../d0/d74/group___t_k.html#gaa14fdc374518d186c18b0aabeb91898f" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="463.5,-400.25 308,-400.25 308,-381 463.5,-381 463.5,-400.25"/>
-<text text-anchor="middle" x="385.75" y="-386.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetAmpError</text>
+<g id="a_Node000005"><a xlink:href="../../d0/d74/group___t_k.html#ga0133d6b49ae4051d478518e61ae0c8a5" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="453.38,-437.25 318.12,-437.25 318.12,-418 453.38,-418 453.38,-437.25"/>
+<text text-anchor="middle" x="385.75" y="-423.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetAmp</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node5 -->
-<g id="edge4_Node000003_Node000005" class="edge">
-<title>Node3&#45;&gt;Node5</title>
-<g id="a_edge4_Node000003_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M261.22,-234.6C265.19,-236.77 268.88,-239.41 272,-242.62 313.81,-285.59 264.77,-331.08 308,-372.62 308.51,-373.11 309.03,-373.59 309.56,-374.06"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="307.46,-376.86 317.67,-379.7 311.46,-371.12 307.46,-376.86"/>
+<!-- Node4&#45;&gt;Node5 -->
+<g id="edge4_Node000004_Node000005" class="edge">
+<title>Node4&#45;&gt;Node5</title>
+<g id="a_edge4_Node000004_Node000005"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M261.98,-234.73C265.69,-236.88 269.11,-239.48 272,-242.62 323.36,-298.55 254.8,-355.45 308,-409.62 308.38,-410.02 308.77,-410.4 309.17,-410.77"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="307.01,-413.53 317.13,-416.67 311.18,-407.91 307.01,-413.53"/>
 </a>
 </g>
 </g>
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_Node000006"><a xlink:href="../../d0/d74/group___t_k.html#gad927a2d29f50b92c440bc6ece786ef72" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="453.38,-363.25 318.12,-363.25 318.12,-344 453.38,-344 453.38,-363.25"/>
-<text text-anchor="middle" x="385.75" y="-349.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetArea</text>
+<g id="a_Node000006"><a xlink:href="../../d0/d74/group___t_k.html#gaa14fdc374518d186c18b0aabeb91898f" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="463.5,-400.25 308,-400.25 308,-381 463.5,-381 463.5,-400.25"/>
+<text text-anchor="middle" x="385.75" y="-386.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetAmpError</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node6 -->
-<g id="edge5_Node000003_Node000006" class="edge">
-<title>Node3&#45;&gt;Node6</title>
-<g id="a_edge5_Node000003_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M260.31,-234.65C264.56,-236.81 268.56,-239.43 272,-242.62 304.2,-272.48 275,-305.66 308,-334.62 309.29,-335.76 310.64,-336.82 312.03,-337.83"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="310.15,-340.78 320.55,-342.84 313.7,-334.75 310.15,-340.78"/>
+<!-- Node4&#45;&gt;Node6 -->
+<g id="edge5_Node000004_Node000006" class="edge">
+<title>Node4&#45;&gt;Node6</title>
+<g id="a_edge5_Node000004_Node000006"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M261.22,-234.6C265.19,-236.77 268.88,-239.41 272,-242.62 313.81,-285.59 264.77,-331.08 308,-372.62 308.51,-373.11 309.03,-373.59 309.56,-374.06"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="307.46,-376.86 317.67,-379.7 311.46,-371.12 307.46,-376.86"/>
 </a>
 </g>
 </g>
 <!-- Node7 -->
 <g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_Node000007"><a xlink:href="../../d0/d74/group___t_k.html#ga4aaec131e418c8788ab191a4eb6a7fa9" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="453.38,-325.88 318.12,-325.88 318.12,-295.38 453.38,-295.38 453.38,-325.88"/>
-<text text-anchor="start" x="326.12" y="-312.38" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetArea</text>
-<text text-anchor="middle" x="385.75" y="-301.12" font-family="Helvetica,sans-Serif" font-size="10.00">Error</text>
+<g id="a_Node000007"><a xlink:href="../../d0/d74/group___t_k.html#gad927a2d29f50b92c440bc6ece786ef72" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="453.38,-363.25 318.12,-363.25 318.12,-344 453.38,-344 453.38,-363.25"/>
+<text text-anchor="middle" x="385.75" y="-349.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetArea</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node7 -->
-<g id="edge6_Node000003_Node000007" class="edge">
-<title>Node3&#45;&gt;Node7</title>
-<g id="a_edge6_Node000003_Node000007"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M256.63,-234.69C262.04,-236.86 267.31,-239.47 272,-242.62 292.98,-256.71 287.06,-272.48 308,-286.62 309.59,-287.7 311.23,-288.73 312.91,-289.71"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="311.08,-292.71 321.57,-294.18 314.29,-286.48 311.08,-292.71"/>
+<!-- Node4&#45;&gt;Node7 -->
+<g id="edge6_Node000004_Node000007" class="edge">
+<title>Node4&#45;&gt;Node7</title>
+<g id="a_edge6_Node000004_Node000007"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M260.31,-234.65C264.56,-236.81 268.56,-239.43 272,-242.62 304.2,-272.48 275,-305.66 308,-334.62 309.29,-335.76 310.64,-336.82 312.03,-337.83"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="310.15,-340.78 320.55,-342.84 313.7,-334.75 310.15,-340.78"/>
 </a>
 </g>
 </g>
 <!-- Node8 -->
 <g id="Node000008" class="node">
 <title>Node8</title>
-<g id="a_Node000008"><a xlink:href="../../d0/d74/group___t_k.html#ga2bc60e269306be300511aa630417506d" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="453.38,-277.25 318.12,-277.25 318.12,-258 453.38,-258 453.38,-277.25"/>
-<text text-anchor="middle" x="385.75" y="-263.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetCent</text>
+<g id="a_Node000008"><a xlink:href="../../d0/d74/group___t_k.html#ga4aaec131e418c8788ab191a4eb6a7fa9" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="453.38,-325.88 318.12,-325.88 318.12,-295.38 453.38,-295.38 453.38,-325.88"/>
+<text text-anchor="start" x="326.12" y="-312.38" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetArea</text>
+<text text-anchor="middle" x="385.75" y="-301.12" font-family="Helvetica,sans-Serif" font-size="10.00">Error</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node8 -->
-<g id="edge7_Node000003_Node000008" class="edge">
-<title>Node3&#45;&gt;Node8</title>
-<g id="a_edge7_Node000003_Node000008"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M252.88,-234.71C269.85,-239.02 289.89,-244.09 308,-248.62 315.96,-250.62 324.4,-252.72 332.64,-254.77"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="331.7,-258.14 342.24,-257.15 333.38,-251.34 331.7,-258.14"/>
+<!-- Node4&#45;&gt;Node8 -->
+<g id="edge7_Node000004_Node000008" class="edge">
+<title>Node4&#45;&gt;Node8</title>
+<g id="a_edge7_Node000004_Node000008"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M256.63,-234.69C262.04,-236.86 267.31,-239.47 272,-242.62 292.98,-256.71 287.06,-272.48 308,-286.62 309.59,-287.7 311.23,-288.73 312.91,-289.71"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="311.08,-292.71 321.57,-294.18 314.29,-286.48 311.08,-292.71"/>
 </a>
 </g>
 </g>
 <!-- Node9 -->
 <g id="Node000009" class="node">
 <title>Node9</title>
-<g id="a_Node000009"><a xlink:href="../../d0/d74/group___t_k.html#ga32d918b4d80ea9e892c18f5936ae1c49" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="453.38,-239.88 318.12,-239.88 318.12,-209.38 453.38,-209.38 453.38,-239.88"/>
-<text text-anchor="start" x="326.12" y="-226.38" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetCent</text>
-<text text-anchor="middle" x="385.75" y="-215.12" font-family="Helvetica,sans-Serif" font-size="10.00">Error</text>
+<g id="a_Node000009"><a xlink:href="../../d0/d74/group___t_k.html#ga2bc60e269306be300511aa630417506d" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="453.38,-277.25 318.12,-277.25 318.12,-258 453.38,-258 453.38,-277.25"/>
+<text text-anchor="middle" x="385.75" y="-263.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetCent</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node9 -->
-<g id="edge8_Node000003_Node000009" class="edge">
-<title>Node3&#45;&gt;Node9</title>
-<g id="a_edge8_Node000003_Node000009"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M272.27,-224.62C283.24,-224.62 294.87,-224.62 306.31,-224.62"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="306.16,-228.13 316.16,-224.63 306.16,-221.13 306.16,-228.13"/>
+<!-- Node4&#45;&gt;Node9 -->
+<g id="edge8_Node000004_Node000009" class="edge">
+<title>Node4&#45;&gt;Node9</title>
+<g id="a_edge8_Node000004_Node000009"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M252.88,-234.71C269.85,-239.02 289.89,-244.09 308,-248.62 315.96,-250.62 324.4,-252.72 332.64,-254.77"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="331.7,-258.14 342.24,-257.15 333.38,-251.34 331.7,-258.14"/>
 </a>
 </g>
 </g>
 <!-- Node10 -->
 <g id="Node000010" class="node">
 <title>Node10</title>
-<g id="a_Node000010"><a xlink:href="../../d0/d74/group___t_k.html#ga86fb9a62fe918832b4fb6f6ae42f1965" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="458.62,-191.25 312.88,-191.25 312.88,-172 458.62,-172 458.62,-191.25"/>
-<text text-anchor="middle" x="385.75" y="-177.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetCounts</text>
+<g id="a_Node000010"><a xlink:href="../../d0/d74/group___t_k.html#ga32d918b4d80ea9e892c18f5936ae1c49" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="453.38,-239.88 318.12,-239.88 318.12,-209.38 453.38,-209.38 453.38,-239.88"/>
+<text text-anchor="start" x="326.12" y="-226.38" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetCent</text>
+<text text-anchor="middle" x="385.75" y="-215.12" font-family="Helvetica,sans-Serif" font-size="10.00">Error</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node10 -->
-<g id="edge9_Node000003_Node000010" class="edge">
-<title>Node3&#45;&gt;Node10</title>
-<g id="a_edge9_Node000003_Node000010"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M252.88,-214.54C269.85,-210.23 289.89,-205.16 308,-200.62 315.96,-198.63 324.4,-196.53 332.64,-194.48"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="333.38,-197.91 342.24,-192.1 331.7,-191.11 333.38,-197.91"/>
+<!-- Node4&#45;&gt;Node10 -->
+<g id="edge9_Node000004_Node000010" class="edge">
+<title>Node4&#45;&gt;Node10</title>
+<g id="a_edge9_Node000004_Node000010"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M272.27,-224.62C283.24,-224.62 294.87,-224.62 306.31,-224.62"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="306.16,-228.13 316.16,-224.63 306.16,-221.13 306.16,-228.13"/>
 </a>
 </g>
 </g>
 <!-- Node11 -->
 <g id="Node000011" class="node">
 <title>Node11</title>
-<g id="a_Node000011"><a xlink:href="../../d0/d74/group___t_k.html#gac083ac86c150085adae965936f41bb49" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="458.62,-153.88 312.88,-153.88 312.88,-123.38 458.62,-123.38 458.62,-153.88"/>
-<text text-anchor="start" x="320.88" y="-140.38" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetCounts</text>
-<text text-anchor="middle" x="385.75" y="-129.12" font-family="Helvetica,sans-Serif" font-size="10.00">Error</text>
+<g id="a_Node000011"><a xlink:href="../../d0/d74/group___t_k.html#ga86fb9a62fe918832b4fb6f6ae42f1965" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="458.62,-191.25 312.88,-191.25 312.88,-172 458.62,-172 458.62,-191.25"/>
+<text text-anchor="middle" x="385.75" y="-177.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetCounts</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node11 -->
-<g id="edge10_Node000003_Node000011" class="edge">
-<title>Node3&#45;&gt;Node11</title>
-<g id="a_edge10_Node000003_Node000011"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M226.06,-214.57C243.66,-201.16 276.72,-177.4 308,-162.62 311.12,-161.15 314.35,-159.74 317.64,-158.39"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="318.81,-161.69 326.9,-154.84 316.31,-155.15 318.81,-161.69"/>
+<!-- Node4&#45;&gt;Node11 -->
+<g id="edge10_Node000004_Node000011" class="edge">
+<title>Node4&#45;&gt;Node11</title>
+<g id="a_edge10_Node000004_Node000011"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M252.88,-214.54C269.85,-210.23 289.89,-205.16 308,-200.62 315.96,-198.63 324.4,-196.53 332.64,-194.48"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="333.38,-197.91 342.24,-192.1 331.7,-191.11 333.38,-197.91"/>
 </a>
 </g>
 </g>
 <!-- Node12 -->
 <g id="Node000012" class="node">
 <title>Node12</title>
-<g id="a_Node000012"><a xlink:href="../../d0/d74/group___t_k.html#gaa2200a38a3956d5e129aeeca03b2952a" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="455.62,-105.25 315.88,-105.25 315.88,-86 455.62,-86 455.62,-105.25"/>
-<text text-anchor="middle" x="385.75" y="-91.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetWidth</text>
+<g id="a_Node000012"><a xlink:href="../../d0/d74/group___t_k.html#gac083ac86c150085adae965936f41bb49" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="458.62,-153.88 312.88,-153.88 312.88,-123.38 458.62,-123.38 458.62,-153.88"/>
+<text text-anchor="start" x="320.88" y="-140.38" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetCounts</text>
+<text text-anchor="middle" x="385.75" y="-129.12" font-family="Helvetica,sans-Serif" font-size="10.00">Error</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node12 -->
-<g id="edge11_Node000003_Node000012" class="edge">
-<title>Node3&#45;&gt;Node12</title>
-<g id="a_edge11_Node000003_Node000012"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M218.9,-214.6C231.72,-192.79 265.27,-140.89 308,-114.62 310.8,-112.91 313.74,-111.34 316.78,-109.92"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="318.05,-113.18 326,-106.18 315.41,-106.7 318.05,-113.18"/>
+<!-- Node4&#45;&gt;Node12 -->
+<g id="edge11_Node000004_Node000012" class="edge">
+<title>Node4&#45;&gt;Node12</title>
+<g id="a_edge11_Node000004_Node000012"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M226.06,-214.57C243.66,-201.16 276.72,-177.4 308,-162.62 311.12,-161.15 314.35,-159.74 317.64,-158.39"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="318.81,-161.69 326.9,-154.84 316.31,-155.15 318.81,-161.69"/>
 </a>
 </g>
 </g>
 <!-- Node13 -->
 <g id="Node000013" class="node">
 <title>Node13</title>
-<g id="a_Node000013"><a xlink:href="../../d0/d74/group___t_k.html#ga7673c2803d0941563430bf8ef217da80" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="455.62,-67.88 315.88,-67.88 315.88,-37.38 455.62,-37.38 455.62,-67.88"/>
-<text text-anchor="start" x="323.88" y="-54.38" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetWidth</text>
-<text text-anchor="middle" x="385.75" y="-43.12" font-family="Helvetica,sans-Serif" font-size="10.00">Error</text>
+<g id="a_Node000013"><a xlink:href="../../d0/d74/group___t_k.html#gaa2200a38a3956d5e129aeeca03b2952a" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="455.62,-105.25 315.88,-105.25 315.88,-86 455.62,-86 455.62,-105.25"/>
+<text text-anchor="middle" x="385.75" y="-91.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetWidth</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node13 -->
-<g id="edge12_Node000003_Node000013" class="edge">
-<title>Node3&#45;&gt;Node13</title>
-<g id="a_edge12_Node000003_Node000013"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M216.82,-214.65C226.84,-188.06 257.81,-114.96 308,-76.62 309.32,-75.62 310.68,-74.65 312.07,-73.73"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="313.49,-76.95 320.43,-68.94 310.01,-70.88 313.49,-76.95"/>
+<!-- Node4&#45;&gt;Node13 -->
+<g id="edge12_Node000004_Node000013" class="edge">
+<title>Node4&#45;&gt;Node13</title>
+<g id="a_edge12_Node000004_Node000013"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M218.9,-214.6C231.72,-192.79 265.27,-140.89 308,-114.62 310.8,-112.91 313.74,-111.34 316.78,-109.92"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="318.05,-113.18 326,-106.18 315.41,-106.7 318.05,-113.18"/>
 </a>
 </g>
 </g>
 <!-- Node14 -->
 <g id="Node000014" class="node">
 <title>Node14</title>
-<g id="a_Node000014"><a xlink:href="../../d0/db7/namespace_gam_r_1_1_utils.html#a80bc6c0c1ecd5d28cd4f9e3ae38f92ed" target="_top" xlink:title=" ">
+<g id="a_Node000014"><a xlink:href="../../d0/d74/group___t_k.html#ga7673c2803d0941563430bf8ef217da80" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="455.62,-67.88 315.88,-67.88 315.88,-37.38 455.62,-37.38 455.62,-67.88"/>
+<text text-anchor="start" x="323.88" y="-54.38" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::TK::BPeak::GetWidth</text>
+<text text-anchor="middle" x="385.75" y="-43.12" font-family="Helvetica,sans-Serif" font-size="10.00">Error</text>
+</a>
+</g>
+</g>
+<!-- Node4&#45;&gt;Node14 -->
+<g id="edge13_Node000004_Node000014" class="edge">
+<title>Node4&#45;&gt;Node14</title>
+<g id="a_edge13_Node000004_Node000014"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M216.82,-214.65C226.84,-188.06 257.81,-114.96 308,-76.62 309.32,-75.62 310.68,-74.65 312.07,-73.73"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="313.49,-76.95 320.43,-68.94 310.01,-70.88 313.49,-76.95"/>
+</a>
+</g>
+</g>
+<!-- Node15 -->
+<g id="Node000015" class="node">
+<title>Node15</title>
+<g id="a_Node000015"><a xlink:href="../../d0/db7/namespace_gam_r_1_1_utils.html#a80bc6c0c1ecd5d28cd4f9e3ae38f92ed" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="439.5,-19.25 332,-19.25 332,0 439.5,0 439.5,-19.25"/>
 <text text-anchor="middle" x="385.75" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Utils::wrresult</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node14 -->
-<g id="edge13_Node000003_Node000014" class="edge">
-<title>Node3&#45;&gt;Node14</title>
-<g id="a_edge13_Node000003_Node000014"><a xlink:title=" ">
+<!-- Node4&#45;&gt;Node15 -->
+<g id="edge14_Node000004_Node000015" class="edge">
+<title>Node4&#45;&gt;Node15</title>
+<g id="a_edge14_Node000004_Node000015"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M214.99,-214.64C221.18,-182.31 245.19,-79.58 308,-28.62 311.94,-25.43 316.35,-22.75 321.01,-20.52"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="322.12,-23.85 330.1,-16.88 319.52,-17.35 322.12,-23.85"/>
 </a>

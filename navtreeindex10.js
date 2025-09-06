@@ -1,5 +1,17 @@
 var NAVTREEINDEX10 =
 {
+"dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a820a25ceeb770de93de22cb00135bf2c":[6,0,0,3,1,4],
+"dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa":[5,0,0,3,1,11],
+"dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ac6e3c473cf7a4648fcb6317472f25daa":[6,0,0,3,1,11],
+"dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ad0c3d6f71a5126c6181d3258424a2068":[5,0,0,3,1,2],
+"dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ad0c3d6f71a5126c6181d3258424a2068":[6,0,0,3,1,2],
+"dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ad8b781ef00b42ff880d5443b5bd81fe0":[5,0,0,3,1,6],
+"dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#ad8b781ef00b42ff880d5443b5bd81fe0":[6,0,0,3,1,6],
+"dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#aeac5d2e46d99f0cd15cabb2d7f55c5d0":[5,0,0,3,1,5],
+"dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#aeac5d2e46d99f0cd15cabb2d7f55c5d0":[6,0,0,3,1,5],
+"dc/d62/_scheme_8cc.html":[7,0,1,1,2,2],
+"dc/d62/_scheme_8cc_source.html":[7,0,1,1,2,2],
+"dc/d89/namespace_gam_r_1_1_spect.html":[4,4,0],
 "dc/d89/namespace_gam_r_1_1_spect.html#a047d85658df00552fa33ff79d3230ec1":[5,0,0,8,93],
 "dc/d89/namespace_gam_r_1_1_spect.html#a0aad1e3c1b928bb9c61bfa9c20df882e":[5,0,0,8,75],
 "dc/d89/namespace_gam_r_1_1_spect.html#a0c1c0458051261537a2abe8245fdd877":[5,0,0,8,111],
@@ -237,17 +249,5 @@ var NAVTREEINDEX10 =
 "dd/d50/_gate_8hh.html":[7,0,1,1,10,1],
 "dd/d50/_gate_8hh_source.html":[7,0,1,1,10,1],
 "dd/d62/_time_walk_cal_8hh.html":[7,0,1,1,8,9],
-"dd/d62/_time_walk_cal_8hh_source.html":[7,0,1,1,8,9],
-"dd/d67/_ang_corr_8cc.html":[7,0,1,1,1,0],
-"dd/d67/_ang_corr_8cc_source.html":[7,0,1,1,1,0],
-"dd/d6d/_level_scheme_draw_8cc.html":[7,0,1,1,5,0],
-"dd/d6d/_level_scheme_draw_8cc_source.html":[7,0,1,1,5,0],
-"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html":[5,0,0,2,5],
-"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html":[6,0,0,2,4],
-"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a25c02ff0835685e20164d19042b76f28":[5,0,0,2,5,5],
-"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a25c02ff0835685e20164d19042b76f28":[6,0,0,2,4,5],
-"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a33c99b9e125d81f6208101fa43b33be5":[5,0,0,2,5,2],
-"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a33c99b9e125d81f6208101fa43b33be5":[6,0,0,2,4,2],
-"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a865f1c9f1c75afa6c6c0db44e565901a":[5,0,0,2,5,4],
-"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a865f1c9f1c75afa6c6c0db44e565901a":[6,0,0,2,4,4]
+"dd/d62/_time_walk_cal_8hh_source.html":[7,0,1,1,8,9]
 };

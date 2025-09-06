@@ -1,5 +1,17 @@
 var NAVTREEINDEX11 =
 {
+"dd/d67/_ang_corr_8cc.html":[7,0,1,1,1,0],
+"dd/d67/_ang_corr_8cc_source.html":[7,0,1,1,1,0],
+"dd/d6d/_level_scheme_draw_8cc.html":[7,0,1,1,5,0],
+"dd/d6d/_level_scheme_draw_8cc_source.html":[7,0,1,1,5,0],
+"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html":[5,0,0,2,5],
+"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html":[6,0,0,2,4],
+"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a25c02ff0835685e20164d19042b76f28":[5,0,0,2,5,5],
+"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a25c02ff0835685e20164d19042b76f28":[6,0,0,2,4,5],
+"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a33c99b9e125d81f6208101fa43b33be5":[5,0,0,2,5,2],
+"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a33c99b9e125d81f6208101fa43b33be5":[6,0,0,2,4,2],
+"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a865f1c9f1c75afa6c6c0db44e565901a":[5,0,0,2,5,4],
+"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#a865f1c9f1c75afa6c6c0db44e565901a":[6,0,0,2,4,4],
 "dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#accc646bcdeb4eb0a57d24c474128b29f":[5,0,0,2,5,0],
 "dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#accc646bcdeb4eb0a57d24c474128b29f":[6,0,0,2,4,0],
 "dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#ad0ed33b291b57dbfbd5cef4a5ddd7ff8":[5,0,0,2,5,3],
@@ -237,17 +249,5 @@ var NAVTREEINDEX11 =
 "df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a234ecafa496aa0dff2d831dde9fdd46d":[6,0,0,8,2,39],
 "df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a25691ea9e8c569535d08610e459a229f":[5,0,0,8,2,78],
 "df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a25691ea9e8c569535d08610e459a229f":[6,0,0,8,2,78],
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a27f27f4bfa2ac628c988be975db62e8e":[5,0,0,8,2,48],
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a27f27f4bfa2ac628c988be975db62e8e":[6,0,0,8,2,48],
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a2850fcb0d80d787d552a91aaf105c91c":[5,0,0,8,2,69],
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a2850fcb0d80d787d552a91aaf105c91c":[6,0,0,8,2,69],
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a28a372b77c6dfaf58e9a86f7171cdc9a":[5,0,0,8,2,20],
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a28a372b77c6dfaf58e9a86f7171cdc9a":[6,0,0,8,2,20],
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a2c1f1b472a0c2605bd3d540323b7b627":[5,0,0,8,2,75],
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a2c1f1b472a0c2605bd3d540323b7b627":[6,0,0,8,2,75],
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a3474b5ff44d9dd333da9161e9d2edc49":[5,0,0,8,2,32],
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a3474b5ff44d9dd333da9161e9d2edc49":[6,0,0,8,2,32],
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a35c3e32218f20481018e85a7f1d4dc6f":[5,0,0,8,2,37],
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a35c3e32218f20481018e85a7f1d4dc6f":[6,0,0,8,2,37],
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a372bfbc50da523d8b6be9f36d4d69314":[5,0,0,8,2,43]
+"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a27f27f4bfa2ac628c988be975db62e8e":[5,0,0,8,2,48]
 };

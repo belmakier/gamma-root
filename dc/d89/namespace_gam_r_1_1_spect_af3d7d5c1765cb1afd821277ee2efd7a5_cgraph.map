@@ -1,5 +1,7 @@
 <map id="GamR::Spect::TwoClickCalibrate" name="GamR::Spect::TwoClickCalibrate">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,215,31"/>
-<area shape="rect" id="Node000002" href="$d0/db7/namespace_gam_r_1_1_utils.html#a31f74a9ca644d560dc14e19c4dbd773b" title=" " alt="" coords="263,5,421,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,16,247,16,247,21,215,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,42,215,68"/>
+<area shape="rect" id="Node000002" href="$d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#a2303baf332dfdfecf946e78f7aa33c86" title=" " alt="" coords="273,5,410,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,39,258,34,259,39,216,44"/>
+<area shape="rect" id="Node000003" href="$d0/db7/namespace_gam_r_1_1_utils.html#a31f74a9ca644d560dc14e19c4dbd773b" title=" " alt="" coords="263,70,421,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="216,65,247,69,247,74,215,70"/>
 </map>

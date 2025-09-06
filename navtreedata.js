@@ -114,12 +114,12 @@ var NAVTREEINDEX =
 "d3/d7a/class_gam_r_1_1_ang_dist_1_1_double_gaussian_distr.html",
 "d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a2cf1054e7d073717fdb3296077cb5a28",
 "d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html#ae2d81604b034ed4716ac584c1ba00973",
-"d8/d35/class_gam_r_1_1_efficiency_1_1_multi_data_set.html",
-"da/d95/class_gam_r_1_1_tree_1_1_t_event.html#a0b4488a6d9135d6ac182f9a4ad74493e",
-"dc/d89/namespace_gam_r_1_1_spect.html#a047d85658df00552fa33ff79d3230ec1",
-"dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html#accc646bcdeb4eb0a57d24c474128b29f",
-"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a372bfbc50da523d8b6be9f36d4d69314",
-"dir_e71be6491a58e33a05a0854f291058a0.html"
+"d7/df7/class_gam_r_1_1_nucleus_1_1_level_scheme_fitter_1_1_transition.html#a78d0ea49a489de7c21242888bc66ee48",
+"da/d95/class_gam_r_1_1_tree_1_1_t_event.html#a07f2db53c5a070f4d948a45654b2b32a",
+"dc/d61/class_gam_r_1_1_efficiency_1_1_eff_fit.html#a820a25ceeb770de93de22cb00135bf2c",
+"dd/d67/_ang_corr_8cc.html",
+"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a27f27f4bfa2ac628c988be975db62e8e",
+"dir_8b07111aaee2526fa4326d407855a000.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
