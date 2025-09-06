@@ -560,7 +560,7 @@ namespace GamR {
       while(true) {
         GamR::TK::Gate bg;
         int retval = bg.SetGate(gPad->GetCanvas(), "x");
-        if (retval<0) { break; }
+        if (retval>0) { break; }
         background.push_back(bg);
       }
       Set(hist, peak, background, foption, option);
@@ -577,7 +577,7 @@ namespace GamR {
       while(true) {
         GamR::TK::Gate np;
         int retval = np.SetGate(gPad->GetCanvas(), "x");
-        if (retval<0) { break; }
+        if (retval>0) { break; }
         nonprompt.push_back(np);
       }
       if (nonprompt.size() == 0) { std::cout << "Must have at least one non-prompt region!" << std::endl; return; }
@@ -610,7 +610,7 @@ namespace GamR {
       while(true) {
         GamR::TK::Gate bg;
         int retval = bg.SetGate(gPad->GetCanvas(), "x");
-        if (retval<0) { break; }
+        if (retval>0) { break; }
         background.push_back(bg);
         if (bg.GetLow() < lowest) {
           lowest = bg.GetLow();
@@ -873,49 +873,27 @@ namespace GamR {
 
       BPeak *peak = new BPeak();
       //get two (x,y) coordinates
-      TMarker *marker = new TMarker();
-      TObject *obj;
-
-      int ex=-2;
 
       canvas->SetCrosshair();
       
       canvas->Update();
 
-      double lowX = 0;
-      double lowY = 0;
-      double highX = 0;
-      double highY = 0;
-
-      std::string canvasname = canvas->GetName();
-
       GamR::Utils::Clicker click;
-      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
-      
-      std::cout << "Click for lower point, press any key to exit..." << std::endl;
-      while (true){
-        obj=canvas->WaitPrimitive();
-        if (!obj) break;
-        if (strncmp(obj->ClassName(),"TMarker",7)==0) {
-          marker=(TMarker*)obj;
-          if (ex==-2){
-            lowX = marker->GetX();
-            lowY = marker->GetY();
-            // this->Low=marker->GetX();
-            ex = ex + 1;
-            std::cout << "Click for upper point, press any key to exit..." << std::endl;
-          } else {
-            highX = marker->GetX();
-            highY = marker->GetY();
-            // this->High=marker->GetX();
-            delete marker;
-            ex = ex + 1;
-            break;
-          }
-          delete marker;
-        }
+      std::vector<std::string> messages = {"Click for lower bound of region, press any key to exit...", "Click for upper bound of region, press any key to exit..."};
+
+      int retval = click.GetClicks(canvas, 2, messages);
+
+      if (retval > 0) { // quit prematurely
+        std::cout << "gating cancelled" << std::endl;
+        canvas->SetCrosshair(0);
+        return peak;
       }
-      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+
+      double lowX = click.xs[0];
+      double lowY = click.ys[0];
+      double highX = click.xs[1];
+      double highY = click.ys[1];
+
       canvas->SetCrosshair(0);
 
       peak->Set(hist, lowX, lowY, highX, highY);

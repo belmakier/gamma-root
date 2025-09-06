@@ -9,51 +9,26 @@ namespace GamR {
   namespace Spect {
 
     int BackSub2D::SetPeak(TCanvas *canvas) {
-      TMarker *marker = new TMarker();
-      TObject *obj;
-
-      int ex=-2;
-
       canvas->SetCrosshair();
       
       canvas->Update();
 
-      double lowX = 0;
-      double lowY = 0;
-      double highX = 0;
-      double highY = 0;
-
-      std::string canvasname = canvas->GetName();
-
-      //std::string functioncall = "GamR::Utils::GetClick("+canvasname+")";
       GamR::Utils::Clicker click;
-      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
-      
-      std::cout << "Click for corner 1, press any key to exit..." << std::endl;
-      while (true){
-        obj=canvas->WaitPrimitive();
-        if (!obj) break;
-        if (strncmp(obj->ClassName(),"TMarker",7)==0) {
-          marker=(TMarker*)obj;
-          if (ex==-2){
-            lowX = marker->GetX();
-            lowY = marker->GetY();
-            // this->Low=marker->GetX();
-            ex = ex + 1;
-            delete marker;
-            std::cout << "Click for corner 2, press any key to exit..." << std::endl;
-          } else {
-            highX = marker->GetX();
-            highY = marker->GetY();
-            // this->High=marker->GetX();
-            delete marker;
-            ex = ex + 1;
-            break;
-          }
-          delete marker;
-        }
+      std::vector<std::string> messages = {"Click for corner 1, press any key to exit...", "Click for corner 2, press any key to exit..."};
+
+      int retval = click.GetClicks(canvas, 2, messages);
+
+      if (retval > 0) { // quit prematurely
+        std::cout << "gating cancelled" << std::endl;
+        canvas->SetCrosshair(0);
+        return retval;
       }
 
+      double lowX = click.xs[0];
+      double lowY = click.ys[0];
+      double highX = click.xs[1];
+      double highY = click.ys[1];
+      
       if (highX < lowX) {
         double temp = highX;
         highX = lowX;
@@ -78,64 +53,32 @@ namespace GamR {
       GamR::TK::Gate y(lowY, highY);
       fPeakX = x;
       fPeakY = y;
-      
-      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
 
-      if (ex < 0) { // quit prematurely
-        std::cout << "gating cancelled" << std::endl;
-        canvas->SetCrosshair(0);
-        return ex;
-      } else {
-        canvas->SetCrosshair(0);
-        //std::cout << *this << std::endl;
-        return ex;
-      }
+      canvas->SetCrosshair(0);
+      return retval;
 
     }
 
     int BackSub2D::AddBackX(TCanvas *canvas) {
-      TMarker *marker = new TMarker();
-      TObject *obj;
-
-      int ex=-2;
-
       canvas->SetCrosshair();
       
       canvas->Update();
 
-      double lowX = 0;
-      double lowY = 0;
-      double highX = 0;
-      double highY = 0;
-
-      std::string canvasname = canvas->GetName();
-
       GamR::Utils::Clicker click;
-      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
-      
-      std::cout << "Click for corner 1, press any key to exit..." << std::endl;
-      while (true){
-        obj=canvas->WaitPrimitive();
-        if (!obj) break;
-        if (strncmp(obj->ClassName(),"TMarker",7)==0) {
-          marker=(TMarker*)obj;
-          if (ex==-2){
-            lowX = marker->GetX();
-            lowY = marker->GetY();
-            // this->Low=marker->GetX();
-            ex = ex + 1;
-            std::cout << "Click for corner 2, press any key to exit..." << std::endl;
-          } else {
-            highX = marker->GetX();
-            highY = marker->GetY();
-            // this->High=marker->GetX();
-            delete marker;
-            ex = ex + 1;
-            break;
-          }
-          delete marker;
-        }
+      std::vector<std::string> messages = {"Click for corner 1, press any key to exit...", "Click for corner 2, press any key to exit..."};
+
+      int retval = click.GetClicks(canvas, 2, messages);
+
+      if (retval > 0) { // quit prematurely
+        std::cout << "gating cancelled" << std::endl;
+        canvas->SetCrosshair(0);
+        return retval;
       }
+
+      double lowX  = click.xs[0];
+      double lowY  = click.ys[0];
+      double highX = click.xs[1];
+      double highY = click.ys[1];
 
       if (highX < lowX) {
         double temp = highX;
@@ -149,75 +92,43 @@ namespace GamR {
         lowY = temp;
       }
       
-      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+      canvas->SetCrosshair(0);
+      //std::cout << *this << std::endl;
+      //make gates
+      GamR::TK::Gate x(lowX, highX);
+      //GamR::TK::Gate y(lowY, highY);
+      fBackX.push_back(x);
+      //fPeakY = y;
 
-      if (ex < 0) { // quit prematurely
-        std::cout << "gating cancelled" << std::endl;
-        canvas->SetCrosshair(0);
-        return ex;
-      } else {
-        canvas->SetCrosshair(0);
-        //std::cout << *this << std::endl;
-        //make gates
-        GamR::TK::Gate x(lowX, highX);
-        //GamR::TK::Gate y(lowY, highY);
-        fBackX.push_back(x);
-        //fPeakY = y;
-
-        TBox *box = new TBox(lowX, fPeakY.GetLow(), highX, fPeakY.GetHigh());
-        box->SetLineColor(kBlue);
-        box->SetFillStyle(0);
-        box->SetLineStyle(1);
-        box->SetLineWidth(2);
-        box->Draw("same");
-        return ex;
-      }
+      TBox *box = new TBox(lowX, fPeakY.GetLow(), highX, fPeakY.GetHigh());
+      box->SetLineColor(kBlue);
+      box->SetFillStyle(0);
+      box->SetLineStyle(1);
+      box->SetLineWidth(2);
+      box->Draw("same");
+      return retval;
 
     }
 
     int BackSub2D::AddBackY(TCanvas *canvas) {
-      TMarker *marker = new TMarker();
-      TObject *obj;
-
-      int ex=-2;
-
       canvas->SetCrosshair();
       
       canvas->Update();
 
-      double lowX = 0;
-      double lowY = 0;
-      double highX = 0;
-      double highY = 0;
-
-      std::string canvasname = canvas->GetName();
-
       GamR::Utils::Clicker click;
-      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+      std::vector<std::string> messages = {"Click for corner 1, press any key to exit...", "Click for corner 2, press any key to exit..."};
 
-      std::cout << "Click for corner 1, press any key to exit..." << std::endl;
-      while (true){
-        obj=canvas->WaitPrimitive();
-        if (!obj) break;
-        if (strncmp(obj->ClassName(),"TMarker",7)==0) {
-          marker=(TMarker*)obj;
-          if (ex==-2){
-            lowX = marker->GetX();
-            lowY = marker->GetY();
-            // this->Low=marker->GetX();
-            ex = ex + 1;
-            std::cout << "Click for corner 2, press any key to exit..." << std::endl;
-          } else {
-            highX = marker->GetX();
-            highY = marker->GetY();
-            // this->High=marker->GetX();
-            delete marker;
-            ex = ex + 1;
-            break;
-          }
-          delete marker;
-        }
+      int retval = click.GetClicks(canvas, 2, messages);
+      if (retval > 0) { // quit prematurely
+        std::cout << "gating cancelled" << std::endl;
+        canvas->SetCrosshair(0);
+        return retval;
       }
+
+      double lowX =  click.xs[0];
+      double lowY =  click.ys[0];
+      double highX = click.xs[1];
+      double highY = click.ys[1];
 
       if (highX < lowX) {
         double temp = highX;
@@ -231,76 +142,44 @@ namespace GamR {
         lowY = temp;
       }
       
-      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+      canvas->SetCrosshair(0);
+      //std::cout << *this << std::endl;
+      //make gates
+      //GamR::TK::Gate x(lowX, highX);
+      GamR::TK::Gate y(lowY, highY);
+      fBackY.push_back(y);
+      //fBackY.push_back(y);
 
-      if (ex < 0) { // quit prematurely
-        std::cout << "gating cancelled" << std::endl;
-        canvas->SetCrosshair(0);
-        return ex;
-      } else {
-        canvas->SetCrosshair(0);
-        //std::cout << *this << std::endl;
-        //make gates
-        //GamR::TK::Gate x(lowX, highX);
-        GamR::TK::Gate y(lowY, highY);
-        fBackY.push_back(y);
-        //fBackY.push_back(y);
-
-        TBox *box = new TBox(fPeakX.GetLow(), lowY, fPeakX.GetHigh(), highY);
-        box->SetLineColor(kGreen);
-        box->SetFillStyle(0);
-        box->SetLineStyle(1);
-        box->SetLineWidth(2);
-        box->Draw("same");
-        
-        return ex;
-      }
+      TBox *box = new TBox(fPeakX.GetLow(), lowY, fPeakX.GetHigh(), highY);
+      box->SetLineColor(kGreen);
+      box->SetFillStyle(0);
+      box->SetLineStyle(1);
+      box->SetLineWidth(2);
+      box->Draw("same");
+      
+      return retval;
 
     }
 
     int BackSub2D::AddBackDiag(TCanvas *canvas) {
-      TMarker *marker = new TMarker();
-      TObject *obj;
-
-      int ex=-2;
-
       canvas->SetCrosshair();
       
       canvas->Update();
 
-      double lowX = 0;
-      double lowY = 0;
-      double highX = 0;
-      double highY = 0;
-
-      std::string canvasname = canvas->GetName();
-
       GamR::Utils::Clicker click;
-      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+      std::vector<std::string> messages = {"Click for corner 1, press any key to exit...", "Click for corner 2, press any key to exit..."};
 
-      std::cout << "Click for corner 1, press any key to exit..." << std::endl;
-      while (true){
-        obj=canvas->WaitPrimitive();
-        if (!obj) break;
-        if (strncmp(obj->ClassName(),"TMarker",7)==0) {
-          marker=(TMarker*)obj;
-          if (ex==-2){
-            lowX = marker->GetX();
-            lowY = marker->GetY();
-            // this->Low=marker->GetX();
-            ex = ex + 1;
-            std::cout << "Click for corner 2, press any key to exit..." << std::endl;
-          } else {
-            highX = marker->GetX();
-            highY = marker->GetY();
-            // this->High=marker->GetX();
-            delete marker;
-            ex = ex + 1;
-            break;
-          }
-          delete marker;
-        }
+      int retval = click.GetClicks(canvas, 2, messages);
+      if (retval > 0) { // quit prematurely
+        std::cout << "gating cancelled" << std::endl;
+        canvas->SetCrosshair(0);
+        return retval;
       }
+
+      double lowX =  click.xs[0];
+      double lowY =  click.ys[0];
+      double highX = click.xs[1];
+      double highY = click.ys[1];
 
       if (highX < lowX) {
         double temp = highX;
@@ -313,77 +192,44 @@ namespace GamR {
         highY = lowY;
         lowY = temp;
       }
-      
-      
-      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
 
-      if (ex < 0) { // quit prematurely
-        std::cout << "gating cancelled" << std::endl;
-        canvas->SetCrosshair(0);
-        return ex;
-      } else {
-        canvas->SetCrosshair(0);
-        //std::cout << *this << std::endl;
-        //make gates
-        GamR::TK::Gate x(lowX, highX);
-        GamR::TK::Gate y(lowY, highY);
-        fBackDiagX.push_back(x);
-        fBackDiagY.push_back(y);
+      canvas->SetCrosshair(0);
+      //std::cout << *this << std::endl;
+      //make gates
+      GamR::TK::Gate x(lowX, highX);
+      GamR::TK::Gate y(lowY, highY);
+      fBackDiagX.push_back(x);
+      fBackDiagY.push_back(y);
 
-        TBox *box = new TBox(lowX, lowY, highX, highY);
-        box->SetLineColor(kMagenta);
-        box->SetFillStyle(0);
-        box->SetLineStyle(1);
-        box->SetLineWidth(2);
-        box->Draw("same");
-        
-        return ex;
-      }
+      TBox *box = new TBox(lowX, lowY, highX, highY);
+      box->SetLineColor(kMagenta);
+      box->SetFillStyle(0);
+      box->SetLineStyle(1);
+      box->SetLineWidth(2);
+      box->Draw("same");
+      
+      return retval;
     }
 
     int BackSub2D::AddBackBack(TCanvas *canvas) {
-      TMarker *marker = new TMarker();
-      TObject *obj;
-
-      int ex=-2;
-
       canvas->SetCrosshair();
       
       canvas->Update();
 
-      double lowX = 0;
-      double lowY = 0;
-      double highX = 0;
-      double highY = 0;
-
-      std::string canvasname = canvas->GetName();
-
       GamR::Utils::Clicker click;
-      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+      std::vector<std::string> messages = {"Click for corner 1, press any key to exit...", "Click for corner 2, press any key to exit..."};
 
-      std::cout << "Click for corner 1, press any key to exit..." << std::endl;
-      while (true){
-        obj=canvas->WaitPrimitive();
-        if (!obj) break;
-        if (strncmp(obj->ClassName(),"TMarker",7)==0) {
-          marker=(TMarker*)obj;
-          if (ex==-2){
-            lowX = marker->GetX();
-            lowY = marker->GetY();
-            // this->Low=marker->GetX();
-            ex = ex + 1;
-            std::cout << "Click for corner 2, press any key to exit..." << std::endl;
-          } else {
-            highX = marker->GetX();
-            highY = marker->GetY();
-            // this->High=marker->GetX();
-            delete marker;
-            ex = ex + 1;
-            break;
-          }
-          delete marker;
-        }
+      int retval = click.GetClicks(canvas, 2, messages);
+      if (retval > 0) { // quit prematurely
+        std::cout << "gating cancelled" << std::endl;
+        canvas->SetCrosshair(0);
+        return retval;
       }
+
+      double lowX =  click.xs[0];
+      double lowY =  click.ys[0];
+      double highX = click.xs[1];
+      double highY = click.ys[1];
 
       if (highX < lowX) {
         double temp = highX;
@@ -397,29 +243,21 @@ namespace GamR {
         lowY = temp;
       }
       
-      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+      canvas->SetCrosshair(0);
+      //std::cout << *this << std::endl;
+      //make gates
+      GamR::TK::Gate x(lowX, highX);
+      GamR::TK::Gate y(lowY, highY);
+      fBackBackX.push_back(x);
+      fBackBackY.push_back(y);
 
-      if (ex < 0) { // quit prematurely
-        std::cout << "gating cancelled" << std::endl;
-        canvas->SetCrosshair(0);
-        return ex;
-      } else {
-        canvas->SetCrosshair(0);
-        //std::cout << *this << std::endl;
-        //make gates
-        GamR::TK::Gate x(lowX, highX);
-        GamR::TK::Gate y(lowY, highY);
-        fBackBackX.push_back(x);
-        fBackBackY.push_back(y);
-
-        TBox *box = new TBox(lowX, lowY, highX, highY);
-        box->SetLineColor(kOrange);
-        box->SetFillStyle(0);
-        box->SetLineStyle(1);
-        box->SetLineWidth(2);
-        box->Draw("same");
-        return ex;
-      }
+      TBox *box = new TBox(lowX, lowY, highX, highY);
+      box->SetLineColor(kOrange);
+      box->SetFillStyle(0);
+      box->SetLineStyle(1);
+      box->SetLineWidth(2);
+      box->Draw("same");
+      return retval;
     }
 
     TH2D * BackSub2D::Subtract(TH2D *hist) {

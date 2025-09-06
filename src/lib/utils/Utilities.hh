@@ -11,6 +11,7 @@
 #include <TCanvas.h>
 #include <TH1.h>
 #include <TH2.h>
+#include <TGraph.h>
 
 namespace GamR {
   /*!
@@ -28,8 +29,14 @@ namespace GamR {
     class Clicker {
       public:
         void GetClick(Int_t,Int_t,Int_t,TObject*);
+        void GetDrawClick(Int_t,Int_t,Int_t,TObject*);
+        int GetClicks(TVirtualPad *canvas, int n, std::vector<std::string> &messages, int draw=0);
         int px, py;
         double cx, cy;
+        bool waiting=false;
+        TGraph *line;
+        std::vector<double> xs;
+        std::vector<double> ys;
     };
 
     TH1D *GetHist1D(TVirtualPad *canvas);

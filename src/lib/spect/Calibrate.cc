@@ -13,62 +13,28 @@ namespace GamR {
   namespace Spect {
     std::pair<double, double> TwoClickCalibrate(TVirtualPad *canvas) {
       if (!canvas) { if (gPad) { canvas = gPad->GetCanvas(); } else { return {-1,-1}; } }
-      TMarker *marker = new TMarker();
-      TObject *obj;
       TH1D *hist = GamR::Utils::GetHist1D(canvas);
-
-      int ex=-2;
 
       canvas->SetCrosshair();
       
       canvas->Update();
 
-      double lowx = -1;
-      double highx = -1;
-
-      std::string canvasname = canvas->GetName();
-
       GamR::Utils::Clicker click;
-      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+      std::vector<std::string> messages = {"Click for first point, press any key to exit...", "Click for second point, press any key to exit..."};
 
-      double lowy = -1;                  
-      double highy = -1;
+      int retval = click.GetClicks(canvas, 2, messages, 1);
 
-      TGraph *line = new TGraph();
-      line->SetLineColor(kRed);
-      line->SetMarkerStyle(kFullCircle);
-      line->SetMarkerColor(kRed);
-      line->Draw("same LP");
-      std::cout << "Click for first point" << std::endl;
-      while (true){
-        canvas->Modified();
-        canvas->Update();
-        obj=canvas->WaitPrimitive();
-        if (!obj) break;
-        if (strncmp(obj->ClassName(),"TMarker",7)==0) {
-          marker=(TMarker*)obj;
-          if (ex==-2){
-            lowx = marker->GetX();
-            lowy = marker->GetY();
-            line->AddPoint(lowx,lowy);
-            ex = ex + 1;
-            canvas->Update();
-            std::cout << "Click for second point" << std::endl;
-          } else {
-            highx = marker->GetX();
-            highy = marker->GetY();
-            line->AddPoint(highx,highy);
-            canvas->Update();
-            canvas->Modified();
-
-            delete marker;
-            ex = ex + 1;
-            break;
-          }
-          delete marker;
-        }
+      if (retval > 0) { // quit prematurely
+        std::cout << "calibration cancelled" << std::endl;
+        canvas->SetCrosshair(0);
+        return std::pair<double,double>(-1,-1);
       }
-      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+
+      double lowX = click.xs[0];
+      double lowY = click.ys[0];
+      double highX = click.xs[1];
+      double highY = click.ys[1];
+
       canvas->SetCrosshair(0);
       canvas->Modified();
       canvas->Update();
@@ -76,19 +42,11 @@ namespace GamR {
       canvas->Modified();
       canvas->Update();
       
-      if (ex < 0) { // quit prematurely
-        std::cout << "calibration cancelled" << std::endl;
-        canvas->SetCrosshair(0);
-        line->Delete();
-        return std::pair<double,double>(-1,-1);
-      } else {
-        canvas->SetCrosshair(0);
-        double gradient = (highy-lowy)/(highx-lowx);
-        double offset = lowy - lowx*gradient;
+      canvas->SetCrosshair(0);
+      double gradient = (highY-lowY)/(highX-lowX);
+      double offset = lowY - lowX*gradient;
 
-        return std::pair<double,double>(gradient,offset);
-      }
-
+      return std::pair<double,double>(gradient,offset);
     }
 
     std::pair<double, double> TwoPointCalibrate(TVirtualPad *canvas, double sigma) {
@@ -129,6 +87,7 @@ namespace GamR {
       while (true){
         canvas->Modified();
         canvas->Update();
+        click.waiting=false;
         obj=canvas->WaitPrimitive();
         if (!obj) break;
         if (strncmp(obj->ClassName(),"TMarker",7)==0) {
@@ -275,6 +234,7 @@ namespace GamR {
       while (true){
         canvas->Modified();
         canvas->Update();
+        click.waiting=false;
         obj=canvas->WaitPrimitive();
         if (!obj) break;
         if (strncmp(obj->ClassName(),"TMarker",7)==0) {

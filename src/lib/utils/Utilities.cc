@@ -64,6 +64,7 @@ namespace GamR {
     */
 
     void Clicker::GetClick(int event, int x, int y, TObject *selected) {
+      if (waiting==true) { return; }
       if ( event != 1 ) { return; }
       TCanvas *c = (TCanvas*)gTQSender;
       px = x;
@@ -80,9 +81,99 @@ namespace GamR {
       if (cx <= xmin || cx >= xmax || cy <= ymin || cy >= ymax) {
         return;
       } else {
+        waiting=true; //guarantee that only one marker is created per "WaitPrimitive" call
         TMarker *marker = new TMarker(cx, cy, 0);
         marker->Draw();
       }
+    }
+
+    void Clicker::GetDrawClick(int event, int x, int y, TObject *selected) {
+      if (waiting==true) { return; }
+      TCanvas *c = (TCanvas*)gTQSender;
+      if ( event == 51 ) {
+        int n = line->GetN();
+        if (n > 0) {
+          line->SetPoint(n-1, c->AbsPixeltoX(x), c->AbsPixeltoY(y));
+          c->Modified(kTRUE);
+          c->Update();
+        }
+      }
+      if ( event != 1 ) { return; }
+      px = x;
+      py = y;
+      cx = c->AbsPixeltoX(x);
+      cy = c->AbsPixeltoY(y);
+      line->AddPoint(cx,cy);
+      c->Modified(kTRUE);
+      c->Update();
+      //this is the next point which will be modified
+      line->AddPoint(cx,cy);
+
+      double xmin;
+      double ymin;
+      double xmax;
+      double ymax;
+      c->GetRangeAxis(xmin, ymin, xmax, ymax);
+
+      if (cx <= xmin || cx >= xmax || cy <= ymin || cy >= ymax) {
+        return;
+      } else {
+        waiting=true; //guarantee that only one marker is created per "WaitPrimitive" call
+        TMarker *marker = new TMarker(cx, cy, 0);
+        marker->Draw();
+      }
+    }
+
+    int Clicker::GetClicks(TVirtualPad *canvas, int n, std::vector<std::string> &messages, int draw/*=0*/) {  
+      if (draw==1) {
+        line = new TGraph();
+        line->SetLineColor(kRed);
+        line->SetMarkerStyle(kFullCircle);
+        line->SetMarkerColor(kRed);
+        line->Draw("same LP");
+      }
+      xs.clear();
+      ys.clear();
+      if (draw) {
+        canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", this, "GetDrawClick(Int_t,Int_t,Int_t,TObject*)");
+      }
+      else {
+        canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", this, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+      }
+      TObject *obj = NULL;
+      int exit = 0;
+      int i=-1;
+      while (true) {
+        ++i;
+        if (n>0 && i>=n) { break; }
+        if (exit == 1 ) { break; }
+        if (i<messages.size()) {
+          std::cout << messages[i] << std::endl;
+        }
+        else if (n<0 && messages.size()>0 ) {
+          std::cout << messages[0] << std::endl;
+        }
+        while (true) {
+          waiting=false;
+          obj = canvas->WaitPrimitive();
+          if (!obj) { exit = 1; break; }
+          if (strncmp(obj->ClassName(),"TMarker",7)==0) {
+            delete obj;
+            xs.push_back(cx);
+            ys.push_back(cy);
+            break;
+          }
+        }
+      }
+      if (draw) {
+        line->RemovePoint(line->GetN());
+        canvas->Update();
+        canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", this, "GetDrawClick(Int_t,Int_t,Int_t,TObject*)");
+      }
+      else {
+        canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", this, "GetClick(Int_t,Int_t,Int_t,TObject*)");
+      }
+      return exit;
     }
 
     TH1D *GetHist1D(TVirtualPad *canvas) {

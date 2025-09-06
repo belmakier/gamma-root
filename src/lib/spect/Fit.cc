@@ -881,6 +881,7 @@ namespace GamR {
             std::cout << "Click for peak centroid, press any key to fit..." << std::endl;
           }
         }
+        click.waiting=false;
         obj = canvas->WaitPrimitive();
         if (!obj)
           break;
@@ -1067,6 +1068,7 @@ namespace GamR {
       if (!iQuiet){
         std::cout << "Press any key to exit" << std::endl;
       }
+      click.waiting=false;
       canvas->WaitPrimitive();
 
       

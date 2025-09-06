@@ -477,58 +477,33 @@ namespace GamR {
     }
 
     TCutG *DrawCut(TVirtualPad *canvas, bool verbose, std::string filename, int ID) {
-      TMarker *marker;      
-      TObject *obj;
-
-      std::string canvasname = canvas->GetName();
-      
       TGraph *gr = new TGraph();
       gr->SetLineColor(kRed);
       gr->SetMarkerColor(kRed);
       gr->SetMarkerStyle(8);
-      
-      GamR::Utils::Clicker click;
-      canvas->Connect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", "GamR::Utils::Clicker", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
-      while (true){
-        std::cout << "Click for next point, press any key to exit..." << std::endl;
-        //auto start = std::chrono::high_resolution_clock::now();
-        obj=canvas->WaitPrimitive();
-        //auto stop = std::chrono::high_resolution_clock::now();
-        //auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-        //std::cout << duration.count() << " us to wait and get click" << std::endl;
-        //start = std::chrono::high_resolution_clock::now();
-        if (!obj) break;
-        if (strncmp(obj->ClassName(),"TMarker",7)==0) {
-          marker=(TMarker*)obj;
-          gr->AddPoint(marker->GetX(), marker->GetY());
-          if (gr->GetN()==1){
-            gr->Draw("same LP");
-          }
-          delete marker;
-        }
-        //stop = std::chrono::high_resolution_clock::now();
-        //duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-        //std::cout << duration.count() << " us to get marker" << std::endl;
-        //start = std::chrono::high_resolution_clock::now();
-        //canvas->Modified();
-        canvas->Update();        
-        //stop = std::chrono::high_resolution_clock::now();
-        //duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-        //std::cout << duration.count() << " us to update canvas" << std::endl;
-      }
-      canvas->Disconnect("ProcessedEvent(Int_t,Int_t,Int_t,TObject*)", &click, "GetClick(Int_t,Int_t,Int_t,TObject*)");
 
-      //add first point again;
-      double x,y;
-      gr->GetPoint(0,x,y);
-      gr->AddPoint(x,y);
-      
+      GamR::Utils::Clicker click;
+      std::vector<std::string> messages = {"Click for next point, press any key to exit..."};
+
+      int retval = click.GetClicks(canvas, -1, messages, 1);
+
+      for (int i=0; i<click.xs.size(); ++i) {
+        gr->AddPoint(click.xs[i], click.ys[i]);
+      }
+      gr->AddPoint(click.xs[0], click.ys[0]);
+
+      click.line->Delete();
+      click.line=NULL;
+
+      gr->Draw("same LP");
+
       canvas->Update();
 
       if (verbose) {
         PrintCut((TCutG*)gr);
       }
 
+      
       if (filename.size()>0) {
         std::ofstream ofile(filename.c_str(), std::ios_base::app);
         while (ID<=-1) {
@@ -548,6 +523,7 @@ namespace GamR {
         std::cout << "Enter name: ";
         std::string name;
         std::cin >> name;
+        double x,y;
         gr->SetName(name.c_str());
         ofile << ID << "   " << gr->GetN() << "   " << name << std::endl;
         for (int i=0; i<gr->GetN(); ++i) {
