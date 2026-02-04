@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"d0/d74/group___t_k.html#gaadf27c17fae09775d8bb300aa87907de":[4,0,106],
+"d0/d74/group___t_k.html#gaae543a7d595e5faacbfb4da05718e3f3":[4,0,134],
 "d0/d74/group___t_k.html#gaafa8098032c9c44213c6d8a94d8d5638":[4,0,251],
 "d0/d74/group___t_k.html#gaafc57c6af4e4c75d767c69f7040e7826":[4,0,79],
 "d0/d74/group___t_k.html#gaafc7a191acbe4f20452f52cecaaf16d7":[4,0,259],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#aab831f114129cbb92f65a4c040b6735b":[6,0,0,10,4,0,18],
 "d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#ab020f999f1a7463b9a1fd5fb33189e26":[5,0,0,10,4,1],
 "d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#ab020f999f1a7463b9a1fd5fb33189e26":[5,0,0,10,4,0,11],
-"d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#ab020f999f1a7463b9a1fd5fb33189e26":[6,0,0,10,4,1],
-"d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#ab020f999f1a7463b9a1fd5fb33189e26":[6,0,0,10,4,0,11],
-"d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#ad18875e3efcf669c9f8e90a8446da366":[5,0,0,10,4,9]
+"d1/d1e/class_gam_r_1_1_tree_1_1_t_exp_defn.html#ab020f999f1a7463b9a1fd5fb33189e26":[6,0,0,10,4,1]
 };

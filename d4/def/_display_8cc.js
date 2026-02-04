@@ -2,6 +2,7 @@ var _display_8cc =
 [
     [ "GamR::Spect::ContourCalc", "dc/d89/namespace_gam_r_1_1_spect.html#a663f68fcfef0f19874e1cbd805c42412", null ],
     [ "GamR::Spect::ContourCalc", "dc/d89/namespace_gam_r_1_1_spect.html#a53228b3f4448fc6158e32aa7c53dc578", null ],
+    [ "GamR::Spect::Cursor", "dc/d89/namespace_gam_r_1_1_spect.html#a69fdf2aea34f35df2c9a0e7517b81626", null ],
     [ "GamR::Spect::Draw", "dc/d89/namespace_gam_r_1_1_spect.html#a54b953c08bfbe870df0e0c9c6aa23648", null ],
     [ "GamR::Spect::Draw2D", "dc/d89/namespace_gam_r_1_1_spect.html#a302119df82e9ca4cbd9f3cf92a0ad352", null ],
     [ "GamR::Spect::LinAll", "dc/d89/namespace_gam_r_1_1_spect.html#a7c014b37fef6c9127b7d862a977e4e36", null ],

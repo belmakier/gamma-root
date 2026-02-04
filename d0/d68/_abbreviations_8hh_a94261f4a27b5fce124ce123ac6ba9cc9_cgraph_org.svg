@@ -38,7 +38,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="../../d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#a2303baf332dfdfecf946e78f7aa33c86" target="_top" xlink:title=" ">
+<g id="a_Node000003"><a xlink:href="../../d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#af7949958fff68a3249c04cc9620bac18" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="331.5,-319.88 228.5,-319.88 228.5,-289.38 331.5,-289.38 331.5,-319.88"/>
 <text text-anchor="start" x="236.5" y="-306.38" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Utils::Clicker</text>
 <text text-anchor="middle" x="280" y="-295.12" font-family="Helvetica,sans-Serif" font-size="10.00">::GetClicks</text>

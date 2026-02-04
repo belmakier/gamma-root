@@ -17,6 +17,7 @@ var _abbreviations_8hh =
     [ "cbp", "d0/d68/_abbreviations_8hh.html#a94261f4a27b5fce124ce123ac6ba9cc9", null ],
     [ "cc", "d0/d68/_abbreviations_8hh.html#a3aa00733b0aa7759660f2e7d86d1e73e", null ],
     [ "cc", "d0/d68/_abbreviations_8hh.html#a1b72565a54762d319587efd1a92e20fa", null ],
+    [ "cs", "d0/d68/_abbreviations_8hh.html#acec244c90060d371284a59580feb4914", null ],
     [ "ct", "d0/d68/_abbreviations_8hh.html#a1aed397f04ed8c9364c9ca641093cea1", null ],
     [ "ctbs", "d0/d68/_abbreviations_8hh.html#a4364aff95246ef7f34a75c080b428552", null ],
     [ "fp", "d0/d68/_abbreviations_8hh.html#a51dba508c5a64c9b447ff3948f0eec9b", null ],

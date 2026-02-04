@@ -130,8 +130,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad0d1b08e45a48f26a0190cf2c2f2fb84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adacef950ac63560cade95fef30e12150" id="r_adacef950ac63560cade95fef30e12150"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adacef950ac63560cade95fef30e12150">GetDrawClick</a> (Int_t, Int_t, Int_t, TObject *)</td></tr>
 <tr class="separator:adacef950ac63560cade95fef30e12150"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2303baf332dfdfecf946e78f7aa33c86" id="r_a2303baf332dfdfecf946e78f7aa33c86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2303baf332dfdfecf946e78f7aa33c86">GetClicks</a> (TVirtualPad *canvas, int n, std::vector&lt; std::string &gt; &amp;messages, int draw=0)</td></tr>
-<tr class="separator:a2303baf332dfdfecf946e78f7aa33c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7949958fff68a3249c04cc9620bac18" id="r_af7949958fff68a3249c04cc9620bac18"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7949958fff68a3249c04cc9620bac18">GetClicks</a> (TVirtualPad *canvas, int n, std::vector&lt; std::string &gt; &amp;messages, int draw=0, int print=0)</td></tr>
+<tr class="separator:af7949958fff68a3249c04cc9620bac18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -191,8 +191,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a2303baf332dfdfecf946e78f7aa33c86" name="a2303baf332dfdfecf946e78f7aa33c86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2303baf332dfdfecf946e78f7aa33c86">&#9670;&#160;</a></span>GetClicks()</h2>
+<a id="af7949958fff68a3249c04cc9620bac18" name="af7949958fff68a3249c04cc9620bac18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7949958fff68a3249c04cc9620bac18">&#9670;&#160;</a></span>GetClicks()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -215,7 +215,12 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>draw</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>draw</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>print</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -224,13 +229,13 @@ Public Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="../../d7/db9/_utilities_8hh_source.html#l00035">cx</a>, <a class="el" href="../../d7/db9/_utilities_8hh_source.html#l00035">cy</a>, <a class="el" href="../../d7/db9/_utilities_8hh_source.html#l00037">line</a>, <a class="el" href="../../d7/db9/_utilities_8hh_source.html#l00036">waiting</a>, <a class="el" href="../../d7/db9/_utilities_8hh_source.html#l00038">xs</a>, and <a class="el" href="../../d7/db9/_utilities_8hh_source.html#l00039">ys</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dc/d28/_back_sub_8cc_source.html#l00214">GamR::Spect::BackSub2D::AddBackBack()</a>, <a class="el" href="../../dc/d28/_back_sub_8cc_source.html#l00164">GamR::Spect::BackSub2D::AddBackDiag()</a>, <a class="el" href="../../dc/d28/_back_sub_8cc_source.html#l00062">GamR::Spect::BackSub2D::AddBackX()</a>, <a class="el" href="../../dc/d28/_back_sub_8cc_source.html#l00113">GamR::Spect::BackSub2D::AddBackY()</a>, <a class="el" href="../../dd/d1a/_peak_8cc_source.html#l00870">GamR::TK::ClickBPeak()</a>, <a class="el" href="../../d8/d1f/_cut_8cc_source.html#l00479">GamR::Spect::DrawCut()</a>, <a class="el" href="../../d9/d48/_gate_8cc_source.html#l00086">GamR::TK::Gate::SetGate()</a>, <a class="el" href="../../dc/d28/_back_sub_8cc_source.html#l00011">GamR::Spect::BackSub2D::SetPeak()</a>, and <a class="el" href="../../d6/d44/_calibrate_8cc_source.html#l00014">GamR::Spect::TwoClickCalibrate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/d28/_back_sub_8cc_source.html#l00214">GamR::Spect::BackSub2D::AddBackBack()</a>, <a class="el" href="../../dc/d28/_back_sub_8cc_source.html#l00164">GamR::Spect::BackSub2D::AddBackDiag()</a>, <a class="el" href="../../dc/d28/_back_sub_8cc_source.html#l00062">GamR::Spect::BackSub2D::AddBackX()</a>, <a class="el" href="../../dc/d28/_back_sub_8cc_source.html#l00113">GamR::Spect::BackSub2D::AddBackY()</a>, <a class="el" href="../../dd/d1a/_peak_8cc_source.html#l00870">GamR::TK::ClickBPeak()</a>, <a class="el" href="../../d4/def/_display_8cc_source.html#l00588">GamR::Spect::Cursor()</a>, <a class="el" href="../../d8/d1f/_cut_8cc_source.html#l00479">GamR::Spect::DrawCut()</a>, <a class="el" href="../../d9/d48/_gate_8cc_source.html#l00086">GamR::TK::Gate::SetGate()</a>, <a class="el" href="../../dc/d28/_back_sub_8cc_source.html#l00011">GamR::Spect::BackSub2D::SetPeak()</a>, and <a class="el" href="../../d6/d44/_calibrate_8cc_source.html#l00014">GamR::Spect::TwoClickCalibrate()</a>.</p>
 <div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d5/db8/class_gam_r_1_1_utils_1_1_clicker_a2303baf332dfdfecf946e78f7aa33c86_icgraph.svg" width="496" height="511"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d5/db8/class_gam_r_1_1_utils_1_1_clicker_af7949958fff68a3249c04cc9620bac18_icgraph.svg" width="496" height="560"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -375,7 +380,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/db9/_utilities_8hh_source.html#l00036">36</a> of file <a class="el" href="../../d7/db9/_utilities_8hh_source.html">Utilities.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d5/dad/_fit_8cc_source.html#l00833">GamR::Spect::FitPeaks()</a>, <a class="el" href="../../d3/dac/_utilities_8cc_source.html#l00066">GetClick()</a>, <a class="el" href="../../d3/dac/_utilities_8cc_source.html#l00127">GetClicks()</a>, <a class="el" href="../../d3/dac/_utilities_8cc_source.html#l00090">GetDrawClick()</a>, <a class="el" href="../../d6/d44/_calibrate_8cc_source.html#l00198">GamR::Spect::TwoPointCalibrate()</a>, and <a class="el" href="../../d6/d44/_calibrate_8cc_source.html#l00052">GamR::Spect::TwoPointCalibrate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d5/dad/_fit_8cc_source.html#l00836">GamR::Spect::FitPeaks()</a>, <a class="el" href="../../d3/dac/_utilities_8cc_source.html#l00066">GetClick()</a>, <a class="el" href="../../d3/dac/_utilities_8cc_source.html#l00127">GetClicks()</a>, <a class="el" href="../../d3/dac/_utilities_8cc_source.html#l00090">GetDrawClick()</a>, <a class="el" href="../../d6/d44/_calibrate_8cc_source.html#l00198">GamR::Spect::TwoPointCalibrate()</a>, and <a class="el" href="../../d6/d44/_calibrate_8cc_source.html#l00052">GamR::Spect::TwoPointCalibrate()</a>.</p>
 
 </div>
 </div>
@@ -426,7 +431,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../de/d62/namespace_gam_r.html">GamR</a></li><li class="navelem"><a class="el" href="../../d0/db7/namespace_gam_r_1_1_utils.html">Utils</a></li><li class="navelem"><a class="el" href="../../d5/db8/class_gam_r_1_1_utils_1_1_clicker.html">Clicker</a></li>
-    <li class="footer">Generated on Sat Sep 6 2025 04:45:55 for GamR by
+    <li class="footer">Generated on Wed Feb 4 2026 15:19:55 for GamR by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.13.2 </li>
   </ul>

@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#a2303baf332dfdfecf946e78f7aa33c86" target="_top" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="../../d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#af7949958fff68a3249c04cc9620bac18" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="270.88,-67.88 167.88,-67.88 167.88,-37.38 270.88,-37.38 270.88,-67.88"/>
 <text text-anchor="start" x="175.88" y="-54.38" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Utils::Clicker</text>
 <text text-anchor="middle" x="219.38" y="-43.12" font-family="Helvetica,sans-Serif" font-size="10.00">::GetClicks</text>

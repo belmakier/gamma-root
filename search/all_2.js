@@ -40,12 +40,14 @@ var searchData=
   ['coulparcm_5f_37',['coulparcm_',['../d7/de5/namespace_gam_r_1_1_coulex_1_1_w_d_b.html#a8b2acc4816ac3e85ad57c8a59a66b1c9',1,'GamR::Coulex::WDB']]],
   ['counts_38',['Counts',['../dc/d89/namespace_gam_r_1_1_spect.html#af56c6bd6d1f9560258f404f3f6d338ca',1,'GamR::Spect::Counts(TH1 *hist, GamR::TK::Gate peak, std::string opt)'],['../dc/d89/namespace_gam_r_1_1_spect.html#a53e0d8035def94e98356c2507738f266',1,'GamR::Spect::Counts(TH1 *hist, double peakLow, double peakHigh, std::string opt)'],['../dc/d89/namespace_gam_r_1_1_spect.html#aa1fbd17f2b3fd599b0934ebdd7c21c9e',1,'GamR::Spect::Counts(TCanvas *canvas)']]],
   ['countsbs_39',['CountsBS',['../dc/d89/namespace_gam_r_1_1_spect.html#a9f4a6484263672040b1a6a5516eb3f88',1,'GamR::Spect::CountsBS(TH1 *hist, GamR::Nucleus::Transition transition, std::string opt)'],['../dc/d89/namespace_gam_r_1_1_spect.html#ade62ab94205af36c4167cd8a7eccc67f',1,'GamR::Spect::CountsBS(TH1 *hist, GamR::TK::Gate peak, GamR::TK::Gate background, std::string opt)'],['../dc/d89/namespace_gam_r_1_1_spect.html#a51efb3cb18973dc9e8cbb7bdc7f91dd9',1,'GamR::Spect::CountsBS(TH1 *hist, GamR::TK::Gate peak, std::vector&lt; GamR::TK::Gate &gt; backgrounds, std::string opt)'],['../dc/d89/namespace_gam_r_1_1_spect.html#ade4aa3101e8ba9f9ad6fb29c286ae921',1,'GamR::Spect::CountsBS(TH1 *hist, double peakLow, double peakHigh, double backLow, double backHigh, std::string opt)'],['../dc/d89/namespace_gam_r_1_1_spect.html#a504796b948f22b277d3dc82001df407e',1,'GamR::Spect::CountsBS(TCanvas *canvas)']]],
-  ['ct_40',['ct',['../d0/d17/_abbreviations_8cc.html#a6d5ec59ed9dad8b1a1d52615652abf81',1,'ct(TCanvas *canvas):&#160;Abbreviations.cc'],['../d0/d68/_abbreviations_8hh.html#a1aed397f04ed8c9364c9ca641093cea1',1,'ct(TCanvas *canvas=gPad-&gt;GetCanvas()):&#160;Abbreviations.cc']]],
-  ['ctbs_41',['ctbs',['../d0/d17/_abbreviations_8cc.html#a28436370d9b0523ba4046a3ad2faef7e',1,'ctbs(TCanvas *canvas):&#160;Abbreviations.cc'],['../d0/d68/_abbreviations_8hh.html#a4364aff95246ef7f34a75c080b428552',1,'ctbs(TCanvas *canvas=gPad-&gt;GetCanvas()):&#160;Abbreviations.cc']]],
-  ['cut_2ecc_42',['Cut.cc',['../d8/d1f/_cut_8cc.html',1,'']]],
-  ['cut_2ehh_43',['Cut.hh',['../d7/d1d/_cut_8hh.html',1,'']]],
-  ['cut_2ett_44',['Cut.tt',['../d2/d14/_cut_8tt.html',1,'']]],
-  ['cutfromtext_45',['CutFromText',['../dc/d89/namespace_gam_r_1_1_spect.html#ae54298fd5ef07073ff03ad06e3d4febe',1,'GamR::Spect']]],
-  ['cx_46',['cx',['../d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#ad8d09549986496612f91860fb77a6650',1,'GamR::Utils::Clicker']]],
-  ['cy_47',['cy',['../d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#a96a89ef1e7517e319a84605702caa3b9',1,'GamR::Utils::Clicker']]]
+  ['cs_40',['cs',['../d0/d17/_abbreviations_8cc.html#a3f56374ca307911ce08ef992d8e1c208',1,'cs(TVirtualPad *canvas):&#160;Abbreviations.cc'],['../d0/d68/_abbreviations_8hh.html#acec244c90060d371284a59580feb4914',1,'cs(TVirtualPad *canvas=NULL):&#160;Abbreviations.cc']]],
+  ['ct_41',['ct',['../d0/d17/_abbreviations_8cc.html#a6d5ec59ed9dad8b1a1d52615652abf81',1,'ct(TCanvas *canvas):&#160;Abbreviations.cc'],['../d0/d68/_abbreviations_8hh.html#a1aed397f04ed8c9364c9ca641093cea1',1,'ct(TCanvas *canvas=gPad-&gt;GetCanvas()):&#160;Abbreviations.cc']]],
+  ['ctbs_42',['ctbs',['../d0/d17/_abbreviations_8cc.html#a28436370d9b0523ba4046a3ad2faef7e',1,'ctbs(TCanvas *canvas):&#160;Abbreviations.cc'],['../d0/d68/_abbreviations_8hh.html#a4364aff95246ef7f34a75c080b428552',1,'ctbs(TCanvas *canvas=gPad-&gt;GetCanvas()):&#160;Abbreviations.cc']]],
+  ['cursor_43',['Cursor',['../dc/d89/namespace_gam_r_1_1_spect.html#a69fdf2aea34f35df2c9a0e7517b81626',1,'GamR::Spect']]],
+  ['cut_2ecc_44',['Cut.cc',['../d8/d1f/_cut_8cc.html',1,'']]],
+  ['cut_2ehh_45',['Cut.hh',['../d7/d1d/_cut_8hh.html',1,'']]],
+  ['cut_2ett_46',['Cut.tt',['../d2/d14/_cut_8tt.html',1,'']]],
+  ['cutfromtext_47',['CutFromText',['../dc/d89/namespace_gam_r_1_1_spect.html#ae54298fd5ef07073ff03ad06e3d4febe',1,'GamR::Spect']]],
+  ['cx_48',['cx',['../d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#ad8d09549986496612f91860fb77a6650',1,'GamR::Utils::Clicker']]],
+  ['cy_49',['cy',['../d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#a96a89ef1e7517e319a84605702caa3b9',1,'GamR::Utils::Clicker']]]
 ];

@@ -1,5 +1,8 @@
 var NAVTREEINDEX12 =
 {
+"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a25691ea9e8c569535d08610e459a229f":[5,0,0,8,2,78],
+"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a25691ea9e8c569535d08610e459a229f":[6,0,0,8,2,78],
+"df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a27f27f4bfa2ac628c988be975db62e8e":[5,0,0,8,2,48],
 "df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a27f27f4bfa2ac628c988be975db62e8e":[6,0,0,8,2,48],
 "df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a2850fcb0d80d787d552a91aaf105c91c":[5,0,0,8,2,69],
 "df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a2850fcb0d80d787d552a91aaf105c91c":[6,0,0,8,2,69],
@@ -246,8 +249,5 @@ var NAVTREEINDEX12 =
 "dir_2288728dba6c23af0130f7abab0b92af.html":[7,0,1,1,7],
 "dir_49e56c817e5e54854c35e136979f97ca.html":[7,0,0],
 "dir_5f096cfe902f9bc2abe3952f5e9ff649.html":[7,0,1,1,0],
-"dir_68267d1309a1af8e8297ef4c3efbcdba.html":[7,0,1],
-"dir_6a79cfc049500787c362cfe00e651ec0.html":[7,0,1,1,3],
-"dir_80e0224605357bcf8f0b9969ec4933a0.html":[7,0,1,1,5],
-"dir_87d18a4dc5174905bfd7d2dc734defe6.html":[7,0,1,1,12]
+"dir_68267d1309a1af8e8297ef4c3efbcdba.html":[7,0,1]
 };

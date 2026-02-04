@@ -45,6 +45,7 @@ var namespace_gam_r_1_1_spect =
     [ "CountsBS", "dc/d89/namespace_gam_r_1_1_spect.html#a9f4a6484263672040b1a6a5516eb3f88", null ],
     [ "CountsBS", "dc/d89/namespace_gam_r_1_1_spect.html#ade62ab94205af36c4167cd8a7eccc67f", null ],
     [ "CountsBS", "dc/d89/namespace_gam_r_1_1_spect.html#a51efb3cb18973dc9e8cbb7bdc7f91dd9", null ],
+    [ "Cursor", "dc/d89/namespace_gam_r_1_1_spect.html#a69fdf2aea34f35df2c9a0e7517b81626", null ],
     [ "CutFromText", "dc/d89/namespace_gam_r_1_1_spect.html#ae54298fd5ef07073ff03ad06e3d4febe", null ],
     [ "Draw", "dc/d89/namespace_gam_r_1_1_spect.html#a54b953c08bfbe870df0e0c9c6aa23648", null ],
     [ "Draw2D", "dc/d89/namespace_gam_r_1_1_spect.html#a302119df82e9ca4cbd9f3cf92a0ad352", null ],

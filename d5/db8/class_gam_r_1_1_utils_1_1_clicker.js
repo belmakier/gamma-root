@@ -1,7 +1,7 @@
 var class_gam_r_1_1_utils_1_1_clicker =
 [
     [ "GetClick", "d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#ad0d1b08e45a48f26a0190cf2c2f2fb84", null ],
-    [ "GetClicks", "d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#a2303baf332dfdfecf946e78f7aa33c86", null ],
+    [ "GetClicks", "d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#af7949958fff68a3249c04cc9620bac18", null ],
     [ "GetDrawClick", "d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#adacef950ac63560cade95fef30e12150", null ],
     [ "cx", "d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#ad8d09549986496612f91860fb77a6650", null ],
     [ "cy", "d5/db8/class_gam_r_1_1_utils_1_1_clicker.html#a96a89ef1e7517e319a84605702caa3b9", null ],
