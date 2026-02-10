@@ -7,7 +7,7 @@ var class_gam_r_1_1_ang_dist_1_1_stat_tensor =
     [ "Get", "da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#af8a856cc5021ee7cd1b451ff185def49", null ],
     [ "GetBk", "da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#ad168a84f080bfe78322c7973ee3337cc", null ],
     [ "ObservedProp", "da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#aff931e179fa69b6b1d8c9d16d4812613", null ],
-    [ "Perturbation", "da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#a643063335ca9102c92076d0039e274de", null ],
+    [ "Perturbation", "da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#a2c457acfd4181dcdbf80ae1e354efc48", null ],
     [ "Print", "da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#a268ac300b65cd99d7389d077d04e3381", null ],
     [ "Set", "da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#a58bfbef30a1a35b666b57a499fb980aa", null ],
     [ "Set", "da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#a601edccee805ff4cf763bd8c8b7a6c6f", null ],

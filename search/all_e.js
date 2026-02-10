@@ -19,7 +19,7 @@ var searchData=
   ['peakfitguesses_16',['PeakFitGuesses',['../dd/dfd/class_gam_r_1_1_spect_1_1_peak_fit_guesses.html',1,'GamR::Spect::PeakFitGuesses'],['../dd/dfd/class_gam_r_1_1_spect_1_1_peak_fit_guesses.html#a0e33279ddb4aca07f9183d91bab34684',1,'GamR::Spect::PeakFitGuesses::PeakFitGuesses()']]],
   ['peakparams_17',['PeakParams',['../da/d4e/struct_gam_r_1_1_spect_1_1_peak_fit_1_1_peak_params.html',1,'GamR::Spect::PeakFit']]],
   ['peaktype_18',['PeakType',['../d0/d74/group___t_k.html#ga2f09f75494227f20e8894d80261fc089',1,'GamR::TK']]],
-  ['perturbation_19',['Perturbation',['../da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#a643063335ca9102c92076d0039e274de',1,'GamR::AngDist::StatTensor']]],
+  ['perturbation_19',['Perturbation',['../da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html#a2c457acfd4181dcdbf80ae1e354efc48',1,'GamR::AngDist::StatTensor']]],
   ['pf_20',['pf',['../d0/d17/_abbreviations_8cc.html#a77d85f6a216cc43a75f58ff8ae7a07c8',1,'pf(TCanvas *canvas, Option_t *foption, Option_t *option):&#160;Abbreviations.cc'],['../d0/d68/_abbreviations_8hh.html#ae9d087b20ee503225a827c8d269b090e',1,'pf(TCanvas *canvas=gPad-&gt;GetCanvas(), Option_t *foption=&quot;&quot;, Option_t *option=&quot;&quot;):&#160;Abbreviations.cc']]],
   ['pfconf_21',['pfconf',['../d0/d17/_abbreviations_8cc.html#aa5387014ba6df16692c9131bdff35c4e',1,'pfconf():&#160;Abbreviations.cc'],['../d0/d68/_abbreviations_8hh.html#aa5387014ba6df16692c9131bdff35c4e',1,'pfconf():&#160;Abbreviations.cc']]],
   ['pfprint_22',['pfprint',['../d0/d17/_abbreviations_8cc.html#a46bebe70d43563b68be14db10a23250a',1,'pfprint():&#160;Abbreviations.cc'],['../d0/d68/_abbreviations_8hh.html#a46bebe70d43563b68be14db10a23250a',1,'pfprint():&#160;Abbreviations.cc']]],
