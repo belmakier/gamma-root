@@ -1,7 +1,7 @@
 var class_gam_r_1_1_spect_1_1_peak_fit =
 [
-    [ "Parameters", "d6/d35/struct_gam_r_1_1_spect_1_1_peak_fit_1_1_parameters.html", "d6/d35/struct_gam_r_1_1_spect_1_1_peak_fit_1_1_parameters" ],
     [ "PeakParams", "da/d4e/struct_gam_r_1_1_spect_1_1_peak_fit_1_1_peak_params.html", "da/d4e/struct_gam_r_1_1_spect_1_1_peak_fit_1_1_peak_params" ],
+    [ "Parameters", "d6/d35/struct_gam_r_1_1_spect_1_1_peak_fit_1_1_parameters.html", "d6/d35/struct_gam_r_1_1_spect_1_1_peak_fit_1_1_parameters" ],
     [ "PeakFit", "df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#afed721dd380bee0c5545563036ff391f", null ],
     [ "PeakFit", "df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#ab13334bb0d10e1f04413160cfa4e606d", null ],
     [ "PeakFit", "df/d69/class_gam_r_1_1_spect_1_1_peak_fit.html#a4f00097f8e63293c1f6eb13c291261b6", null ],

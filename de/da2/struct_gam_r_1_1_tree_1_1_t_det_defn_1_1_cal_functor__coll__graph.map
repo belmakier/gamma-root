@@ -1,9 +1,7 @@
 <map id="GamR::Tree::TDetDefn&lt; Ts &gt;::CalFunctor" name="GamR::Tree::TDetDefn&lt; Ts &gt;::CalFunctor">
-<area shape="rect" id="Node000001" title=" " alt="" coords="6,550,173,1058"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,62,72"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="35,86,35,262,39,374,46,487,52,550,47,550,40,487,33,374,30,263,30,86"/>
-<area shape="rect" id="Node000003" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html" title=" " alt="" coords="56,121,222,487"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="55,85,69,120,64,122,50,87"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="98,487,94,511,92,534,87,533,89,511,92,486"/>
-<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="122,502,117,550,112,550,117,502"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="18,558,159,761"/>
+<area shape="rect" id="Node000002" href="$d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html" title=" " alt="" coords="5,121,172,487"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,486,92,541,86,541,86,486"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="60,5,117,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="92,87,92,121,86,121,86,87"/>
 </map>

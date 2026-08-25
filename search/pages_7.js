@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['welcome_20to_20gammaroot_0',['Welcome to GammaROOT!',['../index.html',1,'']]]
+  ['objects_0',['Event and Detector objects',['../d0/d38/tree.html#tevent_tedetector',1,'']]],
+  ['original_20developers_1',['Original developers',['../index.html#authors',1,'']]]
 ];

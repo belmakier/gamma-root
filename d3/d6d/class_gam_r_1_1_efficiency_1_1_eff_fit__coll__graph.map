@@ -1,11 +1,11 @@
 <map id="GamR::Efficiency::EffFit" name="GamR::Efficiency::EffFit">
-<area shape="rect" id="Node000001" title=" " alt="" coords="75,911,219,1201"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="83,767,211,848"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,848,150,894,144,894,144,848"/>
-<area shape="rect" id="Node000003" href="$d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html" title=" " alt="" coords="5,135,166,689"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="106,688,119,742,122,751,116,752,114,744,101,690"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="190,379,291,445"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="239,460,221,590,205,667,183,744,172,768,167,766,178,742,200,666,216,589,234,459"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="63,941,207,1231"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="71,788,199,870"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,869,138,924,132,924,132,869"/>
+<area shape="rect" id="Node000003" href="$d5/d72/class_gam_r_1_1_efficiency_1_1_data_set.html" title=" " alt="" coords="5,143,166,697"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,696,117,764,118,771,113,772,111,765,100,697"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="190,387,291,453"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="242,468,238,529,229,605,212,686,185,765,171,790,167,787,181,763,207,685,224,604,233,529,237,468"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="231,5,250,72"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="243,71,243,362,238,362,238,71"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="243,71,243,370,238,370,238,71"/>
 </map>

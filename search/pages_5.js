@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['into_20an_20event_20tree_0',['Converting data into an Event Tree',['../d4/d4d/root_to_gamr.html',1,'']]]
+  ['gammaroot_0',['Welcome to GammaROOT!',['../index.html',1,'']]],
+  ['gamr_20everywhere_1',['Using GamR everywhere',['../index.html#environment',1,'']]]
 ];

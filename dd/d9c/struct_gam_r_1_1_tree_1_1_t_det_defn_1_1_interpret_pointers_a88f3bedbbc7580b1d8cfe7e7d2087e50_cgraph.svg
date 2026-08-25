@@ -34,10 +34,9 @@
 <g id="Node000002" class="node">
 <title>Node2</title>
 <g id="a_Node000002"><a xlink:href="../../d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a2cf1054e7d073717fdb3296077cb5a28" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="263,-41.75 149.5,-41.75 149.5,0 263,0 263,-41.75"/>
-<text text-anchor="start" x="157.5" y="-28.25" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Tree::TDetDefn</text>
-<text text-anchor="start" x="157.5" y="-17" font-family="Helvetica,sans-Serif" font-size="10.00">::InterpretPointers::</text>
-<text text-anchor="middle" x="206.25" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">TDetDefn</text>
+<polygon fill="white" stroke="#666666" points="263,-36.12 149.5,-36.12 149.5,-5.62 263,-5.62 263,-36.12"/>
+<text text-anchor="start" x="157.5" y="-22.62" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Tree::TDetDefn</text>
+<text text-anchor="middle" x="206.25" y="-11.38" font-family="Helvetica,sans-Serif" font-size="10.00">::TDetDefn</text>
 </a>
 </g>
 </g>

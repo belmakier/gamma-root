@@ -35,7 +35,7 @@
 <g id="a_Node000002"><a xlink:href="../../d4/d79/class_gam_r_1_1_tree_1_1_t_det_defn.html#a2cf1054e7d073717fdb3296077cb5a28" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="269,-30.5 155.5,-30.5 155.5,0 269,0 269,-30.5"/>
 <text text-anchor="start" x="163.5" y="-17" font-family="Helvetica,sans-Serif" font-size="10.00">GamR::Tree::TDetDefn</text>
-<text text-anchor="middle" x="212.25" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">::CalFunctor::TDetDefn</text>
+<text text-anchor="middle" x="212.25" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">::TDetDefn</text>
 </a>
 </g>
 </g>

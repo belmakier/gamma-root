@@ -28,6 +28,7 @@ var _cut_8hh =
     [ "GamR::Spect::GateY", "dc/d89/namespace_gam_r_1_1_spect.html#adfd6d65e3a90168271a324c5b4b316c3", null ],
     [ "GamR::Spect::GateY", "dc/d89/namespace_gam_r_1_1_spect.html#a94fdd3b6aae9f7db9819370d7a3ec544", null ],
     [ "GamR::Spect::GateY", "dc/d89/namespace_gam_r_1_1_spect.html#aa03791ffc2f2f41ab0705e6b1064c255", null ],
+    [ "GamR::Spect::IntegrateCuts", "dc/d89/namespace_gam_r_1_1_spect.html#adc1d9a2cd30179649118e53af5943f2e", null ],
     [ "GamR::Spect::PrintCut", "dc/d89/namespace_gam_r_1_1_spect.html#af1e4919591bd71a06e60304c9630cad9", null ],
     [ "GamR::Spect::ProjX", "dc/d89/namespace_gam_r_1_1_spect.html#a047d85658df00552fa33ff79d3230ec1", null ],
     [ "GamR::Spect::ProjX", "dc/d89/namespace_gam_r_1_1_spect.html#aab35a8f2d75f6fd8f3175f37c4f5f0cd", null ],
@@ -36,5 +37,6 @@ var _cut_8hh =
     [ "GamR::Spect::ProjY", "dc/d89/namespace_gam_r_1_1_spect.html#abcfe4af65454b941d94324cd99439b7d", null ],
     [ "GamR::Spect::ProjY", "dc/d89/namespace_gam_r_1_1_spect.html#a16ff9da3440d1c99c085b58a70b447b9", null ],
     [ "GamR::Spect::ProjY", "dc/d89/namespace_gam_r_1_1_spect.html#ab6feb26905959a19a783814bb090c04b", null ],
-    [ "GamR::Spect::ProjY", "dc/d89/namespace_gam_r_1_1_spect.html#ae5e6149e08d3a93646d03c8d3839bbe7", null ]
+    [ "GamR::Spect::ProjY", "dc/d89/namespace_gam_r_1_1_spect.html#ae5e6149e08d3a93646d03c8d3839bbe7", null ],
+    [ "GamR::Spect::ReadCuts", "dc/d89/namespace_gam_r_1_1_spect.html#a8ccc2b947ae46055001a8790f0aeb2f4", null ]
 ];

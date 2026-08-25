@@ -1,37 +1,37 @@
 <map id="GamR::Coulex::CoulexCalculation" name="GamR::Coulex::CoulexCalculation">
-<area shape="rect" id="Node000001" title=" " alt="" coords="238,1627,439,2161"/>
-<area shape="rect" id="Node000002" href="$df/dd9/struct_gam_r_1_1_coulex_1_1_nucleus.html" title=" " alt="" coords="77,1104,224,1191"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,1191,123,1254,109,1342,100,1411,103,1479,123,1563,142,1616,168,1668,229,1762,225,1765,164,1671,138,1619,117,1565,98,1479,95,1410,104,1341,117,1253,133,1190"/>
-<area shape="rect" id="Node000003" href="$d3/d33/struct_gam_r_1_1_coulex_1_1_target.html" title=" " alt="" coords="181,1366,317,1452"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="169,1189,229,1348,224,1350,164,1191"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="259,1452,289,1610,284,1611,254,1453"/>
-<area shape="rect" id="Node000004" href="$db/d16/class_gam_r_1_1_coulex_1_1_level_scheme.html" title=" " alt="" coords="341,1254,520,1564"/>
-<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="404,1564,395,1611,389,1610,398,1563"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="438,896,591,977"/>
-<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="510,978,463,1238,458,1237,505,977"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="493,258,560,324"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="530,324,534,528,533,667,529,808,523,880,518,879,524,808,528,667,528,528,525,324"/>
-<area shape="rect" id="Node000008" href="$d1/d65/class_gam_r_1_1_coulex_1_1_level.html" title=" " alt="" coords="344,509,474,718"/>
-<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="517,325,455,494,450,492,512,323"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="470,5,583,87"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="529,101,529,258,524,258,524,101"/>
-<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="437,717,465,807,493,880,488,882,460,809,432,718"/>
-<area shape="rect" id="Node000014" href="$d1/d57/class_gam_r_1_1_coulex_1_1_transition.html" title=" " alt="" coords="258,832,414,1041"/>
-<area shape="poly" id="edge16_Node000014_Node000008" title=" " alt="" coords="388,718,366,817,360,815,383,717"/>
-<area shape="rect" id="Node000009" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html" title=" " alt="" coords="280,136,450,446"/>
-<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="364,446,369,485,370,492,365,493,363,486,359,446"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="190,580,295,647"/>
-<area shape="poly" id="edge11_Node000005_Node000010" title=" " alt="" coords="231,661,225,697,223,736,230,774,238,791,249,806,262,815,281,819,333,822,386,822,409,824,426,830,464,859,493,894,489,898,460,863,424,835,408,830,386,827,333,827,281,825,260,820,245,810,233,794,225,776,218,736,219,697,226,661"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="235,258,255,324"/>
-<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="247,324,245,564,240,564,242,324"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="94,258,113,324"/>
-<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="115,321,141,396,177,484,218,564,213,567,172,486,136,398,110,323"/>
-<area shape="rect" id="Node000015" title=" " alt="" coords="5,742,106,808"/>
-<area shape="poly" id="edge18_Node000015_Node000012" title=" " alt="" coords="103,324,63,725,58,725,98,324"/>
-<area shape="rect" id="Node000013" title=" " alt="" coords="270,1107,402,1188"/>
-<area shape="poly" id="edge14_Node000004_Node000013" title=" " alt="" coords="351,1187,366,1229,369,1237,364,1238,361,1231,346,1189"/>
-<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="338,1041,338,1090,333,1090,333,1041"/>
-<area shape="poly" id="edge17_Node000013_Node000015" title=" " alt="" coords="46,823,39,872,37,929,46,987,56,1014,70,1039,88,1059,105,1071,123,1079,142,1083,185,1088,237,1101,271,1116,269,1121,235,1107,184,1093,141,1088,122,1084,103,1076,84,1063,66,1043,51,1017,41,989,32,930,33,872,41,822"/>
-<area shape="rect" id="Node000016" href="$dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html" title=" " alt="" coords="544,1335,736,1483"/>
-<area shape="poly" id="edge19_Node000001_Node000016" title=" " alt="" coords="597,1484,450,1718,446,1716,592,1481"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="240,1659,442,2193"/>
+<area shape="rect" id="Node000002" href="$df/dd9/struct_gam_r_1_1_coulex_1_1_nucleus.html" title=" " alt="" coords="80,1120,226,1207"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,1207,120,1278,106,1365,98,1435,101,1503,120,1587,141,1643,168,1697,199,1748,232,1795,228,1798,195,1751,163,1699,136,1645,115,1589,95,1503,92,1434,101,1365,115,1277,134,1206"/>
+<area shape="rect" id="Node000003" href="$d3/d33/struct_gam_r_1_1_coulex_1_1_target.html" title=" " alt="" coords="184,1390,320,1476"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="171,1205,233,1373,228,1374,166,1207"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="262,1476,292,1642,287,1643,257,1476"/>
+<area shape="rect" id="Node000004" href="$db/d16/class_gam_r_1_1_coulex_1_1_level_scheme.html" title=" " alt="" coords="344,1278,522,1588"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="407,1588,397,1643,391,1642,402,1587"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="443,904,596,985"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="515,986,466,1262,461,1261,510,985"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="512,258,578,324"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="551,324,557,409,563,531,563,673,553,817,539,888,534,887,548,816,558,672,558,531,552,409,545,324"/>
+<area shape="rect" id="Node000008" href="$d1/d65/class_gam_r_1_1_coulex_1_1_level.html" title=" " alt="" coords="361,517,492,726"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="536,325,472,502,467,500,531,323"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="489,5,601,87"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="548,101,548,258,542,258,542,101"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="458,725,484,816,505,887,500,889,479,817,453,727"/>
+<area shape="rect" id="Node000014" href="$d1/d57/class_gam_r_1_1_coulex_1_1_transition.html" title=" " alt="" coords="263,840,419,1049"/>
+<area shape="poly" id="edge16_Node000014_Node000008" title=" " alt="" coords="402,726,375,825,370,823,396,725"/>
+<area shape="rect" id="Node000009" href="$da/dfc/class_gam_r_1_1_ang_dist_1_1_stat_tensor.html" title=" " alt="" coords="295,136,464,446"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="378,446,384,493,385,500,380,501,378,494,373,446"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="196,588,302,655"/>
+<area shape="poly" id="edge11_Node000005_Node000010" title=" " alt="" coords="237,669,230,705,228,744,235,782,242,799,253,814,266,823,286,827,338,830,391,830,414,832,432,838,469,867,498,902,494,906,466,871,429,843,413,838,391,835,337,835,285,833,264,828,249,818,238,802,230,783,223,744,225,704,232,668"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="246,258,266,324"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="258,324,253,571,247,571,252,324"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="97,258,116,324"/>
+<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="118,323,144,401,180,492,223,573,218,575,175,494,139,403,113,325"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="5,750,106,816"/>
+<area shape="poly" id="edge18_Node000015_Node000012" title=" " alt="" coords="106,325,63,733,58,733,100,324"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="275,1123,407,1204"/>
+<area shape="poly" id="edge14_Node000004_Node000013" title=" " alt="" coords="352,1203,366,1253,369,1261,364,1262,361,1254,347,1205"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="344,1049,344,1106,338,1106,338,1049"/>
+<area shape="poly" id="edge17_Node000013_Node000015" title=" " alt="" coords="47,831,39,880,38,937,47,995,57,1022,70,1047,276,1133,274,1137,67,1051,52,1025,42,996,33,937,34,880,41,831"/>
+<area shape="rect" id="Node000016" href="$dd/d82/class_gam_r_1_1_coulex_1_1_particle_detector.html" title=" " alt="" coords="546,1359,738,1507"/>
+<area shape="poly" id="edge19_Node000001_Node000016" title=" " alt="" coords="600,1508,453,1747,449,1744,596,1505"/>
 </map>

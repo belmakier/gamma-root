@@ -1,0 +1,18 @@
+<map id="GamR::Spect::ReadCuts" name="GamR::Spect::ReadCuts">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,92,167,118"/>
+<area shape="rect" id="Node000002" href="$d0/d17/_abbreviations_8cc.html#a6d5ec59ed9dad8b1a1d52615652abf81" title=" " alt="" coords="215,61,253,87"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,89,199,78,200,84,152,94"/>
+<area shape="rect" id="Node000006" href="$d0/d17/_abbreviations_8cc.html#a5d1794b612bdcca3f4f4baa3d2e38a0b" title=" " alt="" coords="215,116,253,142"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="168,115,200,121,199,126,167,121"/>
+<area shape="rect" id="Node000003" href="$dc/d89/namespace_gam_r_1_1_spect.html#af56c6bd6d1f9560258f404f3f6d338ca" title=" " alt="" coords="320,55,465,80"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="254,71,305,69,305,74,254,76"/>
+<area shape="rect" id="Node000004" href="$d0/d74/group___t_k.html#ga4607d5e3d8f5d83d75f4ca038572a7f8" title=" " alt="" coords="534,5,718,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="457,51,546,32,547,37,458,57"/>
+<area shape="rect" id="Node000005" href="$d0/d74/group___t_k.html#ga0073e987a24adc053cfbf2c833d41749" title=" " alt="" coords="534,55,718,96"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="466,67,519,69,519,74,466,73"/>
+<area shape="rect" id="Node000007" href="$dc/d89/namespace_gam_r_1_1_spect.html#ab983da62eb972889ea13491189e13913" title=" " alt="" coords="301,128,484,154"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="254,128,286,130,285,135,254,133"/>
+<area shape="poly" id="edge8_Node000007_Node000007" title=" " alt="" coords="366,129,360,119,364,110,375,104,393,101,412,104,422,111,419,115,410,109,393,107,376,109,368,113,366,119,370,126"/>
+<area shape="rect" id="Node000008" href="$dc/d89/namespace_gam_r_1_1_spect.html#a56e80bce5bf691212c8b7dfb76c2d2b4" title=" " alt="" coords="532,128,720,154"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="485,138,517,138,517,144,485,144"/>
+</map>
