@@ -40,7 +40,7 @@ namespace GamR {
                                double theta, double phi);
       StatTensor *UnobservedProp(double ji, double lambda, double lambdaPrime, double jf, double delta,
                                  SolidAttenuation *Qk);
-      StatTensor *Perturbation(std::function<std::complex<double>(double, double, double, double, double) > &Gk, double t);
+      StatTensor *Perturbation(std::function<std::complex<double>(double, double, double, double, double) > const &Gk, double t);
       double W(double ji, double lambda, double lambdaPrime, double jf, double delta, SolidAttenuation *Qk, double theta,
                                         double phi);
 

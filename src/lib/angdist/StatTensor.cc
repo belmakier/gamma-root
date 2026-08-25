@@ -203,7 +203,7 @@ namespace GamR {
        @param Gk perturbation factor function, which takes argurments q, q', k, k', t
        @return Statistical tensor after the perturbation for time t
     */
-    StatTensor *StatTensor::Perturbation(std::function<std::complex<double>(double, double, double, double, double)> &Gk, double t)
+    StatTensor *StatTensor::Perturbation(std::function<std::complex<double>(double, double, double, double, double)> const &Gk, double t)
     {
       //std::cout << "PERTURBATION" << std::endl;
       StatTensor *rhoAfter = new StatTensor(this->j);
