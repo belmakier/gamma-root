@@ -470,22 +470,22 @@ namespace GamR {
       while (true) {
         std::cout << "Select area(s) for X subtraction" << std::endl;
         int retval = AddBackX(c1);
-        if (retval < 0) { break; }
+        if (retval > 0) { break; }
       }
       while (true) {
         std::cout << "Select area(s) for Y subtraction" << std::endl;
         int retval = AddBackY(c1);
-        if (retval < 0) { break; }
+        if (retval > 0) { break; }
       }
       while (true) {
         std::cout << "Select area(s) for background-background region" << std::endl;
         int retval = AddBackBack(c1);
-        if (retval < 0) { break; }
+        if (retval > 0) { break; }
       }
       while (true) {
         std::cout << "Select area(s) for diagonal subtraction" << std::endl;
         int retval = AddBackDiag(c1);
-        if (retval < 0) { break; }
+        if (retval > 0) { break; }
       }
       Subtract(hist);
 

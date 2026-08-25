@@ -65,6 +65,8 @@ namespace GamR {
                                              Int_t direction = TSpectrum2::kBackIncreasingWindow,
                                              Int_t filtertype = TSpectrum2::kBackOneStepFiltering);
 
+    std::vector<TCutG*> ReadCuts(std::string filename, std::vector<int> &cutIDs);
+    void IntegrateCuts(TH2 *hist, std::string cutfile, int ID_low=-1, int ID_high=-1);
   } // namespace Spect
 } // namespace GamR
 

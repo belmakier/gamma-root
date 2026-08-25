@@ -596,7 +596,73 @@ namespace GamR {
         std::cout << x << "   " << y << std::endl;
       }
     }
-      
 
+    std::vector<TCutG*> ReadCuts(std::string cutfile, std::vector<int> &cutIDs) {
+      std::vector<TCutG*> cuts;
+      FILE *file = fopen(cutfile.c_str(), "ra");
+      if (file == NULL) { std::cout << "Cuts file " << cutfile << " does not exist" << std::endl; return cuts; }
+      std::stringstream ss;
+      char cline[2048];
+
+      cutIDs.clear();
+
+      while(std::fgets(cline, sizeof cline, file)!=NULL) {
+        std::string line(cline);
+        if (line.size() <= 1) { continue; }
+        if (line[0] == '#') { continue; }
+        if (line[0] == ';') { continue; }
+
+        ss.clear();
+        ss.str(line);
+
+        std::string name;
+        int id, npoints;        
+        ss >> id;
+        ss >> npoints;
+        ss >> name;
+
+        TCutG *cut = new TCutG();
+        cut->SetName(name.c_str());
+        cut->SetLineColor(kRed);
+        cut->SetMarkerColor(kRed);
+
+        int ct = 0;
+        while (ct < npoints) {
+          if (std::fgets(cline, sizeof cline, file) == NULL ) { return cuts ; }
+
+          std::string line2(cline);
+          if (line2.size() <= 1) { continue; }
+          if (line2[0] == '#') { continue; }
+          if (line2[0] == ';') { continue; }
+
+          ss.clear();
+          ss.str(line2);
+
+          double x, y;
+          ss >> x;
+          ss >> y;
+
+          cut->AddPoint(x,y);
+          ++ct;
+        }
+        cuts.push_back(cut);
+        cutIDs.push_back(id);
+      }
+
+      fclose(file);
+
+      return cuts;
+    }
+      
+    void IntegrateCuts(TH2 *hist, std::string cutfile, int ID_low, int ID_high) {
+      std::vector<int> cutIDs;
+      std::vector<TCutG*> cuts = ReadCuts(cutfile, cutIDs);
+      for (int i=0; i<cuts.size(); ++i) {
+        if ((ID_low < 0 && ID_high < 0) || (cutIDs[i] >= ID_low && cutIDs[i] <= ID_high)) {
+          double counts = cuts[i]->IntegralHist(hist);
+          std::cout << cutIDs[i] << "  " << cuts[i]->GetName() << "   " << (int)counts << std::endl;
+        }
+      }
+    }
   } // namespace Spect
 } // namespace GamR

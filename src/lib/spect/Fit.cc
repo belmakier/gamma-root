@@ -100,7 +100,7 @@ namespace GamR {
       int iPeak = 0;
       TString sFuncString;
       if (parameters.iQuadBack) {
-        sFuncString.Form("[0] + [1]*(x-%f) + [2]*pow(x-%f, 2)", (fHigh+fLow)/2, (fHigh+fLow)/2);
+        sFuncString.Form("[0]-[2]*pow(%f,2) + [1]*(x-%f) + [2]*pow(x-%f, 2)", (fHigh+fLow)/2, (fHigh+fLow)/2, (fHigh+fLow)/2);
         iParamCount = iParamCount + 3;
       } else if (parameters.iConstantBack) {
         sFuncString.Form("[0]");
