@@ -493,6 +493,17 @@ namespace GamR {
       std::cout << "Peak Area: " << GetPeakCounts() << "   +/-   " << GetPeakCountsError() << std::endl;
       return;
     }
+
+    BackSub2D::BackSub2D(TH2D *hist, GamR::TK::Gate fPeakX, GamR::TK::Gate fPeakY, std::vector<GamR::TK::Gate> fBackX, std::vector<GamR::TK::Gate> fBackY, std::vector<GamR::TK::Gate> fBackDiagX, std::vector<GamR::TK::Gate> fBackDiagY, std::vector<GamR::TK::Gate> fBackBackX, std::vector<GamR::TK::Gate> fBackBackY) {
+      SetPeak(fPeakX, fPeakY);
+      SetBackX(fBackX);
+      SetBackY(fBackY);
+      SetBackDiag(fBackDiagX,fBackDiagY);
+      SetBackBack(fBackBackX,fBackBackY);
+
+      Subtract(hist);
+      return;
+    }
       
       
   }
