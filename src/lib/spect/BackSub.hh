@@ -64,6 +64,16 @@ namespace GamR {
         return AddBackY(y);
       }
 
+      int SetBackX(std::vector<GamR::TK::Gate> xs) {
+        fBackX = xs;
+        return 0;
+      }
+
+      int SetBackY(std::vector<GamR::TK::Gate> ys) {
+        fBackY = ys;
+        return 0;
+      }
+
       int AddBackDiag(GamR::TK::Gate x, GamR::TK::Gate y) {
         fBackDiagX.push_back(x);
         fBackDiagY.push_back(y);
@@ -74,6 +84,12 @@ namespace GamR {
         GamR::TK::Gate x(x1, x2);
         GamR::TK::Gate y(y1, y2);
         return AddBackDiag(x, y);
+      }
+
+      int SetBackDiag(std::vector<GamR::TK::Gate> xs, std::vector<GamR::TK::Gate> ys) {
+        fBackDiagX = xs;
+        fBackDiagY = ys;
+        return 0;
       }
 
       int AddBackBack(GamR::TK::Gate x, GamR::TK::Gate y) {
@@ -88,7 +104,14 @@ namespace GamR {
         return AddBackBack(x, y);
       }      
 
+      int SetBackBack(std::vector<GamR::TK::Gate> xs, std::vector<GamR::TK::Gate> ys) {
+        fBackBackX = xs;
+        fBackBackY = ys;
+        return 0;
+      }
+
       BackSub2D(TH2D *hist);
+      BackSub2D(TH2D *hist, GamR::TK::Gate fPeakX, GamR::TK::Gate fPeakY, std::vector<GamR::TK::Gate> fBackX, std::vector<GamR::TK::Gate> fBackY, std::vector<GamR::TK::Gate> fBackDiagX, std::vector<GamR::TK::Gate> fBackDiagY, std::vector<GamR::TK::Gate> fBackBackX, std::vector<GamR::TK::Gate> fBackBackY);
       
       int SetPeak(TCanvas *canvas);
       int AddBackX(TCanvas *canvas);
